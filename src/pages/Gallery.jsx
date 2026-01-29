@@ -1,3 +1,4 @@
+import RevealOnScroll from '../components/RevealOnScroll'
 import './Gallery.css'
 
 function Gallery() {
@@ -17,6 +18,7 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
+      <RevealOnScroll direction="up">
       <div className="gallery-container">
         <h1>Gallery</h1>
         <p className="gallery-subtitle">Explore our travel destinations through stunning photography</p>
@@ -47,6 +49,7 @@ function Gallery() {
           ))}
         </div>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

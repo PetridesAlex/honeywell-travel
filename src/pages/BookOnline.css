@@ -1,5 +1,6 @@
 .book-online-page {
   min-height: 100vh;
+  background: #ffffff; /* ensure gaps between sections are white */
 }
 
 .booking-hero-filters {
@@ -62,100 +63,132 @@
 }
 
 .booking-form {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.3);
-  max-width: 1000px;
-  margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.filter-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  position: relative;
-}
-
-.filter-group label {
-  font-weight: 700;
-  color: #1a1a1a;
-  font-size: 1rem;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-}
-
-.filter-group select,
-.filter-group input {
-  padding: 1rem 1.25rem;
-  border: 2px solid #d0d0d0;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
   background: #ffffff;
-  color: #333;
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 3rem;
-}
-
-.filter-group input[type="date"] {
-  background-image: none;
-  padding-right: 1.25rem;
-  cursor: text;
-}
-
-.filter-group select:hover,
-.filter-group input:hover {
-  border-color: #E31E24;
-  background-color: #fafafa;
-}
-
-.filter-group select:focus,
-.filter-group input:focus {
-  outline: none;
-  border-color: #E31E24;
-  box-shadow: 0 0 0 4px rgba(227, 30, 36, 0.15), 0 2px 8px rgba(227, 30, 36, 0.1);
-  background-color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.filter-group select option {
-  padding: 1rem;
-  background: white;
-  color: #333;
-}
-
-.search-btn {
-  width: 100%;
-  padding: 1.25rem 2rem;
-  background: linear-gradient(135deg, #E31E24 0%, #C41230 100%);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  box-shadow: 0 6px 20px rgba(227, 30, 36, 0.35), 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
+}
+
+.booking-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #C41230 0%, #E31E24 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.booking-form .filter-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  align-items: end;
+}
+
+.booking-form .form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.booking-form .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.booking-form .filter-group label {
+  display: block;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.booking-form .filter-group select,
+.booking-form .filter-group input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #f9fafb;
+  color: #111827;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+}
+
+.booking-form .filter-group input[type="date"] {
+  background-image: none;
+  padding-right: 1rem;
+  cursor: text;
+  background-color: #ffffff;
+}
+
+.booking-form .filter-group select:hover,
+.booking-form .filter-group input:hover {
+  border-color: #C41230;
+  background-color: #ffffff;
+}
+
+.booking-form .filter-group select:focus,
+.booking-form .filter-group input:focus {
+  outline: none;
+  border-color: #C41230;
+  box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.12);
+  background-color: #ffffff;
+}
+
+.booking-form .filter-group select option {
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.booking-form .search-btn {
+  width: auto;
+  padding: 1rem 2.75rem;
+  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 14px rgba(196, 18, 48, 0.35);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-btn::before {
@@ -196,11 +229,6 @@
   text-align: center;
 }
 
-.results-count {
-  color: #E31E24;
-  font-size: 1.5rem;
-}
-
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
@@ -225,7 +253,7 @@
 
 .package-card {
   background: white;
-  border: 2px solid #e0e0e0;
+  border: none;
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -239,7 +267,6 @@
 .package-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-color: #E31E24;
 }
 
 .package-emoji {
@@ -256,6 +283,9 @@
   font-weight: 700;
   color: #333;
   margin-bottom: 0.5rem;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .package-destination {
@@ -276,7 +306,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: none;
 }
 
 .package-duration {
@@ -288,6 +318,12 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #E31E24;
+}
+
+@media (max-width: 992px) {
+  .booking-form .filter-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -305,7 +341,7 @@
     font-size: 1rem;
   }
 
-  .filter-row {
+  .booking-form .filter-row {
     grid-template-columns: 1fr;
   }
 

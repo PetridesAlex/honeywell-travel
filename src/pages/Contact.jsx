@@ -1,3 +1,4 @@
+import RevealOnScroll from '../components/RevealOnScroll'
 import './Contact.css'
 
 function Contact() {
@@ -11,6 +12,7 @@ function Contact() {
         </div>
       </div>
 
+      <RevealOnScroll direction="up">
       <div className="contact-container">
         {/* Contact Info Cards */}
         <div className="contact-info-grid">
@@ -158,6 +160,7 @@ This message was submitted through the Honeywell Travel website contact form.`.t
           </form>
         </div>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

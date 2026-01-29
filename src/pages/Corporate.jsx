@@ -1,3 +1,4 @@
+import RevealOnScroll from '../components/RevealOnScroll'
 import './Corporate.css'
 
 function Corporate() {
@@ -28,6 +29,7 @@ function Corporate() {
         </div>
       </section>
 
+      <RevealOnScroll direction="up">
       {/* CWT Information Section */}
       <section className="cwt-section">
         <div className="container">
@@ -209,6 +211,7 @@ function Corporate() {
           <a href="/contact/" className="cta-button">Get in Touch</a>
         </div>
       </section>
+      </RevealOnScroll>
     </div>
   )
 }

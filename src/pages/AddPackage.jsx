@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { addPackage } from '../data/packages'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './AddPackage.css'
 
 // Helper function to convert category name to URL-friendly slug
@@ -106,6 +107,7 @@ function AddPackage() {
 
   return (
     <div className="add-package-page">
+      <RevealOnScroll direction="up">
       <div className="add-package-container">
         <h1>Add New Travel Package</h1>
         <p className="subtitle">Create a new travel package and assign it to a category and destination</p>
@@ -236,6 +238,7 @@ function AddPackage() {
           </div>
         </form>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

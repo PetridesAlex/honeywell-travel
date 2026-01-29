@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './HoneymoonTrips.css'
 
 const HONEYMOON_DESTINATIONS = [
@@ -140,6 +141,7 @@ function HoneymoonTrips() {
         </div>
       </section>
 
+      <RevealOnScroll direction="up">
       <div className="honeymoon-trips-container">
         {/* What we do */}
         <section className="what-we-do">
@@ -327,6 +329,7 @@ function HoneymoonTrips() {
           </form>
         </section>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

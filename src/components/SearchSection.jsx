@@ -57,15 +57,16 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
   const handleSearch = (e) => {
     e.preventDefault()
     const categorySlug = categoryToSlug(category)
-    
+
     if (categorySlug) {
       // Navigate directly to the selected category page
       navigate(`/tour-category/${categorySlug}/`)
     } else {
-      // Fallback to query params if no category selected
+      // No category selected: show all packages (with optional destination filter)
       const params = new URLSearchParams()
       if (destination !== 'Any') params.set('destination', destination)
-      navigate(`/packages?${params.toString()}`)
+      const queryString = params.toString()
+      navigate(queryString ? `/packages?${queryString}` : '/packages')
     }
   }
 
@@ -81,7 +82,13 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
     { id: 'norwegian-fjords', url: '/images/destinations/norwegian-fjords-cruise.png', name: 'Norwegian Fjords' },
     { id: 'alaska', url: '/images/destinations/alaska.png', name: 'Alaska' },
     { id: 'china', url: '/images/destinations/china.png', name: 'China' },
-    { id: 'cruises', url: '/images/cruises/cruises-background-2.png', name: 'Cruises' }
+    { id: 'cruises', url: '/images/cruises/cruises-background-2.png', name: 'Cruises' },
+    { id: 'seychelles', url: '/images/destinations/seychelles-bay.png', name: 'Seychelles' },
+    { id: 'iceland-waterfall', url: '/images/destinations/iceland-waterfall-scenic.png', name: 'Iceland' },
+    { id: 'cliftonbay', url: '/images/destinations/cliftonbay-coast.png', name: 'Clifton Bay' },
+    { id: 'japan-fuji', url: '/images/destinations/japan-fuji-cherry.png', name: 'Japan' },
+    { id: 'thailand', url: '/images/destinations/thailand-longtail.png', name: 'Thailand' },
+    { id: 'brazil-beaches', url: '/images/destinations/brazil-beaches-life.png', name: 'Brazil' }
   ]
 
   return (
@@ -177,15 +184,19 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
             <div className="other-categories-quick-nav">
               <h4 className="quick-nav-title">Other Categories</h4>
               <div className="quick-nav-categories">
-                {categories.filter(c => c.value !== 'Any' && c.value !== category).slice(0, 6).map((cat) => (
-                  <a
-                    key={cat.value}
-                    href={`/tour-category/${getCategorySlug(cat.value)}/`}
-                    className="quick-nav-category-link"
-                  >
-                    {cat.icon} {cat.label}
-                  </a>
-                ))}
+                {categories.filter(c => c.value !== 'Any' && c.value !== category).slice(0, 6).map((cat) => {
+                  const slug = getCategorySlug(cat.value)
+                  if (!slug) return null
+                  return (
+                    <Link
+                      key={cat.value}
+                      to={`/tour-category/${slug}/`}
+                      className="quick-nav-category-link"
+                    >
+                      {cat.icon} {cat.label}
+                    </Link>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -213,7 +224,6 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
                   className="destination-image-bg"
                   style={{ backgroundImage: `url(${bg.url})` }}
                 >
-                  <div className="destination-image-overlay"></div>
                   <div className="destination-image-label">{bg.name}</div>
                   {selectedBackground === bg.url && (
                     <div className="selection-indicator">

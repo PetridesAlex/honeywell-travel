@@ -49,13 +49,15 @@
 }
 
 .package-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #111827;
-  margin: 0;
-  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
   font-weight: 600;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   letter-spacing: -0.01em;
+  border-radius: 8px;
+  padding: 0.25rem 0;
 }
 
 .package-description {

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
+import AppLoader from './components/AppLoader'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
@@ -32,8 +33,28 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  const [loaderExiting, setLoaderExiting] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setLoading(false)
+      setLoaderExiting(true)
+    }, 1200)
+    return () => clearTimeout(t)
+  }, [])
+
+  useEffect(() => {
+    if (!loaderExiting) return
+    const t = setTimeout(() => setLoaderExiting(false), 550)
+    return () => clearTimeout(t)
+  }, [loaderExiting])
+
+  const showLoader = loading || loaderExiting
+
   return (
     <Router>
+      {showLoader && <AppLoader exiting={loaderExiting} />}
       <ScrollToTop />
       <div className="app">
         <Header />

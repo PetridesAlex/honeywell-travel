@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { getBlogPostBySlug, blogPosts } from '../data/blog'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './BlogPostDetail.css'
 
 function BlogPostDetail() {
@@ -53,6 +54,7 @@ function BlogPostDetail() {
         </div>
       )}
 
+      <RevealOnScroll direction="up">
       <div className="blog-post-container">
         {/* Main Content */}
         <article className="blog-post-content">
@@ -137,6 +139,7 @@ function BlogPostDetail() {
           </aside>
         )}
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

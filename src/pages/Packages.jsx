@@ -11,6 +11,7 @@ const slugToCategory = (slug) => {
     'summer-packages': 'Summer Packages',
     'autumn-packages': 'Autumn Packages',
     'winter-packages': 'Winter Packages',
+    'spring-packages': 'Spring Packages',
     'christmas-packages': 'Christmas Packages',
     'easter-packages': 'Easter Packages',
     'green-monday-packages': 'Green Monday Packages',
@@ -55,7 +56,10 @@ function Packages() {
   const categories = [
     'Any',
     'Destinations',
+    'Summer Packages',
     'Autumn Packages',
+    'Winter Packages',
+    'Spring Packages',
     'Christmas Packages',
     'City Breaks',
     'Cruises',
@@ -65,9 +69,7 @@ function Packages() {
     'Group Travel',
     'Mary Special Trips',
     'Sports Events & Concerts',
-    'Ski Packages',
-    'Summer Packages',
-    'Winter Packages'
+    'Ski Packages'
   ]
 
   const destinations = [
@@ -111,7 +113,8 @@ function Packages() {
         }
         return pkg.price
       })
-      .filter(price => price && price > 0)
+      .filter(price => price != null && price > 0)
+    if (prices.length === 0) return { min: 0, max: 10000 }
     return {
       min: Math.min(...prices),
       max: Math.max(...prices)

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { travelPackages } from '../data/packages'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './BookOnline.css'
 
 function BookOnline() {
@@ -119,20 +120,20 @@ function BookOnline() {
               </div>
             </div>
 
-            <button type="submit" className="search-btn">
-              Search Packages
-            </button>
+            <div className="form-actions">
+              <button type="submit" className="search-btn">
+                Search Packages
+              </button>
+            </div>
           </form>
         </div>
       </section>
 
+      <RevealOnScroll direction="up">
       <section className="packages-results">
         <div className="container">
           <h2 className="results-title">
-            Available Packages 
-            {filteredPackages.length > 0 && (
-              <span className="results-count">({filteredPackages.length})</span>
-            )}
+            {filteredPackages.length} travel packages available
           </h2>
 
           {filteredPackages.length === 0 ? (
@@ -166,6 +167,7 @@ function BookOnline() {
           )}
         </div>
       </section>
+      </RevealOnScroll>
     </div>
   )
 }

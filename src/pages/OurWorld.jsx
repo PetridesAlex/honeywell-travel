@@ -10,42 +10,42 @@ function OurWorld() {
       name: 'Mary Spyrou', 
       role: 'Executive Director',
       quote: '"Wherever you go, you go with all your heart"',
-      image: '/images/team/mary-spyrou.webp'
+      image: '/images/team/mary-spyrou.png'
     },
     { 
       id: 2, 
       name: 'Vaso Photiou', 
       role: 'Office Supervisor',
       quote: '"Traveling means exchanging and discovering experiences"',
-      image: '/images/team/vaso-photiou.webp'
+      image: '/images/team/vaso-photiou.png'
     },
     { 
       id: 3, 
       name: 'Anna Roupina', 
       role: 'Travel Consultant',
       quote: '"Travel is the only thing you buy that makes you richer"',
-      image: '/images/team/anna-roupina.webp'
+      image: '/images/team/anna-roupina.png'
     },
     { 
       id: 4, 
       name: 'Evi Panayiotou', 
       role: 'Office Supervisor (Nicosia)',
       quote: '"Travelling means to me continuous learning and experience."',
-      image: '/images/team/evi-panayiotou.webp'
+      image: '/images/team/evi-panayiotou.png'
     },
     { 
       id: 5, 
       name: 'Charis Kapnisi', 
       role: 'Account Officer',
       quote: '"Traveling is about escaping, having fun and enjoy life."',
-      image: '/images/team/charis-kapnisi.webp'
+      image: '/images/team/charis-kapnisi.png'
     },
     { 
       id: 6, 
       name: 'Valentina Avraam', 
       role: 'Travel Consultant',
       quote: '"Don\'t spend your money on things. Spend it on experiences!"',
-      image: '/images/team/valentina-avraam.webp'
+      image: '/images/team/valentina-avraam.png'
     }
   ]
 
@@ -72,14 +72,21 @@ function OurWorld() {
           <h1 className="hero-title">Our World</h1>
           <p className="hero-subtitle">Discovering the world, one journey at a time</p>
         </div>
-        <div className="hero-scroll-indicator">
-          <span>Scroll to explore</span>
-          <div className="scroll-arrow">↓</div>
-        </div>
+        <button
+          type="button"
+          className="hero-scroll-btn"
+          onClick={() => {
+            document.getElementById('our-world-content')?.scrollIntoView({ behavior: 'smooth' })
+          }}
+          aria-label="Scroll down to content"
+        >
+          <span className="hero-scroll-btn-text">Scroll to explore</span>
+          <span className="hero-scroll-btn-arrow" aria-hidden>↓</span>
+        </button>
       </section>
 
       {/* Introduction Section */}
-      <section className="section-introduction">
+      <section id="our-world-content" className="section-introduction">
         <div className="container">
           <div className="introduction-content">
             <div className="introduction-text">
@@ -112,7 +119,11 @@ function OurWorld() {
               </div>
             </div>
             <div className="introduction-image">
-              <div className="image-placeholder">Image Placeholder</div>
+              <img
+                src="/images/our-world-people.png"
+                alt="Honeywell Travel team"
+                className="introduction-photo"
+              />
             </div>
           </div>
         </div>
@@ -183,7 +194,11 @@ function OurWorld() {
             {teamMembers.map((member) => (
               <div key={member.id} className="team-card">
                 <div className="team-image">
-                  <div className="team-image-placeholder">Photo</div>
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="team-member-photo" />
+                  ) : (
+                    <div className="team-image-placeholder">Photo</div>
+                  )}
                 </div>
                 <div className="team-info">
                   <h3 className="team-name">{member.name}</h3>

@@ -1,0 +1,3 @@
+# This folder is for blog post images.
+# Add hero images here (e.g. rome.webp, solo-travel.webp, gastronomy.webp)
+# and reference them in src/data/blog.js as /images/blog/filename.ext

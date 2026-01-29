@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getPackagesByFilter, travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './Cruises.css'
 
 function Cruises() {
@@ -57,6 +58,7 @@ function Cruises() {
         </div>
       </div>
 
+      <RevealOnScroll direction="up">
       <div className="cruises-container">
         {/* Why Choose Cruises Section */}
         <section className="cruises-benefits">
@@ -214,6 +216,7 @@ function Cruises() {
           </div>
         </section>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

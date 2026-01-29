@@ -1,5 +1,12 @@
 // Travel packages data structure
-// You can expand this or connect it to a backend API later
+// You can expand this or connect it to a backend API later.
+//
+// Hotel price types (per person) used in details.hotels[].prices:
+//   - double: Double room (per person)
+//   - single: Single room (per person)
+//   - triple: Triple room (per person)
+//   - child1: Child 1 (first child price)
+//   - child2: Child 2 (second child / additional children price)
 
 export const travelPackages = [
   {
@@ -44,115 +51,163 @@ export const travelPackages = [
           name: 'Dorian Inn Hotel – Athens',
           stars: 3,
           roomType: 'Standard Room',
-          packagePrice: 798,
+          location: 'Pireos 15–19, 10552, Athens, Greece',
+          packagePrice: 850,
           image: '/images/hotels/dorian-inn-athens.webp',
           prices: {
-            double: 399,
-            single: 525,
-            child1: 389,
-            child2: 339
+            double: 425,
+            single: 489,
+            triple: 419,
+            child1: 369,
+            child2: 369
           },
           departureDate: '20/02'
         },
         {
           name: 'Arion Hotel – Athens',
           stars: 3,
-          packagePrice: 798,
+          roomType: 'Standard Room',
+          location: 'Agiou Dimitriou 18, 10554, Athens, Greece',
+          packagePrice: 858,
           image: '/images/hotels/arion-athens.webp',
           prices: {
-            double: 399,
-            single: 525
-          }
+            double: 429,
+            single: 549
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Achilleas Hotel – Athens',
           stars: 3,
-          packagePrice: 838,
+          roomType: 'Standard Room',
+          location: 'Lekka 21, 10562, Athens, Greece',
+          packagePrice: 898,
           image: '/images/hotels/achilleas-athens.webp',
           prices: {
-            double: 419,
-            single: 569
-          }
+            double: 449,
+            single: 589
+          },
+          departureDate: '20/02'
         },
         {
           name: 'The Alassia Hotel – Athens',
           stars: 3,
-          packagePrice: 838,
+          roomType: 'Standard Room',
+          location: '50 Socratous Str, 10431, Athens, Greece',
+          packagePrice: 898,
           image: '/images/hotels/alassia-athens.webp',
           prices: {
-            double: 419,
-            single: 569,
-            triple: 389
-          }
+            double: 449,
+            single: 589,
+            triple: 419,
+            child1: 299
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Pan Hotel – Athens',
           stars: 3,
-          packagePrice: 858,
+          roomType: 'Standard Room',
+          location: 'Mitropoleos 11, 10557, Athens, Greece',
+          packagePrice: 918,
           image: '/images/hotels/pan-athens.webp',
           prices: {
-            double: 429,
-            single: 585
-          }
+            double: 459,
+            single: 609,
+            triple: 429,
+            child1: 379,
+            child2: 379
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Classic by Athens Prime Hotel – Athens',
-          stars: 3,
-          packagePrice: 898,
+          stars: 4,
+          roomType: 'Standard Room',
+          location: '7 Chavriou Str, 10562, Athens, Greece',
+          packagePrice: 950,
           image: '/images/hotels/classic-athens-prime.webp',
           prices: {
-            double: 449,
-            single: 585
-          }
+            double: 475,
+            single: 609
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Pure by Athens Prime Hotel – Athens',
-          stars: 3,
-          packagePrice: 918,
+          stars: 4,
+          roomType: 'Standard Room',
+          location: '8 Nikiou, 10560, Athens, Greece',
+          packagePrice: 958,
           image: '/images/hotels/pure-athens.webp',
           prices: {
-            double: 459,
-            single: 599
-          }
+            double: 479,
+            single: 629,
+            triple: 465,
+            child1: 429
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Central Hotel – Athens',
           stars: 3,
-          packagePrice: 938,
+          roomType: 'Standard Room',
+          location: 'Apollonos 21, Plaka, 10557, Athens, Greece',
+          packagePrice: 978,
           image: '/images/hotels/central-athens.webp',
           prices: {
-            double: 469,
-            single: 659
-          }
+            double: 489,
+            single: 679,
+            triple: 469,
+            child1: 419
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Astor Hotel – Athens',
-          stars: 3,
-          packagePrice: 998,
+          stars: 4,
+          roomType: 'Standard Room',
+          location: '16 Karageorgi Servias, 10562, Athens, Greece',
+          packagePrice: 1058,
           image: '/images/hotels/astor-athens.webp',
           prices: {
-            double: 499,
-            single: 735
-          }
+            double: 529,
+            single: 759,
+            triple: 499,
+            child1: 375,
+            child2: 375
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Athens Cypria Hotel – Athens',
-          stars: 3,
-          packagePrice: 1018,
+          stars: 4,
+          roomType: 'Standard Room',
+          location: '5 Diomias Street, Syntagma Square, 10563, Athens, Greece',
+          packagePrice: 1078,
           image: '/images/hotels/athens-cypria.webp',
           prices: {
-            double: 509,
-            single: 699
-          }
+            double: 539,
+            single: 729,
+            triple: 499,
+            child1: 435
+          },
+          departureDate: '20/02'
         },
         {
           name: 'Elia Ermou Hotel – Athens',
           stars: 4,
-          packagePrice: 1158,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          departureDate: '20/02',
+          location: 'Ermou 15, 10563, Athens, Greece',
+          packagePrice: 1198,
           image: '/images/hotels/elia-ermou.webp',
           prices: {
-            double: 579,
-            single: 689
+            double: 599,
+            single: 899,
+            triple: 569,
+            child1: 499
           }
         }
       ],

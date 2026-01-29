@@ -1,33 +1,22 @@
 import { useParams, Link } from 'react-router-dom'
 import { getPackageById } from '../data/packages'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './PackageDetail.css'
 
 function PackageDetail() {
   const { id } = useParams()
   const pkg = getPackageById(id)
 
-  // Calculate the cheapest hotel price
+  // From price = lowest double room price per person across all hotels
   const getCheapestPrice = () => {
     if (pkg.details && pkg.details.hotels && pkg.details.hotels.length > 0) {
-      let cheapestPrice = Infinity
-      
+      let lowestDouble = Infinity
       pkg.details.hotels.forEach(hotel => {
-        // Check packagePrice (for 2 adults)
-        if (hotel.packagePrice && hotel.packagePrice < cheapestPrice) {
-          cheapestPrice = hotel.packagePrice
-        }
-        
-        // Check individual prices (double, single, triple, child1, child2)
-        if (hotel.prices) {
-          Object.values(hotel.prices).forEach(price => {
-            if (price && price < cheapestPrice) {
-              cheapestPrice = price
-            }
-          })
+        if (hotel.prices && hotel.prices.double != null && hotel.prices.double > 0 && hotel.prices.double < lowestDouble) {
+          lowestDouble = hotel.prices.double
         }
       })
-      
-      return cheapestPrice !== Infinity ? cheapestPrice : pkg.price
+      return lowestDouble !== Infinity ? lowestDouble : pkg.price
     }
     return pkg.price
   }
@@ -48,6 +37,7 @@ function PackageDetail() {
 
   return (
     <div className="package-detail-page">
+      <RevealOnScroll direction="up">
       <div className="package-detail-container">
         <Link to="/packages" className="back-link">← Back to Packages</Link>
         
@@ -102,6 +92,7 @@ function PackageDetail() {
           </div>
         </div>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

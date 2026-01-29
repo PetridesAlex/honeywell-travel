@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './HolidayTypes.css'
 
 function HolidayTypes() {
@@ -78,6 +79,7 @@ function HolidayTypes() {
 
   return (
     <div className="holiday-types-page">
+      <RevealOnScroll direction="up">
       <div className="holiday-types-container">
         <div className="page-header">
           <h1>Holiday Types</h1>
@@ -160,6 +162,7 @@ function HolidayTypes() {
           <a href="/contact/" className="cta-button">Get in Touch</a>
         </section>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

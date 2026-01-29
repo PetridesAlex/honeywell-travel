@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts, getCategories } from '../data/blog'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './Blog.css'
 
 function Blog() {
@@ -26,6 +27,7 @@ function Blog() {
         </div>
       </div>
 
+      <RevealOnScroll direction="up">
       <div className="blog-container">
         {/* Category Filter */}
         <div className="blog-categories">
@@ -85,6 +87,7 @@ function Blog() {
           </div>
         )}
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

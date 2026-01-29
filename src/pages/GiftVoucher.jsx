@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { sendGiftVoucherEmail } from '../utils/emailService'
+import RevealOnScroll from '../components/RevealOnScroll'
 import './GiftVoucher.css'
 
 function GiftVoucher() {
@@ -188,6 +189,7 @@ function GiftVoucher() {
         </div>
       </section>
 
+      <RevealOnScroll direction="up">
       <div className="voucher-container">
         <div className="voucher-content">
           {/* Form Section */}
@@ -384,6 +386,7 @@ function GiftVoucher() {
           </section>
         </div>
       </div>
+      </RevealOnScroll>
     </div>
   )
 }

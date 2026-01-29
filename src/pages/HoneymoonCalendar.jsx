@@ -1,3 +1,4 @@
+import RevealOnScroll from '../components/RevealOnScroll'
 import './HoneymoonCalendar.css'
 
 const MONTHS = [
@@ -124,6 +125,7 @@ function HoneymoonCalendar() {
         </div>
       </section>
 
+      <RevealOnScroll direction="up">
       <section className="honeymoon-months-section">
         <div className="honeymoon-months-grid">
           {MONTHS.map((month, index) => (
@@ -155,6 +157,7 @@ function HoneymoonCalendar() {
           ))}
         </div>
       </section>
+      </RevealOnScroll>
     </div>
   )
 }

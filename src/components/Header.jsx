@@ -12,8 +12,10 @@ const categoryToSlug = (category) => {
 }
 
 function Header() {
-  const [activeDropdown, setActiveDropdown] = useState(null)
+  const [activeDropdown, setActiveDropdown] = useState(null) // desktop dropdowns
   const [closeTimeout, setCloseTimeout] = useState(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null)
 
   const holidayTypes = [
     'Destinations',
@@ -52,11 +54,12 @@ function Header() {
   }
 
   const closeMobileMenu = () => {
-    setActiveDropdown(null)
+    setIsMobileMenuOpen(false)
+    setActiveMobileDropdown(null)
   }
 
   const toggleMobileDropdown = (type) => {
-    setActiveDropdown(activeDropdown === type ? null : type)
+    setActiveMobileDropdown((prev) => (prev === type ? null : type))
   }
 
   return (
@@ -171,24 +174,30 @@ function Header() {
           </div>
         </nav>
 
-        <button className="mobile-menu-btn" onClick={() => setActiveDropdown(activeDropdown === 'mobile' ? null : 'mobile')}>
+        <button
+          className="mobile-menu-btn"
+          onClick={() => {
+            setIsMobileMenuOpen((prev) => !prev)
+            setActiveMobileDropdown(null)
+          }}
+        >
           ☰
         </button>
       </div>
 
-      {activeDropdown === 'mobile' && (
+      {isMobileMenuOpen && (
         <div className="mobile-menu">
           <Link to="/ourworld/" className="mobile-link" onClick={closeMobileMenu}>Our World</Link>
           
           <div className="mobile-dropdown">
             <button 
               className="mobile-link mobile-dropdown-trigger" 
-              onClick={() => toggleMobileDropdown('mobile-holiday')}
+              onClick={() => toggleMobileDropdown('holiday')}
             >
               Holiday Types
-              <span className="mobile-dropdown-arrow">{activeDropdown === 'mobile-holiday' ? '▲' : '▼'}</span>
+              <span className="mobile-dropdown-arrow">{activeMobileDropdown === 'holiday' ? '▲' : '▼'}</span>
             </button>
-            {activeDropdown === 'mobile-holiday' && (
+            {activeMobileDropdown === 'holiday' && (
               <div className="mobile-dropdown-menu">
                 {holidayTypes.map((item, index) => (
                   <Link 
@@ -208,12 +217,12 @@ function Header() {
           <div className="mobile-dropdown">
             <button 
               className="mobile-link mobile-dropdown-trigger" 
-              onClick={() => toggleMobileDropdown('mobile-honeymoon')}
+              onClick={() => toggleMobileDropdown('honeymoon')}
             >
               Honeymoon
-              <span className="mobile-dropdown-arrow">{activeDropdown === 'mobile-honeymoon' ? '▲' : '▼'}</span>
+              <span className="mobile-dropdown-arrow">{activeMobileDropdown === 'honeymoon' ? '▲' : '▼'}</span>
             </button>
-            {activeDropdown === 'mobile-honeymoon' && (
+            {activeMobileDropdown === 'honeymoon' && (
               <div className="mobile-dropdown-menu">
                 {honeymoonTypes.map((item, index) => (
                   <Link 

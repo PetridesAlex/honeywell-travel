@@ -6,16 +6,16 @@
 /* Hero Section */
 .packages-hero {
   background: url('/images/categories/search-your-package-bg.png');
-  background-size: 120% auto;
-  background-position: center 20%;
+  background-size: 100% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
-  padding: 6rem 2rem 10rem 2rem;
+  padding: 4rem 2rem 3rem 2rem;
   text-align: left;
   position: relative;
   overflow: hidden;
-  min-height: 450px;
+  min-height: 420px;
 }
 
 .packages-hero::before {
@@ -80,7 +80,7 @@
 .packages-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem 3rem 2rem;
 }
 
 /* Category Chips Section */
