@@ -206,7 +206,7 @@ function Corporate() {
         <div className="container">
           <h2>Ready to Transform Your Business Travel?</h2>
           <p>Contact our corporate travel experts today and discover how we can optimize your travel program.</p>
-          <a href="/contact" className="cta-button">Get in Touch</a>
+          <a href="/contact/" className="cta-button">Get in Touch</a>
         </div>
       </section>
     </div>

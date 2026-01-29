@@ -1,12 +1,31 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './SearchSection.css'
 
-function SearchSection() {
+// Helper function to convert category name to URL-friendly slug
+const categoryToSlug = (category) => {
+  if (category === 'Any') return null
+  return category
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
+function SearchSection({ sharedBackground, setSharedBackground }) {
   const navigate = useNavigate()
   const [category, setCategory] = useState('Any')
   const [destination, setDestination] = useState('Any')
   const [travelers, setTravelers] = useState('2')
+  
+  // Use shared background if provided, otherwise use default
+  const selectedBackground = sharedBackground || '/images/destinations/search-where-to-travel.webp'
+  
+  const handleBackgroundChange = (bgUrl) => {
+    if (setSharedBackground) {
+      setSharedBackground(bgUrl)
+    }
+  }
 
   const categories = [
     { value: 'Any', label: 'Any Category', icon: '🌍' },
@@ -35,70 +54,35 @@ function SearchSection() {
     { value: 'Middle East', label: 'Middle East', icon: '🏜️' }
   ]
 
-  const popularDestinations = [
-    { value: 'Greece', label: 'Greece', icon: '🇬🇷' },
-    { value: 'Thailand', label: 'Thailand', icon: '🇹🇭' },
-    { value: 'Italy', label: 'Italy', icon: '🇮🇹' },
-    { value: 'Spain', label: 'Spain', icon: '🇪🇸' },
-    { value: 'Dubai', label: 'Dubai', icon: '🏙️' },
-    { value: 'France', label: 'France', icon: '🇫🇷' },
-    { value: 'Portugal', label: 'Portugal', icon: '🇵🇹' },
-    { value: 'Turkey', label: 'Turkey', icon: '🇹🇷' },
-    { value: 'Egypt', label: 'Egypt', icon: '🇪🇬' },
-    { value: 'Maldives', label: 'Maldives', icon: '🏝️' },
-    { value: 'Bali', label: 'Bali', icon: '🌴' },
-    { value: 'Japan', label: 'Japan', icon: '🇯🇵' },
-    { value: 'Australia', label: 'Australia', icon: '🇦🇺' },
-    { value: 'Iceland', label: 'Iceland', icon: '🇮🇸' },
-    { value: 'Switzerland', label: 'Switzerland', icon: '🇨🇭' },
-    { value: 'Morocco', label: 'Morocco', icon: '🇲🇦' },
-    { value: 'Croatia', label: 'Croatia', icon: '🇭🇷' },
-    { value: 'Cyprus', label: 'Cyprus', icon: '🇨🇾' },
-    { value: 'Malta', label: 'Malta', icon: '🇲🇹' },
-    { value: 'Seychelles', label: 'Seychelles', icon: '🏖️' },
-    { value: 'Mauritius', label: 'Mauritius', icon: '🇲🇺' },
-    { value: 'Zanzibar', label: 'Zanzibar', icon: '🌊' },
-    { value: 'Singapore', label: 'Singapore', icon: '🇸🇬' },
-    { value: 'Vietnam', label: 'Vietnam', icon: '🇻🇳' },
-    { value: 'Indonesia', label: 'Indonesia', icon: '🇮🇩' },
-    { value: 'Sri Lanka', label: 'Sri Lanka', icon: '🇱🇰' },
-    { value: 'India', label: 'India', icon: '🇮🇳' },
-    { value: 'Jordan', label: 'Jordan', icon: '🇯🇴' },
-    { value: 'Oman', label: 'Oman', icon: '🇴🇲' },
-    { value: 'Qatar', label: 'Qatar', icon: '🇶🇦' }
-  ]
-
-  const popularCategories = [
-    { value: 'Summer Packages', label: 'Summer', icon: '☀️' },
-    { value: 'City Breaks', label: 'City Breaks', icon: '🏙️' },
-    { value: 'Cruises', label: 'Cruises', icon: '🚢' },
-    { value: 'Exotic Packages', label: 'Exotic', icon: '🌴' },
-    { value: 'Winter Packages', label: 'Winter', icon: '❄️' },
-    { value: 'Christmas Packages', label: 'Christmas', icon: '🎄' },
-    { value: 'Autumn Packages', label: 'Autumn', icon: '🍂' },
-    { value: 'Spring Packages', label: 'Spring', icon: '🌸' },
-    { value: 'Green Monday', label: 'Green Monday', icon: '🌿' },
-    { value: 'Easter Packages', label: 'Easter', icon: '🐰' },
-    { value: 'SPORTS EVENTS & CONCERTS', label: 'Sports', icon: '⚽' },
-    { value: 'SPORTS EVENTS & CONCERTS', label: 'Events', icon: '🎫' },
-    { value: 'SPORTS EVENTS & CONCERTS', label: 'Concerts', icon: '🎵' }
-  ]
-
   const handleSearch = (e) => {
     e.preventDefault()
-    const params = new URLSearchParams()
-    if (category !== 'Any') params.set('category', category)
-    if (destination !== 'Any') params.set('destination', destination)
-    navigate(`/packages?${params.toString()}`)
-  }
-
-  const handleQuickFilter = (type, value) => {
-    if (type === 'destination') {
-      setDestination(value)
-    } else if (type === 'category') {
-      setCategory(value)
+    const categorySlug = categoryToSlug(category)
+    
+    if (categorySlug) {
+      // Navigate directly to the selected category page
+      navigate(`/tour-category/${categorySlug}/`)
+    } else {
+      // Fallback to query params if no category selected
+      const params = new URLSearchParams()
+      if (destination !== 'Any') params.set('destination', destination)
+      navigate(`/packages?${params.toString()}`)
     }
   }
+
+  // Helper to convert category to slug for navigation
+  const getCategorySlug = (cat) => {
+    if (cat === 'Any') return null
+    return cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and').replace(/[^a-z0-9-]/g, '')
+  }
+
+  const backgroundImages = [
+    { id: 'default', url: '/images/destinations/search-where-to-travel.webp', name: 'Default' },
+    { id: 'singapore', url: '/images/destinations/singapore.png', name: 'Singapore' },
+    { id: 'norwegian-fjords', url: '/images/destinations/norwegian-fjords-cruise.png', name: 'Norwegian Fjords' },
+    { id: 'alaska', url: '/images/destinations/alaska.png', name: 'Alaska' },
+    { id: 'china', url: '/images/destinations/china.png', name: 'China' },
+    { id: 'cruises', url: '/images/cruises/cruises-background-2.png', name: 'Cruises' }
+  ]
 
   return (
     <section className="search-section">
@@ -106,43 +90,6 @@ function SearchSection() {
         <div className="search-header">
           <h2 className="search-title">Find Your Perfect Trip</h2>
           <p className="search-subtitle">Search through our amazing travel packages and discover your next adventure</p>
-        </div>
-
-        {/* Quick Filters - Popular Destinations */}
-        <div className="quick-filters">
-          <div className="filter-group">
-            <span className="filter-label">Popular Destinations:</span>
-            <div className="filter-chips">
-              {popularDestinations.map((dest) => (
-                <button
-                  key={dest.value}
-                  type="button"
-                  className={`filter-chip ${destination === dest.value ? 'active' : ''}`}
-                  onClick={() => handleQuickFilter('destination', dest.value)}
-                >
-                  <span className="chip-icon">{dest.icon}</span>
-                  <span>{dest.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="filter-group">
-            <span className="filter-label">Popular Categories:</span>
-            <div className="filter-chips">
-              {popularCategories.map((cat) => (
-                <button
-                  key={cat.value}
-                  type="button"
-                  className={`filter-chip ${category === cat.value ? 'active' : ''}`}
-                  onClick={() => handleQuickFilter('category', cat.value)}
-                >
-                  <span className="chip-icon">{cat.icon}</span>
-                  <span>{cat.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Main Search Form */}
@@ -170,7 +117,7 @@ function SearchSection() {
 
           <div className="form-card">
             <div className="form-field-header">
-              <div className="form-icon">📦</div>
+              <div className="form-icon">✈️</div>
               <label htmlFor="category" className="form-label">What type?</label>
             </div>
             <div className="form-field-wrapper">
@@ -216,13 +163,66 @@ function SearchSection() {
           </button>
         </form>
 
-        {/* Search Tips */}
-        <div className="search-tips">
-          <p className="tips-title">💡 Search Tips</p>
-          <div className="tips-list">
-            <span>• Select multiple filters for better results</span>
-            <span>• Try popular destinations for best deals</span>
-            <span>• Check seasonal packages for special offers</span>
+        {/* Show selected category with navigation to other categories */}
+        {category !== 'Any' && (
+          <div className="selected-category-section">
+            <div className="selected-category-info">
+              <h3 className="selected-category-title">
+                {categories.find(c => c.value === category)?.icon} {category}
+              </h3>
+              <p className="selected-category-description">
+                Showing packages for {category}. Browse other categories below.
+              </p>
+            </div>
+            <div className="other-categories-quick-nav">
+              <h4 className="quick-nav-title">Other Categories</h4>
+              <div className="quick-nav-categories">
+                {categories.filter(c => c.value !== 'Any' && c.value !== category).slice(0, 6).map((cat) => (
+                  <a
+                    key={cat.value}
+                    href={`/tour-category/${getCategorySlug(cat.value)}/`}
+                    className="quick-nav-category-link"
+                  >
+                    {cat.icon} {cat.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Destination Images Gallery - Background Selection */}
+        <div className="destination-images-gallery">
+          <h3 className="gallery-title">Navigate to your Destination</h3>
+          <div className="destination-images-grid">
+            {backgroundImages.map((bg) => (
+              <div
+                key={bg.id}
+                className={`destination-image-card ${selectedBackground === bg.url ? 'selected' : ''}`}
+                onClick={() => handleBackgroundChange(bg.url)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    handleBackgroundChange(bg.url)
+                  }
+                }}
+              >
+                <div 
+                  className="destination-image-bg"
+                  style={{ backgroundImage: `url(${bg.url})` }}
+                >
+                  <div className="destination-image-overlay"></div>
+                  <div className="destination-image-label">{bg.name}</div>
+                  {selectedBackground === bg.url && (
+                    <div className="selection-indicator">
+                      <span className="check-icon">✓</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

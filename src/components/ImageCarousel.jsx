@@ -1,30 +1,39 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './ImageCarousel.css'
 
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const navigate = useNavigate()
 
   const images = [
     {
       id: 1,
-      image: '/images/hero-northerlights.webp',
+      image: '/images/destinations/northern-lights.webp',
       title: 'Northern Lights Adventure',
       subtitle: 'Experience the magical Aurora Borealis in pristine wilderness',
       location: 'Iceland & Norway'
     },
     {
       id: 2,
-      image: '/images/hero-mountain.webp',
+      image: '/images/destinations/mountain.webp',
       title: 'Mountain Escapes',
       subtitle: 'Discover breathtaking landscapes and natural wonders',
       location: 'Mountain Destinations'
     },
     {
       id: 3,
-      image: '/images/hero-cliftonbay.webp',
+      image: '/images/destinations/cliftonbay.webp',
       title: 'Coastal Paradise',
       subtitle: 'Relax on pristine beaches with crystal-clear turquoise waters',
       location: 'Tropical Destinations'
+    },
+    {
+      id: 4,
+      image: '/images/destinations/greece-hero.webp',
+      title: 'Ancient Wonders',
+      subtitle: 'Explore historical ruins and classical architecture by the Mediterranean',
+      location: 'Greece & Mediterranean'
     }
   ]
 
@@ -75,9 +84,14 @@ function ImageCarousel() {
                 <div className="image-overlay"></div>
               </div>
               <div className="slide-content">
-                <div className="slide-badge">{item.location}</div>
                 <h2 className="slide-title">{item.title}</h2>
                 <p className="slide-subtitle">{item.subtitle}</p>
+                <button 
+                  className="book-online-btn"
+                  onClick={() => navigate('/book-online')}
+                >
+                  Book Online
+                </button>
               </div>
             </div>
           ))}

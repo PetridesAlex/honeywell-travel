@@ -1,7 +1,23 @@
 import { Link } from 'react-router-dom'
 import './TourPackagesSection.css'
 
-function TourPackagesSection() {
+function TourPackagesSection({ sharedBackground }) {
+  const categoryQueryMap = {
+    'destinations': 'Destinations',
+    'summer-packages': 'Summer Packages',
+    'autumn-packages': 'Autumn Packages',
+    'winter-packages': 'Winter Packages',
+    'ski-packages': 'Ski Packages',
+    'christmas-packages': 'Christmas Packages',
+    'easter-packages': 'Easter Packages',
+    'green-monday': 'Green Monday',
+    'cruises': 'Cruises',
+    'city-breaks': 'City Breaks',
+    'exotic-packages': 'Exotic Packages',
+    'music-sports': 'Music & Sports',
+    'mary-special-trips': 'Mary Special Trips'
+  }
+
   const tourPackages = [
     {
       id: 'destinations',
@@ -9,7 +25,7 @@ function TourPackagesSection() {
       icon: '🌍',
       description: 'Explore amazing destinations around the world',
       color: '#E31E24',
-      image: '/images/iceland.webp'
+      image: '/images/destinations/iceland.webp'
     },
     {
       id: 'summer-packages',
@@ -17,7 +33,7 @@ function TourPackagesSection() {
       icon: '☀️',
       description: 'Perfect summer getaways for your vacation',
       color: '#FF6B35',
-      image: '/images/Summer.webp'
+      image: '/images/categories/summer.webp'
     },
     {
       id: 'autumn-packages',
@@ -25,7 +41,7 @@ function TourPackagesSection() {
       icon: '🍂',
       description: 'Experience the beauty of autumn destinations',
       color: '#D2691E',
-      image: '/images/autumn.webp'
+      image: '/images/categories/autumn.webp'
     },
     {
       id: 'winter-packages',
@@ -33,7 +49,15 @@ function TourPackagesSection() {
       icon: '❄️',
       description: 'Winter wonderlands and cozy escapes',
       color: '#4A90E2',
-      image: '/images/winter.webp'
+      image: '/images/categories/winter.webp'
+    },
+    {
+      id: 'ski-packages',
+      title: 'Ski Packages',
+      icon: '⛷️',
+      description: 'Hit the slopes at world-class ski resorts',
+      color: '#87CEEB',
+      image: '/images/categories/ski.webp'
     },
     {
       id: 'christmas-packages',
@@ -41,7 +65,7 @@ function TourPackagesSection() {
       icon: '🎄',
       description: 'Magical Christmas holidays and celebrations',
       color: '#C41230',
-      image: '/images/christmas.webp'
+      image: '/images/categories/christmas.webp'
     },
     {
       id: 'easter-packages',
@@ -49,7 +73,7 @@ function TourPackagesSection() {
       icon: '🐰',
       description: 'Easter breaks in beautiful locations',
       color: '#FFB6C1',
-      image: '/images/easter.webp'
+      image: '/images/categories/easter.webp'
     },
     {
       id: 'green-monday',
@@ -57,7 +81,7 @@ function TourPackagesSection() {
       icon: '🌿',
       description: 'Special Green Monday travel deals',
       color: '#228B22',
-      image: '/images/green-monday.webp'
+      image: '/images/categories/green-monday.webp'
     },
     {
       id: 'cruises',
@@ -65,7 +89,7 @@ function TourPackagesSection() {
       icon: '🚢',
       description: 'Luxury cruises to exotic destinations',
       color: '#1E90FF',
-      image: '/images/Cruises.webp'
+      image: '/images/categories/cruises.webp'
     },
     {
       id: 'city-breaks',
@@ -73,7 +97,7 @@ function TourPackagesSection() {
       icon: '🏙️',
       description: 'Urban adventures in vibrant cities',
       color: '#8B008B',
-      image: '/images/city-breaks.webp'
+      image: '/images/categories/city-breaks.webp'
     },
     {
       id: 'exotic-packages',
@@ -81,7 +105,7 @@ function TourPackagesSection() {
       icon: '🌴',
       description: 'Discover exotic and tropical paradises',
       color: '#FF6347',
-      image: '/images/exotic-destinations.webp'
+      image: '/images/categories/exotic.webp'
     },
     {
       id: 'music-sports',
@@ -89,7 +113,7 @@ function TourPackagesSection() {
       icon: '🎵',
       description: 'Festivals, concerts, and sporting events',
       color: '#9B59B6',
-      image: '/images/music-sports.webp'
+      image: '/images/categories/music-sports.webp'
     },
     {
       id: 'mary-special-trips',
@@ -97,7 +121,7 @@ function TourPackagesSection() {
       icon: '✨',
       description: 'Exclusive curated travel experiences',
       color: '#FFD700',
-      image: '/images/Sports.webp'
+      image: '/images/categories/sports.webp'
     }
   ]
 
@@ -111,31 +135,32 @@ function TourPackagesSection() {
 
         <div className="packages-grid">
           {tourPackages.map((pkg, index) => (
-            <Link
-              key={pkg.id}
-              to={`/holiday-types/${pkg.id}`}
-              className="package-card"
-              style={{ 
-                '--delay': `${index * 0.1}s`,
-                '--pkg-color': pkg.color,
-                '--pkg-image': pkg.image ? `url(${pkg.image})` : 'none'
-              }}
-            >
-              {pkg.image && (
-                <div className="package-image-overlay"></div>
-              )}
-              <div className="package-icon-wrapper">
-                <div className="package-icon" style={{ '--pkg-color': pkg.color }}>
-                  {pkg.icon}
-                </div>
-                <div className="icon-glow" style={{ '--pkg-color': pkg.color }}></div>
-              </div>
+            <div key={pkg.id} className="package-card-wrapper">
               <h3 className="package-title">{pkg.title}</h3>
-              <p className="package-description">{pkg.description}</p>
-              <div className="package-arrow">
-                <span>Explore →</span>
-              </div>
-            </Link>
+              <Link
+                to={`/tour-category/${pkg.id}/`}
+                className="package-card"
+                style={{ 
+                  '--delay': `${index * 0.1}s`,
+                  '--pkg-color': pkg.color,
+                  '--pkg-image': pkg.image ? `url(${pkg.image})` : 'none'
+                }}
+              >
+                {pkg.image && (
+                  <div className="package-image-overlay">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.title}
+                      className="package-image"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div className="package-arrow">
+                  <span>Explore →</span>
+                </div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

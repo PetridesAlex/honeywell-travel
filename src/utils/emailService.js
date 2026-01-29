@@ -17,7 +17,7 @@ export const sendGiftVoucherEmail = async (voucherData) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        to: 'info@honeywelltravel.com.cy',
+        to: 'limassol@honeywelltravel.com.cy',
         subject: `New Gift Voucher Request - €${voucherData.amount}`,
         voucherData: {
           to: {
@@ -71,7 +71,7 @@ ${voucherData.message || 'No message provided'}
 This voucher request was submitted through the Honeywell Travel website.
   `.trim()
 
-  const mailtoLink = `mailto:info@honeywelltravel.com.cy?subject=${encodeURIComponent(`New Gift Voucher Request - €${voucherData.amount}`)}&body=${encodeURIComponent(emailBody)}`
+  const mailtoLink = `mailto:limassol@honeywelltravel.com.cy?subject=${encodeURIComponent(`New Gift Voucher Request - €${voucherData.amount}`)}&body=${encodeURIComponent(emailBody)}`
   
   window.location.href = mailtoLink
   

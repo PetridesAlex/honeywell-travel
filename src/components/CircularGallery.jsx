@@ -4,16 +4,16 @@ import './CircularGallery.css'
 function CircularGallery({ textColor = '#ffffff', borderRadius = 0.05 }) {
   // Images with correct country names - easy to add more images here
   const images = [
-    { id: 1, src: '/images/iceland.webp', title: 'Iceland' },
-    { id: 2, src: '/images/Thailand.webp', title: 'Thailand' },
-    { id: 3, src: '/images/Australia.webp', title: 'Australia' },
-    { id: 4, src: '/images/capetown.webp', title: 'South Africa' },
-    { id: 5, src: '/images/image.webp', title: 'Dubai' },
-    { id: 6, src: '/images/brazil-hero.webp', title: 'Brazil' },
-    { id: 7, src: '/images/canada-hero.webp', title: 'Canada' },
-    { id: 8, src: '/images/maldives-hero.webp', title: 'Maldives' },
-    { id: 9, src: '/images/japan-hero.webp', title: 'Japan' },
-    { id: 10, src: '/images/netherlands-hero.webp', title: 'Netherlands' }
+    { id: 1, src: '/images/destinations/iceland.webp', title: 'Iceland' },
+    { id: 2, src: '/images/destinations/thailand.webp', title: 'Thailand' },
+    { id: 3, src: '/images/destinations/australia.webp', title: 'Australia' },
+    { id: 4, src: '/images/destinations/capetown.webp', title: 'South Africa' },
+    { id: 5, src: '/images/destinations/dubai.webp', title: 'Dubai' },
+    { id: 6, src: '/images/destinations/brazil.webp', title: 'Brazil' },
+    { id: 7, src: '/images/destinations/canada.webp', title: 'Canada' },
+    { id: 8, src: '/images/destinations/maldives.webp', title: 'Maldives' },
+    { id: 9, src: '/images/destinations/japan.webp', title: 'Japan' },
+    { id: 10, src: '/images/destinations/netherlands.webp', title: 'Netherlands' }
   ]
 
   const containerRef = useRef(null)

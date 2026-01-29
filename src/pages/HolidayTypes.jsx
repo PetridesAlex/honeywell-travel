@@ -71,6 +71,11 @@ function HolidayTypes() {
     }
   ]
 
+  const categoryTitleMap = holidayCategories.reduce((acc, cat) => {
+    acc[cat.id] = cat.title
+    return acc
+  }, {})
+
   return (
     <div className="holiday-types-page">
       <div className="holiday-types-container">
@@ -83,7 +88,7 @@ function HolidayTypes() {
           {holidayCategories.map((category) => (
             <Link
               key={category.id}
-              to={`/holiday-types/${category.id}`}
+              to={`/tour-category/${category.id}/`}
               className="category-card"
             >
               <div className="category-icon">{category.icon}</div>
@@ -152,7 +157,7 @@ function HolidayTypes() {
         <section className="cta-section">
           <h2>Ready to Plan Your Perfect Holiday?</h2>
           <p>Contact our travel experts today and let us create an unforgettable experience for you.</p>
-          <a href="/contact" className="cta-button">Get in Touch</a>
+          <a href="/contact/" className="cta-button">Get in Touch</a>
         </section>
       </div>
     </div>

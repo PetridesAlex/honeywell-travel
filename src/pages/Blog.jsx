@@ -1,38 +1,89 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { blogPosts, getCategories } from '../data/blog'
 import './Blog.css'
 
 function Blog() {
-  const blogPosts = [
-    {
-      title: 'Rome in 4 Days : Must-See Attractions of the Eternal City',
-      date: 'March 1, 2024',
-      excerpt: 'Discover the timeless beauty of Rome with our comprehensive 4-day itinerary...'
-    },
-    {
-      title: 'TRAVELING SOLO : TIPS AND DESTINATIONS',
-      date: 'December 15, 2023',
-      excerpt: 'Everything you need to know about solo travel, from safety tips to the best destinations...'
-    },
-    {
-      title: 'DISCOVER THE WORLD THROUGH GASTRONOMY',
-      date: 'December 6, 2023',
-      excerpt: 'Explore different cultures through their unique culinary traditions...'
-    }
-  ]
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const categories = ['All', ...getCategories()]
+
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory)
+
+  // Sort posts by date (newest first)
+  const sortedPosts = [...filteredPosts].sort((a, b) => 
+    new Date(b.date) - new Date(a.date)
+  )
 
   return (
     <div className="blog-page">
+      {/* Hero Section */}
+      <div className="blog-hero">
+        <div className="blog-hero-content">
+          <h1>Travel Blog</h1>
+          <p className="blog-hero-subtitle">Stories, tips, and inspiration from around the world</p>
+        </div>
+      </div>
+
       <div className="blog-container">
-        <h1>Our Blog</h1>
+        {/* Category Filter */}
+        <div className="blog-categories">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Blog Grid */}
         <div className="blog-grid">
-          {blogPosts.map((post, index) => (
-            <article key={index} className="blog-card">
-              <h2>{post.title}</h2>
-              <p className="blog-date">{post.date}</p>
-              <p className="blog-excerpt">{post.excerpt}</p>
-              <a href="#" className="blog-link">Read More →</a>
+          {sortedPosts.map((post) => (
+            <article key={post.id} className="blog-card">
+              {post.image && (
+                <div className="blog-card-image">
+                  <div 
+                    className="blog-image-bg"
+                    style={{ backgroundImage: `url(${post.image})` }}
+                  />
+                  {post.featured && (
+                    <span className="blog-featured-badge">Featured</span>
+                  )}
+                </div>
+              )}
+              <div className="blog-card-content">
+                <div className="blog-card-meta">
+                  <span className="blog-category">{post.category}</span>
+                  <span className="blog-date">{post.formattedDate}</span>
+                </div>
+                <h2 className="blog-card-title">{post.title}</h2>
+                <p className="blog-excerpt">{post.excerpt}</p>
+                <div className="blog-card-footer">
+                  <Link to={`/our-blog/${post.slug}`} className="blog-link">
+                    Read More →
+                  </Link>
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="blog-tags">
+                      {post.tags.slice(0, 2).map((tag, idx) => (
+                        <span key={idx} className="blog-tag">{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </article>
           ))}
         </div>
+
+        {sortedPosts.length === 0 && (
+          <div className="blog-no-posts">
+            <p>No blog posts found in this category.</p>
+          </div>
+        )}
       </div>
     </div>
   )

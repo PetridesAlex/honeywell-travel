@@ -2,6 +2,15 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
+// Helper function to convert category name to URL-friendly slug
+const categoryToSlug = (category) => {
+  return category
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [closeTimeout, setCloseTimeout] = useState(null)
@@ -18,8 +27,7 @@ function Header() {
     'City Breaks',
     'Exotic Packages',
     'Mary Specials Trips',
-    'Build Your Trip',
-    'Gift Voucher'
+    'Build Your Trip'
   ]
 
   const honeymoonTypes = [
@@ -47,15 +55,23 @@ function Header() {
     setActiveDropdown(null)
   }
 
+  const toggleMobileDropdown = (type) => {
+    setActiveDropdown(activeDropdown === type ? null : type)
+  }
+
   return (
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          🌍 Honeywell Travel
+          <img 
+            src="https://www.honeywelltravel.com.cy/wp-content/uploads/2019/02/imageedit_1_2975338924.png" 
+            alt="Honeywell Travel Logo" 
+            className="logo-image"
+          />
         </Link>
         
         <nav className="nav">
-          <Link to="/our-world" className="nav-link">Our World</Link>
+          <Link to="/ourworld/" className="nav-link">Our World</Link>
           
           <div 
             className="nav-dropdown"
@@ -72,7 +88,7 @@ function Header() {
                 {holidayTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/holiday-types/${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                    to={`/tour-category/${categoryToSlug(item)}/`} 
                     className="dropdown-item"
                   >
                     <span className="dropdown-item-icon">→</span>
@@ -98,7 +114,13 @@ function Header() {
                 {honeymoonTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/honeymoon/${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                    to={
+                      item === 'Gift Voucher'
+                        ? '/gift-vouchers'
+                        : item === 'Honeymoon Calendar'
+                          ? '/honeymoon-calendar'
+                          : `/${item.toLowerCase().replace(/\s+/g, '-')}`
+                    } 
                     className="dropdown-item"
                   >
                     <span className="dropdown-item-icon">→</span>
@@ -109,12 +131,19 @@ function Header() {
             )}
           </div>
 
-          <Link to="/corporate" className="nav-link">Corporate</Link>
+          <Link to="/our-services/" className="nav-link">Corporate</Link>
           <Link to="/car-hire" className="nav-link">Car Hire</Link>
-          <Link to="/gallery" className="nav-link">Gallery</Link>
-          <Link to="/blog" className="nav-link">Blog</Link>
-          <Link to="/insurance" className="nav-link">Insurance</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/honeywell-travel-gallery/" className="nav-link">Gallery</Link>
+          <Link to="/our-blog/" className="nav-link">Blog</Link>
+          <a 
+            href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
+            className="nav-link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Insurance
+          </a>
+          <Link to="/contact/" className="nav-link">Contact</Link>
           
           <div className="social-icons">
             <a 
@@ -149,15 +178,78 @@ function Header() {
 
       {activeDropdown === 'mobile' && (
         <div className="mobile-menu">
-          <Link to="/our-world" className="mobile-link" onClick={closeMobileMenu}>Our World</Link>
-          <Link to="/holiday-types" className="mobile-link" onClick={closeMobileMenu}>Holiday Types</Link>
-          <Link to="/honeymoon" className="mobile-link" onClick={closeMobileMenu}>Honeymoon</Link>
-          <Link to="/corporate" className="mobile-link" onClick={closeMobileMenu}>Corporate</Link>
+          <Link to="/ourworld/" className="mobile-link" onClick={closeMobileMenu}>Our World</Link>
+          
+          <div className="mobile-dropdown">
+            <button 
+              className="mobile-link mobile-dropdown-trigger" 
+              onClick={() => toggleMobileDropdown('mobile-holiday')}
+            >
+              Holiday Types
+              <span className="mobile-dropdown-arrow">{activeDropdown === 'mobile-holiday' ? '▲' : '▼'}</span>
+            </button>
+            {activeDropdown === 'mobile-holiday' && (
+              <div className="mobile-dropdown-menu">
+                {holidayTypes.map((item, index) => (
+                  <Link 
+                    key={index} 
+                    to={`/tour-category/${categoryToSlug(item)}/`} 
+                    className="mobile-dropdown-item"
+                    onClick={closeMobileMenu}
+                  >
+                    <span className="dropdown-item-icon">→</span>
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="mobile-dropdown">
+            <button 
+              className="mobile-link mobile-dropdown-trigger" 
+              onClick={() => toggleMobileDropdown('mobile-honeymoon')}
+            >
+              Honeymoon
+              <span className="mobile-dropdown-arrow">{activeDropdown === 'mobile-honeymoon' ? '▲' : '▼'}</span>
+            </button>
+            {activeDropdown === 'mobile-honeymoon' && (
+              <div className="mobile-dropdown-menu">
+                {honeymoonTypes.map((item, index) => (
+                  <Link 
+                    key={index} 
+                    to={
+                      item === 'Gift Voucher'
+                        ? '/gift-vouchers'
+                        : item === 'Honeymoon Calendar'
+                          ? '/honeymoon-calendar'
+                          : `/${item.toLowerCase().replace(/\s+/g, '-')}`
+                    } 
+                    className="mobile-dropdown-item"
+                    onClick={closeMobileMenu}
+                  >
+                    <span className="dropdown-item-icon">→</span>
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link to="/our-services/" className="mobile-link" onClick={closeMobileMenu}>Corporate</Link>
           <Link to="/car-hire" className="mobile-link" onClick={closeMobileMenu}>Car Hire</Link>
-          <Link to="/gallery" className="mobile-link" onClick={closeMobileMenu}>Gallery</Link>
-          <Link to="/blog" className="mobile-link" onClick={closeMobileMenu}>Blog</Link>
-          <Link to="/insurance" className="mobile-link" onClick={closeMobileMenu}>Insurance</Link>
-          <Link to="/contact" className="mobile-link" onClick={closeMobileMenu}>Contact</Link>
+          <Link to="/honeywell-travel-gallery/" className="mobile-link" onClick={closeMobileMenu}>Gallery</Link>
+          <Link to="/our-blog/" className="mobile-link" onClick={closeMobileMenu}>Blog</Link>
+          <a 
+            href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
+            className="mobile-link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={closeMobileMenu}
+          >
+            Insurance
+          </a>
+          <Link to="/contact/" className="mobile-link" onClick={closeMobileMenu}>Contact</Link>
           
           <div className="mobile-social-icons">
             <a 

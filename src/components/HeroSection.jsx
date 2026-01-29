@@ -5,77 +5,77 @@ function HeroSection() {
   const heroCards = [
     {
       id: 1,
-      image: '/images/iceland.webp',
+      image: '/images/destinations/iceland.webp',
       title: 'Iceland',
       subtitle: 'Land of Fire and Ice',
       link: '/destinations'
     },
     {
       id: 2,
-      image: '/images/Thailand.webp',
+      image: '/images/destinations/thailand.webp',
       title: 'Thailand',
       subtitle: 'Exotic Southeast Asia',
       link: '/packages'
     },
     {
       id: 3,
-      image: '/images/Australia.webp',
+      image: '/images/destinations/australia.webp',
       title: 'Australia',
       subtitle: 'Down Under Adventures',
       link: '/packages'
     },
     {
       id: 4,
-      image: '/images/capetown.webp',
+      image: '/images/destinations/capetown.webp',
       title: 'South Africa',
       subtitle: 'Cape Town Beauty',
       link: '/destinations'
     },
     {
       id: 5,
-      image: '/images/image.webp',
+      image: '/images/destinations/dubai.webp',
       title: 'Dubai',
       subtitle: 'Luxury in the Desert',
       link: '/packages'
     },
     {
       id: 6,
-      image: '/images/brazil-hero.webp',
+      image: '/images/destinations/brazil.webp',
       title: 'Brazil',
       subtitle: 'Vibrant Culture & Nature',
       link: '/destinations'
     },
     {
       id: 7,
-      image: '/images/canada-hero.webp',
+      image: '/images/destinations/canada.webp',
       title: 'Canada',
       subtitle: 'Natural Wonders',
       link: '/packages'
     },
     {
       id: 8,
-      image: '/images/japan-hero.webp',
+      image: '/images/destinations/japan.webp',
       title: 'Japan',
       subtitle: 'Ancient Traditions & Modern Wonders',
       link: '/destinations'
     },
     {
       id: 9,
-      image: '/images/maldives-hero.webp',
+      image: '/images/destinations/maldives.webp',
       title: 'Maldives',
       subtitle: 'Paradise Islands',
       link: '/packages'
     },
     {
       id: 10,
-      image: '/images/netherlands-hero.webp',
+      image: '/images/destinations/netherlands.webp',
       title: 'Netherlands',
       subtitle: 'Charming Canals & Tulips',
       link: '/destinations'
     },
     {
       id: 11,
-      image: '/images/usa-hero.webp',
+      image: '/images/destinations/usa.webp',
       title: 'United States',
       subtitle: 'Diverse Landscapes',
       link: '/packages'

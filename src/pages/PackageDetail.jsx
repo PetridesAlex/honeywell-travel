@@ -6,6 +6,34 @@ function PackageDetail() {
   const { id } = useParams()
   const pkg = getPackageById(id)
 
+  // Calculate the cheapest hotel price
+  const getCheapestPrice = () => {
+    if (pkg.details && pkg.details.hotels && pkg.details.hotels.length > 0) {
+      let cheapestPrice = Infinity
+      
+      pkg.details.hotels.forEach(hotel => {
+        // Check packagePrice (for 2 adults)
+        if (hotel.packagePrice && hotel.packagePrice < cheapestPrice) {
+          cheapestPrice = hotel.packagePrice
+        }
+        
+        // Check individual prices (double, single, triple, child1, child2)
+        if (hotel.prices) {
+          Object.values(hotel.prices).forEach(price => {
+            if (price && price < cheapestPrice) {
+              cheapestPrice = price
+            }
+          })
+        }
+      })
+      
+      return cheapestPrice !== Infinity ? cheapestPrice : pkg.price
+    }
+    return pkg.price
+  }
+
+  const displayPrice = getCheapestPrice()
+
   if (!pkg) {
     return (
       <div className="package-detail-page">
@@ -25,7 +53,23 @@ function PackageDetail() {
         
         <div className="package-detail-content">
           <div className="package-detail-image">
-            <div className="image-placeholder">{pkg.image}</div>
+            {pkg.details ? (
+              <div 
+                className="package-image-bg"
+                style={{ 
+                  backgroundImage: `url(${pkg.details.coverImage || (pkg.details.gallery && pkg.details.gallery[0]) || '/images/destinations/athens-hero.webp'})` 
+                }}
+              >
+                <div className="package-image-overlay"></div>
+              </div>
+            ) : (
+              <div 
+                className="package-image-bg"
+                style={{ backgroundImage: 'url(/images/destinations/athens-hero.webp)' }}
+              >
+                <div className="package-image-overlay"></div>
+              </div>
+            )}
           </div>
 
           <div className="package-detail-info">
@@ -46,13 +90,14 @@ function PackageDetail() {
               </div>
               <div className="meta-item">
                 <span className="meta-label">Price:</span>
-                <span className="meta-value price">€{pkg.price.toLocaleString()}</span>
+                <span className="meta-value price">From €{displayPrice.toLocaleString()}</span>
               </div>
             </div>
 
             <div className="package-actions">
-              <button className="book-button">Book Now</button>
-              <button className="inquiry-button">Make Inquiry</button>
+              <Link to={`/packages/${pkg.id}/details`} className="view-travel-package-button">
+                View Travel Package
+              </Link>
             </div>
           </div>
         </div>

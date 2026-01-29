@@ -3,6 +3,16 @@ import { useNavigate } from 'react-router-dom'
 import { addPackage } from '../data/packages'
 import './AddPackage.css'
 
+// Helper function to convert category name to URL-friendly slug
+const categoryToSlug = (category) => {
+  if (category === 'Any') return null
+  return category
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9-]/g, '')
+}
+
 function AddPackage() {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
@@ -84,7 +94,14 @@ function AddPackage() {
     })
 
     // Navigate to packages page with filters
-    navigate(`/packages?category=${formData.category}&destination=${formData.destination}`)
+    const categorySlug = categoryToSlug(formData.category)
+    if (categorySlug) {
+      navigate(`/tour-category/${categorySlug}/`)
+    } else {
+      const params = new URLSearchParams()
+      if (formData.destination !== 'Any') params.set('destination', formData.destination)
+      navigate(`/packages?${params.toString()}`)
+    }
   }
 
   return (

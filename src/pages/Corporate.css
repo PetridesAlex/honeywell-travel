@@ -8,7 +8,7 @@
 .corporate-hero {
   position: relative;
   height: 500px;
-  background-image: url('/images/corporate-bg.webp');
+  background-image: url('/images/corporate/background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@
 .cwt-image-cover {
   width: 100%;
   height: 100%;
-  background-image: url('/images/corporate-fligh.webp');
+  background-image: url('/images/corporate/flight.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
