@@ -71,10 +71,7 @@ function Corporate() {
         <div className="container">
           <div className="what-we-do-content">
             <div className="what-we-do-image">
-              <div className="image-placeholder">
-                <span>👔</span>
-                <p>Professional Service</p>
-              </div>
+              <div className="what-we-do-image-cover" role="img" aria-label="Incentive trips – professionals celebrating on a rooftop terrace overlooking the city"></div>
             </div>
             <div className="what-we-do-text">
               <h2>WHAT WE DO</h2>
@@ -155,10 +152,7 @@ function Corporate() {
               </div>
             </div>
             <div className="incentive-image">
-              <div className="image-placeholder">
-                <span>🎯</span>
-                <p>Team Building</p>
-              </div>
+              <div className="incentive-image-cover" role="img" aria-label="Incentive trips – professionals celebrating on a rooftop terrace overlooking the city"></div>
             </div>
           </div>
         </div>

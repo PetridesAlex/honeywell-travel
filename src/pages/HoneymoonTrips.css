@@ -89,26 +89,33 @@
   margin-bottom: 0.9rem;
 }
 
-.what-image .image-placeholder {
+.what-image,
+.why-image {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.what-image .image-placeholder,
+.why-image .image-placeholder {
   width: 100%;
-  padding-top: 70%;
+  max-width: 520px;
+  margin: 0 auto;
+  aspect-ratio: 10 / 7;
+  min-height: 200px;
+  max-height: 380px;
   border-radius: 18px;
-  background-image: url('/images/honeymoon/trip.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+.what-image .image-placeholder {
+  background-image: url('/images/honeymoon/trip.webp');
+}
+
 .why-image .image-placeholder {
-  width: 100%;
-  padding-top: 70%;
-  border-radius: 18px;
-  background-image: url('/images/honeymoon/couple.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-image: url('/images/honeymoon/honeymoon-packages-hero.png');
 }
 
 .why-section {
@@ -411,6 +418,12 @@
   .why-section {
     grid-template-columns: 1fr;
   }
+
+  .what-image .image-placeholder,
+  .why-image .image-placeholder {
+    max-width: 100%;
+    max-height: 380px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -430,6 +443,22 @@
 
   .honeymoon-trips-container {
     padding: 2.5rem 1.25rem 3.5rem;
+  }
+
+  .what-image .image-placeholder,
+  .why-image .image-placeholder {
+    max-width: 100%;
+    min-height: 220px;
+    max-height: 280px;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-image .image-placeholder,
+  .why-image .image-placeholder {
+    min-height: 200px;
+    max-height: 260px;
   }
 }
 

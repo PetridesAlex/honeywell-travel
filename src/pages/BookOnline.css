@@ -221,6 +221,24 @@
   background: white;
 }
 
+.packages-results-prompt {
+  padding: 2rem 0;
+  min-height: auto;
+}
+
+.search-prompt-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.search-prompt-text strong {
+  color: #C41230;
+}
+
 .results-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -276,37 +294,53 @@
 
 .package-content {
   width: 100%;
-}
-
-.package-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 0.5rem;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-.package-destination {
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .package-category {
   color: #E31E24;
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  order: 1;
+}
+
+.package-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  order: 2;
+}
+
+/* Different title colors per card */
+.packages-grid .package-card-link:nth-child(6n+1) .package-title { color: #C41230; }
+.packages-grid .package-card-link:nth-child(6n+2) .package-title { color: #1e3a5f; }
+.packages-grid .package-card-link:nth-child(6n+3) .package-title { color: #0d5c2e; }
+.packages-grid .package-card-link:nth-child(6n+4) .package-title { color: #b45309; }
+.packages-grid .package-card-link:nth-child(6n+5) .package-title { color: #6b21a8; }
+.packages-grid .package-card-link:nth-child(6n+6) .package-title { color: #0e7490; }
+
+.package-destination {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  order: 3;
 }
 
 .package-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 0.75rem;
+  margin-top: auto;
   border-top: none;
+  order: 4;
 }
 
 .package-duration {

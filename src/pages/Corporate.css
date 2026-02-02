@@ -146,6 +146,26 @@
   border-radius: 20px;
 }
 
+.what-we-do-image-cover {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/corporate/incentive-trip-what-we-do.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.incentive-image-cover {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/corporate/incentive-trip-incentive.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
 .image-placeholder {
   width: 100%;
   height: 100%;
@@ -174,7 +194,7 @@
 /* What We Do Section */
 .what-we-do-section {
   padding: 5rem 0;
-  background: #ffffff;
+  background: linear-gradient(180deg, #fafbfc 0%, #ffffff 30%, #f8f9fa 100%);
 }
 
 .what-we-do-content {
@@ -184,63 +204,100 @@
   align-items: start;
 }
 
+.what-we-do-image {
+  position: sticky;
+  top: 2rem;
+}
+
 .what-we-do-text h2 {
-  font-size: 3rem;
-  color: #C41230;
-  margin-bottom: 2rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.what-we-do-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #E31E24 0%, #C41230 100%);
+  border-radius: 2px;
 }
 
 .what-we-do-description {
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.85;
+  color: #4b5563;
   font-size: 1.05rem;
   margin-bottom: 2.5rem;
+  max-width: 100%;
 }
 
 .what-we-do-description p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.what-we-do-description p:last-child {
+  margin-bottom: 0;
 }
 
 .services-list {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  padding: 2.5rem;
-  border-radius: 15px;
-  border-left: 4px solid #E31E24;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 2.25rem 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .services-list h3 {
-  color: #C41230;
-  font-size: 1.5rem;
+  color: #1a1a2e;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .services-list ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
 }
 
 .services-list li {
-  color: #333;
-  padding-left: 1.5rem;
+  color: #374151;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
   position: relative;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #f3f4f6;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.services-list li:hover {
+  background: #fff5f5;
+  border-color: rgba(227, 30, 36, 0.2);
 }
 
 .services-list li::before {
   content: '✓';
   position: absolute;
-  left: 0;
-  color: #E31E24;
-  font-weight: bold;
-  font-size: 1.2rem;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #C41230;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /* Extra Services Section */
@@ -467,6 +524,10 @@
   .incentive-content {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .what-we-do-image {
+    position: static;
   }
 
   .awards-content {

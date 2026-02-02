@@ -89,41 +89,39 @@ function OurWorld() {
       <section id="our-world-content" className="section-introduction">
         <div className="container">
           <div className="introduction-content">
-            <div className="introduction-text">
-              <h2 className="section-heading">
-                {['Discover', 'Our', 'World'].map((word, index) => (
-                  <span key={index} className="heading-word" style={{ animationDelay: `${index * 0.2}s` }}>
-                    {word}
-                    {index < 2 && <span> </span>}
-                  </span>
-                ))}
-              </h2>
-              <div className="content-placeholder">
-                <p>Here at Honeywell Travel, we are real people in a real workplace ready to offer you the best travel services.</p>
-                
-                <p>We believe in authenticity, and we create experiences that excite you, challenge you and inspire you. We aspire to connect you with the world and make memories that will stay with you for life.</p>
-                
-                <p>Our team of travel experts are people who share the same passion – a passion for traveling and discovering beautiful corners of the world. We are all traveling souls! We love exploring new destinations, living new experiences and sharing them with you all.</p>
-                
-                <p>We strive to find the heart of every city and location, to find out what makes each place so special so that we can offer you the very best that every country has to offer.</p>
-                
-                <p>With plenty of personal experience, the help of state of art technology, and with the advice of our trusted partners in various destinations, we provide you with the best travel recommendations tailored to your taste and preferences!</p>
-                
-                <p>When it comes to business travel, we give our corporate clients a chance to concentrate on their own fields of expertise only, by offering them our own know-how on how to arrange sensible and cost efficient travel as well as comprehensive travel management.</p>
-                
-                <p>We contribute to our client's traveler's success by putting everything they need at their fingertips and providing recommendations to help them navigate unfamiliar locations.</p>
-                
-                <p>For meetings and events, it means delivering the perfect event so attendees have an enhanced experience and your company sees better return investment.</p>
-                
-                <p>We believe that every trip should be as unique as you are, and therefore we have made it our main aim to provide you with an unforgettable, hassle-free, awe-inspiring and once-in-a-lifetime experience! And we always do this with a smile. 😊</p>
-              </div>
-            </div>
+            <h2 className="section-heading">
+              {['Discover', 'Our', 'World'].map((word, index) => (
+                <span key={index} className="heading-word" style={{ animationDelay: `${index * 0.2}s` }}>
+                  {word}
+                  {index < 2 && <span> </span>}
+                </span>
+              ))}
+            </h2>
             <div className="introduction-image">
               <img
                 src="/images/our-world-people.png"
                 alt="Honeywell Travel team"
                 className="introduction-photo"
               />
+            </div>
+            <div className="content-placeholder">
+              <p>Here at Honeywell Travel, we are real people in a real workplace ready to offer you the best travel services.</p>
+              
+              <p>We believe in authenticity, and we create experiences that excite you, challenge you and inspire you. We aspire to connect you with the world and make memories that will stay with you for life.</p>
+              
+              <p>Our team of travel experts are people who share the same passion – a passion for traveling and discovering beautiful corners of the world. We are all traveling souls! We love exploring new destinations, living new experiences and sharing them with you all.</p>
+              
+              <p>We strive to find the heart of every city and location, to find out what makes each place so special so that we can offer you the very best that every country has to offer.</p>
+              
+              <p>With plenty of personal experience, the help of state of art technology, and with the advice of our trusted partners in various destinations, we provide you with the best travel recommendations tailored to your taste and preferences!</p>
+              
+              <p>When it comes to business travel, we give our corporate clients a chance to concentrate on their own fields of expertise only, by offering them our own know-how on how to arrange sensible and cost efficient travel as well as comprehensive travel management.</p>
+              
+              <p>We contribute to our client's traveler's success by putting everything they need at their fingertips and providing recommendations to help them navigate unfamiliar locations.</p>
+              
+              <p>For meetings and events, it means delivering the perfect event so attendees have an enhanced experience and your company sees better return investment.</p>
+              
+              <p>We believe that every trip should be as unique as you are, and therefore we have made it our main aim to provide you with an unforgettable, hassle-free, awe-inspiring and once-in-a-lifetime experience! And we always do this with a smile. 😊</p>
             </div>
           </div>
         </div>
@@ -172,15 +170,17 @@ function OurWorld() {
       <section className="section-video">
         <div className="container">
           <div className="video-wrapper">
-            <div className="video-placeholder">
-              <div className="play-button">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                  <circle cx="40" cy="40" r="40" fill="rgba(255, 255, 255, 0.9)"/>
-                  <path d="M32 24L56 40L32 56V24Z" fill="#C41230"/>
-                </svg>
-              </div>
-              <p className="video-placeholder-text">Video will be embedded here</p>
-            </div>
+            <video
+              className="video-player"
+              src="/videos/Honeywell-Travel-travel-awards-video-2024.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              poster=""
+              aria-label="Honeywell Travel Awards 2024"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>

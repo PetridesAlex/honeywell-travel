@@ -1,10 +1,53 @@
+import { useState } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
+import { sendContactForm } from '../utils/emailjsClient'
 import './Contact.css'
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+  const [status, setStatus] = useState(null) // { type: 'success' | 'error', message }
+  const [sending, setSending] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    setStatus(null)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSending(true)
+    setStatus(null)
+    const payload = {
+      title: 'New Website Inquiry',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone || '',
+      dates: '',
+      people: '',
+      package: 'General Inquiry',
+      message: formData.message
+    }
+    const result = await sendContactForm(payload)
+    setSending(false)
+    if (result.ok) {
+      setStatus({ type: 'success', message: 'Request sent successfully ✅' })
+      setFormData({ name: '', email: '', phone: '', message: '' })
+    } else {
+      setStatus({
+        type: 'error',
+        message: result.error ? `Failed to send: ${result.error}` : 'Failed to send. Please try again.'
+      })
+    }
+  }
+
   return (
     <div className="contact-page">
-      {/* Hero Section */}
       <div className="contact-hero">
         <div className="contact-hero-content">
           <h1>Contact Us</h1>
@@ -14,7 +57,6 @@ function Contact() {
 
       <RevealOnScroll direction="up">
       <div className="contact-container">
-        {/* Contact Info Cards */}
         <div className="contact-info-grid">
           <div className="contact-info-card">
             <div className="contact-icon-wrapper">
@@ -65,41 +107,12 @@ function Contact() {
           </div>
         </div>
 
-        {/* Contact Form Section */}
         <div className="contact-form-section">
           <div className="form-header">
             <h2>Send us a Message</h2>
             <p>Fill out the form below and we'll get back to you as soon as possible</p>
           </div>
-          <form 
-            className="contact-form"
-            onSubmit={(e) => {
-              e.preventDefault()
-              const formData = new FormData(e.target)
-              const name = formData.get('name')
-              const email = formData.get('email')
-              const phone = formData.get('phone') || 'Not provided'
-              const message = formData.get('message')
-              
-              const emailBody = `CONTACT FORM SUBMISSION
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}
-
----
-This message was submitted through the Honeywell Travel website contact form.`.trim()
-
-              const mailtoLink = `mailto:limassol@honeywelltravel.com.cy?subject=${encodeURIComponent(`Contact Form - ${name}`)}&body=${encodeURIComponent(emailBody)}`
-              window.location.href = mailtoLink
-              
-              alert('Thank you! Your message has been sent. We will get back to you soon.')
-              e.target.reset()
-            }}
-          >
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">
@@ -111,6 +124,8 @@ This message was submitted through the Honeywell Travel website contact form.`.t
                   id="name" 
                   name="name" 
                   placeholder="Enter your full name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required 
                 />
               </div>
@@ -124,6 +139,8 @@ This message was submitted through the Honeywell Travel website contact form.`.t
                   id="email" 
                   name="email" 
                   placeholder="your.email@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
                   required 
                 />
               </div>
@@ -138,6 +155,8 @@ This message was submitted through the Honeywell Travel website contact form.`.t
                 id="phone" 
                 name="phone" 
                 placeholder="+357 1234 5678"
+                value={formData.phone}
+                onChange={handleChange}
               />
             </div>
             <div className="form-group">
@@ -150,11 +169,18 @@ This message was submitted through the Honeywell Travel website contact form.`.t
                 name="message" 
                 rows="6" 
                 placeholder="Tell us how we can help you..."
+                value={formData.message}
+                onChange={handleChange}
                 required
-              ></textarea>
+              />
             </div>
-            <button type="submit" className="submit-button">
-              <span>Send Message</span>
+            {status && (
+              <div className={`contact-form-toast contact-form-toast-${status.type}`} role="alert">
+                {status.message}
+              </div>
+            )}
+            <button type="submit" className="submit-button" disabled={sending}>
+              <span>{sending ? 'Sending…' : 'Send Request'}</span>
               <span className="button-icon">→</span>
             </button>
           </form>
@@ -166,9 +192,3 @@ This message was submitted through the Honeywell Travel website contact form.`.t
 }
 
 export default Contact
-
-
-
-
-
-

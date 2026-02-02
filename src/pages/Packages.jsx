@@ -210,26 +210,26 @@ function Packages() {
         </div>
       </div>
 
-      <div className="packages-container">
-        {/* Quick category chips */}
-        <div className="category-chips-wrapper">
-          <h2 className="section-subtitle">Browse by Category</h2>
-          <div className="category-chips">
-            {categories.filter((cat) => cat !== 'Any').map((cat) => (
-              <button
-                key={cat}
-                className={`category-chip ${category === cat ? 'active' : ''}`}
-                onClick={() => {
-                  setCategory(cat)
-                  applyFilters(cat, destination)
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+      {/* Browse by Category – directly below hero, no empty space */}
+      <div className="category-chips-wrapper">
+        <h2 className="section-subtitle">Browse by Category</h2>
+        <div className="category-chips">
+          {categories.filter((cat) => cat !== 'Any').map((cat) => (
+            <button
+              key={cat}
+              className={`category-chip ${category === cat ? 'active' : ''}`}
+              onClick={() => {
+                setCategory(cat)
+                applyFilters(cat, destination)
+              }}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
+      </div>
 
+      <div className="packages-container">
         {/* Filters Section - Only show when category is Any or when expanded */}
         {showFilters && (
           <div className="packages-filters-section">

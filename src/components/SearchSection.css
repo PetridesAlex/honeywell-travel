@@ -161,20 +161,16 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   align-items: stretch;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: transparent;
   padding: 3rem;
   border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
-              0 8px 25px rgba(0, 0, 0, 0.2),
-              inset 0 1px 0 rgba(255, 255, 255, 0.9);
   margin: 0 auto 2rem;
   width: 100%;
   max-width: 1100px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   position: relative;
   z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .search-form::before {
@@ -194,15 +190,14 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1.75rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.95) 100%);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(227, 30, 36, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   min-height: 130px;
   justify-content: space-between;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
-              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .form-card:focus-within {
@@ -237,6 +232,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.search-form .form-label {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
 .form-label {
@@ -626,17 +626,27 @@
 }
 
 .destination-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  transition: transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  filter: none;
+  -webkit-filter: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .destination-image-card:hover .destination-image-bg {
-  transform: scale(1.1);
+  filter: none;
+  -webkit-filter: none;
 }
 
 .destination-image-label {
@@ -700,6 +710,20 @@
   .destination-images-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: 100%;
+  }
+
+  .destination-image-card {
+    min-height: 160px;
+  }
+
+  .destination-image-bg {
+    background-size: cover;
+    background-position: center;
+    filter: none;
+    -webkit-filter: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .gallery-title {
@@ -728,5 +752,13 @@
 
   .form-label {
     font-size: 0.8rem;
+  }
+
+  .destination-image-card {
+    min-height: 140px;
+  }
+
+  .destination-images-grid {
+    gap: 0.75rem;
   }
 }

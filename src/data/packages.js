@@ -3597,7 +3597,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 499,
@@ -3612,7 +3612,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 499,
@@ -3627,7 +3627,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 499,
@@ -3642,7 +3642,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 499,
@@ -3657,7 +3657,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 499,
@@ -3672,7 +3672,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 599,
@@ -3687,7 +3687,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 599,
@@ -3702,7 +3702,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 599,
@@ -3717,7 +3717,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 599,
@@ -3732,7 +3732,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 599,
@@ -3747,7 +3747,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 539,
@@ -3762,7 +3762,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 539,
@@ -3777,7 +3777,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 539,
@@ -3792,7 +3792,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 539,
@@ -3807,7 +3807,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 619,
@@ -3822,7 +3822,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 619,
@@ -3837,7 +3837,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 619,
@@ -3852,7 +3852,7 @@ export const travelPackages = [
           name: 'Lato Boutique Hotel – Heraklion',
           stars: 3,
           roomType: 'Family Room',
-          image: '/images/hotels/lato-boutique-heraklion.webp',
+          image: '/images/hotels/lato-boutique-heraklion.png',
           location: 'Lato Boutique Hotel, Heraklion, Crete',
           prices: {
             double: 619,
@@ -3867,7 +3867,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -3883,7 +3883,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -3899,7 +3899,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -3915,7 +3915,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -3931,7 +3931,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -3947,7 +3947,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -3963,7 +3963,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -3979,7 +3979,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -3995,7 +3995,7 @@ export const travelPackages = [
           name: 'Castello City Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/castello-city-heraklion.webp',
+          image: '/images/hotels/castello-city-heraklion.png',
           location: 'Castello City Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4011,7 +4011,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4026,7 +4026,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4041,7 +4041,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4056,7 +4056,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4071,7 +4071,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4086,7 +4086,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4101,7 +4101,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4116,7 +4116,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4131,7 +4131,7 @@ export const travelPackages = [
           name: 'Kastro Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastro-hotel-heraklion.webp',
+          image: '/images/hotels/kastro-hotel-heraklion.png',
           location: 'Kastro Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4146,7 +4146,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4162,7 +4162,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4178,7 +4178,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4194,7 +4194,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4210,7 +4210,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 519,
@@ -4226,7 +4226,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4242,7 +4242,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4258,7 +4258,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4274,7 +4274,7 @@ export const travelPackages = [
           name: 'Olympic Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-hotel-heraklion.webp',
+          image: '/images/hotels/olympic-hotel-heraklion.png',
           location: 'Olympic Hotel, Heraklion, Crete',
           prices: {
             double: 549,
@@ -4290,7 +4290,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 539,
@@ -4305,7 +4305,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 539,
@@ -4320,7 +4320,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 539,
@@ -4335,7 +4335,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 539,
@@ -4350,7 +4350,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 559,
@@ -4365,7 +4365,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 585,
@@ -4380,7 +4380,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 585,
@@ -4395,7 +4395,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 585,
@@ -4410,7 +4410,7 @@ export const travelPackages = [
           name: 'Castro Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/castro-hotel-ammoudara.webp',
+          image: '/images/hotels/castro-hotel-ammoudara.png',
           location: 'Castro Hotel, Ammoudara, Crete',
           prices: {
             double: 585,
@@ -4425,7 +4425,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 559,
@@ -4441,7 +4441,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 559,
@@ -4457,7 +4457,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 559,
@@ -4473,7 +4473,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 559,
@@ -4489,7 +4489,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 559,
@@ -4505,7 +4505,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 579,
@@ -4521,7 +4521,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 579,
@@ -4537,7 +4537,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 579,
@@ -4553,7 +4553,7 @@ export const travelPackages = [
           name: 'Marin Hotel – Heraklion',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/marin-hotel-heraklion.webp',
+          image: '/images/hotels/marin-hotel-heraklion.png',
           location: 'Marin Hotel, Heraklion, Crete',
           prices: {
             double: 579,
@@ -4569,7 +4569,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 569,
@@ -4584,7 +4584,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 569,
@@ -4599,7 +4599,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 569,
@@ -4614,7 +4614,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 569,
@@ -4629,7 +4629,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 569,
@@ -4644,7 +4644,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 599,
@@ -4659,7 +4659,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 599,
@@ -4674,7 +4674,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 599,
@@ -4689,7 +4689,7 @@ export const travelPackages = [
           name: 'Vanisko Hotel – Ammoudara',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/vanisko-hotel-ammoudara.webp',
+          image: '/images/hotels/vanisko-hotel-ammoudara.png',
           location: 'Vanisko Hotel, Ammoudara, Crete',
           prices: {
             double: 599,
@@ -4704,7 +4704,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 575,
@@ -4720,7 +4720,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 575,
@@ -4736,7 +4736,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 575,
@@ -4752,7 +4752,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 575,
@@ -4768,7 +4768,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 575,
@@ -4784,7 +4784,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 779,
@@ -4800,7 +4800,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 779,
@@ -4816,7 +4816,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 779,
@@ -4832,7 +4832,7 @@ export const travelPackages = [
           name: 'Marilena Hotel – Ammoudara',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/marilena-hotel-ammoudara.webp',
+          image: '/images/hotels/marilena-hotel-ammoudara.png',
           location: 'Marilena Hotel, Ammoudara, Crete',
           prices: {
             double: 779,
@@ -4848,7 +4848,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 619,
@@ -4863,7 +4863,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 619,
@@ -4878,7 +4878,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 695,
@@ -4892,7 +4892,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 695,
@@ -4906,22 +4906,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
-          location: 'Golden Beach Hotel, Hersonissos, Crete',
-          prices: {
-            double: 695,
-            single: 909,
-            triple: 639,
-            child1: 309
-          },
-          departureDate: '17/07',
-          packagePrice: 1390
-        },
-        {
-          name: 'Golden Beach Hotel – Hersonissos',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 695,
@@ -4929,6 +4914,21 @@ export const travelPackages = [
             triple: 639,
             child1: 309
           },
+          departureDate: '17/07',
+          packagePrice: 1390
+        },
+        {
+          name: 'Golden Beach Hotel – Hersonissos',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
+          location: 'Golden Beach Hotel, Hersonissos, Crete',
+          prices: {
+            double: 695,
+            single: 909,
+            triple: 639,
+            child1: 309
+          },
           departureDate: '24/07',
           packagePrice: 1390
         },
@@ -4936,7 +4936,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 695,
@@ -4951,7 +4951,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 769,
@@ -4965,7 +4965,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 769,
@@ -4979,7 +4979,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 769,
@@ -4993,7 +4993,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -5008,7 +5008,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -5023,7 +5023,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -5038,7 +5038,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -5053,7 +5053,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 789,
@@ -5067,7 +5067,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 789,
@@ -5081,7 +5081,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 789,
@@ -5095,7 +5095,7 @@ export const travelPackages = [
           name: 'Golden Beach Hotel – Hersonissos',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/golden-beach-hersonissos.webp',
+          image: '/images/hotels/golden-beach-hotel-hersonissos.png',
           location: 'Golden Beach Hotel, Hersonissos, Crete',
           prices: {
             double: 789,
@@ -5109,7 +5109,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 639,
@@ -5124,7 +5124,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 639,
@@ -5139,7 +5139,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 639,
@@ -5154,7 +5154,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 639,
@@ -5169,7 +5169,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 639,
@@ -5184,7 +5184,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 669,
@@ -5199,7 +5199,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 669,
@@ -5214,7 +5214,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 669,
@@ -5229,7 +5229,7 @@ export const travelPackages = [
           name: 'Olympic Palladium Hotel – Rethymno',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/olympic-palladium-rethymno.webp',
+          image: '/images/hotels/olympic-palladium-rethymno.png',
           location: 'Olympic Palladium Hotel, Rethymno, Crete',
           prices: {
             double: 669,
@@ -5244,7 +5244,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 679,
@@ -5258,7 +5258,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 679,
@@ -5272,7 +5272,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 679,
@@ -5286,7 +5286,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 679,
@@ -5300,7 +5300,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 679,
@@ -5314,7 +5314,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 699,
@@ -5328,7 +5328,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 699,
@@ -5342,7 +5342,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 699,
@@ -5356,7 +5356,7 @@ export const travelPackages = [
           name: 'Mistral Bay Hotel – Agios Nikolaos',
           stars: 4,
           roomType: 'Side Sea View Room',
-          image: '/images/hotels/mistral-bay-agios-nikolaos.webp',
+          image: '/images/hotels/mistral-bay-agios-nikolaos.png',
           location: 'Mistral Bay Hotel, Agios Nikolaos, Crete',
           prices: {
             double: 699,
@@ -5370,7 +5370,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 679,
@@ -5384,7 +5384,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 679,
@@ -5398,7 +5398,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 679,
@@ -5412,7 +5412,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 679,
@@ -5426,7 +5426,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 679,
@@ -5440,7 +5440,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 769,
@@ -5454,7 +5454,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 769,
@@ -5468,7 +5468,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 769,
@@ -5482,7 +5482,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 769,
@@ -5496,7 +5496,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 769,
@@ -5510,7 +5510,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 909,
@@ -5525,7 +5525,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 909,
@@ -5540,7 +5540,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 909,
@@ -5555,7 +5555,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 909,
@@ -5570,7 +5570,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 909,
@@ -5585,7 +5585,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 789,
@@ -5599,7 +5599,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 789,
@@ -5613,7 +5613,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 789,
@@ -5627,7 +5627,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Sea View Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 789,
@@ -5641,7 +5641,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 699,
@@ -5655,7 +5655,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 699,
@@ -5669,7 +5669,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 699,
@@ -5683,7 +5683,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 699,
@@ -5697,7 +5697,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 929,
@@ -5712,7 +5712,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 929,
@@ -5727,7 +5727,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 929,
@@ -5742,7 +5742,7 @@ export const travelPackages = [
           name: 'Elounda Krini Hotel – Elounda',
           stars: 4,
           roomType: 'Family Room',
-          image: '/images/hotels/elounda-krini-elounda.webp',
+          image: '/images/hotels/elounda-krini-elounda.png',
           location: 'Elounda Krini Hotel, Elounda, Crete',
           prices: {
             double: 929,
@@ -5757,7 +5757,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5772,7 +5772,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5787,7 +5787,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5802,7 +5802,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5817,7 +5817,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5832,7 +5832,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5847,7 +5847,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5862,7 +5862,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5877,7 +5877,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-hotel-heraklion.webp',
+          image: '/images/hotels/galaxy-hotel-heraklion.png',
           location: 'Galaxy Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5892,7 +5892,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5907,7 +5907,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5922,7 +5922,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5937,7 +5937,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5952,7 +5952,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 699,
@@ -5967,7 +5967,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5982,7 +5982,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -5997,7 +5997,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -6012,7 +6012,7 @@ export const travelPackages = [
           name: 'Aquila Atlantis Hotel – Heraklion',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/aquila-atlantis-heraklion.webp',
+          image: '/images/hotels/aquila-atlantis-heraklion.png',
           location: 'Aquila Atlantis Hotel, Heraklion, Crete',
           prices: {
             double: 729,
@@ -6027,7 +6027,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -6042,7 +6042,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -6057,7 +6057,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -6072,7 +6072,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -6087,7 +6087,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 719,
@@ -6102,7 +6102,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 749,
@@ -6117,7 +6117,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 749,
@@ -6132,7 +6132,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 749,
@@ -6147,7 +6147,7 @@ export const travelPackages = [
           name: 'Hersonissos Maris Hotel – Hersonissos',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hersonissos-maris-hersonissos.webp',
+          image: '/images/hotels/hersonissos-maris-hersonissos.png',
           location: 'Hersonissos Maris Hotel, Hersonissos, Crete',
           prices: {
             double: 749,
@@ -6162,7 +6162,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 749,
@@ -6177,7 +6177,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 749,
@@ -6192,7 +6192,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 749,
@@ -6207,7 +6207,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 749,
@@ -6222,7 +6222,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 749,
@@ -6237,7 +6237,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 775,
@@ -6252,7 +6252,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 775,
@@ -6267,7 +6267,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 775,
@@ -6282,7 +6282,7 @@ export const travelPackages = [
           name: 'Jo An Palace Hotel – Rethymno',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/jo-an-palace-rethymno.webp',
+          image: '/images/hotels/jo-an-palace-rethymno.png',
           location: 'Jo An Palace Hotel, Rethymno, Crete',
           prices: {
             double: 775,

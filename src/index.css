@@ -11,7 +11,7 @@
 
   color-scheme: light;
   color: #213547;
-  background-color: #ffffff;
+  background-color: #0f0f12; /* match app so no white flash when root is empty */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,8 +23,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #0f0f12; /* avoid white flash before app/loader paints */
 }
 
 #root {
   min-height: 100vh;
+  background-color: #0f0f12;
 }

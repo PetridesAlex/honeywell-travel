@@ -20,20 +20,12 @@ function TourPackagesSection({ sharedBackground }) {
 
   const tourPackages = [
     {
-      id: 'destinations',
-      title: 'Destinations',
-      icon: '🌍',
-      description: 'Explore amazing destinations around the world',
-      color: '#E31E24',
-      image: '/images/destinations/iceland.webp'
-    },
-    {
       id: 'summer-packages',
       title: 'Summer Packages',
       icon: '☀️',
       description: 'Perfect summer getaways for your vacation',
       color: '#FF6B35',
-      image: '/images/categories/summer.webp'
+      image: '/images/categories/summer.png'
     },
     {
       id: 'autumn-packages',
@@ -41,7 +33,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🍂',
       description: 'Experience the beauty of autumn destinations',
       color: '#D2691E',
-      image: '/images/categories/autumn.webp'
+      image: '/images/categories/autumn.png'
     },
     {
       id: 'winter-packages',
@@ -49,7 +41,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '❄️',
       description: 'Winter wonderlands and cozy escapes',
       color: '#4A90E2',
-      image: '/images/categories/winter.webp'
+      image: '/images/categories/winter.png'
     },
     {
       id: 'ski-packages',
@@ -57,7 +49,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '⛷️',
       description: 'Hit the slopes at world-class ski resorts',
       color: '#87CEEB',
-      image: '/images/categories/ski.webp'
+      image: '/images/categories/ski.png'
     },
     {
       id: 'christmas-packages',
@@ -65,7 +57,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎄',
       description: 'Magical Christmas holidays and celebrations',
       color: '#C41230',
-      image: '/images/categories/christmas.webp'
+      image: '/images/categories/christmas.png'
     },
     {
       id: 'easter-packages',
@@ -73,7 +65,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🐰',
       description: 'Easter breaks in beautiful locations',
       color: '#FFB6C1',
-      image: '/images/categories/easter.webp'
+      image: '/images/categories/easter.png'
     },
     {
       id: 'green-monday',
@@ -81,7 +73,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌿',
       description: 'Special Green Monday travel deals',
       color: '#228B22',
-      image: '/images/categories/green-monday.webp'
+      image: '/images/categories/green-monday.png'
     },
     {
       id: 'cruises',
@@ -89,7 +81,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🚢',
       description: 'Luxury cruises to exotic destinations',
       color: '#1E90FF',
-      image: '/images/categories/cruises.webp'
+      image: '/images/categories/cruises.png'
     },
     {
       id: 'city-breaks',
@@ -97,7 +89,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🏙️',
       description: 'Urban adventures in vibrant cities',
       color: '#8B008B',
-      image: '/images/categories/city-breaks.webp'
+      image: '/images/categories/city-breaks.png'
     },
     {
       id: 'exotic-packages',
@@ -105,7 +97,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌴',
       description: 'Discover exotic and tropical paradises',
       color: '#FF6347',
-      image: '/images/categories/exotic.webp'
+      image: '/images/categories/exotic.png'
     },
     {
       id: 'music-sports',
@@ -113,15 +105,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎵',
       description: 'Festivals, concerts, and sporting events',
       color: '#9B59B6',
-      image: '/images/categories/music-sports.webp'
-    },
-    {
-      id: 'mary-special-trips',
-      title: 'Mary Special Trips',
-      icon: '✨',
-      description: 'Exclusive curated travel experiences',
-      color: '#FFD700',
-      image: '/images/categories/sports.webp'
+      image: '/images/categories/music-sports.png'
     }
   ]
 
@@ -136,7 +120,6 @@ function TourPackagesSection({ sharedBackground }) {
         <div className="packages-grid">
           {tourPackages.map((pkg, index) => (
             <div key={pkg.id} className="package-card-wrapper">
-              <h3 className="package-title">{pkg.title}</h3>
               <Link
                 to={`/tour-category/${pkg.id}/`}
                 className="package-card"

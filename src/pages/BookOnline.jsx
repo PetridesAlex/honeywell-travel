@@ -9,6 +9,7 @@ function BookOnline() {
   const [selectedType, setSelectedType] = useState('')
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
+  const [hasSearched, setHasSearched] = useState(false)
 
   const categories = [
     'Destinations',
@@ -52,7 +53,7 @@ function BookOnline() {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    // The filtered packages will update automatically based on state
+    setHasSearched(true)
   }
 
   return (
@@ -129,45 +130,55 @@ function BookOnline() {
         </div>
       </section>
 
-      <RevealOnScroll direction="up">
-      <section className="packages-results">
-        <div className="container">
-          <h2 className="results-title">
-            {filteredPackages.length} travel packages available
-          </h2>
+      {hasSearched ? (
+        <RevealOnScroll direction="up">
+          <section className="packages-results">
+            <div className="container">
+              <h2 className="results-title">
+                {filteredPackages.length} travel packages available
+              </h2>
 
-          {filteredPackages.length === 0 ? (
-            <div className="no-results">
-              <p>No packages found matching your criteria.</p>
-              <p>Try adjusting your filters to see more options.</p>
-            </div>
-          ) : (
-            <div className="packages-grid">
-              {filteredPackages.map((pkg) => (
-                <Link
-                  key={pkg.id}
-                  to={`/packages/${pkg.id}`}
-                  className="package-card-link"
-                >
-                  <div className="package-card">
-                    <div className="package-emoji">{pkg.image}</div>
-                    <div className="package-content">
-                      <h3 className="package-title">{pkg.title}</h3>
-                      <p className="package-destination">{pkg.destination}</p>
-                      <p className="package-category">{pkg.category}</p>
-                      <div className="package-footer">
-                        <span className="package-duration">{pkg.duration}</span>
-                        <span className="package-price">€{pkg.price}</span>
+              {filteredPackages.length === 0 ? (
+                <div className="no-results">
+                  <p>No packages found matching your criteria.</p>
+                  <p>Try adjusting your filters to see more options.</p>
+                </div>
+              ) : (
+                <div className="packages-grid">
+                  {filteredPackages.map((pkg) => (
+                    <Link
+                      key={pkg.id}
+                      to={`/packages/${pkg.id}`}
+                      className="package-card-link"
+                    >
+                      <div className="package-card">
+                        <div className="package-emoji">{pkg.image}</div>
+                        <div className="package-content">
+                          <p className="package-category">{pkg.category}</p>
+                          <h3 className="package-title">{pkg.title}</h3>
+                          <p className="package-destination">{pkg.destination}</p>
+                          <div className="package-footer">
+                            <span className="package-duration">{pkg.duration}</span>
+                            <span className="package-price">€{pkg.price}</span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      </section>
-      </RevealOnScroll>
+          </section>
+        </RevealOnScroll>
+      ) : (
+        <section className="packages-results packages-results-prompt">
+          <div className="container">
+            <p className="search-prompt-text">
+              Select your travel category and dates above, then click <strong>Search Packages</strong> to see available packages.
+            </p>
+          </div>
+        </section>
+      )}
     </div>
   )
 }

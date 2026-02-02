@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getPackageById, travelPackages } from '../data/packages'
+import { sendActionRequest } from '../utils/emailjsClient'
 import './PackageFullDetail.css'
 
 // Helper function to format program text with proper paragraphs
@@ -31,12 +32,28 @@ function PackageFullDetail() {
   const [hotelSelections, setHotelSelections] = useState({})
   const [roomSelections, setRoomSelections] = useState({}) // New state for multiple rooms per hotel
   const [showReserveModal, setShowReserveModal] = useState(false)
+  const [showBookSelection, setShowBookSelection] = useState(false)
+  const [bookAdults, setBookAdults] = useState(2)
+  const [bookRooms, setBookRooms] = useState(1)
+  const [bookHotelKey, setBookHotelKey] = useState('')
   const [reserveFormData, setReserveFormData] = useState({
     email: '',
     phone: '',
     numberOfRooms: 1,
     hotelIndex: null
   })
+  const [reserveSending, setReserveSending] = useState(false)
+  const [reserveToast, setReserveToast] = useState(null) // { type: 'success' | 'error', message }
+
+  useEffect(() => {
+    setBookHotelKey('')
+  }, [id])
+
+  useEffect(() => {
+    if (!reserveToast) return
+    const t = setTimeout(() => setReserveToast(null), 5000)
+    return () => clearTimeout(t)
+  }, [reserveToast])
 
   if (!pkg) {
     return (
@@ -72,6 +89,22 @@ function PackageFullDetail() {
         ...tour,
         cheapestPrice: getCheapestPrice(tour)
       }))
+
+      // Unique hotel options for "Book this package" (same grouping as hotels grid)
+      const packageHotelOptions = details.hotels && details.hotels.length > 0
+        ? (() => {
+            const grouped = {}
+            details.hotels.forEach((h, idx) => {
+              if (!grouped[h.name]) grouped[h.name] = []
+              grouped[h.name].push({ ...h, originalIndex: idx })
+            })
+            return Object.entries(grouped).map(([hotelName, variants], i) => ({
+              hotelKey: `hotel-${i}`,
+              hotelName,
+              variants
+            }))
+          })()
+        : []
 
   const toggleProgram = (index) => {
     setActiveProgramIndex(activeProgramIndex === index ? null : index)
@@ -539,6 +572,7 @@ function PackageFullDetail() {
                                     totalPrice: totalPrice,
                                     selectedHotel: selectedHotel
                                   })
+                                  setReserveToast(null)
                                   setShowReserveModal(true)
                                 }}
                               >
@@ -1055,7 +1089,80 @@ function PackageFullDetail() {
               <p className="summary-price">From €{getCheapestPrice(pkg).toLocaleString()}</p>
               <p className="summary-duration">{pkg.duration}</p>
               <p className="summary-destination">{pkg.destination}</p>
-              <button className="book-button full-book-button">Book this package</button>
+              {!showBookSelection ? (
+                <button
+                  type="button"
+                  className="book-button full-book-button"
+                  onClick={() => details.hotels?.length > 0 && setShowBookSelection(true)}
+                >
+                  Book this package
+                </button>
+              ) : (
+                <div className="book-selection-form">
+                  <label className="book-selection-label">Adults</label>
+                  <div className="book-selection-controls">
+                    <button type="button" className="book-selection-btn" onClick={() => setBookAdults(a => Math.max(1, a - 1))} aria-label="Fewer adults">−</button>
+                    <span className="book-selection-value">{bookAdults}</span>
+                    <button type="button" className="book-selection-btn" onClick={() => setBookAdults(a => Math.min(8, a + 1))} aria-label="More adults">+</button>
+                  </div>
+                  <label className="book-selection-label">Rooms</label>
+                  <div className="book-selection-controls">
+                    <button type="button" className="book-selection-btn" onClick={() => setBookRooms(r => Math.max(1, r - 1))} aria-label="Fewer rooms">−</button>
+                    <span className="book-selection-value">{bookRooms}</span>
+                    <button type="button" className="book-selection-btn" onClick={() => setBookRooms(r => Math.min(5, r + 1))} aria-label="More rooms">+</button>
+                  </div>
+                  {packageHotelOptions.length > 0 && (
+                    <>
+                      <label className="book-selection-label" htmlFor="book-hotel-select-mobile">Hotel</label>
+                      <select
+                        id="book-hotel-select-mobile"
+                        className="book-selection-select"
+                        value={bookHotelKey || packageHotelOptions[0]?.hotelKey || ''}
+                        onChange={(e) => setBookHotelKey(e.target.value)}
+                      >
+                        {packageHotelOptions.map((opt) => (
+                          <option key={opt.hotelKey} value={opt.hotelKey}>{opt.hotelName}</option>
+                        ))}
+                      </select>
+                    </>
+                  )}
+                  <button
+                    type="button"
+                    className="reserve-now-from-summary-btn"
+                    onClick={() => {
+                      const key = bookHotelKey || packageHotelOptions[0]?.hotelKey
+                      if (!key || !packageHotelOptions.length) return
+                      const opt = packageHotelOptions.find(o => o.hotelKey === key) || packageHotelOptions[0]
+                      const selectedHotel = opt.variants[0]
+                      const selection = { roomType: 'double', adults: bookAdults, children: 0, children2: 0 }
+                      const totalPrice = calculateRoomPrice(selectedHotel, selection)
+                      setReserveFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        hotelKey: key,
+                        hotelName: opt.hotelName,
+                        departureDate: selectedHotel.departureDate || '',
+                        roomType: 'double',
+                        adults: bookAdults,
+                        children: 0,
+                        children2: 0,
+                        totalPrice,
+                        selectedHotel,
+                        numberOfRooms: bookRooms
+                      })
+                      setReserveToast(null)
+                      setShowReserveModal(true)
+                      setShowBookSelection(false)
+                    }}
+                  >
+                    Reserve now
+                  </button>
+                  <button type="button" className="book-selection-cancel" onClick={() => setShowBookSelection(false)}>
+                    Cancel
+                  </button>
+                </div>
+              )}
             </div>
 
             <div className="enquiry-card mobile-sidebar-card">
@@ -1111,7 +1218,80 @@ function PackageFullDetail() {
               <p className="summary-price">From €{getCheapestPrice(pkg).toLocaleString()}</p>
               <p className="summary-duration">{pkg.duration}</p>
               <p className="summary-destination">{pkg.destination}</p>
-              <button className="book-button full-book-button">Book this package</button>
+              {!showBookSelection ? (
+                <button
+                  type="button"
+                  className="book-button full-book-button"
+                  onClick={() => details.hotels?.length > 0 && setShowBookSelection(true)}
+                >
+                  Book this package
+                </button>
+              ) : (
+                <div className="book-selection-form">
+                  <label className="book-selection-label">Adults</label>
+                  <div className="book-selection-controls">
+                    <button type="button" className="book-selection-btn" onClick={() => setBookAdults(a => Math.max(1, a - 1))} aria-label="Fewer adults">−</button>
+                    <span className="book-selection-value">{bookAdults}</span>
+                    <button type="button" className="book-selection-btn" onClick={() => setBookAdults(a => Math.min(8, a + 1))} aria-label="More adults">+</button>
+                  </div>
+                  <label className="book-selection-label">Rooms</label>
+                  <div className="book-selection-controls">
+                    <button type="button" className="book-selection-btn" onClick={() => setBookRooms(r => Math.max(1, r - 1))} aria-label="Fewer rooms">−</button>
+                    <span className="book-selection-value">{bookRooms}</span>
+                    <button type="button" className="book-selection-btn" onClick={() => setBookRooms(r => Math.min(5, r + 1))} aria-label="More rooms">+</button>
+                  </div>
+                  {packageHotelOptions.length > 0 && (
+                    <>
+                      <label className="book-selection-label" htmlFor="book-hotel-select">Hotel</label>
+                      <select
+                        id="book-hotel-select"
+                        className="book-selection-select"
+                        value={bookHotelKey || packageHotelOptions[0]?.hotelKey || ''}
+                        onChange={(e) => setBookHotelKey(e.target.value)}
+                      >
+                        {packageHotelOptions.map((opt) => (
+                          <option key={opt.hotelKey} value={opt.hotelKey}>{opt.hotelName}</option>
+                        ))}
+                      </select>
+                    </>
+                  )}
+                  <button
+                    type="button"
+                    className="reserve-now-from-summary-btn"
+                    onClick={() => {
+                      const key = bookHotelKey || packageHotelOptions[0]?.hotelKey
+                      if (!key || !packageHotelOptions.length) return
+                      const opt = packageHotelOptions.find(o => o.hotelKey === key) || packageHotelOptions[0]
+                      const selectedHotel = opt.variants[0]
+                      const selection = { roomType: 'double', adults: bookAdults, children: 0, children2: 0 }
+                      const totalPrice = calculateRoomPrice(selectedHotel, selection)
+                      setReserveFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        hotelKey: key,
+                        hotelName: opt.hotelName,
+                        departureDate: selectedHotel.departureDate || '',
+                        roomType: 'double',
+                        adults: bookAdults,
+                        children: 0,
+                        children2: 0,
+                        totalPrice,
+                        selectedHotel,
+                        numberOfRooms: bookRooms
+                      })
+                      setReserveToast(null)
+                      setShowReserveModal(true)
+                      setShowBookSelection(false)
+                    }}
+                  >
+                    Reserve now
+                  </button>
+                  <button type="button" className="book-selection-cancel" onClick={() => setShowBookSelection(false)}>
+                    Cancel
+                  </button>
+                </div>
+              )}
             </div>
 
             <div className="enquiry-card">
@@ -1190,6 +1370,13 @@ This enquiry was submitted through the Honeywell Travel website.`.trim()
       </div>
 
       {/* Reserve Now Modal */}
+      {/* Page-level toast for reserve success/error */}
+      {reserveToast && (
+        <div className={`reserve-toast reserve-toast-${reserveToast.type}`} role="alert">
+          {reserveToast.message}
+        </div>
+      )}
+
       {showReserveModal && reserveFormData.hotelKey && (
         <div className="reserve-modal-overlay" onClick={() => setShowReserveModal(false)}>
           <div className="reserve-modal" onClick={(e) => e.stopPropagation()}>
@@ -1257,15 +1444,18 @@ This enquiry was submitted through the Honeywell Travel website.`.trim()
                   
                   <form 
                     className="reserve-form"
-                    onSubmit={(e) => {
+                    onSubmit={async (e) => {
                       e.preventDefault()
+                      setReserveSending(true)
+                      setReserveToast(null)
+                      const peopleStr = `${selection.adults} Adult${selection.adults !== 1 ? 's' : ''}${selection.children > 0 ? `, ${selection.children} Child${selection.children !== 1 ? 'ren' : ''} (Child 1)` : ''}${selection.children2 > 0 ? `, ${selection.children2} Child${selection.children2 !== 1 ? 'ren' : ''} (Child 2)` : ''}`
                       const emailBody = `
 RESERVATION REQUEST
 
 Package: ${pkg.title}
 Hotel: ${reserveFormData.hotelName}
 ${reserveFormData.departureDate ? `Departure Date: ${reserveFormData.departureDate}\n` : ''}Room Type: ${selection.roomType.charAt(0).toUpperCase() + selection.roomType.slice(1)}
-Guests: ${selection.adults} Adult${selection.adults !== 1 ? 's' : ''}${selection.children > 0 ? `, ${selection.children} Child${selection.children !== 1 ? 'ren' : ''} (Child 1)` : ''}${selection.children2 > 0 ? `, ${selection.children2} Child${selection.children2 !== 1 ? 'ren' : ''} (Child 2)` : ''}
+Guests: ${peopleStr}
 Total Price: €${totalPrice.toLocaleString()}
 
 Contact Information:
@@ -1277,11 +1467,31 @@ Phone: ${reserveFormData.phone}
 This reservation request was submitted through the Honeywell Travel website.
                       `.trim()
 
-                      const mailtoLink = `mailto:limassol@honeywelltravel.com.cy?subject=${encodeURIComponent(`Reservation Request - ${reserveFormData.hotelName}`)}&body=${encodeURIComponent(emailBody)}`
-                      window.location.href = mailtoLink
-                      
-                      setShowReserveModal(false)
-                      setReserveFormData({ name: '', email: '', phone: '', hotelKey: null, hotelName: '', departureDate: '', roomType: '', adults: 1, children: 0, children2: 0, totalPrice: 0, selectedHotel: null })
+                      const result = await sendActionRequest({
+                        title: 'Reservation Request',
+                        packageName: pkg.title,
+                        message: emailBody,
+                        formData: {
+                          name: reserveFormData.name || '',
+                          email: reserveFormData.email,
+                          phone: reserveFormData.phone,
+                          dates: reserveFormData.departureDate || '',
+                          people: peopleStr,
+                          package: pkg.title,
+                          message: emailBody
+                        }
+                      })
+                      setReserveSending(false)
+                      if (result.ok) {
+                        setReserveToast({ type: 'success', message: 'Request sent successfully ✅' })
+                        setShowReserveModal(false)
+                        setReserveFormData({ name: '', email: '', phone: '', hotelKey: null, hotelName: '', departureDate: '', roomType: '', adults: 1, children: 0, children2: 0, totalPrice: 0, selectedHotel: null })
+                      } else {
+                        setReserveToast({
+                          type: 'error',
+                          message: result.error ? `Failed to send: ${result.error}` : 'Failed to send. Please try again.'
+                        })
+                      }
                     }}
                   >
                     <div className="form-group">
@@ -1320,8 +1530,8 @@ This reservation request was submitted through the Honeywell Travel website.
                       />
                     </div>
 
-                    <button type="submit" className="submit-reservation-btn">
-                      Send Reservation Request
+                    <button type="submit" className="submit-reservation-btn" disabled={reserveSending}>
+                      {reserveSending ? 'Sending…' : 'Send Reservation Request'}
                     </button>
                   </form>
                 </>
