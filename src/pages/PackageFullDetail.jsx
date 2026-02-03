@@ -294,10 +294,10 @@ function PackageFullDetail() {
                 <h2>Prices & Accommodation</h2>
                 <div className="price-header">
                   <div className="price-thumb">
-                    {(details.coverImage || gallery[0]) ? (
+                    {(details.thumbnailImage || details.coverImage || gallery[0]) ? (
                       <div
                         className="price-thumb-image"
-                        style={{ backgroundImage: `url(${details.coverImage || gallery[0]})` }}
+                        style={{ backgroundImage: `url(${details.thumbnailImage || details.coverImage || gallery[0]})` }}
                       />
                     ) : (
                       <span className="price-thumb-placeholder">{pkg.image}</span>

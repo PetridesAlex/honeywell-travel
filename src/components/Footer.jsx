@@ -139,7 +139,7 @@ This newsletter subscription was submitted through the Honeywell Travel website 
               </svg>
             </a>
             <a 
-              href="https://www.tiktok.com/@honeywelltravel" 
+              href="https://www.tiktok.com/@honeywell.travel" 
               className="footer-social-icon" 
               target="_blank" 
               rel="noopener noreferrer"

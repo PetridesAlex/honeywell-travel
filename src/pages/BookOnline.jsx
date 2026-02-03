@@ -145,14 +145,23 @@ function BookOnline() {
                 </div>
               ) : (
                 <div className="packages-grid">
-                  {filteredPackages.map((pkg) => (
+                  {filteredPackages.map((pkg) => {
+                    const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
+                    return (
                     <Link
                       key={pkg.id}
                       to={`/packages/${pkg.id}`}
                       className="package-card-link"
                     >
                       <div className="package-card">
-                        <div className="package-emoji">{pkg.image}</div>
+                        {imageUrl ? (
+                          <div
+                            className="package-image-thumb"
+                            style={{ backgroundImage: `url(${imageUrl})` }}
+                          />
+                        ) : (
+                          <div className="package-emoji">{pkg.image}</div>
+                        )}
                         <div className="package-content">
                           <p className="package-category">{pkg.category}</p>
                           <h3 className="package-title">{pkg.title}</h3>
@@ -164,7 +173,7 @@ function BookOnline() {
                         </div>
                       </div>
                     </Link>
-                  ))}
+                  )})}
                 </div>
               )}
             </div>

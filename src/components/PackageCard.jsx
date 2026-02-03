@@ -17,10 +17,16 @@ function PackageCard({ package: pkg }) {
   }
 
   const displayPrice = getCheapestPrice()
+  const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
 
   return (
     <Link to={`/packages/${pkg.id}`} className="package-card">
-      <div className="package-image">{pkg.image}</div>
+      <div
+        className={`package-image${imageUrl ? ' package-image-bg' : ''}`}
+        style={imageUrl ? { backgroundImage: `url(${imageUrl})` } : undefined}
+      >
+        {!imageUrl && pkg.image}
+      </div>
       <div className="package-content">
         <div className="package-badge">{pkg.destination}</div>
         <h3 className="package-title">{pkg.title}</h3>

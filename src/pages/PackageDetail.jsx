@@ -47,7 +47,7 @@ function PackageDetail() {
               <div 
                 className="package-image-bg"
                 style={{ 
-                  backgroundImage: `url(${pkg.details.coverImage || (pkg.details.gallery && pkg.details.gallery[0]) || '/images/destinations/athens-hero.webp'})` 
+                  backgroundImage: `url(${pkg.details.thumbnailImage || pkg.details.coverImage || (pkg.details.gallery && pkg.details.gallery[0]) || '/images/destinations/athens-hero.webp'})` 
                 }}
               >
                 <div className="package-image-overlay"></div>

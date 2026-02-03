@@ -150,7 +150,7 @@ function Header() {
           
           <div className="social-icons">
             <a 
-              href="#" 
+              href="https://www.facebook.com/honeywelltravel" 
               className="social-icon" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -161,7 +161,7 @@ function Header() {
               </svg>
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/honeywell_travel/" 
               className="social-icon" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -262,7 +262,7 @@ function Header() {
           
           <div className="mobile-social-icons">
             <a 
-              href="#" 
+              href="https://www.facebook.com/honeywelltravel" 
               className="mobile-social-icon" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -275,7 +275,7 @@ function Header() {
               <span>Facebook</span>
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/honeywell_travel/" 
               className="mobile-social-icon" 
               target="_blank" 
               rel="noopener noreferrer"

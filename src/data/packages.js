@@ -532,7 +532,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Ryanair',
       includedLuggage: '1 small hand luggage',
-      coverImage: '/images/destinations/bucharest-cover.webp',
+      coverImage: '/images/destinations/bucharest-hero-castle.png',
+      thumbnailImage: '/images/destinations/bucharest-thumb.png',
       flights: [
         {
           direction: 'Departure',
@@ -879,7 +880,7 @@ export const travelPackages = [
         food: 'Φαγητό στο Βουκουρέστι\n\nΗ ρουμανική κουζίνα είναι μια υπέροχη γαστρονομική εμπειρία που συνδυάζει επιρροές από διάφορες κουλτούρες. Δοκιμάστε παραδοσιακά πιάτα όπως το sarmale (λαχανοντολμάδες), το mici (μικρά κεμπάπ), το ciorbă (ξινή σούπα) και φυσικά το mămăligă (ρουμανικό καλαμπόκι). Τα εστιατόρια και τα μπαρ στην Παλιά Πόλη προσφέρουν μια ζωντανή ατμόσφαιρα με παραδοσιακή και διεθνή κουζίνα.'
       },
       gallery: [
-        '/images/destinations/bucharest-hero.webp',
+        '/images/destinations/bucharest-hero-castle.png',
         '/images/hotels/bucharest-program.webp',
         '/images/hotels/Mercure-Unirii-Hotel-Bucharest.webp',
         '/images/hotels/Capitol-Hotel-Bucharest.webp',
@@ -6354,7 +6355,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Sky Express',
       includedLuggage: '1 checked bag 20kg + 1 hand luggage 8kg',
-      coverImage: '/images/summer/thessaloniki-trikala-hero.webp',
+      coverImage: '/images/summer/skg-thessaloniki-hero.png',
+      thumbnailImage: '/images/summer/skg-trikala-thumb.png',
       flights: [
         {
           direction: 'Departure',
@@ -6375,11 +6377,11 @@ export const travelPackages = [
       ],
       hotels: [
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 659,
             single: 779,
@@ -6389,11 +6391,11 @@ export const travelPackages = [
           packagePrice: 1318
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 659,
             single: 779,
@@ -6403,11 +6405,11 @@ export const travelPackages = [
           packagePrice: 1318
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 679,
             single: 799,
@@ -6417,11 +6419,11 @@ export const travelPackages = [
           packagePrice: 1358
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 679,
             single: 799,
@@ -6431,11 +6433,11 @@ export const travelPackages = [
           packagePrice: 1358
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 679,
             single: 799,
@@ -6445,11 +6447,11 @@ export const travelPackages = [
           packagePrice: 1358
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 679,
             single: 799,
@@ -6459,11 +6461,11 @@ export const travelPackages = [
           packagePrice: 1358
         },
         {
-          name: 'Achillion Hotel – Trikala',
+          name: '3* Hotel - Trikala & 4* Hotel - Thessaloniki',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/achillion-hotel-trikala.webp',
-          location: 'Achillion Hotel, Trikala, Greece',
+          image: '/images/hotels/trikala-thessaloniki-hotel.png',
+          location: 'Trikala & Thessaloniki, Greece',
           prices: {
             double: 679,
             single: 799,
@@ -6511,7 +6513,7 @@ export const travelPackages = [
         day6: '6η Μέρα: Θεσσαλονίκη – Λάρνακα\n\nΠρόγευμα και αναχώρηση για το αεροδρόμιο Θεσσαλονίκης. Πτήση επιστροφής για Λάρνακα, με τις καλύτερες εντυπώσεις από ένα υπέροχο ταξίδι γεμάτο εικόνες, εμπειρίες και αναμνήσεις από Θεσσαλονίκη, Θεσσαλία και την αλπική ελληνική φύση.'
       },
       gallery: [
-        '/images/summer/thessaloniki-trikala-hero.webp'
+        '/images/summer/skg-thessaloniki-hero.png'
       ]
     }
   },
@@ -6535,7 +6537,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Sky Express',
       includedLuggage: '1 checked bag 20kg + 1 hand luggage 8kg',
-      coverImage: '/images/summer/thessaloniki-kastoria-hero.webp',
+      coverImage: '/images/summer/lefkos-pirgos-thessaloniki-hero.png',
+      thumbnailImage: '/images/summer/skg-kastoria-thumb.png',
       flights: [
         {
           direction: 'Departure',
@@ -6559,7 +6562,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 699,
@@ -6574,7 +6577,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 699,
@@ -6589,7 +6592,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6604,7 +6607,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6619,7 +6622,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 749,
@@ -6634,7 +6637,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 749,
@@ -6649,7 +6652,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6699,7 +6702,7 @@ export const travelPackages = [
         day6: '6η Μέρα: Θεσσαλονίκη – Λάρνακα\n\nΠρωινό σε πακέτο και αναχώρηση νωρίς το πρωί για το αεροδρόμιο Θεσσαλονίκης.\nΠτήση επιστροφής για Λάρνακα με τις ωραιότερες αναμνήσεις από:\n\n• Θεσσαλονίκη\n• Καστοριά\n• Φλώρινα\n• Πρέσπες\n• Νυμφαίο\n• Έδεσσα\n• Λίμνη Κερκίνη\n\nΈνα ταξίδι γεμάτο φύση, εικόνες και ιστορία.'
       },
       gallery: [
-        '/images/summer/thessaloniki-kastoria-hero.webp'
+        '/images/summer/lefkos-pirgos-thessaloniki-hero.png'
       ]
     }
   },
@@ -6723,7 +6726,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Anima Wings',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/bucharest-hero.webp',
+      coverImage: '/images/destinations/bucharest-transylvania-hero.png',
+      thumbnailImage: '/images/destinations/bucharest-transylvania-thumb.png',
       flights: [
         {
           direction: 'Departure',
@@ -6747,7 +6751,7 @@ export const travelPackages = [
           name: 'Sinaia Hotel – Sinaia',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/sinaia-hotel.webp',
+          image: '/images/hotels/bucharest-hotel.png',
           location: 'Sinaia Hotel, Sinaia, Romania',
           prices: {
             double: 849,
@@ -6761,7 +6765,7 @@ export const travelPackages = [
           name: 'Sinaia Hotel – Sinaia',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/sinaia-hotel.webp',
+          image: '/images/hotels/bucharest-hotel.png',
           location: 'Sinaia Hotel, Sinaia, Romania',
           prices: {
             double: 849,
@@ -6775,50 +6779,8 @@ export const travelPackages = [
           name: 'Sinaia Hotel – Sinaia',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/sinaia-hotel.webp',
+          image: '/images/hotels/bucharest-hotel.png',
           location: 'Sinaia Hotel, Sinaia, Romania',
-          prices: {
-            double: 849,
-            single: 1065,
-            child1: 655
-          },
-          departureDate: '17/08',
-          packagePrice: 1698
-        },
-        {
-          name: 'Bucharest Hotel – Bucharest',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/mercure-unirii-bucharest.webp',
-          location: 'Bucharest Hotel, Bucharest, Romania',
-          prices: {
-            double: 849,
-            single: 1065,
-            child1: 655
-          },
-          departureDate: '03/08',
-          packagePrice: 1698
-        },
-        {
-          name: 'Bucharest Hotel – Bucharest',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/mercure-unirii-bucharest.webp',
-          location: 'Bucharest Hotel, Bucharest, Romania',
-          prices: {
-            double: 849,
-            single: 1065,
-            child1: 655
-          },
-          departureDate: '10/08',
-          packagePrice: 1698
-        },
-        {
-          name: 'Bucharest Hotel – Bucharest',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/mercure-unirii-bucharest.webp',
-          location: 'Bucharest Hotel, Bucharest, Romania',
           prices: {
             double: 849,
             single: 1065,
@@ -6863,7 +6825,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Βουκουρέστι – Λάρνακα\n\nΠρόγευμα και μεταφορά στο αεροδρόμιο Βουκουρεστίου.\nΠτήση επιστροφής για Λάρνακα, γεμάτοι όμορφες εικόνες και εμπειρίες από τη Ρουμανία.'
       },
       gallery: [
-        '/images/destinations/bucharest-hero.webp'
+        '/images/destinations/bucharest-transylvania-hero.png'
       ]
     }
   },
@@ -7388,7 +7350,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 879,
@@ -7433,7 +7395,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 879,
@@ -7478,7 +7440,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 919,
@@ -7523,7 +7485,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 979,
@@ -7568,7 +7530,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 979,
@@ -7613,7 +7575,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-hotel.webp',
+          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 919,
