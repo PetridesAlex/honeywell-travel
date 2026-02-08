@@ -22,7 +22,6 @@ function Corporate() {
     <div className="corporate-page">
       {/* Hero Section */}
       <section className="corporate-hero">
-        <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>CORPORATE TRIPS</h1>
           <p>Professional Business Travel Management Solutions</p>

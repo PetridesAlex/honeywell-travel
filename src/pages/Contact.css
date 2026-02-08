@@ -5,7 +5,10 @@
 
 /* Hero Section */
 .contact-hero {
-  background: linear-gradient(135deg, #C41230 0%, #E31E24 50%, #8B0000 100%);
+  background-image: url('/images/categories/contact-us-travel.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding: 5rem 2rem;
   text-align: center;
@@ -20,13 +23,25 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
   opacity: 0.3;
+  z-index: 1;
 }
 
 .contact-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -371,6 +386,47 @@
 
   .form-header p {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-hero p {
+    font-size: 0.9rem;
+  }
+
+  .contact-container {
+    padding: 2rem 0.75rem;
+  }
+
+  .contact-info-grid {
+    gap: 1.25rem;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 1rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 1.1rem 2rem;
+    font-size: 1rem;
   }
 }
 

@@ -1,7 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getPackageById, travelPackages } from '../data/packages'
+import { getTranslatedPackageTitle } from '../utils/packageTranslations'
 import { sendActionRequest } from '../utils/emailjsClient'
+import SEO from '../components/SEO'
 import './PackageFullDetail.css'
 
 // Helper function to format program text with proper paragraphs
@@ -26,7 +29,9 @@ const extractTitle = (text) => {
 
 function PackageFullDetail() {
   const { id } = useParams()
+  const { t, i18n } = useTranslation()
   const pkg = getPackageById(id)
+  const translatedTitle = pkg ? getTranslatedPackageTitle(pkg.id, pkg.title, i18n) : ''
   const [activeTab, setActiveTab] = useState('price')
   const [activeProgramIndex, setActiveProgramIndex] = useState(null)
   const [hotelSelections, setHotelSelections] = useState({})
@@ -234,10 +239,24 @@ function PackageFullDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pkg])
 
-  const heroImage = gallery[0] || '/images/destinations/athens-hero.webp' || '/images/destinations/greece-hero.webp'
+  // Hero image priority: package gallery/coverImage first, then fallbacks
+  const heroImage = gallery[0] || details.coverImage || details.thumbnailImage || '/images/destinations/riviera-hero.webp'
+  
+  // SEO data
+  const packageUrl = `https://www.honeywelltravel.com.cy/packages/${pkg.id}/details`
+  const packageImage = heroImage.startsWith('http') ? heroImage : `https://www.honeywelltravel.com.cy${heroImage}`
+  const packageDescription = pkg.longDescription || pkg.description || `Book ${translatedTitle} - ${pkg.duration} from €${getCheapestPrice(pkg).toLocaleString()}. Complete travel package details including hotels, itinerary, and pricing.`
 
   return (
     <div className="package-full-page">
+      <SEO 
+        title={`${translatedTitle} - Complete Package Details | Honeywell Travel`}
+        description={packageDescription}
+        keywords={`${pkg.destination}, ${pkg.category}, Travel Package, Holiday Package, ${pkg.duration}, Hotels, Itinerary, Honeywell Travel`}
+        image={packageImage}
+        url={packageUrl}
+        type="product"
+      />
       <div 
         className="package-full-hero"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -247,7 +266,7 @@ function PackageFullDetail() {
           <span className="badge destination">{pkg.destination}</span>
           <span className="badge category">{pkg.category}</span>
           {pkg.featured && <span className="badge featured">⭐ Featured</span>}
-          <h1>{pkg.title}</h1>
+          <h1>{translatedTitle}</h1>
           <div className="hero-meta">
             <span>⏱️ {pkg.duration}</span>
             <span>From €{getCheapestPrice(pkg).toLocaleString()}</span>
@@ -256,7 +275,18 @@ function PackageFullDetail() {
       </div>
 
       <div className="package-full-container">
-        <Link to={`/packages/${pkg.id}`} className="back-link">← Back to overview</Link>
+        <Link 
+          to={`/packages/${pkg.id}`} 
+          className="back-link"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+            if (document.documentElement) document.documentElement.scrollTop = 0
+            if (document.body) document.body.scrollTop = 0
+            setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+          }}
+        >
+          {t('package.backToOverview')}
+        </Link>
 
         <div className="layout-grid">
           <main className="layout-main">
@@ -266,32 +296,32 @@ function PackageFullDetail() {
                 className={`full-tab ${activeTab === 'price' ? 'active' : ''}`}
                 onClick={() => setActiveTab('price')}
               >
-                Price
+                {t('package.price')}
               </button>
               <button
                 className={`full-tab ${activeTab === 'program' ? 'active' : ''}`}
                 onClick={() => setActiveTab('program')}
               >
-                Program
+                {t('package.program')}
               </button>
               <button
                 className={`full-tab ${activeTab === 'details' ? 'active' : ''}`}
                 onClick={() => setActiveTab('details')}
               >
-                Package Details
+                {t('package.packageDetails')}
               </button>
               <button
                 className={`full-tab ${activeTab === 'photos' ? 'active' : ''}`}
                 onClick={() => setActiveTab('photos')}
               >
-                Photos
+                {t('package.photos')}
               </button>
             </div>
 
             {/* PRICE TAB */}
             {activeTab === 'price' && (
               <section className="full-section">
-                <h2>Prices & Accommodation</h2>
+                <h2>{t('package.pricesAndAccommodation')}</h2>
                 <div className="price-header">
                   <div className="price-thumb">
                     {(details.thumbnailImage || details.coverImage || gallery[0]) ? (
@@ -311,6 +341,19 @@ function PackageFullDetail() {
                 </div>
 
                 {details.hotels && details.hotels.length > 0 ? (
+                  <>
+                    {(() => {
+                      const uniqueNames = [...new Set(details.hotels.map(h => h.name))]
+                      const isSingleHotel = uniqueNames.length === 1
+                      return isSingleHotel ? (
+                        <div className="hotels-intro">
+                          <h3 className="hotels-intro-title">{t('package.hotel')}</h3>
+                          <p className="hotels-intro-subtitle">
+                            {t('package.sameHotelDescription')}
+                          </p>
+                        </div>
+                      ) : null
+                    })()}
                   <div className="hotels-grid">
                     {(() => {
                       // Group hotels by name
@@ -321,269 +364,205 @@ function PackageFullDetail() {
                         }
                         groupedHotels[hotel.name].push({ ...hotel, originalIndex: idx })
                       })
+                      const groupEntries = Object.entries(groupedHotels)
 
-                      // Render one card per unique hotel
-                      return Object.entries(groupedHotels).map(([hotelName, hotelVariants], groupIndex) => {
+                      // One card per hotel group; same layout for all (left = hotel info, right = variant blocks)
+                      return groupEntries.map(([hotelName, hotelVariants], groupIndex) => {
                         // Use the first variant for common properties (image, stars, roomType)
                         const baseHotel = hotelVariants[0]
                         // Create a unique key for this hotel group
                         const hotelKey = `hotel-${groupIndex}`
                         const currentSelection = hotelSelections[hotelKey] || { 
                           roomType: 'double', 
-                          adults: 1, 
+                          adults: 2, 
                           children: 0, 
                           children2: 0,
-                          selectedDateIndex: 0 // Index of selected departure date
+                          selectedDateIndex: 0
                         }
                         
-                        // Get the currently selected hotel variant based on date selection
                         const selectedHotel = hotelVariants[currentSelection.selectedDateIndex] || hotelVariants[0]
                         const totalPrice = calculateRoomPrice(selectedHotel, currentSelection)
-                        
+
+                        // Same layout for all hotel cards: left = hotel info, right = one variant block per departure
                         return (
-                          <div key={hotelKey} className="hotel-card-vertical">
-                            {/* Hotel Image */}
-                            <div className="hotel-image-top">
-                              {baseHotel.image ? (
-                                <div 
-                                  className="hotel-image-bg"
-                                  style={{ backgroundImage: `url(${baseHotel.image})` }}
-                                />
-                              ) : (
-                                <div className="hotel-image-placeholder">
-                                  <span className="image-text">INSERT IMAGE HERE</span>
-                                </div>
-                              )}
-                              <div className="hotel-stars-overlay">
-                                {'★'.repeat(baseHotel.stars || 3)}
-                                {'☆'.repeat(5 - (baseHotel.stars || 3))}
-                              </div>
-                            </div>
-
-                            {/* Hotel Content */}
-                            <div className="hotel-content-vertical">
-                              {/* Hotel Name & Location */}
-                              <div className="hotel-header-vertical">
-                                <h3 className="hotel-name-vertical">{baseHotel.name}</h3>
-                                {baseHotel.location && (
-                                  <p className="hotel-location-vertical">📍 {baseHotel.location}</p>
-                                )}
-                              </div>
-
-                              {/* Room Type & Board Basis */}
-                              <div className="hotel-details-vertical">
-                                <div className="detail-item">
-                                  <span className="detail-icon">🛏️</span>
-                                  <span><strong>{baseHotel.roomType || 'Standard Room'}</strong></span>
-                                </div>
-                                {baseHotel.boardBasis && (
-                                  <div className="detail-item">
-                                    <span className="detail-icon">🍽️</span>
-                                    <span>{baseHotel.boardBasis}</span>
+                            <div key={hotelKey} className="hotel-single-layout">
+                              <div className="hotel-single-left">
+                                <div className="hotel-image-top hotel-image-single">
+                                  {baseHotel.image ? (
+                                    <div className="hotel-image-bg" style={{ backgroundImage: `url(${baseHotel.image})` }} />
+                                  ) : (
+                                    <div className="hotel-image-placeholder"><span className="image-text">INSERT IMAGE HERE</span></div>
+                                  )}
+                                  <div className="hotel-stars-overlay">
+                                    {'★'.repeat(baseHotel.stars || 3)}{'☆'.repeat(5 - (baseHotel.stars || 3))}
                                   </div>
-                                )}
-                              </div>
-
-                              {/* Prices (per person) – all types in same button style: Double, Single, Triple, Child 1, Child 2 */}
-                              <div className="room-type-section-vertical">
-                                <label className="section-label">Prices (per person):</label>
-                                <div className="room-type-options-vertical">
-                                  {selectedHotel.prices.double != null && selectedHotel.prices.double > 0 && (
-                                    <button
-                                      type="button"
-                                      className={`room-type-option-btn ${currentSelection.roomType === 'double' ? 'active' : ''}`}
-                                      onClick={() => {
-                                        updateHotelSelection(hotelKey, 'roomType', 'double')
-                                      }}
-                                    >
-                                      <span className="room-type-name">Double</span>
-                                      <span className="room-type-price">€{selectedHotel.prices.double}/person</span>
-                                    </button>
+                                </div>
+                                <h3 className="hotel-single-title">{baseHotel.name}</h3>
+                                {baseHotel.location && <p className="hotel-single-location">{baseHotel.location}</p>}
+                                <div className="hotel-single-guests">
+                                  <label className="section-label">{t('package.guests')}</label>
+                                  <div className="guest-selector-vertical">
+                                    <span className="guest-type">{t('package.adults')}:</span>
+                                    <div className="guest-controls-vertical">
+                                      <button type="button" className="guest-btn-vertical" onClick={() => currentSelection.adults > 1 && updateHotelSelection(hotelKey, 'adults', currentSelection.adults - 1)} disabled={currentSelection.adults <= 1} aria-label="Decrease adults">−</button>
+                                      <span className="guest-count-vertical">{currentSelection.adults}</span>
+                                      <button type="button" className="guest-btn-vertical" onClick={() => currentSelection.adults < 8 && updateHotelSelection(hotelKey, 'adults', currentSelection.adults + 1)}>+</button>
+                                    </div>
+                                  </div>
+                                  {(hotelVariants[0]?.prices?.child1 != null) && (
+                                    <div className="guest-selector-vertical">
+                                      <span className="guest-type">{t('package.child1')}:</span>
+                                      <div className="guest-controls-vertical">
+                                        <button type="button" className="guest-btn-vertical" onClick={() => currentSelection.children > 0 && updateHotelSelection(hotelKey, 'children', currentSelection.children - 1)} disabled={currentSelection.children <= 0}>−</button>
+                                        <span className="guest-count-vertical">{currentSelection.children}</span>
+                                        <button type="button" className="guest-btn-vertical" onClick={() => updateHotelSelection(hotelKey, 'children', currentSelection.children + 1)}>+</button>
+                                      </div>
+                                    </div>
                                   )}
-                                  {selectedHotel.prices.single != null && selectedHotel.prices.single > 0 && (
-                                    <button
-                                      type="button"
-                                      className={`room-type-option-btn ${currentSelection.roomType === 'single' ? 'active' : ''}`}
-                                      onClick={() => {
-                                        updateHotelSelection(hotelKey, 'roomType', 'single')
-                                      }}
-                                    >
-                                      <span className="room-type-name">Single</span>
-                                      <span className="room-type-price">€{selectedHotel.prices.single}/person</span>
-                                    </button>
-                                  )}
-                                  {selectedHotel.prices.triple != null && selectedHotel.prices.triple > 0 && (
-                                    <button
-                                      type="button"
-                                      className={`room-type-option-btn ${currentSelection.roomType === 'triple' ? 'active' : ''}`}
-                                      onClick={() => {
-                                        updateHotelSelection(hotelKey, 'roomType', 'triple')
-                                      }}
-                                    >
-                                      <span className="room-type-name">Triple</span>
-                                      <span className="room-type-price">€{selectedHotel.prices.triple}/person</span>
-                                    </button>
-                                  )}
-                                  {selectedHotel.prices.child1 != null && selectedHotel.prices.child1 > 0 && (
-                                    <span className="room-type-option-btn room-type-option-btn-display" aria-hidden>
-                                      <span className="room-type-name">Child 1</span>
-                                      <span className="room-type-price">€{selectedHotel.prices.child1}/person</span>
-                                    </span>
-                                  )}
-                                  {selectedHotel.prices.child2 != null && selectedHotel.prices.child2 > 0 && (
-                                    <span className="room-type-option-btn room-type-option-btn-display" aria-hidden>
-                                      <span className="room-type-name">Child 2</span>
-                                      <span className="room-type-price">€{selectedHotel.prices.child2}/person</span>
-                                    </span>
+                                  {(hotelVariants[0]?.prices?.child2 != null) && (
+                                    <div className="guest-selector-vertical">
+                                      <span className="guest-type">{t('package.child2')}:</span>
+                                      <div className="guest-controls-vertical">
+                                        <button type="button" className="guest-btn-vertical" onClick={() => currentSelection.children2 > 0 && updateHotelSelection(hotelKey, 'children2', currentSelection.children2 - 1)} disabled={currentSelection.children2 <= 0}>−</button>
+                                        <span className="guest-count-vertical">{currentSelection.children2}</span>
+                                        <button type="button" className="guest-btn-vertical" onClick={() => currentSelection.children2 < 4 && updateHotelSelection(hotelKey, 'children2', currentSelection.children2 + 1)}>+</button>
+                                      </div>
+                                    </div>
                                   )}
                                 </div>
                               </div>
-
-                              {/* Departure Dates – only when hotel has multiple dates */}
-                              {hotelVariants.length > 1 && (
-                                <div className="departure-section-vertical">
-                                  <label className="section-label">Ημερομηνία αναχώρησης (Departure date):</label>
-                                  <div className="departure-dates-vertical">
-                                    {hotelVariants.map((variant, dateIdx) => (
-                                      <label
-                                        key={dateIdx}
-                                        className={`departure-radio-vertical ${currentSelection.selectedDateIndex === dateIdx ? 'active' : ''}`}
+                              <div className="hotel-single-right">
+                                {hotelVariants.map((variant, variantIdx) => {
+                                  // Each variant has completely independent selection
+                                  const variantKey = `${hotelKey}-variant-${variantIdx}`
+                                  const variantSelectionData = hotelSelections[variantKey]
+                                  // Only use stored selection if it exists, otherwise no selection (for display)
+                                  const variantSelection = variantSelectionData || {
+                                    roomType: null, // null means no selection yet
+                                    adults: 2,
+                                    children: 0,
+                                    children2: 0
+                                  }
+                                  // For price calculation, default to 'double' if no selection
+                                  const selectionForPrice = variantSelectionData || {
+                                    roomType: 'double',
+                                    adults: 2,
+                                    children: 0,
+                                    children2: 0
+                                  }
+                                  const variantTotal = calculateRoomPrice(variant, selectionForPrice)
+                                  return (
+                                    <div key={variantIdx} className="hotel-variant-block">
+                                      <div className="hotel-variant-date-badge">
+                                        <span className="hotel-variant-date-label">{t('package.departureDate')}</span>
+                                        <span className="hotel-variant-date-value">{variant.departureDate}</span>
+                                      </div>
+                                      <div className="hotel-variant-body">
+                                        <div className="hotel-variant-head">
+                                          <span className="hotel-variant-room-type">{baseHotel.roomType || 'Standard Room'}</span>
+                                          <span className="hotel-variant-board">{baseHotel.boardBasis || 'Bed & Breakfast'}</span>
+                                        </div>
+                                        <div className="hotel-variant-summary">
+                                          <span className="hotel-variant-room-label">{t('package.room')} 1</span>
+                                          <span className="hotel-variant-total">
+                                            {selectionForPrice.adults} {selectionForPrice.adults !== 1 ? t('package.adults') : t('package.adult')}
+                                            {selectionForPrice.children > 0 && `, ${selectionForPrice.children} ${t('package.child1')}`}
+                                            {selectionForPrice.children2 > 0 && `, ${selectionForPrice.children2} ${t('package.child2')}`}: <strong>€{variantTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                                          </span>
+                                        </div>
+                                        <div className="hotel-variant-prices">
+                                          <div className="hotel-variant-price-grid">
+                                            <button
+                                              type="button"
+                                              className={`hotel-variant-price-cell ${variantSelection.roomType === 'double' ? 'selected' : ''}`}
+                                              onClick={() => {
+                                                if (variant.prices?.double != null) {
+                                                  // Update only this specific variant's selection
+                                                  const currentAdults = variantSelection.adults || 2
+                                                  const newAdults = currentAdults < 2 ? 2 : currentAdults
+                                                  setHotelSelections(prev => ({
+                                                    ...prev,
+                                                    [variantKey]: {
+                                                      roomType: 'double',
+                                                      adults: newAdults,
+                                                      children: variantSelection.children || 0,
+                                                      children2: variantSelection.children2 || 0
+                                                    }
+                                                  }))
+                                                }
+                                              }}
+                                              disabled={variant.prices?.double == null}
+                                              title="Click to select Double room (2 adults)"
+                                            >
+                                              <span className="hotel-variant-price-label">{t('package.double')}</span>
+                                              <span className="hotel-variant-price-value">{variant.prices?.double != null ? `€${variant.prices.double}` : '–'}</span>
+                                            </button>
+                                            <button
+                                              type="button"
+                                              className={`hotel-variant-price-cell ${variantSelection.roomType === 'single' ? 'selected' : ''}`}
+                                              onClick={() => {
+                                                if (variant.prices?.single != null) {
+                                                  // Update only this specific variant's selection
+                                                  setHotelSelections(prev => ({
+                                                    ...prev,
+                                                    [variantKey]: {
+                                                      roomType: 'single',
+                                                      adults: 1,
+                                                      children: variantSelection.children || 0,
+                                                      children2: variantSelection.children2 || 0
+                                                    }
+                                                  }))
+                                                }
+                                              }}
+                                              disabled={variant.prices?.single == null}
+                                              title="Click to select Single room (1 adult)"
+                                            >
+                                              <span className="hotel-variant-price-label">{t('package.single')}</span>
+                                              <span className="hotel-variant-price-value">{variant.prices?.single != null ? `€${variant.prices.single}` : '–'}</span>
+                                            </button>
+                                            <div className="hotel-variant-price-cell">
+                                              <span className="hotel-variant-price-label">{t('package.child1')}</span>
+                                              <span className="hotel-variant-price-value">{variant.prices?.child1 != null ? `€${variant.prices.child1}` : '–'}</span>
+                                            </div>
+                                            <div className="hotel-variant-price-cell">
+                                              <span className="hotel-variant-price-label">{t('package.child2')}</span>
+                                              <span className="hotel-variant-price-value">{variant.prices?.child2 != null ? `€${variant.prices.child2}` : '–'}</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <button
+                                        type="button"
+                                        className="hotel-variant-continue"
+                                        onClick={() => {
+                                          updateHotelSelection(hotelKey, 'selectedDateIndex', variantIdx)
+                                          setReserveFormData({
+                                            name: '', email: '', phone: '',
+                                            hotelKey, hotelName: baseHotel.name,
+                                            departureDate: variant.departureDate,
+                                            roomType: selectionForPrice.roomType,
+                                            adults: selectionForPrice.adults,
+                                            children: selectionForPrice.children,
+                                            children2: selectionForPrice.children2,
+                                            totalPrice: variantTotal,
+                                            selectedHotel: variant
+                                          })
+                                          setReserveToast(null)
+                                          setShowReserveModal(true)
+                                        }}
                                       >
-                                        <input
-                                          type="radio"
-                                          name={`departure-${hotelKey}`}
-                                          checked={currentSelection.selectedDateIndex === dateIdx}
-                                          onChange={() => {
-                                            updateHotelSelection(hotelKey, 'selectedDateIndex', dateIdx)
-                                          }}
-                                          className="departure-radio-input"
-                                        />
-                                        <span>{variant.departureDate}</span>
-                                      </label>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-
-                              {/* Guest Selection – Adults, Child 1, Child 2 */}
-                              <div className="guest-section-vertical">
-                                <label className="section-label">Guests</label>
-                                <div className="guest-selector-vertical">
-                                  <span className="guest-type">Adults:</span>
-                                  <div className="guest-controls-vertical">
-                                    <button 
-                                      type="button"
-                                      className="guest-btn-vertical"
-                                      onClick={() => {
-                                        if (currentSelection.adults > 1) updateHotelSelection(hotelKey, 'adults', currentSelection.adults - 1)
-                                      }}
-                                      disabled={currentSelection.adults <= 1}
-                                      aria-label="Decrease adults"
-                                    >−</button>
-                                    <span className="guest-count-vertical">{currentSelection.adults}</span>
-                                    <button 
-                                      type="button"
-                                      className="guest-btn-vertical"
-                                      onClick={() => {
-                                        if (currentSelection.adults < 8) updateHotelSelection(hotelKey, 'adults', currentSelection.adults + 1)
-                                      }}
-                                    >+</button>
-                                  </div>
-                                </div>
-                                {selectedHotel.prices.child1 != null && selectedHotel.prices.child1 > 0 && (
-                                  <div className="guest-selector-vertical">
-                                    <span className="guest-type">Child 1:</span>
-                                    <div className="guest-controls-vertical">
-                                      <button 
-                                        type="button"
-                                        className="guest-btn-vertical"
-                                        onClick={() => {
-                                          if (currentSelection.children > 0) updateHotelSelection(hotelKey, 'children', currentSelection.children - 1)
-                                        }}
-                                        disabled={currentSelection.children <= 0}
-                                        aria-label="Decrease Child 1"
-                                      >−</button>
-                                      <span className="guest-count-vertical">{currentSelection.children}</span>
-                                      <button 
-                                        type="button"
-                                        className="guest-btn-vertical"
-                                        onClick={() => {
-                                          if (currentSelection.children < 1) updateHotelSelection(hotelKey, 'children', currentSelection.children + 1)
-                                        }}
-                                        aria-label="Increase Child 1"
-                                      >+</button>
+                                        {t('common.reserve')}
+                                      </button>
                                     </div>
-                                  </div>
-                                )}
-                                {selectedHotel.prices.child2 != null && selectedHotel.prices.child2 > 0 && (
-                                  <div className="guest-selector-vertical">
-                                    <span className="guest-type">Child 2:</span>
-                                    <div className="guest-controls-vertical">
-                                      <button 
-                                        type="button"
-                                        className="guest-btn-vertical"
-                                        onClick={() => {
-                                          if (currentSelection.children2 > 0) updateHotelSelection(hotelKey, 'children2', currentSelection.children2 - 1)
-                                        }}
-                                        disabled={currentSelection.children2 <= 0}
-                                        aria-label="Decrease Child 2"
-                                      >−</button>
-                                      <span className="guest-count-vertical">{currentSelection.children2}</span>
-                                      <button 
-                                        type="button"
-                                        className="guest-btn-vertical"
-                                        onClick={() => {
-                                          if (currentSelection.children2 < 4) updateHotelSelection(hotelKey, 'children2', currentSelection.children2 + 1)
-                                        }}
-                                        aria-label="Increase Child 2"
-                                      >+</button>
-                                    </div>
-                                  </div>
-                                )}
+                                  )
+                                })}
                               </div>
-
-                              {/* Total Price */}
-                              <div className="total-section-vertical">
-                                <div className="total-price-vertical">
-                                  <span className="total-label">
-                                    Total price for {currentSelection.adults} Adult{currentSelection.adults !== 1 ? 's' : ''}
-                                    {currentSelection.children > 0 && `, ${currentSelection.children} Child 1`}
-                                    {currentSelection.children2 > 0 && `, ${currentSelection.children2} Child 2`}:
-                                  </span>
-                                  <span className="total-amount">€{totalPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-                                </div>
-                              </div>
-
-                              {/* Reserve Button */}
-                              <button
-                                className="reserve-button-vertical"
-                                onClick={() => {
-                                  setReserveFormData({
-                                    name: '',
-                                    email: '',
-                                    phone: '',
-                                    hotelKey: hotelKey,
-                                    hotelName: baseHotel.name,
-                                    departureDate: selectedHotel.departureDate,
-                                    roomType: currentSelection.roomType,
-                                    adults: currentSelection.adults,
-                                    children: currentSelection.children,
-                                    children2: currentSelection.children2,
-                                    totalPrice: totalPrice,
-                                    selectedHotel: selectedHotel
-                                  })
-                                  setReserveToast(null)
-                                  setShowReserveModal(true)
-                                }}
-                              >
-                                Reserve Now
-                              </button>
                             </div>
-                          </div>
-                        )
+                          )
                       })
                     })()}
                   </div>
+                  </>
                 ) : (
                   <p className="section-text muted">
                     Add room types and rates for this package in the data file.
@@ -595,7 +574,7 @@ function PackageFullDetail() {
             {/* PROGRAM TAB */}
             {activeTab === 'program' && (
               <section className="full-section">
-                <h2>Program</h2>
+                <h2>{t('package.program')}</h2>
                 {details.note && (
                   <div style={{ 
                     padding: '1rem 1.25rem', 
@@ -607,7 +586,7 @@ function PackageFullDetail() {
                     color: '#92400e',
                     lineHeight: '1.6'
                   }}>
-                    <strong>ℹ️ Σημείωση:</strong> {details.note}
+                    <strong>ℹ️ {t('package.note')}:</strong> {details.note}
                   </div>
                 )}
                 
@@ -634,7 +613,7 @@ function PackageFullDetail() {
                     </ol>
                     {details.program && details.program.optional && (
                       <div className="program-section optional-section">
-                        <h3>Προαιρετικό</h3>
+                        <h3>{t('package.optional')}</h3>
                         <p className="section-text">{details.program.optional}</p>
                       </div>
                     )}
@@ -973,7 +952,7 @@ function PackageFullDetail() {
                   <div className="details-section">
                     <h3 className="details-section-title">
                       <span className="icon-badge flights">✈️</span>
-                      Flights — Sky Express
+                      Flights — {details.airline || 'Sky Express'}
                     </h3>
                     <div className="flights-container">
                       {details.flights.map((flight, index) => (
@@ -1020,6 +999,30 @@ function PackageFullDetail() {
                         <li key={index} className="section-text">{term}</li>
                       ))}
                     </ul>
+                  </div>
+                )}
+
+                {/* Hotel Stay Note */}
+                {details.hotelStayNote && (
+                  <div className="details-section">
+                    <h3 className="details-section-title">
+                      <span className="icon-badge hotel-stay">🏨</span>
+                      Hotel Stay
+                    </h3>
+                    <div style={{ 
+                      padding: '1.25rem 1.5rem', 
+                      marginTop: '0.5rem',
+                      background: '#eff6ff', 
+                      border: '1px solid #bfdbfe', 
+                      borderLeft: '4px solid #3b82f6', 
+                      borderRadius: '8px',
+                      fontSize: '0.95rem',
+                      color: '#1e40af',
+                      lineHeight: '1.8',
+                      whiteSpace: 'pre-line'
+                    }}>
+                      {details.hotelStayNote}
+                    </div>
                   </div>
                 )}
 
@@ -1070,7 +1073,17 @@ function PackageFullDetail() {
                 <h2>Related Tours</h2>
                 <div className="related-grid">
                       {relatedTours.map((tour) => (
-                        <Link key={tour.id} to={`/packages/${tour.id}`} className="related-card">
+                        <Link 
+                          key={tour.id} 
+                          to={`/packages/${tour.id}`} 
+                          className="related-card"
+                          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+            if (document.documentElement) document.documentElement.scrollTop = 0
+            if (document.body) document.body.scrollTop = 0
+            setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+          }}
+                        >
                           <div className="related-header">
                             <span className="related-destination">{tour.destination}</span>
                             <span className="related-price">From €{tour.cheapestPrice.toLocaleString()}</span>
@@ -1163,37 +1176,6 @@ function PackageFullDetail() {
                   </button>
                 </div>
               )}
-            </div>
-
-            <div className="enquiry-card mobile-sidebar-card">
-              <h3>Enquire about this tour</h3>
-              <form
-                className="enquiry-form"
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  alert('Thank you! We will contact you about this tour.')
-                }}
-              >
-                <label>
-                  Name
-                  <input type="text" required />
-                </label>
-                <label>
-                  Email
-                  <input type="email" required />
-                </label>
-                <label>
-                  Phone
-                  <input type="tel" />
-                </label>
-                <label>
-                  Message
-                  <textarea rows="3" placeholder="Tell us your preferred dates, travellers, hotel category..." />
-                </label>
-                <button type="submit" className="enquiry-submit-btn">
-                  Send enquiry
-                </button>
-              </form>
             </div>
 
             <div className="why-card mobile-sidebar-card">
@@ -1292,63 +1274,6 @@ function PackageFullDetail() {
                   </button>
                 </div>
               )}
-            </div>
-
-            <div className="enquiry-card">
-              <h3>Enquire about this tour</h3>
-              <form
-                className="enquiry-form"
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  const formData = new FormData(e.target)
-                  const name = formData.get('name')
-                  const email = formData.get('email')
-                  const phone = formData.get('phone') || 'Not provided'
-                  const message = formData.get('message') || 'No message provided'
-                  
-                  const emailBody = `ENQUIRY ABOUT TOUR
-
-Package: ${pkg.title}
-Destination: ${pkg.destination}
-
-Contact Information:
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}
-
----
-This enquiry was submitted through the Honeywell Travel website.`.trim()
-
-                  const mailtoLink = `mailto:limassol@honeywelltravel.com.cy?subject=${encodeURIComponent(`Enquiry - ${pkg.title}`)}&body=${encodeURIComponent(emailBody)}`
-                  window.location.href = mailtoLink
-                  
-                  alert('Thank you! We will contact you about this tour.')
-                  e.target.reset()
-                }}
-              >
-                <label>
-                  Name
-                  <input type="text" name="name" required />
-                </label>
-                <label>
-                  Email
-                  <input type="email" name="email" required />
-                </label>
-                <label>
-                  Phone
-                  <input type="tel" name="phone" />
-                </label>
-                <label>
-                  Message
-                  <textarea name="message" rows="3" placeholder="Tell us your preferred dates, travellers, hotel category..." />
-                </label>
-                <button type="submit" className="enquiry-submit-btn">
-                  Send enquiry
-                </button>
-              </form>
             </div>
 
             <div className="why-card">

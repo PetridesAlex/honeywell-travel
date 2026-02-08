@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 import ImageCarousel from '../components/ImageCarousel'
 import CircularGallery from '../components/CircularGallery'
 import SearchSection from '../components/SearchSection'
@@ -12,7 +13,13 @@ import './Home.css'
 function Home() {
   const [sharedBackground, setSharedBackground] = useState('/images/destinations/search-where-to-travel.webp')
   return (
-    <div className="home-page">
+    <>
+      <SEO 
+        title="Honeywell Travel - Premium Travel Agency in Limassol & Nicosia, Cyprus"
+        description="Award-winning travel agency in Cyprus specializing in tailor-made holidays, honeymoon packages, corporate travel, cruises, and exotic destinations. Offices in Limassol and Nicosia."
+        keywords="Travel Agency Cyprus, Travel Agency Limassol, Travel Agency Nicosia, Honeymoon Packages Cyprus, Corporate Travel Cyprus, Cruises Cyprus, Holiday Packages Cyprus"
+      />
+      <div className="home-page">
       <ImageCarousel />
       <div style={{ height: '400px', position: 'relative', margin: 0 }}>
         <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
@@ -38,6 +45,7 @@ function Home() {
         </RevealOnScroll>
       </div>
     </div>
+    </>
   )
 }
 

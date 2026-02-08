@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
 import './HoneymoonTrips.css'
 
@@ -89,11 +90,14 @@ const COUNTRY_CODES = [
 ]
 
 function HoneymoonTrips() {
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
   const [destinationSearch, setDestinationSearch] = useState('')
   const [selectedDestination, setSelectedDestination] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
   const [countryCode, setCountryCode] = useState('+357')
   const [phoneNumber, setPhoneNumber] = useState('')
+  const [message, setMessage] = useState('')
   const dropdownRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -127,7 +131,13 @@ function HoneymoonTrips() {
   }
 
   return (
-    <div className="honeymoon-trips-page">
+    <>
+      <SEO 
+        title="Honeymoon Trips - Tailor-Made Honeymoon Packages | Honeywell Travel"
+        description="Plan your perfect honeymoon with Honeywell Travel. Tailor-made honeymoon packages to exotic destinations including Maldives, Seychelles, Bora Bora, and more. Award-winning service."
+        keywords="Honeymoon Packages Cyprus, Honeymoon Trips, Maldives Honeymoon, Seychelles Honeymoon, Bora Bora Honeymoon, Luxury Honeymoon Packages"
+      />
+      <div className="honeymoon-trips-page">
       {/* Hero */}
       <section className="honeymoon-trips-hero">
         <div className="hero-overlay" />
@@ -164,14 +174,22 @@ function HoneymoonTrips() {
             </p>
           </div>
           <div className="what-image">
-            <div className="image-placeholder" />
+            <img 
+              src="/images/honeymoon/honeymoon-lady.webp" 
+              alt="What we do - Honeymoon planning"
+              className="what-image-img"
+            />
           </div>
         </section>
 
         {/* Why Honeywell */}
         <section className="why-section">
           <div className="why-image">
-            <div className="image-placeholder" />
+            <img 
+              src="/images/honeymoon/honeymoon-honeywell-travel.webp" 
+              alt="Why Honeywell Travel"
+              className="why-image-img"
+            />
           </div>
           <div className="why-text">
             <h2>Why Honeywell Travel?</h2>
@@ -205,23 +223,32 @@ function HoneymoonTrips() {
 
         {/* Send us your request */}
         <section className="honeymoon-request">
-          <div className="honeymoon-request-text">
+          <div className="honeymoon-request-header">
             <h2>Send us your request</h2>
             <p>
               Tell us what you&apos;re dreaming of – destination, dates, budget and any special ideas.
               Our team will come back to you with tailored honeymoon suggestions.
             </p>
+          </div>
+          <div className="honeymoon-request-content">
             <div className="honeymoon-request-image">
               <img 
                 src="/images/honeymoon/honeymoon-send-request.webp" 
                 alt="Honeymoon planning" 
               />
             </div>
-          </div>
-          <form
+            <form
             className="honeymoon-request-form"
             onSubmit={(e) => {
               e.preventDefault()
+              if (!fullName.trim()) {
+                alert('Please enter your full name.')
+                return
+              }
+              if (!email.trim()) {
+                alert('Please enter your email address.')
+                return
+              }
               if (!selectedDestination || !HONEYMOON_DESTINATIONS.includes(selectedDestination)) {
                 alert('Please select a valid destination from the list.')
                 return
@@ -230,57 +257,48 @@ function HoneymoonTrips() {
                 alert('Please enter your phone number.')
                 return
               }
+              if (!message.trim()) {
+                alert('Please tell us what you would like to plan.')
+                return
+              }
               const fullPhoneNumber = `${countryCode}${phoneNumber.trim()}`
               console.log('Form submitted:', {
+                fullName: fullName.trim(),
+                email: email.trim(),
                 destination: selectedDestination,
-                email: e.target.email.value,
                 phone: fullPhoneNumber,
-                message: e.target.message.value
+                message: message.trim()
               })
               alert('Thank you for your request! We will contact you soon.')
+              // Reset form
+              setFullName('')
+              setEmail('')
+              setDestinationSearch('')
+              setSelectedDestination('')
+              setPhoneNumber('')
+              setMessage('')
+              setCountryCode('+357')
             }}
           >
             <div className="form-row">
-              <label className="destination-select-wrapper">
-                Choose your Honeymoon Destination
-                <div className="destination-input-container">
-                  <input
-                    ref={inputRef}
-                    type="text"
-                    name="destination"
-                    value={destinationSearch}
-                    onChange={handleDestinationChange}
-                    onFocus={() => setShowDropdown(true)}
-                    placeholder="Start typing a country or island..."
-                    required
-                    autoComplete="off"
-                  />
-                  {showDropdown && filteredDestinations.length > 0 && (
-                    <div ref={dropdownRef} className="destination-dropdown">
-                      {filteredDestinations.slice(0, 8).map((dest, idx) => (
-                        <button
-                          key={idx}
-                          type="button"
-                          className="destination-option"
-                          onClick={() => handleDestinationSelect(dest)}
-                        >
-                          {dest}
-                        </button>
-                      ))}
-                      {filteredDestinations.length > 8 && (
-                        <div className="destination-more">
-                          +{filteredDestinations.length - 8} more
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
+              <label>
+                Full Name
+                <input
+                  type="text"
+                  name="fullName"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  placeholder="Enter your full name"
+                  required
+                />
               </label>
               <label>
                 Email
                 <input
                   type="email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   required
                 />
@@ -288,7 +306,7 @@ function HoneymoonTrips() {
             </div>
             <div className="form-row">
               <label className="phone-input-wrapper">
-                Contact number
+                Contact Number
                 <div className="phone-input-container">
                   <select
                     className="country-code-select"
@@ -314,11 +332,48 @@ function HoneymoonTrips() {
                 </div>
               </label>
             </div>
+            <label className="destination-select-wrapper">
+              Choose your Honeymoon Destination
+              <div className="destination-input-container">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  name="destination"
+                  value={destinationSearch}
+                  onChange={handleDestinationChange}
+                  onFocus={() => setShowDropdown(true)}
+                  placeholder="Start typing a country or island..."
+                  required
+                  autoComplete="off"
+                />
+                {showDropdown && filteredDestinations.length > 0 && (
+                  <div ref={dropdownRef} className="destination-dropdown">
+                    {filteredDestinations.slice(0, 8).map((dest, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        className="destination-option"
+                        onClick={() => handleDestinationSelect(dest)}
+                      >
+                        {dest}
+                      </button>
+                    ))}
+                    {filteredDestinations.length > 8 && (
+                      <div className="destination-more">
+                        +{filteredDestinations.length - 8} more
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </label>
             <label className="full-width">
               What would you like to ask or plan?
               <textarea
                 name="message"
-                rows="4"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows="5"
                 placeholder="Tell us briefly what you have in mind..."
                 required
               />
@@ -327,10 +382,12 @@ function HoneymoonTrips() {
               Send request
             </button>
           </form>
+          </div>
         </section>
       </div>
       </RevealOnScroll>
-    </div>
+      </div>
+    </>
   )
 }
 

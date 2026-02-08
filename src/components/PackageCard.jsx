@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { getTranslatedPackageTitle } from '../utils/packageTranslations'
 import './PackageCard.css'
 
 function PackageCard({ package: pkg }) {
+  const { t, i18n } = useTranslation()
+  const translatedTitle = getTranslatedPackageTitle(pkg.id, pkg.title, i18n)
+  
   // From price = lowest double room price per person across all hotels
   const getCheapestPrice = () => {
     if (pkg.details && pkg.details.hotels && pkg.details.hotels.length > 0) {
@@ -19,8 +24,23 @@ function PackageCard({ package: pkg }) {
   const displayPrice = getCheapestPrice()
   const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
 
+  const handleClick = () => {
+    // Scroll immediately before navigation
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    if (document.documentElement) {
+      document.documentElement.scrollTop = 0
+    }
+    if (document.body) {
+      document.body.scrollTop = 0
+    }
+    // Also scroll after a tiny delay to catch any async rendering
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }, 0)
+  }
+
   return (
-    <Link to={`/packages/${pkg.id}`} className="package-card">
+    <Link to={`/packages/${pkg.id}`} className="package-card" onClick={handleClick}>
       <div
         className={`package-image${imageUrl ? ' package-image-bg' : ''}`}
         style={imageUrl ? { backgroundImage: `url(${imageUrl})` } : undefined}
@@ -29,7 +49,7 @@ function PackageCard({ package: pkg }) {
       </div>
       <div className="package-content">
         <div className="package-badge">{pkg.destination}</div>
-        <h3 className="package-title">{pkg.title}</h3>
+        <h3 className="package-title">{translatedTitle}</h3>
         <p className="package-description">{pkg.description}</p>
         <div className="package-details">
           <span className="package-duration">⏱️ {pkg.duration}</span>

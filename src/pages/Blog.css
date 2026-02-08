@@ -278,14 +278,37 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+@media (max-width: 480px) {
+  .blog-hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .blog-hero h1 {
+    font-size: 2rem;
+  }
+
+  .blog-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .blog-container {
+    padding: 2rem 0.75rem;
+  }
 
   .blog-categories {
     gap: 0.75rem;
+    margin-bottom: 2rem;
   }
 
   .category-btn {
-    padding: 0.65rem 1.25rem;
+    padding: 0.6rem 1.25rem;
     font-size: 0.85rem;
+  }
+
+  .blog-grid {
+    gap: 1.25rem;
   }
 
   .blog-card-title {
@@ -293,5 +316,3 @@
     min-height: auto;
   }
 }
-
-

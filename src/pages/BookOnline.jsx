@@ -152,6 +152,12 @@ function BookOnline() {
                       key={pkg.id}
                       to={`/packages/${pkg.id}`}
                       className="package-card-link"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                        if (document.documentElement) document.documentElement.scrollTop = 0
+                        if (document.body) document.body.scrollTop = 0
+                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                      }}
                     >
                       <div className="package-card">
                         {imageUrl ? (

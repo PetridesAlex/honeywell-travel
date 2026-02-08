@@ -424,7 +424,7 @@ export const travelPackages = [
           stars: 3,
           roomType: 'Standard Room',
           packagePrice: 1138,
-          image: '/images/hotels/galaxy-patras.webp',
+          image: '/images/destinations/patra-hotel.webp',
           prices: {
             double: 569,
             single: 659,
@@ -439,7 +439,7 @@ export const travelPackages = [
           stars: 3,
           roomType: 'Standard Room',
           packagePrice: 1238,
-          image: '/images/hotels/galaxy-patras.webp',
+          image: '/images/destinations/patra-hotel.webp',
           prices: {
             double: 619,
             single: 709,
@@ -504,8 +504,10 @@ export const travelPackages = [
         introduction: 'Experience the beauty of the Peloponnese with this special Easter package. Visit Patra, explore the stunning Mountainous Nafpaktia region, and discover the historic Kalavryta with its famous monastery and cog railway.',
         hotelDescription: '[Full Greek hotel description for Galaxy Hotel 3* Patra will be inserted here - please provide the complete text from the reference screenshots]'
       },
+      coverImage: '/images/destinations/patra1.webp',
+      thumbnailImage: '/images/destinations/patra3.webp',
       gallery: [
-        '/images/destinations/greece-hero.webp', // Placeholder - will be replaced with Patra/Kalavryta images
+        '/images/destinations/patra1.webp',
         '/images/destinations/greece-hero.webp',
         '/images/destinations/greece-hero.webp',
         '/images/destinations/greece-hero.webp'
@@ -3555,7 +3557,7 @@ export const travelPackages = [
   },
   {
     id: 19,
-    title: 'ΚΡΗΤΗ – 5 Μέρες',
+    title: 'CRETE – 5 Days',
     destination: 'Greece',
     category: 'Summer Packages',
     price: 249,
@@ -6337,7 +6339,7 @@ export const travelPackages = [
   },
   {
     id: 20,
-    title: 'ΘΕΣΣΑΛΟΝΙΚΗ / ΤΡΙΚΑΛΑ / ΑΛΠΙΚΗ ΘΕΣΣΑΛΙΑ – 6 Μέρες',
+    title: 'THESSALONIKI / TRIKALA / ALPINE THESSALY – 6 Days',
     destination: 'Greece',
     category: 'Summer Packages',
     price: 549,
@@ -6519,7 +6521,7 @@ export const travelPackages = [
   },
   {
     id: 21,
-    title: 'ΘΕΣΣΑΛΟΝΙΚΗ – ΚΑΣΤΟΡΙΑ – ΛΙΜΝΕΣ ΒΟΡΕΙΑΣ ΕΛΛΑΔΑΣ',
+    title: 'THESSALONIKI – KASTORIA – NORTHERN GREECE LAKES',
     destination: 'Greece',
     category: 'Summer Packages',
     price: 549,
@@ -6562,7 +6564,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 699,
@@ -6577,7 +6579,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 699,
@@ -6592,7 +6594,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6607,7 +6609,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6622,7 +6624,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 749,
@@ -6637,7 +6639,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 749,
@@ -6652,7 +6654,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 729,
@@ -6849,7 +6851,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Sky Express',
       includedLuggage: '1 checked bag 20kg + 1 hand luggage 8kg',
-      coverImage: '/images/summer/western-greece-riviera-hero.webp',
+      coverImage: '/images/destinations/riviera-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -6874,7 +6876,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 879,
@@ -6904,7 +6906,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 879,
@@ -6934,7 +6936,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 899,
@@ -6964,7 +6966,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 939,
@@ -6994,7 +6996,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 939,
@@ -7024,7 +7026,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 929,
@@ -7055,7 +7057,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 979,
@@ -7085,7 +7087,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 979,
@@ -7115,7 +7117,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 1029,
@@ -7145,7 +7147,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 1059,
@@ -7175,7 +7177,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 1059,
@@ -7205,7 +7207,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 1059,
@@ -7235,7 +7237,7 @@ export const travelPackages = [
           name: 'My Way Hotel – Patra',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/my-way-patras.webp',
+          image: '/images/hotels/way-hotel.webp',
           location: 'My Way Hotel, Patra, Greece',
           prices: {
             double: 1049,
@@ -7302,13 +7304,13 @@ export const travelPackages = [
         day7: '7η Μέρα: Πρέβεζα – Ναύπακτος – Τριζόνια – Αθήνα – Λάρνακα\n\nΠρόγευμα και αναχώρηση από Πρέβεζα με προορισμό την Αθήνα.\n\nΣτάση στη Ναύπακτο:\n\n• Επίσκεψη στο ενετικό κάστρο με μαγευτική θέα προς Κορινθιακό & λιμάνι\n• Βόλτα στο λιμανάκι\n• Προαιρετικό γεύμα & καφέ σε παραθαλάσσιο περιβάλλον\n\nΣτη συνέχεια, επίσκεψη στα Τριζόνια, το «σμαράγδι του Κορινθιακού»:\n\n• Μετάβαση με καϊκάκια από την ακτή της Φωκίδας (πλωτή διαδρομή ~500 μ.)\n• Μικρό νησί–καταφύγιο ηρεμίας\n• Πλούσια βλάστηση, ελιές, πουρνάρια, ευκάλυπτοι, αμυγδαλιές, φραγκοσυκιές\n• Καταγάλανα νερά & χωρίς αυτοκίνητα – απόλυτη χαλάρωση\n\nΤέλος, αναχώρηση για το αεροδρόμιο της Αθήνας και πτήση επιστροφής για Λάρνακα, γεμάτοι όμορφες εικόνες και αναμνήσεις από τη Δυτική Ελλάδα.'
       },
       gallery: [
-        '/images/summer/western-greece-riviera-hero.webp'
+        '/images/destinations/riviera-hero.webp'
       ]
     }
   },
   {
     id: 24,
-    title: 'ΘΕΣΣΑΛΟΝΙΚΗ – ΚΑΣΤΟΡΙΑ – ΙΩΑΝΝΙΝΑ',
+    title: 'THESSALONIKI – KASTORIA – IOANNINA',
     destination: 'Greece',
     category: 'Summer Packages',
     price: 879,
@@ -7326,7 +7328,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Sky Express',
       includedLuggage: '1 checked bag 20kg + 1 hand luggage 8kg',
-      coverImage: '/images/summer/thessaloniki-kastoria-ioannina-hero.webp',
+      coverImage: '/images/destinations/skg-kastoria-ioanina-hero.webp',
+      thumbnailImage: '/images/destinations/salonika-kastoria-boat.webp',
       flights: [
         {
           direction: 'Departure',
@@ -7350,7 +7353,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 879,
@@ -7395,7 +7398,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 879,
@@ -7440,7 +7443,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 919,
@@ -7485,7 +7488,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 979,
@@ -7530,7 +7533,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 979,
@@ -7575,7 +7578,7 @@ export const travelPackages = [
           name: 'Kastoria Hotel – Kastoria',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/kastoria-thessaloniki-hotel.png',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Kastoria Hotel, Kastoria, Greece',
           prices: {
             double: 919,
@@ -7681,7 +7684,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Smartwings',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 10kg',
-      coverImage: '/images/destinations/prague-hero.webp',
+      coverImage: '/images/destinations/skg-kastoria-ioanina-hero.webp',
+      thumbnailImage: '/images/destinations/skg-kastoria-ioanina-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -7705,7 +7709,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 899,
@@ -7720,7 +7724,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 899,
@@ -7735,7 +7739,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 929,
@@ -7750,7 +7754,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 929,
@@ -7765,7 +7769,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 929,
@@ -7780,7 +7784,7 @@ export const travelPackages = [
           name: 'Prague Hotel – Prague',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/prague-hotel.webp',
+          image: '/images/destinations/skg-kastoria-ioanina-hotel.webp',
           location: 'Prague Hotel, Prague, Czech Republic',
           prices: {
             double: 929,
@@ -7828,7 +7832,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Πράγα – Λάρνακα\n\nΠρόγευμα (breakfast box) και, λίγο μετά τα μεσάνυχτα, μεταφορά στο αεροδρόμιο της Πράγας για την πτήση επιστροφής στη Λάρνακα.\n\nΕπιστροφή με όμορφες εικόνες, εμπειρίες και αναμνήσεις από την παραμυθένια πρωτεύουσα της Τσεχίας, γεμάτο πολιτισμό, ιστορία και ευρωπαϊκή κομψότητα.'
       },
       gallery: [
-        '/images/destinations/prague-hero.webp'
+        '/images/destinations/skg-kastoria-ioanina-hero.webp'
       ]
     }
   },
@@ -7852,7 +7856,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Aegean Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/istanbul-hero.webp',
+      coverImage: '/images/destinations/constanipole-hero.webp',
+      thumbnailImage: '/images/destinations/constantinopole-view.webp',
       flights: [
         {
           direction: 'Departure',
@@ -7892,7 +7897,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 915,
@@ -7906,7 +7911,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 945,
@@ -7920,7 +7925,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 945,
@@ -7934,7 +7939,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 945,
@@ -7948,7 +7953,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 945,
@@ -7962,7 +7967,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 945,
@@ -7976,7 +7981,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 915,
@@ -7990,7 +7995,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 915,
@@ -8004,7 +8009,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 915,
@@ -8018,7 +8023,7 @@ export const travelPackages = [
           name: 'The Central Palace Hotel – Istanbul',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/central-palace-istanbul.webp',
+          image: '/images/destinations/conpole-hotel.webp',
           location: 'Lamartin Street No: 18, Talimhane Taksim, Beyoglu, Istanbul, Turkey 34437',
           prices: {
             double: 915,
@@ -8066,7 +8071,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Πατριαρχείο – Βλαχέρνα – Βαλουκλή – Αθήνα – Λάρνακα\n\nΠρόγευμα και αναχώρηση για μια ημέρα με έντονο ιστορικό και πνευματικό χαρακτήρα:\n\n• Επίσκεψη στο Οικουμενικό Πατριαρχείο\n• Προσκύνημα στον Πατριαρχικό Ναό Αγίου Γεωργίου\n• Θέαση της Κλειστής Πύλης και του χώρου μαρτυρίου του Πατριάρχη Γρηγορίου Ε\'\n• Επίσκεψη στην Παναγία των Βλαχερνών, έναν από τους ιερότερους τόπους της Ορθοδοξίας, όπου σύμφωνα με την παράδοση ψάλθηκε για πρώτη φορά ο Ακάθιστος Ύμνος\n• Επίσκεψη στην Ζωοδόχο Πηγή (Βαλουκλή) και στους Τάφους των Πατριαρχών\n\nΚατά τη διαδρομή θα δούμε:\n• Τα επιβλητικά Θεοδοσιανά Τείχη\n• Τη Χρυσή Πύλη του Βυζαντίου\n\nΣτη συνέχεια, μεταφορά στο αεροδρόμιο της Κωνσταντινούπολης για την πτήση επιστροφής στη Λάρνακα μέσω Αθήνας.'
       },
       gallery: [
-        '/images/destinations/istanbul-hero.webp'
+        '/images/destinations/constanipole-hero.webp'
       ]
     }
   },
@@ -8091,6 +8096,7 @@ export const travelPackages = [
       airline: 'LOT Polish Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
       coverImage: '/images/destinations/warsaw-hero.webp',
+      thumbnailImage: '/images/destinations/warsaw-thumb.webp',
       flights: [
         {
           direction: 'Departure',
@@ -8114,7 +8120,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 965,
@@ -8128,7 +8134,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 965,
@@ -8142,7 +8148,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 965,
@@ -8156,7 +8162,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 965,
@@ -8170,7 +8176,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 965,
@@ -8184,7 +8190,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 965,
@@ -8198,7 +8204,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 995,
@@ -8212,7 +8218,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 995,
@@ -8226,7 +8232,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 995,
@@ -8240,7 +8246,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 995,
@@ -8254,7 +8260,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 995,
@@ -8268,7 +8274,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 995,
@@ -8282,7 +8288,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 995,
@@ -8296,7 +8302,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 995,
@@ -8310,7 +8316,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 995,
@@ -8324,7 +8330,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 995,
@@ -8338,7 +8344,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 965,
@@ -8352,7 +8358,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 965,
@@ -8443,13 +8449,14 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Option 1: ApartHotel Atenea 4★ - Family Room
+        // Hotel 1: ApartHotel Atenea 4★ - Family Room for 4 Pax
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8462,9 +8469,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8477,9 +8485,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8492,9 +8501,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8507,9 +8517,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8522,9 +8533,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1085,
             triple: 1085,
@@ -8537,9 +8549,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1115,
             triple: 1115,
@@ -8552,9 +8565,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1115,
             triple: 1115,
@@ -8567,9 +8581,10 @@ export const travelPackages = [
         {
           name: 'ApartHotel Atenea – Barcelona',
           stars: 4,
-          roomType: 'Family Room for 4 pax',
-          image: '/images/hotels/aparthotel-atenea-barcelona.webp',
-          location: 'Joan Güell 207–211, 08028 Barcelona, Spain',
+          roomType: 'Family Room for 4 Pax',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/apartHotel-atene-barcelona.webp',
+          location: 'Joan Güell, 207-211 , Barcelona, 08028, Barcelona, Spain',
           prices: {
             double: 1115,
             triple: 1115,
@@ -8579,13 +8594,14 @@ export const travelPackages = [
           departureDate: '12/08',
           packagePrice: 2230
         },
-        // Option 2: HCC Regente Hotel 4★ - Standard Room
+        // Hotel 2: HCC Regente Hotel 4★ - Standard Room
         {
           name: 'HCC Regente Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hcc-regente-barcelona.webp',
-          location: 'Rambla Catalunya 76, 08008 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/hcc-regente-hotel-barcelona.webp',
+          location: 'Rambla Catalunya, 76 – Barcelona, 08008, Barcelona, Spain',
           prices: {
             double: 1155,
             single: 1465,
@@ -8598,8 +8614,9 @@ export const travelPackages = [
           name: 'HCC Regente Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hcc-regente-barcelona.webp',
-          location: 'Rambla Catalunya 76, 08008 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/hcc-regente-hotel-barcelona.webp',
+          location: 'Rambla Catalunya, 76 – Barcelona, 08008, Barcelona, Spain',
           prices: {
             double: 1155,
             single: 1465,
@@ -8612,8 +8629,9 @@ export const travelPackages = [
           name: 'HCC Regente Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/hcc-regente-barcelona.webp',
-          location: 'Rambla Catalunya 76, 08008 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/hcc-regente-hotel-barcelona.webp',
+          location: 'Rambla Catalunya, 76 – Barcelona, 08008, Barcelona, Spain',
           prices: {
             double: 1155,
             single: 1465,
@@ -8622,13 +8640,14 @@ export const travelPackages = [
           departureDate: '12/08',
           packagePrice: 2310
         },
-        // Option 3: Catalonia Atenas Hotel 4★ - Standard Room
+        // Hotel 3: Catalonia Atenas Hotel 4★ - Standard Room
         {
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8641,8 +8660,9 @@ export const travelPackages = [
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8655,8 +8675,9 @@ export const travelPackages = [
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8669,8 +8690,9 @@ export const travelPackages = [
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8683,8 +8705,9 @@ export const travelPackages = [
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8697,8 +8720,9 @@ export const travelPackages = [
           name: 'Catalonia Atenas Hotel – Barcelona',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/catalonia-atenas-barcelona.webp',
-          location: 'Avenida Meridiana 151, 08026 Barcelona, Spain',
+          boardBasis: 'Bed and Breakfast',
+          image: '/images/destinations/catalonia-atenas-hotel-barcelona.webp',
+          location: 'Avenida Meridiana, 151, Sant Martí, 08026, Barcelona, Spain',
           prices: {
             double: 1195,
             single: 1589,
@@ -8769,6 +8793,7 @@ export const travelPackages = [
       airline: 'Cyprus Airways',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 10kg',
       coverImage: '/images/destinations/paris-hero.webp',
+      thumbnailImage: '/images/destinations/paris-disneyland.webp',
       flights: [
         {
           direction: 'Departure',
@@ -8793,7 +8818,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1199,
@@ -8808,7 +8833,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1199,
@@ -8824,7 +8849,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1145,
@@ -8839,7 +8864,7 @@ export const travelPackages = [
           name: 'VOCO Porte de Clichy – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/voco-porte-de-clichy-paris.webp',
+          image: '/images/destinations/paris-vorco-hotel.webp',
           location: 'VOCO Porte de Clichy, Paris, France',
           prices: {
             double: 1145,
@@ -8854,7 +8879,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1145,
@@ -8870,7 +8895,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1175,
@@ -8885,7 +8910,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1175,
@@ -8900,7 +8925,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1175,
@@ -8915,7 +8940,7 @@ export const travelPackages = [
           name: 'Novotel La Defense – Paris',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense-paris.webp',
+          image: '/images/destinations/paris-hotel.webp',
           location: 'Novotel La Defense, Paris, France',
           prices: {
             double: 1175,
@@ -8963,6 +8988,16 @@ export const travelPackages = [
         day4: '4η Μέρα: Παρίσι – Disneyland\n\nΠρωινό και αναχώρηση για τη μαγική Disneyland Paris.\n\nΜια μέρα αφιερωμένη σε μικρούς και μεγάλους που θέλουν να ζήσουν τον κόσμο της Disney από κοντά:\n\n• Συναντήσεις και φωτογραφίες με τον Μίκυ, τη Μίνι και όλη την παρέα\n• Haunted Mansion, βόλτα με το ατμόπλοιο γύρω από τη λίμνη\n• Εντυπωσιακές παρελάσεις με τους χαρακτήρες της Disney\n• Για τους πιο τολμηρούς: Space Mountain, Big Thunder Mountain, Indiana Jones\n• Εξερεύνηση του Νησιού των Πειρατών\n• Παραμυθένιες διαδρομές με την Κοιμωμένη, τον Πινόκιο, τον Πήτερ Παν, τη Χιονάτη & τους 7 Νάνους\n• Εμπειρία στο ολοκαίνουργιο World of Frozen, όπου η Άρεντελ ζωντανεύει με θεματικά σημεία, συναντήσεις με Έλσα & Άννα και μαγικές φωτογραφίες\n\nΑργά το απόγευμα επιστροφή στο ξενοδοχείο στο Παρίσι.\n\nΔιανυκτέρευση στο Παρίσι.',
         day5: '5η Μέρα: Παρίσι – Λάρνακα\n\nΠρόγευμα και ελεύθερος χρόνος ανάλογα με το πρόγραμμα της πτήσης.\nΜεταφορά στο αεροδρόμιο του Παρισιού και πτήση επιστροφής στη Λάρνακα, με τις καλύτερες αναμνήσεις από Παρίσι & Disneyland.'
       },
+      termsAndConditions: [
+        'Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.',
+        'Με την κράτηση των ταξιδιωτικών πακέτων δίνετε προκαταβολή 30% της αξίας των πακέτων και η εξόφληση τους γίνεται 21 μέρες περίπου πριν την αναχώρηση.',
+        'Ακύρωση συμμετοχής μέχρι 45 μέρες πριν την αναχώρηση, παρακράτηση ποσού 50.00 Ευρώ για λειτουργικά έξοδα.',
+        'Ακύρωση συμμετοχής μεταξύ [44] και [31] μέρες πριν την αναχώρηση, παρακράτηση 30% της αξίας του ταξιδιού.',
+        'Ακύρωση συμμετοχής μεταξύ [30] και [21] μέρες πριν την αναχώρηση, παρακράτηση 50% της αξίας του ταξιδιού.',
+        'Ακύρωση συμμετοχής 20 μέρες πριν την αναχώρηση, παρακράτηση όλου του ποσού.',
+        'Για τα μέσα ολικής ναύλωσης (charter), κρουαζιέρες , σκι, εκθέσεις, συνέδρια και παρεμφερείς διεθνείς εκδηλώσεις, τα ακυρωτικά φθάνουν μέχρι 100% της αξίας τους ασχέτως της ημερομηνίας γνωστοποίησης της ακύρωσης.'
+      ],
+      hotelStayNote: 'ΞΕΝΟΔΟΧΕΙΟ ΔΙΑΜΟΝΗΣ ΣΤΟ ΠΑΡΙΣΙ:\nNOVOTEL LA DEFENSE 4* – 04/07, 11/07, 25/07, 01/08, 08/08, 15/08, 22/08 και 29/08\nVOCO PORTE DE CLICHY 4* - 18/07 ( το ξενοδοχείο δεν διαθέτει τετράκλινα δωμάτια οπόταν θα δίνονται δύο δίκλινα δίπλα δίπλα).',
       gallery: [
         '/images/destinations/paris-hero.webp'
       ]
@@ -8988,7 +9023,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'LOT Polish Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/poland-classic-hero.webp',
+      coverImage: '/images/destinations/poland-clasic-hero.webp',
+      thumbnailImage: '/images/destinations/poland.webp',
       flights: [
         {
           direction: 'Departure',
@@ -9013,7 +9049,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1175,
@@ -9041,7 +9077,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1175,
@@ -9056,7 +9092,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9084,7 +9120,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9098,7 +9134,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9126,7 +9162,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9140,7 +9176,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9168,7 +9204,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9182,7 +9218,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9210,7 +9246,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9224,7 +9260,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9252,7 +9288,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9266,7 +9302,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9294,7 +9330,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9308,7 +9344,7 @@ export const travelPackages = [
           name: 'Łódź Hotel – Łódź',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/lodz-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Łódź Hotel, Łódź, Poland',
           prices: {
             double: 1205,
@@ -9336,7 +9372,7 @@ export const travelPackages = [
           name: 'Warsaw Hotel – Warsaw',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/warsaw-hotel.webp',
+          image: '/images/destinations/poland-classic-hotel.webp',
           location: 'Warsaw Hotel, Warsaw, Poland',
           prices: {
             double: 1205,
@@ -9387,7 +9423,7 @@ export const travelPackages = [
         day7: '7η Μέρα: Βαρσοβία – Λάρνακα\n\nΠρόγευμα και μεταφορά στο αεροδρόμιο της Βαρσοβίας.\nΠτήση επιστροφής στη Λάρνακα, με τις αποσκευές και τη μνήμη γεμάτες εμπειρίες από ένα ταξίδι στην κλασική Πολωνία: Łódź, Κρακοβία, Ζακοπάνε, Βαρσοβία.'
       },
       gallery: [
-        '/images/destinations/poland-classic-hero.webp'
+        '/images/destinations/poland-clasic-hero.webp'
       ]
     }
   },
@@ -15199,7 +15235,7 @@ export const travelPackages = [
   },
   {
     id: 55,
-    title: 'ΠΡΩΤΟΜΑΓΙΑ – ΘΕΣΣΑΛΟΝΙΚΗ',
+    title: 'ΠΡΩΤΟΜΑΓΙΑ – ΘΕΣΣΑΛΟΝΙΚΗ - 5 ΜΕΡΕΣ',
     destination: 'Greece',
     category: 'Easter Packages',
     price: 499,
@@ -16110,7 +16146,7 @@ export const travelPackages = [
           name: 'Galaxy Hotel – Patra',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/galaxy-patras.webp',
+          image: '/images/destinations/patra-hotel.webp',
           location: 'Patra, Greece',
           boardBasis: 'Bed & Breakfast',
           prices: {

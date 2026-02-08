@@ -34,6 +34,7 @@ function Footer() {
             >
               <span className="location-text">Where to find us</span>
             </a>
+            <p className="address-text">9 Anastasi Shioukri street, Limassol 3035, Cyprus</p>
             <a 
               href="https://maps.google.com/?q=Honeywell+Travel+9+Anastasi+Shioukri+street+Limassol+3035+Cyprus"
               target="_blank"

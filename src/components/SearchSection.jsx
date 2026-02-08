@@ -192,6 +192,12 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
                       key={cat.value}
                       to={`/tour-category/${slug}/`}
                       className="quick-nav-category-link"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                        if (document.documentElement) document.documentElement.scrollTop = 0
+                        if (document.body) document.body.scrollTop = 0
+                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                      }}
                     >
                       {cat.icon} {cat.label}
                     </Link>

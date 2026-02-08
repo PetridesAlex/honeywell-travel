@@ -25,7 +25,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '☀️',
       description: 'Perfect summer getaways for your vacation',
       color: '#FF6B35',
-      image: '/images/categories/summer.png'
+      image: '/images/categories/summer-package.webp'
     },
     {
       id: 'autumn-packages',
@@ -33,7 +33,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🍂',
       description: 'Experience the beauty of autumn destinations',
       color: '#D2691E',
-      image: '/images/categories/autumn.png'
+      image: '/images/categories/autumn-package.webp'
     },
     {
       id: 'winter-packages',
@@ -41,7 +41,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '❄️',
       description: 'Winter wonderlands and cozy escapes',
       color: '#4A90E2',
-      image: '/images/categories/winter.png'
+      image: '/images/categories/winter-pacakge.webp'
     },
     {
       id: 'ski-packages',
@@ -49,7 +49,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '⛷️',
       description: 'Hit the slopes at world-class ski resorts',
       color: '#87CEEB',
-      image: '/images/categories/ski.png'
+      image: '/images/categories/ski-pacakges.webp'
     },
     {
       id: 'christmas-packages',
@@ -57,7 +57,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎄',
       description: 'Magical Christmas holidays and celebrations',
       color: '#C41230',
-      image: '/images/categories/christmas.png'
+      image: '/images/categories/christmas-package.webp'
     },
     {
       id: 'easter-packages',
@@ -65,7 +65,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🐰',
       description: 'Easter breaks in beautiful locations',
       color: '#FFB6C1',
-      image: '/images/categories/easter.png'
+      image: '/images/categories/easter-package.webp'
     },
     {
       id: 'green-monday',
@@ -73,7 +73,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌿',
       description: 'Special Green Monday travel deals',
       color: '#228B22',
-      image: '/images/categories/green-monday.png'
+      image: '/images/categories/Green-monday-pacakges.webp'   
     },
     {
       id: 'cruises',
@@ -81,7 +81,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🚢',
       description: 'Luxury cruises to exotic destinations',
       color: '#1E90FF',
-      image: '/images/categories/cruises.png'
+      image: '/images/categories/cuises-package.webp'
     },
     {
       id: 'city-breaks',
@@ -89,7 +89,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🏙️',
       description: 'Urban adventures in vibrant cities',
       color: '#8B008B',
-      image: '/images/categories/city-breaks.png'
+      image: '/images/categories/city-breaks-package.webp'      
     },
     {
       id: 'exotic-packages',
@@ -97,7 +97,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌴',
       description: 'Discover exotic and tropical paradises',
       color: '#FF6347',
-      image: '/images/categories/exotic.png'
+      image: '/images/categories/exotic-packages.webp'
     },
     {
       id: 'music-sports',
@@ -105,7 +105,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎵',
       description: 'Festivals, concerts, and sporting events',
       color: '#9B59B6',
-      image: '/images/categories/music-sports.png'
+      image: '/images/categories/sports-music-package.webp'
     }
   ]
 
@@ -123,6 +123,20 @@ function TourPackagesSection({ sharedBackground }) {
               <Link
                 to={`/tour-category/${pkg.id}/`}
                 className="package-card"
+                onClick={(e) => {
+                  // Scroll immediately before navigation
+                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                  if (document.documentElement) {
+                    document.documentElement.scrollTop = 0
+                  }
+                  if (document.body) {
+                    document.body.scrollTop = 0
+                  }
+                  // Also scroll after a tiny delay to catch any async rendering
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                  }, 0)
+                }}
                 style={{ 
                   '--delay': `${index * 0.1}s`,
                   '--pkg-color': pkg.color,
@@ -130,18 +144,24 @@ function TourPackagesSection({ sharedBackground }) {
                 }}
               >
                 {pkg.image && (
-                  <div className="package-image-overlay">
-                    <img 
-                      src={pkg.image} 
-                      alt={pkg.title}
-                      className="package-image"
-                      loading="lazy"
-                    />
-                  </div>
+                  <>
+                    <div className="package-image-overlay">
+                      <img 
+                        src={pkg.image} 
+                        alt={pkg.title}
+                        className="package-image"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="package-card-details">
+                      <h3 className="package-card-title">
+                        <span className="package-brand">Honeywell Travel</span>
+                        <span className="package-type">{pkg.title}</span>
+                      </h3>
+                      <span className="package-arrow">Explore →</span>
+                    </div>
+                  </>
                 )}
-                <div className="package-arrow">
-                  <span>Explore →</span>
-                </div>
               </Link>
             </div>
           ))}

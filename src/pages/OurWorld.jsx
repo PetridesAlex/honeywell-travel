@@ -56,11 +56,16 @@ function OurWorld() {
   ]
 
   const travelImages = [
-    '/images/travel/travel1.webp',
-    '/images/travel/travel2.webp',
-    '/images/travel/travel3.webp',
-    '/images/travel/travel4.webp',
-    '/images/travel/travel5.webp'
+    '/images/destinations/iceland.webp',
+    '/images/destinations/japan.webp',
+    '/images/destinations/dubai-hero.webp',
+    '/images/destinations/australia.webp',
+    '/images/destinations/brazil.webp',
+    '/images/destinations/thailand.webp',
+    '/images/destinations/capetown.webp',
+    '/images/destinations/maldives.webp',
+    '/images/destinations/seychelles.webp',
+    '/images/destinations/northern-lights.webp'
   ]
 
   return (
@@ -130,7 +135,27 @@ function OurWorld() {
       {/* Awards Section */}
       <section className="section-awards">
         <div className="container">
-          <h2 className="section-heading">Awards & Recognition</h2>
+          <h2 className="section-heading">Award-Winning Travel Excellence</h2>
+          <div className="awards-intro">
+            <p className="awards-intro-text">
+              At Honeywell Travel, excellence is not a goal — it is our standard.
+            </p>
+            <p className="awards-intro-text">
+              We are proud to be recognized for delivering exceptional travel experiences, outstanding customer service, and tailor-made journeys worldwide.
+            </p>
+            <p className="awards-intro-text">
+              Our dedication to quality, reliability, and client satisfaction has earned us the trust of travelers, corporate clients, and institutions alike.
+            </p>
+            <p className="awards-intro-text">
+              Beyond leisure travel, we specialize in corporate travel management, business trips, conferences, and incentive programs, ensuring seamless planning, cost efficiency, and premium service for companies and organizations.
+            </p>
+            <p className="awards-intro-text">
+              Every award and recognition we receive reflects our passion for creating unforgettable journeys, successful business trips, and lifelong memories for our clients.
+            </p>
+            <p className="awards-intro-text awards-intro-final">
+              When you travel with Honeywell Travel, you travel with confidence.
+            </p>
+          </div>
           <div className="awards-grid">
             <div className="award-card">
               <div className="award-icon">🏆</div>
@@ -176,7 +201,7 @@ function OurWorld() {
               controls
               playsInline
               preload="metadata"
-              poster=""
+              poster="/images/destinations/honeywell-travel.webp"
               aria-label="Honeywell Travel Awards 2024"
             >
               Your browser does not support the video tag.
@@ -249,9 +274,12 @@ function OurWorld() {
               >
                 {travelImages.map((image, index) => (
                   <div key={index} className="slider-slide">
-                    <div className="slide-image-placeholder">
-                      Image {index + 1}
-                    </div>
+                    <img 
+                      src={image} 
+                      alt={`Travel destination ${index + 1}`}
+                      className="slide-image"
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>

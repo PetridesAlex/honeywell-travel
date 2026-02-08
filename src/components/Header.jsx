@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 import './Header.css'
 
 // Helper function to convert category name to URL-friendly slug
@@ -12,6 +14,7 @@ const categoryToSlug = (category) => {
 }
 
 function Header() {
+  const { t } = useTranslation()
   const [activeDropdown, setActiveDropdown] = useState(null) // desktop dropdowns
   const [closeTimeout, setCloseTimeout] = useState(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -93,6 +96,12 @@ function Header() {
                     key={index} 
                     to={`/tour-category/${categoryToSlug(item)}/`} 
                     className="dropdown-item"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                      if (document.documentElement) document.documentElement.scrollTop = 0
+                      if (document.body) document.body.scrollTop = 0
+                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                    }}
                   >
                     <span className="dropdown-item-icon">→</span>
                     {item}
@@ -108,7 +117,7 @@ function Header() {
             onMouseLeave={handleDropdownLeave}
           >
             <span className="nav-link dropdown-trigger">
-              Honeymoon
+              {t('header.honeymoon')}
               <span className="dropdown-arrow">▼</span>
             </span>
             {activeDropdown === 'honeymoon' && (
@@ -134,19 +143,21 @@ function Header() {
             )}
           </div>
 
-          <Link to="/our-services/" className="nav-link">Corporate</Link>
-          <Link to="/car-hire" className="nav-link">Car Hire</Link>
-          <Link to="/honeywell-travel-gallery/" className="nav-link">Gallery</Link>
-          <Link to="/our-blog/" className="nav-link">Blog</Link>
+          <Link to="/our-services/" className="nav-link">{t('header.corporate')}</Link>
+          <Link to="/car-hire" className="nav-link">{t('header.carHire')}</Link>
+          <Link to="/honeywell-travel-gallery/" className="nav-link">{t('header.gallery')}</Link>
+          <Link to="/our-blog/" className="nav-link">{t('header.blog')}</Link>
           <a 
             href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
             className="nav-link" 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Insurance
+            {t('header.insurance')}
           </a>
-          <Link to="/contact/" className="nav-link">Contact</Link>
+          <Link to="/contact/" className="nav-link">{t('header.contact')}</Link>
+          
+          <LanguageSwitcher />
           
           <div className="social-icons">
             <a 
@@ -187,14 +198,14 @@ function Header() {
 
       {isMobileMenuOpen && (
         <div className="mobile-menu">
-          <Link to="/ourworld/" className="mobile-link" onClick={closeMobileMenu}>Our World</Link>
+          <Link to="/ourworld/" className="mobile-link" onClick={closeMobileMenu}>{t('header.ourWorld')}</Link>
           
           <div className="mobile-dropdown">
             <button 
               className="mobile-link mobile-dropdown-trigger" 
               onClick={() => toggleMobileDropdown('holiday')}
             >
-              Holiday Types
+              {t('header.holidayTypes')}
               <span className="mobile-dropdown-arrow">{activeMobileDropdown === 'holiday' ? '▲' : '▼'}</span>
             </button>
             {activeMobileDropdown === 'holiday' && (
@@ -204,7 +215,13 @@ function Header() {
                     key={index} 
                     to={`/tour-category/${categoryToSlug(item)}/`} 
                     className="mobile-dropdown-item"
-                    onClick={closeMobileMenu}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                      if (document.documentElement) document.documentElement.scrollTop = 0
+                      if (document.body) document.body.scrollTop = 0
+                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                      closeMobileMenu()
+                    }}
                   >
                     <span className="dropdown-item-icon">→</span>
                     {item}
@@ -219,7 +236,7 @@ function Header() {
               className="mobile-link mobile-dropdown-trigger" 
               onClick={() => toggleMobileDropdown('honeymoon')}
             >
-              Honeymoon
+              {t('header.honeymoon')}
               <span className="mobile-dropdown-arrow">{activeMobileDropdown === 'honeymoon' ? '▲' : '▼'}</span>
             </button>
             {activeMobileDropdown === 'honeymoon' && (
@@ -245,10 +262,10 @@ function Header() {
             )}
           </div>
 
-          <Link to="/our-services/" className="mobile-link" onClick={closeMobileMenu}>Corporate</Link>
-          <Link to="/car-hire" className="mobile-link" onClick={closeMobileMenu}>Car Hire</Link>
-          <Link to="/honeywell-travel-gallery/" className="mobile-link" onClick={closeMobileMenu}>Gallery</Link>
-          <Link to="/our-blog/" className="mobile-link" onClick={closeMobileMenu}>Blog</Link>
+          <Link to="/our-services/" className="mobile-link" onClick={closeMobileMenu}>{t('header.corporate')}</Link>
+          <Link to="/car-hire" className="mobile-link" onClick={closeMobileMenu}>{t('header.carHire')}</Link>
+          <Link to="/honeywell-travel-gallery/" className="mobile-link" onClick={closeMobileMenu}>{t('header.gallery')}</Link>
+          <Link to="/our-blog/" className="mobile-link" onClick={closeMobileMenu}>{t('header.blog')}</Link>
           <a 
             href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
             className="mobile-link" 
@@ -256,9 +273,11 @@ function Header() {
             rel="noopener noreferrer"
             onClick={closeMobileMenu}
           >
-            Insurance
+            {t('header.insurance')}
           </a>
-          <Link to="/contact/" className="mobile-link" onClick={closeMobileMenu}>Contact</Link>
+          <Link to="/contact/" className="mobile-link" onClick={closeMobileMenu}>{t('header.contact')}</Link>
+          
+          <LanguageSwitcher />
           
           <div className="mobile-social-icons">
             <a 

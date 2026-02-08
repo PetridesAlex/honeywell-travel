@@ -69,10 +69,26 @@
 @media (max-width: 768px) {
   .destinations-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .destinations-container {
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .destinations-section {
+    padding: 2.5rem 0;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .destinations-container {
+    padding: 0 0.75rem;
   }
 }
 

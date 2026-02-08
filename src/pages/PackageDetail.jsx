@@ -1,11 +1,16 @@
 import { useParams, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getPackageById } from '../data/packages'
+import { getTranslatedPackageTitle } from '../utils/packageTranslations'
+import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
 import './PackageDetail.css'
 
 function PackageDetail() {
   const { id } = useParams()
+  const { t, i18n } = useTranslation()
   const pkg = getPackageById(id)
+  const translatedTitle = pkg ? getTranslatedPackageTitle(pkg.id, pkg.title, i18n) : ''
 
   // From price = lowest double room price per person across all hotels
   const getCheapestPrice = () => {
@@ -35,8 +40,49 @@ function PackageDetail() {
     )
   }
 
+  const packageUrl = `https://www.honeywelltravel.com.cy/packages/${pkg.id}`
+  const packageImage = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0] || 'https://www.honeywelltravel.com.cy/images/og-image.jpg'
+  const fullImageUrl = packageImage.startsWith('http') ? packageImage : `https://www.honeywelltravel.com.cy${packageImage}`
+  const packageDescription = pkg.longDescription || pkg.description || `Book ${translatedTitle} - ${pkg.duration} from €${displayPrice.toLocaleString()}. ${pkg.destination} travel package with Honeywell Travel.`
+
+  // Structured data for package
+  const packageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": translatedTitle,
+    "description": packageDescription,
+    "image": fullImageUrl,
+    "url": packageUrl,
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Honeywell Travel",
+      "url": "https://www.honeywelltravel.com.cy"
+    },
+    "itinerary": {
+      "@type": "Place",
+      "name": pkg.destination
+    },
+    "duration": pkg.duration,
+    "offers": {
+      "@type": "Offer",
+      "price": displayPrice,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": packageUrl
+    }
+  }
+
   return (
     <div className="package-detail-page">
+      <SEO 
+        title={`${translatedTitle} - ${pkg.duration} | Honeywell Travel`}
+        description={packageDescription}
+        keywords={`${pkg.destination}, ${pkg.category}, Travel Package, Holiday Package, ${pkg.duration}, Honeywell Travel`}
+        image={fullImageUrl}
+        url={packageUrl}
+        type="product"
+        structuredData={packageStructuredData}
+      />
       <RevealOnScroll direction="up">
       <div className="package-detail-container">
         <Link to="/packages" className="back-link">← Back to Packages</Link>
@@ -69,7 +115,7 @@ function PackageDetail() {
               {pkg.featured && <span className="badge featured">⭐ Featured</span>}
             </div>
 
-            <h1>{pkg.title}</h1>
+            <h1>{translatedTitle}</h1>
             
             <p className="package-description">{pkg.description}</p>
 
@@ -85,7 +131,16 @@ function PackageDetail() {
             </div>
 
             <div className="package-actions">
-              <Link to={`/packages/${pkg.id}/details`} className="view-travel-package-button">
+              <Link 
+                to={`/packages/${pkg.id}/details`} 
+                className="view-travel-package-button"
+                onClick={() => {
+                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                  if (document.documentElement) document.documentElement.scrollTop = 0
+                  if (document.body) document.body.scrollTop = 0
+                  setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                }}
+              >
                 View Travel Package
               </Link>
             </div>

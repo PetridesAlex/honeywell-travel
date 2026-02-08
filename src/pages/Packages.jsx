@@ -51,7 +51,6 @@ function Packages() {
   const [maxPrice, setMaxPrice] = useState('')
   const [departureMonth, setDepartureMonth] = useState('Any')
   const [travelType, setTravelType] = useState('Any')
-  const [showFilters, setShowFilters] = useState(category === 'Any')
 
   const categories = [
     'Any',
@@ -129,15 +128,9 @@ function Packages() {
       const categoryFromSlug = slugToCategory(slug.replace(/\/$/, ''))
       if (categoryFromSlug) {
         setCategory(categoryFromSlug)
-        setShowFilters(false) // Hide filters when category is selected
       }
     }
   }, [slug])
-
-  // Update showFilters when category changes
-  useEffect(() => {
-    setShowFilters(category === 'Any')
-  }, [category])
 
   useEffect(() => {
     let filtered = getPackagesByFilter(category, destination)
@@ -199,14 +192,9 @@ function Packages() {
       {/* Hero Section */}
       <div className="packages-hero">
         <div className="packages-hero-content">
-          <h1>
-            {['Search', 'Your', 'Package'].map((word, index) => (
-              <span key={index} className="hero-word" style={{ animationDelay: `${index * 0.2}s` }}>
-                {word}
-                {index < 2 && <span> </span>}
-              </span>
-            ))}
-          </h1>
+          <p className="packages-hero-label">Tour Packages</p>
+          <h1 className="packages-hero-title">Find Your Perfect Trip</h1>
+          <p className="packages-hero-subtitle">Browse by destination and season</p>
         </div>
       </div>
 
@@ -229,152 +217,14 @@ function Packages() {
         </div>
       </div>
 
+      {/* Decorative Separator */}
+      <div className="packages-separator">
+        <div className="separator-line"></div>
+        <div className="separator-icon">✈️</div>
+        <div className="separator-line"></div>
+      </div>
+
       <div className="packages-container">
-        {/* Filters Section - Only show when category is Any or when expanded */}
-        {showFilters && (
-          <div className="packages-filters-section">
-            <div className="filters-header">
-              <h2 className="filters-title">
-                <span className="filters-icon">🔍</span>
-                Find Your Perfect Trip
-              </h2>
-              <p className="filters-subtitle">Use our advanced filters to narrow down your search</p>
-            </div>
-            <div className="packages-filters">
-            <div className="filter-row">
-              <div className="filter-group">
-                <label htmlFor="filter-category">
-                  <span className="filter-icon">📂</span>
-                  Category
-                </label>
-                <select 
-                  id="filter-category"
-                  value={category}
-                  onChange={(e) => {
-                    const nextCategory = e.target.value
-                    setCategory(nextCategory)
-                    applyFilters(nextCategory, destination)
-                  }}
-                  className="filter-select"
-                >
-                  {categories.map((cat) => (
-                    <option key={cat} value={cat}>{cat}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="filter-destination">
-                  <span className="filter-icon">🌍</span>
-                  Destination
-                </label>
-                <select 
-                  id="filter-destination"
-                  value={destination}
-                  onChange={(e) => {
-                    const nextDestination = e.target.value
-                    setDestination(nextDestination)
-                    applyFilters(category, nextDestination)
-                  }}
-                  className="filter-select"
-                >
-                  {destinations.map((dest) => (
-                    <option key={dest} value={dest}>{dest}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="filter-travel-type">
-                  <span className="filter-icon">👥</span>
-                  Travel Type
-                </label>
-                <select 
-                  id="filter-travel-type"
-                  value={travelType}
-                  onChange={(e) => setTravelType(e.target.value)}
-                  className="filter-select"
-                >
-                  {travelTypes.map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="filter-row">
-              <div className="filter-group price-filter-group">
-                <label>
-                  <span className="filter-icon">💰</span>
-                  Price Range (€)
-                </label>
-                <div className="price-inputs">
-                  <input
-                    type="number"
-                    placeholder={`Min: €${Math.round(priceRange.min)}`}
-                    value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
-                    className="price-input"
-                    min={priceRange.min}
-                    max={priceRange.max}
-                  />
-                  <span className="price-separator">-</span>
-                  <input
-                    type="number"
-                    placeholder={`Max: €${Math.round(priceRange.max)}`}
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-                    className="price-input"
-                    min={minPrice || priceRange.min}
-                    max={priceRange.max}
-                  />
-                </div>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="filter-month">
-                  <span className="filter-icon">📅</span>
-                  Departure Month
-                </label>
-                <select 
-                  id="filter-month"
-                  value={departureMonth}
-                  onChange={(e) => setDepartureMonth(e.target.value)}
-                  className="filter-select"
-                >
-                  {months.map((month) => (
-                    <option key={month} value={month}>{month}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="filter-actions">
-                <button 
-                  className="clear-filters-btn-small"
-                  onClick={clearAllFilters}
-                  type="button"
-                >
-                  Clear All
-                </button>
-              </div>
-            </div>
-            </div>
-          </div>
-        )}
-
-        {/* Show expand filters button when category is selected */}
-        {!showFilters && category !== 'Any' && (
-          <div className="expand-filters-wrapper">
-            <button 
-              className="expand-filters-btn"
-              onClick={() => setShowFilters(true)}
-            >
-              <span className="expand-icon">🔍</span>
-              <span>Show Advanced Filters</span>
-            </button>
-          </div>
-        )}
-
         {/* Results Section */}
         <div className="packages-results">
           <div className="results-header">
@@ -458,29 +308,6 @@ function Packages() {
               </div>
             )}
           </div>
-
-          {/* Browse Other Categories Section - Only show when a specific category is selected */}
-          {category !== 'Any' && (
-            <div className="browse-other-categories">
-              <h3 className="browse-title">Browse Other Categories</h3>
-              <div className="other-categories-grid">
-                {categories.filter((cat) => cat !== 'Any' && cat !== category).slice(0, 6).map((cat) => {
-                  const categoryToSlug = (categoryName) => {
-                    return categoryName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and').replace(/[^a-z0-9-]/g, '')
-                  }
-                  return (
-                    <a
-                      key={cat}
-                      href={`/tour-category/${categoryToSlug(cat)}/`}
-                      className="other-category-link"
-                    >
-                      {cat}
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
-          )}
 
           {filteredPackages.length > 0 ? (
             <div className="packages-grid">

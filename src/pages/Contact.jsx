@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
 import { sendContactForm } from '../utils/emailjsClient'
 import './Contact.css'
@@ -47,7 +48,13 @@ function Contact() {
   }
 
   return (
-    <div className="contact-page">
+    <>
+      <SEO 
+        title="Contact Us - Honeywell Travel | Limassol & Nicosia, Cyprus"
+        description="Get in touch with Honeywell Travel. Visit our offices in Limassol or Nicosia, call +357 25828848, or email info@honeywelltravel.com.cy. We're here to help plan your perfect getaway."
+        keywords="Contact Honeywell Travel, Travel Agency Limassol, Travel Agency Nicosia, Cyprus Travel Contact"
+      />
+      <div className="contact-page">
       <div className="contact-hero">
         <div className="contact-hero-content">
           <h1>Contact Us</h1>
@@ -80,7 +87,7 @@ function Contact() {
               <div className="contact-icon">📞</div>
             </div>
             <h3>Phone</h3>
-            <p>+357 2582 8848</p>
+            <p>+357 25828848</p>
             <a href="tel:+35725828848" className="contact-link-btn">
               Call Now →
             </a>
@@ -188,6 +195,7 @@ function Contact() {
       </div>
       </RevealOnScroll>
     </div>
+    </>
   )
 }
 

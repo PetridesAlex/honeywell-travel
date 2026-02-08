@@ -298,6 +298,36 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
+.awards-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.awards-intro-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.awards-intro-text:first-child {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+}
+
+.awards-intro-final {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #C41230;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
 .section-subtitle {
   font-size: 1.25rem;
   color: #6b7280;
@@ -394,6 +424,7 @@
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #0f3460;
+  position: relative;
 }
 
 .video-player {
@@ -401,6 +432,9 @@
   height: auto;
   display: block;
   vertical-align: middle;
+  background: #1a1a2e;
+  min-height: 400px;
+  object-fit: cover;
 }
 
 /* Team Section */
@@ -624,16 +658,30 @@
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  aspect-ratio: 16 / 9;
+  background: #0f3460;
 }
 
 .slider-track {
   display: flex;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
 }
 
 .slider-slide {
   min-width: 100%;
+  width: 100%;
   position: relative;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .slide-image-placeholder {
@@ -855,6 +903,27 @@
     padding: 4rem 0;
   }
 
+  .awards-intro {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .awards-intro-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .awards-intro-text:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .awards-intro-final {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
   .awards-grid,
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -867,5 +936,149 @@
 
   .contact-form {
     padding: 2rem 1.5rem;
+  }
+  
+  .video-wrapper {
+    border-radius: 12px;
+  }
+  
+  .video-player {
+    min-height: 300px;
+  }
+  
+  .slider-container {
+    border-radius: 12px;
+  }
+  
+  .slider-controls {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-hero {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .section-introduction,
+  .section-awards,
+  .section-video,
+  .section-team,
+  .section-blog,
+  .section-gallery-traveling,
+  .section-contact-form {
+    padding: 3rem 0;
+  }
+
+  .awards-intro {
+    padding: 0 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .awards-intro-text {
+    font-size: 0.95rem;
+  }
+
+  .awards-intro-text:first-child {
+    font-size: 1.05rem;
+  }
+
+  .awards-intro-final {
+    font-size: 1rem;
+  }
+
+  .awards-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .video-player {
+    min-height: 250px;
+  }
+  
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .hero-scroll-btn {
+    bottom: 4rem;
+    padding: 0.75rem 1.5rem 0.9rem;
+    font-size: 0.85rem;
+  }
+  
+  .introduction-content {
+    gap: 1.5rem;
+  }
+  
+  .content-placeholder {
+    font-size: 0.95rem;
+  }
+  
+  .award-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .award-icon {
+    font-size: 3rem;
+  }
+  
+  .award-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .team-card {
+    border-radius: 16px;
+  }
+  
+  .team-info {
+    padding: 1.5rem 1rem;
+  }
+  
+  .team-name {
+    font-size: 1.25rem;
+  }
+  
+  .blog-card {
+    border-radius: 16px;
+  }
+  
+  .blog-content {
+    padding: 1.5rem;
+  }
+  
+  .blog-title {
+    font-size: 1.25rem;
   }
 }
