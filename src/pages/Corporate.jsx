@@ -1,7 +1,57 @@
+import { useState } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
+import { sendContactForm } from '../utils/emailjsClient'
 import './Corporate.css'
 
 function Corporate() {
+  const [showQuoteModal, setShowQuoteModal] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    companyName: '',
+    contactNumber: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmitQuote = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const result = await sendContactForm({
+        title: 'Corporate Travel Quote Request',
+        name: formData.name,
+        email: '', // Not required for quote
+        phone: formData.contactNumber,
+        message: `Name: ${formData.name}\nCompany: ${formData.companyName}\nContact: ${formData.contactNumber}\n\nMessage:\n${formData.message}`
+      })
+
+      if (result.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', companyName: '', contactNumber: '', message: '' })
+        setTimeout(() => {
+          setShowQuoteModal(false)
+          setSubmitStatus(null)
+        }, 2000)
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   const services = [
     'Air tickets',
     'Accommodation',
@@ -22,11 +72,133 @@ function Corporate() {
     <div className="corporate-page">
       {/* Hero Section */}
       <section className="corporate-hero">
+        <video 
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/images/corporate/background.webp"
+        >
+          <source src="/videos/corporate.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>CORPORATE TRIPS</h1>
           <p>Professional Business Travel Management Solutions</p>
+          <button 
+            className="hero-cta-button"
+            onClick={() => setShowQuoteModal(true)}
+          >
+            Get Quote
+          </button>
         </div>
       </section>
+
+      {/* Quote Modal */}
+      {showQuoteModal && (
+        <div className="quote-modal-overlay" onClick={() => !isSubmitting && setShowQuoteModal(false)}>
+          <div className="quote-modal" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="quote-modal-close"
+              onClick={() => !isSubmitting && setShowQuoteModal(false)}
+              disabled={isSubmitting}
+            >
+              ×
+            </button>
+            <h2>Request a Corporate Travel Quote</h2>
+            <p className="quote-modal-subtitle">Fill out the form below and we'll get back to you with a customized quote</p>
+            
+            <form onSubmit={handleSubmitQuote} className="quote-form">
+              <div className="form-group">
+                <label htmlFor="name">Your Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="Enter your full name"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="companyName">Company Name *</label>
+                <input
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="Enter your company name"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="contactNumber">Contact Number *</label>
+                <input
+                  type="tel"
+                  id="contactNumber"
+                  name="contactNumber"
+                  value={formData.contactNumber}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="+357 XX XXX XXX"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Tell us about your travel needs *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows="5"
+                  placeholder="Please provide details about your corporate travel requirements, number of travelers, destinations, dates, and any specific needs..."
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              {submitStatus === 'success' && (
+                <div className="form-success">
+                  ✓ Thank you! We'll contact you soon with your quote.
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="form-error">
+                  ✗ Something went wrong. Please try again or contact us directly.
+                </div>
+              )}
+
+              <div className="form-actions">
+                <button 
+                  type="button" 
+                  className="form-cancel"
+                  onClick={() => setShowQuoteModal(false)}
+                  disabled={isSubmitting}
+                >
+                  Cancel
+                </button>
+                <button 
+                  type="submit" 
+                  className="form-submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Request Quote'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       <RevealOnScroll direction="up">
       {/* CWT Information Section */}
@@ -64,7 +236,101 @@ function Corporate() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
+      {/* Exotic Destinations Showcase */}
+      <RevealOnScroll direction="up">
+      <section className="exotic-destinations-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>World-Class Destinations</h2>
+            <p>From exotic paradises to business hubs, we manage corporate travel to destinations worldwide</p>
+          </div>
+          <div className="destinations-grid">
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/maldives.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Maldives</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/seychelles.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Seychelles</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/dubai-hero.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Dubai</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/japan.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Japan</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/iceland.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Iceland</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/brazil.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Brazil</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/dubai/south-africa-safari.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">South Africa</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/thailand.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Thailand</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/dubai/canada.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Canada</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/dubai/sri-lanka.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Sri Lanka</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/China.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">China</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/destinations/norwegian-fjords.png)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">Norway</div>
+              </div>
+            </div>
+            <div className="destination-card">
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/dubai/new-york.webp)' }}>
+                <div className="destination-overlay"></div>
+                <div className="destination-label">New York</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </RevealOnScroll>
+
+      <RevealOnScroll direction="up">
       {/* What We Do Section */}
       <section className="what-we-do-section">
         <div className="container">
