@@ -11,6 +11,15 @@ function BookOnline() {
   const [endDate, setEndDate] = useState('')
   const [hasSearched, setHasSearched] = useState(false)
 
+  // Debug: Log state on every render
+  console.log('BookOnline render:', {
+    selectedCategory,
+    selectedType,
+    startDate,
+    endDate,
+    hasSearched
+  })
+
   const categories = [
     'Destinations',
     'Summer Packages',
@@ -55,8 +64,8 @@ function BookOnline() {
       }
     }
 
-    // Filter by date range
-    if (startDate || endDate) {
+    // Filter by date range - ONLY if dates are actually selected
+    if ((startDate && startDate !== '') || (endDate && endDate !== '')) {
       // Check if package has departure date information
       if (pkg.details?.departureDate) {
         const pkgDates = pkg.details.departureDate
@@ -113,6 +122,26 @@ function BookOnline() {
 
   const handleSearch = (e) => {
     e.preventDefault()
+    
+    // Debug logging
+    console.log('Search initiated:', {
+      selectedCategory,
+      selectedType,
+      startDate,
+      endDate,
+      filteredPackagesCount: filteredPackages.length,
+      totalPackages: travelPackages.length,
+      summerPackages: travelPackages.filter(p => p.category === 'Summer Packages').length
+    })
+    
+    if (filteredPackages.length > 0) {
+      console.log('First 3 filtered packages:', filteredPackages.slice(0, 3).map(p => ({
+        id: p.id,
+        title: p.title,
+        category: p.category
+      })))
+    }
+    
     setHasSearched(true)
     
     // Scroll to results section after a brief delay to allow render
