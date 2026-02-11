@@ -12,17 +12,6 @@ function BookOnline() {
 
   // Check if any filters are active
   const hasActiveFilters = selectedCategory || selectedType !== 'Any Type' || startDate || endDate
-  
-  // Debug logging
-  console.log('Component state:', {
-    selectedCategory,
-    selectedType,
-    startDate,
-    endDate,
-    hasActiveFilters,
-    filteredPackagesCount: filteredPackages.length,
-    totalPackages: travelPackages.length
-  })
 
   const categories = [
     'Destinations',
@@ -59,11 +48,6 @@ function BookOnline() {
       if (pkg.category !== selectedCategory) {
         matches = false
       }
-    }
-    
-    // Debug log for Summer Packages
-    if (selectedCategory === 'Summer Packages' && pkg.category === 'Summer Packages') {
-      console.log('Summer Package matched:', pkg.title, pkg.id)
     }
 
     // Filter by type (if package has type field)
@@ -128,6 +112,11 @@ function BookOnline() {
     
     return matches
   })
+
+  // Debug: Log filtered results (only when filters are active)
+  if (hasActiveFilters && selectedCategory) {
+    console.log(`Filtered packages for "${selectedCategory}":`, filteredPackages.length)
+  }
 
   // Auto-scroll to results when filters change and there are active filters
   useEffect(() => {
