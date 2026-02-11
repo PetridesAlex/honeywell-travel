@@ -486,6 +486,7 @@
 @media (max-width: 768px) {
   .search-section {
     padding: 3rem 0;
+    background: transparent;
     background-attachment: scroll;
     width: 100%;
     overflow-x: hidden;
@@ -798,6 +799,7 @@
 
 @media (max-width: 480px) {
   .search-section {
+    background: transparent;
     width: 100%;
     overflow-x: hidden;
   }

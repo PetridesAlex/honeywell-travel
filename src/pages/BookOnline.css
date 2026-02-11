@@ -97,6 +97,8 @@
 .booking-form .form-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
   margin-top: 0.25rem;
   padding-top: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
@@ -216,6 +218,35 @@
   box-shadow: 0 4px 15px rgba(227, 30, 36, 0.35);
 }
 
+.booking-form .clear-btn {
+  width: auto;
+  padding: 1rem 2.25rem;
+  background: #ffffff;
+  color: #C41230;
+  border: 2px solid #C41230;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn:hover {
+  background: #C41230;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(196, 18, 48, 0.3);
+}
+
+.clear-btn:active {
+  transform: translateY(-1px);
+}
+
 .packages-results {
   padding: 4rem 0;
   background: white;
@@ -239,12 +270,42 @@
   color: #C41230;
 }
 
+.results-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 .results-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.active-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(196, 18, 48, 0.25);
+  transition: all 0.3s ease;
+}
+
+.filter-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 18, 48, 0.35);
 }
 
 .no-results {
@@ -400,5 +461,26 @@
 
   .results-title {
     font-size: 2rem;
+  }
+
+  .active-filters {
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .filter-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  .booking-form .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .booking-form .search-btn,
+  .booking-form .clear-btn {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
   }
 }

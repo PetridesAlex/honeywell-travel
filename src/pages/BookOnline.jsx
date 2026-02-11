@@ -6,7 +6,7 @@ import './BookOnline.css'
 
 function BookOnline() {
   const [selectedCategory, setSelectedCategory] = useState('')
-  const [selectedType, setSelectedType] = useState('')
+  const [selectedType, setSelectedType] = useState('Any Type')
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [hasSearched, setHasSearched] = useState(false)
@@ -37,16 +37,76 @@ function BookOnline() {
     'Luxury'
   ]
 
-  // Filter packages based on selections
+  // Filter packages based on selections  
   const filteredPackages = travelPackages.filter(pkg => {
     let matches = true
 
-    if (selectedCategory && pkg.category !== selectedCategory) {
-      matches = false
+    // Filter by category
+    if (selectedCategory && selectedCategory !== '') {
+      if (pkg.category !== selectedCategory) {
+        matches = false
+      }
     }
 
-    // Note: Type filtering would need to be added to package data structure
-    // For now, we'll just filter by category and dates if dates are set
+    // Filter by type (if package has type field)
+    if (selectedType && selectedType !== 'Any Type' && selectedType !== '') {
+      if (pkg.type && pkg.type !== selectedType) {
+        matches = false
+      }
+    }
+
+    // Filter by date range
+    if (startDate || endDate) {
+      // Check if package has departure date information
+      if (pkg.details?.departureDate) {
+        const pkgDates = pkg.details.departureDate
+        
+        // Handle multiple departure dates (format: 'DD/MM, DD/MM, ...' or single 'DD/MM')
+        const dateStrings = pkgDates.split(',').map(d => d.trim())
+        const currentYear = new Date().getFullYear()
+        
+        // Parse all departure dates
+        const departureDates = dateStrings.map(dateStr => {
+          const [day, month] = dateStr.split('/').map(num => parseInt(num))
+          return new Date(currentYear, month - 1, day)
+        }).filter(date => !isNaN(date.getTime())) // Filter out invalid dates
+        
+        if (departureDates.length === 0) {
+          // If no valid dates could be parsed, exclude package
+          matches = false
+        } else {
+          // Check if ANY of the departure dates fall within the selected range
+          const hasMatchingDate = departureDates.some(packageDate => {
+            let dateMatches = true
+            
+            // If start date is selected, check if package date is on or after start date
+            if (startDate) {
+              const selectedStartDate = new Date(startDate)
+              if (packageDate < selectedStartDate) {
+                dateMatches = false
+              }
+            }
+            
+            // If end date is selected, check if package date is on or before end date
+            if (endDate) {
+              const selectedEndDate = new Date(endDate)
+              if (packageDate > selectedEndDate) {
+                dateMatches = false
+              }
+            }
+            
+            return dateMatches
+          })
+          
+          if (!hasMatchingDate) {
+            matches = false
+          }
+        }
+      } else {
+        // If dates are selected but package has no departure date, exclude it
+        matches = false
+      }
+    }
     
     return matches
   })
@@ -54,6 +114,22 @@ function BookOnline() {
   const handleSearch = (e) => {
     e.preventDefault()
     setHasSearched(true)
+    
+    // Scroll to results section after a brief delay to allow render
+    setTimeout(() => {
+      const resultsSection = document.querySelector('.packages-results')
+      if (resultsSection) {
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }, 100)
+  }
+
+  const handleClearFilters = () => {
+    setSelectedCategory('')
+    setSelectedType('Any Type')
+    setStartDate('')
+    setEndDate('')
+    setHasSearched(false)
   }
 
   return (
@@ -125,6 +201,15 @@ function BookOnline() {
               <button type="submit" className="search-btn">
                 Search Packages
               </button>
+              {(selectedCategory || selectedType !== 'Any Type' || startDate || endDate) && (
+                <button 
+                  type="button" 
+                  className="clear-btn"
+                  onClick={handleClearFilters}
+                >
+                  Clear Filters
+                </button>
+              )}
             </div>
           </form>
         </div>
@@ -134,13 +219,23 @@ function BookOnline() {
         <RevealOnScroll direction="up">
           <section className="packages-results">
             <div className="container">
-              <h2 className="results-title">
-                {filteredPackages.length} travel packages available
-              </h2>
+              <div className="results-header">
+                <h2 className="results-title">
+                  {filteredPackages.length} travel package{filteredPackages.length !== 1 ? 's' : ''} found
+                </h2>
+                {(selectedCategory || selectedType !== 'Any Type' || startDate || endDate) && (
+                  <div className="active-filters">
+                    {selectedCategory && <span className="filter-tag">Category: {selectedCategory}</span>}
+                    {selectedType && selectedType !== 'Any Type' && <span className="filter-tag">Type: {selectedType}</span>}
+                    {startDate && <span className="filter-tag">From: {new Date(startDate).toLocaleDateString()}</span>}
+                    {endDate && <span className="filter-tag">To: {new Date(endDate).toLocaleDateString()}</span>}
+                  </div>
+                )}
+              </div>
 
               {filteredPackages.length === 0 ? (
                 <div className="no-results">
-                  <p>No packages found matching your criteria.</p>
+                  <p>😔 No packages found matching your criteria.</p>
                   <p>Try adjusting your filters to see more options.</p>
                 </div>
               ) : (
