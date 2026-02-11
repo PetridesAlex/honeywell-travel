@@ -647,21 +647,23 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   filter: none;
   -webkit-filter: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  min-width: 100%;
-  min-height: 100%;
+  /* Ensure crisp image rendering - no blur */
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: bicubic;
+  /* Allow clicks to pass through to parent card */
+  pointer-events: none;
 }
 
 .destination-image-card:hover .destination-image-bg {
@@ -682,6 +684,8 @@
   z-index: 2;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   letter-spacing: 0.01em;
+  /* Allow clicks to pass through to parent card */
+  pointer-events: none;
 }
 
 .destination-image-card:hover .destination-image-label {
@@ -703,6 +707,8 @@
   z-index: 3;
   box-shadow: 0 2px 8px rgba(196, 18, 48, 0.4);
   animation: checkPopIn 0.3s ease-out;
+  /* Allow clicks to pass through to parent card */
+  pointer-events: none;
 }
 
 .check-icon {
@@ -710,6 +716,8 @@
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
+  /* Allow clicks to pass through to parent card */
+  pointer-events: none;
 }
 
 @keyframes checkPopIn {
@@ -742,6 +750,8 @@
     aspect-ratio: 4 / 3;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .destination-image-bg {
@@ -763,9 +773,7 @@
     -webkit-filter: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+    pointer-events: none;
   }
 
   .gallery-title {
@@ -774,12 +782,17 @@
   }
 
   .destination-image-label {
-    font-size: 1rem;
-    padding: 1rem 0.75rem 0.75rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 0.5rem 0.5rem;
+    pointer-events: none;
   }
 
   .destination-image-card:hover .destination-image-label {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .destination-image-card:active {
+    transform: scale(0.98);
   }
 }
 
@@ -821,6 +834,9 @@
     aspect-ratio: 4 / 3;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   .destination-images-grid {
@@ -847,10 +863,17 @@
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
+    pointer-events: none;
+  }
+
+  .destination-image-label {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.25rem 0.25rem;
+    pointer-events: none;
+  }
+
+  .gallery-title {
+    font-size: 1.35rem;
   }
 }
 
@@ -860,5 +883,16 @@
     background-size: cover !important;
     -webkit-background-size: cover !important;
     background-position: center center !important;
+    pointer-events: none;
+  }
+
+  .destination-image-card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(227, 30, 36, 0.2);
+    touch-action: manipulation;
+  }
+  
+  .destination-images-grid {
+    gap: 0.5rem;
   }
 }

@@ -22,8 +22,12 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
   const selectedBackground = sharedBackground || '/images/destinations/search-where-to-travel.webp'
   
   const handleBackgroundChange = (bgUrl) => {
+    // Update the shared background state - this will update the background for all sections
     if (setSharedBackground) {
       setSharedBackground(bgUrl)
+    } else {
+      // Fallback: if setSharedBackground is not provided, log for debugging
+      console.warn('setSharedBackground function not provided')
     }
   }
 
@@ -216,12 +220,18 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
               <div
                 key={bg.id}
                 className={`destination-image-card ${selectedBackground === bg.url ? 'selected' : ''}`}
-                onClick={() => handleBackgroundChange(bg.url)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  handleBackgroundChange(bg.url)
+                }}
                 role="button"
                 tabIndex={0}
+                aria-label={`Set ${bg.name} as background`}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault()
+                    e.stopPropagation()
                     handleBackgroundChange(bg.url)
                   }
                 }}
