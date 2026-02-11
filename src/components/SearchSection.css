@@ -487,10 +487,15 @@
   .search-section {
     padding: 3rem 0;
     background-attachment: scroll;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .search-container {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .search-title {
@@ -576,6 +581,9 @@
 .destination-images-gallery {
   margin-top: 4rem;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .gallery-title {
@@ -593,6 +601,8 @@
   gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .destination-image-card {
@@ -606,6 +616,10 @@
   display: block;
   border: none;
   outline: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .destination-image-card:hover {
@@ -636,12 +650,18 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   filter: none;
   -webkit-filter: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .destination-image-card:hover .destination-image-bg {
@@ -709,21 +729,43 @@
 @media (max-width: 768px) {
   .destination-images-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.75rem;
     max-width: 100%;
+    width: 100%;
+    padding: 0;
   }
 
   .destination-image-card {
     min-height: 160px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    padding: 0;
   }
 
   .destination-image-bg {
-    background-size: cover;
-    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
     filter: none;
     -webkit-filter: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
   }
 
   .gallery-title {
@@ -742,6 +784,18 @@
 }
 
 @media (max-width: 480px) {
+  .search-section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+  }
+
   .search-title {
     font-size: 1.75rem;
   }
@@ -754,11 +808,57 @@
     font-size: 0.8rem;
   }
 
+  .destination-images-gallery {
+    width: 100%;
+    padding: 0;
+    margin-top: 3rem;
+  }
+
   .destination-image-card {
     min-height: 140px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    padding: 0;
   }
 
   .destination-images-grid {
-    gap: 0.75rem;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .destination-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* iPhone and small device specific fixes */
+@media (max-width: 414px) {
+  .destination-image-bg {
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-position: center center !important;
   }
 }
