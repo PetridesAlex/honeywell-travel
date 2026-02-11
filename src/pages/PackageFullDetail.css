@@ -1,6 +1,14 @@
+/* Mobile-first responsive base */
+.package-full-page * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 .package-full-page {
   background: #f8f9fa;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .package-full-hero {
@@ -60,6 +68,8 @@
   margin: -80px auto 0;
   padding: 0 2rem 4rem;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .layout-grid {
@@ -2178,9 +2188,16 @@
 }
 
 @media (max-width: 768px) {
+  .package-full-page {
+    overflow-x: hidden;
+  }
+
   .package-full-container {
     padding: 0 1rem 3rem;
     margin-top: -60px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .package-full-hero {
@@ -2208,6 +2225,7 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding: 0;
+    word-break: break-word;
   }
 
   .package-full-hero-content .badge {
@@ -2227,6 +2245,10 @@
     display: block;
   }
 
+  .layout-grid {
+    gap: 1.5rem;
+  }
+
   .layout-aside {
     display: none;
   }
@@ -2234,6 +2256,55 @@
   .mobile-sidebar-card {
     display: block;
     margin-top: 2rem;
+  }
+
+  .full-section {
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .full-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .tabs-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .tab-button {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    white-space: nowrap;
+  }
+
+  /* Table responsiveness */
+  table {
+    font-size: 0.9rem;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  thead, tbody, tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th, td {
+    padding: 0.75rem 0.5rem;
+    word-wrap: break-word;
   }
 }
 
@@ -4363,18 +4434,34 @@
 
 @media (max-width: 480px) {
   .package-full-hero {
-    height: 300px;
-    min-height: 300px;
+    height: 280px;
+    min-height: 280px;
   }
 
   .package-full-hero-content h1 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
   }
 
   .package-full-container {
-    padding: 1.5rem 0.75rem;
+    padding: 0 0.75rem 2rem;
+    margin-top: -50px;
+  }
+
+  .full-section {
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+  }
+
+  .full-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .price-header {
@@ -4382,8 +4469,8 @@
   }
 
   .price-thumb {
-    height: 150px;
-    max-width: 250px;
+    height: 140px;
+    max-width: 100%;
   }
 
   .hotel-single-layout {
@@ -4399,15 +4486,65 @@
   }
 
   .hotel-variant-block {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
   }
 
   .hotel-image-bg {
-    height: 180px;
+    height: 160px;
   }
 
   .package-full-hero-content {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .hero-meta {
+    font-size: 0.85rem;
+  }
+
+  .tab-button {
+    font-size: 0.85rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Improve table readability on small screens */
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  /* Adjust modal for small screens */
+  .reserve-modal {
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
   }
 }
 
