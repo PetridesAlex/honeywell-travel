@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { travelPackages } from '../data/packages'
 import RevealOnScroll from '../components/RevealOnScroll'
@@ -9,16 +9,10 @@ function BookOnline() {
   const [selectedType, setSelectedType] = useState('Any Type')
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
-  const [hasSearched, setHasSearched] = useState(false)
+  const resultsRef = useRef(null)
 
-  // Debug: Log state on every render
-  console.log('BookOnline render:', {
-    selectedCategory,
-    selectedType,
-    startDate,
-    endDate,
-    hasSearched
-  })
+  // Check if any filters are active
+  const hasActiveFilters = selectedCategory || selectedType !== 'Any Type' || startDate || endDate
 
   const categories = [
     'Destinations',
@@ -120,37 +114,23 @@ function BookOnline() {
     return matches
   })
 
+  // Auto-scroll to results when filters change and there are active filters
+  useEffect(() => {
+    if (hasActiveFilters && resultsRef.current) {
+      // Small delay to allow render
+      const timer = setTimeout(() => {
+        resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 300)
+      return () => clearTimeout(timer)
+    }
+  }, [selectedCategory, selectedType, startDate, endDate, hasActiveFilters])
+
   const handleSearch = (e) => {
     e.preventDefault()
-    
-    // Debug logging
-    console.log('Search initiated:', {
-      selectedCategory,
-      selectedType,
-      startDate,
-      endDate,
-      filteredPackagesCount: filteredPackages.length,
-      totalPackages: travelPackages.length,
-      summerPackages: travelPackages.filter(p => p.category === 'Summer Packages').length
-    })
-    
-    if (filteredPackages.length > 0) {
-      console.log('First 3 filtered packages:', filteredPackages.slice(0, 3).map(p => ({
-        id: p.id,
-        title: p.title,
-        category: p.category
-      })))
+    // Scroll to results
+    if (resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-    
-    setHasSearched(true)
-    
-    // Scroll to results section after a brief delay to allow render
-    setTimeout(() => {
-      const resultsSection = document.querySelector('.packages-results')
-      if (resultsSection) {
-        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    }, 100)
   }
 
   const handleClearFilters = () => {
@@ -158,7 +138,6 @@ function BookOnline() {
     setSelectedType('Any Type')
     setStartDate('')
     setEndDate('')
-    setHasSearched(false)
   }
 
   return (
@@ -226,11 +205,11 @@ function BookOnline() {
               </div>
             </div>
 
-            <div className="form-actions">
-              <button type="submit" className="search-btn">
-                Search Packages
-              </button>
-              {(selectedCategory || selectedType !== 'Any Type' || startDate || endDate) && (
+            {hasActiveFilters && (
+              <div className="form-actions">
+                <button type="submit" className="search-btn">
+                  View Results ↓
+                </button>
                 <button 
                   type="button" 
                   className="clear-btn"
@@ -238,86 +217,84 @@ function BookOnline() {
                 >
                   Clear Filters
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </form>
         </div>
       </section>
 
-      {hasSearched ? (
-        <RevealOnScroll direction="up">
-          <section className="packages-results">
-            <div className="container">
-              <div className="results-header">
-                <h2 className="results-title">
-                  {filteredPackages.length} travel package{filteredPackages.length !== 1 ? 's' : ''} found
-                </h2>
-                {(selectedCategory || selectedType !== 'Any Type' || startDate || endDate) && (
+      <RevealOnScroll direction="up">
+        <section className="packages-results" ref={resultsRef}>
+          <div className="container">
+            {hasActiveFilters ? (
+              <>
+                <div className="results-header">
+                  <h2 className="results-title">
+                    {filteredPackages.length} travel package{filteredPackages.length !== 1 ? 's' : ''} found
+                  </h2>
                   <div className="active-filters">
                     {selectedCategory && <span className="filter-tag">Category: {selectedCategory}</span>}
                     {selectedType && selectedType !== 'Any Type' && <span className="filter-tag">Type: {selectedType}</span>}
                     {startDate && <span className="filter-tag">From: {new Date(startDate).toLocaleDateString()}</span>}
                     {endDate && <span className="filter-tag">To: {new Date(endDate).toLocaleDateString()}</span>}
                   </div>
-                )}
-              </div>
-
-              {filteredPackages.length === 0 ? (
-                <div className="no-results">
-                  <p>😔 No packages found matching your criteria.</p>
-                  <p>Try adjusting your filters to see more options.</p>
                 </div>
-              ) : (
-                <div className="packages-grid">
-                  {filteredPackages.map((pkg) => {
-                    const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
-                    return (
-                    <Link
-                      key={pkg.id}
-                      to={`/packages/${pkg.id}`}
-                      className="package-card-link"
-                      onClick={() => {
-                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-                        if (document.documentElement) document.documentElement.scrollTop = 0
-                        if (document.body) document.body.scrollTop = 0
-                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
-                      }}
-                    >
-                      <div className="package-card">
-                        {imageUrl ? (
-                          <div
-                            className="package-image-thumb"
-                            style={{ backgroundImage: `url(${imageUrl})` }}
-                          />
-                        ) : (
-                          <div className="package-emoji">{pkg.image}</div>
-                        )}
-                        <div className="package-content">
-                          <p className="package-category">{pkg.category}</p>
-                          <h3 className="package-title">{pkg.title}</h3>
-                          <p className="package-destination">{pkg.destination}</p>
-                          <div className="package-footer">
-                            <span className="package-duration">{pkg.duration}</span>
-                            <span className="package-price">€{pkg.price}</span>
+
+                {filteredPackages.length === 0 ? (
+                  <div className="no-results">
+                    <p>😔 No packages found matching your criteria.</p>
+                    <p>Try adjusting your filters to see more options.</p>
+                  </div>
+                ) : (
+                  <div className="packages-grid">
+                    {filteredPackages.map((pkg) => {
+                      const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
+                      return (
+                      <Link
+                        key={pkg.id}
+                        to={`/packages/${pkg.id}`}
+                        className="package-card-link"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                          if (document.documentElement) document.documentElement.scrollTop = 0
+                          if (document.body) document.body.scrollTop = 0
+                          setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                        }}
+                      >
+                        <div className="package-card">
+                          {imageUrl ? (
+                            <div
+                              className="package-image-thumb"
+                              style={{ backgroundImage: `url(${imageUrl})` }}
+                            />
+                          ) : (
+                            <div className="package-emoji">{pkg.image}</div>
+                          )}
+                          <div className="package-content">
+                            <p className="package-category">{pkg.category}</p>
+                            <h3 className="package-title">{pkg.title}</h3>
+                            <p className="package-destination">{pkg.destination}</p>
+                            <div className="package-footer">
+                              <span className="package-duration">{pkg.duration}</span>
+                              <span className="package-price">€{pkg.price}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  )})}
-                </div>
-              )}
-            </div>
-          </section>
-        </RevealOnScroll>
-      ) : (
-        <section className="packages-results packages-results-prompt">
-          <div className="container">
-            <p className="search-prompt-text">
-              Select your travel category and dates above, then click <strong>Search Packages</strong> to see available packages.
-            </p>
+                      </Link>
+                    )})}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="search-prompt">
+                <p className="search-prompt-text">
+                  Select your travel preferences above to see available packages.
+                </p>
+              </div>
+            )}
           </div>
         </section>
-      )}
+      </RevealOnScroll>
     </div>
   )
 }
