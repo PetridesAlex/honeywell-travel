@@ -227,76 +227,68 @@ function BookOnline() {
         </div>
       </section>
 
-      <section className="packages-results" ref={resultsRef}>
-        <div className="container">
-          {hasActiveFilters ? (
-            <>
-              <div className="results-header">
-                <h2 className="results-title">
-                  {filteredPackages.length} travel package{filteredPackages.length !== 1 ? 's' : ''} found
-                </h2>
-                <div className="active-filters">
-                  {selectedCategory && <span className="filter-tag">Category: {selectedCategory}</span>}
-                  {selectedType && selectedType !== 'Any Type' && <span className="filter-tag">Type: {selectedType}</span>}
-                  {startDate && <span className="filter-tag">From: {new Date(startDate).toLocaleDateString()}</span>}
-                  {endDate && <span className="filter-tag">To: {new Date(endDate).toLocaleDateString()}</span>}
-                </div>
+      {hasActiveFilters && (
+        <section className="packages-results" ref={resultsRef}>
+          <div className="container">
+            <div className="results-header">
+              <h2 className="results-title">
+                {filteredPackages.length} travel package{filteredPackages.length !== 1 ? 's' : ''} found
+              </h2>
+              <div className="active-filters">
+                {selectedCategory && <span className="filter-tag">Category: {selectedCategory}</span>}
+                {selectedType && selectedType !== 'Any Type' && <span className="filter-tag">Type: {selectedType}</span>}
+                {startDate && <span className="filter-tag">From: {new Date(startDate).toLocaleDateString()}</span>}
+                {endDate && <span className="filter-tag">To: {new Date(endDate).toLocaleDateString()}</span>}
               </div>
+            </div>
 
-              {filteredPackages.length === 0 ? (
-                <div className="no-results">
-                  <p>😔 No packages found matching your criteria.</p>
-                  <p>Try adjusting your filters to see more options.</p>
-                </div>
-              ) : (
-                <div className="packages-grid">
-                  {filteredPackages.map((pkg) => {
-                    const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
-                    return (
-                    <Link
-                      key={pkg.id}
-                      to={`/packages/${pkg.id}`}
-                      className="package-card-link"
-                      onClick={() => {
-                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-                        if (document.documentElement) document.documentElement.scrollTop = 0
-                        if (document.body) document.body.scrollTop = 0
-                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
-                      }}
-                    >
-                      <div className="package-card">
-                        {imageUrl ? (
-                          <div
-                            className="package-image-thumb"
-                            style={{ backgroundImage: `url(${imageUrl})` }}
-                          />
-                        ) : (
-                          <div className="package-emoji">{pkg.image}</div>
-                        )}
-                        <div className="package-content">
-                          <p className="package-category">{pkg.category}</p>
-                          <h3 className="package-title">{pkg.title}</h3>
-                          <p className="package-destination">{pkg.destination}</p>
-                          <div className="package-footer">
-                            <span className="package-duration">{pkg.duration}</span>
-                            <span className="package-price">€{pkg.price}</span>
-                          </div>
+            {filteredPackages.length === 0 ? (
+              <div className="no-results">
+                <p>😔 No packages found matching your criteria.</p>
+                <p>Try adjusting your filters to see more options.</p>
+              </div>
+            ) : (
+              <div className="packages-grid">
+                {filteredPackages.map((pkg) => {
+                  const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
+                  return (
+                  <Link
+                    key={pkg.id}
+                    to={`/packages/${pkg.id}`}
+                    className="package-card-link"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                      if (document.documentElement) document.documentElement.scrollTop = 0
+                      if (document.body) document.body.scrollTop = 0
+                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                    }}
+                  >
+                    <div className="package-card">
+                      {imageUrl ? (
+                        <div
+                          className="package-image-thumb"
+                          style={{ backgroundImage: `url(${imageUrl})` }}
+                        />
+                      ) : (
+                        <div className="package-emoji">{pkg.image}</div>
+                      )}
+                      <div className="package-content">
+                        <p className="package-category">{pkg.category}</p>
+                        <h3 className="package-title">{pkg.title}</h3>
+                        <p className="package-destination">{pkg.destination}</p>
+                        <div className="package-footer">
+                          <span className="package-duration">{pkg.duration}</span>
+                          <span className="package-price">€{pkg.price}</span>
                         </div>
                       </div>
-                    </Link>
-                  )})}
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="search-prompt">
-              <p className="search-prompt-text">
-                #Live the experience
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
+                    </div>
+                  </Link>
+                )})}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
     </div>
   )
 }

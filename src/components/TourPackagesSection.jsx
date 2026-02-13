@@ -25,7 +25,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '☀️',
       description: 'Perfect summer getaways for your vacation',
       color: '#FF6B35',
-      image: '/images/categories/summer-package.webp'
+      image: '/images/categories/summer-travel-package-cover.webp'
     },
     {
       id: 'autumn-packages',
@@ -33,7 +33,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🍂',
       description: 'Experience the beauty of autumn destinations',
       color: '#D2691E',
-      image: '/images/categories/autumn-package.webp'
+      image: '/images/categories/autumn-travel-package-cover.webp'
     },
     {
       id: 'winter-packages',
@@ -41,7 +41,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '❄️',
       description: 'Winter wonderlands and cozy escapes',
       color: '#4A90E2',
-      image: '/images/categories/winter-pacakge.webp'
+      image: '/images/categories/winter-travel-package-cover.webp'
     },
     {
       id: 'ski-packages',
@@ -49,7 +49,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '⛷️',
       description: 'Hit the slopes at world-class ski resorts',
       color: '#87CEEB',
-      image: '/images/categories/ski-pacakges.webp'
+      image: '/images/categories/ski-travel-package-cover.webp'
     },
     {
       id: 'christmas-packages',
@@ -57,7 +57,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎄',
       description: 'Magical Christmas holidays and celebrations',
       color: '#C41230',
-      image: '/images/categories/christmas-package.webp'
+      image: '/images/categories/chrsitmas-travel-package-cover.webp'
     },
     {
       id: 'easter-packages',
@@ -65,7 +65,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🐰',
       description: 'Easter breaks in beautiful locations',
       color: '#FFB6C1',
-      image: '/images/categories/easter-package.webp'
+      image: '/images/categories/easter-travel-package-cover.webp'
     },
     {
       id: 'green-monday',
@@ -73,7 +73,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌿',
       description: 'Special Green Monday travel deals',
       color: '#228B22',
-      image: '/images/categories/Green-monday-pacakges.webp'   
+      image: '/images/categories/green-monday-travel-package-cover.webp'   
     },
     {
       id: 'cruises',
@@ -81,7 +81,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🚢',
       description: 'Luxury cruises to exotic destinations',
       color: '#1E90FF',
-      image: '/images/categories/cuises-package.webp'
+      image: '/images/categories/cruises-travel-package-cover.webp'
     },
     {
       id: 'city-breaks',
@@ -89,7 +89,8 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🏙️',
       description: 'Urban adventures in vibrant cities',
       color: '#8B008B',
-      image: '/images/categories/city-breaks-package.webp'      
+      image: '/images/categories/city-break-travel-package-cover.webp?v=2',
+      imagePosition: 'center 52%'
     },
     {
       id: 'exotic-packages',
@@ -97,7 +98,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🌴',
       description: 'Discover exotic and tropical paradises',
       color: '#FF6347',
-      image: '/images/categories/exotic-packages.webp'
+      image: '/images/categories/exotic-travel-package-cover.webp'
     },
     {
       id: 'music-sports',
@@ -105,7 +106,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🎵',
       description: 'Festivals, concerts, and sporting events',
       color: '#9B59B6',
-      image: '/images/categories/sports-music-package.webp'
+      image: '/images/categories/music-events-travel-package-cover.webp'
     }
   ]
 
@@ -151,7 +152,19 @@ function TourPackagesSection({ sharedBackground }) {
                         alt={pkg.title}
                         className="package-image"
                         loading="lazy"
+                        style={
+                          pkg.imageFit || pkg.imagePosition
+                            ? {
+                                ...(pkg.imageFit ? { objectFit: pkg.imageFit } : {}),
+                                ...(pkg.imagePosition ? { objectPosition: pkg.imagePosition } : {})
+                              }
+                            : undefined
+                        }
                       />
+                      <div className="package-image-caption">
+                        <span className="package-image-brand">Honeywell Travel</span>
+                        <span className="package-image-type">{pkg.title}</span>
+                      </div>
                     </div>
                     <div className="package-card-details">
                       <h3 className="package-card-title">

@@ -96,6 +96,106 @@
   background: linear-gradient(135deg, #C41230 0%, #A01028 100%);
 }
 
+.hero-request-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.hero-request-modal {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+}
+
+.hero-request-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.hero-request-modal h3 {
+  margin: 0 0 1.25rem 0;
+  color: #111827;
+  font-size: 1.65rem;
+}
+
+.hero-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-request-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-request-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hero-request-form input,
+.hero-request-form select {
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  padding: 0.85rem 0.95rem;
+  font-size: 0.95rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-request-form input:focus,
+.hero-request-form select:focus {
+  border-color: #D52B2B;
+  box-shadow: 0 0 0 3px rgba(213, 43, 43, 0.12);
+}
+
+.hero-request-full {
+  width: 100%;
+}
+
+.hero-request-submit {
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.5rem;
+  background: linear-gradient(135deg, #D52B2B 0%, #C41230 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(213, 43, 43, 0.3);
+  width: fit-content;
+}
+
+.hero-request-submit:hover {
+  background: linear-gradient(135deg, #C41230 0%, #A01028 100%);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -540,6 +640,23 @@
 }
 
 @media (max-width: 768px) {
+  .hero-request-modal {
+    padding: 1.35rem 1rem;
+    border-radius: 14px;
+  }
+
+  .hero-request-modal h3 {
+    font-size: 1.25rem;
+  }
+
+  .hero-request-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-request-submit {
+    width: 100%;
+  }
+
   .honeymoon-request-header h2 {
     font-size: 2.25rem;
   }

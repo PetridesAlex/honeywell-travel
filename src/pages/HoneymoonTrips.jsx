@@ -90,6 +90,14 @@ const COUNTRY_CODES = [
 ]
 
 function HoneymoonTrips() {
+  const [showHeroForm, setShowHeroForm] = useState(false)
+  const [heroRequest, setHeroRequest] = useState({
+    name: '',
+    surname: '',
+    startDate: '',
+    endDate: '',
+    destination: ''
+  })
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [destinationSearch, setDestinationSearch] = useState('')
@@ -117,6 +125,15 @@ function HoneymoonTrips() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  useEffect(() => {
+    if (!showHeroForm) return undefined
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+  }, [showHeroForm])
+
   const handleDestinationSelect = (dest) => {
     setSelectedDestination(dest)
     setDestinationSearch(dest)
@@ -128,6 +145,44 @@ function HoneymoonTrips() {
     setDestinationSearch(value)
     setSelectedDestination(value)
     setShowDropdown(true)
+  }
+
+  const handleHeroRequestChange = (e) => {
+    const { name, value } = e.target
+    setHeroRequest((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleHeroRequestSubmit = (e) => {
+    e.preventDefault()
+    const { name, surname, startDate, endDate, destination } = heroRequest
+
+    if (!name.trim() || !surname.trim() || !startDate || !endDate || !destination) {
+      alert('Please complete all fields before sending your request.')
+      return
+    }
+
+    if (new Date(endDate) < new Date(startDate)) {
+      alert('Travel To date cannot be earlier than Travel From date.')
+      return
+    }
+
+    console.log('Honeymoon hero request submitted:', {
+      name: name.trim(),
+      surname: surname.trim(),
+      startDate,
+      endDate,
+      destination
+    })
+
+    alert('Thank you! Your honeymoon request has been sent.')
+    setHeroRequest({
+      name: '',
+      surname: '',
+      startDate: '',
+      endDate: '',
+      destination: ''
+    })
+    setShowHeroForm(false)
   }
 
   return (
@@ -147,9 +202,106 @@ function HoneymoonTrips() {
             Tailor‑made honeymoons designed around you – from idyllic islands and romantic cities
             to once‑in‑a‑lifetime adventures across the globe.
           </p>
-          <button className="hero-cta">Start Planning Your Honeymoon</button>
+          <button className="hero-cta" onClick={() => setShowHeroForm(true)}>
+            Start Planning Your Honeymoon
+          </button>
         </div>
       </section>
+
+      {showHeroForm && (
+        <div
+          className="hero-request-modal-backdrop"
+          onClick={() => setShowHeroForm(false)}
+          role="presentation"
+        >
+          <div
+            className="hero-request-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Honeymoon request form"
+          >
+            <button
+              type="button"
+              className="hero-request-close"
+              onClick={() => setShowHeroForm(false)}
+              aria-label="Close form"
+            >
+              ×
+            </button>
+            <h3>Plan Your Honeymoon</h3>
+            <form className="hero-request-form" onSubmit={handleHeroRequestSubmit}>
+              <div className="hero-request-row">
+                <label>
+                  Name
+                  <input
+                    type="text"
+                    name="name"
+                    value={heroRequest.name}
+                    onChange={handleHeroRequestChange}
+                    placeholder="Enter your name"
+                    required
+                  />
+                </label>
+                <label>
+                  Surname
+                  <input
+                    type="text"
+                    name="surname"
+                    value={heroRequest.surname}
+                    onChange={handleHeroRequestChange}
+                    placeholder="Enter your surname"
+                    required
+                  />
+                </label>
+              </div>
+              <div className="hero-request-row">
+                <label>
+                  Travel From
+                  <input
+                    type="date"
+                    name="startDate"
+                    value={heroRequest.startDate}
+                    onChange={handleHeroRequestChange}
+                    min={new Date().toISOString().split('T')[0]}
+                    required
+                  />
+                </label>
+                <label>
+                  Travel To
+                  <input
+                    type="date"
+                    name="endDate"
+                    value={heroRequest.endDate}
+                    onChange={handleHeroRequestChange}
+                    min={heroRequest.startDate || new Date().toISOString().split('T')[0]}
+                    required
+                  />
+                </label>
+              </div>
+              <label className="hero-request-full">
+                Destination
+                <select
+                  name="destination"
+                  value={heroRequest.destination}
+                  onChange={handleHeroRequestChange}
+                  required
+                >
+                  <option value="">Select destination</option>
+                  {HONEYMOON_DESTINATIONS.map((dest) => (
+                    <option key={dest} value={dest}>
+                      {dest}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button type="submit" className="hero-request-submit">
+                Send Request
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
 
       <RevealOnScroll direction="up">
       <div className="honeymoon-trips-container">

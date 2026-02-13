@@ -12,24 +12,11 @@ const categoryToSlug = (category) => {
     .replace(/[^a-z0-9-]/g, '')
 }
 
-function SearchSection({ sharedBackground, setSharedBackground }) {
+function SearchSection() {
   const navigate = useNavigate()
   const [category, setCategory] = useState('Any')
   const [destination, setDestination] = useState('Any')
   const [travelers, setTravelers] = useState('2')
-  
-  // Use shared background if provided, otherwise use default
-  const selectedBackground = sharedBackground || '/images/destinations/search-where-to-travel.webp'
-  
-  const handleBackgroundChange = (bgUrl) => {
-    // Update the shared background state - this will update the background for all sections
-    if (setSharedBackground) {
-      setSharedBackground(bgUrl)
-    } else {
-      // Fallback: if setSharedBackground is not provided, log for debugging
-      console.warn('setSharedBackground function not provided')
-    }
-  }
 
   const categories = [
     { value: 'Any', label: 'Any Category', icon: '🌍' },
@@ -79,21 +66,6 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
     if (cat === 'Any') return null
     return cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and').replace(/[^a-z0-9-]/g, '')
   }
-
-  const backgroundImages = [
-    { id: 'default', url: '/images/destinations/search-where-to-travel.webp', name: 'Default' },
-    { id: 'singapore', url: '/images/destinations/singapore.png', name: 'Singapore' },
-    { id: 'norwegian-fjords', url: '/images/destinations/norwegian-fjords-cruise.png', name: 'Norwegian Fjords' },
-    { id: 'alaska', url: '/images/destinations/alaska.png', name: 'Alaska' },
-    { id: 'china', url: '/images/destinations/china.png', name: 'China' },
-    { id: 'cruises', url: '/images/cruises/cruises-background-2.png', name: 'Cruises' },
-    { id: 'seychelles', url: '/images/destinations/seychelles-bay.png', name: 'Seychelles' },
-    { id: 'iceland-waterfall', url: '/images/destinations/iceland-waterfall-scenic.png', name: 'Iceland' },
-    { id: 'cliftonbay', url: '/images/destinations/cliftonbay-coast.png', name: 'Clifton Bay' },
-    { id: 'japan-fuji', url: '/images/destinations/japan-fuji-cherry.png', name: 'Japan' },
-    { id: 'thailand', url: '/images/destinations/thailand-longtail.png', name: 'Thailand' },
-    { id: 'brazil-beaches', url: '/images/destinations/brazil-beaches-life.png', name: 'Brazil' }
-  ]
 
   return (
     <section className="search-section">
@@ -212,45 +184,6 @@ function SearchSection({ sharedBackground, setSharedBackground }) {
           </div>
         )}
 
-        {/* Destination Images Gallery - Background Selection */}
-        <div className="destination-images-gallery">
-          <h3 className="gallery-title">Navigate to your Destination</h3>
-          <div className="destination-images-grid">
-            {backgroundImages.map((bg) => (
-              <div
-                key={bg.id}
-                className={`destination-image-card ${selectedBackground === bg.url ? 'selected' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  handleBackgroundChange(bg.url)
-                }}
-                role="button"
-                tabIndex={0}
-                aria-label={`Set ${bg.name} as background`}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    handleBackgroundChange(bg.url)
-                  }
-                }}
-              >
-                <div 
-                  className="destination-image-bg"
-                  style={{ backgroundImage: `url(${bg.url})` }}
-                >
-                  <div className="destination-image-label">{bg.name}</div>
-                  {selectedBackground === bg.url && (
-                    <div className="selection-indicator">
-                      <span className="check-icon">✓</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

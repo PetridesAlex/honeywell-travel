@@ -11,7 +11,7 @@ import RevealOnScroll from '../components/RevealOnScroll'
 import './Home.css'
 
 function Home() {
-  const [sharedBackground, setSharedBackground] = useState('/images/destinations/search-where-to-travel.webp')
+  const [sharedBackground, setSharedBackground] = useState('/images/destinations/main-page-sea.webp')
   return (
     <>
       <SEO 
@@ -25,15 +25,17 @@ function Home() {
         <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
       </div>
       <div className="unified-sections-wrapper" style={{ backgroundImage: `url(${sharedBackground})` }}>
-        <RevealOnScroll direction="up" delay={0}>
-          <SearchSection 
-            sharedBackground={sharedBackground} 
-            setSharedBackground={setSharedBackground} 
-          />
-        </RevealOnScroll>
-        <RevealOnScroll direction="up" delay={80}>
-          <TourPackagesSection sharedBackground={sharedBackground} />
-        </RevealOnScroll>
+        <div className="search-tour-shared-background">
+          <RevealOnScroll direction="up" delay={0}>
+            <SearchSection 
+              sharedBackground={sharedBackground} 
+              setSharedBackground={setSharedBackground} 
+            />
+          </RevealOnScroll>
+          <RevealOnScroll direction="up" delay={80}>
+            <TourPackagesSection sharedBackground={sharedBackground} />
+          </RevealOnScroll>
+        </div>
         <RevealOnScroll direction="up" delay={80}>
           <CruisesSection sharedBackground={sharedBackground} />
         </RevealOnScroll>
