@@ -291,7 +291,7 @@ function BookOnline() {
           ) : (
             <div className="search-prompt">
               <p className="search-prompt-text">
-                Select your travel preferences above to see available packages.
+                #Live the experience
               </p>
             </div>
           )}
