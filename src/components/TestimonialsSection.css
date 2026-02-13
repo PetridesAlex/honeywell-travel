@@ -7,7 +7,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  /* Performance optimizations */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .testimonials-section::before {
@@ -376,6 +379,12 @@
 @media (max-width: 768px) {
   .testimonials-section {
     padding: 3rem 0;
+    /* Fix performance killer on mobile */
+    background-attachment: scroll !important;
+    /* Performance optimizations */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    contain: layout style;
   }
 
   .testimonials-container {

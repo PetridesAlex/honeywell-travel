@@ -1,3 +1,10 @@
+/* Performance optimizations applied:
+ * - Changed background-attachment from fixed to scroll (major performance improvement on mobile)
+ * - Added GPU acceleration with translate3d
+ * - Added backface-visibility: hidden to prevent repaint issues
+ * - Optimized animations and transitions for 60fps scrolling
+ */
+
 .home-page {
   background-color: transparent;
 }
@@ -8,7 +15,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,6 +24,10 @@
   image-rendering: auto;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: bicubic;
+  /* Performance optimizations */
+  will-change: scroll-position;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .unified-sections-wrapper::before {
@@ -34,14 +45,16 @@
     background-size: cover !important;
     background-position: center center !important;
     -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
+    /* Remove expensive rendering hints */
     image-rendering: auto;
-    image-rendering: -webkit-optimize-contrast;
-    /* Optimize for mobile performance */
+    /* Critical performance optimizations for smooth scrolling */
     will-change: auto;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
   }
 
   .unified-sections-wrapper::before {
@@ -54,6 +67,9 @@
     background: linear-gradient(135deg, rgba(20, 20, 30, 0.85) 0%, rgba(40, 40, 50, 0.9) 100%);
     z-index: 0;
     pointer-events: none;
+    /* GPU acceleration for overlay */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 
@@ -62,15 +78,12 @@
     background-attachment: scroll !important;
     background-size: cover !important;
     background-position: center center !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    image-rendering: auto;
-    image-rendering: -webkit-optimize-contrast;
-    /* Optimize for mobile performance */
+    /* Critical performance optimizations */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     will-change: auto;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
   }
 
   .unified-sections-wrapper::before {
@@ -83,9 +96,14 @@
     background: linear-gradient(135deg, rgba(20, 20, 30, 0.88) 0%, rgba(40, 40, 50, 0.92) 100%);
     z-index: 0;
     pointer-events: none;
+    /* GPU acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   
   .home-page {
     overflow-x: hidden;
+    /* Improve scroll performance */
+    -webkit-overflow-scrolling: touch;
   }
 }

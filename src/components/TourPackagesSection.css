@@ -253,10 +253,37 @@
 @media (max-width: 768px) {
   .tour-packages-section {
     padding: 3rem 0;
+    /* Performance optimizations */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    contain: layout style;
   }
 
   .tour-packages-container {
     padding: 0 1rem;
+  }
+
+  .package-card {
+    /* Simplify hover effects on mobile */
+    transition: transform 0.3s ease;
+    /* Mobile performance optimization */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .package-card:hover,
+  .package-card:active {
+    /* Disable hover lift on mobile for better performance */
+    transform: none;
+  }
+
+  .package-image-overlay .package-image {
+    /* Simplify image transitions on mobile */
+    transition: none;
+  }
+
+  .package-card:hover .package-image-overlay .package-image {
+    transform: translate(-50%, -50%); /* No scale on hover for mobile */
   }
 
   .section-title {

@@ -9,11 +9,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 5rem 2rem 4rem;
   min-height: 600px;
   display: flex;
   align-items: center;
+  /* Performance optimizations */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .hero-overlay {

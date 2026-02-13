@@ -2,12 +2,12 @@
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
 }
 
 .reveal-on-scroll.reveal-visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto; /* Remove will-change after animation */
 }
 
 .reveal-on-scroll.reveal-up {
@@ -32,6 +32,23 @@
 
 .reveal-on-scroll.reveal-fade.reveal-visible {
   transform: none;
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  .reveal-on-scroll {
+    /* Faster, simpler animations on mobile */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    transform: translateY(16px); /* Reduce distance for smoother animation */
+  }
+
+  .reveal-on-scroll.reveal-up {
+    transform: translateY(16px);
+  }
+
+  .reveal-on-scroll.reveal-down {
+    transform: translateY(-16px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

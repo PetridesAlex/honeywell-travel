@@ -64,8 +64,37 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
   
+  html {
+    /* Critical for smooth scrolling on mobile */
+    scroll-behavior: auto; /* Disable smooth scroll on mobile for performance */
+  }
+  
   body {
     /* Prevent bounce/overscroll on iOS */
     overscroll-behavior-y: none;
+    /* Force GPU acceleration for smooth scrolling */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  #root {
+    /* Improve scroll performance */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Disable expensive filters on mobile */
+  *[style*="backdrop-filter"],
+  *[class*="backdrop"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Optimize animations for mobile */
+  * {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
 }
