@@ -64,28 +64,19 @@
 
 .booking-form {
   display: block;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: transparent;
   padding: 2.5rem 3rem;
   border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: none;
   max-width: 960px;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .booking-form::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #C41230 0%, #E31E24 100%);
-  border-radius: 4px 0 0 4px;
+  content: none;
 }
 
 .booking-form .filter-row {
