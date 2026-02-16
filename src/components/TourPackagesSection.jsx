@@ -1,23 +1,7 @@
 import { Link } from 'react-router-dom'
 import './TourPackagesSection.css'
 
-function TourPackagesSection({ sharedBackground }) {
-  const categoryQueryMap = {
-    'destinations': 'Destinations',
-    'summer-packages': 'Summer Packages',
-    'autumn-packages': 'Autumn Packages',
-    'winter-packages': 'Winter Packages',
-    'ski-packages': 'Ski Packages',
-    'christmas-packages': 'Christmas Packages',
-    'easter-packages': 'Easter Packages',
-    'green-monday': 'Green Monday',
-    'cruises': 'Cruises',
-    'city-breaks': 'City Breaks',
-    'exotic-packages': 'Exotic Packages',
-    'music-sports': 'Music & Sports',
-    'mary-special-trips': 'Mary Special Trips'
-  }
-
+function TourPackagesSection() {
   const tourPackages = [
     {
       id: 'summer-packages',
@@ -65,7 +49,7 @@ function TourPackagesSection({ sharedBackground }) {
       icon: '🐰',
       description: 'Easter breaks in beautiful locations',
       color: '#FFB6C1',
-      image: '/images/categories/easter-travel-package-cover.webp'
+      image: '/images/categories/easter-cover.webp'
     },
     {
       id: 'green-monday',
@@ -124,7 +108,7 @@ function TourPackagesSection({ sharedBackground }) {
               <Link
                 to={`/tour-category/${pkg.id}/`}
                 className="package-card"
-                onClick={(e) => {
+                onClick={() => {
                   // Scroll immediately before navigation
                   window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
                   if (document.documentElement) {
@@ -161,10 +145,6 @@ function TourPackagesSection({ sharedBackground }) {
                             : undefined
                         }
                       />
-                      <div className="package-image-caption">
-                        <span className="package-image-brand">Honeywell Travel</span>
-                        <span className="package-image-type">{pkg.title}</span>
-                      </div>
                     </div>
                     <div className="package-card-details">
                       <h3 className="package-card-title">

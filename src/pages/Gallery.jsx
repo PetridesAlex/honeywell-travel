@@ -1,4 +1,5 @@
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './Gallery.css'
 
 function Gallery() {
@@ -18,6 +19,12 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
+      <SEO
+        title="Travel Gallery | Honeywell Travel"
+        description="Explore stunning destination photos from Honeywell Travel holidays and experiences."
+        keywords="travel gallery, holiday photos, destinations honeywell travel"
+        url="https://www.honeywelltravel.com.cy/honeywell-travel-gallery"
+      />
       <RevealOnScroll direction="up">
       <div className="gallery-container">
         <h1>Gallery</h1>

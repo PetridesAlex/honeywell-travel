@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { getBlogPostBySlug, blogPosts } from '../data/blog'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './BlogPostDetail.css'
 
 function BlogPostDetail() {
@@ -33,6 +34,14 @@ function BlogPostDetail() {
 
   return (
     <div className="blog-post-page">
+      <SEO
+        title={`${post.title} | Honeywell Travel Blog`}
+        description={post.excerpt}
+        keywords={`${post.category}, travel blog, honeywell travel`}
+        image={post.image}
+        url={`https://www.honeywelltravel.com.cy/our-blog/${post.slug}`}
+        type="article"
+      />
       {/* Hero Section */}
       {post.image && (
         <div 

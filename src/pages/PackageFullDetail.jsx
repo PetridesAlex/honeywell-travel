@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getPackageById, travelPackages } from '../data/packages'
@@ -29,13 +29,12 @@ const extractTitle = (text) => {
 
 function PackageFullDetail() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const { t, i18n } = useTranslation()
   const pkg = getPackageById(id)
   const translatedTitle = pkg ? getTranslatedPackageTitle(pkg.id, pkg.title, i18n) : ''
   const [activeTab, setActiveTab] = useState('price')
-  const [activeProgramIndex, setActiveProgramIndex] = useState(null)
   const [hotelSelections, setHotelSelections] = useState({})
-  const [roomSelections, setRoomSelections] = useState({}) // New state for multiple rooms per hotel
   const [showReserveModal, setShowReserveModal] = useState(false)
   const [showBookSelection, setShowBookSelection] = useState(false)
   const [bookAdults, setBookAdults] = useState(2)
@@ -51,6 +50,7 @@ function PackageFullDetail() {
   const [reserveToast, setReserveToast] = useState(null) // { type: 'success' | 'error', message }
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setBookHotelKey('')
   }, [id])
 
@@ -111,10 +111,6 @@ function PackageFullDetail() {
           })()
         : []
 
-  const toggleProgram = (index) => {
-    setActiveProgramIndex(activeProgramIndex === index ? null : index)
-  }
-
   // Calculate price for a single room based on selection
   const calculateRoomPrice = (hotel, selection) => {
     let total = 0
@@ -145,74 +141,6 @@ function PackageFullDetail() {
     return total || 0
   }
 
-  // Calculate total price for a hotel based on all room selections
-  const calculateHotelPrice = (hotel, hotelIndex) => {
-    const rooms = roomSelections[hotelIndex] || []
-    if (rooms.length === 0) {
-      // Fallback to old single selection if no rooms added yet
-      const selection = hotelSelections[hotelIndex] || { roomType: 'double', adults: 1, children: 0, children2: 0 }
-      return calculateRoomPrice(hotel, selection)
-    }
-    
-    return rooms.reduce((total, room) => {
-      return total + calculateRoomPrice(hotel, room)
-    }, 0)
-  }
-
-  // Initialize rooms for a hotel
-  const initializeRooms = (hotelIndex) => {
-    if (!roomSelections[hotelIndex] || roomSelections[hotelIndex].length === 0) {
-      setRoomSelections(prev => ({
-        ...prev,
-        [hotelIndex]: [{
-          roomId: Date.now(),
-          roomType: 'double',
-          adults: 1,
-          children: 0,
-          children2: 0
-        }]
-      }))
-    }
-  }
-
-  // Add a new room
-  const addRoom = (hotelIndex) => {
-    const rooms = roomSelections[hotelIndex] || []
-    if (rooms.length < 10) {
-      setRoomSelections(prev => ({
-        ...prev,
-        [hotelIndex]: [
-          ...(prev[hotelIndex] || []),
-          {
-            roomId: Date.now(),
-            roomType: 'double',
-            adults: 1,
-            children: 0,
-            children2: 0
-          }
-        ]
-      }))
-    }
-  }
-
-  // Remove a room
-  const removeRoom = (hotelIndex, roomId) => {
-    setRoomSelections(prev => ({
-      ...prev,
-      [hotelIndex]: (prev[hotelIndex] || []).filter(room => room.roomId !== roomId)
-    }))
-  }
-
-  // Update a specific room's selection
-  const updateRoomSelection = (hotelIndex, roomId, field, value) => {
-    setRoomSelections(prev => ({
-      ...prev,
-      [hotelIndex]: (prev[hotelIndex] || []).map(room => 
-        room.roomId === roomId ? { ...room, [field]: value } : room
-      )
-    }))
-  }
-
   const updateHotelSelection = (hotelIndex, field, value) => {
     setHotelSelections(prev => ({
       ...prev,
@@ -226,18 +154,6 @@ function PackageFullDetail() {
       }
     }))
   }
-
-  // Initialize rooms when hotels are loaded
-  useEffect(() => {
-    if (pkg && pkg.details && pkg.details.hotels) {
-      pkg.details.hotels.forEach((hotel, index) => {
-        if (!roomSelections[index] || roomSelections[index].length === 0) {
-          initializeRooms(index)
-        }
-      })
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pkg])
 
   // Hero image priority: package gallery/coverImage first, then fallbacks
   const heroImage = gallery[0] || details.coverImage || details.thumbnailImage || '/images/destinations/riviera-hero.webp'
@@ -275,18 +191,19 @@ function PackageFullDetail() {
       </div>
 
       <div className="package-full-container">
-        <Link 
-          to={`/packages/${pkg.id}`} 
+        <button
+          type="button"
           className="back-link"
           onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-            if (document.documentElement) document.documentElement.scrollTop = 0
-            if (document.body) document.body.scrollTop = 0
-            setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+            if (window.history.length > 1) {
+              navigate(-1)
+            } else {
+              navigate('/packages')
+            }
           }}
         >
           {t('package.backToOverview')}
-        </Link>
+        </button>
 
         <div className="layout-grid">
           <main className="layout-main">
@@ -309,12 +226,6 @@ function PackageFullDetail() {
                 onClick={() => setActiveTab('details')}
               >
                 {t('package.packageDetails')}
-              </button>
-              <button
-                className={`full-tab ${activeTab === 'photos' ? 'active' : ''}`}
-                onClick={() => setActiveTab('photos')}
-              >
-                {t('package.photos')}
               </button>
             </div>
 
@@ -367,7 +278,7 @@ function PackageFullDetail() {
                       const groupEntries = Object.entries(groupedHotels)
 
                       // One card per hotel group; same layout for all (left = hotel info, right = variant blocks)
-                      return groupEntries.map(([hotelName, hotelVariants], groupIndex) => {
+                      return groupEntries.map(([, hotelVariants], groupIndex) => {
                         // Use the first variant for common properties (image, stars, roomType)
                         const baseHotel = hotelVariants[0]
                         // Create a unique key for this hotel group
@@ -380,9 +291,6 @@ function PackageFullDetail() {
                           selectedDateIndex: 0
                         }
                         
-                        const selectedHotel = hotelVariants[currentSelection.selectedDateIndex] || hotelVariants[0]
-                        const totalPrice = calculateRoomPrice(selectedHotel, currentSelection)
-
                         // Same layout for all hotel cards: left = hotel info, right = one variant block per departure
                         return (
                             <div key={hotelKey} className="hotel-single-layout">
@@ -1042,28 +950,6 @@ function PackageFullDetail() {
                     </p>
                   )}
                 </div>
-              </section>
-            )}
-
-            {/* PHOTOS TAB */}
-            {activeTab === 'photos' && (
-              <section className="full-section">
-                <h2>Photos</h2>
-                {gallery.length > 0 ? (
-                  <div className="gallery-grid">
-                    {gallery.map((src, index) => (
-                      <div
-                        key={index}
-                        className="gallery-item"
-                        style={{ backgroundImage: `url(${src})` }}
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <p className="section-text muted">
-                    Add a set of landscape images for this tour in the gallery field.
-                  </p>
-                )}
               </section>
             )}
 

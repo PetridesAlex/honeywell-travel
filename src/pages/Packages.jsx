@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams, useParams } from 'react-router-dom'
 import { getPackagesByFilter, travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
+import SEO from '../components/SEO'
 import './Packages.css'
 
 // Helper function to convert slug back to category name
@@ -71,38 +72,6 @@ function Packages() {
     'Ski Packages'
   ]
 
-  const destinations = [
-    'Any',
-    'Africa',
-    'America',
-    'Asia',
-    'Europe',
-    'Greece',
-    'Middle East'
-  ]
-
-  const months = [
-    'Any',
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ]
-
-  const travelTypes = [
-    'Any',
-    'Group Travel',
-    'Individual Travel'
-  ]
-
   // Get price range from packages
   const getPriceRange = () => {
     const prices = travelPackages
@@ -127,6 +96,7 @@ function Packages() {
     if (slug) {
       const categoryFromSlug = slugToCategory(slug.replace(/\/$/, ''))
       if (categoryFromSlug) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCategory(categoryFromSlug)
       }
     }
@@ -165,6 +135,7 @@ function Packages() {
       })
     }
     
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFilteredPackages(filtered)
   }, [category, destination, minPrice, maxPrice, departureMonth, travelType])
 
@@ -189,6 +160,12 @@ function Packages() {
 
   return (
     <div className="packages-page">
+      <SEO
+        title="Tour Packages | Honeywell Travel"
+        description="Browse all Honeywell Travel holiday packages by destination, season, and category."
+        keywords="tour packages cyprus, holiday packages, travel deals"
+        url={slug ? `https://www.honeywelltravel.com.cy/tour-category/${slug.replace(/\/$/, '')}` : 'https://www.honeywelltravel.com.cy/packages'}
+      />
       {/* Hero Section */}
       <div className="packages-hero">
         <div className="packages-hero-content">

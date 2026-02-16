@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { getPackagesByFilter, travelPackages } from '../data/packages'
+import { useState } from 'react'
+import { travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './Cruises.css'
 
 function Cruises() {
-  const [filteredCruises, setFilteredCruises] = useState([])
   const [selectedPort, setSelectedPort] = useState('Any')
   const [selectedDuration, setSelectedDuration] = useState('Any')
 
@@ -28,21 +27,19 @@ function Cruises() {
     { value: '13+', label: '13+ Days' }
   ]
 
-  useEffect(() => {
-    // Filter for cruises only
-    const cruises = travelPackages.filter(pkg => 
-      pkg.category === 'Cruises' || pkg.category === 'cruises'
-    )
-    
-    // Apply additional filters if needed
-    let filtered = cruises
-    // You can add more filtering logic here based on selectedPort and selectedDuration
-    
-    setFilteredCruises(filtered)
-  }, [selectedPort, selectedDuration])
+  // Filter for cruises only
+  const filteredCruises = travelPackages.filter(
+    (pkg) => pkg.category === 'Cruises' || pkg.category === 'cruises'
+  )
 
   return (
     <div className="cruises-page">
+      <SEO
+        title="Cruise Holidays | Honeywell Travel"
+        description="Browse luxury cruise holiday packages and discover top cruise destinations with Honeywell Travel."
+        keywords="cruise holidays cyprus, luxury cruises, cruise packages"
+        url="https://www.honeywelltravel.com.cy/cruises"
+      />
       {/* Hero Section */}
       <div className="cruises-hero">
         <div className="cruises-hero-overlay"></div>

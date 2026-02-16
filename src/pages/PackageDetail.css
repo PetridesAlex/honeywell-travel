@@ -65,12 +65,6 @@
   position: relative;
 }
 
-.package-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-}
-
 .image-placeholder {
   font-size: 8rem;
 }

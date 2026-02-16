@@ -1,4 +1,5 @@
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './HoneymoonCalendar.css'
 
 const MONTHS = [
@@ -112,6 +113,12 @@ const DESTINATION_ICONS = {
 function HoneymoonCalendar() {
   return (
     <div className="honeymoon-calendar-page">
+      <SEO
+        title="Honeymoon Calendar | Honeywell Travel"
+        description="Find the best honeymoon destinations month by month with the Honeywell Travel honeymoon calendar."
+        keywords="honeymoon calendar, honeymoon destinations by month, honeymoon planning"
+        url="https://www.honeywelltravel.com.cy/honeymoon-calendar"
+      />
       <section className="honeymoon-hero">
         <div className="honeymoon-hero-content">
           <div className="hero-icon">💑</div>

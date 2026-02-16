@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { sendGiftVoucherEmail } from '../utils/emailService'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './GiftVoucher.css'
 
 function GiftVoucher() {
@@ -174,6 +175,12 @@ function GiftVoucher() {
 
   return (
     <div className="gift-voucher-page">
+      <SEO
+        title="Gift Vouchers | Honeywell Travel"
+        description="Buy and redeem Honeywell Travel gift vouchers for flights, hotels, packages, and tailor-made trips."
+        keywords="travel gift voucher cyprus, honeywell gift voucher"
+        url="https://www.honeywelltravel.com.cy/gift-vouchers"
+      />
       {/* Hero Section */}
       <section className="voucher-hero">
         <div className="voucher-hero-content">

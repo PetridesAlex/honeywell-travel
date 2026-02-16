@@ -55,19 +55,22 @@
 
 .honeymoon-trips-hero h1 {
   font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
-  font-size: 4.5rem;
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
   line-height: 1.15;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  animation: fadeInUp 0.8s ease-out;
+  animation:
+    honeymoonTitleIntro 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+    honeymoonTitleFloat 4.8s ease-in-out 1s infinite;
+  transform-origin: center;
 }
 
 .honeymoon-trips-hero p {
   font-size: 1.3rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 2.9rem;
   font-weight: 300;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 0.8s ease-out 0.2s both;
@@ -77,6 +80,7 @@
 .hero-cta {
   border: none;
   border-radius: 999px;
+  margin-top: 1.25rem;
   padding: 1.1rem 3rem;
   background: linear-gradient(135deg, #D52B2B 0%, #C41230 100%);
   color: white;
@@ -204,6 +208,31 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes honeymoonTitleIntro {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes honeymoonTitleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-4px);
+    text-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -733,17 +762,18 @@
   }
 
   .honeymoon-trips-hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.75rem;
     letter-spacing: 0.06em;
     margin-bottom: 1rem;
   }
   
   .honeymoon-trips-hero p {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.1rem;
   }
   
   .hero-cta {
+    margin-top: 1.1rem;
     padding: 0.9rem 2rem;
     font-size: 0.9rem;
   }
@@ -863,14 +893,16 @@
   }
   
   .honeymoon-trips-hero h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .honeymoon-trips-hero p {
     font-size: 0.9rem;
+    margin-bottom: 1.9rem;
   }
   
   .hero-cta {
+    margin-top: 1rem;
     padding: 0.75rem 1.5rem;
     font-size: 0.85rem;
   }

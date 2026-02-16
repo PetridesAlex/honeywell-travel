@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { addPackage } from '../data/packages'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './AddPackage.css'
 
 // Helper function to convert category name to URL-friendly slug
@@ -107,6 +108,12 @@ function AddPackage() {
 
   return (
     <div className="add-package-page">
+      <SEO
+        title="Add Package | Honeywell Travel"
+        description="Internal package creation page."
+        url="https://www.honeywelltravel.com.cy/add-package"
+        noindex
+      />
       <RevealOnScroll direction="up">
       <div className="add-package-container">
         <h1>Add New Travel Package</h1>

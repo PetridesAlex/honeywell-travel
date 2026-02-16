@@ -14,7 +14,7 @@ function StatsRewardsSection() {
     },
     {
       value: 'Cyprus Leading',
-      label: 'Travel Management Company 2025',
+      label: 'Travel Management Company 2020, 2023, 2025',
       icon: '🏆'
     }
   ]

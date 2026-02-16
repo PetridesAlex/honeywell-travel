@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './HolidayTypes.css'
 
 function HolidayTypes() {
@@ -72,13 +73,14 @@ function HolidayTypes() {
     }
   ]
 
-  const categoryTitleMap = holidayCategories.reduce((acc, cat) => {
-    acc[cat.id] = cat.title
-    return acc
-  }, {})
-
   return (
     <div className="holiday-types-page">
+      <SEO
+        title="Holiday Types | Honeywell Travel"
+        description="Explore Honeywell Travel holiday categories including cruises, city breaks, seasonal and exotic packages."
+        keywords="holiday types, cruise holidays, city breaks, exotic packages"
+        url="https://www.honeywelltravel.com.cy/holiday-types"
+      />
       <RevealOnScroll direction="up">
       <div className="holiday-types-container">
         <div className="page-header">

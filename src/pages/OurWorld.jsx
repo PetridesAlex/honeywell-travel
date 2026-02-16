@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 import './OurWorld.css'
 
 function OurWorld() {
@@ -70,6 +71,12 @@ function OurWorld() {
 
   return (
     <div className="our-world-page">
+      <SEO
+        title="Our World | Honeywell Travel"
+        description="Meet the Honeywell Travel team and discover our story, values, and travel inspiration."
+        keywords="honeywell travel team, our world, travel experts cyprus"
+        url="https://www.honeywelltravel.com.cy/ourworld"
+      />
       {/* Hero Section */}
       <section className="section-hero">
         <div className="hero-overlay"></div>

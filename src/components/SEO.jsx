@@ -73,10 +73,6 @@ function SEO({
       updateMetaTag('robots', 'index, follow')
     }
 
-    // Update HTML lang attribute if needed (for i18n)
-    const htmlLang = document.documentElement.getAttribute('lang')
-    // You can extend this to support language switching
-
     // Add structured data (JSON-LD) if provided
     if (structuredData) {
       let scriptTag = document.querySelector('script[type="application/ld+json"][data-seo="true"]')

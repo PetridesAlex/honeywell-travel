@@ -144,7 +144,14 @@ function Header() {
           </div>
 
           <Link to="/our-services/" className="nav-link">{t('header.corporate')}</Link>
-          <Link to="/car-hire" className="nav-link">{t('header.carHire')}</Link>
+          <a
+            href="https://summerautos.com/"
+            className="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('header.carHire')}
+          </a>
           <Link to="/honeywell-travel-gallery/" className="nav-link">{t('header.gallery')}</Link>
           <Link to="/our-blog/" className="nav-link">{t('header.blog')}</Link>
           <a 
@@ -263,7 +270,15 @@ function Header() {
           </div>
 
           <Link to="/our-services/" className="mobile-link" onClick={closeMobileMenu}>{t('header.corporate')}</Link>
-          <Link to="/car-hire" className="mobile-link" onClick={closeMobileMenu}>{t('header.carHire')}</Link>
+          <a
+            href="https://summerautos.com/"
+            className="mobile-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMobileMenu}
+          >
+            {t('header.carHire')}
+          </a>
           <Link to="/honeywell-travel-gallery/" className="mobile-link" onClick={closeMobileMenu}>{t('header.gallery')}</Link>
           <Link to="/our-blog/" className="mobile-link" onClick={closeMobileMenu}>{t('header.blog')}</Link>
           <a 

@@ -4,7 +4,7 @@ import { getTranslatedPackageTitle } from '../utils/packageTranslations'
 import './PackageCard.css'
 
 function PackageCard({ package: pkg }) {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
   const translatedTitle = getTranslatedPackageTitle(pkg.id, pkg.title, i18n)
   
   // From price = lowest double room price per person across all hotels
@@ -24,23 +24,12 @@ function PackageCard({ package: pkg }) {
   const displayPrice = getCheapestPrice()
   const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
 
-  const handleClick = () => {
-    // Scroll immediately before navigation
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    if (document.documentElement) {
-      document.documentElement.scrollTop = 0
-    }
-    if (document.body) {
-      document.body.scrollTop = 0
-    }
-    // Also scroll after a tiny delay to catch any async rendering
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    }, 0)
-  }
-
   return (
-    <Link to={`/packages/${pkg.id}`} className="package-card" onClick={handleClick}>
+    <Link
+      to={`/packages/${pkg.id}/details`}
+      className="package-card"
+      onClick={() => window.scrollTo(0, 0)}
+    >
       <div
         className={`package-image${imageUrl ? ' package-image-bg' : ''}`}
         style={imageUrl ? { backgroundImage: `url(${imageUrl})` } : undefined}

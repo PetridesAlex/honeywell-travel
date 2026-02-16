@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import './i18n/config' // Initialize i18n
 import Header from './components/Header'
 import AppLoader from './components/AppLoader'
@@ -24,27 +24,29 @@ import BlogPostDetail from './pages/BlogPostDetail'
 import './App.css'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const location = useLocation()
 
-  useEffect(() => {
-    // Scroll to top immediately when route changes - multiple attempts to ensure it works
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    
-    // Force scroll multiple times to ensure it works even if content loads asynchronously
-    const scrollAttempts = [0, 10, 50, 100, 200, 300, 500]
-    scrollAttempts.forEach(delay => {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-        // Also try scrolling the document element
-        if (document.documentElement) {
-          document.documentElement.scrollTop = 0
-        }
-        if (document.body) {
-          document.body.scrollTop = 0
-        }
-      }, delay)
-    })
-  }, [pathname])
+  useLayoutEffect(() => {
+    const resetScrollTop = () => {
+      window.scrollTo(0, 0)
+      if (document.documentElement) document.documentElement.scrollTop = 0
+      if (document.body) document.body.scrollTop = 0
+    }
+
+    // Immediate reset on every navigation key change (path/search/hash)
+    resetScrollTop()
+
+    // Extra post-render attempts for components that shift layout after mount
+    const rafId = requestAnimationFrame(resetScrollTop)
+    const t1 = setTimeout(resetScrollTop, 60)
+    const t2 = setTimeout(resetScrollTop, 180)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      clearTimeout(t1)
+      clearTimeout(t2)
+    }
+  }, [location.key])
 
   return null
 }
@@ -55,6 +57,7 @@ function AppContent() {
 
   // Hide footer during navigation and ensure it stays hidden until page loads
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHideFooter(true)
     // Keep footer hidden longer to ensure page loads from top
     const timer = setTimeout(() => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './TestimonialsSection.css'
 
-function TestimonialsSection({ sharedBackground }) {
+function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const reviews = [

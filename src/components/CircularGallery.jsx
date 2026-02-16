@@ -54,7 +54,7 @@ function CircularGallery({ textColor = '#ffffff', borderRadius = 0.05 }) {
       }}
     >
       <div className="circular-gallery-container" ref={containerRef}>
-        {images.map((image, index) => (
+        {images.map((image) => (
           <div 
             key={image.id}
             className="circular-gallery-item"

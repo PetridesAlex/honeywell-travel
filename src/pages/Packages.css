@@ -217,12 +217,13 @@
   border-bottom: 1px solid #e2e8f0;
 }
 
-.results-title {
+.packages-page .packages-results .results-header .results-title {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 700;
+  color: #9f1239 !important;
   margin: 0;
   letter-spacing: -0.01em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .active-filters {

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { blogPosts, getCategories } from '../data/blog'
 import RevealOnScroll from '../components/RevealOnScroll'
+import SEO from '../components/SEO'
 import './Blog.css'
 
 function Blog() {
@@ -19,6 +20,12 @@ function Blog() {
 
   return (
     <div className="blog-page">
+      <SEO
+        title="Travel Blog | Honeywell Travel"
+        description="Read travel tips, destination guides, and inspiration from Honeywell Travel experts."
+        keywords="travel blog cyprus, destination guides, travel tips, honeywell travel blog"
+        url="https://www.honeywelltravel.com.cy/our-blog"
+      />
       {/* Hero Section */}
       <div className="blog-hero">
         <div className="blog-hero-content">

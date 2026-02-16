@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
 import { sendContactForm } from '../utils/emailjsClient'
+import SEO from '../components/SEO'
 import './Corporate.css'
 
 function Corporate() {
@@ -45,7 +46,7 @@ function Corporate() {
       } else {
         setSubmitStatus('error')
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -70,6 +71,12 @@ function Corporate() {
 
   return (
     <div className="corporate-page">
+      <SEO
+        title="Corporate Travel Services | Honeywell Travel"
+        description="Professional business travel management solutions, corporate accounts, and incentive trips by Honeywell Travel."
+        keywords="corporate travel cyprus, business travel management, incentive trips"
+        url="https://www.honeywelltravel.com.cy/our-services"
+      />
       {/* Hero Section */}
       <section className="corporate-hero">
         <video 
@@ -432,7 +439,7 @@ function Corporate() {
               <h2>WORLD TRAVEL AWARDS</h2>
             </div>
             <div className="awards-text">
-              <h3>CYPRUS LEADING TRAVEL MANAGEMENT COMPANY 2020</h3>
+              <h3>CYPRUS LEADING TRAVEL MANAGEMENT COMPANY 2025</h3>
               <div className="awards-description">
                 <p>
                   We are thrilled to announce that Honeywell Travel has been voted by the 27th World Travel Awards as 
