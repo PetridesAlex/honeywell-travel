@@ -162,7 +162,7 @@ function BookOnline() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/videos/0_Paris_Eiffel_Tower_3840x2160.mp4" type="video/mp4" />
+        <source src="/videos/0_Paris_Eiffel_Tower_3840x2160.webm" type="video/webm" />
       </video>
       <div className="book-online-overlay" />
 
