@@ -70,7 +70,7 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
-            src="https://www.honeywelltravel.com.cy/wp-content/uploads/2019/02/imageedit_1_2975338924.png" 
+            src="/images/icons/honeywell-travel-logo.webp" 
             alt="Honeywell Travel Logo" 
             className="logo-image"
           />

@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
+  const [phoneRevealed, setPhoneRevealed] = useState(false)
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -11,10 +14,20 @@ function Footer() {
             <a 
               href="tel:+35725828848" 
               className="contact-item contact-link phone-link"
-              title="Call +357 2582 8848"
+              title={phoneRevealed ? 'Call +357 2582 8848' : 'Tap to show phone number'}
+              aria-label={phoneRevealed ? 'Call +357 2582 8848' : 'Tap to show phone number'}
+              onClick={(e) => {
+                if (!phoneRevealed) {
+                  e.preventDefault()
+                  setPhoneRevealed(true)
+                }
+              }}
             >
               <div className="contact-icon phone-icon">📞</div>
               <span className="contact-label">Phone</span>
+              <span className={`contact-value ${phoneRevealed ? '' : 'contact-value--hint'}`}>
+                {phoneRevealed ? '+357 2582 8848' : 'Tap to show'}
+              </span>
             </a>
             <a 
               href="mailto:info@honeywelltravel.com.cy" 
@@ -27,23 +40,23 @@ function Footer() {
           </div>
           <div className="address-section">
             <a 
-              href="https://maps.google.com/?q=9+Anastasi+Shioukri+street,+Limassol+3035,+Cyprus" 
+              href="https://maps.google.com/?q=9+Anastasi+Sioukri+street,+Limassol+3035,+Cyprus" 
               target="_blank" 
               rel="noopener noreferrer"
               className="address-link"
             >
               <span className="location-text">Where to find us</span>
             </a>
-            <p className="address-text">9 Anastasi Shioukri street, Limassol 3035, Cyprus</p>
+            <p className="address-text">9 Anastasi Sioukri street, Limassol 3035, Cyprus</p>
             <a 
-              href="https://maps.google.com/?q=Honeywell+Travel+9+Anastasi+Shioukri+street+Limassol+3035+Cyprus"
+              href="https://maps.google.com/?q=Honeywell+Travel+9+Anastasi+Sioukri+street+Limassol+3035+Cyprus"
               target="_blank"
               rel="noopener noreferrer"
               className="google-map-container map-link"
               title="Click to open Honeywell Travel location in Google Maps"
             >
               <iframe
-                src="https://www.google.com/maps?q=Honeywell+Travel+9+Anastasi+Shioukri+street+Limassol+3035+Cyprus&output=embed&zoom=16"
+                src="https://www.google.com/maps?q=Honeywell+Travel+9+Anastasi+Sioukri+street+Limassol+3035+Cyprus&output=embed&zoom=16"
                 width="100%"
                 height="180"
                 style={{ border: 0, borderRadius: '10px' }}

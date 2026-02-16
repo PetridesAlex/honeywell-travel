@@ -10,7 +10,7 @@ function AppLoader({ exiting }) {
             <div className="app-loader__logo-ring app-loader__logo-ring--reverse"></div>
             <div className="app-loader__logo-inner">
               <img 
-                src="https://www.honeywelltravel.com.cy/wp-content/uploads/2019/02/imageedit_1_2975338924.png" 
+                src="/images/icons/honeywell-travel-logo.webp" 
                 alt="Honeywell Travel Logo" 
                 className="app-loader__logo-image"
               />

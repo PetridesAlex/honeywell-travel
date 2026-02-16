@@ -39,45 +39,32 @@
 }
 
 .app-loader__logo-ring {
-  position: absolute;
-  inset: 0;
-  border: 4px solid transparent;
-  border-top-color: rgba(255, 255, 255, 0.6);
-  border-right-color: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  animation: app-loader-rotate 2s linear infinite;
+  display: none;
 }
 
 .app-loader__logo-ring--reverse {
-  border-top-color: transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.6);
-  border-left-color: rgba(255, 255, 255, 0.4);
-  animation: app-loader-rotate-reverse 1.5s linear infinite;
-  opacity: 0.7;
+  display: none;
 }
 
 .app-loader__logo-inner {
   position: relative;
   z-index: 2;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 
-    0 0 0 8px rgba(196, 18, 48, 0.2),
-    0 0 40px rgba(227, 30, 36, 0.4),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
-  animation: app-loader-pulse 2s ease-in-out infinite;
+  box-shadow: none;
+  animation: none;
 }
 
 .app-loader__logo-image {
-  width: 90%;
+  width: 140px;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  filter: none;
 }
 
 @keyframes app-loader-rotate {
@@ -102,16 +89,16 @@
   0%, 100% {
     transform: scale(1);
     box-shadow: 
-      0 0 0 8px rgba(196, 18, 48, 0.2),
-      0 0 40px rgba(227, 30, 36, 0.4),
-      inset 0 0 20px rgba(255, 255, 255, 0.1);
+      0 0 0 8px rgba(196, 18, 48, 0.22),
+      0 0 40px rgba(227, 30, 36, 0.35),
+      inset 0 0 14px rgba(196, 18, 48, 0.08);
   }
   50% {
     transform: scale(1.05);
     box-shadow: 
       0 0 0 12px rgba(196, 18, 48, 0.3),
-      0 0 60px rgba(227, 30, 36, 0.6),
-      inset 0 0 20px rgba(255, 255, 255, 0.15);
+      0 0 60px rgba(227, 30, 36, 0.45),
+      inset 0 0 14px rgba(196, 18, 48, 0.12);
   }
 }
 
@@ -175,12 +162,12 @@
   }
 
   .app-loader__logo-inner {
-    width: 110px;
-    height: 110px;
+    width: auto;
+    height: auto;
   }
 
   .app-loader__logo-image {
-    width: 85%;
+    width: 112px;
   }
 
   .app-loader__spinner-dot {
@@ -200,12 +187,12 @@
   }
 
   .app-loader__logo-inner {
-    width: 95px;
-    height: 95px;
+    width: auto;
+    height: auto;
   }
 
   .app-loader__logo-image {
-    width: 80%;
+    width: 96px;
   }
 
   .app-loader__text {
