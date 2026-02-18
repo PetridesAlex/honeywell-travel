@@ -31,8 +31,7 @@ function Header() {
     'Cruises',
     'City Breaks',
     'Exotic Packages',
-    'Mary Specials Trips',
-    'Build Your Trip'
+    'Mary Specials Trips'
   ]
 
   const honeymoonTypes = [
@@ -67,6 +66,9 @@ function Header() {
 
   return (
     <header className="header">
+      <div className="tagline-bar">
+        <span className="tagline-text">#LivetheExperience</span>
+      </div>
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
@@ -74,6 +76,17 @@ function Header() {
             alt="Honeywell Travel Logo" 
             className="logo-image"
           />
+        </Link>
+
+        <Link 
+          to="/build-your-trip" 
+          className="header-build-trip"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+          }}
+        >
+          <span className="header-build-trip-text">Build Your Trip</span>
+          <span className="header-build-trip-icon">→</span>
         </Link>
         
         <nav className="nav">
@@ -94,7 +107,7 @@ function Header() {
                 {holidayTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/tour-category/${categoryToSlug(item)}/`} 
+                    to={`/tour-category/${categoryToSlug(item)}/`}
                     className="dropdown-item"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
@@ -193,18 +206,26 @@ function Header() {
         </nav>
 
         <button
-          className="mobile-menu-btn"
+          className={`mobile-menu-btn ${isMobileMenuOpen ? 'is-open' : ''}`}
           onClick={() => {
             setIsMobileMenuOpen((prev) => !prev)
             setActiveMobileDropdown(null)
           }}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
         >
-          ☰
+          <span className="hamburger-box">
+            <span className="hamburger-inner" />
+          </span>
         </button>
       </div>
 
       {isMobileMenuOpen && (
         <div className="mobile-menu">
+          <Link to="/build-your-trip" className="mobile-link mobile-build-trip" onClick={closeMobileMenu}>
+            <span>Build Your Trip</span>
+            <span className="mobile-build-trip-icon">→</span>
+          </Link>
           <Link to="/ourworld/" className="mobile-link" onClick={closeMobileMenu}>{t('header.ourWorld')}</Link>
           
           <div className="mobile-dropdown">
@@ -220,7 +241,7 @@ function Header() {
                 {holidayTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/tour-category/${categoryToSlug(item)}/`} 
+                    to={`/tour-category/${categoryToSlug(item)}/`}
                     className="mobile-dropdown-item"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })

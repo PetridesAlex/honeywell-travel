@@ -30,10 +30,10 @@ function ImageCarousel() {
     },
     {
       id: 4,
-      image: '/images/destinations/greece-hero.webp',
-      title: 'Ancient Wonders',
-      subtitle: 'Explore historical ruins and classical architecture by the Mediterranean',
-      location: 'Greece & Mediterranean'
+      image: '/images/destinations/amsterdam-hero.webp',
+      title: 'Amsterdam & Beyond',
+      subtitle: 'Canals, culture and city breaks in the heart of Europe',
+      location: 'Netherlands & Europe'
     }
   ]
 
@@ -43,7 +43,7 @@ function ImageCarousel() {
     
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-    }, 2500)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [images.length])

@@ -102,16 +102,25 @@
 .hotel-cta-block {
   text-align: center;
   margin-top: 0.3rem;
-  padding-top: 1.45rem;
+  padding-top: 1.75rem;
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hotel-cta-text {
-  margin: 0 0 1.1rem;
-  color: rgba(255, 255, 255, 0.93);
-  font-size: 1.04rem;
-  line-height: 1.7;
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.35) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 .hotel-cta-btn {
@@ -204,12 +213,223 @@
   }
 
   .hotel-cta-text {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    padding: 0.85rem 1.15rem;
   }
 
   .hotel-cta-btn {
     width: 100%;
     justify-content: center;
     font-size: 0.9rem;
+  }
+}
+
+/* Hotel quote modal */
+.hotel-quote-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: hotelQuoteFadeIn 0.2s ease-out;
+}
+
+@keyframes hotelQuoteFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hotel-quote-modal {
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  max-width: 440px;
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  animation: hotelQuoteSlideIn 0.25s ease-out;
+}
+
+@keyframes hotelQuoteSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hotel-quote-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hotel-quote-modal-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-sans);
+}
+
+.hotel-quote-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.hotel-quote-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.hotel-quote-form,
+.hotel-quote-success {
+  padding: 1.5rem;
+}
+
+.hotel-quote-intro {
+  margin: 0 0 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.hotel-quote-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-sans);
+}
+
+.hotel-quote-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.hotel-quote-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hotel-quote-input:focus {
+  outline: none;
+  border-color: #C41230;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hotel-quote-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.hotel-quote-error {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: 10px;
+  color: #fca5a5;
+  font-size: 0.875rem;
+}
+
+.hotel-quote-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hotel-quote-btn {
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.hotel-quote-btn.primary {
+  background: linear-gradient(135deg, #E31E24 0%, #C41230 100%);
+  color: #fff;
+  border: none;
+}
+
+.hotel-quote-btn.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #C41230 0%, #A01028 100%);
+}
+
+.hotel-quote-btn.primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.hotel-quote-btn.secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hotel-quote-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hotel-quote-success {
+  text-align: center;
+}
+
+.hotel-quote-success p {
+  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hotel-quote-success .hotel-cta-btn {
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .hotel-quote-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-quote-actions {
+    flex-direction: column;
   }
 }

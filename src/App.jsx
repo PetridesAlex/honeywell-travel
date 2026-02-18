@@ -19,6 +19,7 @@ import GiftVoucher from './pages/GiftVoucher'
 import HolidayTypes from './pages/HolidayTypes'
 import Corporate from './pages/Corporate'
 import BookOnline from './pages/BookOnline'
+import BuildYourTrip from './pages/BuildYourTrip'
 import Cruises from './pages/Cruises'
 import OurWorld from './pages/OurWorld'
 import BlogPostDetail from './pages/BlogPostDetail'
@@ -54,6 +55,8 @@ function AppContent() {
           <Route path="/our-services" element={<Corporate />} />
           <Route path="/our-services/" element={<Corporate />} />
           <Route path="/book-online" element={<BookOnline />} />
+          <Route path="/build-your-trip" element={<BuildYourTrip />} />
+          <Route path="/build-your-trip/" element={<BuildYourTrip />} />
           <Route path="/car-hire" element={<div className="page-placeholder"><h1>Car Hire</h1><p>Coming soon...</p></div>} />
           <Route path="/insurance" element={<div className="page-placeholder"><h1>Insurance</h1><p>Coming soon...</p></div>} />
         </Routes>
