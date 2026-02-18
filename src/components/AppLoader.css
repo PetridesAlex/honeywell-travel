@@ -9,10 +9,11 @@
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
+/* Must have pointer-events: none so touches pass through during/after exit (avoids blocking mobile taps) */
 .app-loader--exit {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .app-loader__inner {
