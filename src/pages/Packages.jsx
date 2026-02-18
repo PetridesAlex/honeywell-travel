@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import { useSearchParams, useParams } from 'react-router-dom'
 import { getPackagesByFilter, travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
@@ -52,6 +52,31 @@ function Packages() {
   const [maxPrice, setMaxPrice] = useState('')
   const [departureMonth, setDepartureMonth] = useState('Any')
   const [travelType, setTravelType] = useState('Any')
+
+  useLayoutEffect(() => {
+    const resetTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      if (document.documentElement) document.documentElement.scrollTop = 0
+      if (document.body) document.body.scrollTop = 0
+      if (document.scrollingElement) document.scrollingElement.scrollTop = 0
+
+      const mainContent = document.querySelector('.main-content')
+      if (mainContent) {
+        mainContent.scrollTop = 0
+      }
+    }
+
+    resetTop()
+    const rafId = requestAnimationFrame(resetTop)
+    const t1 = setTimeout(resetTop, 80)
+    const t2 = setTimeout(resetTop, 220)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      clearTimeout(t1)
+      clearTimeout(t2)
+    }
+  }, [slug])
 
   const categories = [
     'Any',

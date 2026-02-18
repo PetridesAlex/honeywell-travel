@@ -97,10 +97,10 @@ function Header() {
                     to={`/tour-category/${categoryToSlug(item)}/`} 
                     className="dropdown-item"
                     onClick={() => {
-                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
                       if (document.documentElement) document.documentElement.scrollTop = 0
                       if (document.body) document.body.scrollTop = 0
-                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
                     }}
                   >
                     <span className="dropdown-item-icon">→</span>
@@ -223,10 +223,10 @@ function Header() {
                     to={`/tour-category/${categoryToSlug(item)}/`} 
                     className="mobile-dropdown-item"
                     onClick={() => {
-                      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
                       if (document.documentElement) document.documentElement.scrollTop = 0
                       if (document.body) document.body.scrollTop = 0
-                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                      setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
                       closeMobileMenu()
                     }}
                   >

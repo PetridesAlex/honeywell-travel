@@ -11,6 +11,8 @@
   flex: 1;
   width: 100%;
   min-height: 0;
+  /* Prevent browser scroll anchoring jumps to lower content (eg footer). */
+  overflow-anchor: none;
 }
 
 .page-placeholder {

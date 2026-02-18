@@ -140,9 +140,7 @@
 /* Image fills whole card: no red, no background visible */
 .package-image-overlay .package-image {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -163,7 +161,7 @@
 }
 
 .package-card:hover .package-image-overlay .package-image {
-  transform: translate(-50%, -50%) scale(1.04);
+  transform: scale(1.04);
 }
 
 /* Details below image: title + Explore – clearly visible */
@@ -307,7 +305,7 @@
   }
 
   .package-card:hover .package-image-overlay .package-image {
-    transform: translate(-50%, -50%); /* No scale on hover for mobile */
+    transform: none; /* No scale on hover for mobile */
   }
 
   .section-title {

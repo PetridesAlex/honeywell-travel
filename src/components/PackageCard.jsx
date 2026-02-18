@@ -23,12 +23,22 @@ function PackageCard({ package: pkg }) {
 
   const displayPrice = getCheapestPrice()
   const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
+  const resetScrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    if (document.documentElement) document.documentElement.scrollTop = 0
+    if (document.body) document.body.scrollTop = 0
+  }
 
   return (
     <Link
       to={`/packages/${pkg.id}/details`}
       className="package-card"
-      onClick={() => window.scrollTo(0, 0)}
+      onClick={() => {
+        // Ensure destination page always opens at hero/top.
+        resetScrollTop()
+        requestAnimationFrame(resetScrollTop)
+        setTimeout(resetScrollTop, 60)
+      }}
     >
       <div
         className={`package-image${imageUrl ? ' package-image-bg' : ''}`}

@@ -277,10 +277,10 @@ function BookOnline() {
                     to={`/packages/${pkg.id}/details`}
                       className="package-card-link"
                       onClick={() => {
-                        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
                         if (document.documentElement) document.documentElement.scrollTop = 0
                         if (document.body) document.body.scrollTop = 0
-                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0)
+                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
                       }}
                     >
                       <div className="package-card">

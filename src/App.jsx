@@ -1,9 +1,10 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import './i18n/config' // Initialize i18n
 import Header from './components/Header'
 import AppLoader from './components/AppLoader'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 import Gallery from './pages/Gallery'
@@ -23,70 +24,7 @@ import OurWorld from './pages/OurWorld'
 import BlogPostDetail from './pages/BlogPostDetail'
 import './App.css'
 
-function ScrollToTop() {
-  const location = useLocation()
-
-  useLayoutEffect(() => {
-    const resetScrollTop = () => {
-      window.scrollTo(0, 0)
-      if (document.documentElement) document.documentElement.scrollTop = 0
-      if (document.body) document.body.scrollTop = 0
-    }
-
-    // Immediate reset on every navigation key change (path/search/hash)
-    resetScrollTop()
-
-    // Extra post-render attempts for components that shift layout after mount
-    const rafId = requestAnimationFrame(resetScrollTop)
-    const t1 = setTimeout(resetScrollTop, 60)
-    const t2 = setTimeout(resetScrollTop, 180)
-
-    return () => {
-      cancelAnimationFrame(rafId)
-      clearTimeout(t1)
-      clearTimeout(t2)
-    }
-  }, [location.key])
-
-  return null
-}
-
 function AppContent() {
-  const [hideFooter, setHideFooter] = useState(false)
-  const location = useLocation()
-
-  // Hide footer during navigation and ensure it stays hidden until page loads
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setHideFooter(true)
-    // Keep footer hidden longer to ensure page loads from top
-    const timer = setTimeout(() => {
-      setHideFooter(false)
-    }, 800)
-    return () => clearTimeout(timer)
-  }, [location.pathname])
-
-  // Hide footer immediately when links/buttons are clicked
-  useEffect(() => {
-    const handleClick = (e) => {
-      const target = e.target.closest('a, button')
-      if (target && (target.tagName === 'A' || target.tagName === 'BUTTON')) {
-        const href = target.getAttribute('href')
-        // Only hide footer for internal navigation links
-        if (href && href.startsWith('/') && !href.startsWith('//')) {
-          setHideFooter(true)
-          // Show footer again after navigation completes and page has scrolled
-          setTimeout(() => {
-            setHideFooter(false)
-          }, 1000)
-        }
-      }
-    }
-
-    document.addEventListener('click', handleClick, true) // Use capture phase
-    return () => document.removeEventListener('click', handleClick, true)
-  }, [])
-
   return (
     <>
       <Header />
@@ -119,7 +57,7 @@ function AppContent() {
           <Route path="/car-hire" element={<div className="page-placeholder"><h1>Car Hire</h1><p>Coming soon...</p></div>} />
           <Route path="/insurance" element={<div className="page-placeholder"><h1>Insurance</h1><p>Coming soon...</p></div>} />
         </Routes>
-        {!hideFooter && <Footer />}
+        <Footer />
       </main>
     </>
   )

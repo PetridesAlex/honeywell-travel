@@ -1,7 +1,42 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './TourPackagesSection.css'
 
 function TourPackagesSection() {
+  const navigate = useNavigate()
+
+  const resetScrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    if (document.documentElement) {
+      document.documentElement.scrollTop = 0
+    }
+    if (document.body) {
+      document.body.scrollTop = 0
+    }
+  }
+
+  const handlePackageCardClick = (event, packageId) => {
+    // Keep default behavior for non-primary clicks and modifier keys (new tab, etc).
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.shiftKey
+    ) {
+      return
+    }
+
+    event.preventDefault()
+
+    // Force viewport to top before route transition to avoid carrying footer scroll.
+    resetScrollTop()
+    requestAnimationFrame(() => {
+      resetScrollTop()
+      navigate(`/tour-category/${packageId}/`)
+    })
+  }
+
   const tourPackages = [
     {
       id: 'summer-packages',
@@ -108,20 +143,7 @@ function TourPackagesSection() {
               <Link
                 to={`/tour-category/${pkg.id}/`}
                 className="package-card"
-                onClick={() => {
-                  // Scroll immediately before navigation
-                  window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-                  if (document.documentElement) {
-                    document.documentElement.scrollTop = 0
-                  }
-                  if (document.body) {
-                    document.body.scrollTop = 0
-                  }
-                  // Also scroll after a tiny delay to catch any async rendering
-                  setTimeout(() => {
-                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-                  }, 0)
-                }}
+                onClick={(event) => handlePackageCardClick(event, pkg.id)}
                 style={{ 
                   '--delay': `${index * 0.1}s`,
                   '--pkg-color': pkg.color,

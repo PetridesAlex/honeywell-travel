@@ -11788,7 +11788,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Gulf Air',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 6kg',
-      coverImage: '/images/destinations/bangkok-thailand-hero.webp',
+      coverImage: '/images/thailand/thailand-boat.webp',
       flights: [
         {
           direction: 'Departure',
@@ -12051,7 +12051,7 @@ export const travelPackages = [
         day10_11: '10η – 11η Μέρα: Πατάγια – Μπανγκόκ – Μπαχρέιν – Λάρνακα\n\nΠρωινό και ελεύθερος χρόνος στην Πατάγια για τελευταίες βόλτες ή αγορές.\n\nΑναχώρηση οδικώς για το αεροδρόμιο της Μπανγκόκ.\n\nΠτήση Μπανγκόκ – Μπαχρέιν – Λάρνακα με Gulf Air.\n\nΆφιξη στη Λάρνακα (11η μέρα) γεμάτοι εικόνες, εμπειρίες και αξέχαστες αναμνήσεις από την Ταϊλάνδη.'
       },
       gallery: [
-        '/images/destinations/bangkok-thailand-hero.webp'
+        '/images/thailand/thailand-boat.webp'
       ]
     }
   },
@@ -12075,7 +12075,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Gulf Air',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 6kg',
-      coverImage: '/images/destinations/bangkok-thailand-hero.webp',
+      coverImage: '/images/thailand/thailand-boat.webp',
       flights: [
         {
           direction: 'Departure',
@@ -12338,7 +12338,7 @@ export const travelPackages = [
         day10_11: '10η – 11η Μέρα: Πατάγια – Μπανγκόκ – Μπαχρέιν – Λάρνακα\n\nΠρωινό και ελεύθερος χρόνος στην Πατάγια για τελευταίες βόλτες ή αγορές.\n\nΑναχώρηση οδικώς για το αεροδρόμιο της Μπανγκόκ.\n\nΠτήση Μπανγκόκ – Μπαχρέιν – Λάρνακα με Gulf Air.\n\nΆφιξη στη Λάρνακα (11η μέρα) γεμάτοι εικόνες, εμπειρίες και αξέχαστες αναμνήσεις από την Ταϊλάνδη.'
       },
       gallery: [
-        '/images/destinations/bangkok-thailand-hero.webp'
+        '/images/thailand/thailand-boat.webp'
       ]
     }
   },
@@ -12362,7 +12362,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates',
       includedLuggage: '1 checked bag 30kg + 1 hand luggage 7kg (Emirates), 1 checked bag 23kg + 1 hand luggage 7kg (domestic)',
-      coverImage: '/images/destinations/phuket-james-bond-hero.webp',
+      thumbnailImage: '/images/thailand/thailand-jame-bond.webp',
+      coverImage: '/images/thailand/thailand-jame-bond.webp',
       flights: [
         {
           direction: 'Departure',
@@ -12408,10 +12409,10 @@ export const travelPackages = [
       hotels: [
         // Period 1: 20/07 - €2,369 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2369,
@@ -12423,10 +12424,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2369,
@@ -12439,10 +12440,10 @@ export const travelPackages = [
         },
         // Period 2: 10/08, 17/08 - €2,399 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2399,
@@ -12454,10 +12455,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2399,
@@ -12469,10 +12470,10 @@ export const travelPackages = [
           nights: 2
         },
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2399,
@@ -12484,10 +12485,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2399,
@@ -12500,10 +12501,10 @@ export const travelPackages = [
         },
         // Period 3: 14/09, 19/10 - €2,279 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2279,
@@ -12515,10 +12516,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2279,
@@ -12530,10 +12531,10 @@ export const travelPackages = [
           nights: 2
         },
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2279,
@@ -12545,10 +12546,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2279,
@@ -12609,7 +12610,7 @@ export const travelPackages = [
         day9_10: '9η – 10η Μέρα: Μπανγκόκ – (Προαιρετική Πλωτή Αγορά & Αγορά Τρένου) – Ντουμπάι – Λάρνακα\n\nΠρωινό και ελεύθερη μέρα στην Μπανγκόκ. Check-out γύρω στις 11:00–12:00, με δυνατότητα φύλαξης αποσκευών στο ξενοδοχείο.\n\n🔸 Προαιρετικά:\nΕκδρομή στην πλωτή αγορά Damnoen Saduak & στην Αγορά του Τρένου Maeklong:\n• Παραδοσιακές μακρόστενες βάρκες ανάμεσα σε βάρκες γεμάτες φρούτα, λαχανικά & τοπικά εδέσματα\n• Αυθεντική εικόνα παραδοσιακής πλωτής αγοράς\n• Στάση στην διάσημη Railway Market, όπου το τρένο περνά κυριολεκτικά μέσα από την αγορά\n\nΕπιστροφή στην Μπανγκόκ. Το βράδυ/λίγο μετά τα μεσάνυχτα μεταφορά στο αεροδρόμιο για την πτήση Μπανγκόκ – Ντουμπάι – Λάρνακα.\n\nΆφιξη στη Λάρνακα, γεμάτοι εμπειρίες από ένα πλήρες ταξίδι σε Πουκέτ & Μπανγκόκ.'
       },
       gallery: [
-        '/images/destinations/phuket-james-bond-hero.webp'
+        '/images/thailand/thailand-jame-bond.webp'
       ]
     }
   },
@@ -12633,7 +12634,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates',
       includedLuggage: '1 checked bag 30kg + 1 hand luggage 7kg (Emirates), 1 checked bag 23kg + 1 hand luggage 7kg (domestic)',
-      coverImage: '/images/destinations/phuket-james-bond-hero.webp',
+      thumbnailImage: '/images/thailand/thailand-jame-bond.webp',
+      coverImage: '/images/thailand/thailand-jame-bond.webp',
       flights: [
         {
           direction: 'Departure',
@@ -12679,10 +12681,10 @@ export const travelPackages = [
       hotels: [
         // Period 1: 20/07 - €2,369 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2369,
@@ -12694,10 +12696,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2369,
@@ -12710,10 +12712,10 @@ export const travelPackages = [
         },
         // Period 2: 10/08, 17/08 - €2,399 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2399,
@@ -12725,10 +12727,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2399,
@@ -12740,10 +12742,10 @@ export const travelPackages = [
           nights: 2
         },
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2399,
@@ -12755,10 +12757,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2399,
@@ -12771,10 +12773,10 @@ export const travelPackages = [
         },
         // Period 3: 14/09, 19/10 - €2,279 double
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2279,
@@ -12786,10 +12788,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2279,
@@ -12801,10 +12803,10 @@ export const travelPackages = [
           nights: 2
         },
         {
-          name: 'Phuket Beach Resort',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/phuket-resort.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Phuket Beach Resort, Phuket, Thailand',
           prices: {
             double: 2279,
@@ -12816,10 +12818,10 @@ export const travelPackages = [
           nights: 5
         },
         {
-          name: 'Bangkok Hotel',
+          name: '4★ Hotels - Phuket / Bangkok',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/bangkok-hotel.webp',
+          image: '/images/thailand/thailand-hotel-boat.webp',
           location: 'Bangkok Hotel, Bangkok, Thailand',
           prices: {
             double: 2279,
@@ -12880,7 +12882,7 @@ export const travelPackages = [
         day9_10: '9η – 10η Μέρα: Μπανγκόκ – (Προαιρετική Πλωτή Αγορά & Αγορά Τρένου) – Ντουμπάι – Λάρνακα\n\nΠρωινό και ελεύθερη μέρα στην Μπανγκόκ. Check-out γύρω στις 11:00–12:00, με δυνατότητα φύλαξης αποσκευών στο ξενοδοχείο.\n\n🔸 Προαιρετικά:\nΕκδρομή στην πλωτή αγορά Damnoen Saduak & στην Αγορά του Τρένου Maeklong:\n• Παραδοσιακές μακρόστενες βάρκες ανάμεσα σε βάρκες γεμάτες φρούτα, λαχανικά & τοπικά εδέσματα\n• Αυθεντική εικόνα παραδοσιακής πλωτής αγοράς\n• Στάση στην διάσημη Railway Market, όπου το τρένο περνά κυριολεκτικά μέσα από την αγορά\n\nΕπιστροφή στην Μπανγκόκ. Το βράδυ/λίγο μετά τα μεσάνυχτα μεταφορά στο αεροδρόμιο για την πτήση Μπανγκόκ – Ντουμπάι – Λάρνακα.\n\nΆφιξη στη Λάρνακα, γεμάτοι εμπειρίες από ένα πλήρες ταξίδι σε Πουκέτ & Μπανγκόκ.'
       },
       gallery: [
-        '/images/destinations/phuket-james-bond-hero.webp'
+        '/images/thailand/thailand-jame-bond.webp'
       ]
     }
   },
@@ -12904,7 +12906,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates',
       includedLuggage: '1 checked bag 30kg + 1 hand luggage 7kg',
-      coverImage: '/images/destinations/bali-hero.webp',
+      thumbnailImage: '/images/bali/bali-rocks.webp',
+      coverImage: '/images/bali/bali-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -12942,10 +12945,10 @@ export const travelPackages = [
       hotels: [
         // Period 1: 09/06, 08/09 - €2,325 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2325,
@@ -12957,7 +12960,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -12972,10 +12975,10 @@ export const travelPackages = [
           nights: 3
         },
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2325,
@@ -12987,7 +12990,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13003,10 +13006,10 @@ export const travelPackages = [
         },
         // Period 2: 21/07 - €2,695 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2695,
@@ -13018,7 +13021,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13034,10 +13037,10 @@ export const travelPackages = [
         },
         // Period 3: 18/08 - €2,855 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2855,
@@ -13049,7 +13052,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13109,7 +13112,7 @@ export const travelPackages = [
         day9_10: '9η – 10η Μέρα: Ουμπούντ – Ντουμπάι – Λάρνακα\n\nΠρόγευμα & χρόνος ελεύθερος.\n\nCheck-out το μεσημέρι & φύλαξη αποσκευών στο ξενοδοχείο\n\nΠροαιρετικό μασάζ ή spa πριν την αναχώρηση\n\nΑργά το απόγευμα μεταφορά στο αεροδρόμιο για την πτήση Denpasar – Dubai – Larnaca.\n\nΆφιξη στη Λάρνακα την 10η ημέρα.'
       },
       gallery: [
-        '/images/destinations/bali-hero.webp'
+        '/images/bali/bali-hero.webp'
       ]
     }
   },
@@ -13133,7 +13136,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates',
       includedLuggage: '1 checked bag 30kg + 1 hand luggage 7kg',
-      coverImage: '/images/destinations/bali-hero.webp',
+      thumbnailImage: '/images/bali/bali-rocks.webp',
+      coverImage: '/images/bali/bali-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13171,10 +13175,10 @@ export const travelPackages = [
       hotels: [
         // Period 1: 09/06, 08/09 - €2,325 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2325,
@@ -13186,7 +13190,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13201,10 +13205,10 @@ export const travelPackages = [
           nights: 3
         },
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2325,
@@ -13216,7 +13220,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13232,10 +13236,10 @@ export const travelPackages = [
         },
         // Period 2: 21/07 - €2,695 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2695,
@@ -13247,7 +13251,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13263,10 +13267,10 @@ export const travelPackages = [
         },
         // Period 3: 18/08 - €2,855 double
         {
-          name: 'Bali 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/bali-resort.webp',
+          image: '/images/bali/bali-hotel.webp',
           location: 'Bali 5★ Resort, Bali, Indonesia',
           prices: {
             double: 2855,
@@ -13278,7 +13282,7 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: 'Ubud 5★ Resort',
+          name: '5★ Resorts - Bali / Ubud',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/ubud-resort.webp',
@@ -13338,7 +13342,7 @@ export const travelPackages = [
         day9_10: '9η – 10η Μέρα: Ουμπούντ – Ντουμπάι – Λάρνακα\n\nΠρόγευμα & χρόνος ελεύθερος.\n\nCheck-out το μεσημέρι & φύλαξη αποσκευών στο ξενοδοχείο\n\nΠροαιρετικό μασάζ ή spa πριν την αναχώρηση\n\nΑργά το απόγευμα μεταφορά στο αεροδρόμιο για την πτήση Denpasar – Dubai – Larnaca.\n\nΆφιξη στη Λάρνακα την 10η ημέρα.'
       },
       gallery: [
-        '/images/destinations/bali-hero.webp'
+        '/images/bali/bali-hero.webp'
       ]
     }
   },
@@ -13362,7 +13366,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 23kg + χειραποσκευή 10kg ανά άτομο (σύμφωνα με την πολιτική της Cyprus Airways)',
-      coverImage: '/images/destinations/dubai-desert-hero.webp',
+      thumbnailImage: '/images/dubai/Dubai-skyscrapers.webp',
+      coverImage: '/images/dubai/Dubai-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13380,12 +13385,12 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Option 1 - Departure dates: 09/09, 16/09, 23/09
+        // Single hotel choice with date-based rates
         {
-          name: '4★ Hotel Dubai – Option 1',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option1.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13397,10 +13402,10 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: '4★ Hotel Dubai – Option 1',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option1.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13412,10 +13417,10 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: '4★ Hotel Dubai – Option 1',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option1.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13426,12 +13431,11 @@ export const travelPackages = [
           departureDate: '23/09',
           nights: 4
         },
-        // Option 2 - Departure dates: 30/09, 07/10, 14/10, 21/10
         {
-          name: '4★ Hotel Dubai – Option 2',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option2.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13443,10 +13447,10 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: '4★ Hotel Dubai – Option 2',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option2.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13458,10 +13462,10 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: '4★ Hotel Dubai – Option 2',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option2.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13473,10 +13477,10 @@ export const travelPackages = [
           nights: 4
         },
         {
-          name: '4★ Hotel Dubai – Option 2',
+          name: '4★ Hotel Dubai',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/dubai-4star-option2.webp',
+          image: '/images/dubai/hotel-in-dubai.webp',
           location: 'Dubai, United Arab Emirates',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13524,7 +13528,7 @@ export const travelPackages = [
         day5: '5η Μέρα — Ντουμπάι → Λάρνακα\n\nΠρωινό και ελεύθερος χρόνος για τις τελευταίες αγορές ή βόλτες.\nΣτη συνέχεια μεταφορά στο αεροδρόμιο για την πτήση επιστροφής Ντουμπάι – Λάρνακα.\nΆφιξη στη Λάρνακα γεμάτοι εικόνες από τον αραβικό κόσμο.'
       },
       gallery: [
-        '/images/destinations/dubai-desert-hero.webp'
+        '/images/dubai/Dubai-hero.webp'
       ]
     }
   },
@@ -13548,7 +13552,8 @@ export const travelPackages = [
       boardBasis: 'Half Board',
       airline: 'Aegean Airlines',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 8kg ανά άτομο',
-      coverImage: '/images/destinations/morocco-imperial-hero.webp',
+      thumbnailImage: '/images/marocco/marroco-town.webp',
+      coverImage: '/images/marocco/maroco-church.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13580,12 +13585,12 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Option 1 – double €1,789, single €2,419 (departures: 14/05, 15/09, 06/10)
+        // Single hotel choice with date-based rates
         {
-          name: '4★ & 5★ Hotels – Imperial Morocco Option 1',
+          name: '4★ & 5★ Hotels – Imperial Morocco',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-option1.webp',
+          image: '/images/marocco/hotels-marrakesh-tangier-casablanca-fes.webp',
           location: 'Casablanca / Tangier / Fes / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13597,10 +13602,10 @@ export const travelPackages = [
           nights: 7
         },
         {
-          name: '4★ & 5★ Hotels – Imperial Morocco Option 1',
+          name: '4★ & 5★ Hotels – Imperial Morocco',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-option1.webp',
+          image: '/images/marocco/hotels-marrakesh-tangier-casablanca-fes.webp',
           location: 'Casablanca / Tangier / Fes / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13612,10 +13617,10 @@ export const travelPackages = [
           nights: 7
         },
         {
-          name: '4★ & 5★ Hotels – Imperial Morocco Option 1',
+          name: '4★ & 5★ Hotels – Imperial Morocco',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-option1.webp',
+          image: '/images/marocco/hotels-marrakesh-tangier-casablanca-fes.webp',
           location: 'Casablanca / Tangier / Fes / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13626,12 +13631,11 @@ export const travelPackages = [
           departureDate: '06/10',
           nights: 7
         },
-        // Option 2 – double €1,869, single €2,495 (departure: 01/10)
         {
-          name: '4★ & 5★ Hotels – Imperial Morocco Option 2',
+          name: '4★ & 5★ Hotels – Imperial Morocco',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-option2.webp',
+          image: '/images/marocco/hotels-marrakesh-tangier-casablanca-fes.webp',
           location: 'Casablanca / Tangier / Fes / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13684,7 +13688,7 @@ export const travelPackages = [
         day8: '8η μέρα – Μαρακές → Αθήνα → Λάρνακα\n\nΜεταφορά στο αεροδρόμιο για την πτήση επιστροφής μέσω Αθήνας.\nΈνα μοναδικό ταξίδι στην καρδιά του Μαρόκου ολοκληρώνεται, γεμάτο εικόνες, αντιθέσεις, ιστορία, παράδοση και ανατολίτικη μαγεία.'
       },
       gallery: [
-        '/images/destinations/morocco-imperial-hero.webp'
+        '/images/marocco/maroco-church.webp'
       ]
     }
   },
@@ -13708,7 +13712,8 @@ export const travelPackages = [
       boardBasis: 'Half Board',
       airline: 'Aegean Airlines',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 8kg ανά άτομο',
-      coverImage: '/images/destinations/morocco-imperial-tour-hero.webp',
+      thumbnailImage: '/images/marocco/marroco-town.webp',
+      coverImage: '/images/marocco/maroco-church.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13742,10 +13747,10 @@ export const travelPackages = [
       hotels: [
         // Option 1 – double €1,789, single €2,419 (departures: 14/05, 15/09, 06/10)
         {
-          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes (Option 1)',
+          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-tour-option1.webp',
+          image: '/images/marocco/marrakesh.webp',
           location: 'Casablanca / Fes / Erfoud / Ouarzazate / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13757,10 +13762,10 @@ export const travelPackages = [
           nights: 7
         },
         {
-          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes (Option 1)',
+          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-tour-option1.webp',
+          image: '/images/marocco/marrakesh.webp',
           location: 'Casablanca / Fes / Erfoud / Ouarzazate / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13772,10 +13777,10 @@ export const travelPackages = [
           nights: 7
         },
         {
-          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes (Option 1)',
+          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/morocco-imperial-tour-option1.webp',
+          image: '/images/marocco/marrakesh.webp',
           location: 'Casablanca / Fes / Erfoud / Ouarzazate / Marrakech, Morocco',
           boardBasis: 'Half Board',
           prices: {
@@ -13788,7 +13793,7 @@ export const travelPackages = [
         },
         // Option 2 – double €1,869, single €2,495 (departure: 01/10)
         {
-          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes (Option 2)',
+          name: '4★ & 5★ Hotels - Marrakesh / Erfoud / Ouarzazate / Casablanca / Fes',
           stars: 5,
           roomType: 'Standard Room',
           image: '/images/hotels/morocco-imperial-tour-option2.webp',
@@ -13841,7 +13846,7 @@ export const travelPackages = [
         day8: '8η Μέρα – Μαρακές → Αθήνα → Λάρνακα\n\nΠρωινό στο ξενοδοχείο και μεταφορά στο αεροδρόμιο του Μαρακές για την πτήση επιστροφής προς Λάρνακα, με ενδιάμεση στάση στην Αθήνα.\nΤο ταξίδι μας στο Μαρόκο ολοκληρώνεται γεμάτο εικόνες, αρώματα, χρώματα και εμπειρίες – ένα σκηνικό βγαλμένο από τις «Χίλιες και Μία Νύχτες», που μένει αξέχαστο σε κάθε ταξιδιώτη.'
       },
       gallery: [
-        '/images/destinations/morocco-imperial-tour-hero.webp'
+        '/images/marocco/maroco-church.webp'
       ]
     }
   },
@@ -13865,7 +13870,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή 30kg + 1 χειραποσκευή 7kg ανά άτομο',
-      coverImage: '/images/destinations/india-golden-triangle-hero.webp',
+      thumbnailImage: '/images/India/India-elephant.webp',
+      coverImage: '/images/India/India-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13899,10 +13905,10 @@ export const travelPackages = [
       hotels: [
         // Departure 17/09 – double €1,869, single €2,179
         {
-          name: '5★ Hotels - Delhi / Agra / Jaipur (17/09)',
+          name: '5★ Hotels - Delhi / Agra / Jaipur',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/india-golden-triangle-option1.webp',
+          image: '/images/India/India-hotel.webp',
           location: 'Delhi / Agra / Jaipur, India',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13915,10 +13921,10 @@ export const travelPackages = [
         },
         // Departure 18/10 – double €2,109, single €2,445
         {
-          name: '5★ Hotels - Delhi / Agra / Jaipur (18/10)',
+          name: '5★ Hotels - Delhi / Agra / Jaipur',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/india-golden-triangle-option2.webp',
+          image: '/images/India/India-hotel.webp',
           location: 'Delhi / Agra / Jaipur, India',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13970,7 +13976,7 @@ export const travelPackages = [
         day7: '8η – 9η Μέρα: Νέο Δελχί – Ντουμπάι – Λάρνακα\n\nΠρόγευμα και πρωινό ελεύθερο.\nΜεσημεριανό check-out και ξενάγηση στο Νέο Δελχί:\n\n• Ίντια Γκέιτ, μνημείο για τους Ινδούς στρατιώτες\n• Πανοραμική θέα στο Προεδρικό Μέγαρο και τα κυβερνητικά κτίρια\n• Εθνικό Μουσείο & Μουσείο Ίντιρα Γκάντι\n• Μαυσωλείο Χουμαγιούν (UNESCO), πρόδρομος του Ταζ Μαχάλ\n• Ναός του Λωτού, σύμβολο ειρήνης και αρμονίας\n• Κουτάμπ Μινάρ, ο ψηλότερος μιναρές από τούβλο στον κόσμο\n• Ναός Ακσάρνταμ, από τα πιο εντυπωσιακά θρησκευτικά συγκροτήματα της χώρας\n\nΑκολουθεί δείπνο σε τοπικό εστιατόριο.\nΜετάβαση στο αεροδρόμιο Νέου Δελχί για την πτήση επιστροφής προς Λάρνακα, με ενδιάμεση στάση στο Ντουμπάι.\nΆφιξη στην Κύπρο με τις καλύτερες αναμνήσεις από την Ινδία.'
       },
       gallery: [
-        '/images/destinations/india-golden-triangle-hero.webp'
+        '/images/India/India-hero.webp'
       ]
     }
   },
@@ -13994,7 +14000,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Gulf Air',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 6kg ανά άτομο',
-      coverImage: '/images/destinations/thailand-bangkok-pattaya-hero.webp',
+      thumbnailImage: '/images/thailand/thailand-boat.webp',
+      coverImage: '/images/thailand/thailand-boat.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14028,10 +14035,10 @@ export const travelPackages = [
       hotels: [
         // Departure 24/07 – double €2,135, single €2,385
         {
-          name: '4★ Hotels - Bangkok / Pattaya (24/07)',
+          name: '4★ Hotels - Bangkok / Pattaya',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/thailand-bangkok-pattaya-option1.webp',
+          image: '/images/thailand/Thailand-hotel.webp',
           location: 'Bangkok / Khao Yai / Pattaya, Thailand',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14044,10 +14051,10 @@ export const travelPackages = [
         },
         // Departures 07/08, 14/08, 21/08 – double €2,165, single €2,425
         {
-          name: '4★ Hotels - Bangkok / Pattaya (07/08)',
+          name: '4★ Hotels - Bangkok / Pattaya',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/thailand-bangkok-pattaya-option2.webp',
+          image: '/images/thailand/Thailand-hotel.webp',
           location: 'Bangkok / Khao Yai / Pattaya, Thailand',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14059,10 +14066,10 @@ export const travelPackages = [
           nights: 8
         },
         {
-          name: '4★ Hotels - Bangkok / Pattaya (14/08)',
+          name: '4★ Hotels - Bangkok / Pattaya',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/thailand-bangkok-pattaya-option2.webp',
+          image: '/images/thailand/Thailand-hotel.webp',
           location: 'Bangkok / Khao Yai / Pattaya, Thailand',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14074,10 +14081,10 @@ export const travelPackages = [
           nights: 8
         },
         {
-          name: '4★ Hotels - Bangkok / Pattaya (21/08)',
+          name: '4★ Hotels - Bangkok / Pattaya',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/thailand-bangkok-pattaya-option2.webp',
+          image: '/images/thailand/Thailand-hotel.webp',
           location: 'Bangkok / Khao Yai / Pattaya, Thailand',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14127,7 +14134,7 @@ export const travelPackages = [
         day9: '10η – 11η Μέρα: Πατάγια – Μπανγκόκ – Μπαχρέιν – Λάρνακα\n\nΠρωινό και ελεύθερος χρόνος στην Πατάγια για τις τελευταίες βόλτες ή αγορές. Μεταφορά στο αεροδρόμιο της Μπανγκόκ και πτήση επιστροφής με ενδιάμεση στάση στο Μπαχρέιν. Άφιξη στη Λάρνακα το πρωί της επόμενης ημέρας.'
       },
       gallery: [
-        '/images/destinations/thailand-bangkok-pattaya-hero.webp'
+        '/images/thailand/thailand-boat.webp'
       ]
     }
   },
@@ -14151,7 +14158,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή 30kg + 1 χειραποσκευή 7kg ανά άτομο',
-      coverImage: '/images/destinations/japan-hero.webp',
+      thumbnailImage: '/images/Japan/japan-cover.webp',
+      coverImage: '/images/Japan/Japan-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14185,10 +14193,10 @@ export const travelPackages = [
       hotels: [
         // Departures 13/05, 15/07 – double €4,799, single €5,829
         {
-          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo (13/05)',
+          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/japan-option1.webp',
+          image: '/images/Japan/Japan-hotel.webp',
           location: 'Osaka / Kyoto / Matsumoto / Tokyo, Japan',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14200,10 +14208,10 @@ export const travelPackages = [
           nights: 9
         },
         {
-          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo (15/07)',
+          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/japan-option1.webp',
+          image: '/images/Japan/Japan-hotel.webp',
           location: 'Osaka / Kyoto / Matsumoto / Tokyo, Japan',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14216,10 +14224,10 @@ export const travelPackages = [
         },
         // Departure 12/08 – double €4,849, single €5,879
         {
-          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo (12/08)',
+          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/japan-option2.webp',
+          image: '/images/Japan/Japan-hotel.webp',
           location: 'Osaka / Kyoto / Matsumoto / Tokyo, Japan',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14232,10 +14240,10 @@ export const travelPackages = [
         },
         // Departure 16/09 – double €4,895, single €6,049
         {
-          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo (16/09)',
+          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/japan-option3.webp',
+          image: '/images/Japan/Japan-hotel.webp',
           location: 'Osaka / Kyoto / Matsumoto / Tokyo, Japan',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14248,10 +14256,10 @@ export const travelPackages = [
         },
         // Departure 14/10 – double €4,945, single €6,099
         {
-          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo (14/10)',
+          name: '4★ Hotels - Osaka / Kyoto / Matsumoto / Tokyo',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/japan-option4.webp',
+          image: '/images/Japan/Japan-hotel.webp',
           location: 'Osaka / Kyoto / Matsumoto / Tokyo, Japan',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14308,7 +14316,7 @@ export const travelPackages = [
         day10: '11η – 12η Μέρα: Τόκιο – Ντουμπάι – Λάρνακα\n\nΠρωινό και χρόνος ελεύθερος έως την αναχώρηση, ώστε να αξιοποιήσετε τις τελευταίες σας ώρες στο Τόκιο για ξεκούραση, αγορές ή μια τελευταία βόλτα στην πόλη.\n\nΤο απόγευμα μεταφορά στο αεροδρόμιο για να πάρουμε την πτήση της επιστροφής για Λάρνακα μέσω Ντουμπάι, ολοκληρώνοντας ένα μοναδικό ταξίδι γεμάτο εικόνες, εμπειρίες και αξέχαστες αναμνήσεις από την Ιαπωνία.'
       },
       gallery: [
-        '/images/destinations/japan-hero.webp'
+        '/images/Japan/Japan-hero.webp'
       ]
     }
   },
@@ -14332,7 +14340,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'LOT Polish Airlines',
       includedLuggage: '1 αποσκευή συμπεριλαμβάνεται',
-      coverImage: '/images/destinations/iceland-fire-ice-hero.webp',
+      thumbnailImage: '/images/Iceland/iceland-cover.webp',
+      coverImage: '/images/Iceland/iceland-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14366,10 +14375,10 @@ export const travelPackages = [
       hotels: [
         // Departure 04/07 – double €3,649, single €4,949
         {
-          name: '3★ & 4★ Hotels - Iceland (04/07)',
+          name: '3★ & 4★ Hotels - Iceland',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/iceland-option1.webp',
+          image: '/images/Iceland/iceland-hotel.webp',
           location: 'Reykjavik / Borgarnes / Hella, Iceland',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14382,10 +14391,10 @@ export const travelPackages = [
         },
         // Departure 01/08 – double €3,855, single €5,155
         {
-          name: '3★ & 4★ Hotels - Iceland (01/08)',
+          name: '3★ & 4★ Hotels - Iceland',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/iceland-option2.webp',
+          image: '/images/Iceland/iceland-hotel.webp',
           location: 'Reykjavik / Borgarnes / Hella, Iceland',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14434,7 +14443,7 @@ export const travelPackages = [
         day8: '8η & 9η ημέρα: Ρέικιαβικ – Βαρσοβία – Λάρνακα\n\nΜετά το πρωινό, η μέρα είναι ελεύθερη μέχρι το απόγευμα, προσφέροντάς σας την ευκαιρία να απολαύσετε το Ρέικιαβικ με τον δικό σας ρυθμό. Μπορείτε να περπατήσετε στους πολύχρωμους δρόμους της πόλης, να επισκεφθείτε κάποια από τα μουσεία, να κάνετε τα τελευταία σας ψώνια ή απλώς να χαλαρώσετε σε ένα από τα πολλά καφέ της πρωτεύουσας.\n\nΓύρω στις 21:00 αναχωρούμε με κατεύθυνση το αεροδρόμιο για την πτήση της επιστροφής μας. Άφιξη στην Κύπρο το απόγευμα της 9ης ημέρας, έχοντας μαζί μας μοναδικές εικόνες, εμπειρίες και αναμνήσεις από ένα ανεπανάληπτο ταξίδι στην Ισλανδία.'
       },
       gallery: [
-        '/images/destinations/iceland-fire-ice-hero.webp'
+        '/images/Iceland/iceland-hero.webp'
       ]
     }
   },
@@ -14458,7 +14467,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή 23kg (Larnaca-Athens) + 2 αποσκευές 23kg (Athens-New York-Athens) + 1 χειραποσκευή ανά άτομο',
-      coverImage: '/images/destinations/new-york-hero.webp',
+      thumbnailImage: '/images/new-york/New-york-cover.webp',
+      coverImage: '/images/new-york/new-york-white.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14492,10 +14502,10 @@ export const travelPackages = [
       hotels: [
         // Option 1 – 03/07: double €3,349, single €4,429
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (03/07)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option1.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14508,10 +14518,10 @@ export const travelPackages = [
         },
         // Option 2 – 02/08: double €3,819, single €5,025
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (02/08)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option2.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14524,10 +14534,10 @@ export const travelPackages = [
         },
         // Option 3 – 13/08: double €3,479, single €4,685
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (13/08)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option3.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14540,10 +14550,10 @@ export const travelPackages = [
         },
         // Option 4 – 21/08: double €3,585, single €4,789
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (21/08)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option4.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14556,10 +14566,10 @@ export const travelPackages = [
         },
         // Option 5 – 10/10: double €3,745, single €5,195
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (10/10)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option5.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14572,10 +14582,10 @@ export const travelPackages = [
         },
         // Option 6 – 23/10: double €3,725, single €5,169
         {
-          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta (23/10)',
+          name: '4★ Hotel New York – Marriott Marquis / Shelburne Sonesta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/new-york-option6.webp',
+          image: '/images/new-york/new-york-hotel.webp',
           location: 'Times Square, New York, United States',
           boardBasis: 'Room Only',
           prices: {
@@ -14632,7 +14642,7 @@ export const travelPackages = [
         day8: '8η-9η μέρα: Νέα Υόρκη – Αθήνα – Λάρνακα\n\nΤελευταία μέρα της εκδρομής σήμερα και σας ΠΡΟΣΦΕΡΟΥΜΕ ΔΩΡΕΑΝ επίσκεψη στο Αμερικανικό Μουσείο Φυσικής Ιστορίας (American Museum of Natural History). Το Αμερικανικό Μουσείο Φυσικής Ιστορίας είναι ένας «υποχρεωτικός προορισμός» για όσους ενδιαφέρονται για τον φυσικό κόσμο. Εκτείνεται σε τέσσερα οικοδομικά τετράγωνα και αποτελείται από 28 ενωμένα μεταξύ τους κτίρια, καθιστώντας το, το μεγαλύτερο μουσείο φυσικής ιστορίας στον κόσμο.\n\nΣτο μουσείο φιλοξενεί περισσότερα από 33 εκατομμύρια δείγματα φυτών, ζώων, απολιθωμάτων, ορυκτών και πετρωμάτων, μετεωριτών, ανθρώπινων οστών, αλλά και ανθρώπινων πολιτισμικών τέχνεργων. Επίσης, διαθέτει πλανητάριο και βιβλιοθήκη.\n\nΜεταφορά στο αεροδρόμιο και πτήση για την Αθήνα. Άφιξη την επόμενη μέρα παραλαβή αποσκευών και πτήση για Λάρνακα.'
       },
       gallery: [
-        '/images/destinations/new-york-hero.webp'
+        '/images/new-york/new-york-white.webp'
       ]
     }
   },
@@ -14656,7 +14666,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Lufthansa',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 7kg (εσωτερικές πτήσεις: 15kg)',
-      coverImage: '/images/destinations/argentina-brazil-iguazu-hero.webp',
+      thumbnailImage: '/images/argenitna-brazil/argentina-brazil-waterfall-light.webp',
+      coverImage: '/images/argenitna-brazil/argentina-brazil-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14704,10 +14715,10 @@ export const travelPackages = [
       hotels: [
         // Option 1 – 21/07: double €4,349, single €5,085
         {
-          name: '4★ Hotels - Buenos Aires / Iguazu / Rio de Janeiro (21/07)',
+          name: '4★ Hotels - Buenos Aires / Iguazu / Rio de Janeiro',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/argentina-brazil-option1.webp',
+          image: '/images/argenitna-brazil/argentina-brazil-hotel.webp',
           location: 'Buenos Aires / Iguazu / Rio de Janeiro, Argentina & Brazil',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14720,10 +14731,10 @@ export const travelPackages = [
         },
         // Option 2 – 06/08: double €4,399, single €5,135
         {
-          name: '4★ Hotels - Buenos Aires / Iguazu / Rio de Janeiro (06/08)',
+          name: '4★ Hotels - Buenos Aires / Iguazu / Rio de Janeiro',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/argentina-brazil-option2.webp',
+          image: '/images/argenitna-brazil/argentina-brazil-hotel.webp',
           location: 'Buenos Aires / Iguazu / Rio de Janeiro, Argentina & Brazil',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14774,7 +14785,7 @@ export const travelPackages = [
         day10: '11η – 12η Μέρα: Ρίο Ντε Τζανέιρο – Φρανκφούρτη – Λάρνακα\n\nΕλεύθερος χρόνος στο Ρίο. Μεταφορά στο αεροδρόμιο και πτήση επιστροφής μέσω Φρανκφούρτης. Άφιξη στη Λάρνακα την 12η ημέρα.'
       },
       gallery: [
-        '/images/destinations/argentina-brazil-iguazu-hero.webp'
+        '/images/argenitna-brazil/argentina-brazil-hero.webp'
       ]
     }
   },
@@ -14798,7 +14809,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή 30kg (διεθνείς πτήσεις) + 1 αποσκευή 23kg (εσωτερική πτήση) + 1 χειραποσκευή ανά άτομο',
-      coverImage: '/images/destinations/south-africa-hero.webp',
+      thumbnailImage: '/images/south-africa/south-africa-giraffe.webp',
+      coverImage: '/images/south-africa/south-africa-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14839,10 +14851,10 @@ export const travelPackages = [
       hotels: [
         // Departure 10/08 – double €4,655, single €5,515, triple €4,655
         {
-          name: '4★ & 5★ Hotels - South Africa (10/08)',
+          name: '4★ & 5★ Hotels - South Africa',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/south-africa-option1.webp',
+          image: '/images/south-africa/south-africa-hotel.webp',
           location: 'Johannesburg / Sun City / Pilansberg / Cape Town, South Africa',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14856,10 +14868,10 @@ export const travelPackages = [
         },
         // Departure 12/10 – double €4,919, single €5,875, triple €4,919
         {
-          name: '4★ & 5★ Hotels - South Africa (12/10)',
+          name: '4★ & 5★ Hotels - South Africa',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/south-africa-option2.webp',
+          image: '/images/south-africa/south-africa-hotel.webp',
           location: 'Johannesburg / Sun City / Pilansberg / Cape Town, South Africa',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14906,7 +14918,7 @@ export const travelPackages = [
         day10: '11η & 12η Μέρα: Κέιπ Τάουν – Λάρνακα\n\nΞενάγηση στην πόλη με επίσκεψη στη συνοικία Bo-Kaap και στον Βοτανικό Κήπο Kirstenbosch. Μεταφορά στο αεροδρόμιο και πτήση επιστροφής μέσω Ντουμπάι. Άφιξη στη Λάρνακα την 12η ημέρα.'
       },
       gallery: [
-        '/images/destinations/south-africa-hero.webp'
+        '/images/south-africa/south-africa-hero.webp'
       ]
     }
   },
@@ -14930,7 +14942,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 10kg ανά άτομο',
-      coverImage: '/images/destinations/australia-hero.webp',
+      thumbnailImage: '/images/Australia/australia-cover.webp',
+      coverImage: '/images/Australia/australia-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14971,10 +14984,10 @@ export const travelPackages = [
       hotels: [
         // Departure 17/10 – double €5,295, single €6,269
         {
-          name: '4★ Hotels - Melbourne / Sydney (17/10)',
+          name: '4★ Hotels - Melbourne / Sydney',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/australia-option1.webp',
+          image: '/images/Australia/australia-hotel.webp',
           location: 'Melbourne / Sydney, Australia',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14987,10 +15000,10 @@ export const travelPackages = [
         },
         // Departure 05/11 – double €5,375, single €6,409
         {
-          name: '4★ Hotels - Melbourne / Sydney (05/11)',
+          name: '4★ Hotels - Melbourne / Sydney',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/australia-option2.webp',
+          image: '/images/Australia/australia-hotel.webp',
           location: 'Melbourne / Sydney, Australia',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -15038,7 +15051,7 @@ export const travelPackages = [
         day10: '11η & 12η Μέρα: Σίδνεϋ – Ντουμπάι – Λάρνακα\n\nΕλεύθερος χρόνος και μεταφορά στο αεροδρόμιο για την πτήση επιστροφής με ενδιάμεση στάση στο Ντουμπάι. Άφιξη στη Λάρνακα την 12η ημέρα.'
       },
       gallery: [
-        '/images/destinations/australia-hero.webp'
+        '/images/Australia/australia-hero.webp'
       ]
     }
   },

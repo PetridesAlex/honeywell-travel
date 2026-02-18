@@ -30,12 +30,14 @@ function Footer() {
               </span>
             </a>
             <a 
-              href="mailto:info@honeywelltravel.com.cy" 
+              href="mailto:info@honeywelltravel.com.cy?subject=Honeywell%20Travel%20Inquiry" 
               className="contact-item contact-link email-link"
               title="Email info@honeywelltravel.com.cy"
+              aria-label="Send email to info@honeywelltravel.com.cy"
             >
               <div className="contact-icon email-icon">✉️</div>
               <span className="contact-label">Email</span>
+              <span className="contact-value">info@honeywelltravel.com.cy</span>
             </a>
           </div>
           <div className="address-section">
