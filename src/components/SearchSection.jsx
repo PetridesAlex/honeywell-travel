@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import { getPackagesByFilter } from '../data/packages'
+import PackageCard from './PackageCard'
 import './SearchSection.css'
 
 // Helper function to convert category name to URL-friendly slug
@@ -66,6 +68,14 @@ function SearchSection() {
     if (cat === 'Any') return null
     return cat.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and').replace(/[^a-z0-9-]/g, '')
   }
+
+  // Packages for the selected category (and destination)
+  const packagesForSelection = useMemo(() => {
+    if (category === 'Any') return []
+    return getPackagesByFilter(category, destination)
+  }, [category, destination])
+
+  const categoryLabel = categories.find(c => c.value === category)?.label ?? category
 
   return (
     <section className="search-section">
@@ -146,43 +156,51 @@ function SearchSection() {
           </button>
         </form>
 
-        {/* Show selected category with navigation to other categories */}
-        {category !== 'Any' && (
-          <div className="selected-category-section">
-            <div className="selected-category-info">
-              <h3 className="selected-category-title">
-                {categories.find(c => c.value === category)?.icon} {category}
+        {/* Show packages for the selected category */}
+        <div className="packages-by-category-section">
+          {category === 'Any' ? (
+            <>
+              <h3 className="packages-by-category-title">See packages by category</h3>
+              <p className="packages-by-category-subtitle">Select a category above to view available packages for Summer, Winter, City Breaks, and more.</p>
+            </>
+          ) : (
+            <>
+              <h3 className="packages-by-category-title">
+                {categories.find(c => c.value === category)?.icon} {categoryLabel}
               </h3>
-              <p className="selected-category-description">
-                Showing packages for {category}. Browse other categories below.
+              <p className="packages-by-category-subtitle">
+                {packagesForSelection.length === 0
+                  ? `No packages found for ${categoryLabel}${destination !== 'Any' ? ` in ${destination}` : ''}. Try another category or destination.`
+                  : `Showing ${packagesForSelection.length} package${packagesForSelection.length === 1 ? '' : 's'} for ${categoryLabel}${destination !== 'Any' ? ` in ${destination}` : ''}.`
+                }
               </p>
-            </div>
-            <div className="other-categories-quick-nav">
-              <h4 className="quick-nav-title">Other Categories</h4>
-              <div className="quick-nav-categories">
-                {categories.filter(c => c.value !== 'Any' && c.value !== category).slice(0, 6).map((cat) => {
-                  const slug = getCategorySlug(cat.value)
-                  if (!slug) return null
-                  return (
-                    <Link
-                      key={cat.value}
-                      to={`/tour-category/${slug}/`}
-                      className="quick-nav-category-link"
-                      onClick={() => {
-                        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-                        if (document.documentElement) document.documentElement.scrollTop = 0
-                        if (document.body) document.body.scrollTop = 0
-                        setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
-                      }}
-                    >
-                      {cat.icon} {cat.label}
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        )}
+              {packagesForSelection.length > 0 && (
+                <>
+                  <div className="packages-by-category-cards">
+                    {packagesForSelection.slice(0, 6).map((pkg) => (
+                      <PackageCard key={pkg.id} package={pkg} />
+                    ))}
+                  </div>
+                  {packagesForSelection.length > 6 && (
+                    <div className="packages-by-category-view-all">
+                      <Link
+                        to={`/tour-category/${getCategorySlug(category)}/`}
+                        className="packages-by-category-view-all-link"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+                          if (document.documentElement) document.documentElement.scrollTop = 0
+                          if (document.body) document.body.scrollTop = 0
+                        }}
+                      >
+                        View all {packagesForSelection.length} packages →
+                      </Link>
+                    </div>
+                  )}
+                </>
+              )}
+            </>
+          )}
+        </div>
 
       </div>
     </section>
