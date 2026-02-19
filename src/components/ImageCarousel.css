@@ -93,6 +93,7 @@
     rgba(0, 0, 0, 0.12) 65%,
     rgba(0, 0, 0, 0.25) 100%
   );
+  pointer-events: none;
 }
 
 .slide-content {
@@ -293,6 +294,8 @@
   .image-carousel {
     min-height: 100vh;
     height: 100vh;
+    /* Allow vertical scroll immediately so hero doesn’t block touch scrolling */
+    touch-action: pan-y;
     /* Performance optimizations */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);

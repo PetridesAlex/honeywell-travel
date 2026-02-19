@@ -115,6 +115,7 @@ textarea {
     overscroll-behavior-y: contain;
     -webkit-overflow-scrolling: touch;
     touch-action: manipulation;
+    overflow-x: hidden;
   }
 
   /* Avoid GPU layers on body/root that can cause scroll lag on some iOS/Android */

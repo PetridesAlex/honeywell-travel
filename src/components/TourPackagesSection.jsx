@@ -39,12 +39,45 @@ function TourPackagesSection() {
 
   const tourPackages = [
     {
+      id: 'easter-packages',
+      title: 'Easter Packages',
+      icon: '🐰',
+      description: 'Easter breaks in beautiful locations',
+      color: '#FFB6C1',
+      image: '/images/categories/easter-cover.webp'
+    },
+    {
       id: 'summer-packages',
       title: 'Summer Packages',
       icon: '☀️',
       description: 'Perfect summer getaways for your vacation',
       color: '#FF6B35',
       image: '/images/categories/summer-travel-package-cover.webp'
+    },
+    {
+      id: 'exotic-packages',
+      title: 'Exotic Packages',
+      icon: '🌴',
+      description: 'Discover exotic and tropical paradises',
+      color: '#FF6347',
+      image: '/images/categories/exotic-travel-package-cover.webp'
+    },
+    {
+      id: 'city-breaks',
+      title: 'City Breaks',
+      icon: '🏙️',
+      description: 'Urban adventures in vibrant cities',
+      color: '#8B008B',
+      image: '/images/categories/city-break-travel-package-cover.webp?v=2',
+      imagePosition: 'center 52%'
+    },
+    {
+      id: 'cruises',
+      title: 'Cruises',
+      icon: '🚢',
+      description: 'Luxury cruises to exotic destinations',
+      color: '#1E90FF',
+      image: '/images/categories/cruises-travel-package-cover.webp'
     },
     {
       id: 'autumn-packages',
@@ -63,14 +96,6 @@ function TourPackagesSection() {
       image: '/images/categories/winter-travel-package-cover.webp'
     },
     {
-      id: 'ski-packages',
-      title: 'Ski Packages',
-      icon: '⛷️',
-      description: 'Hit the slopes at world-class ski resorts',
-      color: '#87CEEB',
-      image: '/images/categories/ski-travel-package-cover.webp'
-    },
-    {
       id: 'christmas-packages',
       title: 'Christmas Packages',
       icon: '🎄',
@@ -79,12 +104,12 @@ function TourPackagesSection() {
       image: '/images/categories/chrsitmas-travel-package-cover.webp'
     },
     {
-      id: 'easter-packages',
-      title: 'Easter Packages',
-      icon: '🐰',
-      description: 'Easter breaks in beautiful locations',
-      color: '#FFB6C1',
-      image: '/images/categories/easter-cover.webp'
+      id: 'ski-packages',
+      title: 'Ski Packages',
+      icon: '⛷️',
+      description: 'Hit the slopes at world-class ski resorts',
+      color: '#87CEEB',
+      image: '/images/categories/ski-travel-package-cover.webp'
     },
     {
       id: 'green-monday',
@@ -92,32 +117,7 @@ function TourPackagesSection() {
       icon: '🌿',
       description: 'Special Green Monday travel deals',
       color: '#228B22',
-      image: '/images/categories/green-monday-travel-package-cover.webp'   
-    },
-    {
-      id: 'cruises',
-      title: 'Cruises',
-      icon: '🚢',
-      description: 'Luxury cruises to exotic destinations',
-      color: '#1E90FF',
-      image: '/images/categories/cruises-travel-package-cover.webp'
-    },
-    {
-      id: 'city-breaks',
-      title: 'City Breaks',
-      icon: '🏙️',
-      description: 'Urban adventures in vibrant cities',
-      color: '#8B008B',
-      image: '/images/categories/city-break-travel-package-cover.webp?v=2',
-      imagePosition: 'center 52%'
-    },
-    {
-      id: 'exotic-packages',
-      title: 'Exotic Packages',
-      icon: '🌴',
-      description: 'Discover exotic and tropical paradises',
-      color: '#FF6347',
-      image: '/images/categories/exotic-travel-package-cover.webp'
+      image: '/images/categories/green-monday-travel-package-cover.webp'
     },
     {
       id: 'music-sports',
