@@ -9,6 +9,7 @@ function Corporate() {
   const [formData, setFormData] = useState({
     name: '',
     companyName: '',
+    email: '',
     contactNumber: '',
     message: ''
   })
@@ -31,14 +32,14 @@ function Corporate() {
       const result = await sendContactForm({
         title: 'Corporate Travel Quote Request',
         name: formData.name,
-        email: '', // Not required for quote
+        email: formData.email,
         phone: formData.contactNumber,
-        message: `Name: ${formData.name}\nCompany: ${formData.companyName}\nContact: ${formData.contactNumber}\n\nMessage:\n${formData.message}`
+        message: `Name: ${formData.name}\nCompany: ${formData.companyName}\nEmail: ${formData.email}\nContact: ${formData.contactNumber}\n\nMessage:\n${formData.message}`
       })
 
       if (result.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', companyName: '', contactNumber: '', message: '' })
+        setFormData({ name: '', companyName: '', email: '', contactNumber: '', message: '' })
         setTimeout(() => {
           setShowQuoteModal(false)
           setSubmitStatus(null)
@@ -141,6 +142,20 @@ function Corporate() {
                   onChange={handleInputChange}
                   required
                   placeholder="Enter your company name"
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="your@email.com"
                   disabled={isSubmitting}
                 />
               </div>

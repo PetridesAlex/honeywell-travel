@@ -40,8 +40,8 @@ function BookOnline() {
     'Luxury'
   ]
 
-  // Filter packages based on selections  
-  const filteredPackages = travelPackages.filter(pkg => {
+  // Filter packages based on selections (exclude hidden)
+  const filteredPackages = travelPackages.filter(pkg => !pkg.hidden).filter(pkg => {
     let matches = true
 
     // Filter by category

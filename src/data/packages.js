@@ -3560,6 +3560,7 @@ export const travelPackages = [
     title: 'CRETE – 5 Days',
     destination: 'Greece',
     category: 'Summer Packages',
+    hidden: true,
     price: 249,
     duration: '5 days / 4 nights',
     description: 'Discover the beautiful island of Crete with its stunning beaches, rich history, and warm hospitality.',
@@ -6728,8 +6729,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Anima Wings',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/bucharest-transylvania-hero.png',
-      thumbnailImage: '/images/destinations/bucharest-transylvania-thumb.png',
+      coverImage: '/images/Balcans-countries/balcans-hero.webp',
+      thumbnailImage: '/images/Balcans-countries/balcans-hotel.webp',
       flights: [
         {
           direction: 'Departure',
@@ -6827,7 +6828,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Βουκουρέστι – Λάρνακα\n\nΠρόγευμα και μεταφορά στο αεροδρόμιο Βουκουρεστίου.\nΠτήση επιστροφής για Λάρνακα, γεμάτοι όμορφες εικόνες και εμπειρίες από τη Ρουμανία.'
       },
       gallery: [
-        '/images/destinations/bucharest-transylvania-hero.png'
+        '/images/Balcans-countries/balcans-hero.webp'
       ]
     }
   },
@@ -7856,7 +7857,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Aegean Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/constanipole-hero.webp',
+      coverImage: '/images/Constandinopole/instanbul-hero.webp',
       thumbnailImage: '/images/destinations/constantinopole-view.webp',
       flights: [
         {
@@ -8071,7 +8072,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Πατριαρχείο – Βλαχέρνα – Βαλουκλή – Αθήνα – Λάρνακα\n\nΠρόγευμα και αναχώρηση για μια ημέρα με έντονο ιστορικό και πνευματικό χαρακτήρα:\n\n• Επίσκεψη στο Οικουμενικό Πατριαρχείο\n• Προσκύνημα στον Πατριαρχικό Ναό Αγίου Γεωργίου\n• Θέαση της Κλειστής Πύλης και του χώρου μαρτυρίου του Πατριάρχη Γρηγορίου Ε\'\n• Επίσκεψη στην Παναγία των Βλαχερνών, έναν από τους ιερότερους τόπους της Ορθοδοξίας, όπου σύμφωνα με την παράδοση ψάλθηκε για πρώτη φορά ο Ακάθιστος Ύμνος\n• Επίσκεψη στην Ζωοδόχο Πηγή (Βαλουκλή) και στους Τάφους των Πατριαρχών\n\nΚατά τη διαδρομή θα δούμε:\n• Τα επιβλητικά Θεοδοσιανά Τείχη\n• Τη Χρυσή Πύλη του Βυζαντίου\n\nΣτη συνέχεια, μεταφορά στο αεροδρόμιο της Κωνσταντινούπολης για την πτήση επιστροφής στη Λάρνακα μέσω Αθήνας.'
       },
       gallery: [
-        '/images/destinations/constanipole-hero.webp'
+        '/images/Constandinopole/instanbul-hero.webp'
       ]
     }
   },
@@ -9438,7 +9439,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast / Half Board',
       airline: 'Aegean Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/istanbul-asia-minor-hero.webp',
+      coverImage: '/images/Constandinopole/instanbul-hero.webp',
+      thumbnailImage: '/images/Constandinopole/instanbul-castle-sea.webp',
       flights: [
         {
           direction: 'Departure',
@@ -9474,302 +9476,13 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Period A: 10/07, 21/08
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '10/07',
-          packagePrice: 2458
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '10/07',
-          packagePrice: 2458
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '10/07',
-          packagePrice: 2458
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '21/08',
-          packagePrice: 2458
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '21/08',
-          packagePrice: 2458
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1229,
-            single: 1545,
-            child1: 999
-          },
-          departureDate: '21/08',
-          packagePrice: 2458
-        },
-        // Period B: 17/07, 24/07, 31/07, 07/08, 14/08
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '17/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '17/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '17/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '24/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '24/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '24/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '31/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '31/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '31/07',
-          packagePrice: 2518
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '07/08',
-          packagePrice: 2518
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '07/08',
-          packagePrice: 2518
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '07/08',
-          packagePrice: 2518
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '14/08',
-          packagePrice: 2518
-        },
-        {
-          name: 'Çanakkale Hotel – Çanakkale',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/canakkale-hotel.webp',
-          location: 'Çanakkale Hotel, Çanakkale, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '14/08',
-          packagePrice: 2518
-        },
-        {
-          name: 'Smyrna Hotel – Smyrna',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/smyrna-hotel.webp',
-          location: 'Smyrna Hotel, Smyrna, Turkey',
-          prices: {
-            double: 1259,
-            single: 1585,
-            child1: 999
-          },
-          departureDate: '14/08',
-          packagePrice: 2518
-        }
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1229, single: 1545, child1: 999 }, departureDate: '10/07', packagePrice: 2458 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1229, single: 1545, child1: 999 }, departureDate: '21/08', packagePrice: 2458 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1259, single: 1585, child1: 999 }, departureDate: '17/07', packagePrice: 2518 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1259, single: 1585, child1: 999 }, departureDate: '24/07', packagePrice: 2518 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1259, single: 1585, child1: 999 }, departureDate: '31/07', packagePrice: 2518 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1259, single: 1585, child1: 999 }, departureDate: '07/08', packagePrice: 2518 },
+        { name: '5★ Hotel Çanakkale & 4★ Hotels Constantinople / Smyrna', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/instanbul-hotel.webp', location: 'Alexandroupolis, Greece', prices: { double: 1259, single: 1585, child1: 999 }, departureDate: '14/08', packagePrice: 2518 }
       ],
       included: [
         'Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Κωνσταντινούπολη / Σμύρνη – Αθήνα – Λάρνακα με Aegean Airlines',
@@ -9816,7 +9529,7 @@ export const travelPackages = [
         day8: '8η Μέρα: Σμύρνη – Αθήνα – Λάρνακα\n\nΠρόγευμα και ξενάγηση στην πόλη της Σμύρνης:\n\nΘα δούμε:\n\n• Το Μπεζεστένι\n• Τη Ρωμαϊκή Αγορά\n• Το Ελληνικό Προξενείο\n• Τα παλιά ελληνικά κτίρια που έχουν διασωθεί\n• Τον Άγιο Πολύκαρπο\n• Το πρώην Παρεναγωγείο\n• Τον Άγιο Βούκολο\n\nΣτη συνέχεια, μεταφορά στο αεροδρόμιο της Σμύρνης για την πτήση επιστροφής μέσω Αθηνών προς Λάρνακα.'
       },
       gallery: [
-        '/images/destinations/istanbul-asia-minor-hero.webp'
+        '/images/Constandinopole/instanbul-hero.webp'
       ]
     }
   },
@@ -9840,7 +9553,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Air Baltic',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/baltic-states-hero.webp',
+      coverImage: '/images/Balcans-countries/balcans-hero.webp',
+      thumbnailImage: '/images/Balcans-countries/balcans-hotel.webp',
       flights: [
         {
           direction: 'Departure',
@@ -9868,302 +9582,13 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Period A: 09/07, 16/07, 20/08
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '09/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '09/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '09/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '16/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '16/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '16/07',
-          packagePrice: 2590
-        },
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '20/08',
-          packagePrice: 2590
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '20/08',
-          packagePrice: 2590
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1295,
-            single: 1599,
-            child1: 1079
-          },
-          departureDate: '20/08',
-          packagePrice: 2590
-        },
-        // Period B: 23/07, 30/07, 06/08, 13/08
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '23/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '23/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '23/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '30/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '30/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '30/07',
-          packagePrice: 2650
-        },
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '06/08',
-          packagePrice: 2650
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '06/08',
-          packagePrice: 2650
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '06/08',
-          packagePrice: 2650
-        },
-        {
-          name: 'Riga Hotel – Riga',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/riga-hotel.webp',
-          location: 'Riga Hotel, Riga, Latvia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '13/08',
-          packagePrice: 2650
-        },
-        {
-          name: 'Tallinn Hotel – Tallinn',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/tallinn-hotel.webp',
-          location: 'Tallinn Hotel, Tallinn, Estonia',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '13/08',
-          packagePrice: 2650
-        },
-        {
-          name: 'Vilnius Hotel – Vilnius',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/vilnius-hotel.webp',
-          location: 'Vilnius Hotel, Vilnius, Lithuania',
-          prices: {
-            double: 1325,
-            single: 1629,
-            child1: 1099
-          },
-          departureDate: '13/08',
-          packagePrice: 2650
-        }
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1295, single: 1599, child1: 1079 }, departureDate: '09/07', packagePrice: 2590 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1295, single: 1599, child1: 1079 }, departureDate: '16/07', packagePrice: 2590 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1295, single: 1599, child1: 1079 }, departureDate: '20/08', packagePrice: 2590 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1325, single: 1629, child1: 1099 }, departureDate: '23/07', packagePrice: 2650 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1325, single: 1629, child1: 1099 }, departureDate: '30/07', packagePrice: 2650 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1325, single: 1629, child1: 1099 }, departureDate: '06/08', packagePrice: 2650 },
+        { name: 'Riga Hotel – Riga', stars: 4, roomType: 'Standard Room', image: '/images/Balcans-countries/balcans-hotel.webp', location: 'Riga, Tallinn, Vilnius – Baltic States', prices: { double: 1325, single: 1629, child1: 1099 }, departureDate: '13/08', packagePrice: 2650 }
       ],
       included: [
         'Αεροπορικά εισιτήρια Λάρνακα – Ρίγα & Βίλνιους – Ρίγα – Λάρνακα με Air Baltic',
@@ -10206,7 +9631,7 @@ export const travelPackages = [
         day8: '8η Μέρα: Βίλνιους – Ρίγα – Λάρνακα\n\nΠρόγευμα (breakfast box).\n\nΜεταφορά στο αεροδρόμιο του Βίλνιους για πτήση προς Ρίγα και στη συνέχεια για Λάρνακα.\n\nΕπιστροφή γεμάτοι εικόνες, ιστορία και εμπειρίες από τρεις υπέροχες πρωτεύουσες της Βαλτικής.'
       },
       gallery: [
-        '/images/destinations/baltic-states-hero.webp'
+        '/images/Balcans-countries/balcans-hero.webp'
       ]
     }
   },
@@ -10230,7 +9655,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast / Half Board',
       airline: 'Aegean Airlines / Turkish Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg (international), 1 checked bag 20kg + 1 hand luggage 8kg (domestic)',
-      coverImage: '/images/destinations/istanbul-cappadocia-hero.webp',
+      coverImage: '/images/Constandinopole/cappadocia-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -10274,260 +9699,13 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Period A: 15/07, 29/07, 05/08
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '15/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '15/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '15/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '29/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '29/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '29/07',
-          packagePrice: 2790
-        },
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '05/08',
-          packagePrice: 2790
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '05/08',
-          packagePrice: 2790
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1395,
-            single: 1735,
-            child1: 1195
-          },
-          departureDate: '05/08',
-          packagePrice: 2790
-        },
-        // Period B: 22/07, 12/08, 26/08
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '22/07',
-          packagePrice: 2898
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '22/07',
-          packagePrice: 2898
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '22/07',
-          packagePrice: 2898
-        },
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '12/08',
-          packagePrice: 2898
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '12/08',
-          packagePrice: 2898
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '12/08',
-          packagePrice: 2898
-        },
-        {
-          name: 'Prusa Hotel – Prusa',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/prusa-hotel.webp',
-          location: 'Prusa Hotel, Prusa, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '26/08',
-          packagePrice: 2898
-        },
-        {
-          name: 'Cappadocia Hotel – Neapoli',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/cappadocia-hotel.webp',
-          location: 'Cappadocia Hotel, Neapoli, Cappadocia, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '26/08',
-          packagePrice: 2898
-        },
-        {
-          name: 'Istanbul Hotel – Istanbul',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1449,
-            single: 1785,
-            child1: 1215
-          },
-          departureDate: '26/08',
-          packagePrice: 2898
-        }
+        // One hotel option: full itinerary (Prusa + Cappadocia + Istanbul) per departure date
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1395, single: 1735, child1: 1195 }, departureDate: '15/07', packagePrice: 2790 },
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1395, single: 1735, child1: 1195 }, departureDate: '29/07', packagePrice: 2790 },
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1395, single: 1735, child1: 1195 }, departureDate: '05/08', packagePrice: 2790 },
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1449, single: 1785, child1: 1215 }, departureDate: '22/07', packagePrice: 2898 },
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1449, single: 1785, child1: 1215 }, departureDate: '12/08', packagePrice: 2898 },
+        { name: '4* Hotels - Constantinople / Bursa & 5* Hotel - Cappadocia (Neapoli)', stars: 5, roomType: 'Standard Room', image: '/images/Constandinopole/cappadocia-hotel.webp', location: 'Prusa, Neapoli & Istanbul, Turkey', prices: { double: 1449, single: 1785, child1: 1215 }, departureDate: '26/08', packagePrice: 2898 }
       ],
       included: [
         'Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Κωνσταντινούπολη – Αθήνα – Λάρνακα με Aegean Airlines',
@@ -10576,7 +9754,7 @@ export const travelPackages = [
         day8: '8η Μέρα: Παλάτι Ντολμαμπαχτσέ – Μονή της Χώρας – Λιμάνι Γαλατά – Λάρνακα\n\nΠρόγευμα και τελευταία ημέρα στην Πόλη.\n\nΠρόγραμμα:\n\n• Επίσκεψη στο Παλάτι Ντολμαμπαχτσέ\n  - Θεωρείται από τα ομορφότερα παλάτια του κόσμου\n  - «Βερσαλλίες της Ανατολής»\n  - Κτισμένο στις όχθες του Βοσπόρου, συνδυάζει οθωμανική πολυτέλεια και ευρωπαϊκή αρχιτεκτονική\n• Επίσκεψη στη Μονή της Χώρας\n  - Από τα σημαντικότερα μνημεία βυζαντινής τέχνης\n  - Υπέροχα ψηφιδωτά & τοιχογραφίες (παλαιολόγεια αναγέννηση)\n• Στάση στο Λιμάνι του Γαλατά\n  - Σύγχρονος ζωντανός χώρος\n  - Ιδανικό σημείο για περίπατο, καφέ & φωτογραφίες με φόντο τον Βόσπορο\n\nΣτη συνέχεια, μεταφορά στο αεροδρόμιο για την πτήση επιστροφής προς Λάρνακα μέσω Αθήνας, με τις καλύτερες αναμνήσεις από ένα ταξίδι γεμάτο ιστορία, πίστη, πολιτισμό και μοναδικά τοπία.'
       },
       gallery: [
-        '/images/destinations/istanbul-cappadocia-hero.webp'
+        '/images/Constandinopole/cappadocia-hero.webp'
       ]
     }
   },
@@ -10585,42 +9763,27 @@ export const travelPackages = [
     title: 'ΠΙΕΣΤΑΝΥ – ΙΑΜΑΤΙΚΑ ΛΟΥΤΡΑ',
     destination: 'Slovakia',
     category: 'Summer Packages',
-    price: 1649,
-    duration: '9 days / 8 nights',
+    price: 1589,
+    duration: '10 days / 9 nights',
     description: 'Experience the healing thermal springs and therapeutic treatments of Piešťany, Slovakia\'s renowned spa town, with a comprehensive wellness program at the 4★ Ensana Esplanade Hotel.',
     longDescription: 'Το Πιεστάνυ είναι μια όμορφη λουτρόπολη της Σλοβακίας, χτισμένη στις όχθες του ποταμού Βαχ, περίπου 85 χλμ. από Μπρατισλάβα και 140 χλμ. από Βιέννη. Είναι παγκοσμίως γνωστό για τις ιαματικές θερμές πηγές και τη μοναδική θειούχα λάσπη που χρησιμοποιούνται σε εξειδικευμένα θεραπευτικά προγράμματα, ιδιαίτερα για παθήσεις του κινητικού & νευρικού συστήματος.',
     image: '🇸🇰',
     featured: true,
     details: {
-      departureDate: '07/07, 11/08, 06/10',
+      departureDate: '06/05',
       departureFrom: 'Larnaca',
       destinationFull: 'Piešťany, Slovakia',
-      monthAvailability: 'July, August, October',
+      monthAvailability: 'May',
       roomType: 'Standard Room',
       boardBasis: 'Full Board',
       airline: 'Austrian Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/destinations/piestany-hero.webp',
+      coverImage: '/images/Piestany/piestany-hero.webp',
+      thumbnailImage: '/images/Piestany/piestany-statue.webp',
       flights: [
         {
           direction: 'Departure',
-          date: '07/07, 11/08',
-          route: 'Larnaca (LCA) → Vienna (VIE)',
-          flight: 'OS 794',
-          time: '14:20 → 16:40',
-          luggage: '1 checked bag'
-        },
-        {
-          direction: 'Departure',
-          date: '11/08',
-          route: 'Larnaca (LCA) → Vienna (VIE)',
-          flight: 'OS 796',
-          time: '17:10 → 19:30',
-          luggage: '1 checked bag'
-        },
-        {
-          direction: 'Departure',
-          date: '06/10',
+          date: '06/05',
           route: 'Larnaca (LCA) → Vienna (VIE)',
           flight: 'OS 794',
           time: '14:20 → 16:40',
@@ -10628,7 +9791,7 @@ export const travelPackages = [
         },
         {
           direction: 'Return',
-          date: '07/07, 11/08, 06/10',
+          date: '06/05',
           route: 'Vienna (VIE) → Larnaca (LCA)',
           flight: 'OS 795',
           time: '12:20 → 16:20',
@@ -10636,46 +9799,19 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Period 1 - Summer: 07/07, 11/08
         {
           name: 'Ensana Esplanade – Wing Alameda',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/ensana-esplanade-alameda.webp',
+          boardBasis: 'Full Board',
+          image: '/images/Piestany/piestany-hotel.webp',
           location: 'Ensana Esplanade – Wing Alameda, Piešťany, Slovakia',
           prices: {
-            double: 1649,
-            single: 1989
+            double: 1589,
+            single: 1889
           },
-          departureDate: '07/07',
-          packagePrice: 3298
-        },
-        {
-          name: 'Ensana Esplanade – Wing Alameda',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/ensana-esplanade-alameda.webp',
-          location: 'Ensana Esplanade – Wing Alameda, Piešťany, Slovakia',
-          prices: {
-            double: 1649,
-            single: 1989
-          },
-          departureDate: '11/08',
-          packagePrice: 3298
-        },
-        // Period 2 - Autumn: 06/10
-        {
-          name: 'Ensana Esplanade – Wing Alameda',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/ensana-esplanade-alameda.webp',
-          location: 'Ensana Esplanade – Wing Alameda, Piešťany, Slovakia',
-          prices: {
-            double: 1549,
-            single: 1789
-          },
-          departureDate: '06/10',
-          packagePrice: 3098
+          departureDate: '06/05',
+          packagePrice: 3178
         }
       ],
       included: [
@@ -10714,13 +9850,13 @@ export const travelPackages = [
         'Για μέσα ολικής ναύλωσης (charter), κρουαζιέρες, σκι, εκθέσεις, συνέδρια κ.λπ., τα ακυρωτικά μπορούν να φτάσουν μέχρι 100%, ανεξαρτήτως χρόνου ακύρωσης'
       ],
       program: {
-        introduction: 'ΠΙΕΣΤΑΝΥ – ΙΑΜΑΤΙΚΑ ΛΟΥΤΡΑ\n\nΤο Πιεστάνυ είναι μια όμορφη λουτρόπολη της Σλοβακίας, χτισμένη στις όχθες του ποταμού Βαχ, περίπου 85 χλμ. από Μπρατισλάβα και 140 χλμ. από Βιέννη. Είναι παγκοσμίως γνωστό για τις ιαματικές θερμές πηγές και τη μοναδική θειούχα λάσπη που χρησιμοποιούνται σε εξειδικευμένα θεραπευτικά προγράμματα, ιδιαίτερα για παθήσεις του κινητικού & νευρικού συστήματος (ρευματισμοί, αρθρίτιδα, ορθοπεδικά προβλήματα κ.ά.).',
+        introduction: 'ΠΙΕΣΤΑΝΥ – ΙΑΜΑΤΙΚΑ ΛΟΥΤΡΑ\n\nΤο Πιεστάνυ είναι μια όμορφη πόλη της Σλοβακίας στις όχθες του ποταμού Βαχ που προσελκύει χιλιάδες επισκέπτες από όλο τον κόσμο, οι περισσότεροι από τους οποίους έρχονται για τις θεραπευτικές ιδιότητες των ιαματικών πηγών. Βρίσκεται 85 χιλιόμετρα από την Μπρατισλάβα και 140 από την Βιέννη. Οι φυσικές πηγές με το θερμικό μεταλλικό νερό όσο και η μοναδική θειούχα λάσπη είναι τα βασικά συστατικά των θεραπειών στο Πιεστάνυ και που το έχουν κάνει παγκοσμίως γνωστό για τις θεραπευτικές τους ιδιότητες.\n\nΠροαιρετικές εκδρομές:\n• Μπρατισλάβα ½ μέρα με ψώνια.\n• Φάρμα Ελαφιών με δείπνο\n• Κυριακή-ολοήμερη εκδρομή*\n*ο προορισμός θα προταθεί από τον συνοδό.\n-Οι τιμές των προαιρετικών εκδρομών εξαρτώνται από τον αριθμό των συμμετεχόντων.\n\nΠιο κάτω είναι οι θεραπείες του προγράμματος αναλυτικά και θα καθορίζονται από τον γιατρό σε κάθε άτομο, ανάλογα με τα αποτελέσματα των ιατρικών τους εξετάσεων και την φυσική του κατάσταση. Τα ιαματικά λουτρά του Πιεστάνυ είναι πασίγνωστα για τις αποτελεσματικές θεραπείες ειδικά για παθήσεις του κινητικού και νευρικού συστήματος, όπως ρευματισμούς, αρθρίτιδα, σκολίωση και άλλες.\n\n• Μασάζ: Τα οφέλη του μασάζ περιλαμβάνουν τη βελτίωση της κυκλοφορίας του αίματος, τη μείωση του στρες, την ανακούφιση από τον πόνο, και την ενίσχυση της γενικής ευεξίας.\n• Θειούχα Μπάνια:\n- Ανακούφιση από μυοσκελετικούς πόνους\n- Βελτίωση του δέρματος\n- Χαλάρωση και μείωση του άγχους\n- Αναζωογόνηση του κυκλοφορικού συστήματος.\n• Λασπόλουτρα:\n- Ανακούφιση από αρθρίτιδα και ρευματισμούς, μπορούν να βοηθήσουν στη μείωση του πόνου και της φλεγμονής στις αρθρώσεις.\n- Βελτίωση της κατάστασης του δέρματος: Η λάσπη μπορεί να βοηθήσει στη θεραπεία δερματικών παθήσεων, όπως η ψωρίαση, το έκζεμα και η ακμή.\n- Αποτοξίνωση: μπορεί να βοηθήσει στην αποβολή τοξινών από το σώμα μέσω του δέρματος.\n- Χαλάρωση και μείωση του άγχους 5. Βελτίωση της κυκλοφορίας του αίματος: Η εφαρμογή λάσπης αυξάνει την κυκλοφορία του αίματος και βελτιώνει την οξυγόνωση των ιστών\n\n• Παραφάγκο / Παραφίνη:\n- Ανακούφιση από πόνο και φλεγμονή: ιδανική για άτομα με αρθρίτιδα ή ρευματισμούς.\n- Βελτίωση της κυκλοφορίας του αίματος.\n- Ενυδάτωση και βελτίωση του δέρματος.\n- Χαλάρωση και μείωση του άγχους.\n• Ηλεκτροθεραπεία:\n- Ανακούφιση από τον πόνο: μειώσει τον πόνο από τραυματισμούς, χειρουργικές επεμβάσεις, και χρόνιες παθήσεις όπως η αρθρίτιδα.\n- Μείωση της φλεγμονής\n- Βελτίωση της κυκλοφορίας: Αυξάνει την κυκλοφορία του αίματος στην περιοχή εφαρμογής, βελτιώνοντας την επούλωση των ιστών.\n- Ενδυνάμωση των μυών\n- Βελτίωση της κινητικότητας\n• Οξυγονοθεραπεία:\n- Χρόνια Αποφρακτική Πνευμονοπάθεια\n- Άσθμα\n- Πνευμονία\n- Καρδιακή ανεπάρκεια: Ανακουφίζει από την δύσπνοια και βελτιώνει την οξυγόνωση.\n- Υπνική Άπνοια\n- Κυστική ίνωση: Βοηθά στη διαχείριση της χρόνιας πνευμονικής νόσου.\n• Μπάνια:\n- Χαλάρωση και μείωση του στρες\n- Βελτίωση της κυκλοφορίας του αίματος\n- Φροντίδα του δέρματος.\n\nΞΕΝΟΔΟΧΕΙΟ: Alameda 4*\nEnsana Hotel Esplanade – Wing Alameda\n\nTo ξενοδοχείο Alameda βρίσκεται στο καταπράσινο νησί του Πιεστάνυ (Spa Island), στις όχθες του ποταμού Βαχ, εκεί που βρίσκονται οι θειούχες πήγες και εκεί που επεξεργάζονται της λάσπη με θείο, η οποία χρησιμοποιείται στις διάφορες θεραπείες. Είναι το πρώην Palace Hotel και θεωρείται τώρα σαν παράρτημα του 4* ξενοδοχείου Esplanade. Οι θαμώνες του Alameda μπορούν να χρησιμοποιούν όλους του κοινοχρήστους χώρους (καφέ, πισίνα, σάουνα, γυμναστήριο κλπ) του Esplanade. To Alameda διαθέτει 197 πρόσφατα ανακαινισμένα δωμάτια.',
         hotel: '🏨 ΞΕΝΟΔΟΧΕΙΟ – Ensana Esplanade (Wing Alameda) 4★\n\nΤο Alameda βρίσκεται στο καταπράσινο Spa Island του Πιεστάνυ, στο νησί των ιαματικών πηγών, εκεί όπου αναβλύζουν οι θειούχες θερμές πηγές και επεξεργάζεται η θειούχα λάσπη που χρησιμοποιείται στις θεραπείες.\n\nΕίναι παράρτημα του κεντρικού 4★ ξενοδοχείου Esplanade και προσφέρει:\n• 197 ανακαινισμένα δωμάτια\n• Άμεση πρόσβαση στους κοινόχρηστους χώρους του Esplanade:\n  - καφέ & lounges\n  - εσωτερική/εξωτερική πισίνα\n  - σάουνα\n  - γυμναστήριο\n  - χώρους ευεξίας & spa\n\nΟι πελάτες του Alameda χρησιμοποιούν πλήρως τις εγκαταστάσεις του Esplanade, απολαμβάνοντας ολοκληρωμένη ιαματική & wellness εμπειρία.',
         therapeuticProgram: '💆‍♀️ ΘΕΡΑΠΕΥΤΙΚΟ ΠΡΟΓΡΑΜΜΑ\n\nΚατά την άφιξη, πραγματοποιείται πλήρης ιατρική εξέταση και ο γιατρός:\n• αξιολογεί την υγεία & φυσική κατάσταση\n• προτείνει προσωποποιημένο πρόγραμμα 24 θεραπειών\n• καθορίζει τις καθημερινές θεραπευτικές συνεδρίες (εκτός Κυριακής)\n\nΕνδεικτικοί τύποι θεραπειών:\n\n1. Μασάζ\n• Βελτίωση κυκλοφορίας\n• Ανακούφιση από μυϊκούς πόνους\n• Μείωση στρες & έντασης\n• Αίσθηση γενικής ευεξίας\n\n2. Θειούχα μπάνια\n• Ανακούφιση από μυοσκελετικούς πόνους & ρευματισμούς\n• Χαλάρωση μυών & μείωση άγχους\n• Βελτίωση κυκλοφορίας\n• Ευεργετική επίδραση στο δέρμα\n\n3. Λασπόλουτρα (θειούχα λάσπη)\n• Βοηθούν σε αρθρίτιδα & ρευματισμούς (μείωση πόνου & φλεγμονής)\n• Βελτίωση σε δερματικές παθήσεις (ψωρίαση, έκζεμα κ.λπ.)\n• Αποτοξίνωση μέσω του δέρματος\n• Χαλάρωση & καλύτερη αιμάτωση\n\n4. Παραφάγκο / Παραφίνη\n• Ανακούφιση πόνου & φλεγμονής (ιδανικό για αρθρίτιδα/ρευματισμούς)\n• Βελτίωση κυκλοφορίας\n• Ενυδάτωση & μαλάκωση του δέρματος\n• Βαθιά χαλάρωση\n\n5. Ηλεκτροθεραπεία\n• Μείωση πόνου (τραυματισμοί, χειρουργεία, χρόνιες παθήσεις)\n• Μείωση φλεγμονής\n• Βελτίωση τοπικής κυκλοφορίας\n• Ενδυνάμωση μυών & βελτίωση κινητικότητας\n\n6. Οξυγονοθεραπεία\nΧρησιμοποιείται ενδεικτικά για:\n• ΧΑΠ (Χρόνια Αποφρακτική Πνευμονοπάθεια)\n• Άσθμα\n• Πνευμονία\n• Καρδιακή ανεπάρκεια (βελτίωση οξυγόνωσης & δύσπνοιας)\n• Υπνική άπνοια\n• Κυστική ίνωση\n\n7. Θεραπευτικά μπάνια\n• Βαθιά χαλάρωση & μείωση στρες\n• Τόνωση κυκλοφορίας\n• Ευεργετική δράση στο δέρμα\n\nΤο τελικό πρόγραμμα θεραπειών καθορίζεται ατομικά από τον γιατρό, ανάλογα με τις ιατρικές εξετάσεις και τις ανάγκες κάθε συμμετέχοντα.',
         optionalExcursions: '🌳 ΠΡΟΑΙΡΕΤΙΚΕΣ ΕΚΔΡΟΜΕΣ\n\nΚατά τη διάρκεια της διαμονής στο Πιεστάνυ μπορούν να διοργανωθούν προαιρετικά:\n• Μπρατισλάβα (½ μέρα + ψώνια)\n• Φάρμα Ελαφιών με δείπνο\n• Κυριακάτικη ολοήμερη εκδρομή (ο προορισμός προτείνεται από τον συνοδό)\n\n💶 Οι τιμές των προαιρετικών εκδρομών εξαρτώνται από τον αριθμό συμμετεχόντων.'
       },
       gallery: [
-        '/images/destinations/piestany-hero.webp'
+        '/images/Piestany/piestany-hero.webp'
       ]
     }
   },
@@ -10741,10 +9877,11 @@ export const travelPackages = [
       destinationFull: 'Paris, Disneyland Paris, Asterix Park, France',
       monthAvailability: 'July, August',
       roomType: 'Standard Room',
-      boardBasis: 'Bed & Breakfast (Paris) / Room Only (Disneyland)',
+      boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 10kg',
-      coverImage: '/images/destinations/paris-disneyland-hero.webp',
+      coverImage: '/images/Paris-disneyland/Paris-Disneyland-hero.webp',
+      thumbnailImage: '/images/Paris-disneyland/disneyland-park.webp',
       flights: [
         {
           direction: 'Departure',
@@ -10764,298 +9901,14 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Disney's Hotel Cheyenne - 09/07, 30/07
+        // Disney's Hotel Cheyenne – Disneyland® Paris | Option 1: 02/07, 09/07, 30/07
         {
-          name: 'Disney\'s Hotel Cheyenne',
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1555,
-            single: 2027,
-            triple: 1425,
-            child1: 1099,
-            child2: 1099
-          },
-          departureDate: '09/07',
-          packagePrice: 3110,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1555,
-            single: 2027,
-            triple: 1425,
-            child1: 1099,
-            child2: 1099
-          },
-          departureDate: '30/07',
-          packagePrice: 3110,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        // Disney's Hotel Cheyenne - 16/07, 27/08
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1649,
-            single: 2165,
-            triple: 1515,
-            child1: 1199,
-            child2: 1199
-          },
-          departureDate: '16/07',
-          packagePrice: 3298,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1649,
-            single: 2165,
-            triple: 1515,
-            child1: 1199,
-            child2: 1199
-          },
-          departureDate: '27/08',
-          packagePrice: 3298,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        // Disney's Hotel Cheyenne - 23/07, 06/08, 13/08, 20/08
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '23/07',
-          packagePrice: 3190,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '06/08',
-          packagePrice: 3190,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '13/08',
-          packagePrice: 3190,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Hotel Cheyenne',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-cheyenne.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '20/08',
-          packagePrice: 3190,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        // Disney's Newport Bay Club - 09/07
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1679,
-            single: 2249,
-            triple: 1525,
-            child1: 1125
-          },
-          departureDate: '09/07',
-          packagePrice: 3358,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        // Disney's Newport Bay Club - 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '16/07',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '23/07',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '30/07',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '06/08',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '13/08',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '20/08',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        {
-          name: 'Disney\'s Newport Bay Club',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/disney-newport-bay.webp',
-          location: 'Disneyland Paris, Marne-la-Vallée, France',
-          prices: {
-            double: 1729,
-            single: 2325,
-            triple: 1575,
-            child1: 1199
-          },
-          departureDate: '27/08',
-          packagePrice: 3458,
-          boardBasis: 'Room Only',
-          nights: 2
-        },
-        // Paris Hotels - Novotel La Defense 4★ (most dates)
-        {
-          name: 'Novotel La Defense',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
           prices: {
             double: 1555,
             single: 2027,
@@ -11065,15 +9918,15 @@ export const travelPackages = [
           },
           departureDate: '02/07',
           packagePrice: 3110,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
+          nights: 2
         },
         {
-          name: 'Novotel La Defense',
-          stars: 4,
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
           prices: {
             double: 1555,
             single: 2027,
@@ -11083,33 +9936,15 @@ export const travelPackages = [
           },
           departureDate: '09/07',
           packagePrice: 3110,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
+          nights: 2
         },
         {
-          name: 'Novotel La Defense',
-          stars: 4,
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
-          prices: {
-            double: 1649,
-            single: 2165,
-            triple: 1515,
-            child1: 1199,
-            child2: 1199
-          },
-          departureDate: '23/07',
-          packagePrice: 3298,
           boardBasis: 'Bed & Breakfast',
-          nights: 3
-        },
-        {
-          name: 'Novotel La Defense',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
           prices: {
             double: 1555,
             single: 2027,
@@ -11119,88 +9954,16 @@ export const travelPackages = [
           },
           departureDate: '30/07',
           packagePrice: 3110,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
+          nights: 2
         },
+        // Disney's Hotel Cheyenne | Option 2: 16/07, 27/08
         {
-          name: 'Novotel La Defense',
-          stars: 4,
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '06/08',
-          packagePrice: 3190,
           boardBasis: 'Bed & Breakfast',
-          nights: 3
-        },
-        {
-          name: 'Novotel La Defense',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '13/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
-        },
-        {
-          name: 'Novotel La Defense',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
-          prices: {
-            double: 1595,
-            single: 2085,
-            triple: 1459,
-            child1: 1125,
-            child2: 1125
-          },
-          departureDate: '20/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
-        },
-        {
-          name: 'Novotel La Defense',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/novotel-la-defense.webp',
-          location: 'Novotel La Defense, Paris, France',
-          prices: {
-            double: 1649,
-            single: 2165,
-            triple: 1515,
-            child1: 1199,
-            child2: 1199
-          },
-          departureDate: '27/08',
-          packagePrice: 3298,
-          boardBasis: 'Bed & Breakfast',
-          nights: 3
-        },
-        // Paris Hotel - Voco Porte de Clichy 4★ (16/07)
-        {
-          name: 'Voco Porte de Clichy',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/voco-porte-clichy.webp',
-          location: 'Voco Porte de Clichy, Paris, France',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
           prices: {
             double: 1649,
             single: 2165,
@@ -11210,9 +9973,262 @@ export const travelPackages = [
           },
           departureDate: '16/07',
           packagePrice: 3298,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
+          roomType: 'Standard Room',
           boardBasis: 'Bed & Breakfast',
-          nights: 3,
-          note: 'Το ξενοδοχείο δεν διαθέτει τετράκλινα – δίνονται 2 δίκλινα δίπλα-δίπλα.'
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
+          prices: {
+            double: 1649,
+            single: 2165,
+            triple: 1515,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '27/08',
+          packagePrice: 3298,
+          nights: 2
+        },
+        // Disney's Hotel Cheyenne | Option 3: 23/07, 06/08, 13/08, 20/08
+        {
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
+          prices: {
+            double: 1595,
+            single: 2085,
+            triple: 1459,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '23/07',
+          packagePrice: 3190,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
+          prices: {
+            double: 1595,
+            single: 2085,
+            triple: 1459,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '06/08',
+          packagePrice: 3190,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
+          prices: {
+            double: 1595,
+            single: 2085,
+            triple: 1459,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '13/08',
+          packagePrice: 3190,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Hotel Cheyenne – Disneyland® Paris',
+          stars: 3,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel.webp',
+          location: 'Rue du Bœuf Agile, Coupvray, 77700, Paris, France',
+          prices: {
+            double: 1595,
+            single: 2085,
+            triple: 1459,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '20/08',
+          packagePrice: 3190,
+          nights: 2
+        },
+        // Disney's Newport Bay Club – Disneyland® Paris | Option 1: 02/07, 09/07
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1679,
+            single: 2249,
+            triple: 1525,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '02/07',
+          packagePrice: 3358,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1679,
+            single: 2249,
+            triple: 1525,
+            child1: 1125,
+            child2: 1125
+          },
+          departureDate: '09/07',
+          packagePrice: 3358,
+          nights: 2
+        },
+        // Disney's Newport Bay Club | Option 2: 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '16/07',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '23/07',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '30/07',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '06/08',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '13/08',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '20/08',
+          packagePrice: 3458,
+          nights: 2
+        },
+        {
+          name: 'Disney\'s Newport Bay Club – Disneyland® Paris',
+          stars: 4,
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
+          image: '/images/Paris-disneyland/paris-disney-hotel-secondary.webp',
+          location: 'Avenue Robert Schuman, 77700, Paris, France',
+          prices: {
+            double: 1729,
+            single: 2325,
+            triple: 1575,
+            child1: 1199,
+            child2: 1199
+          },
+          departureDate: '27/08',
+          packagePrice: 3458,
+          nights: 2
         }
       ],
       included: [
@@ -11262,7 +10278,7 @@ export const travelPackages = [
         day6: '6η Μέρα: Παρίσι – Λάρνακα\n\nΠρωινό.\n\nΜεταφορά στο αεροδρόμιο Παρισιού.\n\nΠτήση επιστροφής στη Λάρνακα, με τις βαλίτσες γεμάτες μαγεία, εικόνες και οικογενειακές αναμνήσεις.'
       },
       gallery: [
-        '/images/destinations/paris-disneyland-hero.webp'
+        '/images/Paris-disneyland/Paris-Disneyland-hero.webp'
       ]
     }
   },
@@ -11286,7 +10302,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast + 5 Dinners',
       airline: 'Aegean Airlines / Turkish Airlines',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg (international), 1 checked bag 20kg + 1 hand luggage 8kg (domestic)',
-      coverImage: '/images/destinations/pontus-istanbul-hero.webp',
+      coverImage: '/images/Constandinopole/turkey-hero.webp',
       flights: [
         {
           direction: 'Departure',
@@ -11330,392 +10346,13 @@ export const travelPackages = [
         }
       ],
       hotels: [
-        // Period 1: 15/07, 26/08 - €1,595 double
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '15/07',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '15/07',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '15/07',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '15/07',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        },
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '26/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '26/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '26/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1595,
-            single: 1935,
-            child1: 1265
-          },
-          departureDate: '26/08',
-          packagePrice: 3190,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        },
-        // Period 2: 22/07, 29/07, 05/08, 12/08 - €1,625 double
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '22/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '22/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '22/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '22/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        },
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '29/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '29/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '29/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '29/07',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        },
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '05/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '05/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '05/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '05/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        },
-        {
-          name: 'Sakarya Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/sakarya-hotel.webp',
-          location: 'Sakarya Hotel, Sakarya, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '12/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 1
-        },
-        {
-          name: 'Samsun Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/samsun-hotel.webp',
-          location: 'Samsun Hotel, Samsun, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '12/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Trabzon Hotel',
-          stars: 5,
-          roomType: 'Standard Room',
-          image: '/images/hotels/trabzon-hotel.webp',
-          location: 'Trabzon Hotel, Trabzon, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '12/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast + Dinner',
-          nights: 2
-        },
-        {
-          name: 'Istanbul Hotel',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/istanbul-hotel.webp',
-          location: 'Istanbul Hotel, Istanbul, Turkey',
-          prices: {
-            double: 1625,
-            single: 1975,
-            child1: 1285
-          },
-          departureDate: '12/08',
-          packagePrice: 3250,
-          boardBasis: 'Bed & Breakfast',
-          nights: 2
-        }
+        // One entry per departure date – no duplicates
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1595, single: 1935, child1: 1265 }, departureDate: '15/07', packagePrice: 3190 },
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1595, single: 1935, child1: 1265 }, departureDate: '26/08', packagePrice: 3190 },
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1625, single: 1975, child1: 1285 }, departureDate: '22/07', packagePrice: 3250 },
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1625, single: 1975, child1: 1285 }, departureDate: '29/07', packagePrice: 3250 },
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1625, single: 1975, child1: 1285 }, departureDate: '05/08', packagePrice: 3250 },
+        { name: '4* & 5* Hotels Sakarya / Samsun / Trabzon / Constantinople', stars: 4, roomType: 'Standard Room', image: '/images/Constandinopole/turkey-primary-hotel.webp', location: 'Sakarya, Samsun, Trabzon, Constantinople, Turkey', boardBasis: 'Bed & Breakfast + Dinner', prices: { double: 1625, single: 1975, child1: 1285 }, departureDate: '12/08', packagePrice: 3250 }
       ],
       included: [
         'Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Κωνσταντινούπολη – Αθήνα – Λάρνακα (Aegean Airlines)',
@@ -11764,7 +10401,7 @@ export const travelPackages = [
         day8: '8η Μέρα: Μπαλουκλί – Πατριαρχείο – Παναγία Βλαχερνών – Αιγυπτιακή Αγορά – Κρουαζιέρα Βοσπόρου – Αθήνα – Λάρνακα\n\nΠρωινό και ημέρα αφιερωμένη σε προσκυνήματα & εμβληματικές εικόνες της Πόλης:\n\n• Μπαλουκλί – Ζωοδόχος Πηγή & τάφοι Πατριαρχών\n• Θέα στα Θεοδοσιανά Τείχη & τη Χρυσή Πύλη\n• Επίσκεψη στην Παναγία των Βλαχερνών\n• Οικουμενικό Πατριαρχείο – Πατριαρχικός Ναός Αγίου Γεωργίου, Κλειστή Πύλη, χώρος μαρτυρίου Γρηγορίου Ε\'\n\nΣτη συνέχεια:\n\n• Κρουαζιέρα στον Βόσπορο, ανάμεσα σε Ευρώπη & Ασία, με παλάτια, γέφυρες και παραδοσιακά yali\n• Επίσκεψη στην Αιγυπτιακή Αγορά (Mısır Çarşısı) για βόλτα ανάμεσα σε μπαχαρικά, λουκούμια, αποξηραμένα φρούτα\n\nΤο απόγευμα μεταφορά στο αεροδρόμιο Κωνσταντινούπολης για την πτήση επιστροφής μέσω Αθήνας.'
       },
       gallery: [
-        '/images/destinations/pontus-istanbul-hero.webp'
+        '/images/Constandinopole/turkey-hero.webp'
       ]
     }
   },
@@ -16126,7 +14763,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Georgian Airways',
       includedLuggage: '1 checked bag 23kg + 1 hand luggage 8kg',
-      coverImage: '/images/categories/summer-travel-package-cover.webp',
+      coverImage: '/images/Georgia/Georgia-hero.webp',
+      thumbnailImage: '/images/Georgia/georgia-landscape.webp',
       flights: [
         {
           direction: 'Departure',
@@ -16150,7 +14788,7 @@ export const travelPackages = [
           name: '3* Hotel Tbilisi',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/categories/summer-travel-package-cover.webp',
+          image: '/images/Georgia/georgia-hotel-primary.webp',
           location: 'Tbilisi, Georgia',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -16166,7 +14804,7 @@ export const travelPackages = [
           name: '3* Hotel Tbilisi',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/categories/summer-travel-package-cover.webp',
+          image: '/images/Georgia/georgia-hotel-primary.webp',
           location: 'Tbilisi, Georgia',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -16182,7 +14820,7 @@ export const travelPackages = [
           name: '3* Hotel Tbilisi',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/categories/summer-travel-package-cover.webp',
+          image: '/images/Georgia/georgia-hotel-primary.webp',
           location: 'Tbilisi, Georgia',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -16191,6 +14829,54 @@ export const travelPackages = [
             child1: 845
           },
           packagePrice: 1730,
+          departureDate: '18/08',
+          nights: 4
+        },
+        {
+          name: '4* Hotel Tbilisi',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Georgia/georgia-hotel-secondary.webp',
+          location: 'Tbilisi, Georgia',
+          boardBasis: 'Bed & Breakfast',
+          prices: {
+            double: 875,
+            single: 1045,
+            child1: 859
+          },
+          packagePrice: 1750,
+          departureDate: '04/08',
+          nights: 4
+        },
+        {
+          name: '4* Hotel Tbilisi',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Georgia/georgia-hotel-secondary.webp',
+          location: 'Tbilisi, Georgia',
+          boardBasis: 'Bed & Breakfast',
+          prices: {
+            double: 899,
+            single: 1065,
+            child1: 885
+          },
+          packagePrice: 1798,
+          departureDate: '11/08',
+          nights: 4
+        },
+        {
+          name: '4* Hotel Tbilisi',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Georgia/georgia-hotel-secondary.webp',
+          location: 'Tbilisi, Georgia',
+          boardBasis: 'Bed & Breakfast',
+          prices: {
+            double: 925,
+            single: 1089,
+            child1: 909
+          },
+          packagePrice: 1850,
           departureDate: '18/08',
           nights: 4
         }
@@ -16231,7 +14917,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Τιφλίδα – Λάρνακα\n\nΠρωινό και ελεύθερος χρόνος για τελευταία βόλτα ή αγορές (π.χ. λεωφόρος Rustaveli, Dry Bridge market). Μεταφορά στο αεροδρόμιο και πτήση επιστροφής για Λάρνακα.'
       },
       gallery: [
-        '/images/categories/summer-travel-package-cover.webp'
+        '/images/Georgia/Georgia-hero.webp'
       ]
     }
   },
@@ -16355,18 +15041,22 @@ export const travelPackages = [
 ]
 
 // Helper functions
+const visiblePackages = () => travelPackages.filter(pkg => !pkg.hidden)
+
 export const getPackagesByDestination = (destination) => {
-  if (destination === 'Any') return travelPackages
-  return travelPackages.filter(pkg => pkg.destination === destination)
+  const packages = visiblePackages()
+  if (destination === 'Any') return packages
+  return packages.filter(pkg => pkg.destination === destination)
 }
 
 export const getPackagesByCategory = (category) => {
-  if (category === 'Any') return travelPackages
-  return travelPackages.filter(pkg => pkg.category === category)
+  const packages = visiblePackages()
+  if (category === 'Any') return packages
+  return packages.filter(pkg => pkg.category === category)
 }
 
 export const getPackagesByFilter = (category, destination) => {
-  let filtered = travelPackages
+  let filtered = visiblePackages()
 
   if (category !== 'Any') {
     filtered = filtered.filter(pkg => pkg.category === category)

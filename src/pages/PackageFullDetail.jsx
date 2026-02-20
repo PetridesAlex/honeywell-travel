@@ -89,7 +89,7 @@ function PackageFullDetail() {
       }
 
       const relatedTours = travelPackages.filter(
-        (p) => p.category === pkg.category && p.id !== pkg.id
+        (p) => !p.hidden && p.category === pkg.category && p.id !== pkg.id
       ).slice(0, 3).map(tour => ({
         ...tour,
         cheapestPrice: getCheapestPrice(tour)
@@ -177,7 +177,14 @@ function PackageFullDetail() {
         className="package-full-hero"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="package-full-hero-overlay" />
+        <div 
+          className="package-full-hero-overlay" 
+          style={{ 
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%), url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }} 
+        />
         <div className="package-full-hero-content">
           <span className="badge destination">{pkg.destination}</span>
           <span className="badge category">{pkg.category}</span>
