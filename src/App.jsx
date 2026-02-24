@@ -18,6 +18,7 @@ import HoneymoonTrips from './pages/HoneymoonTrips'
 import GiftVoucher from './pages/GiftVoucher'
 import HolidayTypes from './pages/HolidayTypes'
 import Corporate from './pages/Corporate'
+import DmcCyprus from './pages/DmcCyprus'
 import BookOnline from './pages/BookOnline'
 import BuildYourTrip from './pages/BuildYourTrip'
 import Cruises from './pages/Cruises'
@@ -54,6 +55,8 @@ function AppContent() {
           <Route path="/ourworld/" element={<OurWorld />} />
           <Route path="/our-services" element={<Corporate />} />
           <Route path="/our-services/" element={<Corporate />} />
+          <Route path="/dmc-cyprus" element={<DmcCyprus />} />
+          <Route path="/dmc-cyprus/" element={<DmcCyprus />} />
           <Route path="/book-online" element={<BookOnline />} />
           <Route path="/build-your-trip" element={<BuildYourTrip />} />
           <Route path="/build-your-trip/" element={<BuildYourTrip />} />

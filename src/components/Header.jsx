@@ -157,6 +157,7 @@ function Header() {
           </div>
 
           <Link to="/our-services/" className="nav-link">{t('header.corporate')}</Link>
+          <Link to="/dmc-cyprus" className="nav-link">{t('header.dmcServices')}</Link>
           <a
             href="https://summerautos.com/"
             className="nav-link"
@@ -291,6 +292,7 @@ function Header() {
           </div>
 
           <Link to="/our-services/" className="mobile-link" onClick={closeMobileMenu}>{t('header.corporate')}</Link>
+          <Link to="/dmc-cyprus" className="mobile-link" onClick={closeMobileMenu}>{t('header.dmcServices')}</Link>
           <a
             href="https://summerautos.com/"
             className="mobile-link"
