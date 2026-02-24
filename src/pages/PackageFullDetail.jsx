@@ -435,14 +435,39 @@ function PackageFullDetail() {
                                               <span className="hotel-variant-price-label">{t('package.single')}</span>
                                               <span className="hotel-variant-price-value">{variant.prices?.single != null ? `€${variant.prices.single}` : '–'}</span>
                                             </button>
-                                            <div className="hotel-variant-price-cell">
-                                              <span className="hotel-variant-price-label">{t('package.child1')}</span>
-                                              <span className="hotel-variant-price-value">{variant.prices?.child1 != null ? `€${variant.prices.child1}` : '–'}</span>
-                                            </div>
-                                            <div className="hotel-variant-price-cell">
-                                              <span className="hotel-variant-price-label">{t('package.child2')}</span>
-                                              <span className="hotel-variant-price-value">{variant.prices?.child2 != null ? `€${variant.prices.child2}` : '–'}</span>
-                                            </div>
+                                            {variant.prices?.triple != null && (
+                                              <button
+                                                type="button"
+                                                className={`hotel-variant-price-cell ${variantSelection.roomType === 'triple' ? 'selected' : ''}`}
+                                                onClick={() => {
+                                                  setHotelSelections(prev => ({
+                                                    ...prev,
+                                                    [variantKey]: {
+                                                      roomType: 'triple',
+                                                      adults: Math.max(variantSelection.adults || 2, 3),
+                                                      children: variantSelection.children || 0,
+                                                      children2: variantSelection.children2 || 0
+                                                    }
+                                                  }))
+                                                }}
+                                                title="Click to select Triple room (3 adults)"
+                                              >
+                                                <span className="hotel-variant-price-label">{t('package.triple')}</span>
+                                                <span className="hotel-variant-price-value">€{variant.prices.triple}</span>
+                                              </button>
+                                            )}
+                                            {variant.prices?.child1 != null && (
+                                              <div className="hotel-variant-price-cell">
+                                                <span className="hotel-variant-price-label">{t('package.child1')}</span>
+                                                <span className="hotel-variant-price-value">€{variant.prices.child1}</span>
+                                              </div>
+                                            )}
+                                            {variant.prices?.child2 != null && (
+                                              <div className="hotel-variant-price-cell">
+                                                <span className="hotel-variant-price-label">{t('package.child2')}</span>
+                                                <span className="hotel-variant-price-value">€{variant.prices.child2}</span>
+                                              </div>
+                                            )}
                                           </div>
                                         </div>
                                       </div>

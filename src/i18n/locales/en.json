@@ -51,7 +51,8 @@
     "child1": "Child 1",
     "child2": "Child 2",
     "double": "Double",
-    "single": "Single"
+    "single": "Single",
+    "triple": "Triple"
   },
   "footer": {
     "newsletter": "Newsletter",
