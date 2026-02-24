@@ -564,6 +564,36 @@ function PackageFullDetail() {
                         </div>
                       )
                     })()}
+                    {(() => {
+                      const dayKeys = Object.keys(details.program)
+                        .filter(k => /^day\d+$/.test(k))
+                        .sort((a, b) => parseInt(a.replace('day', ''), 10) - parseInt(b.replace('day', ''), 10))
+                      const programDays = dayKeys
+                        .map((key, i) => ({ key, dayNum: i + 1, text: details.program[key] }))
+                        .filter(({ text }) => text)
+                      if (programDays.length === 0) return null
+                      return (
+                        <ol className="itinerary-list" style={{ marginTop: '2rem' }}>
+                          {programDays.map(({ key, dayNum, text }) => {
+                            const title = extractTitle(text)
+                            const paragraphs = formatProgramText(text)
+                            const contentParas = title ? paragraphs.slice(1) : paragraphs
+                            const description = contentParas.join('\n\n')
+                            return (
+                              <li key={key} className="itinerary-item">
+                                <div className="itinerary-header">
+                                  <span className="itinerary-day">{dayNum}η Μέρα</span>
+                                  <h3 className="itinerary-title">{title || `${dayNum}η Μέρα`}</h3>
+                                </div>
+                                <p className="itinerary-description" style={description.includes('\n\n') ? { whiteSpace: 'pre-line' } : undefined}>
+                                  {description}
+                                </p>
+                              </li>
+                            )
+                          })}
+                        </ol>
+                      )
+                    })()}
                     {details.program.heraklionCity && (
                       <div className="program-section program-section-styled">
                         <h3 className="program-heading">Ηράκλειο: πόλη θαλασσινή, γεμάτη ζωή και ιστορία</h3>
@@ -702,96 +732,6 @@ function PackageFullDetail() {
                     {details.program.entertainment && (() => {
                       const title = extractTitle(details.program.entertainment)
                       const paragraphs = formatProgramText(details.program.entertainment)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day1 && (() => {
-                      const title = extractTitle(details.program.day1)
-                      const paragraphs = formatProgramText(details.program.day1)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day2 && (() => {
-                      const title = extractTitle(details.program.day2)
-                      const paragraphs = formatProgramText(details.program.day2)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day3 && (() => {
-                      const title = extractTitle(details.program.day3)
-                      const paragraphs = formatProgramText(details.program.day3)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day4 && (() => {
-                      const title = extractTitle(details.program.day4)
-                      const paragraphs = formatProgramText(details.program.day4)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day5 && (() => {
-                      const title = extractTitle(details.program.day5)
-                      const paragraphs = formatProgramText(details.program.day5)
-                      const contentParas = title ? paragraphs.slice(1) : paragraphs
-                      return (
-                        <div className="program-section program-section-styled">
-                          {title && <h3 className="program-heading">{title}</h3>}
-                          <div className="program-text">
-                            {contentParas.map((para, idx) => (
-                              <p key={idx} className="section-text">{para}</p>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    })()}
-                    {details.program.day6 && (() => {
-                      const title = extractTitle(details.program.day6)
-                      const paragraphs = formatProgramText(details.program.day6)
                       const contentParas = title ? paragraphs.slice(1) : paragraphs
                       return (
                         <div className="program-section program-section-styled">

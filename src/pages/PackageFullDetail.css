@@ -1779,13 +1779,73 @@
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
 }
 
+/* Unified program style: match itinerary font size and look across all packages */
+.program-content .program-section-styled {
+  margin-bottom: 2rem;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.program-content .program-section-styled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #E31E24 0%, #C41230 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.program-content .program-heading {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  padding-left: 0;
+}
+
+.program-content .program-heading::before {
+  display: none;
+}
+
+.program-content .program-text p,
+.program-content .section-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #374151;
+  text-align: justify;
+  margin: 0 0 0.75rem 0;
+}
+
+.program-content .program-text {
+  padding-left: 0;
+}
+
+.program-content .program-text::before {
+  display: none;
+}
+
+.program-content .program-text p:first-child,
+.program-content .program-text p::first-letter {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  float: none;
+}
+
 .program-section h3,
 .program-heading {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 1.85rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 1.75rem;
+  color: #111827;
+  margin-bottom: 1rem;
   margin-top: 0;
   position: relative;
   padding-left: 2rem;

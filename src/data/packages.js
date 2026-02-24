@@ -368,17 +368,17 @@ export const travelPackages = [
     title: 'ΠΑΤΡΑ / ΟΡΕΙΝΗ ΝΑΥΠΑΚΤΙΑ / ΚΑΛΑΒΡΥΤΑ',
     destination: 'Greece',
     category: 'Easter Packages',
-    price: 1138,
+    price: 619,
     duration: '5 days / 4 nights',
     description: 'Explore Patra, Mountainous Nafpaktia, and Kalavryta with this special 5-day Easter package including flights, accommodation, and guided tours.',
     longDescription: 'Join us for an unforgettable Easter journey through the Peloponnese! This package takes you to Patra, the gateway to the Peloponnese, through the stunning Mountainous Nafpaktia region, and to the historic Kalavryta. Experience Greek culture, history, and natural beauty with comfortable accommodation and expert guidance.',
     image: '🇬🇷',
     featured: true,
     details: {
-      departureDate: '11/03 or 29/04',
+      departureDate: '29/04',
       departureFrom: 'Larnaca',
       destinationFull: 'Patra – Mountainous Nafpaktia – Kalavryta, Greece',
-      monthAvailability: 'March, April',
+      monthAvailability: 'April',
       roomType: 'Standard Room',
       boardBasis: 'Bed & Breakfast',
       hotel: 'Galaxy City Center Hotel 3★',
@@ -386,23 +386,7 @@ export const travelPackages = [
       includedLuggage: '1×20kg checked + 8kg hand luggage',
       flights: [
         {
-          direction: 'Departure (11/03)',
-          date: '11/03',
-          route: 'Larnaca → Athens',
-          flight: 'Sky Express',
-          time: '08:05 → 10:00',
-          luggage: '1×20kg checked + 8kg hand luggage'
-        },
-        {
-          direction: 'Return (11/03)',
-          date: '11/03',
-          route: 'Athens → Larnaca',
-          flight: 'Sky Express',
-          time: '20:55 → 22:35',
-          luggage: '1×20kg checked + 8kg hand luggage'
-        },
-        {
-          direction: 'Departure (29/04)',
+          direction: 'Departure',
           date: '29/04',
           route: 'Larnaca → Athens',
           flight: 'Sky Express',
@@ -410,7 +394,7 @@ export const travelPackages = [
           luggage: '1×20kg checked + 8kg hand luggage'
         },
         {
-          direction: 'Return (29/04)',
+          direction: 'Return',
           date: '29/04',
           route: 'Athens → Larnaca',
           flight: 'Sky Express',
@@ -423,23 +407,10 @@ export const travelPackages = [
           name: 'Galaxy City Center Hotel – Patra',
           stars: 3,
           roomType: 'Standard Room',
-          packagePrice: 1138,
-          image: '/images/destinations/patra-hotel.webp',
-          prices: {
-            double: 569,
-            single: 659,
-            triple: 539,
-            child1: 489
-          },
-          departureDate: '11/03',
-          description: 'Galaxy Hotel 3* Patra - [Hotel description will be added here - please provide the complete Greek text from the reference screenshots]'
-        },
-        {
-          name: 'Galaxy City Center Hotel – Patra',
-          stars: 3,
-          roomType: 'Standard Room',
           packagePrice: 1238,
           image: '/images/destinations/patra-hotel.webp',
+          location: 'Patra, Greece',
+          boardBasis: 'Bed & Breakfast',
           prices: {
             double: 619,
             single: 709,
@@ -447,7 +418,8 @@ export const travelPackages = [
             child1: 539
           },
           departureDate: '29/04',
-          description: 'Galaxy Hotel 3* Patra - [Hotel description will be added here - please provide the complete Greek text from the reference screenshots]'
+          nights: 4,
+          description: 'Το πρόσφατα ανακαινισμένο Galaxy City Center βρίσκεται σε στρατηγική θέση στην Πάτρα. Μοντέρνα δωμάτια με στρώμα Media Strom και τηλεόραση TFT, δωρεάν Wi-Fi. Υποαλλεργικά μαξιλάρια, ηλεκτρονική θυρίδα, μίνι μπαρ. Αμερικανικό πρωινό σε μπουφέ 07:00–10:00. Κοντά στο λιμάνι, σταθμοί λεωφορείων και τρένων.'
         }
       ],
       included: [
@@ -475,34 +447,34 @@ export const travelPackages = [
       ],
       itinerary: [
         {
-          day: '1η ημέρα',
+          day: '1η Μέρα',
           title: 'Λάρνακα – Αθήνα – Πάτρα',
-          description: '[Full program text for Day 1 will be inserted here - please provide the complete Greek text from the reference screenshots]'
+          description: 'Αναχώρηση από το αεροδρόμιο Λάρνακας για Αθήνα με πτήση της Cyprus Airways. Άφιξη και παραλαβή από τον αρχηγό μας. Αμέσως μετά αναχώρηση με πολυτελές πούλμαν για την Πάτρα, με ενδιάμεση στάση για καφέ. Κατά τη διαδρομή θα απολαύσουμε όμορφες εικόνες από τη Στερεά Ελλάδα και τη γέφυρα Ρίου–Αντιρρίου, ένα από τα σύγχρονα θαύματα της μηχανικής. Άφιξη στην Πάτρα – μια ζωντανή παραλιακή πόλη με έντονο εμπορικό και πολιτιστικό χαρακτήρα, γνωστή για το φημισμένο Πατρινό Καρναβάλι. Τακτοποίηση στο ξενοδοχείο και χρόνος για ξεκούραση ή για έναν απογευματινό περίπατο στην παραλιακή ζώνη.'
         },
         {
-          day: '2η ημέρα',
-          title: 'Πάτρα – Περιήγηση στην πόλη',
-          description: '[Full program text for Day 2 will be inserted here - please provide the complete Greek text from the reference screenshots]'
+          day: '2η Μέρα',
+          title: 'Πάτρα – Περιπατητική Ξενάγηση',
+          description: 'Μετά το πρωινό, ξεκινά η περιπατητική ξενάγηση της Πάτρας. Θα γνωρίσουμε τα πιο χαρακτηριστικά σημεία της πόλης: την Πλατεία Γεωργίου Α\' με το Δημοτικό Θέατρο "Απόλλων", το Ρωμαϊκό Ωδείο που φιλοξενεί κάθε καλοκαίρι φεστιβάλ, τον Ιερό Ναό Αγίου Ανδρέα, έναν από τους μεγαλύτερους ναούς των Βαλκανίων και το Κάστρο της Πάτρας που προσφέρει πανοραμική θέα στον Πατραϊκό κόλπο. Περιπλάνηση στην παλιά πόλη, στα στενά με τα νεοκλασικά αρχοντικά και τα εμπορικά δρομάκια γεμάτα ζωή. Προαιρετικά, επίσκεψη στο Μουσείο Καρναβαλιού, για μια πρώτη επαφή με την ιστορία και το πνεύμα του θεσμού. Ελεύθερος χρόνος για καφέ, ψώνια ή γεύμα. Το απόγευμα προτείνεται για χαλαρή βόλτα στην παραλία ή επίσκεψη σε οινοποιείο για γευσιγνωσία της διάσημης Μαυροδάφνης Πατρών.'
         },
         {
-          day: '3η ημέρα',
+          day: '3η Μέρα',
           title: 'Πάτρα – Ορεινή Ναυπακτία',
-          description: '[Full program text for Day 3 will be inserted here - please provide the complete Greek text from the reference screenshots]'
+          description: 'Πρωινό και αναχώρηση για μια υπέροχη εκδρομή στην Ορεινή Ναυπακτία. Διασχίζοντας τη γέφυρα Ρίου–Αντιρρίου φτάνουμε στη γραφική Ναύπακτο, με το καλοδιατηρημένο ενετικό λιμάνι και το κάστρο της που δεσπόζει στο λόφο. Συνεχίζουμε προς τα πανέμορφα χωριά της Ορεινής Ναυπακτίας – Άνω Χώρα, Ελατού, Τερψιθέα – που ξεχωρίζουν για την πέτρινη αρχιτεκτονική, τα δάση ελάτης και την αυθεντική ατμόσφαιρα. Στάση για προαιρετικό γεύμα σε παραδοσιακή ταβέρνα με χωριάτικες συνταγές και ντόπιο κρασί. Αργά το απόγευμα επιστροφή στην Πάτρα.'
         },
         {
-          day: '4η ημέρα',
-          title: 'Πάτρα – Καλάβρυτα – Μέγα Σπήλαιο – Οδοντορός',
-          description: '[Full program text for Day 4 will be inserted here - please provide the complete Greek text from the reference screenshots]'
+          day: '4η Μέρα',
+          title: 'Πάτρα – Καλάβρυτα – Μέγα Σπήλαιο – Οδοντωτός',
+          description: 'Πρωινό και αναχώρηση για Καλάβρυτα, έναν από τους πιο δημοφιλείς ορεινούς προορισμούς της Πελοποννήσου. Διαδρομή μέσα από τη χαράδρα του Βουραϊκού, γνωστή για τη διαδρομή του οδοντωτού σιδηροδρόμου που ενώνει το Διακοφτό με τα Καλάβρυτα – προαιρετικά μπορείτε να απολαύσετε αυτή τη μοναδική εμπειρία. Επίσκεψη στο Μέγα Σπήλαιο, ένα από τα αρχαιότερα μοναστήρια της Ελλάδας, χτισμένο μέσα σε απόκρημνο βράχο, και στον Τόπο Θυσίας των Καλαβρύτων, σύμβολο ελευθερίας και ηρωισμού. Χρόνος για περίπατο στα γραφικά σοκάκια και προαιρετικό γεύμα σε παραδοσιακή ταβέρνα.'
         },
         {
-          day: '5η ημέρα',
+          day: '5η Μέρα',
           title: 'Πάτρα – Λουτράκι – Αθήνα – Λάρνακα',
-          description: '[Full program text for Day 5 will be inserted here - please provide the complete Greek text from the reference screenshots]'
+          description: 'Μετά το πρωινό, αναχώρηση για Αθήνα. Στάση καθ\' οδόν στο Λουτράκι για περίπατο και προαιρετικό μεσημεριανό γεύμα σε παραθαλάσσια ταβέρνα. Στη συνέχεια, αναχώρηση για το Αεροδρόμιο Αθηνών για την πτήση επιστροφής προς Λάρνακα. Άφιξη το βράδυ στη Λάρνακα, γεμάτοι εικόνες και εμπειρίες από μια όμορφη περιήγηση στην Πελοπόννησο και τη Στερεά Ελλάδα.'
         }
       ],
       program: {
-        introduction: 'Experience the beauty of the Peloponnese with this special Easter package. Visit Patra, explore the stunning Mountainous Nafpaktia region, and discover the historic Kalavryta with its famous monastery and cog railway.',
-        hotelDescription: '[Full Greek hotel description for Galaxy Hotel 3* Patra will be inserted here - please provide the complete text from the reference screenshots]'
+        introduction: 'Διανυκτερεύσεις: Πάτρα (4)\n\nΕμπειρία από την Πελοπόννησο με αυτό το πακέτο Πάσχα. Επισκεφτείτε την Πάτρα, την Ορεινή Ναυπακτία και τα Ιστορικά Καλάβρυτα.',
+        hotelDescription: 'GALAXY HOTEL 3* PATRA\n\nΤο πρόσφατα ανακαινισμένο Galaxy City Center βρίσκεται σε στρατηγική θέση στην Πάτρα. Το ξενοδοχείο διαθέτει μοντέρνα δωμάτια με στρώμα Media Strom και τηλεόραση TFT. Σε όλα τα δωμάτια και τους χώρους του ξενοδοχείου προσφέρεται δωρεάν Wi-Fi. Τα καλά εξοπλισμένα δωμάτια και σουίτες παρέχουν υποαλλεργικά μαξιλάρια, ηλεκτρονική θυρίδα ασφαλείας, μίνι μπαρ, τηλεοράσεις TFT 26 ιντσών στις σουίτες και τις junior σουίτες, και 23 ιντσών στα άλλα δωμάτια. Το Galaxy διαθέτει ζεστούς εσωτερικούς χώρους επιπλωμένους με δρύινα έπιπλα, ένα ατμοσφαιρικό λόμπι με άνετους χώρους καθιστικού και τζάκι. Αμερικανικό πρωινό σε μπουφέ σερβίρεται καθημερινά από τις 07:00 έως 10:00 στην αίθουσα πρωινού. Το ξενοδοχείο που διαθέτει καλές συνδέσεις, βρίσκεται κοντά στο λιμάνι της Πάτρας. Οι σταθμοί λεωφορείων και τρένων, καθώς και καταστήματα είναι κοντά.'
       },
       coverImage: '/images/destinations/patra1.webp',
       thumbnailImage: '/images/destinations/patra3.webp',
@@ -13894,7 +13866,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Sky Express',
       includedLuggage: '1 αποσκευή 20kg + 1 χειραποσκευή 8kg',
-      coverImage: '/images/destinations/greece-hero.webp',
+      coverImage: '/images/thessaloniki/thessaloinki-cover-castle.webp',
       flights: [
         {
           direction: 'Departure',
@@ -13918,7 +13890,7 @@ export const travelPackages = [
           name: 'Imperial Palace Hotel – Thessaloniki',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/imperial-palace-thessaloniki.webp',
+          image: '/images/thessaloniki/Imperial-hotel-palace-thessaloniki.webp',
           location: 'Andigonidon 13, 54630, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13935,7 +13907,7 @@ export const travelPackages = [
           name: 'Imperial Plus Urban Smart Hotel – Thessaloniki',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/imperial-plus-thessaloniki.webp',
+          image: '/images/thessaloniki/imperial-plus-urban-smart-hotel-thessaloniki.webp',
           location: 'Egnatia Str. 8, 54626, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13952,7 +13924,7 @@ export const travelPackages = [
           name: 'Egnatia Palace Hotel – Thessaloniki',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/egnatia-palace-thessaloniki.webp',
+          image: '/images/thessaloniki/egnatia-palace-hotel-thessaloniki.webp',
           location: 'Egnatia Str. 61, 54631, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13969,7 +13941,7 @@ export const travelPackages = [
           name: 'Elisabeth Boutique Hotel – Thessaloniki',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/elisabeth-boutique-thessaloniki.webp',
+          image: '/images/thessaloniki/elisabeth-boutique-hotel%20-.webp',
           location: 'Katholikon 2, 54625, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -13984,7 +13956,7 @@ export const travelPackages = [
           name: 'NYX Hotel – Thessaloniki',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/nyx-thessaloniki.webp',
+          image: '/images/thessaloniki/nyx-hotel.webp',
           location: 'Tsimiski 1, 54625, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14001,7 +13973,7 @@ export const travelPackages = [
           name: 'Electra Palace Hotel – Thessaloniki',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/electra-palace-thessaloniki.webp',
+          image: '/images/thessaloniki/electra-palace.webp',
           location: 'Aristotelous Square 9, 54624, Thessaloniki',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14046,7 +14018,7 @@ export const travelPackages = [
         entertainment: '🎶 ΔΙΑΣΚΕΔΑΣΗ\n\nΗ Θεσσαλονίκη δεν κοιμάται ποτέ. Καφέ, μπαρ, club, μπουζούκια και ζωντανή μουσική:\n• Λαδάδικα\n• Λεωφόρος Νίκης\n• Πλατεία Αριστοτέλους\n• Πλατεία Ναυαρίνου\n• Περιοχή Αεροδρομίου (μεγάλες πίστες)'
       },
       gallery: [
-        '/images/destinations/greece-hero.webp'
+        '/images/thessaloniki/thessaloinki-cover-castle.webp'
       ]
     }
   },
@@ -14304,7 +14276,8 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 20kg + 1 χειραποσκευή 8kg',
-      coverImage: '/images/destinations/greece-hero.webp',
+      coverImage: '/images/Hraklio-crete/hraklio-cover.webp',
+      thumbnailImage: '/images/Hraklio-crete/hraklio-city-centre.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14328,13 +14301,13 @@ export const travelPackages = [
           name: '4★ Hotel – Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/heraklion-hotel.webp',
+          image: '/images/Hraklio-crete/hraklio-hotel.webp',
           location: 'Heraklion, Crete, Greece',
           boardBasis: 'Bed & Breakfast',
           prices: {
             double: 599,
             single: 739,
-            child: 415
+            child1: 415
           },
           packagePrice: 1198,
           departureDate: '10/04',
@@ -14377,7 +14350,7 @@ export const travelPackages = [
         day4: '4η Μέρα – Δευτέρα του Πάσχα: Ηράκλειο – Λάρνακα\n\nΕλεύθερος χρόνος μέχρι τη μεταφορά μας στο αεροδρόμιο Ηρακλείου για την πτήση επιστροφής στη Λάρνακα, γεμάτοι εικόνες, συναισθήματα και μοναδικές πασχαλινές εμπειρίες από την Κρήτη.'
       },
       gallery: [
-        '/images/destinations/greece-hero.webp'
+        '/images/Hraklio-crete/hraklio-cover.webp'
       ]
     }
   },
@@ -14401,7 +14374,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 20kg + 1 χειραποσκευή 8kg',
-      coverImage: '/images/destinations/greece-hero.webp',
+      coverImage: '/images/Hraklio-crete/rethymno-cover.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14425,13 +14398,13 @@ export const travelPackages = [
           name: '5★ Hotel – Rethymno',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/rethymno-hotel.webp',
+          image: '/images/Hraklio-crete/rethymno-hotel.webp',
           location: 'Rethymno, Crete, Greece',
           boardBasis: 'Bed & Breakfast',
           prices: {
             double: 625,
             single: 795,
-            child: 515
+            child1: 515
           },
           packagePrice: 1250,
           departureDate: '10/04',
@@ -14473,7 +14446,7 @@ export const travelPackages = [
         day4: '4η Μέρα – Δευτέρα του Πάσχα: Ρέθυμνο – Μονή Αρκαδίου – Ηράκλειο – Λάρνακα\n\nΠρωινό στο ξενοδοχείο και αναχώρηση για το αεροδρόμιο Ηρακλείου με ενδιάμεση στάση στη Μονή Αρκαδίου, ένα από τα σημαντικότερα ιστορικά και θρησκευτικά μνημεία της Κρήτης.\n\nΗ Μονή Αρκαδίου είναι άρρηκτα συνδεδεμένη με το Ολοκαύτωμα του 1866, μία από τις πιο ηρωικές στιγμές της κρητικής ιστορίας, σύμβολο ελευθερίας, αυτοθυσίας και αγώνα. Θα επισκεφθούμε το καθολικό, την ιστορική πυριτιδαποθήκη, τα κελιά των μοναχών και το μικρό μουσείο με κειμήλια της εποχής.\n\nΣτη συνέχεια αναχώρηση για το αεροδρόμιο Ηρακλείου και πτήση επιστροφής στη Λάρνακα, γεμάτοι εικόνες, παραδόσεις και μοναδικές πασχαλινές εμπειρίες.'
       },
       gallery: [
-        '/images/destinations/greece-hero.webp'
+        '/images/Hraklio-crete/rethymno-cover.webp'
       ]
     }
   },
@@ -14497,7 +14470,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 10kg',
-      coverImage: '/images/destinations/greece-hero.webp',
+      coverImage: '/images/Hraklio-crete/crete-cover-spring.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14518,43 +14491,26 @@ export const travelPackages = [
       ],
       hotels: [
         {
-          name: '4★ Hotel – Chania',
+          name: '4* Hotels - Chania / Heraklion',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/chania-hotel.webp',
+          image: '/images/Hraklio-crete/hotel-chania-heraklion.webp',
           location: 'Chania, Crete, Greece',
           boardBasis: 'Bed & Breakfast',
           prices: {
             double: 659,
             single: 855,
-            child: 385
+            child1: 385
           },
           packagePrice: 1318,
           departureDate: '13/04',
-          nights: 3
-        },
-        {
-          name: '4★ Hotel – Heraklion',
-          stars: 4,
-          roomType: 'Standard Room',
-          image: '/images/hotels/heraklion-hotel.webp',
-          location: 'Heraklion, Crete, Greece',
-          boardBasis: 'Bed & Breakfast',
-          prices: {
-            double: 659,
-            single: 855,
-            child: 385
-          },
-          packagePrice: 1318,
-          departureDate: '13/04',
-          nights: 1
+          nights: 4
         }
       ],
       included: [
         'Αεροπορικά εισιτήρια Λάρνακα – Ηράκλειο – Λάρνακα (Cyprus Airways)',
         'Φόροι αεροδρομίων',
-        '3 διανυκτερεύσεις σε ξενοδοχείο 4★ στα Χανιά με πρωινό',
-        '1 διανυκτέρευση σε ξενοδοχείο 4★ στο Ηράκλειο με πρωινό',
+        '4 διανυκτερεύσεις σε ξενοδοχείο 4★ στα Χανιά με πρωινό',
         'Τοπικός φόρος διαμονής',
         'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα',
         'Τοπικός αρχηγός / συνοδός',
@@ -14587,7 +14543,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Ηράκλειο – Ελούντα – Σπιναλόγκα – Άγιος Νικόλαος – Ηράκλειο – Λάρνακα\n\nΜετά το πρωινό, αναχώρηση για Ελούντα, έναν από τους πιο γνωστούς και όμορφους προορισμούς της Κρήτης.\n\nΕπιβίβαση σε πλοιάριο προς Σπιναλόγκα. Ελεύθερος χρόνος στο νησί και επιστροφή στην Πλάκα.\n\nΣυνεχίζουμε για Άγιο Νικόλαο, με χρόνο για βόλτα στη λίμνη Βουλισμένη και στην παραλία.\n\nΣτη συνέχεια μεταφορά στο αεροδρόμιο Ηρακλείου για την πτήση επιστροφής στη Λάρνακα.'
       },
       gallery: [
-        '/images/destinations/greece-hero.webp'
+        '/images/Hraklio-crete/crete-cover-spring.webp'
       ]
     }
   },
@@ -14611,7 +14567,7 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Emirates Airlines',
       includedLuggage: '1 αποσκευή έως 25kg & 1 χειραποσκευή έως 7kg ανά άτομο',
-      coverImage: '/images/destinations/malta-hero.webp',
+      coverImage: '/images/malta/malta-cover.webp',
       flights: [
         {
           direction: 'Departure',
@@ -14635,7 +14591,7 @@ export const travelPackages = [
           name: 'Alexandra Hotel – Malta',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/hotels/alexandra-malta.webp',
+          image: '/images/malta/alexandra-hotel-malta.webp',
           location: 'Schreiber Street, Malta',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14652,7 +14608,7 @@ export const travelPackages = [
           name: 'Mercure Hotel – Malta',
           stars: 4,
           roomType: 'Standard Room',
-          image: '/images/hotels/mercure-malta.webp',
+          image: '/images/malta/mercure-hotel-malta.webp',
           location: 'Qaliet Street, St. Julian\'s',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14668,7 +14624,7 @@ export const travelPackages = [
           name: 'InterContinental Hotel & Resort – Malta',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/intercontinental-malta.webp',
+          image: '/images/malta/intercontinental-hotel-malta.webp',
           location: 'St George\'s Bay, St Julian\'s',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14685,7 +14641,7 @@ export const travelPackages = [
           name: 'Malta Marriott Hotel & Spa – Malta',
           stars: 5,
           roomType: 'Standard Room',
-          image: '/images/hotels/marriott-malta.webp',
+          image: '/images/malta/marriot-hotel-malta.webp',
           location: 'Balluta Bay, St Julian\'s',
           boardBasis: 'Bed & Breakfast',
           prices: {
@@ -14739,7 +14695,7 @@ export const travelPackages = [
         day5: '5η Μέρα: Μάλτα – Playmobil – Λάρνακα\n\nΠρόγευμα και αναχώρηση για το πάρκο διασκέδασης Playmobil. Το πάρκο διαθέτει θεματικές ενότητες όπως Πειρατές, Αστυνομία και Ιππότες, όπου τα παιδιά μπορούν να παίξουν ελεύθερα με τα παιχνίδια Playmobil. Χρόνος για φαγητό (προαιρετικά) και μεταφορά στο αεροδρόμιο για την πτήση επιστροφής στη Λάρνακα.'
       },
       gallery: [
-        '/images/destinations/malta-hero.webp'
+        '/images/malta/malta-cover.webp'
       ]
     }
   },
@@ -14923,17 +14879,17 @@ export const travelPackages = [
   },
   {
     id: 61,
-    title: 'ΘΗΣΑΥΡΟΙ ΠΕΛΟΠΟΝΝΗΣΟΥ / ΝΑΥΠΑΚΤΟΣ',
+    title: 'ΘΗΣΑΥΡΟΙ ΠΕΛΟΠΟΝΝΗΣΟΥ- ΟΡΕΙΝΗ ΑΡΚΑΔΙΑ',
     destination: 'Greece',
     category: 'Easter Packages',
-    price: 679,
+    price: 875,
     duration: '5 days / 4 nights',
     description: 'Ανακαλύψτε τους θησαυρούς της Πελοποννήσου! Επισκεφτείτε την Πάτρα, τη Ναύπακτο, τα Τριζόνια, την Ορεινή Αρκαδία, τη Σπάρτη, τη Μονεμβασιά και το Ναύπλιο.',
     longDescription: 'Μια περιήγηση στην Πελοπόννησο που σας οδηγεί στα πιο όμορφα και ιστορικά σημεία της. Από την Πάτρα και τη Ναύπακτο, στα Τριζόνια, την Ορεινή Αρκαδία, τη Σπάρτη, τη Μονεμβασιά και το Ναύπλιο. Ανακαλύψτε την ιστορία, τη φύση και την παραδοσιακή αρχιτεκτονική της Πελοποννήσου.',
     image: '🇬🇷',
     featured: true,
     details: {
-      departureDate: '29/04',
+      departureDate: '10/04',
       departureFrom: 'Larnaca',
       destinationFull: 'Patra, Nafpaktos, Trizonia, Mountainous Arcadia, Sparta, Monemvasia, Nafplio – Peloponnese, Greece',
       monthAvailability: 'April',
@@ -14941,100 +14897,197 @@ export const travelPackages = [
       boardBasis: 'Bed & Breakfast',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 20kg & 1 χειραποσκευή 8kg',
-      coverImage: '/images/destinations/greece-hero.webp',
+      coverImage: '/images/pelopponisos-sparti/peloponnisos.webp',
       flights: [
         {
           direction: 'Departure',
-          date: '29/04',
-          route: 'Larnaca (LCA) → Athens (ATH)',
+          date: '10/04',
+          route: 'Larnaca International (LCA) → Athens Venizelos (ATH)',
           flight: 'CY 310',
-          time: '07:45 → 09:40',
-          luggage: '1 αποσκευή 20kg & 1 χειραποσκευή 8kg'
+          time: '08:05 → 10:00',
+          luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής'
         },
         {
           direction: 'Return',
-          date: '29/04',
-          route: 'Athens (ATH) → Larnaca (LCA)',
+          date: '10/04',
+          route: 'Athens Venizelos (ATH) → Larnaca International (LCA)',
           flight: 'CY 313',
           time: '20:55 → 22:40',
-          luggage: '1 αποσκευή 20kg & 1 χειραποσκευή 8kg'
+          luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής'
         }
       ],
       hotels: [
         {
-          name: 'Galaxy Hotel – Patra',
+          name: '3* Hotel Sparti',
           stars: 3,
           roomType: 'Standard Room',
-          image: '/images/destinations/patra-hotel.webp',
+          image: '/images/pelopponisos-sparti/peloponissos-hotel-sparti.webp',
           location: 'Patra, Greece',
           boardBasis: 'Bed & Breakfast',
           prices: {
-            double: 679,
-            single: 819,
-            triple: 649,
-            child: 589
+            double: 875,
+            single: 1055,
+            triple: 835,
+            child1: 589
           },
-          packagePrice: 1358,
-          departureDate: '29/04',
-          nights: 2,
+          packagePrice: 1750,
+          departureDate: '10/04',
+          nights: 4,
           description: 'Ανακαινισμένο city hotel, κοντά στο λιμάνι. Μοντέρνα δωμάτια, δωρεάν Wi-Fi, αμερικανικό πρωινό σε μπουφέ, άνετοι κοινόχρηστοι χώροι.'
-        },
-        {
-          name: 'Menelaion Hotel – Sparta',
-          stars: 3,
-          roomType: 'Standard Room',
-          image: '/images/hotels/menelaion-sparta.webp',
-          location: 'Sparta, Greece',
-          boardBasis: 'Bed & Breakfast',
-          prices: {
-            double: 679,
-            single: 819,
-            triple: 649,
-            child: 589
-          },
-          packagePrice: 1358,
-          departureDate: '29/04',
-          nights: 2,
-          description: 'Κεντρικό ξενοδοχείο με εξωτερική πισίνα, εστιατόριο, μπαρ, 24ωρη ρεσεψιόν και δωρεάν Wi-Fi. Άνετα δωμάτια με κλιματισμό και ιδιωτικό μπάνιο.'
         }
       ],
       included: [
-        'Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα (Cyprus Airways)',
-        'Φόροι αεροδρομίων',
-        '2 διανυκτερεύσεις σε ξενοδοχείο 3★ στην Πάτρα με πρωινό',
-        '2 διανυκτερεύσεις σε ξενοδοχείο 3★ στη Σπάρτη με πρωινό',
-        'Μεταφορές, εκδρομές & περιηγήσεις σύμφωνα με το πρόγραμμα',
-        'Καραβάκι για Τριζόνια',
-        'Αρχηγός / συνοδός γραφείου',
-        'Τέλος ανθεκτικότητας στην κλιματική κρίση',
-        '1 αποσκευή 20kg & 1 χειραποσκευή 8kg',
-        'Υπηρεσίες αντιπροσώπων'
+        'Αεροπορικό εισιτήριο Λάρνακα – Αθήνα – Λάρνακα με Cyprus Airways.',
+        'Φόροι αεροδρομίων.',
+        'Μια αποσκευή 20 κιλών και μία χειραποσκευή 8 κιλών.',
+        'Διαμονή για τέσσερα βράδια σε ξενοδοχείο 3* στη Σπάρτη με πρόγευμα.',
+        'Μεταφορές, εκδρομές και περιηγήσεις όπως αναφέρονται στο πρόγραμμα.',
+        'Αρχηγός / συνοδός του γραφείου μας.',
+        'Δείπνο το Μ. Σάββατο και γεύμα Κυριακή του Πάσχα.',
+        'Υπηρεσίες των αντιπροσώπων μας.'
       ],
       notIncluded: [
-        'Είσοδοι σε αρχαιολογικούς χώρους & μουσεία (προαιρετικά)',
+        'Τα ποτά στα φαγητά.',
+        'Δικαιώματα εισόδων σε αρχαιολογικούς χώρους και μουσεία προαιρετικά.',
+        'Ό,τι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο.'
+      ],
+      note: 'Το 3ο κρεβάτι στο τρίκλινο δωμάτιο είναι πτυσσόμενο.',
+      cancellationPolicy: 'Ακύρωση μέχρι 45 ημέρες πριν: €50. 44–31 ημέρες πριν: 30%. 30–21 ημέρες πριν: 50%. 20 ημέρες πριν: 100%. Για charter, κρουαζιέρες, σκι, εκθέσεις, συνέδρια: έως 100% ασχέτως ημερομηνίας.',
+      termsAndConditions: [
+        'Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.',
+        'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες περίπου πριν την αναχώρηση.',
+        'Ακύρωση μέχρι 45 ημέρες πριν: παρακράτηση €50,00 για λειτουργικά έξοδα.',
+        'Ακύρωση μεταξύ 44 και 31 ημέρες πριν: παρακράτηση 30% της αξίας του ταξιδιού.',
+        'Ακύρωση μεταξύ 30 και 21 ημέρες πριν: παρακράτηση 50% της αξίας του ταξιδιού.',
+        'Ακύρωση 20 μέρες πριν την αναχώρηση: παρακράτηση όλου του ποσού.',
+        'Για charter, κρουαζιέρες, σκι, εκθέσεις, συνέδρια και παρεμφερείς διεθνείς εκδηλώσεις, τα ακυρωτικά φθάνουν μέχρι 100% ασχέτως ημερομηνίας γνωστοποίησης.'
+      ],
+      program: {
+        introduction: 'ΘΗΣΑΥΡΟΙ ΠΕΛΟΠΟΝΝΗΣΟΥ / ΝΑΥΠΑΚΤΟΣ - 5 Μέρες\n\nΔιανυκτερεύσεις: Σπάρτη (4)\n\nΜια περιήγηση στην Πελοπόννησο που σας οδηγεί στα πιο όμορφα και ιστορικά σημεία της.',
+        day1: '1η ΗΜΕΡΑ 10/4: Μ. Παρασκευή: Λάρνακα - Αθήνα - Σπάρτη\n\nΣυνάντηση στο αεροδρόμιο της Λάρνακας και αναχώρηση με πτήση της Cyprus Airways για Αθήνα. Ένα μοναδικό ταξίδι μόλις αρχίζει. Άφιξη και υποδοχή από την αρχηγό της εκδρομής μας και άμεση αναχώρηση για τη Σπάρτη, μια πόλη που συνδυάζει αρμονικά την αυθεντική φυσική ομορφιά με τα έντονα ιστορικά ίχνη του παρελθόντος. Κατά τη διαδρομή, θα πραγματοποιήσουμε στάση για καφέ στον Ισθμό της Κορίνθου, απολαμβάνοντας τη μοναδική θέα. Άφιξη στη Σπάρτη το μεσημέρι, τακτοποίηση στο ξενοδοχείο και ελεύθερος χρόνος για ξεκούραση. Το απόγευμα θα επισκεφθούμε τον Μυστρά, τη μοναδική βυζαντινή καστροπολιτεία με τα εντυπωσιακά μοναστήρια, τα παλάτια και την πανοραμική θέα στον εύφορο κάμπο της Λακωνίας. Η ατμόσφαιρα της Μεγάλης Παρασκευής προσδίδει στο χώρο μια ιδιαίτερη κατανυκτική αίσθηση. Το βράδυ, παρακολούθηση της περιφοράς του Επιταφίου. Διανυκτέρευση.',
+        day2: '2η ΗΜΕΡΑ 11/4: Μ. Σάββατο: Σπάρτη – Μονεμβασιά - Γύθειο\n\nΠρόγευμα στο ξενοδοχείο και μετά την Πρώτη Ανάσταση αναχώρηση για τη Μονεμβασιά, τη μαγευτική μεσαιωνική καστροπολιτεία που μοιάζει να ξεπηδά από τη θάλασσα. Κατά την περιήγησή μας, θα περπατήσουμε στα λιθόστρωτα σοκάκια, θα θαυμάσουμε τις βυζαντινές εκκλησίες και θα απολαύσουμε μοναδικά σημεία θέας προς το Μυρτώο Πέλαγος. Η βόλτα σε αυτό το ιστορικό και ατμοσφαιρικό μέρος αποτελεί πραγματική απόλαυση. Νωρίς το απόγευμα αναχωρούμε από την Μονεμβασιά και κατευθυνόμαστε προς το πανέμορφο Γύθειο όπου θα απολαύσουμε την πανέμορφη θέα με το καφεδάκι μας. Στη συνέχεια επιστροφή στη Σπάρτη. Το βράδυ, θα παρακολουθήσουμε την λειτουργία της Ανάστασης. Επιστροφή στο ξενοδοχείο για να απολαύσουμε το Αναστάσιμο μας δείπνο. Διανυκτέρευση.',
+        day3: '3η ΗΜΕΡΑ 12/4: Κυριακή του Πάσχα: Σπάρτη\n\nΠρόγευμα στο ξενοδοχείο. Το πρωινό είναι ελεύθερο και στη συνέχεια θα λάβουμε μέρος στο παραδοσιακό πασχαλινό γλέντι, με εκλεκτά εδέσματα και άφθονο κρασί, σε γιορτινή ατμόσφαιρα, τιμώντας τα πασχαλινά έθιμα. Διανυκτέρευση στη Σπάρτη.',
+        day4: '4η ΗΜΕΡΑ 13/4: Δευτέρα του Πάσχα: Σπάρτη - Ορεινή Αρκαδία (Βυτίνα – Στεμνίτσα – Δημητσάνα)\n\nΜετά το πρόγευμα στο ξενοδοχείο, αναχωρούμε για την Ορεινή Αρκαδία, μια περιοχή που μαγεύει με τη φυσική της ομορφιά και τη βαθιά ιστορική της σημασία, καθώς συνέβαλε ουσιαστικά στον Ελληνικό Εθνικό Απελευθερωτικό Αγώνα του 1821. Πρώτη μας στάση η Βυτίνα, ένα πανέμορφο ορεινό χωριό με παραδοσιακή αρχιτεκτονική και γραφική μικρή πλατεία, ιδανικό σημείο για μια χαλαρή βόλτα. Συνεχίζουμε για τη Στεμνίτσα, όπου θα περιπλανηθούμε στα όμορφα λιθόστρωτα σοκάκια του χωριού. Κατά την επίσκεψή μας θα δούμε τον εντυπωσιακό –αν και σήμερα ερειπωμένο– τετραώροφο πυργόσπιτο του Ροϊλού, το αρχοντικό του Μπουρνάζου, την εκκλησία της Παναγίας Στεμνίτσας με τη χαρακτηριστική καμπάνα, καθώς και την Παναγία Μπαφέρω. Από το κάστρο της Στεμνίτσας θα απολαύσουμε την εκπληκτική πανοραμική θέα της περιοχής. Τελευταίος μας σταθμός η Δημητσάνα, ένα χωριό–ζωντανό μουσείο, με καλοδιατηρημένα πέτρινα αρχοντικά και μοναδική θέα στο φαράγγι του Λούσιου ποταμού. Επιστροφή στο ξενοδοχείο μας στη Σπάρτη.',
+        day5: '5η ΗΜΕΡΑ 14/4: Τρίτη του Πάσχα: Σπάρτη - Ναύπλιο - Αθήνα – Λάρνακα\n\nΠρωινό στο ξενοδοχείο και αναχώρηση για το Ναύπλιο, την πρώτη πρωτεύουσα της σύγχρονης Ελλάδας· μια πόλη–κόσμημα με έντονο ρομαντικό χαρακτήρα και μοναδική ατμόσφαιρα. Επίσκεψη στο επιβλητικό Παλαμήδι, απ\' όπου θα απολαύσουμε πανοραμική θέα στον Αργολικό κόλπο. Ακολουθεί περίπατος στα γραφικά σοκάκια της παλιάς πόλης και γνωριμία με τα σημαντικότερα μνημεία της, όπως η Ακροναυπλία και η Πλατεία Συντάγματος. Ελεύθερος χρόνος για προαιρετικό γεύμα, καφέ ή αγορές. Στη συνέχεια, αναχώρηση για το αεροδρόμιο της Αθήνας και πτήση επιστροφής για Λάρνακα, γεμάτοι όμορφες εικόνες, συναισθήματα και μοναδικές εμπειρίες από την Πελοπόννησο και τη Στερεά Ελλάδα.'
+      },
+      gallery: [
+        '/images/pelopponisos-sparti/peloponnisos.webp'
+      ]
+    }
+  },
+  {
+    id: 63,
+    title: 'ΠΕΡΟΥ - ΣΤΑ ΜΟΝΟΠΑΤΙΑ ΤΩΝ ΙΝΚΑΣ',
+    destination: 'Peru',
+    category: 'Exotic Packages',
+    price: 4845,
+    duration: '13 Μέρες',
+    description: 'Ανακαλύψτε το Περού και τα μονοπάτια των Ινκων: Λίμα, Ιερή Κοιλάδα, Μάτσου Πίτσου, Κούσκο. Διανυκτερεύσεις στη Λίμα (4), Ιερή Κοιλάδα (3), Κούσκο (3). Διαμονή σε 4★ ξενοδοχεία με πρόγευμα.',
+    longDescription: 'Ένα ολοκληρωμένο ταξίδι 13 ημερών στο Περού. Από τη Λίμα και την Ιερή Κοιλάδα των Ίνκας, στο Μάτσου Πίτσου, το Κούσκο και τη Λίμνη Πιουράι. Περιλαμβάνονται πτήσεις μέσω Αθήνας και Μαδρίτης, ξεναγήσεις, είσοδοι και διαμονή σε 4★ ξενοδοχεία.',
+    image: '🇵🇪',
+    featured: true,
+    details: {
+      departureDate: '22/07, 11/09, 07/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Lima, Sacred Valley, Cusco, Machu Picchu – Peru',
+      monthAvailability: 'July, September, August',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Via Athens & Madrid',
+      includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 8kg',
+      coverImage: '/images/Peru/peru-cover.webp',
+      flights: [
+        {
+          direction: 'Departure',
+          date: '22/07, 11/09, 07/08',
+          route: 'Larnaca (LCA) → Athens (ATH) → Madrid → Lima (LIM)',
+          flight: 'Via Athens & Madrid',
+          time: '—',
+          luggage: '1 αποσκευή 23kg + χειραποσκευή'
+        },
+        {
+          direction: 'Return',
+          date: '—',
+          route: 'Lima (LIM) → Madrid → Athens (ATH) → Larnaca (LCA)',
+          flight: 'Via Madrid & Athens',
+          time: '—',
+          luggage: '1 αποσκευή 23kg + χειραποσκευή'
+        }
+      ],
+      hotels: [
+        {
+          name: '4* Hotel Peru',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Peru/peru-hotel.webp',
+          location: 'Lima, Peru',
+          boardBasis: 'Bed & Breakfast',
+          prices: { double: 4845, single: 5645 },
+          packagePrice: 9690,
+          departureDate: '22/07',
+          nights: 12
+        },
+        {
+          name: '4* Hotel Peru',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Peru/peru-hotel.webp',
+          location: 'Lima, Peru',
+          boardBasis: 'Bed & Breakfast',
+          prices: { double: 4845, single: 5645 },
+          packagePrice: 9690,
+          departureDate: '11/09',
+          nights: 12
+        },
+        {
+          name: '4* Hotel Peru',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Peru/peru-hotel.webp',
+          location: 'Lima, Peru',
+          boardBasis: 'Bed & Breakfast',
+          prices: { double: 4995, single: 5819 },
+          packagePrice: 9990,
+          departureDate: '07/08',
+          nights: 12
+        }
+      ],
+      included: [
+        'Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Μαδρίτη – Λίμα – Λάρνακα',
+        'Φόροι αεροδρομίων',
+        'Διαμονή σε 4★ ξενοδοχεία (Λίμα, Ιερή Κοιλάδα, Κούσκο) με πρόγευμα',
+        'Μεταφορές, ξεναγήσεις και είσοδοι σύμφωνα με το πρόγραμμα',
+        'Αρχηγός / συνοδός',
+        '1 αποσκευή 23kg + 1 χειραποσκευή 8kg'
+      ],
+      notIncluded: [
+        'Δείπνα (εκτός όπου αναφέρεται)',
+        'Είσοδοι σε προαιρετικά μουσεία/αξιοθέατα',
         'Ό,τι δεν αναφέρεται ρητά στο πρόγραμμα'
       ],
       note: '',
-      cancellationPolicy: 'Έως 45 ημέρες πριν: €50 ανά άτομο. 44–31 ημέρες πριν: 30% της αξίας. 30–21 ημέρες πριν: 50% της αξίας. 21–0 ημέρες πριν: 100% της αξίας. No-show: 100%.',
+      cancellationPolicy: 'Σύμφωνα με τους όρους του πακέτου.',
       termsAndConditions: [
         'Προκαταβολή 30% με την κράτηση',
-        'Εξόφληση ~21 ημέρες πριν την αναχώρηση',
-        'Ακυρώσεις: Έως 45 ημέρες πριν: €50 ανά άτομο',
-        '44–31 ημέρες πριν: 30%',
-        '30–21 ημέρες πριν: 50%',
-        '21–0 ημέρες πριν: 100%',
-        'No-show: 100%'
+        'Εξόφληση έως 21 ημέρες πριν την αναχώρηση',
+        'Ακυρώσεις σύμφωνα με την πολιτική της εταιρείας'
       ],
       program: {
-        introduction: 'ΘΗΣΑΥΡΟΙ ΠΕΛΟΠΟΝΝΗΣΟΥ / ΝΑΥΠΑΚΤΟΣ - 5 Μέρες\n\nΜια περιήγηση στην Πελοπόννησο που σας οδηγεί στα πιο όμορφα και ιστορικά σημεία της. Από την Πάτρα και τη Ναύπακτο, στα Τριζόνια, την Ορεινή Αρκαδία, τη Σπάρτη, τη Μονεμβασιά και το Ναύπλιο. Ανακαλύψτε την ιστορία, τη φύση και την παραδοσιακή αρχιτεκτονική της Πελοποννήσου.',
-        day1: '1η Μέρα: Λάρνακα – Αθήνα – Πάτρα\n\nΑναχώρηση από το αεροδρόμιο Λάρνακας για Αθήνα με πτήση της Cyprus Airways. Άφιξη και υποδοχή από τον αρχηγό μας. Αναχώρηση με πολυτελές πούλμαν για Πάτρα, με ενδιάμεση στάση για καφέ. Κατά τη διαδρομή απολαμβάνουμε εικόνες από τη Στερεά Ελλάδα και διέλευση από τη γέφυρα Ρίου–Αντιρρίου, ένα από τα σημαντικότερα σύγχρονα τεχνικά έργα της χώρας.\n\nΆφιξη στην Πάτρα, ζωντανή παραλιακή πόλη με έντονο εμπορικό και πολιτιστικό χαρακτήρα, γνωστή για το Πατρινό Καρναβάλι. Τακτοποίηση στο ξενοδοχείο και ελεύθερος χρόνος για ξεκούραση ή περίπατο στην παραλιακή ζώνη. Διανυκτέρευση.',
-        day2: '2η Μέρα: Πάτρα – Ναύπακτο – Τριζόνια\n\nΠρωινό και αναχώρηση για τη Ναύπακτο, μία από τις πιο γραφικές πόλεις της Ελλάδας. Περιήγηση στο ενετικό λιμάνι και το καλοδιατηρημένο κάστρο με την πανοραμική θέα στον Κορινθιακό κόλπο. Χρόνος ελεύθερος για καφέ (προαιρετικά).\n\nΣυνεχίζουμε προς το χωριό Χάνια, απ\' όπου θα πάρουμε το καραβάκι για τα Τριζόνια, το μοναδικό κατοικημένο νησί της Ελλάδας χωρίς αυτοκίνητα. Περίπατος στα γραφικά σοκάκια και χρόνος για προαιρετικό γεύμα σε παραθαλάσσια ταβέρνα. Επιστροφή στην Πάτρα. Διανυκτέρευση.',
-        day3: '3η Μέρα: Πάτρα – Βυτίνα – Ορεινή Αρκαδία – Σπάρτη\n\nΜετά το πρωινό αναχώρηση για την Ορεινή Αρκαδία, περιοχή μοναδικής φυσικής ομορφιάς. Στάση στη γραφική Βυτίνα με την παραδοσιακή αρχιτεκτονική και το καταπράσινο τοπίο. Χρόνος για βόλτα και καφέ.\n\nΣυνεχίζουμε για Δημητσάνα, παραδοσιακό οικισμό με πέτρινα αρχοντικά και πλούσια ιστορία. Δυνατότητα επίσκεψης στο Υπαίθριο Μουσείο Υδροκίνησης (προαιρετικά). Περνάμε από τη Στεμνίτσα, γνωστή για την παράδοση στην αργυροχρυσοχοΐα.\n\nΆφιξη στη Σπάρτη, τακτοποίηση στο ξενοδοχείο και ελεύθερος χρόνος για βόλτα στην κεντρική πλατεία. Διανυκτέρευση.',
-        day4: '4η Μέρα: Σπάρτη – Μονεμβασιά\n\nΠρωινό και αναχώρηση για τη μαγευτική Μονεμβασιά, την «πέτρινη καστροπολιτεία». Περιήγηση στην Κάτω Πόλη με τα λιθόστρωτα σοκάκια, τα πέτρινα αρχοντικά, τις βυζαντινές εκκλησίες και το σπίτι του Γιάννη Ρίτσου. Χρόνος ελεύθερος για φαγητό ή καφέ (προαιρετικά). Επιστροφή στη Σπάρτη. Διανυκτέρευση.',
-        day5: '5η Μέρα: Σπάρτη – Ναύπλιο – Αθήνα – Λάρνακα\n\nΠρωινό και αναχώρηση για το Ναύπλιο, την πρώτη πρωτεύουσα της σύγχρονης Ελλάδας. Επίσκεψη στο Παλαμήδι με τη μοναδική θέα στον Αργολικό κόλπο. Περιήγηση στην Παλιά Πόλη με την Ακροναυπλία, την πλατεία Συντάγματος και τα ιστορικά κτίρια.\n\nΧρόνος ελεύθερος για γεύμα ή καφέ (προαιρετικά). Αναχώρηση για το αεροδρόμιο Αθηνών και πτήση επιστροφής στη Λάρνακα, γεμάτοι εικόνες και εμπειρίες από την Πελοπόννησο.'
+        introduction: 'Διανυκτερεύσεις: Λίμα (4), Ιερή Κοιλάδα (3), Κούσκο (3)\n\nΤαξίδι 13 ημερών στα μονοπάτια των Ινκων: Λίμα, Ιερή Κοιλάδα, Μάτσου Πίτσου, Κούσκο, Λίμνη Πιουράι, Βουνό του Ουράνιου Τόξου.',
+        day1: '1η-2η Ημέρα: Λάρνακα - Αθήνα - Μαδρίτη - Λίμα\n\nΣυνάντηση στο αεροδρόμιο Λάρνακας και αναχώρηση για τη μαγευτική πρωτεύουσα του Περού, τη Λίμα, με ενδιάμεσες πτήσεις μέσω Αθήνας (παραλαβή αποσκευών) και Μαδρίτης. Άφιξη στο διεθνές αεροδρόμιο Χόρχε Τσάβες στη Λίμα, όπου θα μας υποδεχθούν οι τοπικοί αντιπρόσωποί μας. Ακολουθεί μεταφορά στο ξενοδοχείο, άμεση παραλαβή δωματίων, πρόγευμα και χρόνος για ξεκούραση. Tο απόγευμα είναι ελεύθερο για μια πρώτη γνωριμία με τη Λίμα — μια πόλη γεμάτη αντιθέσεις, που συνδυάζει αποικιακή ιστορία, σύγχρονη ζωή, πολιτισμό και μοναδικές εικόνες από τον Ειρηνικό. Για όσους το επιθυμούν, είναι ιδανική ευκαιρία για μια πρώτη βόλτα σε γειτονιές με ζωντανή ατμόσφαιρα ή για να δοκιμάσετε την περίφημη περουβιανή κουζίνα, που θεωρείται από τις κορυφαίες παγκοσμίως. Το βράδυ δείπνο στο ξενοδοχείο. Διανυκτέρευση.',
+        day2: '3η Ημέρα: Λίμα (ξενάγηση) - Ουάκα Πουκγιάνα\n\nΜετά το πρωινό, ξεκινάμε την εξερεύνησή μας στη Λίμα, τη θρυλική «Πόλη των Βασιλέων», σε μια ολοκληρωμένη οργανωμένη ξενάγηση που μας αποκαλύπτει την ιστορία, την αρχιτεκτονική και τη μοναδική προσωπικότητα της περουβιανής πρωτεύουσας. Πρώτη μας στάση η κομψή Πλατεία Σαν Μαρτίν, ένα από τα πιο εμβληματικά σημεία αναφοράς της πόλης. Από εδώ, περιπλανιόμαστε στα αυθεντικά δρομάκια του ιστορικού κέντρου, ανάμεσα σε αποικιακές προσόψεις, μπαλκόνια και ατμόσφαιρα που μοιάζει να κρατά ζωντανό το παρελθόν. Η διαδρομή μας οδηγεί στην περίφημη Plaza de Armas (Πλατεία των Όπλων), την καρδιά της αποικιακής Λίμα, όπου θα θαυμάσουμε εξωτερικά μερικά από τα σημαντικότερα μνημεία της χώρας: το επιβλητικό Προεδρικό Μέγαρο, το ιστορικό Δημαρχείο και τον μεγαλοπρεπή Καθεδρικό Ναό της Λίμα, εξαιρετικά δείγματα ισπανικής αποικιακής αρχιτεκτονικής. Χρόνος για φωτογραφίες, με φόντο τα εντυπωσιακά κτίρια που αγκαλιάζουν την πλατεία. Συνεχίζουμε περνώντας από την ιστορική εκκλησία Λα Μερσέντ και έπειτα επισκεπτόμαστε το εμβληματικό Μοναστήρι του Αγίου Φραγκίσκου, ένα από τα σημαντικότερα θρησκευτικά μνημεία της πόλης. Η επίσκεψη περιλαμβάνει τις διάσημες υπόγειες κατακόμβες, μια εμπειρία που προκαλεί δέος και αποτελεί μοναδικό «παράθυρο» στην αποικιακή ιστορία της Λίμα. Ακολουθεί γεύμα σε τοπικό εστιατόριο, όπου θα έχουμε την ευκαιρία να γνωρίσουμε τις χαρακτηριστικές γεύσεις της περουβιανής κουζίνας και στη συνέχεια θα χαλαρώσουμε στο εμβληματικό Πάρκο των Ερωτευμένων, απολαμβάνοντας την εκπληκτική θέα στον απέραντο Ειρηνικό Ωκεανό. Συνεχίζουμε με επίσκεψη στο εμβληματικό Ουάκα Πουκγιάνα, ένα εντυπωσιακό προ-Ίνκα τελετουργικό και διοικητικό κέντρο, που δεσπόζει στην καρδιά της σύγχρονης συνοικίας Μιραφλόρες. Η μεγαλοπρεπής πυραμίδα από ωμόπλινθο δημιουργεί μια μοναδική αντίθεση ανάμεσα στο αρχαίο παρελθόν και το σύγχρονο αστικό τοπίο της Λίμα. Ο αρχηγός του γκρουπ θα μας παρουσιάσει ενδιαφέροντα ιστορικά στοιχεία για τον χώρο και τη σημασία του, με ιδιαίτερη αναφορά στον πολιτισμό των Ουάρι, όπως αυτός αποκαλύπτεται μέσα από μούμιες και σημαντικά αρχαιολογικά ευρήματα που χρονολογούνται περίπου στο 700 μ.Χ.. Το βράδυ θα απολαύσουμε δείπνο σε τοπικό εστιατόριο και στη συνέχεια επιστροφή στο ξενοδοχείο για ξεκούραση. Διανυκτέρευση.',
+        day3: '4η Ημέρα: Λίμα - Εκδρομή στα Νησιά Παλομίνο - Μουσείο Λάρκο\n\nΜετά το πρωινό στο ξενοδοχείο, αναχώρηση προς το λιμάνι του Καλλιάο, απ\' όπου ξεκινά μια μοναδική θαλάσσια εμπειρία κατά μήκος της ακτογραμμής του Ειρηνικού. Επιβίβαση στο σκάφος και πλεύση προς τα Νησιά Παλομίνο, μέσα σε ανοιχτή θάλασσα και εντυπωσιακά φυσικά τοπία, μέχρι να φτάσουμε στο φυσικό καταφύγιο εκατοντάδων θαλάσσιων λιονταριών. Εκεί θα έχουμε την ξεχωριστή ευκαιρία να κολυμπήσουμε δίπλα στα θαλάσσια λιοντάρια στο φυσικό τους περιβάλλον, πάντα με τη συνοδεία ιδιωτικού οδηγού και με τον απαραίτητο εξοπλισμό ασφαλείας. Μετά την αξέχαστη αυτή εμπειρία, επιστροφή στο λιμάνι και μεταφορά πίσω στη Λίμα. Μεσημεριανό γεύμα σε τοπικό εστιατόριο. Το απόγευμα κορυφώνεται με επίσκεψη στο εξαιρετικό Μουσείο Λάρκο, ένα από τα σπουδαιότερα μουσεία της Λατινικής Αμερικής. Στεγάζεται σε μια κομψή αντιβασιλική έπαυλη του 18ου αιώνα, μέσα σε καταπράσινους, περιποιημένους κήπους, και φιλοξενεί έναν αληθινό θησαυρό πολιτισμού. Μέσα από μοναδικά εκθέματα χρυσού και ασημιού, κεραμικά αριστουργήματα και τη διεθνώς γνωστή συλλογή ερωτικής τέχνης, ξεδιπλώνονται μπροστά μας 5.000 χρόνια προκολομβιανής ιστορίας. Η επίσκεψη προσφέρει μια βαθιά, αυθεντική ματιά στον κόσμο του αρχαίου Περού: τις τελετουργίες, τις δοξασίες, την καθημερινότητα και την πνευματικότητά του. Το βράδυ θα απολαύσουμε δείπνο σε τοπικό εστιατόριο και στη συνέχεια επιστροφή στο ξενοδοχείο για ξεκούραση. Διανυκτέρευση.',
+        day4: '5η Ημέρα: Λίμα - Κούσκο - Ιερή Κοιλάδα\n\nΜετά το πρωινό μεταφερόμαστε στο αεροδρόμιο για την πτήση μας προς το Κούσκο, την ιστορική πρωτεύουσα των Ίνκας. Με την άφιξή μας ακολουθεί μεταφορά προς την μαγευτική Ιερή Κοιλάδα των Ίνκας, μια περιοχή απαράμιλλης φυσικής ομορφιάς και τεράστιας πολιτιστικής σημασίας. Κατά τη διαδρομή μας θα πραγματοποιήσουμε στάση στο Πίσακ από όπου θα απολαύσουμε μια εντυπωσιακή πανοραμική θέα στην Ιερή Κοιλάδα: καταπράσινα τοπία, αναβαθμίδες στις πλαγιές των Άνδεων και γραφικά χωριά απλωμένα κατά μήκος του ποταμού Ουρουμπάμπα. Ιδανική ευκαιρία για φωτογραφίες, αλλά και για την πρώτη ουσιαστική επαφή με το μοναδικό ανάγλυφο και τη γαλήνια ενέργεια της περιοχής. Ακολουθεί γεύμα στην κωμόπολη Πίσακ, σε αυθεντικό περιβάλλον που διατηρεί αναλλοίωτο τον παραδοσιακό χαρακτήρα της κοιλάδας. Το απόγευμα συνεχίζουμε προς την Ουρουμπάμπα, όπου θα έχουμε ελεύθερο χρόνο για χαλάρωση και ξεκούραση. Μπορείτε να περιηγηθείτε στην πόλη με τον δικό σας ρυθμό, να απολαύσετε έναν ήρεμο περίπατο στα δρομάκια της ή απλώς να χαλαρώσετε μέσα στο γαλήνιο φυσικό τοπίο που την περιβάλλει. Το χαμηλότερο υψόμετρο της Ιερής Κοιλάδας σε σχέση με το Κούσκο καθιστά την Ουρουμπάμπα ιδανικό σημείο για σταδιακό εγκλιματισμό, προετοιμάζοντάς μας ομαλά για τις επόμενες δραστηριότητες σε μεγαλύτερα υψόμετρα.',
+        day5: '6η Ημέρα: Μάρας - Μοράι - Ογιανταϊτάμπο\n\nΜετά το πρωινό, αναχωρούμε για μια ημέρα γεμάτη εικόνες και ιστορία στην καρδιά της Ιερής Κοιλάδας. Πρώτη μας στάση οι εντυπωσιακές αλατοδεξαμενές του Μάρας: ένα περίπλοκο δίκτυο αλυκών που βρίσκεται σε συνεχή χρήση από την προ-Ίνκα περίοδο. Χιλιάδες μικρές, λευκές δεξαμενές απλώνονται στις πλαγιές του βουνού, δημιουργώντας ένα μοναδικό «μωσαϊκό» μέσα στο τοπίο. Το πιο ξεχωριστό στοιχείο είναι ότι οι αλυκές συνεχίζουν να διαχειρίζονται από τοπικές οικογένειες, με παραδοσιακές τεχνικές που περνούν από γενιά σε γενιά, κρατώντας ζωντανή μια αυθεντική πτυχή της καθημερινότητας των Άνδεων. Στη συνέχεια κατευθυνόμαστε προς το Μοράι, έναν από τους πιο αινιγματικούς αρχαιολογικούς χώρους των Ίνκας, γνωστό για τις εντυπωσιακές κυκλικές αγροτικές αναβαθμίδες του. Το Μοράι θεωρείται ένα είδος γεωργικού «εργαστηρίου», όπου οι Ίνκας πραγματοποιούσαν πειράματα καλλιέργειας, προσαρμόζοντας φυτά και σπόρους σε διαφορετικά μικροκλίματα και υψόμετρα. Ένα πραγματικό δείγμα της προηγμένης γνώσης τους στη γεωργία, αλλά και της παρατήρησης της φύσης και των νόμων της. Η διαδρομή μας συνεχίζεται προς το Ογιανταϊτάμπο, μια γοητευτική κωμόπολη που διατηρεί αναλλοίωτη την αρχική πολεοδομική διάταξη των Ίνκας και αποτελεί μια από τις πιο αυθεντικές «ζωντανές» πόλεις της εποχής τους. Εκεί θα επισκεφθούμε τον επιβλητικό Αρχαιολογικό Χώρο του Ογιανταϊτάμπο, ένα εντυπωσιακό φρούριο με εξαιρετικά δείγματα λιθοδομής και μηχανικής, που κατά την εποχή της Αυτοκρατορίας των Ίνκας λειτουργούσε τόσο ως στρατιωτικό οχυρό όσο και ως τελετουργικό κέντρο. Η ανάβαση στις αναβαθμίδες ανταμείβει με πανοραμική θέα στην κοιλάδα και στην πόλη που απλώνεται από κάτω — μοναδικές εικόνες και ιδανικές φωτογραφικές ευκαιρίες που μένουν αξέχαστες. Μετά από μια πλούσια σε εμπειρίες ημέρα και μεσημεριανό γεύμα σε τοπικό εστιατόριο, επιστρέφουμε στο ξενοδοχείο.',
+        day6: '7η Ημέρα: Μάτσου Πίτσου - Το Ιερό των Ίνκας\n\nΜετά το πρωινό στο ξενοδοχείο, αναχωρούμε για τον σιδηροδρομικό σταθμό του Ογιανταϊτάμπο, απ\' όπου θα επιβιβαστούμε στο πρωινό τρένο με προορισμό το Άγουας Καλιέντες. Η διαδρομή, που ακολουθεί την πορεία του ποταμού Ουρουμπάμπα, χαρίζει μοναδικές εικόνες: επιβλητικά τοπία των Άνδεων, πυκνή βλάστηση, απόκρημνα φαράγγια και μια αίσθηση ότι πλησιάζουμε σταδιακά σε κάτι πραγματικά ξεχωριστό. Με την άφιξή μας στο Άγουας Καλιέντες, μεταβαίνουμε στον σταθμό λεωφορείων και, έπειτα από μια περίπου 30λεπτη ανηφορική διαδρομή, φτάνουμε σε ένα από τα σημαντικότερα μνημεία της παγκόσμιας πολιτιστικής κληρονομιάς και ένα από τα Νέα Επτά Θαύματα του Κόσμου: το Ιστορικό Ιερό του Μάτσου Πίτσου, γνωστό διεθνώς ως η «Χαμένη Πόλη των Ίνκας». Η είσοδός μας στην ακρόπολη αποκαλύπτει ένα τοπίο σπάνιας αρμονίας ανάμεσα στο ανθρώπινο έργο και τη φύση. Κατά τη διάρκεια της ξενάγησης θα περιηγηθούμε στον αρχαιολογικό χώρο, γνωρίζοντας από κοντά τις πιο εμβληματικές κατασκευές του: την Κεντρική Πλατεία, τον επιβλητικό Ναό του Ήλιου, το ιερό ηλιακό ρολόι Ιντιγουατάνα, τα βασιλικά διαμερίσματα, τον συμβολικό Ναό των Τριών Παραθύρων, καθώς και πλήθος τελετουργικών και διοικητικών χώρων που μαρτυρούν τη βαθιά κοσμοθεωρία, την τεχνολογική υπεροχή και την πνευματικότητα του πολιτισμού των Ίνκας. Ο έμπειρος ξεναγός θα φωτίσει τον ρόλο του Μάτσου Πίτσου ως θρησκευτικό, πολιτικό και αστρονομικό κέντρο, αναδεικνύοντας παράλληλα τα μυστήρια που εξακολουθούν να το περιβάλλουν μέχρι σήμερα. Η εμπειρία ολοκληρώνεται με ελεύθερο χρόνο για φωτογραφίες, ώστε να αποτυπώσουμε τη μαγεία του τοπίου και τη μοναδική αίσθηση δέους που προσφέρει το μνημείο. Μετά το τέλος της ξενάγησης, επιστρέφουμε στο Άγουας Καλιέντες, όπου θα απολαύσουμε το γεύμα μας. Στη συνέχεια επιβιβαζόμαστε στο τρένο για την επιστροφή μας στο Ογιανταϊτάμπο και από εκεί μεταφερόμαστε στο ξενοδοχείο μας στην Ιερή Κοιλάδα για ξεκούραση και διανυκτέρευση, ολοκληρώνοντας μια ημέρα που αποτελεί αναμφίβολα το αποκορύφωμα του ταξιδιού μας στο Περού.',
+        day7: '8η Ημέρα: Τσιντσέρο - Κούσκο\n\nΠρωινό και αναχωρούμε για το Τσιντσέρο, για μια αυθεντική εμπειρία στην καρδιά των Άνδεων. Το γραφικό αυτό χωριό φημίζεται για τη διατήρηση των πανάρχαιων παραδόσεων της ανδεανής υφαντικής τέχνης και θεωρείται ένα από τα σημαντικότερα κέντρα λαϊκής δημιουργίας της περιοχής. Με την άφιξή μας, επισκεπτόμαστε ένα τοπικό κέντρο υφαντικής, όπου έμπειροι τεχνίτες και τεχνίτριες θα μας μυήσουν στα μυστικά της παραδοσιακής δημιουργίας υφασμάτων. Θα παρακολουθήσουμε αναλυτικά ολόκληρη τη διαδικασία: από την προετοιμασία του μαλλιού αλπάκα και προβάτου, τον καθαρισμό και το γνέσιμο των ινών, έως τη βαφή με φυσικές χρωστικές από φυτά, έντομα και ορυκτά. Ιδιαίτερη εντύπωση προκαλεί η χρήση της κοχενίλλης, ενός εντόμου που χαρίζει βαθιές κόκκινες αποχρώσεις, αλλά και οι τρόποι με τους οποίους οι τεχνίτες ρυθμίζουν την ένταση και τον τόνο των χρωμάτων με φυσικά υλικά, όπως λεμόνι, αλάτι και άλλα παραδοσιακά πρόσθετα. Θα δούμε πώς τα πολύχρωμα νήματα μεταμορφώνονται σε περίτεχνα σχέδια πάνω στους παραδοσιακούς αργαλειούς, με τεχνικές που μεταδίδονται από γενιά σε γενιά εδώ και αιώνες. Κατά τη διάρκεια της επίσκεψης, θα έχετε τη δυνατότητα να αλληλεπιδράσετε με τους δημιουργούς, να θέσετε ερωτήσεις και να κατανοήσετε τον συμβολισμό των μοτίβων και των χρωμάτων. Προαιρετικά, μπορείτε να προμηθευτείτε χειροποίητα υφαντά απευθείας από τους τεχνίτες, στηρίζοντας την τοπική κοινότητα. Στη συνέχεια αναχωρούμε για το Κούσκο, όπου θα απολαύσουμε γεύμα σε τοπικό εστιατόριο. Το υπόλοιπο της ημέρας είναι ελεύθερο, δίνοντάς σας την ευκαιρία να εξερευνήσετε την πόλη με τον δικό σας ρυθμό: να περπατήσετε στα ιστορικά σοκάκια, να επισκεφθείτε αγορές και μουσεία ή απλώς να απολαύσετε τη μοναδική ατμόσφαιρα της άλλοτε πρωτεύουσας των Ίνκας. Διανυκτέρευση στο Κούσκο.',
+        day8: '9η Ημέρα: Κούσκο (ξενάγηση)\n\nΣήμερα βυθιζόμαστε στην πλούσια ιστορία και τη μυσταγωγική ατμόσφαιρα του Κούσκο, της άλλοτε πρωτεύουσας της Αυτοκρατορίας των Ίνκας. Η ξενάγησή μας οδηγεί στα σημαντικότερα μνημεία της πόλης και της ευρύτερης περιοχής, αποκαλύπτοντας το μεγαλείο, τη σοφία και την τεχνογνωσία ενός από τους πιο εντυπωσιακούς πολιτισμούς της ανθρωπότητας. Ξεκινάμε με επίσκεψη στο επιβλητικό φρούριο Σακσαϊγουαμάν, ένα από τα σπουδαιότερα αρχαιολογικά συγκροτήματα των Ίνκας. Τα γιγαντιαία λίθινα τείχη του, κατασκευασμένα με εντυπωσιακή ακρίβεια χωρίς τη χρήση κονιάματος, αποτελούν αριστούργημα μηχανικής και αρχιτεκτονικής. Ο χώρος είναι παγκοσμίως γνωστός και ως σκηνικό της εντυπωσιακής γιορτής Ίντι Ράιμι, της αναβίωσης της αρχαίας τελετής προς τιμήν του Ήλιου, που πραγματοποιείται κάθε Ιούνιο. Στη συνέχεια επισκεπτόμαστε το τελετουργικό κέντρο Κένκο, έναν μυστηριώδη χώρο λατρείας και θυσιών, και ακολουθούν τα Πούκα Πουκάρα και Ταμποματσάι, μνημεία γνωστά για τη στρατηγική τους σημασία και τα εντυπωσιακά υδραυλικά έργα τους. Εδώ αποκαλύπτεται η προηγμένη γνώση των Ίνκας στη διαχείριση του νερού, στοιχείο ζωτικής σημασίας για τον πολιτισμό τους. Επιστρέφοντας στην πόλη, επισκεπτόμαστε το εμβληματικό Κορικαντσά, τον περίφημο Ναό του Ήλιου, που υπήρξε το σημαντικότερο θρησκευτικό κέντρο της αυτοκρατορίας. Σήμερα ενσωματώνεται αρμονικά στο αποικιακό μοναστήρι του Αγίου Δομίνικου, προσφέροντας ένα μοναδικό παράδειγμα της συνύπαρξης και της ιστορικής διαστρωμάτωσης των δύο πολιτισμών. Η περιήγησή μας συνεχίζεται στη γραφική συνοικία Σαν Μπλας, γνωστή για τα στενά καλντερίμια, τα εργαστήρια καλλιτεχνών και τη μποέμ ατμόσφαιρά της. Εκεί θα θαυμάσουμε τη διάσημη Πέτρα των 12 Γωνιών, σύμβολο της απόλυτης τελειότητας της αρχιτεκτονικής των Ίνκας. Η ημέρα ολοκληρώνεται με επίσκεψη στην πολύχρωμη και ζωντανή Αγορά Σαν Πέδρο, ιδανική για να γνωρίσουμε από κοντά την καθημερινή ζωή των κατοίκων του Κούσκο. Ανάμεσα σε πάγκους γεμάτους εξωτικά φρούτα, ανδεανικά βότανα, τοπικές λιχουδιές και χειροποίητα προϊόντα, θα ζήσουμε μια αυθεντική εμπειρία γεμάτη εικόνες, αρώματα και ήχους. Το βράδυ μεταφορά σε τοπικό εστιατόριο για δείπνο με παραδοσιακό σόου. Επιστροφή στο ξενοδοχείο. Διανυκτέρευση.',
+        day9: '10η Ημέρα: Κούσκο - Λίμνη Πιουράι – Εμπειρία Πατσαμάνκα\n\nΠρωινό και αναχωρούμε προς τη γαλήνια Λίμνη Πιουράι, κοντά στο χωριό Τσιντσέρο, στην καρδιά της Ιερής Κοιλάδας. Σε ένα ειδυλλιακό φυσικό σκηνικό, με φόντο τα ανδεανικά τοπία, τον καθαρό ορεινό αέρα και τη σιωπή της φύσης, θα ζήσουμε μια αυθεντική εμπειρία που συνδυάζει γαστρονομία, παράδοση και πολιτισμό των Άνδεων. Κεντρικό στοιχείο της ημέρας είναι η προετοιμασία της Πατσαμάνκα, μιας παραδοσιακής μεθόδου μαγειρέματος στη γη που αποτελεί ταυτόχρονα τελετουργία και γιορτή. Η διαδικασία ξεκινά με το ζέσταμα των λίθων μέσα στο έδαφος, ενώ παράλληλα ετοιμάζονται τα υλικά: διάφορα είδη κρέατος, λαχανικά, δύο είδη πατάτας, γλυκοπατάτες, καλαμπόκι και κουκιά, αρωματισμένα με τοπικά βότανα. Όλα τοποθετούνται πάνω στις καυτές πέτρες, δημιουργώντας έναν παραδοσιακό υπόγειο φούρνο, που σιγομαγειρεύει τις γεύσεις με τρόπο μοναδικό. Η τελετουργία είναι αφιερωμένη στην Πατσαμάμα (Μητέρα Γη) και συνοδεύεται από επεξηγήσεις για τον συμβολισμό και τη σημασία του εθίμου, προσφέροντάς μας μια βαθύτερη σύνδεση με την ανδεανή κοσμοθεωρία και τον σεβασμό προς τη φύση. Η εμπειρία κορυφώνεται τη στιγμή που αποκαλύπτονται τα μαγειρεμένα υλικά και σερβίρονται οι πρώτες μερίδες, σε μια ατμόσφαιρα χαράς και συλλογικότητας. Πρόκειται για μια στιγμή που ενεργοποιεί όλες τις αισθήσεις και μετατρέπει το γεύμα σε μια πραγματική πολιτιστική εμπειρία. Προαιρετικά, θα υπάρχει δυνατότητα για βόλτα με κανό στα ήρεμα νερά της λίμνης Πιουράι, για στιγμές χαλάρωσης μέσα σε ένα μοναδικό φυσικό τοπίο — ανάμεσα σε βουνά, καθρεφτισμούς νερού και ανοιχτό ουρανό. Στο τέλος της ημέρας, επιστρέφουμε στο ξενοδοχείο μας στο Κούσκο για ξεκούραση, ολοκληρώνοντας μια ξεχωριστή εμπειρία που συνδέει ιδανικά τη φύση, τη γαστρονομία και τον πολιτισμό των Άνδεων.',
+        day10: '11η Ημέρα: Κούσκο - Ουράνιου Τόξου (Rainbow Mountain) - Λίμα\n\nΠρωινό και αναχωρούμε προς το εντυπωσιακό Βουνό του Ουράνιου Τόξου, ένα από τα πιο εμβληματικά φυσικά αξιοθέατα των Άνδεων. Με την άφιξή μας στο σημείο ελέγχου, ξεκινάμε την πεζοπορία προς την κορυφή, μια ανάβαση διάρκειας περίπου 2 ωρών, μέσα από μοναδικά τοπία με πανοραμική θέα, που κόβει την ανάσα. Φτάνοντας στο Βουνό του Ουράνιου Τόξου, ο έμπειρος ξεναγός μας θα μας εξηγήσει τη γεωλογική σημασία και την ιστορία αυτού του μοναδικού φυσικού φαινομένου. Θα έχετε άφθονο ελεύθερο χρόνο για φωτογραφίες, για να θαυμάσετε τα εντυπωσιακά χρώματα του βουνού και να παρατηρήσετε τη χαρακτηριστική χλωρίδα και πανίδα της περιοχής, με τη συχνή παρουσία λάμα και αλπάκα να συμπληρώνει το σκηνικό. Αφού απολαύσουμε το τοπίο, ξεκινάμε την κατάβαση προς το σημείο εκκίνησης και ακολουθεί μεταφορά στο αεροδρόμιο για να πάρουμε την πτήση για Λίμα. Άφιξη στην περουβιανή πρωτεύουσα και μεταφορά στο ξενοδοχείο. Το βράδυ θα απολαύσουμε δείπνο σε τοπικό εστιατόριο. Διανυκτέρευση.',
+        day11: '12η - 13η Ημέρα: Λίμα - Μαδρίτη - Αθήνα - Λάρνακα\n\nΜετά το πρωινό, αναχωρούμε για το αεροδρόμιο της Λίμα, για την πτήση της επιστροφής μας προς Λάρνακα, με ενδιάμεσους σταθμούς στη Μαδρίτη(παραλαβή αποσκευών) και την Αθήνα. Άφιξη στη Λάρνακα την επόμενη ημέρα, ολοκληρώνοντας ένα ταξίδι γεμάτο εικόνες, πολιτισμό και μοναδικές εμπειρίες στο Περού.'
       },
       gallery: [
-        '/images/destinations/greece-hero.webp'
+        '/images/Peru/peru-cover.webp'
       ]
     }
   }
