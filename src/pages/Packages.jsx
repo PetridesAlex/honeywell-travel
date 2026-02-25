@@ -10,6 +10,7 @@ const slugToCategory = (slug) => {
   const slugCategoryMap = {
     'destinations': 'Destinations',
     'summer-packages': 'Summer Packages',
+    'summer-packages-to-greece': 'Summer Packages to Greece',
     'autumn-packages': 'Autumn Packages',
     'winter-packages': 'Winter Packages',
     'spring-packages': 'Spring Packages',
@@ -82,6 +83,7 @@ function Packages() {
     'Any',
     'Destinations',
     'Summer Packages',
+    'Summer Packages to Greece',
     'Autumn Packages',
     'Winter Packages',
     'Spring Packages',

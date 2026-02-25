@@ -17,6 +17,7 @@ function BookOnline() {
   const categories = [
     'Destinations',
     'Summer Packages',
+    'Summer Packages to Greece',
     'Autumn Packages',
     'Winter Packages',
     'Christmas Packages',

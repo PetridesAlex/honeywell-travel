@@ -23,6 +23,7 @@ function Header() {
   const holidayTypes = [
     'Destinations',
     'Summer Packages',
+    'Summer Packages to Greece',
     'Autumn Packages',
     'Winter Packages',
     'Christmas Packages',

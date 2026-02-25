@@ -914,7 +914,13 @@ function PackageFullDetail() {
                   </h3>
                   {details.cancellationPolicy ? (
                     <div className="cancellation-policy">
-                      <p className="section-text">{details.cancellationPolicy}</p>
+                      {typeof details.cancellationPolicy === 'string' && details.cancellationPolicy.includes('\n') ? (
+                        details.cancellationPolicy.split('\n').filter(Boolean).map((paragraph, i) => (
+                          <p key={i} className="section-text">{paragraph}</p>
+                        ))
+                      ) : (
+                        <p className="section-text">{details.cancellationPolicy}</p>
+                      )}
                     </div>
                   ) : (
                     <p className="section-text muted">
@@ -928,28 +934,38 @@ function PackageFullDetail() {
             {/* Related tours */}
             {relatedTours.length > 0 && (
               <section className="full-section related-section">
-                <h2>Related Tours</h2>
+                <h2 className="related-section-title">Related Tours</h2>
+                <p className="related-section-subtitle">More packages in the same category</p>
                 <div className="related-grid">
-                      {relatedTours.map((tour) => (
-                        <Link 
-                          key={tour.id} 
-                          to={`/packages/${tour.id}`} 
-                          className="related-card"
-                          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-            if (document.documentElement) document.documentElement.scrollTop = 0
-            if (document.body) document.body.scrollTop = 0
-            setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
-          }}
-                        >
-                          <div className="related-header">
-                            <span className="related-destination">{tour.destination}</span>
-                            <span className="related-price">From €{tour.cheapestPrice.toLocaleString()}</span>
-                          </div>
-                          <h3>{tour.title}</h3>
-                          <p>{tour.duration}</p>
-                        </Link>
-                      ))}
+                  {relatedTours.map((tour) => {
+                    const thumbSrc = tour.details?.thumbnailImage || tour.details?.coverImage || tour.details?.gallery?.[0] || '/images/destinations/riviera-hero.webp'
+                    return (
+                      <Link
+                        key={tour.id}
+                        to={`/packages/${tour.id}`}
+                        className="related-card"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+                          if (document.documentElement) document.documentElement.scrollTop = 0
+                          if (document.body) document.body.scrollTop = 0
+                          setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+                        }}
+                      >
+                        <div className="related-card-image-wrap">
+                          <div
+                            className="related-card-image"
+                            style={{ backgroundImage: `url(${thumbSrc})` }}
+                          />
+                          <span className="related-card-badge">From €{tour.cheapestPrice.toLocaleString()}</span>
+                        </div>
+                        <div className="related-card-body">
+                          <span className="related-destination">{tour.destination}</span>
+                          <h3 className="related-card-title">{tour.title}</h3>
+                          <p className="related-card-duration">{tour.duration}</p>
+                        </div>
+                      </Link>
+                    )
+                  })}
                 </div>
               </section>
             )}

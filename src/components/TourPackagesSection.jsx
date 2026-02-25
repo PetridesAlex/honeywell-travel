@@ -47,6 +47,14 @@ function TourPackagesSection() {
       image: '/images/categories/easter-cover.webp'
     },
     {
+      id: 'summer-packages-to-greece',
+      title: 'Summer Packages to Greece',
+      icon: '☀️',
+      description: 'Summer holidays in Greece',
+      color: '#1E90FF',
+      image: '/images/categories/summer-package-greece.webp'
+    },
+    {
       id: 'summer-packages',
       title: 'Summer Packages',
       icon: '☀️',

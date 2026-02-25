@@ -41,6 +41,7 @@ function AddPackage() {
     'Mary Special Trips',
     'SPORTS EVENTS & CONCERTS',
     'Summer Packages',
+    'Summer Packages to Greece',
     'Winter Packages'
   ]
 

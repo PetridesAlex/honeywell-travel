@@ -23,6 +23,7 @@ function SearchSection() {
   const categories = [
     { value: 'Any', label: 'Any Category', icon: '🌍' },
     { value: 'Summer Packages', label: 'Summer Packages', icon: '☀️' },
+    { value: 'Summer Packages to Greece', label: 'Summer Packages to Greece', icon: '🇬🇷' },
     { value: 'Winter Packages', label: 'Winter Packages', icon: '❄️' },
     { value: 'Spring Packages', label: 'Spring Packages', icon: '🌸' },
     { value: 'City Breaks', label: 'City Breaks', icon: '🏙️' },
