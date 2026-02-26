@@ -161,7 +161,7 @@
   transform: scale(1.04);
 }
 
-/* Details below image: title + Explore – clearly visible */
+/* Details below image: title + Explore – clearly visible, white text */
 .package-card-details {
   padding: 1.5rem 1.75rem 1.75rem;
   background: #1a1a1a;
@@ -171,14 +171,16 @@
   align-items: center;
   gap: 1rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .package-card-title {
+  font-family: var(--font-serif);
   font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important;
   margin: 0;
-  line-height: 1.35;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
@@ -190,31 +192,36 @@
 }
 
 .package-brand {
-  color: #C41230;
+  font-family: var(--font-sans);
+  color: #C41230 !important;
   font-weight: 800;
   display: block;
   width: 100%;
   line-height: 1.2;
+  font-size: 0.9em;
+  letter-spacing: 0.06em;
 }
 
 .package-type {
-  color: #ffffff;
+  font-family: var(--font-serif);
+  color: #ffffff !important;
   display: block;
   width: 100%;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .package-arrow {
+  font-family: var(--font-sans);
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 700;
   font-size: 1.05rem;
   background: #C41230;
   padding: 0.85rem 1.65rem;
   border-radius: 10px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   box-shadow: 0 2px 12px rgba(196, 18, 48, 0.3);
   transition: all 0.3s ease;

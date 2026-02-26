@@ -21,8 +21,8 @@ function Home() {
       />
       <div className="home-page">
       <ImageCarousel />
-      <div style={{ height: '400px', position: 'relative', margin: 0 }}>
-        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+      <div style={{ position: 'relative', margin: 0 }}>
+        <CircularGallery textColor="#ffffff" borderRadius={0.05} />
       </div>
       <div className="unified-sections-wrapper" style={{ backgroundImage: `url(${sharedBackground})` }}>
         <div className="search-tour-shared-background">

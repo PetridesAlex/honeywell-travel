@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
 import './CircularGallery.css'
 
 function CircularGallery({ textColor = '#ffffff', borderRadius = 0.05 }) {
-  // Images with correct country names - easy to add more images here
   const images = [
     { id: 1, src: '/images/destinations/iceland.webp', title: 'Iceland' },
     { id: 2, src: '/images/destinations/thailand.webp', title: 'Thailand' },
@@ -16,51 +14,19 @@ function CircularGallery({ textColor = '#ffffff', borderRadius = 0.05 }) {
     { id: 10, src: '/images/destinations/netherlands.webp', title: 'Netherlands' }
   ]
 
-  const containerRef = useRef(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % images.length
-        return nextIndex
-      })
-    }, 5000) // Rotate every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [images.length])
-
-  useEffect(() => {
-    if (containerRef.current) {
-      const firstItem = containerRef.current.querySelector('.circular-gallery-item')
-      if (firstItem) {
-        const itemWidth = firstItem.offsetWidth
-        const gap = 24 // 1.5rem = 24px
-        const scrollPosition = currentIndex * (itemWidth + gap)
-        containerRef.current.scrollTo({
-          left: scrollPosition,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }, [currentIndex])
-
   return (
-    <div 
+    <div
       className="circular-gallery"
-      style={{ 
+      style={{
         '--text-color': textColor,
         '--border-radius': `${borderRadius * 100}%`
       }}
     >
-      <div className="circular-gallery-container" ref={containerRef}>
+      <div className="circular-gallery-container">
         {images.map((image) => (
-          <div 
-            key={image.id}
-            className="circular-gallery-item"
-          >
-            <img 
-              src={image.src} 
+          <div key={image.id} className="circular-gallery-item">
+            <img
+              src={image.src}
               alt={image.title}
               onError={(e) => {
                 e.target.style.background = 'linear-gradient(135deg, #E31E24 0%, #C41230 100%)'
