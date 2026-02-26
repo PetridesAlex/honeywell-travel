@@ -452,58 +452,66 @@
   margin-top: 1rem;
 }
 
+/* Package cards on white section background – readable contrast */
 .packages-by-category-cards .package-card {
   margin: 0;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .packages-by-category-cards .package-card:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(196, 18, 48, 0.2);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
 }
 
 .packages-by-category-cards .package-content {
-  background: transparent;
+  background: #ffffff;
+  color: #1a1a2e;
 }
 
 .packages-by-category-cards .package-badge {
-  background: rgba(255, 255, 255, 0.25);
-  color: #ffb3ba;
+  background: rgba(196, 18, 48, 0.1);
+  color: #C41230;
+  border: 1px solid rgba(196, 18, 48, 0.2);
 }
 
 .packages-by-category-cards .package-title {
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  color: #1a1a2e;
+  text-shadow: none;
+  font-weight: 700;
 }
 
 .packages-by-category-cards .package-description {
-  color: rgba(255, 255, 255, 0.88);
+  color: #4b5563;
 }
 
 .packages-by-category-cards .package-details {
-  color: rgba(255, 255, 255, 0.78);
+  color: #6b7280;
+}
+
+.packages-by-category-cards .package-details .package-duration,
+.packages-by-category-cards .package-details .package-category {
+  color: #6b7280;
 }
 
 .packages-by-category-cards .package-footer {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(0, 0, 0, 0.08);
 }
 
 .packages-by-category-cards .package-price {
-  color: #ffb3ba;
+  color: #C41230;
+  font-weight: 700;
 }
 
 .packages-by-category-cards .package-button {
-  background: linear-gradient(135deg, rgba(196, 18, 48, 0.85) 0%, rgba(227, 30, 36, 0.9) 100%);
-  box-shadow: 0 4px 16px rgba(196, 18, 48, 0.4);
+  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(196, 18, 48, 0.3);
 }
 
 .packages-by-category-cards .package-card:hover .package-button {
-  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  background: linear-gradient(135deg, #a00e26 0%, #C41230 100%);
 }
 
 .packages-by-category-view-all {
