@@ -23,13 +23,26 @@
   pointer-events: none;
 }
 
-/* Top tagline bar - #LivetheExperience */
+/* Top tagline bar - #LivetheExperience center, Honeywell Travel right */
 .tagline-bar {
   padding: 0.4rem 1.5rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
   position: relative;
+}
+
+.tagline-bar .tagline-text {
+  flex: 0 0 auto;
+}
+
+.tagline-bar .tagline-brand {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .tagline-bar::before {
@@ -91,6 +104,17 @@
   position: relative;
   z-index: 2;
   animation: taglineTextGlow 3s ease-in-out infinite;
+}
+
+.tagline-brand {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes taglineTextGlow {
@@ -858,6 +882,12 @@
     letter-spacing: 0.18em;
   }
 
+  .tagline-brand {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    right: 1rem;
+  }
+
   .header-container {
     padding: 0.4rem 1rem;
     min-height: 58px;
@@ -916,6 +946,12 @@
   .tagline-text {
     font-size: 0.9375rem;
     letter-spacing: 0.12em;
+  }
+
+  .tagline-brand {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    right: 0.75rem;
   }
 
   .header-container {

@@ -69,6 +69,7 @@ function Header() {
     <header className="header">
       <div className="tagline-bar">
         <span className="tagline-text">#LivetheExperience</span>
+        <span className="tagline-brand">Honeywell Travel</span>
       </div>
       <div className="header-container">
         <Link to="/" className="logo">
