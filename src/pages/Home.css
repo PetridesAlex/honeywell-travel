@@ -12,15 +12,8 @@
 
 .unified-sections-wrapper {
   position: relative;
-  background-color: #000000;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #ffffff;
   min-height: 100vh;
-  /* No filters and no effects on the background image */
-  filter: none;
-  -webkit-filter: none;
 }
 
 .search-tour-shared-background {
@@ -50,25 +43,8 @@
     -webkit-backdrop-filter: none !important;
   }
 
-  .unified-sections-wrapper {
-    background-attachment: scroll !important;
-    background-size: 100% auto !important;
-    background-position: center top !important;
-    background-repeat: repeat-y !important;
-    filter: none !important;
-    -webkit-filter: none !important;
-    transform: none !important;
-    -webkit-transform: none !important;
-    backface-visibility: visible !important;
-    -webkit-backface-visibility: visible !important;
-  }
-
   .search-tour-shared-background {
     background: transparent !important;
-  }
-
-  .unified-sections-wrapper::before {
-    content: none;
   }
 }
 
@@ -78,30 +54,12 @@
     -webkit-backdrop-filter: none !important;
   }
 
-  .unified-sections-wrapper {
-    background-attachment: scroll !important;
-    background-size: 100% auto !important;
-    background-position: center top !important;
-    background-repeat: repeat-y !important;
-    filter: none !important;
-    -webkit-filter: none !important;
-    transform: none !important;
-    -webkit-transform: none !important;
-    backface-visibility: visible !important;
-    -webkit-backface-visibility: visible !important;
-  }
-
   .search-tour-shared-background {
     background: transparent !important;
   }
 
-  .unified-sections-wrapper::before {
-    content: none;
-  }
-  
   .home-page {
     overflow-x: hidden;
-    /* Improve scroll performance */
     -webkit-overflow-scrolling: touch;
   }
 }

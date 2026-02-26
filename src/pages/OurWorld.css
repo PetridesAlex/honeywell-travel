@@ -250,13 +250,35 @@
 }
 
 .content-placeholder {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #4b5563;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #2d3748;
+  letter-spacing: 0.01em;
+  max-width: 42em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content-placeholder p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+
+.content-placeholder p:first-of-type {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba(196, 18, 48, 0.35);
+}
+
+.content-placeholder p:first-of-type::first-letter {
+  font-size: 3.2rem;
+  line-height: 1;
+  float: left;
+  margin: 0.08em 0.12em 0 0;
+  font-weight: 700;
+  color: #C41230;
+  font-family: var(--font-serif);
 }
 
 .content-placeholder p:last-child {
@@ -1043,9 +1065,14 @@
   }
   
   .content-placeholder {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    line-height: 1.85;
   }
-  
+
+  .content-placeholder p:first-of-type::first-letter {
+    font-size: 2.5rem;
+  }
+
   .award-card {
     padding: 2rem 1.5rem;
   }

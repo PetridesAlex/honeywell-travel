@@ -49,22 +49,19 @@
 }
 
 .tour-packages-section .section-subtitle {
-  font-size: 1.55rem;
-  color: #1a1a2e;
+  font-size: 1.35rem;
+  color: #374151;
   width: 100%;
-  max-width: 100%;
-  margin: 2.25rem auto 0;
-  line-height: 1.75;
-  text-shadow: none;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  font-family: var(--font-sans);
+  max-width: 36em;
+  margin: 2rem auto 0;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-family: var(--font-serif);
   position: relative;
-  padding: 1.25rem 2.5rem;
-  background: linear-gradient(135deg, rgba(196, 18, 48, 0.06) 0%, rgba(227, 30, 36, 0.04) 100%);
-  border-radius: 16px;
-  border: 1px solid rgba(196, 18, 48, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 1rem 0 1rem 1.5rem;
+  border-left: 4px solid #C41230;
+  border-radius: 0 4px 4px 0;
   box-sizing: border-box;
 }
 
@@ -315,7 +312,8 @@
 
   .tour-packages-section .section-subtitle {
     font-size: 1.15rem;
-    padding: 1rem 1.5rem;
+    padding: 0.9rem 0 0.9rem 1.25rem;
+    border-left-width: 3px;
   }
 
   .packages-grid {
@@ -410,7 +408,8 @@
 
   .tour-packages-section .section-subtitle {
     font-size: 1rem;
-    padding: 0.85rem 1rem;
+    padding: 0.75rem 0 0.75rem 1rem;
+    border-left-width: 3px;
   }
 
   .packages-grid {

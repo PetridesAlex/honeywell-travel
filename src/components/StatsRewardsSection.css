@@ -18,37 +18,47 @@
 
 .stats-rewards-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #1a1a2e;
-  margin: 0 0 0.5rem 0;
+  margin: 0 auto;
   text-align: center;
   letter-spacing: -0.02em;
-  padding: 0.85rem 1.35rem;
-  border-radius: 14px;
+  padding-bottom: 0.75rem;
+  position: relative;
   display: inline-block;
   width: auto;
-  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, rgba(196, 18, 48, 0.06) 0%, rgba(227, 30, 36, 0.04) 100%);
-  border: 1px solid rgba(196, 18, 48, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-serif);
+}
+
+.stats-rewards-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #E31E24 0%, #C41230 50%, #E31E24 100%);
+  border-radius: 4px;
 }
 
 .stats-rewards-subtitle {
-  font-size: 1.1rem;
-  color: #1a1a2e;
-  margin: 1.15rem auto 3rem;
+  font-size: 1.2rem;
+  color: #374151;
+  margin: 1.5rem auto 3rem;
   text-align: center;
   font-weight: 400;
   letter-spacing: 0.02em;
-  max-width: 760px;
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(196, 18, 48, 0.05) 0%, rgba(227, 30, 36, 0.03) 100%);
-  border: 1px solid rgba(196, 18, 48, 0.12);
-  text-shadow: none;
+  max-width: 36em;
+  line-height: 1.6;
+  padding: 1rem 2rem 1rem 2.5rem;
+  position: relative;
+  font-family: var(--font-serif);
+  border-left: 4px solid #C41230;
+  border-radius: 0 4px 4px 0;
+  box-sizing: border-box;
 }
 
 .stats-rewards-grid {
@@ -128,10 +138,16 @@
     font-size: 2rem;
   }
 
+  .stats-rewards-title::after {
+    width: 48px;
+    height: 3px;
+  }
+
   .stats-rewards-subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 2rem;
-    padding: 0.75rem 0.9rem;
+    padding: 0.85rem 1rem 0.85rem 1.25rem;
+    border-left-width: 3px;
   }
 
   .stats-rewards-grid {

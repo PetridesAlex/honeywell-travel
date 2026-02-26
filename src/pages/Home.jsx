@@ -24,7 +24,7 @@ function Home() {
       <div style={{ position: 'relative', margin: 0 }}>
         <CircularGallery textColor="#ffffff" borderRadius={0.05} />
       </div>
-      <div className="unified-sections-wrapper" style={{ backgroundImage: `url(${sharedBackground})` }}>
+      <div className="unified-sections-wrapper">
         <div className="search-tour-shared-background">
           <RevealOnScroll direction="up" delay={0}>
             <SearchSection 

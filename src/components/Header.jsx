@@ -157,7 +157,11 @@ function Header() {
             )}
           </div>
 
-          <Link to="/our-services/" className="nav-link">{t('header.corporate')}</Link>
+          <Link to="/our-services/" className="nav-link nav-link-corporate">
+            <span className="nav-link-corporate-icon" aria-hidden>▸</span>
+            {t('header.corporate')}
+            <span className="nav-link-corporate-badge" aria-hidden>B2B</span>
+          </Link>
           <Link to="/dmc-cyprus" className="nav-link">{t('header.dmcServices')}</Link>
           <a
             href="https://summerautos.com/"
