@@ -1,20 +1,11 @@
 .stats-rewards-section {
   padding: 4rem 0 5rem 0;
   position: relative;
-  background: transparent;
+  background: #ffffff;
 }
 
 .stats-rewards-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(4, 14, 24, 0.25) 0%,
-    rgba(4, 14, 24, 0.4) 45%,
-    rgba(4, 14, 24, 0.2) 100%
-  );
-  pointer-events: none;
+  content: none;
 }
 
 .stats-rewards-container {
@@ -28,7 +19,7 @@
 .stats-rewards-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #1a1a2e;
   margin: 0 0 0.5rem 0;
   text-align: center;
   letter-spacing: -0.02em;
@@ -39,18 +30,15 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, rgba(8, 23, 38, 0.72) 0%, rgba(8, 23, 38, 0.52) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  /* Enhanced shadows for readability on bright backgrounds */
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8),
-               0 2px 10px rgba(0, 0, 0, 0.6),
-               0 1px 3px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(135deg, rgba(196, 18, 48, 0.06) 0%, rgba(227, 30, 36, 0.04) 100%);
+  border: 1px solid rgba(196, 18, 48, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .stats-rewards-subtitle {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: #1a1a2e;
   margin: 1.15rem auto 3rem;
   text-align: center;
   font-weight: 400;
@@ -58,12 +46,9 @@
   max-width: 760px;
   padding: 0.8rem 1.2rem;
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.32);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  /* Enhanced shadows for readability on bright backgrounds */
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8),
-               0 1px 6px rgba(0, 0, 0, 0.6),
-               0 1px 3px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(135deg, rgba(196, 18, 48, 0.05) 0%, rgba(227, 30, 36, 0.03) 100%);
+  border: 1px solid rgba(196, 18, 48, 0.12);
+  text-shadow: none;
 }
 
 .stats-rewards-grid {

@@ -28,6 +28,12 @@
   background: transparent;
 }
 
+.tour-packages-section-wrapper {
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
 .unified-sections-wrapper::before {
   /* Never place overlays on the shared background image */
   content: none;

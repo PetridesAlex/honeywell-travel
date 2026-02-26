@@ -60,7 +60,7 @@ function TestimonialsSection() {
   }
 
   return (
-    <section className="testimonials-section" style={{ background: 'transparent' }}>
+    <section className="testimonials-section" style={{ background: '#ffffff' }}>
       <div className="testimonials-container">
         <div className="testimonials-header">
           <h2 className="section-title">Clients Review</h2>

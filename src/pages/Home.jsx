@@ -33,7 +33,9 @@ function Home() {
             />
           </RevealOnScroll>
           <RevealOnScroll direction="up" delay={80}>
-            <TourPackagesSection sharedBackground={sharedBackground} />
+            <div className="tour-packages-section-wrapper">
+              <TourPackagesSection sharedBackground={sharedBackground} />
+            </div>
           </RevealOnScroll>
         </div>
         <RevealOnScroll direction="up" delay={80}>
