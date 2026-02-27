@@ -105,7 +105,7 @@ function PackageFullDetail() {
             })
             return Object.entries(grouped).map(([hotelName, variants], i) => ({
               hotelKey: `hotel-${i}`,
-              hotelName,
+              hotelName: hotelName || variants[0]?.location || 'Package',
               variants
             }))
           })()
@@ -186,11 +186,11 @@ function PackageFullDetail() {
           }} 
         />
         <div className="package-full-hero-content">
-          <span className="badge destination">{pkg.destination}</span>
-          <span className="badge category">{pkg.category}</span>
-          {pkg.featured && <span className="badge featured">⭐ Featured</span>}
           <h1>{translatedTitle}</h1>
           <div className="hero-meta">
+            <span className={`hero-package-type ${(pkg.packageType || 'individual').toLowerCase()}`}>
+              {(pkg.packageType || 'individual').toLowerCase() === 'group' ? 'Group' : 'Individual'}
+            </span>
             <span>⏱️ {pkg.duration}</span>
             <span>From €{getCheapestPrice(pkg).toLocaleString()}</span>
           </div>
@@ -252,9 +252,23 @@ function PackageFullDetail() {
                     )}
                   </div>
                   <div className="price-intro">
-                    <p className="section-text">
-                      {pkg.longDescription || pkg.description}
-                    </p>
+                    {details.program?.introduction ? (
+                      (() => {
+                        const introText = details.program.introduction
+                        const paragraphs = introText.split(/\n\n+/).filter(p => p.trim())
+                        // In price header show only descriptive intro; exclude departures and flights lines (they stay in Program tab)
+                        const priceIntroParas = paragraphs.filter(
+                          p => !p.trim().startsWith('ΑΝΑΧΩΡΗΣΕΙΣ') && !p.trim().startsWith('Πτήσεις')
+                        )
+                        return priceIntroParas.length > 0 ? (
+                          priceIntroParas.map((para, idx) => (
+                            <p key={idx} className="section-text">{para.trim()}</p>
+                          ))
+                        ) : (
+                          <p className="section-text">{introText.trim()}</p>
+                        )
+                      })()
+                    ) : null}
                   </div>
                 </div>
 
@@ -312,7 +326,7 @@ function PackageFullDetail() {
                                     {'★'.repeat(baseHotel.stars || 3)}{'☆'.repeat(5 - (baseHotel.stars || 3))}
                                   </div>
                                 </div>
-                                <h3 className="hotel-single-title">{baseHotel.name}</h3>
+                                {baseHotel.name ? <h3 className="hotel-single-title">{baseHotel.name}</h3> : null}
                                 {baseHotel.location && <p className="hotel-single-location">{baseHotel.location}</p>}
                                 <div className="hotel-single-guests">
                                   <label className="section-label">{t('package.guests')}</label>
@@ -478,7 +492,7 @@ function PackageFullDetail() {
                                           updateHotelSelection(hotelKey, 'selectedDateIndex', variantIdx)
                                           setReserveFormData({
                                             name: '', email: '', phone: '',
-                                            hotelKey, hotelName: baseHotel.name,
+                                            hotelKey, hotelName: baseHotel.name || baseHotel.location,
                                             departureDate: variant.departureDate,
                                             roomType: selectionForPrice.roomType,
                                             adults: selectionForPrice.adults,

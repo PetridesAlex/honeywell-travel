@@ -80,6 +80,10 @@
   white-space: normal;
 }
 
+.package-title.package-title-green {
+  color: #0d5c2e;
+}
+
 .package-description {
   color: #4b5563;
   line-height: 1.6;

@@ -20,6 +20,7 @@ export const travelPackages = [
     longDescription: 'Join us for a special Clean Monday celebration in Athens! This package includes round-trip flights, 3 nights accommodation at one of our carefully selected hotels, daily breakfast, and airport transfers. Experience the traditional Greek celebration of Clean Monday (Kathara Deftera) with kite flying, special foods, and cultural festivities.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '20/02',
       departureFrom: 'Larnaca',
@@ -258,6 +259,7 @@ export const travelPackages = [
     longDescription: 'Join us for a special Clean Monday celebration in Dubai! This package includes round-trip flights with Cyprus Airways, 3 nights accommodation at the luxurious Media Rotana 5★ hotel, daily breakfast, airport transfers, and the services of a local representative. Experience the glamour of Dubai with its iconic skyscrapers, world-famous attractions, and unique blend of traditional and modern culture.',
     image: '🇦🇪',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '20/02',
       departureFrom: 'Larnaca',
@@ -374,6 +376,7 @@ export const travelPackages = [
     longDescription: 'Join us for an unforgettable Easter journey through the Peloponnese! This package takes you to Patra, the gateway to the Peloponnese, through the stunning Mountainous Nafpaktia region, and to the historic Kalavryta. Experience Greek culture, history, and natural beauty with comfortable accommodation and expert guidance.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '29/04',
       departureFrom: 'Larnaca',
@@ -497,6 +500,7 @@ export const travelPackages = [
     longDescription: 'Experience the unique blend of history, culture, and modern life in Bucharest. From the grand architecture of the Palace of the Parliament to the charming Old Town, Bucharest offers an unforgettable European city break experience.',
     image: '🇷🇴',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '26/01, 02/02, 09/02, 16/02, 23/02, 02/03, 09/03, 16/03, 23/03',
       departureFrom: 'Paphos',
@@ -873,6 +877,7 @@ export const travelPackages = [
     longDescription: 'Zagreb, the capital of Croatia, is a picturesque city that combines rich historical heritage with a vibrant contemporary atmosphere. Located on the slopes of Mount Medvednica and on the banks of the Sava River, it is known for its beautiful architecture from the Austro-Hungarian era, its picturesque squares and lush gardens.',
     image: '🇭🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '29/01, 05/02, 12/02, 19/02, 26/02, 05/03, 12/03',
       departureFrom: 'Paphos',
@@ -1176,6 +1181,7 @@ export const travelPackages = [
     longDescription: 'Sofia, the capital of Bulgaria, is a fascinating city that combines ancient history with modern charm. Located at the foot of Vitosha Mountain, Sofia offers visitors a unique blend of Roman ruins, Orthodox churches, Ottoman mosques, and contemporary architecture. Explore the city\'s rich cultural heritage, enjoy traditional Bulgarian cuisine, and experience the warm hospitality of this Eastern European gem.',
     image: '🇧🇬',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '28/01, 04/02, 11/02, 18/02, 25/02, 04/03, 11/03, 18/03',
       departureFrom: 'Paphos',
@@ -1464,6 +1470,7 @@ export const travelPackages = [
     longDescription: 'Krakow, one of Poland\'s oldest and most culturally rich cities, impresses with its architecture and history. Its historic center, a UNESCO World Heritage Site, hosts the main square (Rynek Główny), filled with colorful buildings, historic churches, and vibrant cafes. The city\'s rich heritage combines with modern amenities, making it a popular destination for tourists. From the charm of its historic streets to the warmth of its people, Krakow offers a unique experience that invites visitors to discover its many facets.',
     image: '🇵🇱',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '30/01, 06/02, 13/02, 20/02, 27/02, 06/03, 13/03, 20/03',
       departureFrom: 'Paphos',
@@ -1784,6 +1791,7 @@ export const travelPackages = [
     longDescription: 'Discover Vienna, the imperial capital of Austria, with its magnificent palaces, classical music heritage, and elegant coffeehouse culture. Explore the historic center, visit the Schönbrunn Palace, enjoy world-class museums, and experience the charm of this beautiful European capital.',
     image: '🇦🇹',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '29/01, 05/02, 12/02, 19/02, 26/02, 05/03, 12/03, 19/03',
       departureFrom: 'Paphos',
@@ -2143,6 +2151,7 @@ export const travelPackages = [
     longDescription: 'Discover Milan, Italy\'s fashion and design capital, with its stunning Duomo, world-class shopping, and rich cultural heritage. Explore the historic center, visit the magnificent cathedral, enjoy Italian cuisine, and experience the vibrant atmosphere of this beautiful Italian city.',
     image: '🇮🇹',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '30/01, 27/02, 06/03, 13/03, 20/03',
       departureFrom: 'Larnaca',
@@ -2398,6 +2407,7 @@ export const travelPackages = [
     longDescription: 'Όπου και αν κοιτάξει κανείς, η Αθήνα είναι γεμάτη με μνημεία του αρχαίου αλλά και του νεότερου πολιτισμού. Περιπλανώμενος στην Αθήνα και κάνοντας μια περιήγηση στα αξιοθέατά της, είναι σαν να περπατάς μέσα στην ίδια την ιστορία της.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '30/01, 06/02, 13/02, 27/02, 06/03, 13/03, 20/03',
       departureFrom: 'Larnaca',
@@ -3415,6 +3425,7 @@ export const travelPackages = [
     longDescription: 'Ανακαλύψτε τη Θεσσαλονίκη, τη «Νύμφη του Βορρά», και τη μαγευτική Λίμνη Κερκίνη σε ένα ταξίδι 5 ημερών που συνδυάζει ιστορία, πολιτισμό και φυσική ομορφιά.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/09, 30/09, 07/10',
       departureFrom: 'Larnaca',
@@ -3531,7 +3542,7 @@ export const travelPackages = [
     id: 19,
     title: 'CRETE – 5 Days',
     destination: 'Greece',
-    category: 'Summer Packages',
+    category: 'Summer Packages to Greece',
     hidden: true,
     price: 249,
     duration: '5 days / 4 nights',
@@ -3539,6 +3550,7 @@ export const travelPackages = [
     longDescription: 'Crete, the largest Greek island, offers visitors a perfect blend of beautiful beaches, ancient history, charming villages, and delicious cuisine. From the vibrant city of Heraklion to the picturesque towns of Rethymno and Agios Nikolaos, Crete promises an unforgettable summer holiday experience.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '03/07, 10/07, 17/07, 24/07, 31/07, 07/08, 14/08, 21/08, 28/08',
       departureFrom: 'Larnaca',
@@ -6312,15 +6324,16 @@ export const travelPackages = [
   },
   {
     id: 20,
-    title: 'THESSALONIKI / TRIKALA / ALPINE THESSALY – 6 Days',
+    title: 'ΘΕΣΣΑΛΟΝΙΚΗ / ΤΡΙΚΑΛΑ / ΑΛΠΙΚΗ ΘΕΣΣΑΛΙΑ – 6 Ημέρες',
     destination: 'Greece',
-    category: 'Summer Packages',
+    category: 'Summer Packages to Greece',
     price: 549,
     duration: '6 days / 5 nights',
     description: 'Discover the beauty of Thessaloniki, Trikala, and Alpine Thessaly with this 6-day tour combining city exploration and mountain landscapes.',
     longDescription: 'Experience the perfect blend of urban culture in Thessaloniki, the charm of Trikala, and the breathtaking Alpine landscapes of Thessaly. This 6-day journey takes you through historic monasteries, mountain villages, and the vibrant city life of northern Greece.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/07, 17/07, 24/07, 31/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -6494,15 +6507,16 @@ export const travelPackages = [
   },
   {
     id: 21,
-    title: 'THESSALONIKI – KASTORIA – NORTHERN GREECE LAKES',
+    title: 'ΘΕΣΣΑΛΟΝΙΚΗ – ΚΑΣΤΟΡΙΑ – ΛΙΜΝΕΣ ΒΟΡΕΙΑΣ ΕΛΛΑΔΑΣ',
     destination: 'Greece',
-    category: 'Summer Packages',
+    category: 'Summer Packages to Greece',
     price: 549,
     duration: '6 days / 5 nights',
     description: 'Discover the beauty of Thessaloniki, Kastoria, and the stunning lakes of Northern Greece with this 6-day tour.',
     longDescription: 'Experience the perfect blend of urban culture in Thessaloniki, the charm of Kastoria, and the breathtaking natural beauty of the lakes in Northern Greece. This 6-day journey takes you through historic monasteries, mountain villages, and pristine natural landscapes.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/07, 17/07, 24/07, 31/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -6692,6 +6706,7 @@ export const travelPackages = [
     longDescription: 'Experience the aristocratic capital of Romania, Bucharest, known as the "Paris of the Balkans", and explore the legendary castles of Transylvania. Visit Bran Castle (Dracula\'s Castle), Peles Palace, and the medieval city of Brasov. This 5-day journey combines history, culture, and stunning mountain landscapes.',
     image: '🇷🇴',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '03/08, 10/08, 17/08',
       departureFrom: 'Larnaca',
@@ -6808,13 +6823,14 @@ export const travelPackages = [
     id: 23,
     title: 'ΡΙΒΙΕΡΑ ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ & ΣΤΟΛΙΔΙΑ ΚΟΡΙΝΘΙΑΚΟΥ',
     destination: 'Greece',
-    category: 'Summer Packages',
+    category: 'Summer Packages to Greece',
     price: 879,
     duration: '7 days / 6 nights',
     description: 'Discover the Western Greece Riviera and the beautiful islands of the Corinthian Gulf with this 7-day tour.',
     longDescription: 'Experience the stunning Western Greece Riviera and the beautiful islands of the Corinthian Gulf. Visit Patra, Preveza, Lefkada, Parga, the Acheron River, and enjoy a cruise to Kefalonia, Ithaca, and Scorpios. This 7-day journey combines coastal beauty, historic sites, and island hopping.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08',
       departureFrom: 'Larnaca',
@@ -7283,15 +7299,16 @@ export const travelPackages = [
   },
   {
     id: 24,
-    title: 'THESSALONIKI – KASTORIA – IOANNINA',
+    title: 'ΘΕΣΣΑΛΟΝΙΚΗ – ΚΑΣΤΟΡΙΑ – ΙΩΑΝΝΙΝΑ',
     destination: 'Greece',
-    category: 'Summer Packages',
+    category: 'Summer Packages to Greece',
     price: 879,
     duration: '7 days / 6 nights',
     description: 'Discover Thessaloniki, Kastoria, and Ioannina with this 7-day tour through Northern Greece.',
     longDescription: 'Experience the beauty of Northern Greece with visits to Thessaloniki, Kastoria, and Ioannina. Explore the Prespes lakes, Vikos Gorge, Metsovo, and the historic island of Kyra Frosyni. This 7-day journey combines natural beauty, historic sites, and traditional Greek culture.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '13/07, 20/07, 27/07, 10/08, 17/08, 24/08',
       departureFrom: 'Larnaca',
@@ -7648,6 +7665,7 @@ export const travelPackages = [
     longDescription: 'Experience the fairy-tale capital of the Czech Republic, Prague, built on the banks of the Vltava River. Explore the Castle District, Old Town, and take a full-day excursion to Karlovy Vary, one of Europe\'s most famous spa towns. This 5-day journey combines history, culture, and European elegance.',
     image: '🇨🇿',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '07/07, 14/07, 21/07, 04/08, 11/08, 18/08',
       departureFrom: 'Larnaca',
@@ -7820,6 +7838,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul, the city that bridges Europe and Asia. Explore the historic Old City, visit Hagia Sophia and Topkapi Palace, take a Bosphorus cruise, and discover the Princes\' Islands. This 5-day journey combines Byzantine and Ottoman history with modern Turkish culture.',
     image: '🇹🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '13/07, 20/07, 27/07, 03/08, 10/08, 17/08, 24/08, 07/09, 28/09, 12/10',
       departureFrom: 'Larnaca',
@@ -8059,6 +8078,7 @@ export const travelPackages = [
     longDescription: 'Experience the heart of Poland with visits to Warsaw, the dynamic capital, and Łódź, a fairy-tale city that was once a major textile center. Explore the industrial heritage, modern urban aesthetics, and vibrant cultural life of these two fascinating Polish cities.',
     image: '🇵🇱',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '05/07, 12/07, 19/07, 26/07, 02/08, 09/08, 16/08, 23/08, 30/08',
       departureFrom: 'Larnaca',
@@ -8393,6 +8413,7 @@ export const travelPackages = [
     longDescription: 'Experience Barcelona, one of Spain\'s most cosmopolitan and charming cities. Explore its unique architecture, rich artistic heritage, historic monuments, and vibrant life. Visit the famous PortAventura theme park, one of Europe\'s largest and most impressive theme parks, ideal for all ages.',
     image: '🇪🇸',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '01/07, 08/07, 15/07, 22/07, 29/07, 05/08, 12/08, 19/08, 26/08',
       departureFrom: 'Larnaca',
@@ -8756,6 +8777,7 @@ export const travelPackages = [
     longDescription: 'Experience why the French capital has inspired artists and writers throughout the centuries. The iconic landmarks – Eiffel Tower, Notre-Dame, Louvre, Arc de Triomphe – combine with the modern side of the city. Enjoy a Seine cruise, visit Montmartre, and spend a magical day at Disneyland Paris.',
     image: '🇫🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '04/07, 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08, 29/08',
       departureFrom: 'Larnaca',
@@ -8978,6 +9000,7 @@ export const travelPackages = [
     longDescription: 'Experience the heart of Classic Poland with visits to Łódź, the industrial city with rich heritage; Krakow, the former capital and one of Central Europe\'s most atmospheric cities; Zakopane, the "winter capital" at the foot of the Tatra Mountains; and Warsaw, the dynamic capital. This 7-day journey combines history, culture, and natural beauty.',
     image: '🇵🇱',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08',
       departureFrom: 'Larnaca',
@@ -9402,6 +9425,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul and explore the Asia Minor coast. Visit historic sites including Troy, Pergamon, Ephesus, and the Princes\' Islands. This 8-day journey combines Byzantine and Ottoman history with the natural beauty of the Turkish coast.',
     image: '🇹🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/07, 17/07, 24/07, 31/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -9516,6 +9540,7 @@ export const travelPackages = [
     longDescription: 'Experience the charm of the three Baltic capitals: Riga, the elegant capital of Latvia; Tallinn, the "queen" of the Baltic; and Vilnius, the capital of Lithuania. Explore medieval old towns, baroque palaces, and unique cultural heritage across these three fascinating countries.',
     image: '🇱🇻',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08',
       departureFrom: 'Larnaca',
@@ -9618,6 +9643,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul and explore the unique landscapes of Cappadocia. Visit Prusa, the first Ottoman capital, explore underground cities, rock-cut churches, and the famous fairy chimneys. This 8-day journey combines Byzantine and Ottoman history with the natural wonders of Cappadocia.',
     image: '🇹🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '15/07, 22/07, 29/07, 05/08, 12/08, 26/08',
       departureFrom: 'Larnaca',
@@ -9741,6 +9767,7 @@ export const travelPackages = [
     longDescription: 'Το Πιεστάνυ είναι μια όμορφη λουτρόπολη της Σλοβακίας, χτισμένη στις όχθες του ποταμού Βαχ, περίπου 85 χλμ. από Μπρατισλάβα και 140 χλμ. από Βιέννη. Είναι παγκοσμίως γνωστό για τις ιαματικές θερμές πηγές και τη μοναδική θειούχα λάσπη που χρησιμοποιούνται σε εξειδικευμένα θεραπευτικά προγράμματα, ιδιαίτερα για παθήσεις του κινητικού & νευρικού συστήματος.',
     image: '🇸🇰',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '06/05',
       departureFrom: 'Larnaca',
@@ -9843,6 +9870,7 @@ export const travelPackages = [
     longDescription: 'Ένα ταξίδι γεμάτο μαγεία, δράση και γέλιο για όλη την οικογένεια: Παρίσι, Disneyland® Paris, το ολοκαίνουργιο World of Frozen και το θεματικό Πάρκο Asterix – όλα σε ένα οργανωμένο πακέτο από Λάρνακα με απευθείας πτήση.',
     image: '🇫🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '02/07, 09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08',
       departureFrom: 'Larnaca',
@@ -10265,6 +10293,7 @@ export const travelPackages = [
     longDescription: 'Στα μονοπάτια του Πόντου & της Πόλης: μια ολοκληρωμένη περιήγηση στις ιστορικές περιοχές του Πόντου (Σαγγάρια, Σαμψούντα, Κερασούντα, Τραπεζούντα) και την Κωνσταντινούπολη. Εξερευνήστε βυζαντινά μνημεία, παραθαλάσσια τοπία και την πλούσια πολιτιστική κληρονομιά της περιοχής.',
     image: '🇹🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '15/07, 22/07, 29/07, 05/08, 12/08, 26/08',
       departureFrom: 'Larnaca',
@@ -10383,11 +10412,12 @@ export const travelPackages = [
     destination: 'Thailand',
     category: 'Summer Packages',
     price: 2135,
-    duration: '11 days / 8 nights',
+    duration: '11 days / 9 nights',
     description: 'Discover the vibrant culture of Bangkok, explore the floating markets, visit ancient Ayutthaya, experience the jungle of Khao Yai National Park, and relax in the beach resort of Pattaya.',
     longDescription: 'Μια ολοκληρωμένη περιήγηση στην Ταϊλάνδη: από την πολύχρωμη Μπανγκόκ και τις πλωτές αγορές, στην ιστορική Αγιουτάγια, τη ζούγκλα του Εθνικού Πάρκου Κάο Γιάι και την παραθαλάσσια Πατάγια. Εξερευνήστε βουδιστικούς ναούς, παραδοσιακές αγορές, άγρια φύση και εξωτικές παραλίες.',
     image: '🇹🇭',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -10670,11 +10700,12 @@ export const travelPackages = [
     destination: 'Thailand',
     category: 'Exotic Packages',
     price: 2135,
-    duration: '11 days / 8 nights',
+    duration: '11 days / 9 nights',
     description: 'Discover the vibrant culture of Bangkok, explore the floating markets, visit ancient Ayutthaya, experience the jungle of Khao Yai National Park, and relax in the beach resort of Pattaya.',
     longDescription: 'Μια ολοκληρωμένη περιήγηση στην Ταϊλάνδη: από την πολύχρωμη Μπανγκόκ και τις πλωτές αγορές, στην ιστορική Αγιουτάγια, τη ζούγκλα του Εθνικού Πάρκου Κάο Γιάι και την παραθαλάσσια Πατάγια. Εξερευνήστε βουδιστικούς ναούς, παραδοσιακές αγορές, άγρια φύση και εξωτικές παραλίες.',
     image: '🇹🇭',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -10962,6 +10993,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στο Πουκέτ και την Μπανγκόκ: τροπικές παραλίες, ζούγκλα, κρουαζιέρα στο διάσημο νησί James Bond, βουδιστικοί ναοί, πλωτές αγορές και εξωτικές εκδρομές. Απολαύστε 5 νύχτες στο Πουκέτ και 2 νύχτες στην Μπανγκόκ.',
     image: '🇹🇭',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '20/07, 10/08, 17/08, 14/09, 19/10',
       departureFrom: 'Larnaca',
@@ -11234,6 +11266,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στο Πουκέτ και την Μπανγκόκ: τροπικές παραλίες, ζούγκλα, κρουαζιέρα στο διάσημο νησί James Bond, βουδιστικοί ναοί, πλωτές αγορές και εξωτικές εκδρομές. Απολαύστε 5 νύχτες στο Πουκέτ και 2 νύχτες στην Μπανγκόκ.',
     image: '🇹🇭',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '20/07, 10/08, 17/08, 14/09, 19/10',
       departureFrom: 'Larnaca',
@@ -11506,6 +11539,7 @@ export const travelPackages = [
     longDescription: 'Μια μαγευτική περιήγηση στο Μπαλί, το «Νησί των Θεών». Απολαύστε 4 νύχτες στο Μπαλί και 3 νύχτες στο Ουμπούντ, με 5★ διαμονή. Εξερευνήστε αρχαίους ναούς, αναβαθμίδες ρυζιού, παραδοσιακές τέχνες και το πνευματικό κέντρο της Ινδονησίας.',
     image: '🇮🇩',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/06, 21/07, 18/08, 08/09',
       departureFrom: 'Larnaca',
@@ -11736,6 +11770,7 @@ export const travelPackages = [
     longDescription: 'Μια μαγευτική περιήγηση στο Μπαλί, το «Νησί των Θεών». Απολαύστε 4 νύχτες στο Μπαλί και 3 νύχτες στο Ουμπούντ, με 5★ διαμονή. Εξερευνήστε αρχαίους ναούς, αναβαθμίδες ρυζιού, παραδοσιακές τέχνες και το πνευματικό κέντρο της Ινδονησίας.',
     image: '🇮🇩',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/06, 21/07, 18/08, 08/09',
       departureFrom: 'Larnaca',
@@ -11966,6 +12001,7 @@ export const travelPackages = [
     longDescription: 'Ζήστε την απόλυτη αραβική εμπειρία σε ένα ταξίδι 5 ημερών με βάση το Ντουμπάι. Ανακαλύψτε τα σύγχρονα θαύματα της πόλης, περιηγηθείτε στην παραδοσιακή πλευρά της, απολαύστε σαφάρι στην έρημο με δείπνο σε βεδουίνικες σκηνές και επισκεφθείτε την κοσμοπολίτικη πρωτεύουσα των Η.Α.Ε., το Άμπου Ντάμπι, με το εμβληματικό Τζαμί Sheikh Zayed και το μουσείο Louvre Abu Dhabi.',
     image: '🇦🇪',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/09, 16/09, 23/09, 30/09, 07/10, 14/10, 21/10',
       departureFrom: 'Larnaca',
@@ -12152,6 +12188,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 8 ημερών στο αυτοκρατορικό Μαρόκο με Ταγγέρη. Από την κοσμοπολίτικη Καζαμπλάνκα και την πρωτεύουσα Ραμπάτ, στην «μπλε πόλη» Σεφσαουέν, την πνευματική Φεζ και την ατμοσφαιρική Μαρακές. Περιλαμβάνονται πτήσεις με Aegean μέσω Αθήνας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇲🇦',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '14/05, 15/09, 06/10, 01/10',
       departureFrom: 'Larnaca',
@@ -12312,6 +12349,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 8 ημερών στο αυτοκρατορικό Μαρόκο με έρημο. Από την κοσμοπολίτικη Καζαμπλάνκα και την πρωτεύουσα Ραμπάτ, στην πνευματική Φεζ, την έρημο Ερφούντ, την Ουαρζαζάτ και την ατμοσφαιρική Μαρακές. Περιλαμβάνονται πτήσεις με Aegean μέσω Αθήνας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇲🇦',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '14/05, 15/09, 06/10, 01/10',
       departureFrom: 'Larnaca',
@@ -12470,6 +12508,7 @@ export const travelPackages = [
     longDescription: 'Ένα μοναδικό ταξίδι 9 ημερών στο Χρυσό Τρίγωνο της Ινδίας. Από το Δελχί στην Άγκρα για το θρυλικό Ταζ Μαχάλ, και στη «Ροζ Πόλη» Τζαϊπούρ με τα παλάτια των Μαχαραγιάδων. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 5★ ξενοδοχεία.',
     image: '🇮🇳',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '17/09, 18/10',
       departureFrom: 'Larnaca',
@@ -12600,6 +12639,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 11 ημερών στην Ταϊλάνδη. Από τη πολύχρωμη Μπανγκόκ με τους ναούς και τις αγορές της, στην ιστορική Αγιουτάγια, το Εθνικό Πάρκο Κάο Γιάϊ με τη ζούγκλα, και την παραθαλάσσια Πατάγια. Περιλαμβάνονται πτήσεις με Gulf Air μέσω Μπαχρέιν, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇹🇭',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -12758,6 +12798,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Ιαπωνία. Από την Οσάκα και το Κιότο με τους ναούς και τους κήπους, στο Ματσουμότο με το ιστορικό κάστρο, και το Τόκιο με τη σύγχρονη κουλτούρα. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα, εμπειρία Σούμο και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇯🇵',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '13/05, 15/07, 12/08, 16/09, 14/10',
       departureFrom: 'Larnaca',
@@ -12940,6 +12981,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 9 ημερών στην Ισλανδία, τη «Γη της Φωτιάς και του Πάγου». Από το Ρέικιαβικ και τον Χρυσό Κύκλο, στη Νότια Ακτή με τους καταρράκτες, τη Χερσόνησο Σνάιφελσνες και τη διάσημη Γαλάζια Λίμνη. Περιλαμβάνονται πτήσεις με LOT Airlines μέσω Βαρσοβίας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 3★ & 4★ ξενοδοχεία.',
     image: '🇮🇸',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '04/07, 01/08',
       departureFrom: 'Larnaca',
@@ -13067,6 +13109,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 9 ημερών στη Νέα Υόρκη, το «Μεγάλο Μήλο». Από το Μανχάταν και τη Μπρόντγουεϊ, στο Central Park, τη Γέφυρα του Μπρούκλιν, το One World Trade Center και τη Hudson Yards. Περιλαμβάνονται πτήσεις με Emirates μέσω Αθήνας, ξεναγήσεις, κρουαζιέρα, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε πολυτελές 4★ ξενοδοχείο στην Times Square.',
     image: '🇺🇸',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '03/07, 02/08, 13/08, 21/08, 10/10, 23/10',
       departureFrom: 'Larnaca',
@@ -13266,6 +13309,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Αργεντινή και τη Βραζιλία. Από το Μπουένος Άιρες με το σόου Τάνγκο και τα ράντζο, στους Καταρράκτες Ιγκουασού (ένα από τα Επτά Θαύματα της Φύσης), και το Ρίο Ντε Τζανέιρο με το Άγαλμα του Χριστού Λυτρωτή και το Sugarloaf Mountain. Περιλαμβάνονται πτήσεις με Lufthansa μέσω Φρανκφούρτης, εσωτερικές πτήσεις, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇦🇷🇧🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '21/07, 06/08',
       departureFrom: 'Larnaca',
@@ -13409,6 +13453,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στη Νότια Αφρική. Από το Γιοχάνεσμπουργκ και το Σαν Σίτυ, στο Εθνικό Πάρκο Pilansberg με σαφάρι για παρατήρηση ελεφάντων, λιονταριών και ρινόκερων, και το Κέιπ Τάουν με το Table Mountain, Cape Point και τα Winelands. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, εσωτερική πτήση, σαφάρι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇿🇦',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/08, 12/10',
       departureFrom: 'Larnaca',
@@ -13542,6 +13587,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Αυστραλία. Από τη Μελβούρνη με το Great Ocean Road, τους Δώδεκα Απόστολους και το Phillip Island, στο Σίδνεϋ με το Opera House, Harbour Bridge, Blue Mountains και κρουαζιέρα παρακολούθησης φαλαινών. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, εσωτερική πτήση, ξεναγήσεις, κρουαζιέρες, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇦🇺',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '17/10, 05/11',
       departureFrom: 'Larnaca',
@@ -13675,6 +13721,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στις Ανατολικές ΗΠΑ και τον Καναδά: από τη Νέα Υόρκη και το Μανχάταν, στους Καταρράκτες Νιαγάρα, το Τορόντο, την Ουάσιγκτον DC, τη Βαλτιμόρη και τη Φιλαδέλφεια. Εξερευνήστε ουρανοξύστες, ιστορικά μνημεία, φυσικά θαύματα και πολυπολιτισμικές πόλεις.',
     image: '🇺🇸',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '31/07, 08/08, 21/08, 25/09, 10/10',
       departureFrom: 'Larnaca',
@@ -13857,6 +13904,7 @@ export const travelPackages = [
     longDescription: 'Η «Νύφη του Θερμαϊκού» σας υποδέχεται για ένα ανοιξιάτικο city break γεμάτο ιστορία, γαστρονομία και έντονη νυχτερινή ζωή. Απολαύστε τη βόλτα σας στον Λευκό Πύργο, τον καφέ σας στα παραλιακά καφέ της Νέας Παραλίας και τα ψώνια σας στις κομψές μπουτίκ της Τσιμισκή. Τα βράδια, τα Λαδάδικα σας περιμένουν για διασκέδαση μέχρι το πρωί.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '29/04',
       departureFrom: 'Larnaca',
@@ -14033,6 +14081,7 @@ export const travelPackages = [
     longDescription: 'Η Κέρκυρα, το πράσινο νησί της Ιονίου, είναι ιδανικός προορισμός για το Πάσχα. Παραδοσιακές τελετές, γραφικά χωριά, ιστορικό κέντρο και θαλάσσια τοπία σε ένα ταξίδι 6 ημερών.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/04',
       departureFrom: 'Larnaca',
@@ -14128,6 +14177,7 @@ export const travelPackages = [
     longDescription: 'Το Ηράκλειο, πρωτεύουσα της Κρήτης και μεγαλύτερη πόλη του νησιού, είναι ένας ζωντανός προορισμός που συνδυάζει ιστορία, πολιτισμό και σύγχρονη καθημερινότητα. Χτισμένο στη βόρεια ακτή της Κρήτης, με θέα το γαλάζιο Κρητικό Πέλαγος, αποτελεί σημαντικό λιμάνι και κέντρο ζωής. Ζήστε το μαγικό Πάσχα με τις πασχαλινές τελετές, το Αναστάσιμο Δείπνο και το Πασχαλινό Γεύμα.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -14226,6 +14276,7 @@ export const travelPackages = [
     longDescription: 'Το Ρέθυμνο είναι από τις πιο γραφικές πόλεις της Κρήτης, με έντονο ενετικό χαρακτήρα, λιθόστρωτα σοκάκια, αρχοντικά, και τη μεγαλοπρεπή Φορτέτζα να δεσπόζει πάνω από την Παλιά Πόλη. Η παραλιακή ζώνη σφύζει από ζωή και αποτελεί ιδανικό σημείο για βόλτα και χαλάρωση. Ζήστε το Πάσχα με τις πασχαλινές τελετές, το Αναστάσιμο Δείπνο και το Πασχαλινό Γεύμα.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -14322,6 +14373,7 @@ export const travelPackages = [
     longDescription: 'Μια ανοιξιάτικη αποδράση στην Κρήτη που σας οδηγεί στα πιο όμορφα σημεία του νησιού. Από τα Χανιά με το ενετικό λιμάνι και την Παλιά Πόλη, στο Ηράκλειο, την Ελούντα, τη Σπιναλόγκα, τον Άγιο Νικόλαο και τη Λίμνη Κουρνά. Ανακαλύψτε την ιστορία, τη φύση και την κρητική παράδοση σε ένα ταξίδι 5 ημερών.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '13/04',
       departureFrom: 'Larnaca',
@@ -14419,6 +14471,7 @@ export const travelPackages = [
     longDescription: 'Η Μάλτα, το νησί των Ιπποτών, είναι ένας μοναδικός προορισμός που συνδυάζει πλούσια ιστορία, αρχιτεκτονική και φυσική ομορφιά. Από τη Βαλέτα με τα επιβλητικά τείχη και τους Κήπους Upper Barrakka, στην Καλκάρα, το Χωριό του Πόπαϋ, τη Μόστα, τη Μεδίνα, το Τα Άλι και το Gozo. Μια εμπειρία 5 ημερών γεμάτη αξιοθέατα, πολιτισμό και διασκέδαση.',
     image: '🇲🇹',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '14/04',
       departureFrom: 'Larnaca',
@@ -14571,6 +14624,7 @@ export const travelPackages = [
     longDescription: 'Ανακαλύψτε τη Γεωργία σε 5 ημέρες: Τιφλίδα, Μτσχέτα, Γκόρι, Ουπλιστσικέ, Μποντμπέ, Σιγκνάγκι και Καχέτι. Ένα πρόγραμμα που συνδυάζει ιστορία, πολιτισμό, γαστρονομία και αυθεντική φιλοξενία.',
     image: '🇬🇪',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '04/08, 11/08, 18/08',
       departureFrom: 'Larnaca',
@@ -14749,6 +14803,7 @@ export const travelPackages = [
     longDescription: 'Μια περιήγηση στην Πελοπόννησο που σας οδηγεί στα πιο όμορφα και ιστορικά σημεία της. Από την Πάτρα και τη Ναύπακτο, στα Τριζόνια, την Ορεινή Αρκαδία, τη Σπάρτη, τη Μονεμβασιά και το Ναύπλιο. Ανακαλύψτε την ιστορία, τη φύση και την παραδοσιακή αρχιτεκτονική της Πελοποννήσου.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -14847,13 +14902,14 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 13 ημερών στο Περού. Από τη Λίμα και την Ιερή Κοιλάδα των Ίνκας, στο Μάτσου Πίτσου, το Κούσκο και τη Λίμνη Πιουράι. Περιλαμβάνονται πτήσεις μέσω Αθήνας και Μαδρίτης, ξεναγήσεις, είσοδοι και διαμονή σε 4★ ξενοδοχεία.',
     image: '🇵🇪',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '22/07, 11/09, 07/08',
       departureFrom: 'Larnaca',
       destinationFull: 'Lima, Sacred Valley, Cusco, Machu Picchu – Peru',
       monthAvailability: 'July, September, August',
-      roomType: 'Standard Room',
-      boardBasis: 'Bed & Breakfast',
+          roomType: 'Standard Room',
+          boardBasis: 'Bed & Breakfast',
       airline: 'Via Athens & Madrid',
       includedLuggage: '1 αποσκευή 23kg + 1 χειραποσκευή 8kg',
       coverImage: '/images/Peru/peru-cover.webp',
@@ -14963,6 +15019,7 @@ export const travelPackages = [
     longDescription: 'Η Σαντορίνη είναι ένας από τους πιο ρομαντικούς προορισμούς του κόσμου. Τη περίοδο του Πάσχα, η νησίδα συνδυάζει την πνευματική ατμόσφαιρα των εορτών με τη μοναδική ομορφιά της καλντέρας, των λευκών σπιτιών και των ηλιοβασιλέων. Περιηγηθείτε στη Φηρά και την Οία, παρακολουθήστε την περιφορά του Επιταφίου και το Αναστάσιμο, και απολαύστε Πασχαλινό γεύμα με θέα στο Αιγαίο.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '13/04',
       departureFrom: 'Larnaca',
@@ -15048,6 +15105,7 @@ export const travelPackages = [
     longDescription: 'Ταξίδι 5 ημερών στην Αράχωβα και τη Δελφική περιοχή. Διαμονή στο 4★ Domotel Anemolia Mountain Resort (Delphi Valley, Αράχωβα). Επισκέψεις στα Μέτεωρα, Καλαμπάκα και την ιστορική Αράχωβα με πασχαλινές ακολουθίες και ορεινή ησυχία.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '09/04',
       departureFrom: 'Larnaca',
@@ -15134,6 +15192,7 @@ export const travelPackages = [
     longDescription: 'Ένα σύντομο ταξίδι στην Αίγυπτο: Καΐρο με τις Πυραμίδες και τη Σφίγγα, τα μουσεία και την αγορά Χαν ελ-Χαλιλί, και την Αλεξάνδρεια με τη βιβλιοθήκη, το φρούριο Καϊτμπέ και τη Μεσόγειο. Διαμονή στο κεντρικό Safir Hotel Cairo (Dokki, Giza) με πρόγευμα.',
     image: '🇪🇬',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '19/03',
       departureFrom: 'Larnaca',
@@ -15223,6 +15282,7 @@ export const travelPackages = [
     longDescription: 'Η Λευκάδα, το πράσινο νησί του Ιονίου με τις κρυστάλλινες παραλίες και την παραδοσιακή ατμόσφαιρα, είναι ιδανικός προορισμός για το Πάσχα. Πασχαλινές τελετές, προαιρετική κρουαζιέρα στα Πριγκηπονήσια Λευκάδας, Αχέρωντας, Πάργα, Μεσολόγγι και Ναύπακτος σε ένα πλήρες πρόγραμμα 6 ημερών.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -15323,6 +15383,7 @@ export const travelPackages = [
     longDescription: 'Η Ρόδος, το νησί του ήλιου και των ιπποτών, προσφέρει παραλίες, ιστορία και ζωντανή ζωή. Επιλέξτε από μια μεγάλη γκάμα ξενοδοχείων και ημερομηνιών αναχώρησης από Ιούλιο έως Αύγουστο.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '03/07',
       departureFrom: 'Larnaca',
@@ -15385,6 +15446,7 @@ export const travelPackages = [
     longDescription: 'Η Σκιάθος, το πρασινωπό νησί των Σποράδων, προσφέρει παραλίες, νυχτερινή ζωή και ηρεμία. Επιλέξτε από πολλές επιλογές ξενοδοχείων και ημερομηνιών αναχώρησης από Ιούνιο έως Αύγουστο.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '30/06',
       departureFrom: 'Larnaca',
@@ -15394,8 +15456,8 @@ export const travelPackages = [
       boardBasis: 'Room Only',
       airline: 'Cyprus Airways',
       includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
-      coverImage: '/images/greek-packages-summer/skiathos/skiathos-greece-summer-cover.webp',
-      thumbnailImage: '/images/greek-packages-summer/skiathos/skiathos-greece-thumb.webp',
+      coverImage: '/images/greek-packages-summer/skiathos/skiathos-lake-hero.webp',
+      thumbnailImage: '/images/greek-packages-summer/skiathos/skiathos-lake-hero.webp',
       flights: [
         { direction: 'Departure', date: '—', route: 'Larnaca International Airport (LCA), Larnaca, Cyprus → Alex Papadiamantis (JSI), Skiathos, Greece', flight: 'CY 464', time: '13:45 → 15:45', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
         { direction: 'Return', date: '—', route: 'Alex Papadiamantis (JSI), Skiathos, Greece → Larnaca International Airport (LCA), Larnaca, Cyprus', flight: 'CY 465', time: '11:00 → 12:50', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
@@ -15467,7 +15529,7 @@ export const travelPackages = [
         introduction: 'ΣΚΙΑΘΟΣ ΜΙΑ ΚΟΣΜΟΠΟΛΙΤΙΣΣΑ ΣΤΙΣ ΣΠΟΡΑΔΕΣ\n\nΚόσμος, παραλίες, ιστορία και ατμόσφαιρα θα σας συνεπάρουν στο καταπράσινο νησί των Σποράδων.\n\nΑπό τα καταπράσινα πεύκα ως τα γεμάτα μπαρ και εστιατόρια, η Σκιάθος σάς καλεί να μπείτε στο κλίμα της. Κοσμική, ιδανική για τους ιστιοπλόους, που οργώνουν τη Μεσόγειο και για όσους απαιτούν υψηλού επιπέδου τουριστικές υποδομές, μετρά φανατικούς φίλους από όλον τον κόσμο. Διακοπές σε ένα από τα ειδυλλιακότερα ελληνικά νησιά. Το beach service άψογο. Οι βραδιές στη Χώρα, δυνατές. Οι παραλίες Λαλάρια και Κουκουναριές, κορυφαίες στην Ελλάδα. Το Κάστρο του 14ου αιώνα, ο βιότοπος της Στροφιλιάς, οι σπηλιές...\n\nΗ ομορφιά της Σκιάθου απλώνεται παντού. Σελίδα σελίδα σαν να ήταν διήγημα του Αλέξανδρου Παπαδιαμάντη, του σπουδαίου Έλληνα λογοτέχνη που καταγόταν από εδώ, θα τη γυρίσετε και θα την αγαπήσετε, γιατί είναι γεμάτη ζωντάνια. Και σαν σωστή οικοδέσποινα φροντίζει, ώστε όλοι της οι επισκέπτες να περνούν αξέχαστα…!!!',
         whatToSee: 'Αξίζει να δείτε στη Σκιάθο\n\nΗ παραλία Λαλάρια\nΗ πανέμορφη αυτή παραλία έχει κάνει διάσημη τη Σκιάθο στα πέρατα του κόσμου. Έτοιμοι να την απολαύσετε; Καταπράσινα νερά, λευκά βότσαλα, πανύψηλα, απόκρημνα βράχια. Γύρω, σκάφη και καΐκια με ανθρώπους από όλη τη γη που έρχονται να απολαύσουν αυτό το θέαμα. Τα λόγια είναι περιττά... Φύγαμε για Λαλάρια…!!!\n\nΚουκουναριές και λίμνη Στροφιλιάς: διακοπές στην απόλυτη φύση\nΑνακαλύψτε τη δεύτερη πιο ξακουστή παραλία της Σκιάθου: Κουκουναριές. Μια απέραντη, χρυσαφένια αμμώδης παραλία, που έχει χαρακτηριστεί ως η φυσικότερη της Μεσογείου. Την αγκαλιάζει ένα πυκνό πευκοδάσος, πίσω από το οποίο σας περιμένει η λίμνη της Στροφιλιάς, ένας μοναδικός βιότοπος που φιλοξενεί σπάνια είδη πουλιών.\n\nΗ Χώρα και το Μπούρτζι: αρχοντικό καλωσόρισμα\nΜπαίνοντας στο λιμάνι σάς υποδέχεται το Μπούρτζι: μια πευκόφυτη νησίδα που φιλοξενεί τα ερείπια του Βενετικού φρουρίου, χτισμένου εκεί από τον 13ο αιώνα. Απέναντί σας, η Χώρα της Σκιάθου, που απλώνεται αμφιθεατρικά με τις κατακόκκινες στέγες των σπιτιών, μοιάζει σαν να θέλει να ξεκολλήσει από τη θάλασσα.\n\nΡαντεβού στην οδό Παπαδιαμάντη\nΚάθε βράδυ ραντεβού εδώ. Καφέ-μπαρ που σφύζουν από ζωή, εστιατόρια, ταβέρνες και κομψά καταστήματα θα χαρίσουν στις διακοπές σας τον ρυθμό του νησιού. Και θα σας τραβήξουν σαν Σειρήνες...\n\nΗ Σκιάθος του Αλέξανδρου Παπαδιαμάντη\nΑπό εδώ καταγόταν ο «Άγιος των ελληνικών γραμμάτων», ένας από τους σημαντικότερους Έλληνες λογοτέχνες. Το σπίτι-μουσείο του Παπαδιαμάντη είναι από τα σημαντικότερα αξιοθέατα του νησιού και θα το βρείτε στη Χώρα. Και στα διηγήματά του θα βρείτε ένα άλλο νησί: την αυθεντική Σκιάθο του 19ου αιώνα.\n\nΤο Κάστρο -προστάτης από τους πειρατές\nΘα το ανακαλύψετε στο βορειότερο άκρο του νησιού. Από τον 14ο αιώνα προστάτευε τους Σκιαθώτες από τους πειρατές. Σήμερα, νιώθετε τη μυστηριακή του ατμόσφαιρα ακόμη να σας τυλίγει. Εδώ, η τέχνη είναι ζωντανή στις 2 από τις 22 παλιές εκκλησίες που διασώθηκαν: θαυμάσιες τοιχογραφίες στο Γενέσιον του Χριστού και εντοιχισμένα κεραμικά στον Άγιο Νικόλαο. Ένα ταξίδι στην Τέχνη με φόντο το Αιγαίο.\n\nΠαραλίες για όλα τα γούστα Ποια να πρωτοδιαλέξετε; Μεγάλη Μπανάνα, Τρούλλος, Αγία Παρασκευή, Καναπίτσα, Ξάνεμος, Μεγάλος Ασέληνος. Η λίστα είναι ανεξάντλητη. Παραλιακά μπαρ, ταβερνάκια, θαλάσσια σπορ, ομπρέλες και ξαπλώστρες. Η διασκέδαση στις παραλίες της Σκιάθου έχει αναχθεί σε τέχνη.\n\nΟι κρυμμένοι θησαυροί της Σκιάθου\n\nΟι θαλάσσιες σπηλιές\nΔιακοπές σημαίνει εξερεύνηση και οι θαλάσσιες σπηλιές της Σκιάθου σάς περιμένουν. Αρκεί ένα σκάφος και θα τις ανακαλύψετε: η Πούντα, η Φόνισσα και η Αλτανούς. Ώρα για δράση!\n\nΗ φρυκτωρία στο Πυργί\nΕιδωλολατρικός βωμός, χριστιανικό κωδωνοστάσιο ή ενετικός πύργος; Βρείτε το κυκλικό κτίσμα στο Πυργί, κρυμμένο μέσα στις βελανιδιές, και αφήστε τη φαντασία σας ελεύθερη.\n\nΗ Μονή της Ευαγγελίστριας\nΟι οχυρωμένοι της τοίχοι μοιάζουν με μονή του Αγίου Όρους. Από το 1794 βρίσκεται στο βορειοανατολικό τμήμα του ορεινού όγκου της Σκιάθου\n\nΣΑΣ ΠΡΟΤΕΙΝΟΥΜΕ:\n- Ενοικίαση αυτοκινήτου\n- Να κάνετε μια μονοήμερη κρουαζιέρα Σκόπελο- Αλόννησο -Λαλάρια\n- Να απολαύσετε το καφεδάκι σας στο ξακουστό Μπούρτζι\n- Να επισκεφτείτε την παραλία Κουκουναριές όπου την αγκαλιάζει ένα πυκνό πευκοδάσος, πίσω από το οποίο σας περιμένει η λίμνη της Στροφίλιας, ένας μοναδικός βιότοπος που φιλοξενεί σπάνια είδη πουλιών.\n- Η οδός Παπαδιαμάντη όπου εδώ καφέ-μπαρ σφύζουν από ζωή, εστιατόρια, ταβέρνες και κομψά καταστήματα θα χαρίσουν στις διακοπές σας τον ρυθμό του νησιού.'
       },
-      gallery: ['/images/greek-packages-summer/skiathos/skiathos-greece-summer-cover.webp']
+      gallery: ['/images/greek-packages-summer/skiathos/skiathos-lake-hero.webp']
     }
   },
   {
@@ -15481,6 +15543,7 @@ export const travelPackages = [
     longDescription: 'Η Σαντορίνη, το νησί των ηλιοβασιλέματα και των λευκών σπιτιών, προσφέρει αξέχαστες εμπειρίες. Επιλέξτε από ξενοδοχεία στη Φηρά, Καμάρι και άλλες περιοχές με ημερομηνίες αναχώρησης από Ιούλιο έως Αύγουστο.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '06/07',
       departureFrom: 'Larnaca',
@@ -15541,6 +15604,7 @@ export const travelPackages = [
     longDescription: 'Η Πάργα, η πανέμορφη παραθαλάσσια πόλη της Ηπείρου, προσφέρει αξέχαστες διακοπές. Επιλέξτε από studios, apart-hotels και ξενοδοχεία 2* έως 5* με ημερομηνίες αναχώρησης από Ιούλιο έως Αύγουστο.',
     image: '🇬🇷',
     featured: true,
+    packageType: 'individual',
     details: {
       departureDate: '05/07',
       departureFrom: 'Larnaca',
@@ -15649,6 +15713,343 @@ export const travelPackages = [
         whatToSee: 'Αξίζει να δείτε στην Πάργα: το Βενετικό κάστρο, την παραλία Κρυονερί, το λιμάνι και την παλιά πόλη. Επισκεφθείτε τις κοντινές παραλίες Λίχνος και Αγία Γαλήνη.'
       },
       gallery: ['/images/greek-packages-summer/parga/parga-cover.webp']
+    }
+  },
+  {
+    id: 72,
+    title: 'ΣΚΙΑΘΟΣ - 8 ΜΕΡΕΣ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 619,
+    duration: '8 days / 7 nights',
+    description: 'Καλοκαιρινές διακοπές στη Σκιάθο. 8 μέρες με διαμονή σε ξενοδοχεία και διαμερίσματα 2* έως 5*, Room Only ή Bed & Breakfast. Αναχωρήσεις κάθε Τρίτη και Σάββατο.',
+    longDescription: 'Όταν η φύση έχει τα κέφια της τότε μπορεί να δημιουργήσει αριστουργήματα! Κάπως έτσι φαίνεται έγινε και στην περίπτωση της Σκιάθου. Αυτός λοιπόν ο τόπος με την αστείρευτη ομορφία του, όπου συνδιάζεται τέλεια το παλιό με το καινούργιο, το κλασσικό με το μοντέρνο, η παράδοση με την εξέλιξη χωρίς να χαλάνε οι ισορροπίες, είναι πανέτοιμος για να γίνει η μεγάλη σας καλοκαιρινή αγάπη! Αναχωρήσεις κάθε Τρίτη (30/6, 7, 14, 21, 28/7, 4, 11, 18/8) και κάθε Σάββατο (4, 11, 18, 25/7, 1, 8, 15, 22/8). Πτήσεις Cyprus Airways LCA–JSI CY464 13:45–15:45, JSI–LCA CY465 11:00–12:50 (Τρίτη) ή 16:45–18:35 (Σάββατο).',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '30/06',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Skiathos, Greece',
+      monthAvailability: 'June – August',
+      roomType: 'Various',
+      boardBasis: 'Room Only / Bed & Breakfast',
+      airline: 'Cyprus Airways',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/skiathos/skiathos-lake-blue.webp',
+      thumbnailImage: '/images/greek-packages-summer/skiathos/skiathos-lake-blue.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Skiathos (JSI)', flight: 'CY 464', time: '13:45 → 15:45', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' },
+        { direction: 'Return', date: '—', route: 'Skiathos (JSI) → Larnaca (LCA)', flight: 'CY 465', time: '11:00 → 12:50 (Τρίτη) / 16:45 → 18:35 (Σάββατο)', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' }
+      ],
+      hotels: [
+        { name: 'Elivi Skiathos Luxury Resort', stars: 5, roomType: 'Xenia Room', image: '/images/greek-packages-summer/skiathos/elivi-hotel-skiathos.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1549 }, packagePrice: 3098, departureDate: '30/06', nights: 7 },
+        { name: 'Elivi Skiathos Luxury Resort', stars: 5, roomType: 'Xenia Room', image: '/images/greek-packages-summer/skiathos/elivi-hotel-skiathos.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 2229 }, packagePrice: 4458, departureDate: '04/08', nights: 7 },
+        { name: 'Skiathos Palace', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/palace-skiathos-hotel.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1429, single: 1329, triple: 1329, child1: 365, child2: 895 }, packagePrice: 2858, departureDate: '30/06', nights: 7 },
+        { name: 'Skiathos Palace', stars: 4, roomType: 'Sea View', image: '/images/greek-packages-summer/skiathos/palace-skiathos-hotel.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1659, single: 1529, triple: 1529, child1: 365 }, packagePrice: 3318, departureDate: '30/06', nights: 7 },
+        { name: 'Radisson Plaza Kanapitsa', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/Radisson-plaza.webp', location: 'Kanapitsa, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1249 }, packagePrice: 2498, departureDate: '30/06', nights: 7 },
+        { name: 'Radisson Plaza Kanapitsa', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/Radisson-plaza.webp', location: 'Kanapitsa, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1615 }, packagePrice: 3230, departureDate: '22/08', nights: 7 },
+        { name: 'Skiathos Thalassa', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/thalassa-hotel-skiathos.webp', location: 'Megali Ammos, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1389 }, packagePrice: 2778, departureDate: '30/06', nights: 7 },
+        { name: 'Skiathos Thalassa', stars: 4, roomType: 'Executive Pool View', image: '/images/greek-packages-summer/skiathos/thalassa-hotel-skiathos.webp', location: 'Megali Ammos, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1439, triple: 1179, child1: 569 }, packagePrice: 2878, departureDate: '30/06', nights: 7 },
+        { name: 'La Piscine', stars: 5, roomType: 'City View', image: '/images/greek-packages-summer/skiathos/la-piscine-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1339 }, packagePrice: 2678, departureDate: '30/06', nights: 7 },
+        { name: 'Mandraki Village', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/skiathos-madraki-hotel.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1269 }, packagePrice: 2538, departureDate: '30/06', nights: 7 },
+        { name: 'Mandraki Village', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/skiathos-madraki-hotel.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1629 }, packagePrice: 3258, departureDate: '22/08', nights: 7 },
+        { name: 'Alkyon', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/alkyon-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1229, single: 1139, child1: 919 }, packagePrice: 2458, departureDate: '30/06', nights: 7 },
+        { name: 'Alkyon', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/alkyon-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1379, single: 1285, child1: 1079 }, packagePrice: 2758, departureDate: '22/08', nights: 7 },
+        { name: 'Casa Blu', stars: 3, roomType: 'Comfort Room', image: '/images/greek-packages-summer/skiathos/casa-blue-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1169 }, packagePrice: 2338, departureDate: '30/06', nights: 7 },
+        { name: 'Casa Blu', stars: 3, roomType: 'Deluxe Room', image: '/images/greek-packages-summer/skiathos/casa-blue-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1269 }, packagePrice: 2538, departureDate: '30/06', nights: 7 },
+        { name: 'Ifigenia Hotel', stars: 2, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/ifigenia-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 829, single: 1289, triple: 749, child1: 619 }, packagePrice: 1658, departureDate: '30/06', nights: 7 },
+        { name: 'Ifigenia Hotel', stars: 2, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/ifigenia-hotel-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 969, single: 1299, triple: 887, child1: 709 }, packagePrice: 1938, departureDate: '22/08', nights: 7 },
+        { name: 'Amalia Studios', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/skiathos/amalia-studios-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 679, triple: 579, child1: 529 }, packagePrice: 1358, departureDate: '30/06', nights: 7 },
+        { name: 'Amalia Studios', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/skiathos/amalia-studios-skiathos.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 739, triple: 629, child1: 569 }, packagePrice: 1478, departureDate: '22/08', nights: 7 },
+        { name: 'Pandora Apartments', stars: 3, roomType: 'Apartment', image: '/images/greek-packages-summer/skiathos/pandora-skiaathos.webp', location: 'Kolios, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 759, triple: 629, quadruple: 579 }, packagePrice: 1518, departureDate: '30/06', nights: 7 },
+        { name: 'Pandora Apartments', stars: 3, roomType: 'Apartment', image: '/images/greek-packages-summer/skiathos/pandora-skiaathos.webp', location: 'Kolios, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 829, triple: 685, quadruple: 609 }, packagePrice: 1658, departureDate: '22/08', nights: 7 },
+        { name: 'Villa Spartias Xanemos', stars: 3, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/villla-spartias-hotel.webp', location: 'Xanemos, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 729, triple: 639, quadruple: 599 }, packagePrice: 1458, departureDate: '30/06', nights: 7 },
+        { name: 'Villa Spartias Xanemos', stars: 3, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/villla-spartias-hotel.webp', location: 'Xanemos, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 857, triple: 769, quadruple: 689 }, packagePrice: 1714, departureDate: '22/08', nights: 7 },
+        { name: 'Roullas House', stars: 3, roomType: 'Ground Floor', image: '/images/greek-packages-summer/skiathos/roullas-house-skiathos.webp', location: 'Megali Ammos, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 679 }, packagePrice: 1358, departureDate: '30/06', nights: 7 },
+        { name: 'Roullas House', stars: 3, roomType: 'Ground Floor', image: '/images/greek-packages-summer/skiathos/roullas-house-skiathos.webp', location: 'Megali Ammos, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 985 }, packagePrice: 1970, departureDate: '22/08', nights: 7 },
+        { name: 'Villa Nefeli', stars: 3, roomType: 'Apartment', image: '/images/greek-packages-summer/skiathos/villa-nefeli-skiathos.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 769, triple: 629, quadruple: 569 }, packagePrice: 1538, departureDate: '30/06', nights: 7 },
+        { name: 'Villa Nefeli', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/skiathos/villa-nefeli-skiathos.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 619, triple: 529, quadruple: 489 }, packagePrice: 1238, departureDate: '30/06', nights: 7 },
+        { name: 'Villa Nefeli', stars: 3, roomType: 'Apartment', image: '/images/greek-packages-summer/skiathos/villa-nefeli-skiathos.webp', location: 'Koukounaries, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 989, triple: 789, quadruple: 689 }, packagePrice: 1978, departureDate: '22/08', nights: 7 },
+        { name: 'Skiathos Somnia Hotel Apartments', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/somnia-skiathos-apartments.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 959, triple: 979, quadruple: 829 }, packagePrice: 1918, departureDate: '30/06', nights: 7 },
+        { name: 'Skiathos Somnia Hotel Apartments', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/skiathos/somnia-skiathos-apartments.webp', location: 'Town, Skiathos, Greece', boardBasis: 'Room Only', prices: { double: 1049, triple: 1089, quadruple: 915 }, packagePrice: 2098, departureDate: '22/08', nights: 7 }
+      ],
+      included: ['Αεροπορικό εισιτήριο Λάρνακα – Σκιάθος – Λάρνακα με πτήσεις της Cyprus Airways', 'Φόροι αεροδρομίων', 'Διαμονή για 7 βράδια σε ξενοδοχείο της επιλογής σας με πρόγευμα όπου αναφέρεται', '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)', 'Φαγητό και ποτό στην πτήση'],
+      note: 'Αναχωρήσεις κάθε Τρίτη και Σάββατο. Ημερομηνίες και τιμές ανά ξενοδοχείο. Επικοινωνήστε για διαθεσιμότητα. Skiathos Somnia: έξτρα κόστος για πρόγευμα €12/άτομο/ημέρα.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      program: {
+        introduction: 'ΣΚΙΑΘΟΣ – 8 ΜΕΡΕΣ\n\nΌταν η φύση έχει τα κέφια της τότε μπορεί να δημιουργήσει αριστουργήματα! Κάπως έτσι φαίνεται έγινε και στην περίπτωση της Σκιάθου. Αυτός λοιπόν ο τόπος με την αστείρευτη ομορφία του, όπου συνδιάζεται τέλεια το παλιό με το καινούργιο, το κλασσικό με το μοντέρνο, η παράδοση με την εξέλιξη χωρίς να χαλάνε οι ισορροπίες, είναι πανέτοιμος για να γίνει η μεγάλη σας καλοκαιρινή αγάπη!\n\nΑΝΑΧΩΡΗΣΕΙΣ: ΚΑΘΕ ΤΡΙΤΗ (30/6, 7, 14, 21, 28/7, 4, 11, 18/8) · ΚΑΘΕ ΣΑΒΒΑΤΟ (4, 11, 18, 25/7, 1, 8, 15, 22/8).\n\nΠτήσεις: LCA–JSI CY464 13:45–15:45 · JSI–LCA CY465 11:00–12:50 (Τρίτη) ή 16:45–18:35 (Σάββατο).'
+      },
+      gallery: ['/images/greek-packages-summer/skiathos/skiathos-lake-blue.webp']
+    }
+  },
+  {
+    id: 73,
+    title: 'ΜΑΚΕΔΟΝΙΚΟΙ ΘΗΣΑΥΡΟΙ – ΚΡΟΥΑΖΙΕΡΑ ΑΓΙΟΥ ΟΡΟΥΣ - ΘΑΣΟΣ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 789,
+    duration: '7 days / 7 nights',
+    description: 'Επτά ημέρες στη Μακεδονία: Θεσσαλονίκη, Έδεσσα, Λουτρά Πόζαρ, κρουαζιέρα Αγίου Όρους, Καβάλα, Ξάνθη, Νέστος, Θάσος και Λίμνη Κερκίνη. Αναχωρήσεις 13/07, 20/07, 27/07, 10/08, 17/08, 24/08.',
+    longDescription: 'Οργανωμένο ταξίδι με τοπικό αρχηγό. Διανυκτερεύσεις: Θεσσαλονίκη 4* (4 νύχτες), Ξάνθη 5* (2 νύχτες). Πτήσεις Sky Express LCA–Thessaloniki–LCA. Περιλαμβάνεται κρουαζιέρα Αγίου Όρους, ακτοπλοϊκό για Θάσο, μεταφορές και εκδρομές σύμφωνα με το πρόγραμμα.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '13/07, 20/07, 27/07, 10/08, 17/08, 24/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Thessaloniki, Xanthi, Thassos, Mount Athos cruise',
+      monthAvailability: 'July – August',
+      roomType: 'Standard',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Sky Express',
+      includedLuggage: '1 αποσκευή 20 κιλών και 1 χειραποσκευή 8 κιλών',
+      coverImage: '/images/greek-packages-summer/Macedonia-thassos/xanthi-thrassos-cover.webp',
+      thumbnailImage: '/images/greek-packages-summer/Macedonia-thassos/xanthi-thrassos-thumb.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Thessaloniki (SKG)', flight: 'GQ 650', time: '20:25 → 22:25', luggage: '1 αποσκευή 20 kg + χειραποσκευή 8 kg' },
+        { direction: 'Return', date: '—', route: 'Thessaloniki (SKG) → Larnaca (LCA)', flight: 'GQ 651', time: '08:55 → 10:45', luggage: '1 αποσκευή 20 kg + χειραποσκευή 8 kg' }
+      ],
+      hotels: [
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 789, single: 999, child1: 629 }, packagePrice: 1578, departureDate: '13/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 789, single: 999, child1: 629 }, packagePrice: 1578, departureDate: '20/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 829, single: 1039, child1: 659 }, packagePrice: 1658, departureDate: '27/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 849, single: 1059, child1: 669 }, packagePrice: 1698, departureDate: '10/08', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 849, single: 1059, child1: 669 }, packagePrice: 1698, departureDate: '17/08', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/Macedonia-thassos/Hotel-Xanthi-Hotel-thessaloniki.webp', location: '5* Hotel - Xanthi & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 829, single: 1039, child1: 659 }, packagePrice: 1658, departureDate: '24/08', nights: 7 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Θεσσαλονίκη – Λάρνακα με πτήσεις Sky Express', 'Φόροι αεροδρομίων', 'Μια αποσκευή 20 κιλών και μια χειραποσκευή 8 κιλών', 'Τέσσερις διανυκτερεύσεις σε ξενοδοχείο 4* με πρωινό στη Θεσσαλονίκη', 'Δύο διανυκτερεύσεις σε ξενοδοχείο 5* στη Ξάνθη', 'Κρουαζιέρα Αγίου Όρους', 'Ακτοπλοϊκό εισιτήριο για τη Θάσο', 'Τέλος ανθεκτικότητας στην Κλιματική Κρίση', 'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα', 'Τοπικός Αρχηγός / Συνοδός', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Δικαιώματα εισόδων προαιρετικά', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'],
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      itinerary: [
+        { day: '1η Μέρα', title: 'Λάρνακα - Θεσσαλονίκη', description: 'Συγκέντρωση στο αεροδρόμιο της Λάρνακας, όπου θα πάρουμε την πτήση μας για τη Θεσσαλονίκη. Άφιξη, παραλαβή από την αρχηγό σας, μεταφορά στο ξενοδοχείο, τακτοποίηση δωματίων και διανυκτέρευση.' },
+        { day: '2η Μέρα', title: 'Θεσσαλονίκη – Έδεσσα – Λουτρά Πόζαρ', description: 'Πρωινό και αναχώρηση για την Έδεσσα την πόλη των νερών, γνωστή για το εντυπωσιακό φυσικό της ανάγλυφο, τους περίφημους καταρράκτες και την αυθεντική Μακεδονική φιλοξενία. Κατά τη διαδρομή θα απολαύσουμε την πλούσια φύση της Κεντρικής Μακεδονίας. Χρόνος για βόλτα στους Καταρράκτες του Κάρανου (70μ) και περιήγηση στο παραδοσιακό Βαρόσι. Στη συνέχεια αναχώρηση για τα Λουτρά Πόζαρ, ιαματικές πηγές στους πρόποδες του Βόρα (37°C) μέσα σε καταπράσινο φαράγγι. Ελεύθερος χρόνος για λουτρό στις φυσικές πισίνες ή περίπατο στο μονοπάτι του Θερμοπόταμου.' },
+        { day: '3η Μέρα', title: 'Θεσσαλονίκη - Κρουαζιέρα Αγ. Όρους', description: 'Πρόγευμα και αναχώρηση νωρίς για την Ουρανούπολη, απ\' όπου επιβιβαζόμαστε στο πλοίο για την κρουαζιέρα γύρω από το Άγιον Όρος. Θα θαυμάσουμε από κοντά τα μοναστήρια στις πλαγιές του Άθω και θα γνωρίσουμε την ιστορία της μοναστικής πολιτείας. Μετά το τέλος της κρουαζιέρας, επιστροφή στη Θεσσαλονίκη. Το υπόλοιπο της ημέρας ελεύθερο για ξεκούραση ή βόλτα στο κέντρο και την παραλία.' },
+        { day: '4η Μέρα', title: 'Θεσσαλονίκη – Καβάλα - Ξάνθη', description: 'Πρόγευμα και αναχώρηση για την Καβάλα. Πόλη χτισμένη πάνω στη θάλασσα, με θεόρατες καπναποθήκες και νεοκλασικά κτήρια. Χρόνος για καφέ και φαγητό στο κέντρο. Αναχώρηση για την Ξάνθη, αρωματικό χαρμάνι πολιτισμών. Το σήμα κατατεθέν της Πόλης είναι η πλατεία με το Ρολόι και οι καπναποθήκες. Άφιξη στο ξενοδοχείο και τακτοποίηση δωματίων.' },
+        { day: '5η Μέρα', title: 'Ξάνθη – Ποταμός Νέστος - Κεραμωτή - Θάσος', description: 'Πρόγευμα και αναχώρηση για το Ποταμό Νέστο με την άγρια ομορφιά του, τα καταπράσινα δάση της οξιάς και τα πέτρινα γεφύρια. Στη συνέχεια Κεραμωτή και καράβι για τη Θάσο. Νησί πνιγμένο στο πράσινο με ονειρεμένες παραλίες. Επίσκεψη στο μοναστήρι του Αρχαγγέλου Μιχαήλ. Ελεύθερος χρόνος· προτείνεται γλυκά του κουταλιού και γεύμα σε ψαροταβέρνα. Επιστροφή το απόγευμα στη Ξάνθη.' },
+        { day: '6η Μέρα', title: 'Ξάνθη – Λίμνη Κερκίνης – Θεσσαλονίκη', description: 'Πρόγευμα και αναχώρηση για τη Λίμνη Κερκίνη, ένας από τους σημαντικότερους υγροτόπους της Ελλάδας και της Ευρώπης. Χιλιάδες πτηνά, δάση δίπλα στο ποτάμι, νούφαρα, ποικιλία ψαριών και πανοραμική θέα. Αναχώρηση για τη Θεσσαλονίκη. Μεταφορά στο ξενοδοχείο και τακτοποίηση. Χρόνος για βόλτα και ψώνια στην πόλη.' },
+        { day: '7η Μέρα', title: 'Θεσσαλονίκη - Λάρνακα', description: 'Νωρίς το πρωί, πρόγευμα σε πακέτο και αναχώρηση για το αεροδρόμιο της Θεσσαλονίκης, όπου θα πάρουμε την πτήση της επιστροφής για τη Λάρνακα γεμάτοι όμορφες εικόνες και εμπειρίες από το ταξίδι στη Μακεδονία.' }
+      ],
+      program: {
+        introduction: 'Ένα ολοκληρωμένο ταξίδι στη Βόρεια Ελλάδα με βάση τη Θεσσαλονίκη και την Ξάνθη, που συνδυάζει φυσικά τοπία, ιστορικές πόλεις και μοναδικές εμπειρίες.\n\nΑναχωρήσεις: 13/07, 20/07, 27/07, 10/08, 17/08, 24/08\n\nΠτήσεις: GQ 650 Λάρνακα – Θεσσαλονίκη 20:25 - 22:25 · GQ 651 Θεσσαλονίκη – Λάρνακα 08:55 - 10:45\n\nΔιανυκτερεύσεις: Θεσσαλονίκη (4), Ξάνθη (2).'
+      },
+      gallery: ['/images/greek-packages-summer/Macedonia-thassos/xanthi-thrassos-cover.webp']
+    }
+  },
+  {
+    id: 74,
+    title: 'Θεσσαλονίκη – Σόφια – Λίμνη Κερκίνη – Κρουαζιέρα Αγίου Όρους',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 819,
+    duration: '7 days / 7 nights',
+    description: 'Επτά ημέρες: Θεσσαλονίκη, Μοναστήρι Ρίλλα, Σόφια, Φιλιππούπολη, Λίμνη Κερκίνη και κρουαζιέρα Αγίου Όρους. Διανυκτερεύσεις Σόφια (3), Θεσσαλονίκη (3). Αναχωρήσεις 13/07, 20/07, 27/07, 10/08, 17/08, 24/08.',
+    longDescription: 'Οργανωμένο ταξίδι με τοπικό αρχηγό. Διανυκτερεύσεις: Σόφια 4* (3 νύχτες), Θεσσαλονίκη 4* (3 νύχτες). Πτήσεις Sky Express LCA–Thessaloniki–LCA. Περιλαμβάνεται κρουαζιέρα Αγίου Όρους, μεταφορές και εκδρομές σύμφωνα με το πρόγραμμα.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '13/07, 20/07, 27/07, 10/08, 17/08, 24/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Thessaloniki, Sofia, Lake Kerkini, Mount Athos cruise',
+      monthAvailability: 'July – August',
+      roomType: 'Standard',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Sky Express',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-cover.webp',
+      thumbnailImage: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/white-castle-thesaloniki.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Thessaloniki (SKG)', flight: 'GQ 650', time: '20:25 → 22:25', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' },
+        { direction: 'Return', date: '—', route: 'Thessaloniki (SKG) → Larnaca (LCA)', flight: 'GQ 651', time: '08:55 → 10:45', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' }
+      ],
+      hotels: [
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 819, single: 969, child1: 659 }, packagePrice: 1638, departureDate: '13/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 819, single: 969, child1: 659 }, packagePrice: 1638, departureDate: '20/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 849, single: 999, child1: 689 }, packagePrice: 1698, departureDate: '27/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 869, single: 1019, child1: 699 }, packagePrice: 1738, departureDate: '10/08', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 869, single: 1019, child1: 699 }, packagePrice: 1738, departureDate: '17/08', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-hotel.webp', location: '4* Hotel - Sofia & 4* Hotel - Thessaloniki', boardBasis: 'Πρωινό', prices: { double: 849, single: 999, child1: 689 }, packagePrice: 1698, departureDate: '24/08', nights: 7 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Θεσσαλονίκη – Λάρνακα με πτήσεις Sky Express', 'Φόροι αεροδρομίων', 'Μια αποσκευή 23 κιλών και μια χειραποσκευή 10 κιλών', 'Τρεις διανυκτερεύσεις σε ξενοδοχείο 4* με πρωινό στη Σόφια', 'Τρεις διανυκτερεύσεις σε ξενοδοχείο 4* με πρωινό στη Θεσσαλονίκη', 'Εισιτήριο κρουαζιέρας Αγ. Όρους', 'Τέλος ανθεκτικότητας στην Κλιματική Κρίση', 'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα', 'Τοπικός Αρχηγός / Συνοδός', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Δικαιώματα εισόδων προαιρετικά', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'],
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      itinerary: [
+        { day: '1η Μέρα', title: 'Λάρνακα - Θεσσαλονίκη', description: 'Συγκέντρωση στο αεροδρόμιο της Λάρνακας, όπου θα πάρουμε την πτήση μας για τη Θεσσαλονίκη. Άφιξη το βράδυ στην όμορφη συμπρωτεύουσα, παραλαβή από την αρχηγό μας και μεταφορά στο ξενοδοχείο. Τακτοποίηση στα δωμάτια και χρόνος για ξεκούραση μετά το ταξίδι. Διανυκτέρευση στη Θεσσαλονίκη.' },
+        { day: '2η Μέρα', title: 'Θεσσαλονίκη - Μοναστήρι Ρίλλα - Σόφια', description: 'Μετά το πρωινό στο ξενοδοχείο, αναχώρηση από τη Θεσσαλονίκη με κατεύθυνση τη Βουλγαρία. Πρώτος μας σταθμός το επιβλητικό Μοναστήρι της Ρίλλας, το σημαντικότερο ορθόδοξο μοναστήρι της χώρας και Μνημείο Παγκόσμιας Κληρονομιάς UNESCO. Ιδρυμένο τον 10ο αιώνα από τον Άγιο Ιωάννη της Ρίλλας, εντυπωσιάζει με τη μοναδική αρχιτεκτονική του και τις πολύχρωμες τοιχογραφίες. Στη συνέχεια αναχώρηση για τη Σόφια. Άφιξη, μεταφορά στο ξενοδοχείο και τακτοποίηση. Το υπόλοιπο της ημέρας ελεύθερο. Διανυκτέρευση στη Σόφια.' },
+        { day: '3η Μέρα', title: 'Σόφια - Ξενάγηση', description: 'Πρωινό και ξενάγηση στην πόλη: Καθεδρικός Ναός Αγίου Αλεξάνδρου Νιέφσκι, εκκλησία Αγίας Σοφίας, Ρωσική Εκκλησία Αγίου Νικολάου, Κοινοβούλιο, Λάργκο, Προεδρικό Μέγαρο, Εθνικό Θέατρο Ιβάν Βάζοφ, Ροτόντα Αγίου Γεωργίου, Πανεπιστήμιο. Περίπατος στην οδό Βίτοσα και στο βουνό Βίτοσα· επίσκεψη στο Μοναστήρι Ντραγκάλεφτσι. Χρόνος ελεύθερος για περίπατο ή αγορές. Διανυκτέρευση στη Σόφια.' },
+        { day: '4η Μέρα', title: 'Σόφια - Φιλιππούπολη', description: 'Μετά το πρωινό, αναχώρηση για τη Φιλιππούπολη (Πλόβντιβ), τη δεύτερη μεγαλύτερη πόλη της Βουλγαρίας και μία από τις αρχαιότερες της Ευρώπης. Επίσκεψη στην παλιά πόλη με πλακόστρωτα σοκάκια και αρχοντικά, Λαογραφικό Μουσείο Κουγιουμτζόγλου, Αρχαίο Θέατρο, Ρωμαϊκό Στάδιο, Καθεδρικό Ναό Αγίων Κωνσταντίνου και Ελένης, πύργο Ρολογιού. Ελεύθερος χρόνος στην πεζοδρομημένη οδό Κνιάζ Αλεξάντερ Μπάτενμπεργκ. Το απόγευμα επιστροφή στη Σόφια. Διανυκτέρευση στη Σόφια.' },
+        { day: '5η Μέρα', title: 'Σόφια - Λίμνη Κερκίνη - Θεσσαλονίκη', description: 'Μετά το πρωινό, αναχώρηση από τη Σόφια για τη Λίμνη Κερκίνη, σημαντικός υδροβιότοπος και προστατευόμενη περιοχή Natura 2000. Καταφύγιο σπάνιων και αποδημητικών πουλιών. Χρόνος για περίπατο και φωτογραφίες. Στη συνέχεια αναχώρηση για τη Θεσσαλονίκη. Άφιξη, μεταφορά στο ξενοδοχείο και τακτοποίηση. Το υπόλοιπο της ημέρας ελεύθερο. Διανυκτέρευση στη Θεσσαλονίκη.' },
+        { day: '6η Μέρα', title: 'Θεσσαλονίκη - Κρουαζιέρα Αγ. Όρους', description: 'Πρόγευμα και αναχώρηση νωρίς για την Ουρανούπολη. Επιβίβαση στο πλοίο για την κρουαζιέρα γύρω από το Άγιον Όρος. Θαυμάζουμε τα μοναστήρια στις πλαγιές του Άθω και γνωρίζουμε την ιστορία της μοναστικής πολιτείας. Μετά το τέλος της κρουαζιέρας, επιστροφή στη Θεσσαλονίκη. Το υπόλοιπο της ημέρας ελεύθερο για ξεκούραση ή βόλτα στο κέντρο και την παραλία. Διανυκτέρευση στη Θεσσαλονίκη.' },
+        { day: '7η Μέρα', title: 'Θεσσαλονίκη - Λάρνακα', description: 'Πρωινό σε πακέτο και αναχώρηση για το αεροδρόμιο της Θεσσαλονίκης, όπου θα πάρουμε την πτήση της επιστροφής για τη Λάρνακα γεμάτοι όμορφες εικόνες και εμπειρίες από το ταξίδι στη Βόρεια Ελλάδα και τη Βουλγαρία.' }
+      ],
+      program: {
+        introduction: 'Θεσσαλονίκη – Σόφια – Λίμνη Κερκίνη – Κρουαζιέρα Αγίου Όρους. Επτά ημέρες στη Βόρεια Ελλάδα και τη Βουλγαρία με βάση τη Θεσσαλονίκη και τη Σόφια.\n\nΑναχωρήσεις: 13/07, 20/07, 27/07, 10/08, 17/08, 24/08\n\nΠτήσεις: GQ 650 Λάρνακα – Θεσσαλονίκη 20:25 - 22:25 · GQ 651 Θεσσαλονίκη – Λάρνακα 08:55 - 10:45\n\nΔιανυκτερεύσεις: Σόφια (3), Θεσσαλονίκη (3).'
+      },
+      gallery: ['/images/greek-packages-summer/thesalloniki-sofia-lake-kerkini/sofia-thesaloniki-cover.webp']
+    }
+  },
+  {
+    id: 75,
+    title: 'ΣΤΟΛΙΔΙΑ ΚΟΡΙΝΘΙΑΚΟΥ - ΑΡΑΧΩΒΑ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 739,
+    duration: '6 days / 6 nights',
+    description: 'Έξι ημέρες: Αθήνα, Λειβαδιά, Αράχωβα, Δελφοί, Ιτέα, Γαλαξίδι, Τριζόνια, Ναύπακτος, Μεσολόγγι, Αιτωλικό, Πάτρα. Διανυκτερεύσεις Αράχωβα (2), Ναύπακτος (2), Αθήνα (1). Αναχωρήσεις 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08.',
+    longDescription: 'Οργανωμένο ταξίδι με τοπικό αρχηγό. Διανυκτερεύσεις: Αράχωβα 4* ημιδιατροφή (2), Ναύπακτος 3* πρωινό (2), Αθήνα 3* πρωινό (1). Πτήσεις Cyprus Airways LCA–Athens–LCA. Περιλαμβάνεται είσοδος Δελφών, καραβάκι Τριζόνια, μεταφορές και εκδρομές.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Arachova, Nafpaktos, Athens, Delphi, Corinthian Riviera',
+      monthAvailability: 'July – August',
+      roomType: 'Standard',
+      boardBasis: 'Half board in Arachova, Bed & Breakfast elsewhere',
+      airline: 'Cyprus Airways',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/arachova/arachova-korinthou-cover.webp',
+      thumbnailImage: '/images/greek-packages-summer/arachova/arachova-korinthou-thumb.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Athens (ATH)', flight: 'CY 310', time: '08:05 → 10:00', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' },
+        { direction: 'Return', date: '—', route: 'Athens (ATH) → Larnaca (LCA)', flight: 'CY 313', time: '20:55 → 22:40', luggage: '1 αποσκευή 23 kg + χειραποσκευή 10 kg' }
+      ],
+      hotels: [
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 739, single: 1029, child1: 629 }, packagePrice: 1478, departureDate: '11/07', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 739, single: 1029, child1: 629 }, packagePrice: 1478, departureDate: '18/07', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 739, single: 1029, child1: 629 }, packagePrice: 1478, departureDate: '25/07', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 769, single: 1059, child1: 659 }, packagePrice: 1538, departureDate: '01/08', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 789, single: 1079, child1: 679 }, packagePrice: 1578, departureDate: '08/08', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 819, single: 1109, child1: 699 }, packagePrice: 1638, departureDate: '15/08', nights: 6 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/arachova/arachova-korinthou-hotel.webp', location: '4* Arachova (2) · 3* Nafpaktos (2) · 3* Athens (1)', boardBasis: 'Ημιδιατροφή / Πρωινό', prices: { double: 769, single: 1059, child1: 659 }, packagePrice: 1538, departureDate: '22/08', nights: 6 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα με πτήσεις Cyprus Airways', 'Φόροι αεροδρομίων', 'Μια αποσκευή 23 κιλών και μια χειραποσκευή 10 κιλών', 'Δύο διανυκτερεύσεις σε ξενοδοχείο 4* με ημιδιατροφή στην Αράχωβα', 'Δύο διανυκτερεύσεις σε ξενοδοχείο 3* με πρωινό στην Ναύπακτο', 'Μια διανυκτέρευση σε ξενοδοχείο 3* με πρωινό στην Αθήνα', 'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα', 'Είσοδος στον αρχαιολογικό χώρο των Δελφών', 'Καραβάκι για Τριζόνια', 'Τοπικός Αρχηγός / Συνοδός', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Δικαιώματα εισόδων/μουσείων προαιρετικά', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'],
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      itinerary: [
+        { day: '1η Μέρα', title: 'Λάρνακα - Αθήνα - Λειβαδιά - Αράχωβα', description: 'Αναχώρηση από το αεροδρόμιο της Λάρνακας για την Αθήνα. Συνάντηση με την αρχηγό και αναχώρηση για τη Λειβαδιά, πόλη στις πλαγιές του Ελικώνα με τις πηγές της Κρύας. Χρόνος για περίπατο και καφέ. Στη συνέχεια κατεύθυνση προς την Αράχωβα, το κοσμοπολίτικο χωριό του Παρνασσού με παραδοσιακή αρχιτεκτονική και πέτρινα σπίτια. Άφιξη και τακτοποίηση στο ξενοδοχείο. Ελεύθερο απόγευμα. Διανυκτέρευση.' },
+        { day: '2η Μέρα', title: 'Αράχωβα - Δελφοί', description: 'Μετά το πρωινό, αναχώρηση για τους Δελφούς, τον πιο ιερό τόπο της αρχαιότητας. Επίσκεψη στον Αρχαιολογικό Χώρο: Ιερό του Απόλλωνα, Θέατρο, Στάδιο, Θησαυρός των Αθηναίων. Επιστροφή στην Αράχωβα. Ελεύθερος χρόνος για περίπατο στα σοκάκια ή φορμαέλλα Αράχωβας. Διανυκτέρευση.' },
+        { day: '3η Μέρα', title: 'Αράχωβα - Ιτέα - Γαλαξίδι - Τριζόνια - Ναύπακτος', description: 'Μετά το πρόγευμα, αναχώρηση για την Ιτέα και στάση στο λιμανάκι. Στη συνέχεια Γαλαξίδι, παραδοσιακός οικισμός με ναυτικό παρελθόν· περιήγηση στα καλντερίμια και προαιρετικά Ναυτικό Μουσείο. Μετάβαση με καραβάκι για τα Τριζόνια· χρόνος για βόλτα, κολύμπι ή καφέ. Το απόγευμα Ναύπακτος, αμφιθεατρικά κάτω από το ενετικό κάστρο. Περιήγηση στην παλιά πόλη και το λιμάνι. Διανυκτέρευση.' },
+        { day: '4η Μέρα', title: 'Ναύπακτος - Μεσολόγγι - Τουρλίδα - Αιτωλικό - Ναύπακτος', description: 'Μετά το πρόγευμα, εκδρομή στο Μεσολόγγι (Κήπος των Ηρώων, κέντρο)· προαιρετικά Μουσείο Άλατος. Διαδρομή προς Τουρλίδα μέσω λιμνοθάλασσας· στάση για φωτογραφίες. Συνεχίζουμε για το Αιτωλικό, η «μικρή Βενετία»· περίπατος στα σοκάκια. Ελεύθερος χρόνος για γεύμα. Το απόγευμα επιστροφή στη Ναύπακτο. Διανυκτέρευση.' },
+        { day: '5η Μέρα', title: 'Ναύπακτος - Πάτρα - Αθήνα', description: 'Μετά το πρόγευμα, επιστροφή προς Αθήνα. Διασχίζουμε τη Γέφυρα Ρίου–Αντιρρίου. Στάση στην Πάτρα: ναός Αγίου Ανδρέα, παραλιακό μέτωπο. Ελεύθερος χρόνος για καφέ. Αναχώρηση για Αθήνα. Άφιξη αργά το απόγευμα και τακτοποίηση στο ξενοδοχείο. Διανυκτέρευση.' },
+        { day: '6η Μέρα', title: 'Αθήνα - Λάρνακα', description: 'Μετά το πρωινό, ελεύθερη ημέρα στην Αθήνα για βόλτες ή αγορές. Στην καθορισμένη ώρα μεταφορά στο αεροδρόμιο και πτήση επιστροφής για τη Λάρνακα.' }
+      ],
+      program: {
+        introduction: 'ΣΤΟΛΙΔΙΑ ΚΟΡΙΝΘΙΑΚΟΥ - ΑΡΑΧΩΒΑ. Έξι ημέρες στην Πελοπόννησο και τη Στερεά Ελλάδα με Αράχωβα, Δελφούς, Ναύπακτο και Αθήνα.\n\nΑναχωρήσεις: 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08\n\nΠτήσεις: CY 310 Λάρνακα – Αθήνα 08:05 - 10:00 · CY 313 Αθήνα – Λάρνακα 20:55 - 22:40\n\nΔιανυκτερεύσεις: Αράχωβα (2), Ναύπακτος (2), Αθήνα (1).'
+      },
+      gallery: ['/images/greek-packages-summer/arachova/arachova-korinthou-cover.webp']
+    }
+  },
+  {
+    id: 76,
+    title: 'ΠΑΝΟΡΑΜΑ ΡΟΔΟΥ – ΣΥΜΗ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 959,
+    duration: '8 days / 7 nights',
+    description: 'Οκτώ ημέρες στη Ρόδο με κρουαζιέρα στη Σύμη (Πανορμίτης) και εκδρομή στη Λίνδο, Επτά Πηγές και Κοιλάδα Πεταλούδων. Διανυκτερεύσεις Ρόδος (7). Αναχωρήσεις 10/07, 17/07, 24/07, 31/07.',
+    longDescription: 'Οργανωμένο πακέτο με 7 νύχτες σε ξενοδοχείο 4* με πρωινό στη Ρόδο. Πτήσεις Aegean LCA–Rhodes–LCA. Περιλαμβάνεται κρουαζιέρα Σύμη (Προσκύνημα Πανορμίτη), εκδρομή Λίνδος–7 Πηγές–Πεταλούδες, μεταφορές και ξεναγός.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '10/07, 17/07, 24/07, 31/07',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Rhodes, Symi, Lindos, Butterfly Valley',
+      monthAvailability: 'July',
+      roomType: 'Standard',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Aegean Airlines',
+      includedLuggage: '1 αποσκευή 20 κιλών και 1 χειραποσκευή 8 κιλών',
+      coverImage: '/images/greek-packages-summer/rhodes/rhodes-package-cover.webp',
+      thumbnailImage: '/images/greek-packages-summer/rhodes/rhodes-pacakge-thumb.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Rhodes (RHO)', flight: 'A3 496', time: '06:40 → 07:40', luggage: '1 αποσκευή 20 kg + χειραποσκευή 8 kg' },
+        { direction: 'Return', date: '—', route: 'Rhodes (RHO) → Larnaca (LCA)', flight: 'A3 497', time: '13:00 → 14:00', luggage: '1 αποσκευή 20 kg + χειραποσκευή 8 kg' }
+      ],
+      hotels: [
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/rhodes/rhodes-package-hotel.webp', location: '4* Hotel - Rhodes', boardBasis: 'Πρωινό', prices: { double: 959, single: 1299, child1: 689 }, packagePrice: 1918, departureDate: '10/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/rhodes/rhodes-package-hotel.webp', location: '4* Hotel - Rhodes', boardBasis: 'Πρωινό', prices: { double: 959, single: 1299, child1: 689 }, packagePrice: 1918, departureDate: '17/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/rhodes/rhodes-package-hotel.webp', location: '4* Hotel - Rhodes', boardBasis: 'Πρωινό', prices: { double: 959, single: 1299, child1: 689 }, packagePrice: 1918, departureDate: '24/07', nights: 7 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/rhodes/rhodes-package-hotel.webp', location: '4* Hotel - Rhodes', boardBasis: 'Πρωινό', prices: { double: 959, single: 1299, child1: 689 }, packagePrice: 1918, departureDate: '31/07', nights: 7 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Ρόδος – Λάρνακα με πτήσεις Aegean Airlines', 'Μεταφορές από και προς το αεροδρόμιο στην άφιξη και αναχώρηση', 'Επτά διανυκτερεύσεις σε ξενοδοχείο 4* με πρωινό στη Ρόδο', 'Μεταφορές από και προς το ξενοδοχείο στις δύο εκδρομές', 'Συνοδός για την κρουαζιέρα στη Σύμη', 'Ξεναγός για την εκδρομή στη Λίνδο', 'Εισιτήριο πλοίου για τη Σύμη', 'Μια αποσκευή 20 κιλών και μια χειραποσκευή 8 κιλών', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Δικαιώματα εισόδων/μουσείων προαιρετικά', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο', 'Αχθοφορικά και φιλοδωρήματα'],
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      itinerary: [
+        { day: '1η Μέρα', title: 'Λάρνακα - Ρόδος', description: 'Συγκέντρωση στο αεροδρόμιο της Λάρνακας και αναχώρηση με πτήση για τη Ρόδο. Άφιξη, υποδοχή και μεταφορά στο ξενοδοχείο. Τακτοποίηση (αν είναι διαθέσιμα τα δωμάτια). Ελεύθερος χρόνος για πρώτη γνωριμία με την πόλη: Μεσαιωνική Πόλη, Οδός των Ιπποτών, Παλάτι του Μεγάλου Μαγίστρου, λιμάνι Μανδρακιού. Βραδινός περίπατος ή δείπνο στα φωτισμένα στενά. Διανυκτέρευση.' },
+        { day: '2η Μέρα', title: 'Ρόδος - Σύμη (Προσκύνημα στον Πανορμίτη)', description: 'Πρόγευμα και αναχώρηση για τη Σύμη (09:00 από το λιμάνι, ~1h 45min). Άφιξη στο Πανορμίτη και επίσκεψη στην Ιερά Μονή του Αρχαγγέλου Μιχαήλ. Στη συνέχεια περιήγηση στην πόλη της Σύμης (νεοκλασικά, σκάλες, λιμάνι), σφουγγαράδικα και ελεύθερος χρόνος για φαγητό (~3 ώρες). Επιστροφή με πλοίο ~15:45, άφιξη στη Ρόδο ~17:45. Διανυκτέρευση.' },
+        { day: '3η Μέρα', title: 'Ρόδος', description: 'Πρωινό και ημέρα ελεύθερη για ξεκούραση και ατομικές δραστηριότητες στο νησί των Ιπποτών. Διανυκτέρευση.' },
+        { day: '4η Μέρα', title: 'Λίνδος - 7 Πηγές - Πεταλούδες', description: 'Πρόγευμα και αναχώρηση ~08:00 για τη Λίνδο. Περίπατος στο χωριό, αγορές· προαιρετικά ανάβαση στην Ακρόπολη με γαϊδουράκι. Μετά από 2 ώρες αναχώρηση για τις Επτά Πηγές (φυσική ομορφιά, πεύκα, ξύλινες γέφυρες, ρυάκια). Στάση στην εκκλησία Αγίου Νεκταρίου (Κρυονέρι). Προαιρετικά γεύμα/καφέ σε ταβέρνα. Συνεχίζουμε για την Κοιλάδα των Πεταλούδων. Στάση σε οινοποιείο για δοκιμή ροδίτικων κρασιών. Επιστροφή στο ξενοδοχείο. Διανυκτέρευση.' },
+        { day: '5η, 6η & 7η Μέρα', title: 'Ρόδος (Μέρες Ελεύθερες)', description: 'Πρωινό και ημέρες ελεύθερες για ξεκούραση. Απολαύστε το ξενοδοχείο ή εξερευνήστε τη Ρόδο. Προαιρετικά: ημερήσια εκδρομή Χάλκη/Καστελλόριζο, χωριά ενδοχώρας, παραλίες (Καλλιθέα, Φαληράκι, Τσαμπίκα, Πρασονήσι), Ενυδρείο. Διανυκτέρευση.' },
+        { day: '8η Μέρα', title: 'Ρόδος - Λάρνακα', description: 'Πρωινό και λίγος ελεύθερος χρόνος για τελευταίες βόλτες. Μεταφορά στο αεροδρόμιο και πτήση επιστροφής για τη Λάρνακα.' }
+      ],
+      program: {
+        introduction: 'ΠΑΝΟΡΑΜΑ ΡΟΔΟΥ – ΣΥΜΗ. Οκτώ ημέρες στη Ρόδο με κρουαζιέρα Σύμη (Πανορμίτης) και εκδρομή Λίνδος–Επτά Πηγές–Πεταλούδες.\n\nΑναχωρήσεις: 10/07, 17/07, 24/07, 31/07\n\nΠτήσεις: A3 496 Λάρνακα – Ρόδος 06:40 - 07:40 · A3 497 Ρόδος – Λάρνακα 13:00 - 14:00\n\nΔιανυκτερεύσεις: Ρόδος (7).'
+      },
+      gallery: ['/images/greek-packages-summer/rhodes/rhodes-package-cover.webp']
+    }
+  },
+  {
+    id: 77,
+    title: 'ΠΑΤΡΑ - ΖΑΚΥΝΘΟΣ - ΟΡΕΙΝΗ ΝΑΥΠΑΚΤΙΑ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 729,
+    duration: '6 days / 5 nights',
+    description: 'Έξι ημέρες: Πάτρα, Ορεινή Ναυπακτία, Ζάκυνθος, Καλάβρυτα, Μέγα Σπήλαιο, Αγία Λαύρα, Αθήνα, Αίγινα, Αθηναϊκή Ριβιέρα. Διανυκτερεύσεις Πάτρα (3), Αθήνα (2). Αναχωρήσεις 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08.',
+    longDescription: 'Οργανωμένο ταξίδι με τοπικό αρχηγό. Galaxy Hotel Πάτρα & Titania Hotel Αθήνα. Πτήσεις Cyprus Airways LCA–Athens–LCA. Περιλαμβάνεται ημερήσια Ζάκυνθος, Ορεινή Ναυπακτία, Καλάβρυτα, Αίγινα, μεταφορές και εκδρομές.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Patra, Zakynthos, Mountain Nafpaktia, Athens, Aegina',
+      monthAvailability: 'July – August',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Cyprus Airways',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-cover.webp',
+      thumbnailImage: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-thumbnail.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca International (LCA) → Athens Int. E. Venizelos (ATH)', flight: 'CY 310', time: '08:05 – 10:00', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Athens Int. E. Venizelos (ATH) → Larnaca International (LCA)', flight: 'CY 313', time: '20:55 – 22:40', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 729, single: 919, child1: 559 }, packagePrice: 1458, departureDate: '11/07', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 729, single: 919, child1: 559 }, packagePrice: 1458, departureDate: '18/07', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 729, single: 919, child1: 559 }, packagePrice: 1458, departureDate: '25/07', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 749, single: 929, child1: 579 }, packagePrice: 1498, departureDate: '01/08', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 749, single: 929, child1: 579 }, packagePrice: 1498, departureDate: '22/08', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 779, single: 949, child1: 599 }, packagePrice: 1558, departureDate: '08/08', nights: 5 },
+        { name: '', stars: 4, roomType: 'Δίκλινο', image: '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp', location: 'Galaxy 3* - Patra & Titania 4* - Athens', boardBasis: 'Πρωινό', prices: { double: 799, single: 979, child1: 629 }, packagePrice: 1598, departureDate: '15/08', nights: 5 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα - Αθήνα - Λάρνακα με πτήσεις της Cyprus Airways', 'Φόροι αεροδρομίων', 'Τρεις διανυκτερεύσεις στο ξενοδοχείο Galaxy 3* με πρωινό στην Πάτρα', 'Δύο διανυκτερεύσεις σε ξενοδοχείο Titania 4* με πρωινό στην Αθήνα', 'Ακτοπλοϊκό εισιτήριο για Ζάκυνθο', 'Ακτοπλοϊκό εισιτήριο για Αίγινα', 'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα', 'Τοπικός Αρχηγός / Συνοδός', 'Μια αποσκευή 23 κιλών και μια χειραποσκευή 10 κιλών', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Δικαιώματα εισόδων/μουσείων προαιρετικά', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'],
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση των ταξιδιωτικών πακέτων δίνετε προκαταβολή 30% της αξίας των πακέτων και η εξόφληση τους γίνεται 21 μέρες περίπου πριν την αναχώρηση.', 'Ακύρωση συμμετοχής μέχρι 45 μέρες πριν την αναχώρηση, παρακράτηση ποσού 50.00 Ευρώ για λειτουργικά έξοδα.', 'Ακύρωση συμμετοχής μεταξύ 44 και 31 μέρες πριν την αναχώρηση, παρακράτηση 30% της αξίας του ταξιδιού.', 'Ακύρωση συμμετοχής μεταξύ 30 και 21 μέρες πριν την αναχώρηση, παρακράτηση 50% της αξίας του ταξιδιού.', 'Ακύρωση συμμετοχής 20 μέρες πριν την αναχώρηση, παρακράτηση όλου του ποσού.', 'Για τα μέσα ολικής ναύλωσης (charter), κρουαζιέρες, σκι, εκθέσεις, συνέδρια και παρεμφερείς διεθνείς εκδηλώσεις, τα ακυρωτικά φθάνουν μέχρι 100% της αξίας τους ασχέτως της ημερομηνίας γνωστοποίησης της ακύρωσης.'],
+      itinerary: [
+        { day: '1η Μέρα', title: 'Λάρνακα - Αθήνα - Πάτρα', description: 'Συγκέντρωση στο αεροδρόμιο Λάρνακας και αναχώρηση για Αθήνα με πτήση της Cyprus Airways. Άφιξη, παραλαβή από τον αρχηγό και αναχώρηση για την Πάτρα. Άφιξη στο ξενοδοχείο και τακτοποίηση. Περιήγηση: Πλατεία Γεωργίου Α΄, Ρωμαϊκό Ωδείο, Ναός Αγίου Ανδρέα, Κάστρο Πάτρας, παλιά πόλη. Διανυκτέρευση.' },
+        { day: '2η Μέρα', title: 'Πάτρα - Ναύπακτος - Ορεινή Ναυπακτία', description: 'Πρωινό και αναχώρηση για Ναύπακτο (ενετικό λιμάνι, κάστρο). Χρόνος ελεύθερος. Ανεβασμός στην Ορεινή Ναυπακτία: Άνω Χώρα, Ελατού, Τερψιθέα (πέτρινη αρχιτεκτονική, δάση ελάτης). Προαιρετικό γεύμα σε ταβέρνα. Αργά το απόγευμα επιστροφή στην Πάτρα. Διανυκτέρευση.' },
+        { day: '3η Μέρα', title: 'Πάτρα – Κυλλήνη - Ζάκυνθος', description: 'Μετά το πρωινό αναχώρηση για Κυλλήνη και επιβίβαση στο φέρυ για τη Ζάκυνθο. Θαλάσσια διαδρομή. Περίπατος στη Χώρα, εκκλησία Αγίου Διονυσίου. Επιστροφή με φέρυ στην Κυλλήνη και μεταφορά στο ξενοδοχείο στην Πάτρα. Διανυκτέρευση.' },
+        { day: '4η Μέρα', title: 'Πάτρα - Καλάβρυτα – Μέγα Σπήλαιο – Αγία Λαύρα - Αθήνα', description: 'Πρωινό και αναχώρηση για Καλάβρυτα (χαράδρα Βουραϊκού). Επίσκεψη στο Μέγα Σπήλαιο και Τόπο Θυσίας Καλαβρύτων. Προαιρετικό γεύμα. Καθοδόν προς Αθήνα στάση στη Μονή Αγίας Λαύρας. Άφιξη στο ξενοδοχείο στην Αθήνα. Διανυκτέρευση.' },
+        { day: '5η Μέρα', title: 'Αθήνα – Αίγινα', description: 'Πρόγευμα και αναχώρηση για Πειραιά· φέρυ για Αίγινα. Επίσκεψη στη Μονή Αγίου Νεκταρίου και στη Μονή Αγίας Αναστασίας (Λιβάδι). Επιστροφή στην Αθήνα αργά το απόγευμα. Διανυκτέρευση.' },
+        { day: '6η Μέρα', title: 'Αθήνα – Αθηναϊκή Ριβιέρα - Λάρνακα', description: 'Πρωινό και χρόνος ελεύθερος για βόλτα και ψώνια. Νωρίς το απόγευμα αναχώρηση για την Αθηναϊκή Ριβιέρα (Σαρωνικός). Περίπατος στις μαρίνες ή γεύμα δίπλα στη θάλασσα. Μεταφορά στο αεροδρόμιο και πτήση επιστροφής για Λάρνακα.' }
+      ],
+      program: {
+        introduction: 'ΠΑΤΡΑ - ΖΑΚΥΝΘΟΣ - ΟΡΕΙΝΗ ΝΑΥΠΑΚΤΙΑ. Έξι ημέρες στην Πελοπόννησο και Αθήνα με Πάτρα, Ναύπακτο, Ζάκυνθο, Καλάβρυτα και Αίγινα.\n\nΑναχωρήσεις: 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08\n\nΔιανυκτερεύσεις: Πάτρα (3), Αθήνα (2).'
+      },
+      gallery: ['/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-cover.webp', '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp']
     }
   }
 ]
