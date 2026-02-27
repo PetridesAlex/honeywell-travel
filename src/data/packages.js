@@ -6706,7 +6706,7 @@ export const travelPackages = [
     longDescription: 'Experience the aristocratic capital of Romania, Bucharest, known as the "Paris of the Balkans", and explore the legendary castles of Transylvania. Visit Bran Castle (Dracula\'s Castle), Peles Palace, and the medieval city of Brasov. This 5-day journey combines history, culture, and stunning mountain landscapes.',
     image: '🇷🇴',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '03/08, 10/08, 17/08',
       departureFrom: 'Larnaca',
@@ -7665,7 +7665,7 @@ export const travelPackages = [
     longDescription: 'Experience the fairy-tale capital of the Czech Republic, Prague, built on the banks of the Vltava River. Explore the Castle District, Old Town, and take a full-day excursion to Karlovy Vary, one of Europe\'s most famous spa towns. This 5-day journey combines history, culture, and European elegance.',
     image: '🇨🇿',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '07/07, 14/07, 21/07, 04/08, 11/08, 18/08',
       departureFrom: 'Larnaca',
@@ -7838,7 +7838,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul, the city that bridges Europe and Asia. Explore the historic Old City, visit Hagia Sophia and Topkapi Palace, take a Bosphorus cruise, and discover the Princes\' Islands. This 5-day journey combines Byzantine and Ottoman history with modern Turkish culture.',
     image: '🇹🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '13/07, 20/07, 27/07, 03/08, 10/08, 17/08, 24/08, 07/09, 28/09, 12/10',
       departureFrom: 'Larnaca',
@@ -8078,7 +8078,7 @@ export const travelPackages = [
     longDescription: 'Experience the heart of Poland with visits to Warsaw, the dynamic capital, and Łódź, a fairy-tale city that was once a major textile center. Explore the industrial heritage, modern urban aesthetics, and vibrant cultural life of these two fascinating Polish cities.',
     image: '🇵🇱',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '05/07, 12/07, 19/07, 26/07, 02/08, 09/08, 16/08, 23/08, 30/08',
       departureFrom: 'Larnaca',
@@ -8413,7 +8413,7 @@ export const travelPackages = [
     longDescription: 'Experience Barcelona, one of Spain\'s most cosmopolitan and charming cities. Explore its unique architecture, rich artistic heritage, historic monuments, and vibrant life. Visit the famous PortAventura theme park, one of Europe\'s largest and most impressive theme parks, ideal for all ages.',
     image: '🇪🇸',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '01/07, 08/07, 15/07, 22/07, 29/07, 05/08, 12/08, 19/08, 26/08',
       departureFrom: 'Larnaca',
@@ -8777,7 +8777,7 @@ export const travelPackages = [
     longDescription: 'Experience why the French capital has inspired artists and writers throughout the centuries. The iconic landmarks – Eiffel Tower, Notre-Dame, Louvre, Arc de Triomphe – combine with the modern side of the city. Enjoy a Seine cruise, visit Montmartre, and spend a magical day at Disneyland Paris.',
     image: '🇫🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '04/07, 11/07, 18/07, 25/07, 01/08, 08/08, 15/08, 22/08, 29/08',
       departureFrom: 'Larnaca',
@@ -9000,7 +9000,7 @@ export const travelPackages = [
     longDescription: 'Experience the heart of Classic Poland with visits to Łódź, the industrial city with rich heritage; Krakow, the former capital and one of Central Europe\'s most atmospheric cities; Zakopane, the "winter capital" at the foot of the Tatra Mountains; and Warsaw, the dynamic capital. This 7-day journey combines history, culture, and natural beauty.',
     image: '🇵🇱',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08',
       departureFrom: 'Larnaca',
@@ -9425,7 +9425,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul and explore the Asia Minor coast. Visit historic sites including Troy, Pergamon, Ephesus, and the Princes\' Islands. This 8-day journey combines Byzantine and Ottoman history with the natural beauty of the Turkish coast.',
     image: '🇹🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/07, 17/07, 24/07, 31/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -9540,7 +9540,7 @@ export const travelPackages = [
     longDescription: 'Experience the charm of the three Baltic capitals: Riga, the elegant capital of Latvia; Tallinn, the "queen" of the Baltic; and Vilnius, the capital of Lithuania. Explore medieval old towns, baroque palaces, and unique cultural heritage across these three fascinating countries.',
     image: '🇱🇻',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08',
       departureFrom: 'Larnaca',
@@ -9643,7 +9643,7 @@ export const travelPackages = [
     longDescription: 'Experience the magic of Istanbul and explore the unique landscapes of Cappadocia. Visit Prusa, the first Ottoman capital, explore underground cities, rock-cut churches, and the famous fairy chimneys. This 8-day journey combines Byzantine and Ottoman history with the natural wonders of Cappadocia.',
     image: '🇹🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '15/07, 22/07, 29/07, 05/08, 12/08, 26/08',
       departureFrom: 'Larnaca',
@@ -9870,7 +9870,7 @@ export const travelPackages = [
     longDescription: 'Ένα ταξίδι γεμάτο μαγεία, δράση και γέλιο για όλη την οικογένεια: Παρίσι, Disneyland® Paris, το ολοκαίνουργιο World of Frozen και το θεματικό Πάρκο Asterix – όλα σε ένα οργανωμένο πακέτο από Λάρνακα με απευθείας πτήση.',
     image: '🇫🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '02/07, 09/07, 16/07, 23/07, 30/07, 06/08, 13/08, 20/08, 27/08',
       departureFrom: 'Larnaca',
@@ -10293,7 +10293,7 @@ export const travelPackages = [
     longDescription: 'Στα μονοπάτια του Πόντου & της Πόλης: μια ολοκληρωμένη περιήγηση στις ιστορικές περιοχές του Πόντου (Σαγγάρια, Σαμψούντα, Κερασούντα, Τραπεζούντα) και την Κωνσταντινούπολη. Εξερευνήστε βυζαντινά μνημεία, παραθαλάσσια τοπία και την πλούσια πολιτιστική κληρονομιά της περιοχής.',
     image: '🇹🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '15/07, 22/07, 29/07, 05/08, 12/08, 26/08',
       departureFrom: 'Larnaca',
@@ -10417,7 +10417,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στην Ταϊλάνδη: από την πολύχρωμη Μπανγκόκ και τις πλωτές αγορές, στην ιστορική Αγιουτάγια, τη ζούγκλα του Εθνικού Πάρκου Κάο Γιάι και την παραθαλάσσια Πατάγια. Εξερευνήστε βουδιστικούς ναούς, παραδοσιακές αγορές, άγρια φύση και εξωτικές παραλίες.',
     image: '🇹🇭',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -10705,7 +10705,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στην Ταϊλάνδη: από την πολύχρωμη Μπανγκόκ και τις πλωτές αγορές, στην ιστορική Αγιουτάγια, τη ζούγκλα του Εθνικού Πάρκου Κάο Γιάι και την παραθαλάσσια Πατάγια. Εξερευνήστε βουδιστικούς ναούς, παραδοσιακές αγορές, άγρια φύση και εξωτικές παραλίες.',
     image: '🇹🇭',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -10993,7 +10993,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στο Πουκέτ και την Μπανγκόκ: τροπικές παραλίες, ζούγκλα, κρουαζιέρα στο διάσημο νησί James Bond, βουδιστικοί ναοί, πλωτές αγορές και εξωτικές εκδρομές. Απολαύστε 5 νύχτες στο Πουκέτ και 2 νύχτες στην Μπανγκόκ.',
     image: '🇹🇭',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '20/07, 10/08, 17/08, 14/09, 19/10',
       departureFrom: 'Larnaca',
@@ -11266,7 +11266,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στο Πουκέτ και την Μπανγκόκ: τροπικές παραλίες, ζούγκλα, κρουαζιέρα στο διάσημο νησί James Bond, βουδιστικοί ναοί, πλωτές αγορές και εξωτικές εκδρομές. Απολαύστε 5 νύχτες στο Πουκέτ και 2 νύχτες στην Μπανγκόκ.',
     image: '🇹🇭',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '20/07, 10/08, 17/08, 14/09, 19/10',
       departureFrom: 'Larnaca',
@@ -11539,7 +11539,7 @@ export const travelPackages = [
     longDescription: 'Μια μαγευτική περιήγηση στο Μπαλί, το «Νησί των Θεών». Απολαύστε 4 νύχτες στο Μπαλί και 3 νύχτες στο Ουμπούντ, με 5★ διαμονή. Εξερευνήστε αρχαίους ναούς, αναβαθμίδες ρυζιού, παραδοσιακές τέχνες και το πνευματικό κέντρο της Ινδονησίας.',
     image: '🇮🇩',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '09/06, 21/07, 18/08, 08/09',
       departureFrom: 'Larnaca',
@@ -11770,7 +11770,7 @@ export const travelPackages = [
     longDescription: 'Μια μαγευτική περιήγηση στο Μπαλί, το «Νησί των Θεών». Απολαύστε 4 νύχτες στο Μπαλί και 3 νύχτες στο Ουμπούντ, με 5★ διαμονή. Εξερευνήστε αρχαίους ναούς, αναβαθμίδες ρυζιού, παραδοσιακές τέχνες και το πνευματικό κέντρο της Ινδονησίας.',
     image: '🇮🇩',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '09/06, 21/07, 18/08, 08/09',
       departureFrom: 'Larnaca',
@@ -12001,7 +12001,7 @@ export const travelPackages = [
     longDescription: 'Ζήστε την απόλυτη αραβική εμπειρία σε ένα ταξίδι 5 ημερών με βάση το Ντουμπάι. Ανακαλύψτε τα σύγχρονα θαύματα της πόλης, περιηγηθείτε στην παραδοσιακή πλευρά της, απολαύστε σαφάρι στην έρημο με δείπνο σε βεδουίνικες σκηνές και επισκεφθείτε την κοσμοπολίτικη πρωτεύουσα των Η.Α.Ε., το Άμπου Ντάμπι, με το εμβληματικό Τζαμί Sheikh Zayed και το μουσείο Louvre Abu Dhabi.',
     image: '🇦🇪',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '09/09, 16/09, 23/09, 30/09, 07/10, 14/10, 21/10',
       departureFrom: 'Larnaca',
@@ -12188,7 +12188,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 8 ημερών στο αυτοκρατορικό Μαρόκο με Ταγγέρη. Από την κοσμοπολίτικη Καζαμπλάνκα και την πρωτεύουσα Ραμπάτ, στην «μπλε πόλη» Σεφσαουέν, την πνευματική Φεζ και την ατμοσφαιρική Μαρακές. Περιλαμβάνονται πτήσεις με Aegean μέσω Αθήνας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇲🇦',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '14/05, 15/09, 06/10, 01/10',
       departureFrom: 'Larnaca',
@@ -12349,7 +12349,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 8 ημερών στο αυτοκρατορικό Μαρόκο με έρημο. Από την κοσμοπολίτικη Καζαμπλάνκα και την πρωτεύουσα Ραμπάτ, στην πνευματική Φεζ, την έρημο Ερφούντ, την Ουαρζαζάτ και την ατμοσφαιρική Μαρακές. Περιλαμβάνονται πτήσεις με Aegean μέσω Αθήνας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇲🇦',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '14/05, 15/09, 06/10, 01/10',
       departureFrom: 'Larnaca',
@@ -12508,7 +12508,7 @@ export const travelPackages = [
     longDescription: 'Ένα μοναδικό ταξίδι 9 ημερών στο Χρυσό Τρίγωνο της Ινδίας. Από το Δελχί στην Άγκρα για το θρυλικό Ταζ Μαχάλ, και στη «Ροζ Πόλη» Τζαϊπούρ με τα παλάτια των Μαχαραγιάδων. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 5★ ξενοδοχεία.',
     image: '🇮🇳',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '17/09, 18/10',
       departureFrom: 'Larnaca',
@@ -12639,7 +12639,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 11 ημερών στην Ταϊλάνδη. Από τη πολύχρωμη Μπανγκόκ με τους ναούς και τις αγορές της, στην ιστορική Αγιουτάγια, το Εθνικό Πάρκο Κάο Γιάϊ με τη ζούγκλα, και την παραθαλάσσια Πατάγια. Περιλαμβάνονται πτήσεις με Gulf Air μέσω Μπαχρέιν, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇹🇭',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '24/07, 07/08, 14/08, 21/08',
       departureFrom: 'Larnaca',
@@ -12798,7 +12798,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Ιαπωνία. Από την Οσάκα και το Κιότο με τους ναούς και τους κήπους, στο Ματσουμότο με το ιστορικό κάστρο, και το Τόκιο με τη σύγχρονη κουλτούρα. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα, εμπειρία Σούμο και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇯🇵',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '13/05, 15/07, 12/08, 16/09, 14/10',
       departureFrom: 'Larnaca',
@@ -12981,7 +12981,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 9 ημερών στην Ισλανδία, τη «Γη της Φωτιάς και του Πάγου». Από το Ρέικιαβικ και τον Χρυσό Κύκλο, στη Νότια Ακτή με τους καταρράκτες, τη Χερσόνησο Σνάιφελσνες και τη διάσημη Γαλάζια Λίμνη. Περιλαμβάνονται πτήσεις με LOT Airlines μέσω Βαρσοβίας, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 3★ & 4★ ξενοδοχεία.',
     image: '🇮🇸',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '04/07, 01/08',
       departureFrom: 'Larnaca',
@@ -13109,7 +13109,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 9 ημερών στη Νέα Υόρκη, το «Μεγάλο Μήλο». Από το Μανχάταν και τη Μπρόντγουεϊ, στο Central Park, τη Γέφυρα του Μπρούκλιν, το One World Trade Center και τη Hudson Yards. Περιλαμβάνονται πτήσεις με Emirates μέσω Αθήνας, ξεναγήσεις, κρουαζιέρα, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε πολυτελές 4★ ξενοδοχείο στην Times Square.',
     image: '🇺🇸',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '03/07, 02/08, 13/08, 21/08, 10/10, 23/10',
       departureFrom: 'Larnaca',
@@ -13309,7 +13309,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Αργεντινή και τη Βραζιλία. Από το Μπουένος Άιρες με το σόου Τάνγκο και τα ράντζο, στους Καταρράκτες Ιγκουασού (ένα από τα Επτά Θαύματα της Φύσης), και το Ρίο Ντε Τζανέιρο με το Άγαλμα του Χριστού Λυτρωτή και το Sugarloaf Mountain. Περιλαμβάνονται πτήσεις με Lufthansa μέσω Φρανκφούρτης, εσωτερικές πτήσεις, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇦🇷🇧🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '21/07, 06/08',
       departureFrom: 'Larnaca',
@@ -13453,7 +13453,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στη Νότια Αφρική. Από το Γιοχάνεσμπουργκ και το Σαν Σίτυ, στο Εθνικό Πάρκο Pilansberg με σαφάρι για παρατήρηση ελεφάντων, λιονταριών και ρινόκερων, και το Κέιπ Τάουν με το Table Mountain, Cape Point και τα Winelands. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, εσωτερική πτήση, σαφάρι, ξεναγήσεις, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ & 5★ ξενοδοχεία.',
     image: '🇿🇦',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/08, 12/10',
       departureFrom: 'Larnaca',
@@ -13587,7 +13587,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 12 ημερών στην Αυστραλία. Από τη Μελβούρνη με το Great Ocean Road, τους Δώδεκα Απόστολους και το Phillip Island, στο Σίδνεϋ με το Opera House, Harbour Bridge, Blue Mountains και κρουαζιέρα παρακολούθησης φαλαινών. Περιλαμβάνονται πτήσεις με Emirates μέσω Ντουμπάι, εσωτερική πτήση, ξεναγήσεις, κρουαζιέρες, είσοδοι σε επιλεγμένα αξιοθέατα και διαμονή σε επιλεγμένα 4★ ξενοδοχεία.',
     image: '🇦🇺',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '17/10, 05/11',
       departureFrom: 'Larnaca',
@@ -13721,7 +13721,7 @@ export const travelPackages = [
     longDescription: 'Μια ολοκληρωμένη περιήγηση στις Ανατολικές ΗΠΑ και τον Καναδά: από τη Νέα Υόρκη και το Μανχάταν, στους Καταρράκτες Νιαγάρα, το Τορόντο, την Ουάσιγκτον DC, τη Βαλτιμόρη και τη Φιλαδέλφεια. Εξερευνήστε ουρανοξύστες, ιστορικά μνημεία, φυσικά θαύματα και πολυπολιτισμικές πόλεις.',
     image: '🇺🇸',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '31/07, 08/08, 21/08, 25/09, 10/10',
       departureFrom: 'Larnaca',
@@ -14624,7 +14624,7 @@ export const travelPackages = [
     longDescription: 'Ανακαλύψτε τη Γεωργία σε 5 ημέρες: Τιφλίδα, Μτσχέτα, Γκόρι, Ουπλιστσικέ, Μποντμπέ, Σιγκνάγκι και Καχέτι. Ένα πρόγραμμα που συνδυάζει ιστορία, πολιτισμό, γαστρονομία και αυθεντική φιλοξενία.',
     image: '🇬🇪',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '04/08, 11/08, 18/08',
       departureFrom: 'Larnaca',
@@ -14902,7 +14902,7 @@ export const travelPackages = [
     longDescription: 'Ένα ολοκληρωμένο ταξίδι 13 ημερών στο Περού. Από τη Λίμα και την Ιερή Κοιλάδα των Ίνκας, στο Μάτσου Πίτσου, το Κούσκο και τη Λίμνη Πιουράι. Περιλαμβάνονται πτήσεις μέσω Αθήνας και Μαδρίτης, ξεναγήσεις, είσοδοι και διαμονή σε 4★ ξενοδοχεία.',
     image: '🇵🇪',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '22/07, 11/09, 07/08',
       departureFrom: 'Larnaca',

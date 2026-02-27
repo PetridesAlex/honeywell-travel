@@ -1,4 +1,5 @@
 .package-card {
+  position: relative;
   background: white;
   border-radius: 15px;
   overflow: hidden;
@@ -9,6 +10,30 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.package-type-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.package-type-badge--group {
+  background: #0d5c2e;
+  color: #fff;
+}
+
+.package-type-badge--individual {
+  background: #C41230;
+  color: #fff;
 }
 
 .package-card:hover {

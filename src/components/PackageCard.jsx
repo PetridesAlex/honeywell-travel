@@ -23,6 +23,7 @@ function PackageCard({ package: pkg }) {
 
   const displayPrice = getCheapestPrice()
   const imageUrl = pkg.details?.thumbnailImage || pkg.details?.coverImage || pkg.details?.gallery?.[0]
+  const isGroup = (pkg.packageType || 'individual') === 'group'
   const resetScrollTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     if (document.documentElement) document.documentElement.scrollTop = 0
@@ -40,6 +41,9 @@ function PackageCard({ package: pkg }) {
         setTimeout(resetScrollTop, 60)
       }}
     >
+      <span className={`package-type-badge package-type-badge--${isGroup ? 'group' : 'individual'}`} aria-hidden="true">
+        {isGroup ? 'Group' : 'Individual'}
+      </span>
       <div
         className={`package-image${imageUrl ? ' package-image-bg' : ''}`}
         style={imageUrl ? { backgroundImage: `url(${imageUrl})` } : undefined}
