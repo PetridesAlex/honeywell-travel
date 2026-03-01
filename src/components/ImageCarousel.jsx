@@ -37,7 +37,7 @@ function ImageCarousel() {
     }
   ]
 
-  // Rotate background image every 5 seconds (same as before)
+  // Rotate slides every 5 seconds on all devices
   useEffect(() => {
     if (slides.length <= 1) return
     const interval = setInterval(() => {
@@ -47,25 +47,18 @@ function ImageCarousel() {
   }, [slides.length])
 
   const current = slides[currentIndex]
-  const bgImage = current?.image
+  const currentImage = current?.image
     ? `url(${current.image}), linear-gradient(135deg, #E31E24 0%, #C41230 100%)`
     : 'linear-gradient(135deg, #E31E24 0%, #C41230 100%)'
 
   return (
     <section className="hero-section" aria-label="Hero">
-      {/* Single rotating background – touch passes through for smooth scroll */}
       <div
-        className="hero-bg"
-        style={{
-          backgroundImage: bgImage,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+        className="hero-bg-single"
         aria-hidden="true"
+        style={{ backgroundImage: currentImage }}
       />
       <div className="hero-overlay" aria-hidden="true" />
-      {/* Content: pointer-events none so scroll works; button has auto so it stays clickable */}
       <div className="hero-content">
         <h2 className="hero-title">{current?.title}</h2>
         <p className="hero-subtitle">{current?.subtitle}</p>

@@ -727,10 +727,10 @@
 .full-tabs {
   display: flex;
   margin: 1.5rem 0 1.75rem;
-  border-radius: 999px;
-  padding: 0.3rem;
-  background: #e5e7eb;
-  gap: 0.25rem;
+  border-radius: 12px;
+  padding: 0.35rem;
+  background: #1e293b;
+  gap: 0.35rem;
   width: fit-content;
   max-width: 100%;
   overflow-x: auto;
@@ -738,6 +738,8 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
   scroll-behavior: smooth;
+  box-shadow: 0 4px 14px rgba(30, 41, 59, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .full-tabs::-webkit-scrollbar {
@@ -747,11 +749,11 @@
 .full-tab {
   border: none;
   background: transparent;
-  padding: 0.55rem 1.5rem;
-  border-radius: 999px;
+  padding: 0.65rem 1.6rem;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -761,17 +763,19 @@
 }
 
 .full-tab:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
 .full-tab.active {
-  background: white;
+  background: #ffffff;
   color: #C41230;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .full-tab.active:hover {
-  background: white;
+  background: #ffffff;
+  color: #C41230;
 }
 
 /* Price tab */
