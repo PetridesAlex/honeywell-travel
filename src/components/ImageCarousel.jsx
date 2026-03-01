@@ -6,7 +6,7 @@ function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const navigate = useNavigate()
 
-  const images = [
+  const slides = [
     {
       id: 1,
       image: '/images/destinations/northern-lights.webp',
@@ -37,95 +37,48 @@ function ImageCarousel() {
     }
   ]
 
-  // Auto-rotate carousel every 2.5 seconds
+  // Rotate background image every 5 seconds (same as before)
   useEffect(() => {
-    if (images.length <= 1) return
-    
+    if (slides.length <= 1) return
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+      setCurrentIndex((prev) => (prev + 1) % slides.length)
     }, 5000)
-
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [slides.length])
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index)
-  }
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+  const current = slides[currentIndex]
+  const bgImage = current?.image
+    ? `url(${current.image}), linear-gradient(135deg, #E31E24 0%, #C41230 100%)`
+    : 'linear-gradient(135deg, #E31E24 0%, #C41230 100%)'
 
   return (
-    <section className="image-carousel">
-      <div className="carousel-container">
-        <div className="carousel-wrapper">
-          {images.map((item, index) => (
-            <div
-              key={item.id}
-              className={`carousel-slide ${index === currentIndex ? 'active' : ''} ${
-                index < currentIndex ? 'prev' : index > currentIndex ? 'next' : ''
-              }`}
-            >
-              <div 
-                className="slide-image"
-                style={{
-                  backgroundImage: item.image ? `url(${item.image}), linear-gradient(135deg, #E31E24 0%, #C41230 100%)` : 'linear-gradient(135deg, #E31E24 0%, #C41230 100%)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}
-              >
-                {/* Subtle overlay for text readability */}
-                <div className="image-overlay"></div>
-              </div>
-              <div className="slide-content">
-                <h2 className="slide-title">{item.title}</h2>
-                <p className="slide-subtitle">{item.subtitle}</p>
-                <button 
-                  className="book-online-btn"
-                  onClick={() => navigate('/book-online')}
-                >
-                  Book Online
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Navigation Arrows - Only show if multiple images */}
-        {images.length > 1 && (
-          <>
-            <button className="carousel-arrow carousel-arrow-left" onClick={goToPrevious}>
-              ‹
-            </button>
-            <button className="carousel-arrow carousel-arrow-right" onClick={goToNext}>
-              ›
-            </button>
-          </>
-        )}
-
-        {/* Dots Indicator - Only show if multiple images */}
-        {images.length > 1 && (
-          <div className="carousel-dots">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentIndex ? 'active' : ''}`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
+    <section className="hero-section" aria-label="Hero">
+      {/* Single rotating background – touch passes through for smooth scroll */}
+      <div
+        className="hero-bg"
+        style={{
+          backgroundImage: bgImage,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+        aria-hidden="true"
+      />
+      <div className="hero-overlay" aria-hidden="true" />
+      {/* Content: pointer-events none so scroll works; button has auto so it stays clickable */}
+      <div className="hero-content">
+        <h2 className="hero-title">{current?.title}</h2>
+        <p className="hero-subtitle">{current?.subtitle}</p>
+        <button
+          type="button"
+          className="hero-btn"
+          onClick={() => navigate('/book-online')}
+        >
+          Book Online
+        </button>
       </div>
     </section>
   )
 }
 
 export default ImageCarousel
-

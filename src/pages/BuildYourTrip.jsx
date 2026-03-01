@@ -274,14 +274,15 @@ function BuildYourTrip() {
                   />
                 </div>
                 <div className="bytp-field">
-                  <label htmlFor="bytp-phone">Phone</label>
+                  <label htmlFor="bytp-phone">Phone <span className="bytp-required">*</span></label>
                   <input
                     id="bytp-phone"
                     type="tel"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="Optional"
+                    placeholder="e.g. +357 99 123456"
+                    required
                   />
                 </div>
                 <div className="bytp-field bytp-field-full">
@@ -291,7 +292,7 @@ function BuildYourTrip() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    rows={4}
+                    rows={3}
                     placeholder="Special requests, budget, or other preferences..."
                   />
                 </div>

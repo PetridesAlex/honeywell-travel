@@ -500,7 +500,7 @@ export const travelPackages = [
     longDescription: 'Experience the unique blend of history, culture, and modern life in Bucharest. From the grand architecture of the Palace of the Parliament to the charming Old Town, Bucharest offers an unforgettable European city break experience.',
     image: '🇷🇴',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '26/01, 02/02, 09/02, 16/02, 23/02, 02/03, 09/03, 16/03, 23/03',
       departureFrom: 'Paphos',
@@ -877,7 +877,7 @@ export const travelPackages = [
     longDescription: 'Zagreb, the capital of Croatia, is a picturesque city that combines rich historical heritage with a vibrant contemporary atmosphere. Located on the slopes of Mount Medvednica and on the banks of the Sava River, it is known for its beautiful architecture from the Austro-Hungarian era, its picturesque squares and lush gardens.',
     image: '🇭🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '29/01, 05/02, 12/02, 19/02, 26/02, 05/03, 12/03',
       departureFrom: 'Paphos',
@@ -1791,7 +1791,7 @@ export const travelPackages = [
     longDescription: 'Discover Vienna, the imperial capital of Austria, with its magnificent palaces, classical music heritage, and elegant coffeehouse culture. Explore the historic center, visit the Schönbrunn Palace, enjoy world-class museums, and experience the charm of this beautiful European capital.',
     image: '🇦🇹',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '29/01, 05/02, 12/02, 19/02, 26/02, 05/03, 12/03, 19/03',
       departureFrom: 'Paphos',
@@ -14177,7 +14177,7 @@ export const travelPackages = [
     longDescription: 'Το Ηράκλειο, πρωτεύουσα της Κρήτης και μεγαλύτερη πόλη του νησιού, είναι ένας ζωντανός προορισμός που συνδυάζει ιστορία, πολιτισμό και σύγχρονη καθημερινότητα. Χτισμένο στη βόρεια ακτή της Κρήτης, με θέα το γαλάζιο Κρητικό Πέλαγος, αποτελεί σημαντικό λιμάνι και κέντρο ζωής. Ζήστε το μαγικό Πάσχα με τις πασχαλινές τελετές, το Αναστάσιμο Δείπνο και το Πασχαλινό Γεύμα.',
     image: '🇬🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -14276,7 +14276,7 @@ export const travelPackages = [
     longDescription: 'Το Ρέθυμνο είναι από τις πιο γραφικές πόλεις της Κρήτης, με έντονο ενετικό χαρακτήρα, λιθόστρωτα σοκάκια, αρχοντικά, και τη μεγαλοπρεπή Φορτέτζα να δεσπόζει πάνω από την Παλιά Πόλη. Η παραλιακή ζώνη σφύζει από ζωή και αποτελεί ιδανικό σημείο για βόλτα και χαλάρωση. Ζήστε το Πάσχα με τις πασχαλινές τελετές, το Αναστάσιμο Δείπνο και το Πασχαλινό Γεύμα.',
     image: '🇬🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -14471,7 +14471,7 @@ export const travelPackages = [
     longDescription: 'Η Μάλτα, το νησί των Ιπποτών, είναι ένας μοναδικός προορισμός που συνδυάζει πλούσια ιστορία, αρχιτεκτονική και φυσική ομορφιά. Από τη Βαλέτα με τα επιβλητικά τείχη και τους Κήπους Upper Barrakka, στην Καλκάρα, το Χωριό του Πόπαϋ, τη Μόστα, τη Μεδίνα, το Τα Άλι και το Gozo. Μια εμπειρία 5 ημερών γεμάτη αξιοθέατα, πολιτισμό και διασκέδαση.',
     image: '🇲🇹',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '14/04',
       departureFrom: 'Larnaca',
@@ -14803,7 +14803,7 @@ export const travelPackages = [
     longDescription: 'Μια περιήγηση στην Πελοπόννησο που σας οδηγεί στα πιο όμορφα και ιστορικά σημεία της. Από την Πάτρα και τη Ναύπακτο, στα Τριζόνια, την Ορεινή Αρκαδία, τη Σπάρτη, τη Μονεμβασιά και το Ναύπλιο. Ανακαλύψτε την ιστορία, τη φύση και την παραδοσιακή αρχιτεκτονική της Πελοποννήσου.',
     image: '🇬🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',
@@ -15192,7 +15192,7 @@ export const travelPackages = [
     longDescription: 'Ένα σύντομο ταξίδι στην Αίγυπτο: Καΐρο με τις Πυραμίδες και τη Σφίγγα, τα μουσεία και την αγορά Χαν ελ-Χαλιλί, και την Αλεξάνδρεια με τη βιβλιοθήκη, το φρούριο Καϊτμπέ και τη Μεσόγειο. Διαμονή στο κεντρικό Safir Hotel Cairo (Dokki, Giza) με πρόγευμα.',
     image: '🇪🇬',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '19/03',
       departureFrom: 'Larnaca',
@@ -15282,7 +15282,7 @@ export const travelPackages = [
     longDescription: 'Η Λευκάδα, το πράσινο νησί του Ιονίου με τις κρυστάλλινες παραλίες και την παραδοσιακή ατμόσφαιρα, είναι ιδανικός προορισμός για το Πάσχα. Πασχαλινές τελετές, προαιρετική κρουαζιέρα στα Πριγκηπονήσια Λευκάδας, Αχέρωντας, Πάργα, Μεσολόγγι και Ναύπακτος σε ένα πλήρες πρόγραμμα 6 ημερών.',
     image: '🇬🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '10/04',
       departureFrom: 'Larnaca',

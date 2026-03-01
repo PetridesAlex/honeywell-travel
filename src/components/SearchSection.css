@@ -27,40 +27,43 @@
 .search-header {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 1.75rem 1.5rem;
-  border-radius: 18px;
-  background: linear-gradient(145deg, rgba(6, 21, 35, 0.7) 0%, rgba(6, 21, 35, 0.52) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem 2rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search-title {
-  font-family: var(--font-accent);
-  font-size: 3.25rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 1rem;
-  /* Enhanced text shadows for readability on bright backgrounds */
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8),
-               0 2px 10px rgba(0, 0, 0, 0.6),
-               0 1px 3px rgba(0, 0, 0, 0.9),
-               0 0 30px rgba(196, 18, 48, 0.5);
-  letter-spacing: 0.04em;
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.search-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #E31E24 0%, #C41230 100%);
+  border-radius: 2px;
+  margin: 1rem auto 0;
 }
 
 .search-subtitle {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.95);
-  max-width: 600px;
+  font-size: 1.15rem;
+  color: #64748b;
+  max-width: 520px;
   margin: 0 auto;
-  line-height: 1.75;
-  /* Enhanced text shadows for readability on bright backgrounds */
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8),
-               0 1px 6px rgba(0, 0, 0, 0.6),
-               0 1px 3px rgba(0, 0, 0, 0.9);
+  line-height: 1.7;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 /* Quick Filters */
@@ -552,8 +555,7 @@
   }
 
   .search-header {
-    padding: 1.2rem 1rem;
-    border-radius: 14px;
+    padding: 1.75rem 1rem;
   }
 
   .search-container {
@@ -564,14 +566,17 @@
   }
 
   .search-title {
-    font-size: 2.2rem;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5),
-                 0 1px 8px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+  }
+
+  .search-title::after {
+    width: 44px;
+    height: 3px;
+    margin-top: 0.75rem;
   }
 
   .search-subtitle {
-    font-size: 1.1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.05rem;
   }
 
   .search-form {
@@ -878,7 +883,12 @@
   }
 
   .search-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+  }
+
+  .search-title::after {
+    width: 36px;
+    height: 3px;
   }
 
   .form-icon {

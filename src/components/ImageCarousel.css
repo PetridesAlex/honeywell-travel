@@ -1,13 +1,15 @@
-.image-carousel {
+/* Hero section: single rotating background, minimal layers for smooth touch scroll */
+.hero-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
   height: 100vh;
   overflow: hidden;
   margin-bottom: 0;
+  touch-action: pan-y;
 }
 
-.image-carousel::after {
+.hero-section::after {
   content: '';
   position: absolute;
   left: 0;
@@ -24,69 +26,21 @@
   z-index: 2;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-slide {
+/* Background: touch passes through so page scroll works immediately on mobile */
+.hero-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: scale(1);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  z-index: 1;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 2;
-}
-
-.carousel-slide.prev {
-  transform: translateX(-100%) scale(0.9);
-  opacity: 0;
-}
-
-.carousel-slide.next {
-  transform: translateX(100%) scale(0.9);
-  opacity: 0;
-}
-
-.slide-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(135deg, #E31E24 0%, #C41230 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  pointer-events: none;
+  touch-action: pan-y;
 }
 
-/* Fallback when image doesn't load - show gradient pattern */
-.slide-image:not([style*="background-image"]) {
-  background: linear-gradient(135deg, #E31E24 0%, #C41230 50%, #8B0A14 100%);
-}
-
-.image-overlay {
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -96,24 +50,43 @@
   pointer-events: none;
 }
 
-.slide-content {
+/* Content area: pointer-events none so scroll works; button re-enables for clicks */
+.hero-content {
   position: absolute;
   top: 36%;
   left: 0;
   right: 0;
-  transform: translateY(-50%) translateY(20px);
+  transform: translateY(-50%);
   padding: 2rem;
   z-index: 3;
   color: white;
   text-align: center;
-  transition: transform 0.8s ease 0.3s;
+  pointer-events: none;
 }
 
-.carousel-slide.active .slide-content {
-  transform: translateY(-50%);
+.hero-content .hero-btn {
+  pointer-events: auto;
 }
 
-.book-online-btn {
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.hero-btn {
   display: inline-block;
   font-family: var(--font-sans);
   background: linear-gradient(135deg, #E31E24 0%, #C41230 100%);
@@ -128,15 +101,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease 0.7s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   position: relative;
   overflow: hidden;
 }
 
-.book-online-btn::before {
+.hero-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -147,212 +118,52 @@
   transition: left 0.5s;
 }
 
-.book-online-btn:hover::before {
+.hero-btn:hover::before {
   left: 100%;
 }
 
-.book-online-btn:hover {
+.hero-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.carousel-slide.active .book-online-btn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-title {
-  font-family: var(--font-serif);
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease 0.5s;
-  letter-spacing: 0.02em;
-}
-
-.carousel-slide.active .slide-title {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-subtitle {
-  font-family: var(--font-accent);
-  font-size: 1.5rem;
-  font-weight: 400;
-  opacity: 0.95;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease 0.6s;
-  letter-spacing: 0.02em;
-}
-
-.carousel-slide.active .slide-subtitle {
-  opacity: 0.95;
-  transform: translateY(0);
-}
-
-/* Navigation Arrows */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  opacity: 0.8;
-}
-
-.carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-arrow-left {
-  left: 2rem;
-}
-
-.carousel-arrow-right {
-  right: 2rem;
-}
-
-/* Dots Indicator */
-.carousel-dots {
-  display: none !important;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.dot:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.8);
-  transform: scale(1.2);
-}
-
-.dot.active {
-  background: white;
-  border-color: white;
-  width: 32px;
-  border-radius: 6px;
-}
-
 @media (max-width: 1024px) {
-  .image-carousel {
+  .hero-section {
     min-height: 100vh;
     height: 100vh;
   }
 
-  .slide-title {
+  .hero-title {
     font-size: 2.5rem;
   }
 
-  .slide-subtitle {
+  .hero-subtitle {
     font-size: 1.2rem;
-  }
-
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-
-  .carousel-arrow-left {
-    left: 1rem;
-  }
-
-  .carousel-arrow-right {
-    right: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .image-carousel {
+  .hero-section {
     min-height: 100vh;
     height: 100vh;
-    /* Allow vertical scroll immediately so hero doesn’t block touch scrolling */
-    touch-action: pan-y;
-    /* Performance optimizations */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    contain: layout style paint;
   }
 
-  .carousel-slide {
-    /* Optimize transitions on mobile */
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .slide-content {
-    padding: 1.5rem 1.5rem;
+  .hero-content {
+    padding: 1.5rem;
     top: 36%;
-    /* Improve text rendering */
-    will-change: transform;
   }
 
-  .slide-title {
+  .hero-title {
     font-size: 2rem;
   }
 
-  .slide-subtitle {
+  .hero-subtitle {
     font-size: 1rem;
   }
 
-  .book-online-btn {
+  .hero-btn {
     font-size: 1rem;
     padding: 0.875rem 2rem;
     margin-top: 1rem;
   }
-
-  .carousel-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
-  }
-
-  .carousel-arrow-left {
-    left: 0.5rem;
-  }
-
-  .carousel-arrow-right {
-    right: 0.5rem;
-  }
-
-  .carousel-dots {
-    bottom: 1rem;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-
-  .dot.active {
-    width: 24px;
-  }
 }
-
