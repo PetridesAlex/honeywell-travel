@@ -189,7 +189,7 @@ function Header() {
           <div className="social-icons">
             <a 
               href="https://www.facebook.com/honeywelltravel" 
-              className="social-icon" 
+              className="social-icon social-icon--facebook" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -200,7 +200,7 @@ function Header() {
             </a>
             <a 
               href="https://www.instagram.com/honeywell_travel/" 
-              className="social-icon" 
+              className="social-icon social-icon--instagram" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -326,7 +326,7 @@ function Header() {
           <div className="mobile-social-icons">
             <a 
               href="https://www.facebook.com/honeywelltravel" 
-              className="mobile-social-icon" 
+              className="mobile-social-icon mobile-social-icon--facebook" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -339,7 +339,7 @@ function Header() {
             </a>
             <a 
               href="https://www.instagram.com/honeywell_travel/" 
-              className="mobile-social-icon" 
+              className="mobile-social-icon mobile-social-icon--instagram" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Instagram"

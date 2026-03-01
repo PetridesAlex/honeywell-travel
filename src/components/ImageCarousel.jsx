@@ -60,8 +60,10 @@ function ImageCarousel() {
       />
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-content">
-        <h2 className="hero-title">{current?.title}</h2>
-        <p className="hero-subtitle">{current?.subtitle}</p>
+        <div className="hero-text-wrap">
+          <h2 className="hero-title">{current?.title}</h2>
+          <p className="hero-subtitle">{current?.subtitle}</p>
+        </div>
         <button
           type="button"
           className="hero-btn"
