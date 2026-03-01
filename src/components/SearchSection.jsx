@@ -51,15 +51,13 @@ function SearchSection() {
   const handleSearch = (e) => {
     e.preventDefault()
     const categorySlug = categoryToSlug(category)
+    const params = new URLSearchParams()
+    if (destination !== 'Any') params.set('destination', destination)
+    const queryString = params.toString()
 
     if (categorySlug) {
-      // Navigate directly to the selected category page
-      navigate(`/tour-category/${categorySlug}/`)
+      navigate(`/tour-category/${categorySlug}/${queryString ? `?${queryString}` : ''}`)
     } else {
-      // No category selected: show all packages (with optional destination filter)
-      const params = new URLSearchParams()
-      if (destination !== 'Any') params.set('destination', destination)
-      const queryString = params.toString()
       navigate(queryString ? `/packages?${queryString}` : '/packages')
     }
   }

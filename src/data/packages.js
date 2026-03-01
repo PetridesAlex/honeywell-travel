@@ -16057,10 +16057,29 @@ export const travelPackages = [
 // Helper functions
 const visiblePackages = () => travelPackages.filter(pkg => !pkg.hidden)
 
+// Map search dropdown regions to package destination values (so "Asia" shows Thailand, Japan, etc.)
+export const REGION_DESTINATIONS = {
+  Greece: ['Greece'],
+  Europe: ['Europe', 'Greece', 'Romania', 'Czech Republic', 'Poland', 'Spain', 'France', 'Baltic States', 'Slovakia', 'Turkey', 'Iceland', 'Georgia'],
+  Asia: ['Thailand', 'Indonesia', 'India', 'Japan', 'China', 'Bali', 'Asia'],
+  'Middle East': ['Middle East', 'UAE', 'Egypt'],
+  America: ['America', 'United States', 'Argentina, Brazil', 'Peru'],
+  Africa: ['Morocco', 'South Africa', 'Africa']
+}
+
+const getDestinationsForRegion = (region) => {
+  if (region === 'Any') return null
+  const list = REGION_DESTINATIONS[region]
+  if (list) return list
+  return [region]
+}
+
 export const getPackagesByDestination = (destination) => {
   const packages = visiblePackages()
   if (destination === 'Any') return packages
-  return packages.filter(pkg => pkg.destination === destination)
+  const destinations = getDestinationsForRegion(destination)
+  if (!destinations) return packages
+  return packages.filter(pkg => destinations.includes(pkg.destination))
 }
 
 export const getPackagesByCategory = (category) => {
@@ -16077,7 +16096,12 @@ export const getPackagesByFilter = (category, destination) => {
   }
 
   if (destination !== 'Any') {
-    filtered = filtered.filter(pkg => pkg.destination === destination)
+    const destinations = getDestinationsForRegion(destination)
+    if (destinations) {
+      filtered = filtered.filter(pkg => destinations.includes(pkg.destination))
+    } else {
+      filtered = filtered.filter(pkg => pkg.destination === destination)
+    }
   }
 
   return filtered
