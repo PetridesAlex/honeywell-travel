@@ -27,6 +27,32 @@ const extractTitle = (text) => {
   return null
 }
 
+// Map airline names (as in package details.airline) to logo paths
+const AIRLINE_LOGO = {
+  'Cyprus Airways': '/images/airlines-logo/cyprus-airways-logo.webp',
+  'Sky Express': '/images/airlines-logo/sky-express-logo.webp',
+  'Aegean Airlines': '/images/airlines-logo/aegean-airlines-logo.webp',
+  'Anima Wings': '/images/airlines-logo/animal-wings-logo.webp',
+  'Austrian Airlines': '/images/airlines-logo/austrian-airlines-logo.webp',
+  'British Airways': '/images/airlines-logo/british-airways-logo.webp',
+  'Egypt Air': '/images/airlines-logo/egypt-airlines-logo.webp',
+  'Emirates': '/images/airlines-logo/emirates-airlines-logo.webp',
+  'Emirates Airlines': '/images/airlines-logo/emirates-airlines-logo.webp',
+  'Georgian Airways': '/images/airlines-logo/georgia-airlines-logo.webp',
+  'LOT Polish Airlines': '/images/airlines-logo/lot-polish-airlines-logo.webp',
+  'Lufthansa': '/images/airlines-logo/lufthansa-airlines-logo.webp',
+  'Smartwings': '/images/airlines-logo/smartwings-airlines-logo.webp'
+}
+
+const getAirlineLogo = (airlineName) => {
+  if (!airlineName || airlineName === '—') return null
+  const exact = AIRLINE_LOGO[airlineName]
+  if (exact) return exact
+  // For compound names (e.g. "Aegean Airlines / Turkish Airlines"), try first segment
+  const first = airlineName.split(/[/&]/)[0].trim()
+  return AIRLINE_LOGO[first] || null
+}
+
 function PackageFullDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
@@ -590,14 +616,26 @@ function PackageFullDetail() {
                           <div className="program-text">
                             {isTitle ? (
                               // Render remaining paragraphs
-                              paragraphs.slice(1).map((para, idx) => (
-                                <p key={idx} className="section-text">{para.trim()}</p>
-                              ))
+                              paragraphs.slice(1).map((para, idx) => {
+                                const t = para.trim()
+                                const isBoldHeading = t === 'Η ριβιέρα της Ηπείρου' || t === 'Σύβοτα. Τα φιόρδ του Ιονίου!'
+                                return (
+                                  <p key={idx} className="section-text">
+                                    {isBoldHeading ? <strong>{t}</strong> : t}
+                                  </p>
+                                )
+                              })
                             ) : (
                               // Render all paragraphs
-                              paragraphs.map((para, idx) => (
-                                <p key={idx} className="section-text">{para.trim()}</p>
-                              ))
+                              paragraphs.map((para, idx) => {
+                                const t = para.trim()
+                                const isBoldHeading = t === 'Η ριβιέρα της Ηπείρου' || t === 'Σύβοτα. Τα φιόρδ του Ιονίου!'
+                                return (
+                                  <p key={idx} className="section-text">
+                                    {isBoldHeading ? <strong>{t}</strong> : t}
+                                  </p>
+                                )
+                              })
                             )}
                           </div>
                         </div>
@@ -844,8 +882,12 @@ function PackageFullDetail() {
                 {/* Flights */}
                 {details.flights && details.flights.length > 0 && (
                   <div className="details-section">
-                    <h3 className="details-section-title">
-                      <span className="icon-badge flights">✈️</span>
+                    <h3 className="details-section-title details-section-title-flights">
+                      {getAirlineLogo(details.airline) ? (
+                        <img src={getAirlineLogo(details.airline)} alt="" className="airline-logo" />
+                      ) : (
+                        <span className="icon-badge flights">✈️</span>
+                      )}
                       Flights — {details.airline || 'Sky Express'}
                     </h3>
                     <div className="flights-container">

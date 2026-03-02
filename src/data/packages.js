@@ -16051,6 +16051,220 @@ export const travelPackages = [
       },
       gallery: ['/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-cover.webp', '/images/greek-packages-summer/patra-zakynthos/patra-zakynthos-greece-hotel.webp']
     }
+  },
+  {
+    id: 78,
+    title: 'ΙΑΠΩΝΙΑ – ΝΟΤΙΑ ΚΟΡΕΑ',
+    destination: 'Japan',
+    category: 'Exotic Packages',
+    price: 4759,
+    duration: '13 Μέρες',
+    description: 'Τόκιο, Κυότο, Οσάκα και Σεούλ: 13 μέρες σε δύο από τους πιο δυναμικούς προορισμούς της Ασίας. 4* ξενοδοχεία, πρόγευμα, Shinkansen, ναοί, δάσος μπαμπού, DMZ και πολιτιστική ξενάγηση.',
+    longDescription: 'Μια ολοκληρωμένη περιήγηση στην Ιαπωνία και τη Νότια Κορέα: Τόκιο (4 νύχτες), Κυότο (2), Οσάκα (1), Σεούλ (3). Αεροπορικά με Emirates μέσω Ντουμπάι, τρένο Τόκιο–Κυότο, πτήση Οσάκα–Σεούλ. Διαμονή σε 4* ξενοδοχεία με πρόγευμα. Αναχωρήσεις 18/07 και 15/08.',
+    image: '🇯🇵',
+    featured: true,
+    packageType: 'group',
+    details: {
+      departureDate: '18/07, 15/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Tokyo, Kyoto, Osaka, Seoul – Japan & South Korea',
+      monthAvailability: 'July, August',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Emirates',
+      includedLuggage: 'Μια αποσκευή 30kg και μια χειραποσκευή 7kg (LCA–Tokyo / Seoul–LCA). Μια αποσκευή 23kg και μια χειραποσκευή 7kg (Osaka–Seoul).',
+      coverImage: '/images/Japan/japan-south-korea-hero.webp',
+      thumbnailImage: '/images/Japan/japan-south-korea-town.webp',
+      flights: [
+        { direction: 'Departure', date: '18/07, 15/08', route: 'Larnaca International (LCA) → Dubai Intl (DXB)', flight: 'EK 110', time: '20:10 → 01:05 (+1)', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Departure', date: '—', route: 'Dubai Intl (DXB) → Tokyo Haneda (HND)', flight: 'EK 318', time: '02:40 → 17:35', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Domestic', date: '—', route: 'Osaka (KIX) → Seoul (ICN)', flight: '—', time: '—', luggage: '1×23kg + χειραποσκευή 7kg' },
+        { direction: 'Return', date: '—', route: 'Incheon International (ICN) → Dubai Intl (DXB)', flight: 'EK 323', time: '23:55 → 04:25 (+1)', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Dubai Intl (DXB) → Larnaca International (LCA)', flight: 'EK 109', time: '07:55 → 11:00', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        {
+          name: '4* Hotels Tokyo / Kyoto / Osaka / Seoul',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Japan/japan-south-korea-hotel.webp',
+          location: 'Tokyo, Japan',
+          boardBasis: 'Bed & Breakfast',
+          prices: { double: 4759, single: 5799 },
+          packagePrice: 9518,
+          departureDate: '18/07',
+          nights: 10
+        },
+        {
+          name: '4* Hotels Tokyo / Kyoto / Osaka / Seoul',
+          stars: 4,
+          roomType: 'Standard Room',
+          image: '/images/Japan/japan-south-korea-hotel.webp',
+          location: 'Tokyo, Japan',
+          boardBasis: 'Bed & Breakfast',
+          prices: { double: 5289, single: 6345 },
+          packagePrice: 10578,
+          departureDate: '15/08',
+          nights: 10
+        }
+      ],
+      included: [
+        'Αεροπορικά εισιτήρια Λάρνακα – Ντουμπάι – Τόκιο και Σεούλ – Ντουμπάι – Λάρνακα με Emirates',
+        'Αεροπορικό εισιτήριο Οσάκα – Σεούλ',
+        'Φόροι αεροδρομίων',
+        'Διαμονή για 10 βράδια σε ξενοδοχεία 4* με πρόγευμα',
+        'Μεταφορές, εκδρομές και περιηγήσεις σύμφωνα με το πρόγραμμα, με πολυτελή κλιματιζόμενα πούλμαν',
+        'Εισιτήριο τρένου Τόκυο – Κυότο',
+        'Εισιτήρια εισόδων στους χώρους των επισκέψεων',
+        'Τοπικοί Αγγλόφωνοι ξεναγοί',
+        'Έμπειρος Ελληνόφωνος αρχηγός/συνοδός από Κύπρο',
+        'Μια αποσκευή 30κιλών και μια χειραποσκευή 7κιλών',
+        'Μια αποσκευή 23κιλών και μια χειραποσκευή 7κιλών στην πτήση Οσάκα – Σεούλ',
+        'Υπηρεσίες των αντιπροσώπων μας'
+      ],
+      notIncluded: [
+        'Φιλοδωρήματα και αχθοφορικά',
+        'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'
+      ],
+      note: 'Την 6η μέρα για το ταξίδι σας με το τρένο θα πρέπει να έχετε μαζί σας μόνο μια μικρή τσάντα με τα απαραίτητα. Οι αποσκευές θα σταλούν στο Κυότο και θα τις παραλάβετε την 7η μέρα στην άφιξη σας στο ξενοδοχείο.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: [
+        'Τα Κυπριακά διαβατήρια δεν χρειάζονται βίζα.',
+        'Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.',
+        'Με την κράτηση δίνετε προκαταβολή 30% της αξίας και η εξόφληση γίνεται 21 μέρες περίπου πριν την αναχώρηση.',
+        'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση €50. 44–31 μέρες πριν: 30%. 30–21 μέρες πριν: 50%. 20 μέρες ή λιγότερο: 100%.'
+      ],
+      program: {
+        introduction: 'ΙΑΠΩΝΙΑ – ΝΟΤΙΑ ΚΟΡΕΑ – 13 Μέρες\n\nΔιανυκτερεύσεις: Τόκιο (4), Κυότο (2), Οσάκα (1), Σεούλ (3).',
+        day1_2: '1η - 2η Μέρα: Λάρνακα - Ντουμπάι – Τόκιο\n\nΣυνάντηση στο αεροδρόμιο Λάρνακας και αναχώρηση για το Τόκυο μέσω ενδιάμεσου σταθμού. Μια πόλη που συνδυάζει αρμονικά την υπερσύγχρονη τεχνολογία με την παράδοση, προετοιμάζοντάς μας για τις εικόνες, τους ρυθμούς και την κουλτούρα που θα ανακαλύψουμε τις επόμενες ημέρες. Άφιξη την 2η μέρα το απόγευμα και μεταφορά στο ξενοδοχείο μας. Το Τόκιο είναι μια πόλη που ζει από τις αντιθέσεις της και τις μετατρέπει σε γοητεία. Παράδοση αιώνων συνυπάρχει με την καινοτομία, δημιουργώντας ένα μωσαϊκό εικόνων και εμπειριών που δύσκολα αποκωδικοποιείται με μια μόνο ματιά. Εδώ συναντά κανείς το σούμο και την πειθαρχία των σαμουράι, τη διακριτική κομψότητα των γκεϊσών, αλλά και τη σύγχρονη γαστρονομία, την τεχνολογία αιχμής και τον έντονο ρυθμό της κατανάλωσης. Πρόκειται για μια υπερσύγχρονη μητρόπολη με αμέτρητους ουρανοξύστες και καταιγιστικούς ρυθμούς ζωής, όπου ο συνωστισμός αποτελεί μέρος της καθημερινότητας. Χαρακτηριστικό παράδειγμα της μοναδικής οργάνωσης της πόλης είναι οι ειδικοί υπάλληλοι του μετρό, που με εντυπωσιακή ακρίβεια φροντίζουν ώστε η επιβίβαση να γίνεται ομαλά και τα δρομολόγια να τηρούνται στο λεπτό — μια εικόνα που δεν συναντά κανείς πουθενά αλλού στον κόσμο. Διανυκτέρευση.',
+        day3: '3η Μέρα: Τόκιο (1η Ξενάγηση)\n\nΠρωινό και στην ξενάγηση θα επισκεφθούμε τον ιστορικό ναό Sensoji στην περιοχή Asakusa, τον παλαιότερο βουδιστικό ναό του Τόκιο, και στη συνέχεια ακολουθεί περίπατος στη γραφική Nakamise Street, γεμάτη παραδοσιακά καταστήματα και τοπικές λιχουδιές. Συνεχίζουμε προς τον επιβλητικό Tokyo Skytree, όπου θα ανέβουμε στο παρατηρητήριο για να απολαύσουμε πανοραμική θέα της πόλης από ψηλά. Ακολουθεί βόλτα στην πολύχρωμη και ζωντανή περιοχή της Akihabara, γνωστή ως το κέντρο της τεχνολογίας, των anime και της σύγχρονης ιαπωνικής κουλτούρας. Η ημέρα ολοκληρώνεται με περίπατο στην κομψή Ginza, τη διάσημη εμπορική συνοικία με τις πολυτελείς βιτρίνες, τα μοντέρνα κτίρια και τη μοναδική ατμόσφαιρα της μητρόπολης. Χρόνος για περίπατο και εξερεύνηση της περιοχής. Επιστροφή στο ξενοδοχείο για ξεκούραση.',
+        day4: '4η Μέρα: Τόκιο – (2η Ξενάγηση)\n\nΠρόγευμα και αναχώρηση για το ιερό Meiji Jingu, ένα από τα σημαντικότερα και πιο σεβαστά σιντοϊστικά ιερά της Ιαπωνίας. Το ιερό βρίσκεται μέσα σε έναν εκτεταμένο, καταπράσινο δρυμό, όπου οι ψηλές κέδροι και τα ήσυχα μονοπάτια δημιουργούν ένα μοναδικό περιβάλλον γαλήνης, προσφέροντας μια έντονη αντίθεση με τον αστικό παλμό του Τόκιο και μια ιδανική εισαγωγή στην πνευματική πλευρά της χώρας. Στη συνέχεια, κατευθυνόμαστε προς τη Harajuku, την πιο νεανική και εκκεντρική συνοικία της πόλης, γνωστή για τη δημιουργική μόδα, τις εναλλακτικές τάσεις και τη ζωντανή της ενέργεια. Ο περίπατος συνεχίζεται στη φημισμένη Omotesando, την «λεωφόρο των σχεδιαστών», όπου η σύγχρονη αρχιτεκτονική συναντά τις πολυτελείς μπουτίκ και τα κομψά καφέ, συνθέτοντας μια ατμόσφαιρα αστικής κομψότητας. Αργότερα, επίσκεψη στη Shinjuku, μία από τις πιο δυναμικές και πολυσύχναστες περιοχές του Τόκιο, με εντυπωσιακούς ουρανοξύστες, φωτεινές επιγραφές και αδιάκοπη κίνηση. Εδώ αποκαλύπτεται στο έπακρο η εικόνα της σύγχρονης ιαπωνικής μητρόπολης, σε ένα σκηνικό που συνδυάζει επιχειρηματική δραστηριότητα, ψυχαγωγία και αστική ζωή. Επιστροφή στο ξενοδοχείο και διανυκτέρευση.',
+        day5: '5η ημέρα: Τόκιο (μέρα ελεύθερη)\n\nΗ ημέρα είναι ελεύθερη για να απολαύσετε το Τόκιο με τον δικό σας ρυθμό. Μπορείτε να επιλέξετε δραστηριότητες που αναδεικνύουν την κουλτούρα, τη φύση ή τη σύγχρονη δημιουργικότητα της πόλης, πέρα από τα κλασικά αξιοθέατα. Εναλλακτικά, προτείνεται μια επίσκεψη σε λιγότερο προβεβλημένες αλλά ιδιαίτερα γοητευτικές γειτονιές, όπως η Yanaka, που διατηρεί την ατμόσφαιρα του παλιού Τόκιο, ή η Kagurazaka, με τα στενά της δρομάκια και τις παραδοσιακές ταβέρνες. Οι φίλοι της τέχνης μπορούν να εξερευνήσουν σύγχρονες γκαλερί ή να επισκεφθούν θεματικά μουσεία, ενώ οι λάτρεις της γαστρονομίας έχουν την ευκαιρία να δοκιμάσουν τοπικές σπεσιαλιτέ σε μικρά εστιατόρια και αγορές τροφίμων. Για μια πιο χαλαρή εμπειρία, ιδανική επιλογή αποτελεί μια κρουαζιέρα στον ποταμό Sumida ή ένας περίπατος σε λιγότερο γνωστούς κήπους και πάρκα της πόλης, προσφέροντας μια διαφορετική οπτική του Τόκιο. Όποια κι αν είναι η επιλογή σας, η ελεύθερη αυτή ημέρα σας επιτρέπει να ανακαλύψετε την αυθεντική και λιγότερο τουριστική πλευρά της ιαπωνικής πρωτεύουσας.',
+        day6: '6η ημέρα: Τόκιο – Κυότο\n\nΜετά το πρωινό μας, αναχωρούμε από τον σταθμό του Τόκιο με το υπερσύγχρονο τρένο Shinkansen, ένα σύμβολο της ιαπωνικής τεχνολογικής υπεροχής, απολαμβάνοντας μια μοναδική εμπειρία άνεσης και εντυπωσιακής ταχύτητας καθώς διασχίζουμε το ιαπωνικό τοπίο με προορισμό το Κιότο. Άφιξη στην παραδοσιακή πρωτεύουσα της Ιαπωνίας, μια πόλη όπου η ιστορία και η παράδοση συνυπάρχουν αρμονικά με τη σύγχρονη ζωή. Ακολουθεί περίπατος στη φημισμένη ιστορική συνοικία Gion, με τα καλοδιατηρημένα ξύλινα αρχοντικά, τα λιθόστρωτα στενά σοκάκια και τη διακριτική ατμόσφαιρα που μεταφέρει τον επισκέπτη σε μια άλλη εποχή. Κατά τη διάρκεια της βόλτας μας, θα ανακαλύψουμε τη ρομαντική και αριστοκρατική πλευρά του Κιότο, άρρηκτα συνδεδεμένη με τον μυστηριακό κόσμο των γκεϊσών, τις τελετουργίες, την αισθητική και την αυθεντική ιαπωνική παράδοση. Στη συνέχεια μεταφορά στο ξενοδοχείο για τακτοποίηση. Διανυκτέρευση.',
+        day7: '7η Μέρα: Κιότο – Δάσος μπαμπού – Nishiki Market\n\nΠρόγευμα και στη συνέχεια θα επισκεφθούμε το δάσος μπαμπού της Arashiyama, ένα από τα πιο εμβληματικά τοπία της Ιαπωνίας, όπου τα ψηλά μπαμπού δημιουργούν ένα μοναδικό, σχεδόν μαγικό σκηνικό ιδανικό για περίπατο και φωτογραφίες. Στη συνέχεια, επίσκεψη στον ναό Tenryuji, έναν από τους σημαντικότερους ζεν ναούς του Κιότο και Μνημείο Παγκόσμιας Κληρονομιάς της UNESCO, με υπέροχους κήπους που αποτυπώνουν τη φιλοσοφία της αρμονίας με τη φύση. Ακολουθεί επίσκεψη στο εντυπωσιακό Kinkakuji , το περίφημο Χρυσό Περίπτερο, ένα από τα πιο αναγνωρίσιμα σύμβολα του Κιότο, με την χρυσοποίκιλτη όψη του να αντανακλάται στα ήρεμα νερά της λίμνης. Η ημέρα συνεχίζεται με περίπατο στη Nishiki Market, τη διάσημη παραδοσιακή αγορά της πόλης, όπου θα έχετε την ευκαιρία να γνωρίσετε τη γαστρονομική κουλτούρα του Κιότο μέσα από τοπικά προϊόντα, γεύσεις και αρώματα. Επιστροφή στο ξενοδοχείο.',
+        day8: '8η Μέρα: Κιότο – Οσάκα\n\nΜετά το πρωινό μας θα επισκεφθούμε το Fushimi Inari Taisha, ένα από τα πιο ιερά και αναγνωρίσιμα σιντοϊστικά ιερά της Ιαπωνίας, αφιερωμένο στη θεότητα Inari. Το ιερό φημίζεται για τα χιλιάδες κατακόκκινα torii, τα οποία σχηματίζουν εντυπωσιακά, ατέλειωτα μονοπάτια που ανηφορίζουν στους καταπράσινους λόφους, δημιουργώντας ένα από τα πιο εμβληματικά τοπία της χώρας και προσφέροντας μοναδικές φωτογραφικές ευκαιρίες. Στη συνέχεια, αναχώρηση για την Οσάκα, μια πόλη με έντονη προσωπικότητα, γνωστή για τον χαλαρό της χαρακτήρα, τη ζωντανή ατμόσφαιρα και τη φιλική της κουλτούρα. Άφιξη και περίπατος στη θρυλική συνοικία Dotonbori, την καρδιά της ψυχαγωγικής ζωής της Οσάκα, με τις εντυπωσιακές φωτεινές επιγραφές, τα πολύχρωμα καταστήματα και τις μυρωδιές της τοπικής γαστρονομίας να δημιουργούν ένα σκηνικό γεμάτο ενέργεια. Ο περίπατος συνεχίζεται στη Shinsaibashi, την πιο διάσημη εμπορική αρτηρία της πόλης, ιδανική για αγορές, καφέ και χαλαρή εξερεύνηση, αποτυπώνοντας τον κοσμοπολίτικο χαρακτήρα της Οσάκα. Μεταφορά στο ξενοδοχείο και διανυκτέρευση.',
+        day9: '9η Μέρα: Οσάκα - Σεούλ\n\nΜετά το πρωινό μας χρόνος ελεύθερος μέχρι την μεταφορά μας στο αεροδρόμιο για να πάρουμε την πτήση για την Σεούλ , έναν από τους πιο δυναμικούς και σύγχρονους προορισμούς της Ασίας. Η πρωτεύουσα εντυπωσιάζει με τον μοναδικό συνδυασμό υπερσύγχρονων ουρανοξυστών, παραδοσιακής αρχιτεκτονικής και έντονης αστικής ζωής. Μετά την άφιξη, παραλαβή και μεταφορά στο ξενοδοχείο μας για τακτοποίηση στα δωμάτια. Για όσους το επιθυμούν, προτείνεται βόλτα στην πολυσύχναστη περιοχή Myeongdong, γνωστή για τα καταστήματα καλλυντικών, τη μόδα και το φημισμένο street food. Μια ιδανική ευκαιρία να δοκιμάσετε κορεάτικες λιχουδιές και να ζήσετε από κοντά τον παλμό της σύγχρονης Σεούλ.',
+        day10: '10η Μέρα: Σεούλ (ξενάγηση)\n\nΠρόγευμα και αναχώρηση για το Gyeongbokgung Palace, το μεγαλύτερο και σημαντικότερο βασιλικό παλάτι της δυναστείας Joseon. Θα παρακολουθήσουμε την εντυπωσιακή Τελετή Αλλαγής Φρουράς, μια μοναδική εμπειρία που αναβιώνει την κορεατική βασιλική παράδοση. Στη συνέχεια, επίσκεψη στο Bukchon Hanok Village, μια γραφική συνοικία με παραδοσιακά κορεατικά σπίτια (hanok), όπου το παρελθόν συναντά το παρόν μέσα από στενά σοκάκια και πανοραμική θέα στη σύγχρονη πόλη. Ακολουθεί περίπατος στην περιοχή Insadong, γνωστή για τα καταστήματα παραδοσιακής τέχνης και τα πολιτιστικά της στοιχεία. Στάση σε παραδοσιακό tea house για όσους επιθυμούν να συμμετάσχουν σε τελετουργία γευσιγνωσίας τσαγιού. Επιστροφή στο ξενοδοχείο και ελεύθερος χρόνος. Αργότερα θα μεταβούμε πεζοί στο Cheonggyecheon Stream. Βραδινός περίπατος κατά μήκος του φωτισμένου ρέματος, μια όαση χαλάρωσης στην καρδιά της Σεούλ, ιδανική για να απολαύσετε τη διαφορετική όψη της πόλης μετά τη δύση του ηλίου.',
+        day11: '11η Μέρα: Σεούλ – DMZ (Ζώνη Αποστρατιωτικοποίησης)\n\nΜετά το πρωινό μας αναχωρούμε για την Αποστρατιωτικοποιημένη Ζώνη (DMZ), μία από τις πιο ιστορικά και πολιτικά σημαντικές περιοχές του κόσμου. Η ξενάγηση προσφέρει μια μοναδική ευκαιρία κατανόησης της σύγχρονης κορεατικής ιστορίας και περιλαμβάνει επίσκεψη στο Imjingak Park, έναν χώρο μνήμης και συμβολισμού, τη θρυλική Freedom Bridge, το 3ο Υπόγειο Τούνελ Διείσδυσης, που αποκαλύπτει την ένταση της διχοτόμησης, καθώς και το DMZ Theater & Exhibition Hall, όπου παρουσιάζονται οπτικοακουστικά στοιχεία και ιστορικά εκθέματα. Η εκδρομή ολοκληρώνεται στο Dora Observatory, από όπου είναι δυνατή η θέα προς τη Βόρεια Κορέα. Επιστροφή στο ξενοδοχείο. Το απόγευμα, ελεύθερος χρόνος στη ζωντανή και νεανική περιοχή Hongdae, γνωστή για τη δημιουργική της ενέργεια, τα ιδιαίτερα καφέ, τις εναλλακτικές μπουτίκ και τη street κουλτούρα. Η περιοχή προσφέρει μια διαφορετική εικόνα της Σεούλ και αποτελεί ιδανικό σημείο για χαλαρό περίπατο και προσωπικές εξερευνήσεις.',
+        day12_13: '12η - 13η Μέρα: Σεούλ - Ντουμπάι - Λάρνακα\n\nΠρωινό και χρόνος ελεύθερος. Το μεσημέρι check-out και φύλαξη αποσκευών στο ξενοδοχείο, ώστε να αξιοποιήσετε άνετα τις τελευταίες ώρες. Προαιρετικά μπορείτε να επισκεφθείτε την ζωντανή περιοχή Gangnam, γνωστή για τον σύγχρονο ορίζοντα της πόλης, τα πολυτελή καταστήματα και την επιρροή της στην κορεατική pop κουλτούρα. Μπορείτε να επισκεφθείτε το εντυπωσιακό COEX Mall, ένα από τα μεγαλύτερα υπόγεια εμπορικά κέντρα της Ασίας με πληθώρα καταστημάτων, εστιατορίων και επιλογών ψυχαγωγίας. Αργά το απόγευμα μεταφορά στο αεροδρόμιο για την πτήση επιστροφής μέσω Ντουμπάι, ολοκληρώνοντας ένα ταξίδι γεμάτο αντιθέσεις, πολιτισμό, τεχνολογία και αυθεντικές εμπειρίες. Άφιξη το μεσημέρι της επόμενης μέρας.'
+      },
+      gallery: ['/images/Japan/japan-south-korea-hero.webp']
+    }
+  },
+  {
+    id: 79,
+    title: 'ΣΥΒΟΤΑ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 879,
+    duration: '8 Μέρες',
+    description: 'Καλοκαιρινές διακοπές στη Σύβοτα. 8 μέρες με διαμονή σε studios, ξενοδοχεία 2* έως 5* (Room Only ή Bed & Breakfast). Αναχωρήσεις Ιούλιο – Αύγουστο.',
+    longDescription: 'Η Σύβοτα της Θεσπρωτίας είναι ένα παραθαλάσσιο θέρετρο με καταπράσινα νησιά και κρυφές αμμουδιές. Επιλέξτε από Edem Studios, Aelia Hotel, Ornella Beach, Sivota Hotel, Costa Smeralda ή Sivota Diamonds Spa Resort. Αναχωρήσεις 05/07, 09/07, 12/07, 16/07, 19/07, 23/07, 26/07, 30/07, 02/08, 06/08, 09/08, 13/08, 16/08, 20/08, 23/08.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '05/07, 09/07, 12/07, 16/07, 19/07, 23/07, 26/07, 30/07, 02/08, 06/08, 09/08, 13/08, 16/08, 20/08, 23/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Sivota, Thesprotia, Greece',
+      monthAvailability: 'July – August',
+      roomType: 'Studio / Standard / Sea View (ανά ξενοδοχείο)',
+      boardBasis: 'Room Only / Bed & Breakfast (ανά ξενοδοχείο)',
+      airline: 'Cyprus Airways',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/syvota/syvota-greece-hero.webp',
+      thumbnailImage: '/images/greek-packages-summer/syvota/syvota-greece-thumb.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Aktion / Πρέβεζα (PVK)', flight: 'CY 472', time: '07:00 → 09:10', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Aktion / Πρέβεζα (PVK) → Larnaca (LCA)', flight: 'CY 473', time: '10:10 → 12:10', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 879, triple: 839, child1: 579, child2: 579 }, packagePrice: 1758, departureDate: '05/07', nights: 7 },
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 879, triple: 839, child1: 579, child2: 579 }, packagePrice: 1758, departureDate: '09/07', nights: 7 },
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 969, triple: 919, child1: 629, child2: 629 }, packagePrice: 1938, departureDate: '12/07', nights: 7 },
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio Partial Sea View', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 989 }, packagePrice: 1978, departureDate: '05/07', nights: 7 },
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio Partial Sea View', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 1089 }, packagePrice: 2178, departureDate: '12/07', nights: 7 },
+        { name: 'Edem Studios and Apartments', stars: 3, roomType: 'Studio', image: '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Room Only', prices: { double: 989, triple: 949, child1: 649, child2: 649 }, packagePrice: 1978, departureDate: '02/08', nights: 7 },
+        { name: 'Aelia Hotel', stars: 2, roomType: 'Standard Room', image: '/images/greek-packages-summer/syvota/aelia-hotel-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1049, triple: 869, quadruple: 819, child1: 499, child2: 669 }, packagePrice: 2098, departureDate: '05/07', nights: 7 },
+        { name: 'Aelia Hotel', stars: 2, roomType: 'Standard Room', image: '/images/greek-packages-summer/syvota/aelia-hotel-sivota.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1069, triple: 899, quadruple: 849, child1: 519, child2: 689 }, packagePrice: 2138, departureDate: '02/08', nights: 7 },
+        { name: 'Ornella Beach Hotel', stars: 4, roomType: 'Garden View', image: '/images/greek-packages-summer/syvota/ornella-beach-hotel-Sivota.webp', location: 'Sivota, Thesprotia, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1089, triple: 979, child1: 749 }, packagePrice: 2178, departureDate: '05/07', nights: 7 },
+        { name: 'Ornella Beach Hotel', stars: 4, roomType: 'Sea View', image: '/images/greek-packages-summer/syvota/ornella-beach-hotel-Sivota.webp', location: 'Sivota, Thesprotia, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1179, triple: 999, child1: 669 }, packagePrice: 2358, departureDate: '05/07', nights: 7 },
+        { name: 'Ornella Beach Hotel', stars: 4, roomType: 'Garden View', image: '/images/greek-packages-summer/syvota/ornella-beach-hotel-Sivota.webp', location: 'Sivota, Thesprotia, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1119, triple: 999, child1: 779 }, packagePrice: 2238, departureDate: '02/08', nights: 7 },
+        { name: 'Sivota Hotel', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/syvota/sivota-hotel-Sivota.webp', location: 'Mourtos - Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1129, triple: 959, child1: 579, child2: 749 }, packagePrice: 2258, departureDate: '05/07', nights: 7 },
+        { name: 'Sivota Hotel', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/syvota/sivota-hotel-Sivota.webp', location: 'Mourtos - Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1159, triple: 979, child1: 609, child2: 779 }, packagePrice: 2318, departureDate: '02/08', nights: 7 },
+        { name: 'Costa Smeralda Hotel', stars: 4, roomType: 'Superior Sea View', image: '/images/greek-packages-summer/syvota/costa-smeralda-hotel-sivota.webp', location: 'Sivota Thesprotia, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1249 }, packagePrice: 2498, departureDate: '05/07', nights: 7 },
+        { name: 'Costa Smeralda Hotel', stars: 4, roomType: 'Deluxe Sea View', image: '/images/greek-packages-summer/syvota/costa-smeralda-hotel-sivota.webp', location: 'Sivota Thesprotia, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1449, triple: 1349, child1: 419 }, packagePrice: 2898, departureDate: '05/07', nights: 7 },
+        { name: 'Sivota Diamonds Spa Resort Hotel', stars: 5, roomType: 'Superion Mountain View & Garden View', image: '/images/greek-packages-summer/syvota/syvota-greece-hero.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1329, single: 2069, triple: 1149, child1: 579 }, packagePrice: 2658, departureDate: '05/07', nights: 7 },
+        { name: 'Sivota Diamonds Spa Resort Hotel', stars: 5, roomType: 'Executive Sea View', image: '/images/greek-packages-summer/syvota/syvota-greece-hero.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1489, single: 2349, triple: 1259, child1: 579 }, packagePrice: 2978, departureDate: '05/07', nights: 7 },
+        { name: 'Sivota Diamonds Spa Resort Hotel', stars: 5, roomType: 'Deluxe Junior Suite Sea View', image: '/images/greek-packages-summer/syvota/syvota-greece-hero.webp', location: 'Sivota, 46100, Syvota, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 1639, single: 2599, triple: 1359, child1: 579, child2: 579 }, packagePrice: 3278, departureDate: '05/07', nights: 7 }
+      ],
+      included: ['Αεροπορικό εισιτήριο Λάρνακα – Πρέβεζα – Λάρνακα με απευθείας πτήσεις της Cyprus Airways', 'Φόροι αεροδρομίων', 'Διαμονή για 7 βράδια σε ξενοδοχείο της επιλογής σας', 'Διατροφή βάσει καταλύματος', 'Μια αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Μεταφορές από και προς το αεροδρόμιο της Πρέβεζας', 'Δημοτικός φόρος ξενοδοχείου (πληρώνεται κατά την άφιξη σας στο ξενοδοχείο). Για ξενοδοχείο 5* είναι €15 το δωμάτιο το βράδι, για 4* €10, για 3* €5 και για 1*–2* €2', 'Φαγητό στην πτήση'],
+      note: 'Αναχωρήσεις και τιμές ανά ξενοδοχείο και ημερομηνία. Επικοινωνήστε για διαθεσιμότητα.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν την ημερομηνία άφιξης, 30 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν την ημερομηνία άφιξης, 50 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση των ταξιδιωτικών πακέτων δίνετε προκαταβολή 30% της αξίας των πακέτων και η εξόφληση τους γίνεται 21 μέρες περίπου πριν την αναχώρηση.', 'Ακύρωση συμμετοχής μέχρι 45 μέρες πριν την αναχώρηση: παρακράτηση ποσού 50,00 Ευρώ για λειτουργικά έξοδα.', 'Ακύρωση συμμετοχής μεταξύ 44 και 31 μέρες πριν την αναχώρηση: παρακράτηση 30% της αξίας του ταξιδιού.', 'Ακύρωση συμμετοχής μεταξύ 30 και 21 μέρες πριν την αναχώρηση: παρακράτηση 50% της αξίας του ταξιδιού.', 'Ακύρωση συμμετοχής 20 μέρες πριν την αναχώρηση: παρακράτηση όλου του ποσού.', 'Για τα μέσα ολικής ναύλωσης (charter), κρουαζιέρες, σκι, εκθέσεις, συνέδρια και παρεμφερείς διεθνείς εκδηλώσεις, τα ακυρωτικά φθάνουν μέχρι 100% της αξίας τους ασχέτως της ημερομηνίας γνωστοποίησης της ακύρωσης.'],
+      program: {
+        introduction: 'Η ριβιέρα της Ηπείρου\n\nΟι καλοκαιρινές διακοπές στην Ελλάδα, για τους περισσότερους, είναι ταυτισμένες με αποδράσεις σε κάποιο νησί του Ιονίου ή του Αιγαίου πελάγους. Όμως, τα ηπειρωτικά παράλια της χώρας κρύβουν μαγευτικές τοποθεσίες, που υπόσχονται να σας χαρίσουν αλησμόνητες στιγμές… Στη βορειοδυτική ακτογραμμή της Ηπείρου, με θέα τα γαλαζοπράσινα νερά του Ιονίου, η κουκλίστικη Πάργα και τα «εξωτικά» Σύβοτα αποτελούν ένα ακαταμάχητο δίδυμο με νησιωτική αύρα και κοσμοπολίτικο αέρα, που σίγουρα θα σας κλέψει την καρδιά!\n\nΣύβοτα. Τα φιόρδ του Ιονίου!\n\nΗ αποθέωση του γαλάζιου και του πράσινου που «στολίζει» την πολυσχιδή Πολυνησία του νομού Θεσπρωτίας είναι ο κύριος λόγος που ο γραφικός οικισμός συγκαταλέγεται ανάμεσα στους πιο «εξωτικούς» προορισμούς της Ελλάδας. Με βασικό ατού μια θαλασσινή δαντέλα από κατάφυτες νησίδες, απλωτές παραλίες με τροπικά νερά, αλλά και απάνεμες, κρυφές αγκαλιές, τα Σύβοτα δεν έχουν να ζηλέψουν τίποτα από τα πολυφωτογραφημένα θέρετρα της Καραϊβικής. Για τους ιστιοπλόους του Ιονίου αποτελούν απαραίτητη στάση. Για όσους θέλουν να ζήσουν μια αξέχαστη ταξιδιωτική εμπειρία συμπεριλαμβάνονται ανάμεσα στους must προορισμούς.\n\nΣε μικρή απόσταση από την ακτή φιγουράρουν τα νησάκια Μαύρο Όρος, Άγιος Νικόλαος, Μουρτεμένο και μια σειρά από μικρότερες βραχονησίδες. Αν δεν διαθέτετε δικό σας πλεούμενο, αξίζει να νοικιάσετε ένα βαρκάκι και να ανοιχθείτε στα απάνεμα νερά. Ανακαλύψτε τη δική σας θαλασσινή γωνιά (προτείνουμε τις παραλίες Διαπόρι και Αλάτι) και αφήστε τη μαγεία των πλωτών παράδεισων να σας συνεπάρει. Η πιο φημισμένη παραλία βρίσκεται στον Άγιο Νικόλαο και δεν είναι άλλη από την περίφημη Πισίνα, όνομα και πράγμα! Λευκή αμμουδιά… γαλαζοπράσινα διάφανα νερά… κυκλωμένη από πράσινο. Στο Μουρτεμένο σας περιμένει η Μπέλα Βράκα, η δεύτερη μεγάλη σταρ της περιοχής, την οποία όμως μπορείτε να προσεγγίσετε και πεζοί, μιας και συνδέεται με τη στεριά με στενή λωρίδα χρυσής άμμου.\n\nΚοντά στο κέντρο του οικισμού βρίσκεται η γαλήνια Ζάβια με πολύ πράσινο και δροσερά νερά. Στο βόρειο άκρο του όρμου των Συβότων ξεχωρίζει η Ακτή Ζέρη και η πάλλευκη αμμουδιά του Γαλλικού Μόλου. Αφήνοντας τα Σύβοτα με κατεύθυνση προς Πέρδικα σας περιμένουν δυο ακόμη υπέροχες παραλίες: η Μικρή και Μέγα Άμμος, στην οποία μπορείτε να επιδοθείτε και σε θαλάσσια σπορ.'
+      },
+      gallery: ['/images/greek-packages-summer/syvota/syvota-greece-hero.webp', '/images/greek-packages-summer/syvota/syvota-greece-thumb.webp', '/images/greek-packages-summer/syvota/edem-studios-apartments-sivota.webp', '/images/greek-packages-summer/syvota/aelia-hotel-sivota.webp', '/images/greek-packages-summer/syvota/ornella-beach-hotel-Sivota.webp', '/images/greek-packages-summer/syvota/sivota-hotel-Sivota.webp', '/images/greek-packages-summer/syvota/costa-smeralda-hotel-sivota.webp']
+    }
+  },
+  {
+    id: 80,
+    title: 'ΠΡΕΒΕΖΑ',
+    destination: 'Greece',
+    category: 'Summer Packages to Greece',
+    price: 819,
+    duration: '8 Μέρες',
+    description: 'Καλοκαιρινές διακοπές στην Πρέβεζα. 8 μέρες με διαμονή σε ξενοδοχεία 3* και 4* (Bed and Breakfast). Αναχωρήσεις Ιούλιο – Αύγουστο.',
+    longDescription: 'Η Πρέβεζα είναι η πύλη της Ηπείρου προς το Ιόνιο, με αεροδρόμιο Ακτίου. Επιλέξτε Preveza City Hotel, Margarona Royal Hotel, Dioni Hotel ή Daluz Boutique Hotel. Αναχωρήσεις 05/07, 09/07, 12/07, 16/07, 19/07, 23/07, 26/07, 30/07, 02/08, 06/08, 09/08, 13/08, 16/08, 20/08, 23/08.',
+    image: '🇬🇷',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '05/07, 09/07, 12/07, 16/07, 19/07, 23/07, 26/07, 30/07, 02/08, 06/08, 09/08, 13/08, 16/08, 20/08, 23/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Preveza, Greece',
+      monthAvailability: 'July – August',
+      roomType: 'Comfort / Classic / Standard / Deluxe (ανά ξενοδοχείο)',
+      boardBasis: 'Bed and Breakfast',
+      airline: 'Cyprus Airways',
+      includedLuggage: '1 αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών',
+      coverImage: '/images/greek-packages-summer/preveza/preveza-hero.webp',
+      thumbnailImage: '/images/greek-packages-summer/preveza/preveza-thumb.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Aktion / Πρέβεζα (PVK)', flight: 'CY 472', time: '07:00 → 09:10', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Aktion / Πρέβεζα (PVK) → Larnaca (LCA)', flight: 'CY 473', time: '10:10 → 12:10', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Preveza City Hotel', stars: 3, roomType: 'Comfort Room', image: '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', location: 'L.Irinis 61, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 819, single: 1109 }, packagePrice: 1638, departureDate: '05/07', nights: 7 },
+        { name: 'Preveza City Hotel', stars: 3, roomType: 'Comfort Room with Sofa', image: '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', location: 'L.Irinis 61, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 849, single: 1169, triple: 749, child1: 509 }, packagePrice: 1698, departureDate: '05/07', nights: 7 },
+        { name: 'Preveza City Hotel', stars: 3, roomType: 'Comfort Superior Room with Sofa', image: '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', location: 'L.Irinis 61, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 859, single: 1189, triple: 759, child1: 509, child2: 509 }, packagePrice: 1718, departureDate: '05/07', nights: 7 },
+        { name: 'Preveza City Hotel', stars: 3, roomType: 'Comfort Room', image: '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', location: 'L.Irinis 61, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 889, single: 1239 }, packagePrice: 1778, departureDate: '02/08', nights: 7 },
+        { name: 'Preveza City Hotel', stars: 3, roomType: 'Comfort Superior Room with Sofa', image: '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', location: 'L.Irinis 61, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 949, single: 1349, triple: 829, child1: 529, child2: 529 }, packagePrice: 1898, departureDate: '02/08', nights: 7 },
+        { name: 'Margarona Royal Hotel', stars: 3, roomType: 'Classic Room', image: '/images/greek-packages-summer/preveza/margarona-royal-hotel-preveza.webp', location: 'Road of Preveza - Agios Thomas, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 909, single: 1209, triple: 809, child1: 609 }, packagePrice: 1818, departureDate: '05/07', nights: 7 },
+        { name: 'Margarona Royal Hotel', stars: 3, roomType: 'Superior Room', image: '/images/greek-packages-summer/preveza/margarona-royal-hotel-preveza.webp', location: 'Road of Preveza - Agios Thomas, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 979, single: 1339, triple: 849, child1: 609 }, packagePrice: 1958, departureDate: '05/07', nights: 7 },
+        { name: 'Margarona Royal Hotel', stars: 3, roomType: 'Classic Room', image: '/images/greek-packages-summer/preveza/margarona-royal-hotel-preveza.webp', location: 'Road of Preveza - Agios Thomas, 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 939, single: 1229, triple: 839, child1: 629 }, packagePrice: 1878, departureDate: '02/08', nights: 7 },
+        { name: 'Dioni Hotel', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', location: 'I. Kalou & Th. Papageorgiou Sq., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 939, single: 1349 }, packagePrice: 1878, departureDate: '05/07', nights: 7 },
+        { name: 'Dioni Hotel', stars: 4, roomType: 'Superior Room', image: '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', location: 'I. Kalou & Th. Papageorgiou Sq., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 979, single: 1439, triple: 849, child1: 569 }, packagePrice: 1958, departureDate: '05/07', nights: 7 },
+        { name: 'Dioni Hotel', stars: 4, roomType: 'Standard Room', image: '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', location: 'I. Kalou & Th. Papageorgiou Sq., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1039, single: 1529 }, packagePrice: 2078, departureDate: '02/08', nights: 7 },
+        { name: 'Dioni Hotel', stars: 4, roomType: 'Superior Room', image: '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', location: 'I. Kalou & Th. Papageorgiou Sq., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1099, single: 1639, triple: 929, child1: 589 }, packagePrice: 2198, departureDate: '02/08', nights: 7 },
+        { name: 'Daluz Boutique Hotel', stars: 4, roomType: 'Classic Room', image: '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp', location: '2 Doridos Str., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1109, single: 1359 }, packagePrice: 2218, departureDate: '05/07', nights: 7 },
+        { name: 'Daluz Boutique Hotel', stars: 4, roomType: 'Deluxe Room', image: '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp', location: '2 Doridos Str., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1219, child1: 469 }, packagePrice: 2438, departureDate: '05/07', nights: 7 },
+        { name: 'Daluz Boutique Hotel', stars: 4, roomType: 'Family Loft', image: '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp', location: '2 Doridos Str., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1259, triple: 1109, child1: 469, child2: 729 }, packagePrice: 2518, departureDate: '05/07', nights: 7 },
+        { name: 'Daluz Boutique Hotel', stars: 4, roomType: 'Family Suite', image: '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp', location: '2 Doridos Str., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1429, triple: 1229, child1: 469, child2: 729 }, packagePrice: 2858, departureDate: '05/07', nights: 7 },
+        { name: 'Daluz Boutique Hotel', stars: 4, roomType: 'Classic Room', image: '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp', location: '2 Doridos Str., 48100, Preveza, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 1199, single: 1509 }, packagePrice: 2398, departureDate: '02/08', nights: 7 }
+      ],
+      included: ['Αεροπορικό εισιτήριο Λάρνακα – Πρέβεζα – Λάρνακα με απευθείας πτήσεις της Cyprus Airways', 'Φόροι αεροδρομίων', 'Διαμονή για 7 βράδια σε ξενοδοχείο της επιλογής σας', 'Διατροφή βάσει καταλύματος (Bed and Breakfast)', 'Μια αποσκευή 23 κιλών και 1 χειραποσκευή 10 κιλών', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Μεταφορές από και προς το αεροδρόμιο της Πρέβεζας (Ακτίου)', 'Δημοτικός φόρος ξενοδοχείου (πληρώνεται κατά την άφιξη). Για 5* €15/δωμάτιο/βράδι, 4* €10, 3* €5, 1*–2* €2', 'Φαγητό στην πτήση'],
+      note: 'Αναχωρήσεις και τιμές ανά ξενοδοχείο και ημερομηνία. Επικοινωνήστε για διαθεσιμότητα.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 45 ημέρες πριν την ημερομηνία άφιξης, 50 EUR ανά άτομο θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 45 ημέρες και μέχρι 30 ημέρες πριν: 30% της συνολικής τιμής. Σε περίπτωση ακύρωσης μετά τις 30 ημέρες και μέχρι 21 ημέρες πριν: 50%. Σε περίπτωση ακύρωσης μετά τις 21 ημέρες και μέχρι 0 ημέρες πριν: 100%. Σε περίπτωση μη εμφάνισης: 100%.',
+      termsAndConditions: ['Οι τιμές των ταξιδιωτικών πακέτων δεν αλλάζουν κατά την ώρα της κράτησης τους.', 'Με την κράτηση δίνετε προκαταβολή 30% και η εξόφληση γίνεται 21 μέρες πριν την αναχώρηση.', 'Ακύρωση μέχρι 45 μέρες πριν: παρακράτηση 50 EUR. 44–31 μέρες: 30%. 30–21 μέρες: 50%. 20 μέρες και λιγότερο: 100%.'],
+      program: {
+        introduction: 'ΠΡΕΒΕΖΑ – 8 ΜΕΡΕΣ\n\nΗ Πρέβεζα είναι η πύλη της Ηπείρου προς το Ιόνιο, με αεροδρόμιο στο Ακτίο. Ιδανική βάση για να εξερευνήσετε την Πάργα, τα Σύβοτα, τη Λευκάδα και τις παραλίες της περιοχής. Διαμονή σε Preveza City Hotel (3*), Margarona Royal Hotel (3*), Dioni Hotel (4*) ή Daluz Boutique Hotel (4*) με πρόγευμα.\n\nΑναχωρήσεις: 05/07, 09/07, 12/07, 16/07, 19/07, 23/07, 26/07, 30/07, 02/08, 06/08, 09/08, 13/08, 16/08, 20/08, 23/08.'
+      },
+      gallery: ['/images/greek-packages-summer/preveza/preveza-hero.webp', '/images/greek-packages-summer/preveza/preveza-thumb.webp', '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', '/images/greek-packages-summer/preveza/margarona-royal-hotel-preveza.webp', '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp']
+    }
   }
 ]
 
@@ -16061,7 +16275,7 @@ const visiblePackages = () => travelPackages.filter(pkg => !pkg.hidden)
 export const REGION_DESTINATIONS = {
   Greece: ['Greece'],
   Europe: ['Europe', 'Greece', 'Romania', 'Czech Republic', 'Poland', 'Spain', 'France', 'Baltic States', 'Slovakia', 'Turkey', 'Iceland', 'Georgia'],
-  Asia: ['Thailand', 'Indonesia', 'India', 'Japan', 'China', 'Bali', 'Asia'],
+  Asia: ['Thailand', 'Indonesia', 'India', 'Japan', 'South Korea', 'China', 'Bali', 'Asia'],
   'Middle East': ['Middle East', 'UAE', 'Egypt'],
   America: ['America', 'United States', 'Argentina, Brazil', 'Peru'],
   Africa: ['Morocco', 'South Africa', 'Africa']

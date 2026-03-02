@@ -12,11 +12,13 @@ img,
   -ms-interpolation-mode: bicubic;
 }
 
+/* Only html scrolls – one scrollbar for the whole site */
 html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  /* Do not set overflow-y so the document has a single natural scroll */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 :root {
@@ -44,18 +46,35 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   background-color: #0f0f12;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
   cursor: default;
   -webkit-user-select: text;
   user-select: text;
-  /* Prevent text size adjustment on mobile */
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  min-height: 100%;
+  width: 100%;
+  background-color: #0f0f12;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Ensure buttons and links show pointer and remain clickable; remove 300ms tap delay on mobile */
@@ -75,14 +94,6 @@ label[for] {
 input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]),
 textarea {
   cursor: text;
-}
-
-#root {
-  min-height: 100%;
-  width: 100%;
-  background-color: #0f0f12;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 /* Mobile-specific optimizations – smooth scroll, responsive taps, no invisible blockers */

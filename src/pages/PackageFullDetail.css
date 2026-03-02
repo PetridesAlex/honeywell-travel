@@ -2038,6 +2038,11 @@
   margin-top: 0;
 }
 
+.program-text p strong {
+  font-weight: 700;
+  color: #1e293b;
+}
+
 .program-text p::first-letter {
   font-size: 1.6em;
   font-weight: 800;
@@ -2184,6 +2189,14 @@
 .icon-badge.flights {
   background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   color: white;
+}
+
+.details-section-title-flights .airline-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
 }
 
 .icon-badge.terms {
