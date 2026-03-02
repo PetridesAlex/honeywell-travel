@@ -41,7 +41,9 @@ const AIRLINE_LOGO = {
   'Georgian Airways': '/images/airlines-logo/georgia-airlines-logo.webp',
   'LOT Polish Airlines': '/images/airlines-logo/lot-polish-airlines-logo.webp',
   'Lufthansa': '/images/airlines-logo/lufthansa-airlines-logo.webp',
-  'Smartwings': '/images/airlines-logo/smartwings-airlines-logo.webp'
+  'Smartwings': '/images/airlines-logo/smartwings-airlines-logo.webp',
+  'Wizz Air': '/images/airlines-logo/wizz-air-airlines.webp',
+  'Ryanair': '/images/airlines-logo/ryannair-airlines-logo.webp'
 }
 
 const getAirlineLogo = (airlineName) => {
@@ -344,7 +346,7 @@ function PackageFullDetail() {
                               <div className="hotel-single-left">
                                 <div className="hotel-image-top hotel-image-single">
                                   {baseHotel.image ? (
-                                    <div className="hotel-image-bg" style={{ backgroundImage: `url(${baseHotel.image})` }} />
+                                    <div className="hotel-image-bg" style={{ backgroundImage: `url("${baseHotel.image}")` }} />
                                   ) : (
                                     <div className="hotel-image-placeholder"><span className="image-text">INSERT IMAGE HERE</span></div>
                                   )}

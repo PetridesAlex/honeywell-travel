@@ -16265,6 +16265,476 @@ export const travelPackages = [
       },
       gallery: ['/images/greek-packages-summer/preveza/preveza-hero.webp', '/images/greek-packages-summer/preveza/preveza-thumb.webp', '/images/greek-packages-summer/preveza/preveza-city-hotel-preveza.webp', '/images/greek-packages-summer/preveza/margarona-royal-hotel-preveza.webp', '/images/greek-packages-summer/preveza/dioni-hotel-preveza.webp', '/images/greek-packages-summer/preveza/daluz-boutique-hotel-preveza.webp']
     }
+  },
+  {
+    id: 81,
+    title: 'ANDRE RIEU ΣΤΟ ΜΙΛΑΝΟ',
+    destination: 'Italy',
+    category: 'Music & Sports',
+    price: 575,
+    duration: '4 Μέρες',
+    description: 'Συναυλία André Rieu στο Μιλάνο. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 20/03 με Wizz Air.',
+    longDescription: 'Ταξίδι στο Μιλάνο για τη συναυλία του André Rieu. Διαμονή σε Mediolanum Hotel (4*), Ibis Milano Centro (3*) ή Galileo Hotel (4*) με πρόγευμα. Πτήσεις Wizz Air LCA–Malpensa–LCA. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '20/03',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Milan, Italy',
+      monthAvailability: 'March',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed and Breakfast',
+      airline: 'Wizz Air',
+      includedLuggage: 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα',
+      coverImage: '/images/music-events/Andre-rieu-event/andre-rieu-concept-hero.webp',
+      thumbnailImage: '/images/music-events/Andre-rieu-event/andre-rieu-concept-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Malpensa Milan (MXP)', flight: 'W6 6452', time: '12:05 → 15:05', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 10 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Malpensa Milan (MXP) → Larnaca (LCA)', flight: 'W6 6451', time: '06:10 → 10:50', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Mediolanum Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/Andre-rieu-event/mediolanum-hotel-milan.webp', location: 'Via Mauro Macchi 1, Stazione Centrale, 20124, Milan, Italy', boardBasis: 'Bed and Breakfast', prices: { double: 575 }, packagePrice: 1150, departureDate: '20/03', nights: 3 },
+        { name: 'Ibis Milano Centro Hotel', stars: 3, roomType: 'Standard Room', image: '/images/music-events/Andre-rieu-event/ibis-milano-centro-hotel-milan.webp', location: 'Via Finocchiaro Aprile 2, Stazione Centrale, 20124, Milan, Italy', boardBasis: 'Bed and Breakfast', prices: { double: 599 }, packagePrice: 1198, departureDate: '20/03', nights: 3 },
+        { name: 'Galileo Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/Andre-rieu-event/galileo-hotel-milan.webp', location: 'Corso Europa 9, Milano Italy, 20122, Milan, Italy', boardBasis: 'Bed and Breakfast', prices: { double: 699 }, packagePrice: 1398, departureDate: '20/03', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Μιλάνο – Λάρνακα με πτήσεις της Wizz Air', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα ξενοδοχεία της επιλογής σας με πρόγευμα', 'Εισιτήριο συναυλίας André Rieu', 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Το Μιλάνο είναι μία από τις σημαντικότερες πόλεις της Ιταλίας και παγκόσμιο κέντρο μόδας, design και επιχειρηματικότητας. Συνδυάζει τη σύγχρονη δυναμική με πλούσια ιστορία, καθώς φιλοξενεί εμβληματικά αξιοθέατα όπως ο εντυπωσιακός καθεδρικός ναός Duomo, το Κάστρο Sforzesco και το περίφημο έργο του Λεονάρντο ντα Βίντσι Ο Μυστικός Δείπνος. Η πόλη αποπνέει κοσμοπολίτικο χαρακτήρα και έντονο αστικό παλμό. Παράλληλα, το Μιλάνο προσφέρει υψηλού επιπέδου πολιτιστικές και γαστρονομικές εμπειρίες. Τα μουσεία, οι γκαλερί τέχνης και τα θέατρα συνυπάρχουν με κομψά καφέ και παραδοσιακές τρατορίες, ενώ οι περιοχές Navigli και Brera ξεχωρίζουν για τη ζωντανή τους ατμόσφαιρα. Είναι μια πόλη που δεν κοιμάται ποτέ και συνεχώς εξελίσσεται, διατηρώντας όμως την ιταλική της φινέτσα.\n\nΟ Αντρέ Ριέ (André Rieu) είναι ένας παγκοσμίου φήμης Ολλανδός βιολιστής και μαέστρος, γνωστός για τη μοναδική του ικανότητα να φέρνει την κλασική μουσική πιο κοντά στο ευρύ κοινό. Γεννημένος στο Μάαστριχτ της Ολλανδίας, ίδρυσε την Johann Strauss Orchestra, με την οποία περιοδεύει σε όλο τον κόσμο παρουσιάζοντας εντυπωσιακές συναυλίες που συνδυάζουν μουσική, θεατρικότητα και συναίσθημα. Η χαρισματική του παρουσία στη σκηνή και η αγάπη του για τη μουσική έχουν εμπνεύσει εκατομμύρια ανθρώπους, καθιστώντας τον έναν από τους πιο αγαπητούς καλλιτέχνες της εποχής μας.'
+      },
+      gallery: ['/images/music-events/Andre-rieu-event/andre-rieu-concept-hero.webp', '/images/music-events/Andre-rieu-event/andre-rieu-thumbnail.webp', '/images/music-events/Andre-rieu-event/mediolanum-hotel-milan.webp', '/images/music-events/Andre-rieu-event/ibis-milano-centro-hotel-milan.webp', '/images/music-events/Andre-rieu-event/galileo-hotel-milan.webp']
+    }
+  },
+  {
+    id: 82,
+    title: 'ERIC CLAPTON ΣΤΗ ΒΟΥΔΑΠΕΣΤΗ',
+    destination: 'Hungary',
+    category: 'Music & Sports',
+    price: 685,
+    duration: '5 Μέρες',
+    description: 'Συναυλία Eric Clapton στη Βουδαπέστη. 5 μέρες με 4 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 29/04 από Πάφο με Ryanair.',
+    longDescription: 'Ταξίδι στη Βουδαπέστη για τη συναυλία του Eric Clapton. Διαμονή σε Ibis Budapest City (3*), Marmara Hotel (4*) ή Ibis Budapest Centrum (3*) με πρόγευμα. Πτήσεις Ryanair Πάφος–Βουδαπέστη–Πάφος. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '29/04',
+      departureFrom: 'Paphos',
+      destinationFull: 'Budapest, Hungary',
+      monthAvailability: 'April',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed and Breakfast',
+      airline: 'Ryanair',
+      includedLuggage: 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα',
+      coverImage: '/images/music-events/eric-clapton/eric-clampton-hero.webp',
+      thumbnailImage: '/images/music-events/eric-clapton/eric-clampton-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Paphos (PFO) → Budapest Ferihegy (BUD)', flight: 'FR 3331', time: '10:15 → 12:10', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 10 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Budapest Ferihegy (BUD) → Paphos (PFO)', flight: 'FR 7601', time: '20:55 → 00:40 (άφιξη επόμενη μέρα)', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Ibis Budapest City Hotel', stars: 3, roomType: 'Standard Room', image: '/images/music-events/eric-clapton/Ibis-budapest-city-Hotel-%20budapest.webp', location: 'Akacfa u. 1-3, 1072, Budapest, Hungary', boardBasis: 'Bed and Breakfast', prices: { double: 685 }, packagePrice: 1370, departureDate: '29/04', nights: 4 },
+        { name: 'Marmara Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/eric-clapton/marmara-hotel.webp', location: 'Nagy Ignác str. 21, 1055, Budapest, Hungary', boardBasis: 'Bed and Breakfast', prices: { double: 739 }, packagePrice: 1478, departureDate: '29/04', nights: 4 },
+        { name: 'Ibis Budapest Centrum Hotel', stars: 3, roomType: 'Standard Room', image: '/images/music-events/eric-clapton/Ibis-budapest-centrum-hotel-budapest.webp', location: 'Raday u. 6., 1092, Budapest, Hungary', boardBasis: 'Bed and Breakfast', prices: { double: 739 }, packagePrice: 1478, departureDate: '29/04', nights: 4 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Πάφος – Βουδαπέστη – Πάφος με πτήσεις της Ryanair', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '4 διανυκτερεύσεις σε ένα από τα ξενοδοχεία της επιλογής σας με πρόγευμα', 'Εισιτήριο συναυλίας Eric Clapton', 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Βουδαπέστη είναι μια εντυπωσιακή ευρωπαϊκή πρωτεύουσα που συνδυάζει πλούσια ιστορία, αρχιτεκτονική κομψότητα και ζωντανή πολιτιστική ζωή. Χωρισμένη από τον ποταμό Δούναβη στις περιοχές Βούδα και Πέστη, η πόλη φημίζεται για τα εμβληματικά της αξιοθέατα όπως το Κοινοβούλιο, το Κάστρο της Βούδας και τη Γέφυρα των Αλυσίδων. Τα νεοκλασικά και αρ νουβό κτίρια δημιουργούν ένα μοναδικό αστικό τοπίο, ιδιαίτερα εντυπωσιακό τη νύχτα. Παράλληλα, η Βουδαπέστη είναι γνωστή για τα ιστορικά ιαματικά λουτρά της, όπως τα Széchenyi και Gellért, που αποτελούν αναπόσπαστο κομμάτι της τοπικής κουλτούρας. Η πόλη προσφέρει επίσης έντονη νυχτερινή ζωή, γαστρονομικές εμπειρίες με παραδοσιακές ουγγρικές γεύσεις και μια σύγχρονη καλλιτεχνική σκηνή, κάνοντάς την ιδανικό προορισμό τόσο για χαλάρωση όσο και για εξερεύνηση.\n\nΟ Eric Clapton είναι ένας από τους πιο εμβληματικούς κιθαρίστες και τραγουδοποιούς στην ιστορία της ροκ και μπλουζ μουσικής. Με καριέρα που εκτείνεται σε περισσότερες από πέντε δεκαετίες, έχει επηρεάσει γενιές μουσικών μέσα από τη δουλειά του με συγκροτήματα όπως οι Cream και τους Yardbirds, αλλά και μέσα από την επιτυχημένη σόλο πορεία του. Τραγούδια όπως το Layla και το Tears in Heaven θεωρούνται διαχρονικά αριστουργήματα.'
+      },
+      gallery: ['/images/music-events/eric-clapton/eric-clampton-hero.webp', '/images/music-events/eric-clapton/eric-clapton-thumb.webp', '/images/music-events/eric-clapton/Ibis-budapest-city-Hotel-%20budapest.webp', '/images/music-events/eric-clapton/marmara-hotel.webp', '/images/music-events/eric-clapton/Ibis-budapest-centrum-hotel-budapest.webp']
+    }
+  },
+  {
+    id: 83,
+    title: 'EROS RAMAZZOTTI ΣΤΗΝ ΝΑΠΟΛΗ',
+    destination: 'Italy',
+    category: 'Music & Sports',
+    price: 659,
+    duration: '5 Μέρες',
+    description: 'Συναυλία Eros Ramazzotti στη Νάπολη. 5 μέρες με 4 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 13/06 από Πάφο με Ryanair.',
+    longDescription: 'Ταξίδι στη Νάπολη για τη συναυλία του Eros Ramazzotti. Διαμονή σε Nuvo Hotel, Culture Hotel Villa Capodimonte ή Palazzo Salgar Hotel (4*) με πρόγευμα. Πτήσεις Ryanair Πάφος–Νάπολη–Πάφος. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '13/06',
+      departureFrom: 'Paphos',
+      destinationFull: 'Naples, Italy',
+      monthAvailability: 'June',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Ryanair',
+      includedLuggage: 'Μία χειραποσκευή και μία αποσκευή 10 kg στη καμπίνα',
+      coverImage: '/images/music-events/eros-ramaazzotti/ramazzotti-event-hero.webp',
+      thumbnailImage: '/images/music-events/eros-ramaazzotti/ramazzotti-event-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Paphos (PFO) → Naples Capodichino (NAP)', flight: 'FR 639', time: '10:25 → 12:20', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 10 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Naples Capodichino (NAP) → Paphos (PFO)', flight: 'FR 638', time: '20:30 → 00:30 (άφιξη επόμενη μέρα)', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Nuvo Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/eros-ramaazzotti/nuvo-hotel-napoli.webp', location: 'Via Nuova Agnano, 5, 80125, Naples, Italy', boardBasis: 'Bed & Breakfast', prices: { double: 659 }, packagePrice: 1318, departureDate: '13/06', nights: 4 },
+        { name: 'Culture Hotel Villa Capodimonte', stars: 4, roomType: 'Standard Room', image: '/images/music-events/eros-ramaazzotti/culture-hotel-villa-capodimonte-%20napoli.webp', location: 'Salita Moiariello 66, Capodimonte, 80131, Naples, Italy', boardBasis: 'Bed & Breakfast', prices: { double: 659 }, packagePrice: 1318, departureDate: '13/06', nights: 4 },
+        { name: 'Palazzo Salgar Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/eros-ramaazzotti/Palazzo-salgar-hotel-napoli.webp', location: 'Via Nuova Marina, 120, 80133, Naples, Italy', boardBasis: 'Bed & Breakfast', prices: { double: 699 }, packagePrice: 1398, departureDate: '13/06', nights: 4 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Πάφος – Νάπολη – Πάφος με πτήσεις της Ryanair', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '4 διανυκτερεύσεις σε ένα από τα ξενοδοχεία της επιλογής σας με πρόγευμα', 'Εισιτήριο συναυλίας Eros Ramazzotti', 'Μία χειραποσκευή και μία αποσκευή 10 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Φαγητό και ποτό στη πτήση', 'Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Νάπολη είναι η τρίτη μεγαλύτερη πόλη της Ιταλίας και η πρωτεύουσα της Καμπανίας, με θέα στον κόλπο της Νάπολης και το Βεζούβιο. Φημίζεται για την ιστορία της, την κουζίνα (πίτσα, καφέ), τα αξιοθέατα και τη ζωντανή πολιτιστική ζωή. Είναι ιδανική βάση για να συνδυάσετε συναυλία και σύντομη διαμονή.\n\nΟ Eros Ramazzotti, γεννημένος στις 28 Οκτωβρίου 1963 στη Ρώμη, είναι ένας από τους πιο γνωστούς και επιτυχημένους Ιταλούς τραγουδιστές και τραγουδοποιούς. Ξεκίνησε τη μουσική του πορεία τη δεκαετία του 1980, γνωρίζοντας ευρεία αναγνώριση μετά τη νίκη του στο Φεστιβάλ του Σαν Ρέμο το 1984 με το τραγούδι Terra promessa. Από τότε έχει κυκλοφορήσει πολυάριθμα άλμπουμ που σημείωσαν μεγάλη εμπορική επιτυχία, ενώ έχει συνεργαστεί με διεθνείς αστέρες όπως η Tina Turner και η Cher. Η μουσική του χαρακτηρίζεται από έντονη μελωδικότητα, ρομαντικούς στίχους και τη χαρακτηριστική, ζεστή φωνή του, που τον έχουν καθιερώσει ως έναν από τους πιο αγαπητούς καλλιτέχνες της ιταλικής και διεθνούς σκηνής.'
+      },
+      gallery: ['/images/music-events/eros-ramaazzotti/ramazzotti-event-hero.webp', '/images/music-events/eros-ramaazzotti/nuvo-hotel-napoli.webp', '/images/music-events/eros-ramaazzotti/culture-hotel-villa-capodimonte-%20napoli.webp', '/images/music-events/eros-ramaazzotti/Palazzo-salgar-hotel-napoli.webp']
+    }
+  },
+  {
+    id: 84,
+    title: 'BAD BUNNY ΣΤΗΝ ΒΑΡΣΟΒΙΑ',
+    destination: 'Poland',
+    category: 'Music & Sports',
+    price: 899,
+    duration: '4 Μέρες',
+    description: 'Συναυλία Bad Bunny στη Βαρσοβία. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 13/07 από Λάρνακα με LOT Polish Airlines.',
+    longDescription: 'Ταξίδι στη Βαρσοβία για τη συναυλία του Bad Bunny. Διαμονή σε Leonardo Royal Hotel, Mercure Warszawa Centrum ή Golden Tulip Center Hotel (4*) με πρόγευμα. Πτήσεις LOT Polish Airlines Λάρνακα–Βαρσοβία–Λάρνακα. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '13/07',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Warsaw, Poland',
+      monthAvailability: 'July',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'LOT Polish Airlines',
+      includedLuggage: 'Μία χειραποσκευή και μια αποσκευή 8 kg στη καμπίνα',
+      coverImage: '/images/music-events/bud-bunny/bud-bunny-event-hero.webp',
+      thumbnailImage: '/images/music-events/bud-bunny/bud-bunny-event-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Warsaw Chopin (WAW)', flight: 'LO 172', time: '16:05 → 18:40', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 8 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Warsaw Chopin (WAW) → Larnaca (LCA)', flight: 'LO 171', time: '10:40 → 15:05', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Leonardo Royal Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/Leonardo-royal-hotel-Warsaw.webp', location: 'Grzybowska 45, 00844, Warsaw, Poland', boardBasis: 'Bed & Breakfast', prices: { double: 899 }, packagePrice: 1798, departureDate: '13/07', nights: 3 },
+        { name: 'Mercure Warszawa Centrum Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/mercure-warszawa-centrum-hotel.webp', location: '48-54 Zlota St, 00120, Warsaw, Poland', boardBasis: 'Bed & Breakfast', prices: { double: 925 }, packagePrice: 1850, departureDate: '13/07', nights: 3 },
+        { name: 'Golden Tulip Center Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/Golden-tulip-center-hotel-warsaw.webp', location: 'ul. Towarowa 2, Wola, 00811, Warsaw, Poland', boardBasis: 'Bed & Breakfast', prices: { double: 925 }, packagePrice: 1850, departureDate: '13/07', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Βαρσοβία – Λάρνακα με πτήσεις της LOT Polish Airlines', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα ξενοδοχεία της επιλογής σας με πρόγευμα', 'Εισιτήριο συναυλίας Bad Bunny', 'Μία χειραποσκευή και μια αποσκευή 8 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση.'],
+      program: {
+        introduction: 'Η Βαρσοβία, πρωτεύουσα της Πολωνίας, είναι μια πόλη με έντονο ιστορικό και πολιτιστικό παλμό. Αν και καταστράφηκε σχεδόν ολοκληρωτικά κατά τον Β\' Παγκόσμιο Πόλεμο, αναγεννήθηκε μέσα από τα ερείπια και σήμερα συνδυάζει αρμονικά την κλασική αρχιτεκτονική με τον σύγχρονο αστικό σχεδιασμό. Η Παλιά Πόλη, προσεκτικά ανακατασκευασμένη, αποτελεί Μνημείο Παγκόσμιας Κληρονομιάς της UNESCO και προσφέρει στους επισκέπτες μια ματιά στην προπολεμική γοητεία της πόλης. Παράλληλα, η Βαρσοβία φιλοξενεί πλούσια πολιτιστικά δρώμενα, μουσεία όπως το Μουσείο της Εξέγερσης της Βαρσοβίας, καταπράσινα πάρκα και ζωντανή νυχτερινή ζωή, καθιστώντας την έναν συναρπαστικό προορισμό για κάθε ταξιδιώτη.\n\nΟ Bad Bunny (πραγματικό όνομα Benito Antonio Martínez Ocasio) είναι ένας από τους πιο επιδραστικούς μουσικούς της εποχής του, παραγωγός, τραγουδιστής και στιχουργός από το Πουέρτο Ρίκο που έχει βοηθήσει το Latin trap και το reggaeton να «σπάσουν» στις παγκόσμιες μουσικές σκηνές, με τεράστιες επιτυχίες, συνεργασίες με κορυφαίους καλλιτέχνες και εκατομμύρια streams σε όλο τον κόσμο. Τα τελευταία χρόνια έχει σημειώσει ιστορικά ρεκόρ: το άλμπουμ του Debí Tirar Más Fotos έγινε το πρώτο ισπανόφωνο άλμπουμ που κέρδισε Grammy Album of the Year, και το 2026 ήταν ο πρώτος Λατίνος headline performer στο Super Bowl halftime show τραγουδώντας κυρίως στα Ισπανικά — γεγονός που συζήτησε και η κοινή γνώμη διεθνώς. Πέρα από τη μουσική του, θεωρείται πολιτιστικό φαινόμενο που εκφράζει την κουλτούρα και την ταυτότητα των Λατίνων, με τεράστια επίδραση στη μόδα, τα κοινωνικά μηνύματα και την παγκόσμια μουσική βιομηχανία.'
+      },
+      gallery: ['/images/music-events/bud-bunny/bud-bunny-event-hero.webp', '/images/music-events/bud-bunny/Leonardo-royal-hotel-Warsaw.webp', '/images/music-events/bud-bunny/mercure-warszawa-centrum-hotel.webp', '/images/music-events/bud-bunny/Golden-tulip-center-hotel-warsaw.webp']
+    }
+  },
+  {
+    id: 85,
+    title: 'BAD BUNNY ΣΤΗΝ ΒΑΡΚΕΛΩΝΗ',
+    destination: 'Spain',
+    category: 'Music & Sports',
+    price: 1075,
+    duration: '4 Μέρες',
+    description: 'Συναυλία Bad Bunny στη Βαρκελώνη. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 22/05 από Λάρνακα με Wizz Air.',
+    longDescription: 'Ταξίδι στη Βαρκελώνη για τη συναυλία του Bad Bunny. Διαμονή σε Acta Voraport (3*), Catalonia 505 Hotel ή Icon BCN (4*) με πρόγευμα. Πτήσεις Wizz Air Λάρνακα–Βαρκελώνη–Λάρνακα. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '22/05',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Barcelona, Spain',
+      monthAvailability: 'May',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Wizz Air',
+      includedLuggage: 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα',
+      coverImage: '/images/music-events/bud-bunny/bud-bunny-event-barcelona.webp',
+      thumbnailImage: '/images/music-events/bud-bunny/bud-bunny-event-barcelona.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Barcelona (BCN)', flight: 'W6 4665', time: '15:20 → 18:50', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 10 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Barcelona (BCN) → Larnaca (LCA)', flight: 'W6 4666', time: '18:25 → 23:40', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Acta Voraport Hotel', stars: 3, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/Acta-voraport-hotel-barcelona.webp', location: 'Carrer de Ramon Turró 169-B, Sant Martí, 08005, Barcelona, Spain', boardBasis: 'Bed & Breakfast', prices: { double: 1075 }, packagePrice: 2150, departureDate: '22/05', nights: 3 },
+        { name: 'Catalonia 505 Hotel', stars: 4, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/Catalonia-505-hotel-barcelona.webp', location: 'Muntaner, 505, 08022, Barcelona, Spain', boardBasis: 'Bed & Breakfast', prices: { double: 1135 }, packagePrice: 2270, departureDate: '22/05', nights: 3 },
+        { name: 'Icon BCN', stars: 4, roomType: 'Standard Room', image: '/images/music-events/bud-bunny/Icon-bcn-barcelona.webp', location: 'Carrer de Roger de Llúria, 21, 08010, Barcelona, Spain', boardBasis: 'Bed & Breakfast', prices: { double: 1149 }, packagePrice: 2298, departureDate: '22/05', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Βαρκελώνη – Λάρνακα με πτήσεις της Wizz Air', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα ξενοδοχεία της επιλογής σας με πρόγευμα', 'Εισιτήριο συναυλίας Bad Bunny', 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Βαρκελώνη είναι μια από τις πιο ζωντανές και πολυδιάστατες πόλεις της Ευρώπης, συνδυάζοντας μοναδικά την καταλανική κουλτούρα, την αρχιτεκτονική του Γκαουντί (με εμβληματικά έργα όπως η Sagrada Família), τη μεσογειακή αύρα και έναν έντονο αστικό παλμό. Με παραλίες δίπλα στο κέντρο, γαστρονομία υψηλού επιπέδου, πλούσια ιστορία και ασταμάτητη νυχτερινή ζωή, η πόλη προσφέρει εμπειρίες για κάθε γούστο — από τέχνη και ποδόσφαιρο μέχρι χαλαρές βόλτες στα στενά του El Born και του Barri Gòtic.\n\nΟ Bad Bunny (πραγματικό όνομα Benito Antonio Martínez Ocasio) είναι ένας από τους πιο επιδραστικούς μουσικούς της εποχής του, παραγωγός, τραγουδιστής και στιχουργός από το Πουέρτο Ρίκο που έχει βοηθήσει το Latin trap και το reggaeton να «σπάσουν» στις παγκόσμιες μουσικές σκηνές, με τεράστιες επιτυχίες, συνεργασίες με κορυφαίους καλλιτέχνες και εκατομμύρια streams σε όλο τον κόσμο. Τα τελευταία χρόνια έχει σημειώσει ιστορικά ρεκόρ: το άλμπουμ του Debí Tirar Más Fotos έγινε το πρώτο ισπανόφωνο άλμπουμ που κέρδισε Grammy Album of the Year, και το 2026 ήταν ο πρώτος Λατίνος headline performer στο Super Bowl halftime show τραγουδώντας κυρίως στα Ισπανικά — γεγονός που συζήτησε και η κοινή γνώμη διεθνώς. Πέρα από τη μουσική του, θεωρείται πολιτιστικό φαινόμενο που εκφράζει την κουλτούρα και την ταυτότητα των Λατίνων, με τεράστια επίδραση στη μόδα, τα κοινωνικά μηνύματα και την παγκόσμια μουσική βιομηχανία.'
+      },
+      gallery: ['/images/music-events/bud-bunny/bud-bunny-event-barcelona.webp']
+    }
+  },
+  {
+    id: 86,
+    title: 'THE WEEKND ΣΤΗΝ ΒΑΡΣΟΒΙΑ',
+    destination: 'Poland',
+    category: 'Music & Sports',
+    price: 999,
+    duration: '4 Μέρες',
+    description: 'Συναυλία The Weeknd στη Βαρσοβία. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 04/08 από Λάρνακα με Wizz Air.',
+    longDescription: 'Ταξίδι στη Βαρσοβία για τη συναυλία του The Weeknd. Διαμονή σε Reytan Hotel ή Leonardo Royal Hotel Warsaw με πρόγευμα. Πτήσεις Wizz Air Λάρνακα–Βαρσοβία–Λάρνακα. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '04/08',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Warsaw, Poland',
+      monthAvailability: 'August',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Wizz Air',
+      includedLuggage: 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα',
+      coverImage: '/images/music-events/weekend-event/weekend-event-warsaw-hero.webp',
+      thumbnailImage: '/images/music-events/weekend-event/weekend-event-warsaw-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Warsaw Chopin (WAW)', flight: 'W6 4640', time: '06:00 → 08:30', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής (χειραποσκευή + 10 kg καμπίνα)' },
+        { direction: 'Return', date: '—', route: 'Warsaw Chopin (WAW) → Larnaca (LCA)', flight: 'W6 1557', time: '21:00 → 01:25 (+1)', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής', note: 'Αυτή η πτήση φθάνει την επόμενη μέρα' }
+      ],
+      hotels: [
+        { name: 'Reytan Hotel - Warsaw', stars: 3, roomType: 'Standard Room', image: '/images/music-events/weekend-event/reytan-hotel-warsaw.webp', location: 'Rejtana 6, 02516, Warsaw, Poland', boardBasis: 'Bed & Breakfast', prices: { double: 999 }, packagePrice: 1998, departureDate: '04/08', nights: 3 },
+        { name: 'Leonardo Royal Hotel - Warsaw', stars: 4, roomType: 'Standard Room', image: '/images/music-events/weekend-event/image (35).webp', location: 'Grzybowska 45, 00844, Warsaw, Poland', boardBasis: 'Bed & Breakfast', prices: { double: 1155 }, packagePrice: 2310, departureDate: '04/08', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Βαρσοβία – Λάρνακα με πτήσεις της Wizz Air', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο συναυλίας', 'Μία χειραποσκευή και μια αποσκευή 10 kg στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Βαρσοβία, πρωτεύουσα της Πολωνίας, είναι μια πόλη με έντονο ιστορικό και πολιτιστικό παλμό. Αν και καταστράφηκε σχεδόν ολοκληρωτικά κατά τον Β\' Παγκόσμιο Πόλεμο, αναγεννήθηκε μέσα από τα ερείπια και σήμερα συνδυάζει αρμονικά την κλασική αρχιτεκτονική με τον σύγχρονο αστικό σχεδιασμό. Η Παλιά Πόλη, προσεκτικά ανακατασκευασμένη, αποτελεί Μνημείο Παγκόσμιας Κληρονομιάς της UNESCO και προσφέρει στους επισκέπτες μια ματιά στην προπολεμική γοητεία της πόλης. Παράλληλα, η Βαρσοβία φιλοξενεί πλούσια πολιτιστικά δρώμενα, μουσεία όπως το Μουσείο της Εξέγερσης της Βαρσοβίας, καταπράσινα πάρκα και ζωντανή νυχτερινή ζωή, καθιστώντας την έναν συναρπαστικό προορισμό για κάθε ταξιδιώτη.\n\nΟ The Weeknd, με πραγματικό όνομα Abel Makkonen Tesfaye, είναι Καναδός τραγουδιστής, στιχουργός και παραγωγός που θεωρείται ένας από τους πιο επιδραστικούς καλλιτέχνες της σύγχρονης μουσικής σκηνής. Ξεκίνησε την καριέρα του ανεβάζοντας ανώνυμα κομμάτια στο YouTube το 2010, όμως γρήγορα ξεχώρισε για τη μοναδική φωνή του και το σκοτεινό, ατμοσφαιρικό ύφος των τραγουδιών του. Ο ήχος του συνδυάζει στοιχεία R&B, pop, hip hop και ηλεκτρονικής μουσικής, ενώ οι στίχοι του συχνά περιστρέφονται γύρω από θέματα όπως ο έρωτας, η μοναξιά και η φήμη. Έχει κυκλοφορήσει πολυάριθμα βραβευμένα άλμπουμ και singles, με επιτυχίες όπως το "Blinding Lights" και το "Starboy", που τον καθιέρωσαν διεθνώς. Σήμερα, ο The Weeknd αναγνωρίζεται όχι μόνο για τις μουσικές του επιτυχίες, αλλά και για την ικανότητά του να επαναπροσδιορίζει συνεχώς την εικόνα και τον ήχο του, διαμορφώνοντας τις τάσεις της παγκόσμιας μουσικής βιομηχανίας.'
+      },
+      gallery: ['/images/music-events/weekend-event/weekend-event-warsaw-hero.webp']
+    }
+  },
+  {
+    id: 87,
+    title: 'IRON MAIDEN ΣΤΗΝ ΑΘΗΝΑ',
+    destination: 'Greece',
+    category: 'Music & Sports',
+    price: 769,
+    duration: '4 Μέρες',
+    description: 'Συναυλία Iron Maiden στην Αθήνα. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 22/05 από Λάρνακα με Sky Express.',
+    longDescription: 'Ταξίδι στην Αθήνα για τη συναυλία των Iron Maiden. Διαμονή σε Novus City Hotel ή Acropolis AMI Boutique Hotel με πρόγευμα. Πτήσεις Sky Express Λάρνακα–Αθήνα–Λάρνακα. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '22/05',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Athens, Greece',
+      monthAvailability: 'May',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Sky Express',
+      includedLuggage: 'Μία αποσκευή 8 kg',
+      coverImage: '/images/music-events/iron-maiden/iron-maiden-hero.webp',
+      thumbnailImage: '/images/music-events/iron-maiden/iron-maiden-hero.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Athens (ATH)', flight: 'GQ 601', time: '09:30 → 11:15', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Athens (ATH) → Larnaca (LCA)', flight: 'GQ 602', time: '19:10 → 20:45', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Novus City Hotel - Athens', stars: 4, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/novus-city-hotel-athens.webp', location: '23 Karolou St. (Karaiskaki Square), 10437, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 769 }, packagePrice: 1538, departureDate: '22/05', nights: 3 },
+        { name: 'Acropolis AMI Boutique Hotel - Athens', stars: 3, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/acropolis-ami-boutigu- hotel-athens.webp', location: '10 Iras Street, 11743, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 799 }, packagePrice: 1598, departureDate: '22/05', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα με πτήσεις της Sky Express', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο συναυλίας', 'Μία αποσκευή 8 kg', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Αθήνα, η πρωτεύουσα της Ελλάδας, είναι μια πόλη με πλούσια ιστορία και πολιτιστική κληρονομιά που εκτείνεται για περισσότερα από 3.000 χρόνια. Ως το λίκνο της δημοκρατίας και της φιλοσοφίας, η Αθήνα αποτέλεσε το κέντρο της αρχαίας ελληνικής κουλτούρας και εκπαίδευσης. Σήμερα, η πόλη συνδυάζει την αρχαιότητα με το σύγχρονο αστικό τοπίο, με εμβληματικά μνημεία όπως ο Παρθενώνας στην Ακρόπολη και το σύγχρονο Μουσείο της Ακρόπολης. Παράλληλα, η Αθήνα είναι γεμάτη από ζωντάνια, προσφέροντας πλούσιες πολιτιστικές εκδηλώσεις, γαστρονομία και νυχτερινή ζωή, κάνοντάς την έναν από τους πιο δημοφιλείς προορισμούς παγκοσμίως.\n\nΟι Iron Maiden είναι ένα από τα πιο εμβληματικά συγκροτήματα της heavy metal σκηνής, που σχηματίστηκαν το 1975 στο Λονδίνο από τον μπασίστα και βασικό δημιουργό Στιβ Χάρις. Με τον ιδιαίτερο ήχο τους, που συνδυάζει γρήγορες κιθαριστικές μελωδίες, επικές συνθέσεις και θεματολογία εμπνευσμένη από την ιστορία, τη λογοτεχνία και τη φαντασία, καθιερώθηκαν ως πρωτοπόροι του λεγόμενου New Wave of British Heavy Metal (NWOBHM). Η μασκότ τους, ο θρυλικός Eddie, αποτελεί αναπόσπαστο κομμάτι της ταυτότητάς τους και εμφανίζεται σε όλα τα εξώφυλλα δίσκων και συναυλίες. Με άλμπουμ όπως το The Number of the Beast (1982) και το Powerslave (1984), καθώς και με αμέτρητες παγκόσμιες περιοδείες, οι Iron Maiden έχουν αποκτήσει φανατικό κοινό και έχουν επηρεάσει γενιές μουσικών, παραμένοντας μέχρι σήμερα ενεργοί και δυναμικοί στη σκηνή.'
+      },
+      gallery: ['/images/music-events/iron-maiden/iron-maiden-hero.webp']
+    }
+  },
+  {
+    id: 88,
+    title: 'METALLICA ΣΤΗΝ ΑΘΗΝΑ',
+    destination: 'Greece',
+    category: 'Music & Sports',
+    price: 815,
+    duration: '3 Μέρες',
+    description: 'Συναυλία Metallica στην Αθήνα. 3 μέρες με 2 διανυκτερεύσεις, πρόγευμα και εισιτήριο συναυλίας. Αναχώρηση 08/05 από Λάρνακα με Sky Express.',
+    longDescription: 'Ταξίδι στην Αθήνα για τη συναυλία των Metallica. Διαμονή σε Novus City Hotel ή Royal Olympic Hotel με πρόγευμα. Πτήσεις Sky Express Λάρνακα–Αθήνα–Λάρνακα. Εισιτήριο συναυλίας περιλαμβάνεται.',
+    image: '🎵',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '08/05',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Athens, Greece',
+      monthAvailability: 'May',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed and Breakfast',
+      airline: 'Sky Express',
+      includedLuggage: 'Μία αποσκευή 8 kg',
+      coverImage: '/images/music-events/metallica/metallica-in-athens.webp',
+      thumbnailImage: '/images/music-events/metallica/metallica-in-athens.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Athens (ATH)', flight: 'GQ 607', time: '07:00 → 08:45', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Athens (ATH) → Larnaca (LCA)', flight: 'GQ 606', time: '21:55 → 23:40', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Novus City Hotel - Athens', stars: 4, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/novus-city-hotel-athens.webp', location: '23 Karolou St. (Karaiskaki Square), 10437, Athens, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 815 }, packagePrice: 1630, departureDate: '08/05', nights: 2 },
+        { name: 'Royal Olympic Hotel - Athens', stars: 5, roomType: 'Standard Room', image: '/images/music-events/metallica/real-olympic-hotel.webp', location: '28-34 Athanasiou Diakou Str, 11743, Athens, Greece', boardBasis: 'Bed and Breakfast', prices: { double: 869 }, packagePrice: 1738, departureDate: '08/05', nights: 2 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα με πτήσεις της Sky Express', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '2 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο συναυλίας', 'Μία αποσκευή 8 kg', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Τοπικός φόρος διαμονής (πληρώνεται επί τόπου)'],
+      note: 'Εισιτήρια για τη συναυλία μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα δεν ακυρώνονται και δεν επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Η Αθήνα, η πρωτεύουσα της Ελλάδας, είναι μια πόλη με πλούσια ιστορία και πολιτιστική κληρονομιά που εκτείνεται για περισσότερα από 3.000 χρόνια. Ως το λίκνο της δημοκρατίας και της φιλοσοφίας, η Αθήνα αποτέλεσε το κέντρο της αρχαίας ελληνικής κουλτούρας και εκπαίδευσης. Σήμερα, η πόλη συνδυάζει την αρχαιότητα με το σύγχρονο αστικό τοπίο, με εμβληματικά μνημεία όπως ο Παρθενώνας στην Ακρόπολη και το σύγχρονο Μουσείο της Ακρόπολης. Παράλληλα, η Αθήνα είναι γεμάτη από ζωντάνια, προσφέροντας πλούσιες πολιτιστικές εκδηλώσεις, γαστρονομία και νυχτερινή ζωή, κάνοντάς την έναν από τους πιο δημοφιλείς προορισμούς παγκοσμίως.\n\nΟι Metallica είναι ένα από τα πιο εμβληματικά και επιδραστικά συγκροτήματα στην ιστορία της heavy metal μουσικής. Ιδρύθηκαν το 1981 στο Λος Άντζελες από τον ντράμερ Lars Ulrich και τον κιθαρίστα/τραγουδιστή James Hetfield, και σύντομα καθιερώθηκαν ως πρωτοπόροι του thrash metal, με γρήγορους ρυθμούς, έντονα riffs και βαθιά κοινωνικά ή υπαρξιακά μηνύματα. Με άλμπουμ όπως το "Master of Puppets", "Ride the Lightning" και το παγκόσμια επιτυχημένο "Metallica" (Black Album), καθιέρωσαν έναν ήχο που γεφύρωσε το underground metal με το mainstream ροκ. Η ενέργεια των live εμφανίσεών τους και η μουσική τους εξέλιξη μέσα στα χρόνια τούς έχουν κάνει ένα από τα πιο εμπορικά και σεβαστά συγκροτήματα όλων των εποχών. Οι Metallica συνεχίζουν να εμπνέουν γενιές μουσικών και να γεμίζουν στάδια παγκοσμίως, παραμένοντας πιστοί στη βαριά, αυθεντική τους ταυτότητα.'
+      },
+      gallery: ['/images/music-events/metallica/metallica-in-athens.webp']
+    }
+  },
+  {
+    id: 89,
+    title: 'EUROLEAGUE SEMIFINAL',
+    destination: 'Greece',
+    category: 'Music & Sports',
+    price: 2335,
+    duration: '4 Μέρες',
+    description: 'EuroLeague Semifinal στην Αθήνα. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο αγώνα. Αναχώρηση 22/05 από Λάρνακα με Aegean Airlines.',
+    longDescription: 'Ταξίδι στην Αθήνα για το EuroLeague Semifinal. Διαμονή σε Novus City Hotel, Acropolis AMI Boutique Hotel ή Moxy Hotel με πρόγευμα. Πτήσεις Aegean Airlines Λάρνακα–Αθήνα–Λάρνακα. Εισιτήριο αγώνα περιλαμβάνεται.',
+    image: '🏀',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '22/05',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Athens, Greece',
+      monthAvailability: 'May',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Aegean Airlines',
+      includedLuggage: 'Μία αποσκευή 23kg και μία χειραποσκευή 8 kg και ένα προσωπικό αντικείμενο',
+      coverImage: '/images/music-events/euroleugue-final/euroleugue-final-four.webp',
+      thumbnailImage: '/images/music-events/euroleugue-final/euroleugue-final-four.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Athens (ATH)', flight: 'A3 911', time: '07:35 → 09:20', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Athens (ATH) → Larnaca (LCA)', flight: 'A3 908', time: '18:30 → 20:05', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Novus City Hotel - Athens', stars: 4, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/novus-city-hotel-athens.webp', location: '23 Karolou St. (Karaiskaki Square), 10437, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2335 }, packagePrice: 4670, departureDate: '22/05', nights: 3 },
+        { name: 'Acropolis AMI Boutique Hotel - Athens', stars: 3, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/acropolis-ami-boutigu- hotel-athens.webp', location: '10 Iras Street, 11743, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2429 }, packagePrice: 4858, departureDate: '22/05', nights: 3 },
+        { name: 'Moxy Hotel - Athens', stars: 3, roomType: 'Standard Room', image: '/images/music-events/euroleugue-final/moxy-hotel-athens.webp', location: '65 Stadiou Street, 10551, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2459 }, packagePrice: 4918, departureDate: '22/05', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα με πτήσεις της Aegean', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο αγώνα', 'Μία αποσκευή 23kg και μία χειραποσκευή 8 kg και ένα προσωπικό αντικείμενο', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Φαγητό και ποτό στη πτήση', 'Αχθοφορικά και φιλοδωρήματα'],
+      note: 'Εισιτήρια αγώνα μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα ενδέχεται να μην ακυρώνονται και να μην επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Όπου και αν κοιτάξει κανείς η Αθήνα είναι γεμάτη με μνημεία του αρχαίου αλλά και του νεώτερου πολιτισμού. Περπατώντας στην Αθήνα και κάνοντας μια περιήγηση στα αξιοθέατα της, είναι σαν να περπατάς μέσα στην ίδια την ιστορία της. Αν, μάλιστα, έχεις διαβάσει λίγο την ιστορία της, τότε σε πιάνει ένα ρίγος. Πατάς στις πατημασιές χιλιάδων προγόνων, βαδίζεις τα βήματά τους. Αν ακόμη σκεφτείς ότι είναι ίσως η μοναδική πρωτεύουσα όπου μπορείς να ζήσεις τα πάντα, να κάνεις αυτό το ταξίδι στο χρόνο και, μετά από λίγα χιλιόμετρα, να κάνεις και μια βουτιά στη θάλασσα, τότε την αγαπάς ακόμη περισσότερο!\n\nΦαγητό στην Αθήνα\nΟι Έλληνες ακολουθούν την τυπική μεσογειακή διατροφή, με κάποιες ιδιαιτερότητες που κάνουν την ελληνική κουζίνα ξεχωριστή και ιδιαίτερα νόστιμη. Θα αφεθείτε σε ένα μοναδικό γαστρονομικό ταξίδι που πραγματικά θα σας ενθουσιάσει! Η ελληνική κουζίνα είναι ένας υπέροχος συνδυασμός φρέσκων υλικών, λαχανικών, αρωματικών βοτάνων, όπως το θυμάρι, η μέντα και το δεντρολίβανο, γευστικού ελαιόλαδου, φρέσκων θαλασσινών, αλλά και ντόπιων κρεάτων. Βέβαια, μην παραλείψετε να δοκιμάσετε τα εξαίσια ελληνικά τυριά, και κυρίως τη φέτα. Τα πιο δημοφιλή πιάτα που μπορείτε αν βρείτε οπουδήποτε είναι φυσικά το περίφημο σουβλάκι και ο ελληνικός γύρος, το πιο χαρακτηριστικό και εθνικό φαστ φουντ στην Ελλάδα. Η ελληνική γευστική απόλαυση είναι κάτι που δεν μπορεί να αντικατασταθεί και να βρεθεί σε καμία άλλη κουζίνα. Γι αυτό, αφήστε τον εαυτό σας να ζήσει μια ολοκληρωμένη γαστρονομική εμπειρία, στα υπέροχα ελληνικά εστιατόρια, που θα σας μείνει πραγματικά αξέχαστη! Τα περισσότερα εστιατόρια είναι άξιοι εκπρόσωποι της ελληνικής φιλοξενίας και μπορούν να σας εξυπηρετήσουν άψογα. Ακριβώς όπως τα μπαρ, εστιατόρια και ταβέρνες βρίσκονται παντού στην Αθήνα. Η περιοχή της Πλάκας είναι ίσως η πιο γραφική, αλλά και η περιοχή που δέχεται τους περισσότερους τουρίστες. Η περιοχή του Ψυρρή δεν απέχει πολύ από το Μοναστηράκι με πολλά όμορφα μαγαζιά, φαγάδικα, μεζεδοπωλεία και ταβέρνες με ζωντανή μουσική μέρα και νύχτα. Παρόλο που η ποιότητα του φαγητού είναι κάτι δεδομένο, να είστε προσεχτικοί στην επιλογή προκειμένου να μη βρεθείτε προ εκπλήξεων όταν θα έρθει ο λογαριασμός! Αρκετά εστιατόρια έχουν σε ταμπέλες τόσο το μενού, όσο και τιμές τους. Για αυτό κάντε πρώτα μια βόλτα, πριν αποφασίσετε που θα καθίσετε.\n\nΤι να δείτε στην Αθήνα\nΤο μεγαλύτερο αρχαίο μνημείο της Αθήνας είναι φυσικά η Ακρόπολη. Πάνω από τον ιερό βράχο, μπορείτε να αισθανθείτε σχεδόν το μεγαλείο της αρχαίας Ελλάδας. Άλλοι ενδιαφέροντες αρχαιολογικοί χώροι είναι η αρχαία αγορά, με το ναό του Ηφαίστου ακόμη σε πολύ καλή κατάσταση, όπως επίσης και ο ναός του Δία και η αψίδα του Αδριανού. Στην Αθήνα θα βρούμε τα κυριότερα μουσεία της Ελλάδας όπως το νέο μουσείο της Ακρόπολης, το Εθνικό Αρχαιολογικό Μουσείο, το Λαογραφικό Μουσείο, το Μουσείο Κεραμικού, το Βυζαντινό και Χριστιανικό Μουσείο, το Μουσείο Μουσικής, το Πολεμικό Μουσείο, το Μουσείο Μπενάκη, κλπ. Γενικά, υπάρχουν περίπου 50 μουσεία στην Αθήνα. Ένα δημοφιλές μέρος για ψώνια ή για φαγητό και ποτό είναι η Πλάκα, ακριβώς κάτω από την Ακρόπολη. Θεωρείται αρκετά τουριστικό μέρος, αλλά το γεγονός είναι ότι εδώ μπορείτε να πάρετε μια ιδέα της παλιάς Αθήνας, με χαμηλά κτίρια και μικρούς δρόμους. Στο Μοναστηράκι υπάρχει το περίφημο Γιουσουρούμ, το παζάρι με παλαιοπωλεία και αλλά αντικείμενα. Στην Πλατεία Συντάγματος μπορείτε να επισκεφθείτε το μνημείο του Άγνωστου Στρατιώτη. Εδώ μπορείτε να δείτε τους Ευζώνους της προεδρικής φρουράς και εάν είστε τυχεροί, θα δείτε την αργή και πολύπλοκη αλλαγή της φρουράς μπροστά από το μνημείο του Αγνώστου Στρατιώτη. Το Μέγαρο Μουσικής, έχει πολλές υπέροχες παραστάσεις και το καλοκαίρι γίνονται πολλές παραστάσεις και συναυλίες στο θέατρο Ηρώδου του Αττικού (Ηρώδειο) κάτω από την Ακρόπολη, στο Λυκαβηττό και αλλού.'
+      },
+      gallery: ['/images/music-events/euroleugue-final/euroleugue-final-four.webp']
+    }
+  },
+  {
+    id: 90,
+    title: 'EUROLEAGUE FINAL',
+    destination: 'Greece',
+    category: 'Music & Sports',
+    price: 2575,
+    duration: '4 Μέρες',
+    description: 'EuroLeague Final στην Αθήνα. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο αγώνα. Αναχώρηση 22/05 από Λάρνακα με Aegean Airlines.',
+    longDescription: 'Ταξίδι στην Αθήνα για το EuroLeague Final. Διαμονή σε Novus City Hotel, Acropolis AMI Boutique Hotel ή Moxy Hotel με πρόγευμα. Πτήσεις Aegean Airlines Λάρνακα–Αθήνα–Λάρνακα. Εισιτήριο αγώνα περιλαμβάνεται.',
+    image: '🏀',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '22/05',
+      departureFrom: 'Larnaca',
+      destinationFull: 'Athens, Greece',
+      monthAvailability: 'May',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Aegean Airlines',
+      includedLuggage: 'Μία αποσκευή 23kg και μία χειραποσκευή 8 kg και ένα προσωπικό αντικείμενο',
+      coverImage: '/images/music-events/euroleugue-final/euroleugue-final-four.webp',
+      thumbnailImage: '/images/music-events/euroleugue-final/euroleugue-final-four.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Larnaca (LCA) → Athens (ATH)', flight: 'A3 911', time: '07:35 → 09:20', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'Athens (ATH) → Larnaca (LCA)', flight: 'A3 908', time: '18:30 → 20:05', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Novus City Hotel - Athens', stars: 4, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/novus-city-hotel-athens.webp', location: '23 Karolou St. (Karaiskaki Square), 10437, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2575 }, packagePrice: 5150, departureDate: '22/05', nights: 3 },
+        { name: 'Acropolis AMI Boutique Hotel - Athens', stars: 3, roomType: 'Standard Room', image: '/images/music-events/iron-maiden/acropolis-ami-boutigu- hotel-athens.webp', location: '10 Iras Street, 11743, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2675 }, packagePrice: 5350, departureDate: '22/05', nights: 3 },
+        { name: 'Moxy Hotel - Athens', stars: 3, roomType: 'Standard Room', image: '/images/music-events/euroleugue-final/moxy-hotel-athens.webp', location: '65 Stadiou Street, 10551, Athens, Greece', boardBasis: 'Bed & Breakfast', prices: { double: 2699 }, packagePrice: 5398, departureDate: '22/05', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Λάρνακα – Αθήνα – Λάρνακα με πτήσεις της Aegean', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο αγώνα', 'Μία αποσκευή 23kg και μία χειραποσκευή 8 kg και ένα προσωπικό αντικείμενο', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Φαγητό και ποτό στη πτήση', 'Αχθοφορικά και φιλοδωρήματα'],
+      note: 'Εισιτήρια αγώνα μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα ενδέχεται να μην ακυρώνονται και να μην επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Όπου και αν κοιτάξει κανείς η Αθήνα είναι γεμάτη με μνημεία του αρχαίου αλλά και του νεώτερου πολιτισμού. Περπατώντας στην Αθήνα και κάνοντας μια περιήγηση στα αξιοθέατα της, είναι σαν να περπατάς μέσα στην ίδια την ιστορία της. Αν, μάλιστα, έχεις διαβάσει λίγο την ιστορία της, τότε σε πιάνει ένα ρίγος. Πατάς στις πατημασιές χιλιάδων προγόνων, βαδίζεις τα βήματά τους. Αν ακόμη σκεφτείς ότι είναι ίσως η μοναδική πρωτεύουσα όπου μπορείς να ζήσεις τα πάντα, να κάνεις αυτό το ταξίδι στο χρόνο και, μετά από λίγα χιλιόμετρα, να κάνεις και μια βουτιά στη θάλασσα, τότε την αγαπάς ακόμη περισσότερο!\n\nΦαγητό στην Αθήνα\nΟι Έλληνες ακολουθούν την τυπική μεσογειακή διατροφή, με κάποιες ιδιαιτερότητες που κάνουν την ελληνική κουζίνα ξεχωριστή και ιδιαίτερα νόστιμη. Θα αφεθείτε σε ένα μοναδικό γαστρονομικό ταξίδι που πραγματικά θα σας ενθουσιάσει! Η ελληνική κουζίνα είναι ένας υπέροχος συνδυασμός φρέσκων υλικών, λαχανικών, αρωματικών βοτάνων, όπως το θυμάρι, η μέντα και το δεντρολίβανο, γευστικού ελαιόλαδου, φρέσκων θαλασσινών, αλλά και ντόπιων κρεάτων. Βέβαια, μην παραλείψετε να δοκιμάσετε τα εξαίσια ελληνικά τυριά, και κυρίως τη φέτα. Τα πιο δημοφιλή πιάτα που μπορείτε αν βρείτε οπουδήποτε είναι φυσικά το περίφημο σουβλάκι και ο ελληνικός γύρος, το πιο χαρακτηριστικό και εθνικό φαστ φουντ στην Ελλάδα. Η ελληνική γευστική απόλαυση είναι κάτι που δεν μπορεί να αντικατασταθεί και να βρεθεί σε καμία άλλη κουζίνα. Γι αυτό, αφήστε τον εαυτό σας να ζήσει μια ολοκληρωμένη γαστρονομική εμπειρία, στα υπέροχα ελληνικά εστιατόρια, που θα σας μείνει πραγματικά αξέχαστη! Τα περισσότερα εστιατόρια είναι άξιοι εκπρόσωποι της ελληνικής φιλοξενίας και μπορούν να σας εξυπηρετήσουν άψογα. Ακριβώς όπως τα μπαρ, εστιατόρια και ταβέρνες βρίσκονται παντού στην Αθήνα. Η περιοχή της Πλάκας είναι ίσως η πιο γραφική, αλλά και η περιοχή που δέχεται τους περισσότερους τουρίστες. Η περιοχή του Ψυρρή δεν απέχει πολύ από το Μοναστηράκι με πολλά όμορφα μαγαζιά, φαγάδικα, μεζεδοπωλεία και ταβέρνες με ζωντανή μουσική μέρα και νύχτα. Παρόλο που η ποιότητα του φαγητού είναι κάτι δεδομένο, να είστε προσεχτικοί στην επιλογή προκειμένου να μη βρεθείτε προ εκπλήξεων όταν θα έρθει ο λογαριασμός! Αρκετά εστιατόρια έχουν σε ταμπέλες τόσο το μενού, όσο και τιμές τους. Για αυτό κάντε πρώτα μια βόλτα, πριν αποφασίσετε που θα καθίσετε.\n\nΤι να δείτε στην Αθήνα\nΤο μεγαλύτερο αρχαίο μνημείο της Αθήνας είναι φυσικά η Ακρόπολη. Πάνω από τον ιερό βράχο, μπορείτε να αισθανθείτε σχεδόν το μεγαλείο της αρχαίας Ελλάδας. Άλλοι ενδιαφέροντες αρχαιολογικοί χώροι είναι η αρχαία αγορά, με το ναό του Ηφαίστου ακόμη σε πολύ καλή κατάσταση, όπως επίσης και ο ναός του Δία και η αψίδα του Αδριανού. Στην Αθήνα θα βρούμε τα κυριότερα μουσεία της Ελλάδας όπως το νέο μουσείο της Ακρόπολης, το Εθνικό Αρχαιολογικό Μουσείο, το Λαογραφικό Μουσείο, το Μουσείο Κεραμικού, το Βυζαντινό και Χριστιανικό Μουσείο, το Μουσείο Μουσικής, το Πολεμικό Μουσείο, το Μουσείο Μπενάκη, κλπ. Γενικά, υπάρχουν περίπου 50 μουσεία στην Αθήνα. Ένα δημοφιλές μέρος για ψώνια ή για φαγητό και ποτό είναι η Πλάκα, ακριβώς κάτω από την Ακρόπολη. Θεωρείται αρκετά τουριστικό μέρος, αλλά το γεγονός είναι ότι εδώ μπορείτε να πάρετε μια ιδέα της παλιάς Αθήνας, με χαμηλά κτίρια και μικρούς δρόμους. Στο Μοναστηράκι υπάρχει το περίφημο Γιουσουρούμ, το παζάρι με παλαιοπωλεία και αλλά αντικείμενα. Στην Πλατεία Συντάγματος μπορείτε να επισκεφθείτε το μνημείο του Άγνωστου Στρατιώτη. Εδώ μπορείτε να δείτε τους Ευζώνους της προεδρικής φρουράς και εάν είστε τυχεροί, θα δείτε την αργή και πολύπλοκη αλλαγή της φρουράς μπροστά από το μνημείο του Αγνώστου Στρατιώτη. Το Μέγαρο Μουσικής, έχει πολλές υπέροχες παραστάσεις και το καλοκαίρι γίνονται πολλές παραστάσεις και συναυλίες στο θέατρο Ηρώδου του Αττικού (Ηρώδειο) κάτω από την Ακρόπολη, στο Λυκαβηττό και αλλού.'
+      },
+      gallery: ['/images/music-events/euroleugue-final/euroleugue-final-four.webp']
+    }
+  },
+  {
+    id: 91,
+    title: 'ΤΕΛΙΚΟΣ ARSENAL VS MANCHESTER CITY',
+    destination: 'United Kingdom',
+    category: 'Music & Sports',
+    price: 969,
+    duration: '4 Μέρες',
+    description: 'Τελικός Arsenal vs Manchester City στο Λονδίνο. 4 μέρες με 3 διανυκτερεύσεις, πρόγευμα και εισιτήριο αγώνα. Αναχώρηση 20/03 από Πάφο με Ryanair.',
+    longDescription: 'Ταξίδι στο Λονδίνο για τον τελικό Arsenal vs Manchester City. Διαμονή σε Royal National Hotel, Tavistock Hotel ή Thistle Marble Arch με πρόγευμα. Πτήσεις Ryanair Πάφος–Λονδίνο–Πάφος. Εισιτήριο αγώνα περιλαμβάνεται.',
+    image: '⚽',
+    featured: true,
+    packageType: 'individual',
+    details: {
+      departureDate: '20/03',
+      departureFrom: 'Pafos',
+      destinationFull: 'London, United Kingdom',
+      monthAvailability: 'March',
+      roomType: 'Standard Room',
+      boardBasis: 'Bed & Breakfast',
+      airline: 'Ryanair',
+      includedLuggage: 'Μία αποσκευή 10 kg και μία χειραποσκευή στη καμπίνα του αεροπλάνου',
+      coverImage: '/images/music-events/arsenal-city-soccer/arsenal-city-final-game.webp',
+      thumbnailImage: '/images/music-events/arsenal-city-soccer/arsenal-city-final-game.webp',
+      flights: [
+        { direction: 'Departure', date: '—', route: 'Paphos (PFO) → London Stansted (STN)', flight: 'FR 3132', time: '14:55 → 17:50', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' },
+        { direction: 'Return', date: '—', route: 'London Stansted (STN) → Paphos (PFO)', flight: 'FR 3131', time: '09:10 → 16:05', luggage: 'Περιλαμβάνεται η μεταφορά 1 αποσκευής' }
+      ],
+      hotels: [
+        { name: 'Royal National Hotel - London', stars: 3, roomType: 'Standard Room', image: '/images/music-events/arsenal-city-soccer/royal-national-hotel-london.webp', location: '38-51 Bedford Way, Russell Square, London WC1H 0DG, United Kingdom', boardBasis: 'Bed & Breakfast', prices: { double: 969 }, packagePrice: 1938, departureDate: '20/03', nights: 3 },
+        { name: 'Tavistock Hotel - London', stars: 3, roomType: 'Standard Room', image: '/images/music-events/arsenal-city-soccer/tavistock-hotel-london.webp', location: '48-55 Tavistock Square, London WC1H 9EU, United Kingdom', boardBasis: 'Bed & Breakfast', prices: { double: 999 }, packagePrice: 1998, departureDate: '20/03', nights: 3 },
+        { name: 'Thistle Marble Arch Hotel - London', stars: 4, roomType: 'Standard Room', image: '/images/music-events/arsenal-city-soccer/thistle-marble-arch-hotel-london.webp', location: 'Bryanston St, Marylebone, London W1H 7EH, United Kingdom', boardBasis: 'Bed & Breakfast', prices: { double: 1059 }, packagePrice: 2118, departureDate: '20/03', nights: 3 }
+      ],
+      included: ['Αεροπορικά εισιτήρια Πάφος – Λονδίνο – Πάφος με πτήσεις της Ryan Air', 'Φόροι αεροδρομίων και επίναυλο καυσίμων', '3 διανυκτερεύσεις σε ένα από τα πάνω ξενοδοχεία με πρόγευμα', 'Εισιτήριο αγώνα', 'Μία αποσκευή 10 kg και μία χειραποσκευή στη καμπίνα του αεροπλάνου', 'Υπηρεσίες των αντιπροσώπων μας'],
+      notIncluded: ['Φαγητό και ποτό στη πτήση', 'Αχθοφορικά και φιλοδωρήματα', 'Ότι δεν αναφέρεται ρητά στο πρόγραμμα ή αναφέρεται σαν προαιρετικό ή προτεινόμενο'],
+      note: 'Εισιτήρια αγώνα μπορούν να εξασφαλιστούν και σε διαφορετικές κατηγορίες, αναλόγως της διαθεσιμότητας την ώρα της κράτησης.',
+      cancellationPolicy: 'Σε περίπτωση ακύρωσης μέχρι 150 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση ακύρωσης μετά τις 150 ημέρες και μέχρι 0 ημέρες πριν την ημερομηνία άφιξης, 100 % της συνολικής τιμής θα χρεωθούν. Σε περίπτωση μη εμφάνισης 100 % της συνολικής τιμής θα χρεωθούν.',
+      termsAndConditions: ['Τα πακέτα ενδέχεται να μην ακυρώνονται και να μην επιστρέφονται χρήματα.', 'Οι τιμές των πακέτων ενδέχεται να αλλάζουν λόγω της διαθεσιμότητας την ώρα της κράτησης.', 'Πλήρης εξόφληση με την κράτηση είτε με πιστωτική κάρτα ή μεταφορά μετρητών στον λογαριασμό της εταιρίας μας ή μετρητά στο γραφείο μας.'],
+      program: {
+        introduction: 'Το Λονδίνο, μια πόλη των αντιθέσεων, αποτελεί για αιώνες οικονομικό, πολιτικό και πολιτιστικό κέντρο αναφοράς για όλο τον κόσμο. Πραγματικά πολυπολιτισμική, με δεκάδες επιλογές για κάθε γούστο από παγκοσμίου φήμης γκαλερί τέχνης και θέατρα έως την πολύπλευρη μουσική σκηνή. Μια μίξη Ιστορίας, μοντέρνας αρχιτεκτονικής και κουλτούρας έχει δημιουργήσει μια μοναδική και συνεχώς αναπτυσσόμενη πόλη. Κάντε τα ψώνια σας από τη περίφημη Oxford Street όπου θα βρείτε τις μεγαλύτερες αλυσίδες καταστημάτων. Επισκεφθείτε το μουσείο Madame Tussauds με τα κέρινα ομοιώματα και κάντε μια κρουαζιέρα στον Τάμεση. Το βράδυ διασκεδάστε κάνοντας μια βόλτα στη περίφημη Piccadilly Square και απολαύστε το ποτό σας σε μια από τις παραδοσιακές μπυραρίες της πόλης.'
+      },
+      gallery: ['/images/music-events/arsenal-city-soccer/arsenal-city-final-game.webp']
+    }
   }
 ]
 
@@ -16274,7 +16744,7 @@ const visiblePackages = () => travelPackages.filter(pkg => !pkg.hidden)
 // Map search dropdown regions to package destination values (so "Asia" shows Thailand, Japan, etc.)
 export const REGION_DESTINATIONS = {
   Greece: ['Greece'],
-  Europe: ['Europe', 'Greece', 'Romania', 'Czech Republic', 'Poland', 'Spain', 'France', 'Baltic States', 'Slovakia', 'Turkey', 'Iceland', 'Georgia'],
+  Europe: ['Europe', 'Greece', 'Romania', 'Czech Republic', 'Poland', 'Spain', 'France', 'Italy', 'Hungary', 'Baltic States', 'Slovakia', 'Turkey', 'Iceland', 'Georgia', 'United Kingdom'],
   Asia: ['Thailand', 'Indonesia', 'India', 'Japan', 'South Korea', 'China', 'Bali', 'Asia'],
   'Middle East': ['Middle East', 'UAE', 'Egypt'],
   America: ['America', 'United States', 'Argentina, Brazil', 'Peru'],

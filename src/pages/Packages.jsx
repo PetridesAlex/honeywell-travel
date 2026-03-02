@@ -25,6 +25,8 @@ const slugToCategory = (slug) => {
     'green-monday': 'Green Monday',
     'group-travel': 'Group Travel',
     'mary-special-trips': 'Mary Special Trips',
+    'music-sports': 'Music & Sports',
+    'music-and-sports': 'Music & Sports',
     'sports-events-concerts': 'Sports Events & Concerts',
     'sports-events-and-concerts': 'Sports Events & Concerts',
     'ski-packages': 'Ski Packages',
@@ -95,6 +97,7 @@ function Packages() {
     'Green Monday',
     'Group Travel',
     'Mary Special Trips',
+    'Music & Sports',
     'Sports Events & Concerts',
     'Ski Packages'
   ]

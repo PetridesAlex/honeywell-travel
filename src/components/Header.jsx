@@ -32,6 +32,7 @@ function Header() {
     'Cruises',
     'City Breaks',
     'Exotic Packages',
+    'Music & Sports',
     'Mary Specials Trips'
   ]
 
