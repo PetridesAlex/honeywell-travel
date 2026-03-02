@@ -47,22 +47,19 @@ function ImageCarousel() {
   }, [slides.length])
 
   const current = slides[currentIndex]
-  const currentImage = current?.image
-    ? `url(${current.image}), linear-gradient(135deg, #E31E24 0%, #C41230 100%)`
-    : 'linear-gradient(135deg, #E31E24 0%, #C41230 100%)'
+  const currentImage = current?.image ? `url(${current.image})` : null
 
   return (
     <section className="hero-section" aria-label="Hero">
       <div
         className="hero-bg-single"
         aria-hidden="true"
-        style={{ backgroundImage: currentImage }}
+        style={{ backgroundImage: currentImage || undefined }}
       />
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-content">
         <div className="hero-text-wrap">
           <h2 className="hero-title">{current?.title}</h2>
-          <p className="hero-subtitle">{current?.subtitle}</p>
         </div>
         <button
           type="button"

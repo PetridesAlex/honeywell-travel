@@ -16,6 +16,7 @@ html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  /* Do not set overflow-y so the document has a single natural scroll */
 }
 
 :root {
@@ -44,15 +45,13 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   background-color: #0f0f12;
   overflow-x: hidden;
+  overflow-y: visible;
   cursor: default;
   -webkit-user-select: text;
   user-select: text;
-  /* Smooth scrolling on mobile */
-  -webkit-overflow-scrolling: touch;
   /* Prevent text size adjustment on mobile */
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -79,11 +78,11 @@ textarea {
 }
 
 #root {
-  min-height: 100vh;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background-color: #0f0f12;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 /* Mobile-specific optimizations – smooth scroll, responsive taps, no invisible blockers */
@@ -104,23 +103,38 @@ textarea {
     -webkit-tap-highlight-color: rgba(196, 18, 48, 0.15);
   }
 
+  /* One vertical scrollbar only: document (html) scrolls. No scroll on body, #root, .app, .main-content, hero. */
   html {
     scroll-behavior: auto;
-    /* Reduce 100vh jump on iOS when address bar shows/hides */
     min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
     overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
-    touch-action: manipulation;
-    overflow-x: hidden;
+    touch-action: pan-y pinch-zoom;
   }
 
-  /* Avoid GPU layers on body/root that can cause scroll lag on some iOS/Android */
-  /* #root and body: no transform so the main scroll container stays native */
+  #root {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+
+  .app,
+  .main-content {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+
+  .main-content {
+    min-height: 0;
+  }
 
   /* Disable expensive backdrop-filter on mobile for smoother scroll (modals still work) */
   *[style*="backdrop-filter"],

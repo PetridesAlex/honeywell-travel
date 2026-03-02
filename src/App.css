@@ -1,18 +1,21 @@
 .app {
-  min-height: 100vh;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #000;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .main-content {
-  flex: 1;
+  flex: 1 1 auto;
   width: 100%;
   min-height: 0;
-  /* Prevent browser scroll anchoring jumps to lower content (eg footer). */
+  background-color: #fff;
   overflow-anchor: none;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .page-placeholder {
