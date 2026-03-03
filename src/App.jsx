@@ -26,6 +26,9 @@ import OurWorld from './pages/OurWorld'
 import BlogPostDetail from './pages/BlogPostDetail'
 import './App.css'
 
+const MIN_LOADER_MS = 1800
+const LOADER_EXIT_MS = 650
+
 function AppContent() {
   return (
     <>
@@ -74,16 +77,42 @@ function App() {
   const [loaderExiting, setLoaderExiting] = useState(false)
 
   useEffect(() => {
-    const t = setTimeout(() => {
+    let isMounted = true
+    let minDurationDone = false
+    let pageReady = document.readyState === 'complete'
+
+    const maybeStartExit = () => {
+      if (!isMounted || !minDurationDone || !pageReady) return
       setLoading(false)
       setLoaderExiting(true)
-    }, 1200)
-    return () => clearTimeout(t)
+    }
+
+    const minDurationTimer = setTimeout(() => {
+      minDurationDone = true
+      maybeStartExit()
+    }, MIN_LOADER_MS)
+
+    const handleReady = () => {
+      pageReady = true
+      maybeStartExit()
+    }
+
+    if (!pageReady) {
+      window.addEventListener('load', handleReady, { once: true })
+    } else {
+      handleReady()
+    }
+
+    return () => {
+      isMounted = false
+      clearTimeout(minDurationTimer)
+      window.removeEventListener('load', handleReady)
+    }
   }, [])
 
   useEffect(() => {
     if (!loaderExiting) return
-    const t = setTimeout(() => setLoaderExiting(false), 550)
+    const t = setTimeout(() => setLoaderExiting(false), LOADER_EXIT_MS)
     return () => clearTimeout(t)
   }, [loaderExiting])
 

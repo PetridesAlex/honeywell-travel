@@ -330,6 +330,16 @@ function PackageFullDetail() {
                       return groupEntries.map(([, hotelVariants], groupIndex) => {
                         // Use the first variant for common properties (image, stars, roomType)
                         const baseHotel = hotelVariants[0]
+                        // Remove duplicate departures for the same hotel (keep first occurrence)
+                        const seenDepartureDates = new Set()
+                        const uniqueHotelVariants = hotelVariants.filter((variant) => {
+                          const rawDate = typeof variant.departureDate === 'string' ? variant.departureDate.trim() : ''
+                          if (!rawDate) return true
+                          const normalizedDate = rawDate.toLowerCase()
+                          if (seenDepartureDates.has(normalizedDate)) return false
+                          seenDepartureDates.add(normalizedDate)
+                          return true
+                        })
                         // Create a unique key for this hotel group
                         const hotelKey = `hotel-${groupIndex}`
                         const currentSelection = hotelSelections[hotelKey] || { 
@@ -389,7 +399,7 @@ function PackageFullDetail() {
                                 </div>
                               </div>
                               <div className="hotel-single-right">
-                                {hotelVariants.map((variant, variantIdx) => {
+                                {uniqueHotelVariants.map((variant, variantIdx) => {
                                   // Each variant has completely independent selection
                                   const variantKey = `${hotelKey}-variant-${variantIdx}`
                                   const variantSelectionData = hotelSelections[variantKey]

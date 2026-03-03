@@ -1,0 +1,129 @@
+.popular-packages-section {
+  padding: 2.5rem 0 3rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+}
+
+.popular-packages-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.popular-packages-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.popular-packages-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.popular-packages-header p {
+  margin: 0.65rem auto 0;
+  max-width: 680px;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.popular-category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.popular-category-chip {
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #fff;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.48rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popular-category-chip:hover {
+  border-color: #c41230;
+  color: #9f1239;
+  background: #fff5f7;
+}
+
+.popular-category-chip.active {
+  background: linear-gradient(135deg, #c41230 0%, #e31e24 100%);
+  border-color: #c41230;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(196, 18, 48, 0.25);
+}
+
+.popular-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.popular-packages-actions {
+  margin-top: 1.35rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popular-packages-link {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(135deg, #c41230 0%, #e31e24 100%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-packages-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(196, 18, 48, 0.25);
+}
+
+.popular-packages-link.secondary {
+  color: #9f1239;
+  background: #fff;
+  border: 1px solid #fecdd3;
+}
+
+@media (max-width: 1024px) {
+  .popular-packages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-packages-section {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .popular-packages-container {
+    padding: 0 1rem;
+  }
+
+  .popular-packages-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .popular-packages-header p {
+    font-size: 0.95rem;
+  }
+
+  .popular-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}

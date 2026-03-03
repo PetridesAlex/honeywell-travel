@@ -55,7 +55,7 @@ function PackageCard({ package: pkg }) {
         <h3 className={`package-title${[20, 21, 24].includes(pkg.id) ? ' package-title-green' : ''}`}>{translatedTitle}</h3>
         <p className="package-description">{pkg.description}</p>
         <div className="package-details">
-          <span className="package-duration">⏱️ {pkg.duration}</span>
+          <span className="package-duration">{pkg.duration}</span>
           <span className="package-category">{pkg.category}</span>
         </div>
         <div className="package-footer">

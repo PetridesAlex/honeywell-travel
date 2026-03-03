@@ -3,6 +3,7 @@ import SEO from '../components/SEO'
 import ImageCarousel from '../components/ImageCarousel'
 import CircularGallery from '../components/CircularGallery'
 import SearchSection from '../components/SearchSection'
+import PopularPackagesSection from '../components/PopularPackagesSection'
 import TourPackagesSection from '../components/TourPackagesSection'
 import CruisesSection from '../components/CruisesSection'
 import StatsRewardsSection from '../components/StatsRewardsSection'
@@ -31,6 +32,9 @@ function Home() {
               sharedBackground={sharedBackground} 
               setSharedBackground={setSharedBackground} 
             />
+          </RevealOnScroll>
+          <RevealOnScroll direction="up" delay={40}>
+            <PopularPackagesSection />
           </RevealOnScroll>
           <RevealOnScroll direction="up" delay={80}>
             <div className="tour-packages-section-wrapper">

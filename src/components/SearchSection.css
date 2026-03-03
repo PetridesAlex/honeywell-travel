@@ -180,16 +180,16 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   align-items: stretch;
-  background: linear-gradient(145deg, rgba(6, 21, 35, 0.72) 0%, rgba(6, 21, 35, 0.55) 100%);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   padding: 3rem;
   border-radius: 24px;
   margin: 0 auto 2rem;
   width: 100%;
   max-width: 1100px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid #e2e8f0;
   position: relative;
   z-index: 1;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.12);
 }
 
 .search-form::before {
@@ -199,7 +199,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #E31E24 0%, #C41230 50%, #E31E24 100%);
+  background: linear-gradient(90deg, #0f172a 0%, #334155 35%, #C41230 100%);
   border-radius: 24px 24px 0 0;
 }
 
@@ -209,21 +209,21 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1.75rem;
-  background: rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid #dbe2ea;
   min-height: 130px;
   justify-content: space-between;
   width: 100%;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
 .form-card:focus-within {
-  background: linear-gradient(135deg, rgba(255, 245, 245, 0.99) 0%, rgba(255, 255, 255, 1) 100%);
-  border-color: #E31E24;
-  box-shadow: 0 8px 25px rgba(227, 30, 36, 0.2),
-              0 4px 12px rgba(227, 30, 36, 0.15),
+  background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14),
+              0 4px 12px rgba(196, 18, 48, 0.08),
               inset 0 1px 0 rgba(255, 255, 255, 1);
   transform: translateY(-3px);
 }
@@ -254,8 +254,8 @@
 }
 
 .search-form .form-label {
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65), 0 0 2px rgba(0, 0, 0, 0.45);
+  color: #0f172a;
+  text-shadow: none;
   font-weight: 700;
 }
 
@@ -270,7 +270,7 @@
 
 .form-select {
   padding: 1rem 2.75rem 1rem 1.25rem;
-  border: 2px solid rgba(227, 30, 36, 0.35);
+  border: 2px solid #d1d9e2;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background: white;
   font-size: 1rem;
@@ -285,22 +285,22 @@
   border-radius: 10px;
   width: 100%;
   min-height: 48px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
-              inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08),
+              inset 0 1px 2px rgba(15, 23, 42, 0.03);
 }
 
 .form-select:hover {
-  border-color: #E31E24;
-  box-shadow: 0 4px 12px rgba(227, 30, 36, 0.15),
-              0 2px 6px rgba(227, 30, 36, 0.1);
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12),
+              0 2px 6px rgba(15, 23, 42, 0.08);
   transform: translateY(-1px);
 }
 
 .form-select:focus {
   border-color: #E31E24;
-  box-shadow: 0 4px 16px rgba(227, 30, 36, 0.2),
-              0 2px 8px rgba(227, 30, 36, 0.15),
-              inset 0 0 0 2px rgba(227, 30, 36, 0.1);
+  box-shadow: 0 4px 16px rgba(196, 18, 48, 0.2),
+              0 2px 8px rgba(15, 23, 42, 0.12),
+              inset 0 0 0 2px rgba(227, 30, 36, 0.08);
   outline: none;
 }
 
@@ -315,7 +315,7 @@
   justify-content: center;
   gap: 0.75rem;
   padding: 1.1rem 3.5rem;
-  background: linear-gradient(135deg, #E31E24 0%, #C41230 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 62%, #334155 100%);
   color: white;
   border: none;
   border-radius: 16px;
@@ -324,8 +324,8 @@
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-  box-shadow: 0 8px 25px rgba(227, 30, 36, 0.4),
-              0 4px 12px rgba(227, 30, 36, 0.3),
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.35),
+              0 4px 12px rgba(15, 23, 42, 0.28),
               inset 0 1px 0 rgba(255, 255, 255, 0.2);
   grid-column: 1 / -1;
   justify-self: center;
@@ -354,11 +354,11 @@
 
 .search-button:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(227, 30, 36, 0.5),
-              0 6px 20px rgba(227, 30, 36, 0.4),
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.42),
+              0 6px 20px rgba(15, 23, 42, 0.34),
               inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border-color: #C41230;
-  background: linear-gradient(135deg, #C41230 0%, #E31E24 100%);
+  border-color: #334155;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 62%, #475569 100%);
 }
 
 .search-button:active {
