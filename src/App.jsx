@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './i18n/config' // Initialize i18n
 import Header from './components/Header'
 import AppLoader from './components/AppLoader'
+import CursorAccent from './components/CursorAccent'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -121,6 +122,7 @@ function App() {
   return (
     <Router>
       {showLoader && <AppLoader exiting={loaderExiting} />}
+      <CursorAccent />
       <ScrollToTop />
       <div className="app">
         <AppContent />

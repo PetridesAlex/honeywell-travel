@@ -1,0 +1,40 @@
+.cursor-accent-enabled,
+.cursor-accent-enabled * {
+  cursor: none !important;
+}
+
+.cursor-accent-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 34px;
+  border-radius: 0;
+  border: 1.5px solid rgba(255, 72, 84, 0.98);
+  background: linear-gradient(160deg, rgba(0, 0, 0, 1) 0%, rgba(196, 18, 48, 0.95) 100%);
+  clip-path: polygon(0 0, 0 86%, 22% 67%, 36% 100%, 50% 94%, 37% 61%, 67% 61%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55), 0 0 16px rgba(227, 30, 36, 0.46);
+  pointer-events: none;
+  z-index: 11000;
+  opacity: 1;
+  transition: width 0.03s linear, height 0.03s linear, opacity 0.06s linear, box-shadow 0.03s linear, border-color 0.03s linear;
+  will-change: transform, opacity;
+  transform-origin: top left;
+}
+
+.cursor-accent-ring.is-hover {
+  width: 27px;
+  height: 38px;
+  border-color: #ff6673;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.62), 0 0 22px rgba(227, 30, 36, 0.62);
+}
+
+.cursor-accent-ring.is-hidden {
+  opacity: 0;
+}
+
+@media (pointer: coarse), (max-width: 900px) {
+  .cursor-accent-ring {
+    display: none;
+  }
+}
