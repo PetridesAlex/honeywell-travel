@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import './i18n/config' // Initialize i18n
 import Header from './components/Header'
 import AppLoader from './components/AppLoader'
-import CursorAccent from './components/CursorAccent'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -78,6 +77,12 @@ function App() {
   const [loaderExiting, setLoaderExiting] = useState(false)
 
   useEffect(() => {
+    // Safety cleanup in case old cursor styling class remains after HMR.
+    document.documentElement.classList.remove('cursor-accent-enabled')
+    document.body.classList.remove('cursor-accent-enabled')
+  }, [])
+
+  useEffect(() => {
     let isMounted = true
     let minDurationDone = false
     let pageReady = document.readyState === 'complete'
@@ -122,7 +127,6 @@ function App() {
   return (
     <Router>
       {showLoader && <AppLoader exiting={loaderExiting} />}
-      <CursorAccent />
       <ScrollToTop />
       <div className="app">
         <AppContent />
