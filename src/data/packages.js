@@ -16784,7 +16784,7 @@ export const getPackagesByFilter = (category, destination) => {
     if (destinations) {
       filtered = filtered.filter(pkg => destinations.includes(pkg.destination))
     } else {
-      filtered = filtered.filter(pkg => pkg.destination === destination)
+    filtered = filtered.filter(pkg => pkg.destination === destination)
     }
   }
 

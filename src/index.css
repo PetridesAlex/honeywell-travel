@@ -12,12 +12,13 @@ img,
   -ms-interpolation-mode: bicubic;
 }
 
-/* Only html scrolls – one scrollbar for the whole site */
+/* One normal scrollbar for the whole site – smooth and easy to use; touch-friendly on mobile */
 html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -114,12 +115,12 @@ textarea {
     -webkit-tap-highlight-color: rgba(196, 18, 48, 0.15);
   }
 
-  /* One vertical scrollbar only: document (html) scrolls. No scroll on body, #root, .app, .main-content, hero. */
+  /* Same smooth scroll and one scrollbar on mobile */
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     min-height: -webkit-fill-available;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -128,7 +129,7 @@ textarea {
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
     overflow-y: visible !important;
-    overscroll-behavior-y: contain;
+    overscroll-behavior-y: auto;
     touch-action: pan-y pinch-zoom;
   }
 

@@ -8,6 +8,13 @@ function ImageCarousel() {
 
   const slides = [
     {
+      id: 0,
+      image: '/images/destinations/water-blue-hero.webp',
+      title: 'Welcome to Honeywell Travel',
+      subtitle: '#Live the Experience',
+      location: 'Worldwide'
+    },
+    {
       id: 1,
       image: '/images/destinations/northern-lights.webp',
       title: 'Northern Lights Adventure',
@@ -37,27 +44,35 @@ function ImageCarousel() {
     }
   ]
 
-  // Rotate slides every 5 seconds on all devices
+  // Rotate slides every 8 seconds on all devices
   useEffect(() => {
     if (slides.length <= 1) return
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 8000)
     return () => clearInterval(interval)
   }, [slides.length])
 
   const current = slides[currentIndex]
   const currentImage = current?.image ? `url(${current.image})` : null
 
+  // If the hero ever has scrollable overflow, pass wheel to the page so only the main scrollbar is used
+  const handleWheel = (e) => {
+    const el = e.currentTarget
+    if (el.scrollHeight <= el.clientHeight) return // no overflow, let event bubble to document
+    e.preventDefault()
+    window.scrollBy(0, e.deltaY)
+  }
+
   return (
-    <section className="hero-section" aria-label="Hero">
+    <section className="hero-section" aria-label="Hero" onWheel={handleWheel}>
       <div
         className="hero-bg-single"
         aria-hidden="true"
         style={{ backgroundImage: currentImage || undefined }}
       />
       <div className="hero-overlay" aria-hidden="true" />
-      <div className="hero-content">
+      <div className={`hero-content${currentIndex === 0 ? ' hero-content--welcome' : ''}`}>
         <div className="hero-text-wrap">
           <h2 className="hero-title">{current?.title}</h2>
           <p className="hero-subtitle">{current?.subtitle}</p>

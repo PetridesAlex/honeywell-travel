@@ -1,21 +1,70 @@
+import { useMemo } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
 import SEO from '../components/SEO'
+import { travelPackages } from '../data/packages'
 import './Gallery.css'
 
+/** Original destination images shown in the gallery from the start. */
+const ORIGINAL_DESTINATIONS = [
+  { id: 'orig-iceland', src: '/images/destinations/iceland.webp', title: 'Iceland' },
+  { id: 'orig-thailand', src: '/images/destinations/thailand.webp', title: 'Thailand' },
+  { id: 'orig-australia', src: '/images/destinations/australia.webp', title: 'Australia' },
+  { id: 'orig-south-africa', src: '/images/destinations/capetown.webp', title: 'South Africa' },
+  { id: 'orig-dubai', src: '/images/destinations/dubai.webp', title: 'Dubai' },
+  { id: 'orig-brazil', src: '/images/destinations/brazil.webp', title: 'Brazil' },
+  { id: 'orig-canada', src: '/images/destinations/canada.webp', title: 'Canada' },
+  { id: 'orig-japan', src: '/images/destinations/japan.webp', title: 'Japan' },
+  { id: 'orig-maldives', src: '/images/destinations/maldives.webp', title: 'Maldives' },
+  { id: 'orig-netherlands', src: '/images/destinations/netherlands.webp', title: 'Netherlands' },
+  { id: 'orig-usa', src: '/images/destinations/usa.webp', title: 'United States' }
+]
+
+/** True if the image path looks like a place/destination, not a hotel or room. */
+function isPlaceImage(src) {
+  if (!src || typeof src !== 'string') return false
+  const path = src.toLowerCase()
+  if (path.includes('/hotels/') || path.includes('/hotel/')) return false
+  if (path.includes('-hotel') || path.includes('hotel-') || path.includes('_hotel')) return false
+  if (path.includes('aparthotel') || path.includes('apart-hotel')) return false
+  return true
+}
+
+const MAX_PACKAGE_ITEMS = 12
+
+/** Regions already covered by ORIGINAL_DESTINATIONS (avoid duplicate tiles). */
+const ORIGINAL_TITLES = new Set(
+  ORIGINAL_DESTINATIONS.map((d) => d.title.trim().toLowerCase())
+)
+
+/** One tile per region/country from packages, then merge with original destinations. */
+function useGalleryFromPackages() {
+  return useMemo(() => {
+    const fromPackages = []
+    const seenRegions = new Set(ORIGINAL_TITLES)
+    for (const pkg of travelPackages) {
+      if (fromPackages.length >= MAX_PACKAGE_ITEMS) break
+      const details = pkg.details
+      if (!details) continue
+      const region = (pkg.destination || '').trim()
+      const regionKey = region.toLowerCase()
+      if (!regionKey || seenRegions.has(regionKey)) continue
+      const candidates = [
+        details.coverImage,
+        details.thumbnailImage,
+        ...(Array.isArray(details.gallery) ? details.gallery : [])
+      ].filter(Boolean).filter(isPlaceImage)
+      const src = candidates[0]
+      if (!src) continue
+      seenRegions.add(regionKey)
+      const normalizedSrc = src.startsWith('/') ? src : `/${src}`
+      fromPackages.push({ id: regionKey, src: normalizedSrc, title: region })
+    }
+    return [...ORIGINAL_DESTINATIONS, ...fromPackages]
+  }, [])
+}
+
 function Gallery() {
-  const galleryItems = [
-    { id: 1, src: '/images/destinations/iceland.webp', title: 'Iceland' },
-    { id: 2, src: '/images/destinations/thailand.webp', title: 'Thailand' },
-    { id: 3, src: '/images/destinations/australia.webp', title: 'Australia' },
-    { id: 4, src: '/images/destinations/capetown.webp', title: 'South Africa' },
-    { id: 5, src: '/images/destinations/dubai.webp', title: 'Dubai' },
-    { id: 6, src: '/images/destinations/brazil.webp', title: 'Brazil' },
-    { id: 7, src: '/images/destinations/canada.webp', title: 'Canada' },
-    { id: 8, src: '/images/destinations/japan.webp', title: 'Japan' },
-    { id: 9, src: '/images/destinations/maldives.webp', title: 'Maldives' },
-    { id: 10, src: '/images/destinations/netherlands.webp', title: 'Netherlands' },
-    { id: 11, src: '/images/destinations/usa.webp', title: 'United States' }
-  ]
+  const galleryItems = useGalleryFromPackages()
 
   return (
     <div className="gallery-page">

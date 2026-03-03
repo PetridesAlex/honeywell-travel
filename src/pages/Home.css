@@ -5,11 +5,13 @@
  * - Optimized animations and transitions for 60fps scrolling
  */
 
+/* Do not create a scroll container – only html scrolls the whole page */
 .home-page {
   background-color: transparent;
   font-family: var(--font-sans);
   overflow-x: hidden;
   overflow-y: visible;
+  min-height: 0;
 }
 
 .unified-sections-wrapper {
