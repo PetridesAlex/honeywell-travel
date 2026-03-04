@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getOffersByDestination } from '../data/flightTickets'
+import { sendActionRequest } from '../utils/emailjsClient'
 import './FlightTickets.css'
 
 function FlightTicketsDestination() {
@@ -11,15 +12,18 @@ function FlightTicketsDestination() {
   const [bookingForm, setBookingForm] = useState({
     name: '',
     surname: '',
+    email: '',
     contactNumber: ''
   })
   const [formError, setFormError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const openBookingForm = (offer, departure) => {
     setSelectedDeparture({ offer, departure })
     setBookingForm({
       name: '',
       surname: '',
+      email: '',
       contactNumber: ''
     })
     setFormError('')
@@ -40,18 +44,65 @@ function FlightTicketsDestination() {
 
   const handleBookingSubmit = (event) => {
     event.preventDefault()
+    const emailValue = bookingForm.email.trim()
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const isValid =
       bookingForm.name.trim() &&
       bookingForm.surname.trim() &&
+      emailValue &&
+      emailPattern.test(emailValue) &&
       bookingForm.contactNumber.trim()
 
     if (!isValid) {
-      setFormError('Παρακαλώ συμπληρώστε όνομα, επίθετο και αριθμό επικοινωνίας.')
+      setFormError('Παρακαλώ συμπληρώστε όνομα, επίθετο, έγκυρο email και αριθμό επικοινωνίας.')
       return
     }
 
-    closeBookingForm()
-    window.alert('Ευχαριστούμε! Το αίτημα κράτησης καταχωρήθηκε και θα επικοινωνήσουμε μαζί σας.')
+    const fullName = `${bookingForm.name.trim()} ${bookingForm.surname.trim()}`.trim()
+    const offer = selectedDeparture?.offer
+    const departure = selectedDeparture?.departure
+
+    if (!offer || !departure) {
+      setFormError('Παρουσιάστηκε πρόβλημα με την επιλογή πτήσης. Παρακαλώ δοκιμάστε ξανά.')
+      return
+    }
+
+    setIsSubmitting(true)
+    sendActionRequest({
+      title: 'Flight Ticket Booking Request',
+      packageName: `${offer.title} (${offer.destination})`,
+      message: [
+        `Booking request for flight ticket.`,
+        `Destination: ${offer.destination}`,
+        `Offer: ${offer.title}`,
+        `Airline: ${offer.airline}`,
+        `Departure: ${departure.departureDate} | ${offer.departureFlight.route} | ${offer.departureFlight.time}`,
+        `Return: ${departure.returnDate} | ${offer.returnFlight.route} | ${offer.returnFlight.time}`,
+        `Price: EUR ${departure.price}`,
+        `Availability: ${departure.availability || 'Μόνο 6 καθίσματα!'}`,
+        `Email: ${emailValue}`,
+        `Contact Number: ${bookingForm.contactNumber.trim()}`
+      ].join('\n'),
+      formData: {
+        name: fullName,
+        phone: bookingForm.contactNumber.trim(),
+        email: emailValue,
+        dates: `${departure.departureDate} - ${departure.returnDate}`,
+        people: 'N/A'
+      }
+    }).then((result) => {
+      if (!result?.ok) {
+        setFormError('Η αποστολή απέτυχε. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας στο +357 25828848.')
+        return
+      }
+
+      closeBookingForm()
+      window.alert('Ευχαριστούμε! Το αίτημα κράτησης στάλθηκε με επιτυχία και θα επικοινωνήσουμε μαζί σας.')
+    }).catch(() => {
+      setFormError('Η αποστολή απέτυχε. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας στο +357 25828848.')
+    }).finally(() => {
+      setIsSubmitting(false)
+    })
   }
 
   return (
@@ -163,6 +214,17 @@ function FlightTicketsDestination() {
                   </label>
 
                   <label>
+                    Email
+                    <input
+                      type="email"
+                      name="email"
+                      value={bookingForm.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </label>
+
+                  <label>
                     Contact Number
                     <input
                       type="tel"
@@ -179,8 +241,8 @@ function FlightTicketsDestination() {
                     <button type="button" className="flight-booking-cancel-btn" onClick={closeBookingForm}>
                       Cancel
                     </button>
-                    <button type="submit" className="flight-booking-submit-btn">
-                      Submit
+                    <button type="submit" className="flight-booking-submit-btn" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Submit'}
                     </button>
                   </div>
                 </form>

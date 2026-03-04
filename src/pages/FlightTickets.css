@@ -346,6 +346,12 @@
   color: #fff;
 }
 
+.flight-booking-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: grayscale(0.1);
+}
+
 .flight-tickets-btn {
   text-decoration: none;
   color: #ffffff;
