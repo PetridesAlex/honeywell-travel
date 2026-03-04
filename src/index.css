@@ -20,6 +20,8 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y pinch-zoom;
 }
 
 :root {
@@ -60,6 +62,9 @@ body {
   text-size-adjust: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y pinch-zoom;
 }
 
 body::-webkit-scrollbar,
@@ -76,6 +81,13 @@ body::-webkit-scrollbar,
   overflow-y: visible !important;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app,
+.main-content {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: auto;
 }
 
 /* Ensure buttons and links show pointer and remain clickable; remove 300ms tap delay on mobile */

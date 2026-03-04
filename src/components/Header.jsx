@@ -222,8 +222,10 @@ function Header() {
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
         >
-          <span className="hamburger-box">
-            <span className="hamburger-inner" />
+          <span className="hamburger-icon" aria-hidden="true">
+            <span className="hamburger-line hamburger-line--top" />
+            <span className="hamburger-line hamburger-line--middle" />
+            <span className="hamburger-line hamburger-line--bottom" />
           </span>
         </button>
       </div>
