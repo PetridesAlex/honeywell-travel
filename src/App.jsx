@@ -24,6 +24,8 @@ import BuildYourTrip from './pages/BuildYourTrip'
 import Cruises from './pages/Cruises'
 import OurWorld from './pages/OurWorld'
 import BlogPostDetail from './pages/BlogPostDetail'
+import FlightTickets from './pages/FlightTickets'
+import FlightTicketsDestination from './pages/FlightTicketsDestination'
 import './App.css'
 
 const MIN_LOADER_MS = 1800
@@ -61,6 +63,9 @@ function AppContent() {
           <Route path="/dmc-cyprus" element={<DmcCyprus />} />
           <Route path="/dmc-cyprus/" element={<DmcCyprus />} />
           <Route path="/book-online" element={<BookOnline />} />
+          <Route path="/flight-tickets" element={<FlightTickets />} />
+          <Route path="/flight-tickets/" element={<FlightTickets />} />
+          <Route path="/flight-tickets/:destination" element={<FlightTicketsDestination />} />
           <Route path="/build-your-trip" element={<BuildYourTrip />} />
           <Route path="/build-your-trip/" element={<BuildYourTrip />} />
           <Route path="/car-hire" element={<div className="page-placeholder"><h1>Car Hire</h1><p>Coming soon...</p></div>} />

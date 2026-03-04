@@ -165,22 +165,10 @@ function OurWorld() {
           </div>
           <div className="awards-grid">
             <div className="award-card">
-              <div className="award-icon">🏆</div>
+              <div className="award-icon">🏅</div>
               <h3>Best Travel Management</h3>
               <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2020</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">⭐</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2021</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">🎖️</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2022</span>
+              <span className="award-year">2025</span>
             </div>
             <div className="award-card">
               <div className="award-icon">🌟</div>
@@ -189,10 +177,22 @@ function OurWorld() {
               <span className="award-year">2024</span>
             </div>
             <div className="award-card">
-              <div className="award-icon">🏅</div>
+              <div className="award-icon">🎖️</div>
               <h3>Best Travel Management</h3>
               <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2025</span>
+              <span className="award-year">2022</span>
+            </div>
+            <div className="award-card">
+              <div className="award-icon">⭐</div>
+              <h3>Best Travel Management</h3>
+              <p>Recognized for excellence in travel management services</p>
+              <span className="award-year">2021</span>
+            </div>
+            <div className="award-card">
+              <div className="award-icon">🏆</div>
+              <h3>Best Travel Management</h3>
+              <p>Recognized for excellence in travel management services</p>
+              <span className="award-year">2020</span>
             </div>
           </div>
         </div>
