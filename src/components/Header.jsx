@@ -34,6 +34,7 @@ function Header() {
     'Exotic Packages',
     'Music & Sports',
     'Mary Specials Trips'
+    
   ]
 
   const honeymoonTypes = [
@@ -148,7 +149,7 @@ function Header() {
                 {holidayTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/tour-category/${categoryToSlug(item)}/`}
+                    to={item === 'Cruises' ? '/cruises/' : `/tour-category/${categoryToSlug(item)}/`}
                     className="dropdown-item"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
@@ -267,7 +268,7 @@ function Header() {
                 {holidayTypes.map((item, index) => (
                   <Link 
                     key={index} 
-                    to={`/tour-category/${categoryToSlug(item)}/`}
+                    to={item === 'Cruises' ? '/cruises/' : `/tour-category/${categoryToSlug(item)}/`}
                     className="mobile-dropdown-item"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })

@@ -46,6 +46,8 @@ function AppContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/contact/" element={<Contact />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/tour-category/cruises" element={<Cruises />} />
+          <Route path="/tour-category/cruises/" element={<Cruises />} />
           <Route path="/tour-category/:slug" element={<Packages />} />
           <Route path="/tour-category/:slug/" element={<Packages />} />
           <Route path="/packages/:id" element={<PackageDetail />} />

@@ -22,9 +22,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(0, 191, 255, 0.2) 0%, transparent 50%);
+  background:
+    linear-gradient(rgba(7, 19, 34, 0.45), rgba(7, 19, 34, 0.45)),
+    url("/images/cruises/cover-for-cruises/cruises-hero.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   z-index: 1;
 }
 
@@ -52,11 +55,17 @@
 }
 
 .cruises-hero h1 {
-  font-size: 4rem;
+  font-family: "Poppins", "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: clamp(2.35rem, 6vw, 4.6rem);
   font-weight: 800;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #dbeafe 45%, #bae6fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 10px 32px rgba(2, 6, 23, 0.45);
 }
 
 .cruises-hero p {
@@ -81,6 +90,661 @@
   padding: 4rem 2rem;
   position: relative;
   z-index: 1;
+}
+
+.cruises-category-intro {
+  margin-bottom: 4rem;
+  padding: 2.25rem 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(12, 34, 58, 0.88) 0%, rgba(26, 58, 90, 0.82) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.3);
+}
+
+.cruises-category-intro .section-title {
+  margin-bottom: 1.2rem;
+}
+
+.cruises-category-intro p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 1120px;
+  text-wrap: pretty;
+}
+
+.cruise-packages-overview {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.cruise-packages-overview .section-title {
+  grid-column: 1 / -1;
+  margin-bottom: 0.4rem;
+}
+
+.cruise-hub-card {
+  border-radius: 18px;
+  border: 0;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(10, 27, 46, 0.9) 0%, rgba(18, 50, 80, 0.86) 100%);
+  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.3);
+  width: 100%;
+  margin: 0;
+  backdrop-filter: blur(8px);
+  transition: transform 0.22s ease, box-shadow 0.26s ease;
+}
+
+.cruise-hub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.36);
+}
+
+.cruise-hub-card.is-open {
+  grid-column: 1 / -1;
+}
+
+.cruise-hub-cover {
+  height: 160px;
+  width: calc(100% - 1.1rem);
+  margin: 0.55rem auto 0;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.34);
+  outline: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cruise-hub-content {
+  position: relative;
+  padding: 1.2rem 1.15rem 1.2rem;
+  background: linear-gradient(145deg, rgba(9, 28, 44, 0.9) 0%, rgba(19, 48, 75, 0.84) 100%);
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.cruise-hub-content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, rgba(96, 165, 250, 0.95), rgba(34, 197, 94, 0.75));
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.45);
+}
+
+.cruise-hub-content h3 {
+  margin: 0;
+  font-size: 1.34rem;
+  color: #f8fbff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(2, 6, 23, 0.35);
+}
+
+.cruise-hub-content p {
+  margin: 0.5rem 0 0;
+  color: #dbeafe;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.cruise-hub-content .cruise-package-card-meta {
+  margin-top: 0.8rem;
+  gap: 0.55rem;
+}
+
+.cruise-hub-content .cruise-package-card-meta span {
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(14, 116, 144, 0.28);
+  color: #ecfeff;
+  font-weight: 600;
+}
+
+.cruise-hub-content .cruise-package-card-meta strong {
+  border-color: rgba(74, 222, 128, 0.45);
+  background: rgba(21, 128, 61, 0.26);
+  color: #dcfce7;
+}
+
+.cruise-hub-content .cruise-package-card-btn {
+  margin-top: 0.95rem;
+  border-color: rgba(147, 197, 253, 0.75);
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.95) 0%, rgba(22, 163, 74, 0.92) 100%);
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.25);
+}
+
+.cruise-hub-content .cruise-package-card-btn:hover {
+  box-shadow: 0 14px 28px rgba(6, 182, 212, 0.28);
+}
+
+.cruise-hub-card:nth-of-type(1) .cruise-hub-content::before {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.95), rgba(16, 185, 129, 0.75));
+}
+
+.cruise-hub-card:nth-of-type(2) .cruise-hub-content::before {
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.95), rgba(59, 130, 246, 0.8));
+}
+
+.cruise-hub-card:nth-of-type(3) .cruise-hub-content::before {
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.95), rgba(249, 115, 22, 0.82));
+}
+
+.cruise-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.cruise-packages-grid--nested {
+  padding: 0 1.05rem 1.05rem;
+  margin-top: 0.45rem;
+  border-top: 0;
+  background: linear-gradient(180deg, rgba(6, 18, 32, 0.34) 0%, rgba(10, 27, 46, 0) 100%);
+}
+
+.cruise-packages-grid--nested .cruise-package-card {
+  border: 0;
+  background: linear-gradient(170deg, rgba(8, 30, 48, 0.95) 0%, rgba(15, 55, 84, 0.92) 55%, rgba(8, 30, 48, 0.94) 100%);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.18), 0 12px 30px rgba(2, 6, 23, 0.3);
+}
+
+.cruise-packages-grid--nested .cruise-package-card:hover {
+  border-color: rgba(103, 232, 249, 0.72);
+  box-shadow: 0 18px 38px rgba(6, 182, 212, 0.22), 0 18px 38px rgba(2, 6, 23, 0.28);
+}
+
+.cruise-packages-grid--barcelona {
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+}
+
+.cruise-packages-grid--barcelona .cruise-package-card.is-active {
+  grid-column: auto;
+  width: 100%;
+  justify-self: stretch;
+}
+
+.cruise-hub-empty {
+  border: 1px dashed rgba(191, 219, 254, 0.45);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #dbeafe;
+  background: rgba(30, 64, 175, 0.18);
+  font-weight: 600;
+}
+
+.cruise-package-card {
+  border-radius: 16px;
+  border: 0;
+  overflow: hidden;
+  background: linear-gradient(170deg, rgba(13, 33, 56, 0.96) 0%, rgba(20, 57, 90, 0.92) 55%, rgba(13, 33, 56, 0.94) 100%);
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.34);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cruise-package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(30, 64, 175, 0.28);
+}
+
+.cruise-package-card.is-active {
+  box-shadow: 0 20px 44px rgba(30, 64, 175, 0.34);
+  grid-column: 1 / -1;
+  width: min(920px, 100%);
+  justify-self: center;
+}
+
+.cruise-package-card-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cruise-package-card-image::after {
+  content: none;
+}
+
+.cruise-package-card-content {
+  padding: 1rem 1.02rem 1.05rem;
+}
+
+.cruise-package-card-content h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #f8fafc;
+  letter-spacing: 0.01em;
+}
+
+.cruise-package-card-content p {
+  margin: 0.42rem 0 0;
+  color: #bfdbfe;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cruise-package-card-meta {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #dbeafe;
+}
+
+.cruise-package-card-meta span {
+  border: 1px solid rgba(191, 219, 254, 0.35);
+  background: rgba(30, 64, 175, 0.2);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+
+.cruise-package-card-meta strong {
+  color: #ffffff;
+  font-size: 0.92rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(15, 23, 42, 0.35);
+  border-radius: 999px;
+  padding: 0.22rem 0.58rem;
+}
+
+.cruise-package-card-btn {
+  margin-top: 0.82rem;
+  border: 1px solid rgba(191, 219, 254, 0.65);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.94) 0%, rgba(59, 130, 246, 0.94) 100%);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.52rem 0.92rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(30, 64, 175, 0.26);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+}
+
+.cruise-package-card-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 12px 20px rgba(30, 64, 175, 0.34);
+}
+
+.cruise-package-expanded {
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.15rem 1rem 1.2rem;
+  background: linear-gradient(180deg, rgba(8, 24, 42, 0.55) 0%, rgba(8, 24, 42, 0.2) 100%);
+}
+
+.cruise-featured-offer {
+  margin-bottom: 4.25rem;
+  padding: 2.25rem 2rem;
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(10, 27, 46, 0.92) 0%, rgba(19, 53, 83, 0.86) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.34);
+  color: #fff;
+}
+
+.cruise-featured-cover {
+  position: relative;
+  min-height: 220px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.35);
+}
+
+.cruise-featured-cover-kicker {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.24rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #dbeafe;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(191, 219, 254, 0.45);
+  margin-bottom: 0.55rem;
+}
+
+.cruise-featured-cover h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.25;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, 0.55);
+}
+
+.cruise-featured-region {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  color: #dbeafe;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.8rem;
+}
+
+.cruise-featured-head h2 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.52rem, 3vw, 2.06rem);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: #f8fbff;
+  text-shadow: 0 2px 12px rgba(2, 6, 23, 0.38);
+}
+
+.cruise-featured-subtitle {
+  margin: 0.5rem 0 0;
+  color: #dbeafe;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+}
+
+.cruise-featured-highlight {
+  margin: 0.45rem 0 0;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 10px rgba(2, 6, 23, 0.4);
+}
+
+.cruise-featured-intro {
+  margin: 0.95rem 0 0;
+  color: rgba(241, 245, 249, 0.95);
+  line-height: 1.8;
+  max-width: 1100px;
+  font-size: 1rem;
+  text-wrap: pretty;
+}
+
+.cruise-featured-price {
+  margin-top: 1.05rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.32) 0%, rgba(37, 99, 235, 0.22) 100%);
+  border: 1px solid rgba(147, 197, 253, 0.55);
+  box-shadow: 0 10px 24px rgba(30, 64, 175, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.cruise-featured-price strong {
+  font-size: 1.7rem;
+  line-height: 1;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 8px rgba(15, 23, 42, 0.4);
+}
+
+.cruise-featured-price span:first-child,
+.cruise-featured-price span:last-child {
+  color: #dbeafe;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.cruise-featured-gallery {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.cruise-featured-gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 8px 18px rgba(2, 6, 23, 0.3);
+}
+
+.cruise-gallery-image-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.cruise-gallery-image-btn img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cruise-gallery-image-btn:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.04);
+}
+
+.cruise-image-preview-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1500;
+}
+
+.cruise-image-preview-modal {
+  position: relative;
+  width: min(1000px, 100%);
+  max-height: 90vh;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(191, 219, 254, 0.42);
+  box-shadow: 0 20px 48px rgba(2, 6, 23, 0.45);
+}
+
+.cruise-image-preview-modal img {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  background: #020617;
+}
+
+.cruise-image-preview-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(191, 219, 254, 0.7);
+  background: rgba(2, 6, 23, 0.6);
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cruise-itineraries-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.05rem;
+  align-items: stretch;
+}
+
+.cruise-itinerary-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 16px;
+  padding: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cruise-itinerary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(147, 197, 253, 0.8), rgba(96, 165, 250, 0.35), rgba(147, 197, 253, 0.8));
+}
+
+.cruise-itinerary-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(191, 219, 254, 0.7);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.28);
+}
+
+.cruise-itinerary-card h3 {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 1.08rem;
+}
+
+.cruise-itinerary-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.68rem;
+  flex-wrap: wrap;
+}
+
+.cruise-itinerary-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(191, 219, 254, 0.5);
+  background: rgba(30, 64, 175, 0.26);
+  color: #e2e8f0;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.cruise-itinerary-card ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1.7;
+  color: rgba(248, 250, 252, 0.96);
+  font-size: 0.92rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.cruise-itinerary-card li {
+  position: relative;
+  padding-left: 1.05rem;
+}
+
+.cruise-itinerary-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.2);
+}
+
+.cruise-itinerary-dates {
+  margin-top: auto;
+  padding-top: 0.82rem;
+}
+
+.cruise-itinerary-dates strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #dbeafe;
+  opacity: 0.95;
+}
+
+.cruise-itinerary-dates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+}
+
+.cruise-itinerary-date-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(30, 64, 175, 0.22);
+  border: 1px solid rgba(191, 219, 254, 0.44);
+  color: #e2e8f0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cruise-featured-note {
+  margin: 1.12rem 0 0;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  background: rgba(15, 23, 42, 0.38);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 10px;
+  padding: 0.58rem 0.7rem;
+}
+
+.cruise-details-grid {
+  margin-top: 1.12rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.05rem;
+}
+
+.cruise-details-card {
+  border-radius: 15px;
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.06) 100%);
+  padding: 1.02rem;
+}
+
+.cruise-details-card h3 {
+  margin: 0 0 0.68rem;
+  font-size: 1.05rem;
+  color: #e2e8f0;
+}
+
+.cruise-details-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.72;
+  color: rgba(248, 250, 252, 0.95);
+  font-size: 0.92rem;
 }
 
 /* Benefits Section */
@@ -143,18 +807,25 @@
 
 /* Filters Section */
 .cruises-filters-section {
-  margin-bottom: 4rem;
+  margin: 0 0 2rem;
+}
+
+.cruises-filters-section .section-title {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  letter-spacing: -0.02em;
 }
 
 .cruises-filters {
   display: flex;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(140deg, rgba(9, 28, 44, 0.88) 0%, rgba(18, 54, 86, 0.78) 100%);
+  backdrop-filter: blur(12px);
+  padding: 1.2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.3);
 }
 
 .filter-group {
@@ -166,8 +837,10 @@
 
 .filter-group label {
   font-weight: 700;
-  color: #ffffff;
-  font-size: 0.95rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -178,27 +851,27 @@
 }
 
 .filter-select {
-  padding: 1rem 1.25rem;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  padding: 0.82rem 1rem;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 10px;
+  font-size: 0.96rem;
+  background: rgba(15, 23, 42, 0.35);
+  color: #f8fafc;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .filter-select:hover {
-  border-color: rgba(30, 144, 255, 0.5);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(56, 189, 248, 0.6);
+  background: rgba(15, 23, 42, 0.55);
 }
 
 .filter-select:focus {
   outline: none;
-  border-color: #1E90FF;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.2);
+  border-color: rgba(56, 189, 248, 0.85);
+  background: rgba(15, 23, 42, 0.58);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.24);
 }
 
 .filter-select option {
@@ -375,6 +1048,10 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .cruise-featured-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .cruises-hero h1 {
     font-size: 3rem;
   }
@@ -404,6 +1081,44 @@
 
   .cruises-container {
     padding: 3rem 1rem;
+  }
+
+  .cruise-featured-offer,
+  .cruises-category-intro {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .cruise-featured-cover {
+    min-height: 180px;
+    padding: 1rem;
+  }
+
+  .cruise-featured-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .cruise-featured-gallery img {
+    height: 180px;
+  }
+
+  .cruise-itineraries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cruise-package-card-image {
+    height: 240px;
+  }
+
+  .cruise-packages-grid--barcelona {
+    grid-template-columns: 1fr;
+  }
+
+  .cruise-hub-cover {
+    height: 190px;
+  }
+
+  .cruise-packages-overview {
+    grid-template-columns: 1fr;
   }
 
   .section-title {
