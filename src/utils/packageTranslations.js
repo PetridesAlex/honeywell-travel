@@ -13,6 +13,32 @@ export const getTranslatedPackageTitle = (packageId, originalTitle, i18n) => {
   return originalTitle
 }
 
+const hasGreekCharacters = (value) => /[\u0370-\u03FF\u1F00-\u1FFF]/.test(value || '')
+
+export const getEnglishPackageTitle = (packageId, originalTitle, destination, i18n) => {
+  // Specific naming preferences requested by the business.
+  if (originalTitle?.includes('ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΗ')) {
+    return originalTitle.replaceAll('ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΗ', 'Constantinople')
+  }
+
+  const translationKey = `packages.${packageId}.title`
+  const englishT = i18n?.getFixedT ? i18n.getFixedT('en') : null
+  const translatedEn = englishT ? englishT(translationKey, { defaultValue: null }) : null
+
+  // Prefer explicit English translations when present in i18n.
+  if (translatedEn && translatedEn !== translationKey) {
+    return translatedEn
+  }
+
+  // If title is already non-Greek, keep it as the English line.
+  if (!hasGreekCharacters(originalTitle)) {
+    return originalTitle
+  }
+
+  // Fallback for packages without an English mapping.
+  return destination ? `${destination} Package` : 'Travel Package'
+}
+
 // Helper function to get translated package description
 export const getTranslatedPackageDescription = (packageId, originalDescription, i18n) => {
   const translationKey = `packages.${packageId}.description`

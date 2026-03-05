@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { getTranslatedPackageTitle } from '../utils/packageTranslations'
+import { getEnglishPackageTitle } from '../utils/packageTranslations'
 import './PackageCard.css'
 
 function PackageCard({ package: pkg }) {
   const { i18n } = useTranslation()
-  const translatedTitle = getTranslatedPackageTitle(pkg.id, pkg.title, i18n)
+  const [showEnglishTitle, setShowEnglishTitle] = useState(false)
+  const primaryTitle = pkg.title
+  const englishTitle = getEnglishPackageTitle(pkg.id, pkg.title, pkg.destination, i18n)
+  const canToggleLanguage = Boolean(englishTitle && englishTitle.trim() !== primaryTitle.trim())
+  const displayTitle = showEnglishTitle && canToggleLanguage ? englishTitle : primaryTitle
   
   // From price = lowest double room price per person across all hotels
   const getCheapestPrice = () => {
@@ -51,8 +56,25 @@ function PackageCard({ package: pkg }) {
         {!imageUrl && pkg.image}
       </div>
       <div className="package-content">
-        <div className="package-badge">{pkg.destination}</div>
-        <h3 className={`package-title${[20, 21, 24].includes(pkg.id) ? ' package-title-green' : ''}`}>{translatedTitle}</h3>
+        <div className="package-header-row">
+          <div className="package-badge">{pkg.destination}</div>
+          {canToggleLanguage ? (
+            <button
+              type="button"
+              className="package-language-toggle"
+              onClick={(event) => {
+                event.preventDefault()
+                event.stopPropagation()
+                setShowEnglishTitle((prev) => !prev)
+              }}
+              aria-label={showEnglishTitle ? 'Show Greek title' : 'Show English title'}
+              title={showEnglishTitle ? 'Show Greek title' : 'Show English title'}
+            >
+              {showEnglishTitle ? 'GR' : 'EN'}
+            </button>
+          ) : null}
+        </div>
+        <h3 className={`package-title${[20, 21, 24].includes(pkg.id) ? ' package-title-green' : ''}`}>{displayTitle}</h3>
         <p className="package-description">{pkg.description}</p>
         <div className="package-details">
           <span className="package-duration">{pkg.duration}</span>
