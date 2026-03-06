@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
 import RevealOnScroll from '../components/RevealOnScroll'
 import SEO from '../components/SEO'
+import { sendContactForm } from '../utils/emailjsClient'
 import './Cruises.css'
 
 const cruisePackagesData = [
   {
     id: 'marella-discovery-limassol-2026',
+    cruiseLine: 'marella',
     departureHub: 'limassol',
     cardTitle: 'Marella Discovery - Limassol Roundtrip 2026',
     cardSubtitle: 'Cruises from/to Cyprus',
@@ -103,6 +105,7 @@ const cruisePackagesData = [
   },
   {
     id: 'marella-discovery-malaga-limassol-2026',
+    cruiseLine: 'marella',
     departureHub: 'limassol',
     cardTitle: 'Marella Discovery - Malaga to Limassol',
     cardSubtitle: 'Marella Discovery Repositioning Cruise',
@@ -163,6 +166,7 @@ const cruisePackagesData = [
   },
   {
     id: 'emerald-kaia-limassol-athens-2026',
+    cruiseLine: 'emerald',
     departureHub: 'limassol',
     cardTitle: 'Emerald Kaia - Limassol to Athens',
     cardSubtitle: 'From Cyprus to the Acropolis',
@@ -229,6 +233,7 @@ const cruisePackagesData = [
   },
   {
     id: 'balmoral-limassol-athens-2026',
+    cruiseLine: 'fred-olsen',
     departureHub: 'limassol',
     cardTitle: 'Balmoral - Limassol to Athens',
     cardSubtitle: 'Eastern Mediterranean Discovery',
@@ -293,6 +298,7 @@ const cruisePackagesData = [
   },
   {
     id: 'balmoral-valletta-limassol-2026',
+    cruiseLine: 'fred-olsen',
     departureHub: 'limassol',
     cardTitle: 'Balmoral - Valletta to Limassol',
     cardSubtitle: 'A Mediterranean odyssey',
@@ -364,6 +370,7 @@ const cruisePackagesData = [
   },
   {
     id: 'msc-sinfonia-piraeus-eastern-med-2026',
+    cruiseLine: 'msc',
     departureHub: 'piraeus',
     cardTitle: 'MSC Sinfonia - Eastern Mediterranean',
     cardSubtitle: 'From/To Piraeus, Athens',
@@ -436,6 +443,7 @@ const cruisePackagesData = [
   },
   {
     id: 'msc-fantasia-piraeus-eastern-med-2026',
+    cruiseLine: 'msc',
     departureHub: 'piraeus',
     cardTitle: 'MSC Fantasia - Eastern Mediterranean',
     cardSubtitle: 'From/To Piraeus, Athens',
@@ -515,6 +523,7 @@ const cruisePackagesData = [
   ,
   {
     id: 'costa-fascinosa-piraeus-eastern-med-2026',
+    cruiseLine: 'costa',
     departureHub: 'piraeus',
     cardTitle: 'Costa Fascinosa - Eastern Mediterranean',
     cardSubtitle: 'From/To Piraeus, Athens',
@@ -592,6 +601,7 @@ const cruisePackagesData = [
   },
   {
     id: 'legend-of-the-seas-barcelona-central-med-2027',
+    cruiseLine: 'royal-caribbean',
     departureHub: 'barcelona',
     cardTitle: 'Legend of the Seas - Central Mediterranean',
     cardSubtitle: 'From/To Barcelona',
@@ -672,6 +682,7 @@ const cruisePackagesData = [
   },
   {
     id: 'legend-of-the-seas-civitavecchia-central-med-2027',
+    cruiseLine: 'royal-caribbean',
     departureHub: 'civitavecchia',
     cardTitle: 'Legend of the Seas - Central Mediterranean',
     cardSubtitle: 'From/To Civitavecchia, Rome',
@@ -752,15 +763,17 @@ const cruisePackagesData = [
   },
   {
     id: 'msc-world-europa-genoa-western-med-2026',
+    cruiseLine: 'msc',
     departureHub: 'genoa',
     cardTitle: 'MSC World Europa - Western Mediterranean',
     cardSubtitle: 'From Genoa to Marseille',
     season: 'April 2026 - December 2026',
     nightsText: '7 Nights',
     fromPrice: 561,
-    coverImage: '/images/cruises/msc-world-europa/msc-world-europa-1.webp',
+    coverImage: '/images/cruises/msc-world-europa/msc-world-europa-5.webp',
     coverPosition: 'center 45%',
     gallery: [
+      '/images/cruises/msc-world-europa/msc-world-europa-5.webp',
       '/images/cruises/msc-world-europa/msc-world-europa-1.webp',
       '/images/cruises/msc-world-europa/msc-world-europa-2.webp',
       '/images/cruises/msc-world-europa/msc-world-europa-3.webp',
@@ -820,6 +833,7 @@ const cruisePackagesData = [
   },
   {
     id: 'norwegian-epic-civitavecchia-western-med-2026',
+    cruiseLine: 'norwegian',
     departureHub: 'civitavecchia',
     cardTitle: 'Norwegian Epic - Western Mediterranean',
     cardSubtitle: 'From Civitavecchia, Rome to Barcelona',
@@ -892,7 +906,8 @@ const cruisePackagesData = [
   },
   {
     id: 'msc-lirica-ancona-eastern-med-2026',
-    departureHub: 'msc-cruises',
+    cruiseLine: 'msc',
+    departureHub: 'civitavecchia',
     cardTitle: 'MSC Lirica - Eastern Mediterranean',
     cardSubtitle: 'From/To Ancona',
     season: 'April 2026 - December 2026',
@@ -977,20 +992,1123 @@ const cruisePackagesData = [
       'Suite: On request',
       'Price on request'
     ]
+  },
+  {
+    id: 'msc-grandiosa-port-canaveral-caribbean-2026',
+    cruiseLine: 'msc',
+    departureHub: 'port-canaveral',
+    cardTitle: 'MSC Grandiosa - Central America Caribbean',
+    cardSubtitle: '8 days from/to Port Canaveral',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/msc-grandiosa/msc-grandiosa.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/msc-grandiosa/msc-grandiosa.webp'
+    ],
+    region: 'Caribbean',
+    title: 'Central America Caribbean 8 days from/to Port Canaveral',
+    highlightText: 'On board of MSC Grandiosa',
+    introPrimary:
+      'Sail from Port Canaveral on an 8-day Central America and Caribbean itinerary aboard MSC Grandiosa. Visit Nassau, Ocean Cay MSC Marine Reserve, Cozumel, and Costa Maya with full-board comfort and MSC hospitality.',
+    introSecondary:
+      'This 7-night cruise combines tropical ports, sea days for relaxation, and the amenities of MSC Grandiosa including entertainment, dining, and onboard facilities.',
+    itineraries: [
+      {
+        name: 'Central America Caribbean',
+        days: [
+          'Day 1 Sat: Port Canaveral, Florida - USA | Departure 16:00',
+          'Day 2 Sun: Nassau - Bahamas | 09:00 - 18:00',
+          'Day 3 Mon: Ocean Cay MSC Marine Reserve | 08:00 - 18:00',
+          'Day 4 Tue: Cruising Day',
+          'Day 5 Wed: Cozumel - Mexico | 07:00 - 19:00',
+          'Day 6 Thu: Costa Maya - Mexico | 08:00 - 14:00',
+          'Day 7 Fri: Cruising Day',
+          'Day 8 Sat: Port Canaveral, Florida - USA | Arrival 07:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: MSC Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Hotel Service Charge',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: MSC Grandiosa | Cruise line: MSC Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'msc-seaview-genoa-western-med-2026',
+    cruiseLine: 'msc',
+    departureHub: 'genoa',
+    cardTitle: 'MSC Seaview - Western Mediterranean',
+    cardSubtitle: '8 days from/to Genoa - Best Price at Sea',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/msc-seaview-cruise/msc-seaview-cover.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/msc-seaview-cruise/msc-seaview-cover.webp'
+    ],
+    region: 'Europe',
+    title: 'MSC Package - Western Mediterranean 8 days from/to Genoa - Best Price at Sea',
+    highlightText: 'On board of MSC Seaview',
+    introPrimary:
+      'Discover the Western Mediterranean on an 8-day round trip from Genoa aboard MSC Seaview. Visit Civitavecchia (Rome), Palermo, Ibiza, Barcelona, and Marseille with full-board comfort and MSC hospitality.',
+    introSecondary:
+      'This 7-night cruise includes the Hotel Service Charge and combines iconic ports with sea days, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Western Mediterranean',
+        days: [
+          'Day 1 Sat: Genoa - Italy | Departure 18:00',
+          'Day 2 Sun: Civitavecchia, Rome - Italy | 08:00 - 19:00',
+          'Day 3 Mon: Palermo, Sicily - Italy | 11:00 - 20:00',
+          'Day 4 Tue: Cruising Day',
+          'Day 5 Wed: Ibiza, Balearic Islands - Spain | 11:30 - 23:00',
+          'Day 6 Thu: Barcelona - Spain | 09:00 - 19:00',
+          'Day 7 Fri: Marseille - France | 09:00 - 18:00',
+          'Day 8 Sat: Genoa - Italy | Arrival 09:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: MSC Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Hotel Service Charge',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Personal expenses aboard',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: MSC Seaview | Cruise line: MSC Cruises',
+      'Departures: April 2026 - December 2026',
+      'Passport: Mandatory and valid for at least 6 months after cruise return date',
+      'For hygiene and safety concepts, please refer to current cruise company information',
+      'Special cruise-company terms may apply to selected offers',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'msc-euribia-kiel-norwegian-fjords-2026',
+    cruiseLine: 'msc',
+    departureHub: 'kiel',
+    cardTitle: 'MSC Euribia - Norwegian Fjords',
+    cardSubtitle: '8 days from/to Kiel',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/msc-euribia/msc-euribia-cover.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/msc-euribia/msc-euribia-cover.webp'
+    ],
+    region: 'Europe',
+    title: 'Norwegian Fjords 8 days from/to Kiel',
+    highlightText: 'On board of MSC Euribia',
+    introPrimary:
+      'Explore the Norwegian Fjords on an 8-day round trip from Kiel aboard MSC Euribia. Visit Copenhagen, Hellesylt, Ålesund, and Flåm with full-board comfort and MSC hospitality.',
+    introSecondary:
+      'This 7-night cruise includes the Hotel Service Charge and combines Nordic ports with scenic cruising, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Norwegian Fjords',
+        days: [
+          'Day 1 Sat: Kiel - Germany | Departure 19:00',
+          'Day 2 Sun: Copenhagen - Denmark | 08:00 - 18:00',
+          'Day 3 Mon: Cruising Day',
+          'Day 4 Tue: Hellesylt - Norway | 09:00 - 21:00',
+          'Day 5 Wed: Ålesund - Norway | 07:00 - 17:00',
+          'Day 6 Thu: Flåm - Norway | 07:00 - 18:00',
+          'Day 7 Fri: Cruising Day',
+          'Day 8 Sat: Kiel - Germany | Arrival 09:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: MSC Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Hotel Service Charge',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: MSC Euribia | Cruise line: MSC Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'rhapsody-of-the-seas-piraeus-eastern-med-2027',
+    cruiseLine: 'royal-caribbean',
+    departureHub: 'piraeus',
+    cardTitle: 'Rhapsody of the Seas - Eastern Mediterranean',
+    cardSubtitle: '8 days from/to Piraeus, Athens',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-rhamsody-of-the-sea.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-rhamsody-of-the-sea.webp'
+    ],
+    region: 'Europe',
+    title: 'Eastern Mediterranean 8 days from/to Piraeus, Athens',
+    highlightText: 'On board of Rhapsody of the Seas',
+    introPrimary:
+      'Explore the Eastern Mediterranean on an 8-day round trip from Piraeus (Athens) aboard Rhapsody of the Seas. Visit Santorini, Mykonos, Kusadasi (Ephesus), Bodrum, and Rhodes with full-board comfort and Royal Caribbean hospitality.',
+    introSecondary:
+      'This 7-night cruise combines Greek islands and Turkish coast with a sea day, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Eastern Mediterranean',
+        days: [
+          'Day 1 Fri: Piraeus, Athens - Greece | Departure 17:00',
+          'Day 2 Sat: Santorini - Greece | 07:00 - 22:00',
+          'Day 3 Sun: Mykonos - Greece | 07:00 - 18:00',
+          'Day 4 Mon: Kusadasi, Ephesos - Turkey | 08:00 - 18:00',
+          'Day 5 Tue: Bodrum - Turkey | 08:00 - 17:00',
+          'Day 6 Wed: Rhodes - Greece | 08:00 - 18:00',
+          'Day 7 Thu: Cruising Day',
+          'Day 8 Fri: Piraeus, Athens - Greece | Arrival 05:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Royal Caribbean.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Rhapsody of the Seas | Cruise line: Royal Caribbean',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'liberty-of-the-seas-southampton-atlantic-europe-2026',
+    cruiseLine: 'royal-caribbean',
+    departureHub: 'southampton',
+    cardTitle: 'Liberty of the Seas - Atlantic Europe',
+    cardSubtitle: '8 days from/to Southampton',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-liberty-of-the-sea.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-liberty-of-the-sea.webp'
+    ],
+    region: 'Europe',
+    title: 'Atlantic Europe 8 days from/to Southampton',
+    highlightText: 'On board of Liberty of the Seas',
+    introPrimary:
+      'Discover Atlantic Europe on an 8-day round trip from Southampton aboard Liberty of the Seas. Visit Le Havre (France), Bilbao, La Coruña, and Vigo with full-board comfort and Royal Caribbean hospitality.',
+    introSecondary:
+      'This 7-night cruise combines French and Spanish ports with sea days, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Atlantic Europe',
+        days: [
+          'Day 1 Fri: Southampton - United Kingdom | Departure 17:00',
+          'Day 2 Sat: Le Havre - France | 07:00 - 20:00',
+          'Day 3 Sun: Cruising Day',
+          'Day 4 Mon: Bilbao - Spain | 08:00 - 17:00',
+          'Day 5 Tue: La Coruña - Spain | 09:00 - 19:00',
+          'Day 6 Wed: Vigo - Spain | 07:00 - 16:00',
+          'Day 7 Thu: Cruising Day',
+          'Day 8 Fri: Southampton - United Kingdom | Arrival 05:30'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Royal Caribbean.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Liberty of the Seas | Cruise line: Royal Caribbean',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'mariner-of-the-seas-southampton-atlantic-europe-2027',
+    cruiseLine: 'royal-caribbean',
+    departureHub: 'southampton',
+    cardTitle: 'Mariner of the Seas - Atlantic Europe',
+    cardSubtitle: '8 days from/to Southampton',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-mariner-of-the-seas.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-mariner-of-the-seas.webp'
+    ],
+    region: 'Europe',
+    title: 'Atlantic Europe 8 days from/to Southampton',
+    highlightText: 'On board of Mariner of the Seas',
+    introPrimary:
+      'Discover Atlantic Europe on an 8-day round trip from Southampton aboard Mariner of the Seas. Visit Le Havre (France), Bilbao, La Coruña, and Vigo with full-board comfort and Royal Caribbean hospitality.',
+    introSecondary:
+      'This 7-night cruise combines French and Spanish ports with sea days, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Atlantic Europe',
+        days: [
+          'Day 1 Sun: Southampton - United Kingdom | Departure 17:00',
+          'Day 2 Mon: Le Havre - France | 07:00 - 19:00',
+          'Day 3 Tue: Cruising Day',
+          'Day 4 Wed: Bilbao - Spain | 08:00 - 17:00',
+          'Day 5 Thu: La Coruña - Spain | 09:00 - 19:00',
+          'Day 6 Fri: Vigo - Spain | 07:00 - 16:00',
+          'Day 7 Sat: Cruising Day',
+          'Day 8 Sun: Southampton - United Kingdom | Arrival 05:30'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Cruise: 16.5.27 - 23.5.27 | Operator: Royal Caribbean.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Mariner of the Seas | Cruise line: Royal Caribbean',
+      'Travel time: 16.5.27 - 23.5.27',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'msc-grandiosa-valencia-western-med-2026',
+    cruiseLine: 'msc',
+    departureHub: 'valencia',
+    cardTitle: 'MSC Grandiosa - Western Mediterranean',
+    cardSubtitle: '8 days from/to Valencia',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/msc-grandiosa/msc-grandiosa.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/msc-grandiosa/msc-grandiosa.webp'
+    ],
+    region: 'Europe',
+    title: 'Western Mediterranean 8 days from/to Valencia',
+    highlightText: 'On board of MSC Grandiosa',
+    introPrimary:
+      'Explore the Western Mediterranean on an 8-day round trip from Valencia aboard MSC Grandiosa. Visit Livorno, Civitavecchia (Rome), Genoa, Marseille, and Tarragona with full-board comfort and Hotel Service Charge included.',
+    introSecondary:
+      'This 7-night cruise combines Italian, French and Spanish ports with a sea day, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Western Mediterranean',
+        days: [
+          'Day 1 Sat: Valencia - Spain | Departure 18:00',
+          'Day 2 Sun: Cruising Day',
+          'Day 3 Mon: Livorno - Italy | 07:00 - 20:00',
+          'Day 4 Tue: Civitavecchia, Rome - Italy | 07:00 - 19:00',
+          'Day 5 Wed: Genoa - Italy | 09:00 - 18:00',
+          'Day 6 Thu: Marseille - France | 09:00 - 18:00',
+          'Day 7 Fri: Tarragona - Spain | 09:00 - 18:00',
+          'Day 8 Sat: Valencia - Spain | Arrival 07:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: MSC Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Hotel Service Charge',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Personal expenses aboard',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: MSC Grandiosa | Cruise line: MSC Cruises',
+      'Departures: April 2026 - December 2026',
+      'Passport: Mandatory and valid for at least 6 months after cruise return date',
+      'For hygiene and safety concepts, please refer to current cruise company information',
+      'Special cruise-company terms may apply to selected offers',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'explorer-of-the-seas-ravenna-barcelona-western-med-2026',
+    cruiseLine: 'royal-caribbean',
+    departureHub: 'ravenna',
+    cardTitle: 'Explorer of the Seas - Western Mediterranean',
+    cardSubtitle: '8 days from Ravenna to Barcelona',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-explore-of-the-sea.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-explore-of-the-sea.webp'
+    ],
+    region: 'Europe',
+    title: 'Western Mediterranean 8 days from Ravenna to Barcelona',
+    highlightText: 'On board of Explorer of the Seas',
+    introPrimary:
+      'Sail from Ravenna to Barcelona on an 8-day Western Mediterranean itinerary aboard Explorer of the Seas. Visit Messina, Naples, Civitavecchia (Rome), Ajaccio (Corsica), and Marseille with full-board comfort and Royal Caribbean hospitality.',
+    introSecondary:
+      'This 7-night cruise combines Italian, French and Spanish ports with a sea day, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Western Mediterranean',
+        days: [
+          'Day 1 Sat: Ravenna - Italy | Departure 17:00',
+          'Day 2 Sun: Cruising Day',
+          'Day 3 Mon: Messina, Sicily - Italy | 08:00 - 17:00',
+          'Day 4 Tue: Naples - Italy | 07:00 - 18:00',
+          'Day 5 Wed: Civitavecchia, Rome - Italy | 07:00 - 19:00',
+          'Day 6 Thu: Ajaccio, Corsica - France | 08:00 - 17:00',
+          'Day 7 Fri: Marseille - France | 07:00 - 16:00',
+          'Day 8 Sat: Barcelona - Spain | Arrival 05:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Cruise: 24.10.26 - 31.10.26 | Operator: Royal Caribbean. Departure availability: April - December 2026.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Explorer of the Seas | Cruise line: Royal Caribbean',
+      'Travel time: 24.10.26 - 31.10.26',
+      'Departure availability: April - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'costa-pacifica-barcelona-funchal-canary-2026',
+    cruiseLine: 'costa',
+    departureHub: 'barcelona',
+    cardTitle: 'Costa Pacifica - Canary Islands',
+    cardSubtitle: '7 days from Barcelona to Funchal, Madeira',
+    season: 'April 2026 - December 2026',
+    nightsText: '6 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/costa-fascinosa/Costa-Pacifica-cover.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/costa-fascinosa/Costa-Pacifica-cover.webp'
+    ],
+    region: 'Europe',
+    title: 'Canary Islands 7 days from Barcelona to Funchal, Madeira',
+    highlightText: 'On board of Costa Pacifica',
+    introPrimary:
+      'Sail from Barcelona to Funchal (Madeira) on a 7-day Canary Islands itinerary aboard Costa Pacifica. Visit Alicante, Málaga, Casablanca (Morocco), and Las Palmas with full-board comfort and Costa Cruises hospitality.',
+    introSecondary:
+      'This 6-night cruise combines Spanish and Moroccan ports with a sea day, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Canary Islands',
+        days: [
+          'Day 1 Sat: Barcelona - Spain | Departure 18:00',
+          'Day 2 Sun: Alicante - Spain | 08:00 - 16:00',
+          'Day 3 Mon: Málaga - Spain | 09:00 - 16:00',
+          'Day 4 Tue: Casablanca - Morocco | 07:00 - 19:00',
+          'Day 5 Wed: Cruising Day',
+          'Day 6 Thu: Las Palmas - Spain | 07:00 - 20:00',
+          'Day 7 Fri: Funchal, Madeira Island - Portugal | Arrival 14:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Cruise: 19.12.26 - 25.12.26 | Operator: Costa Cruises. Availability: April - December 2026.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Costa Pacifica | Cruise line: Costa Cruises',
+      'Travel time: 19.12.26 - 25.12.26',
+      'Availability: April - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'costa-smeralda-marseille-savona-western-med-2026',
+    cruiseLine: 'costa',
+    departureHub: 'marseille',
+    cardTitle: 'Costa Smeralda - Western Mediterranean',
+    cardSubtitle: '7 days from Marseille to Savona',
+    season: 'April 2026 - December 2026',
+    nightsText: '6 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/costa-fascinosa/costa-smeralda-cover.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/costa-fascinosa/costa-smeralda-cover.webp'
+    ],
+    region: 'Europe',
+    title: 'Western Mediterranean 7 days from Marseille to Savona',
+    highlightText: 'On board of Costa Smeralda',
+    introPrimary:
+      'Sail from Marseille to Savona on a 7-day Western Mediterranean itinerary aboard Costa Smeralda. Visit Barcelona, La Goulette (Tunisia), Palermo, and Civitavecchia (Rome) with full-board comfort and Costa Cruises hospitality.',
+    introSecondary:
+      'This 6-night cruise combines French, Spanish, Tunisian and Italian ports with sea days, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Western Mediterranean',
+        days: [
+          'Day 1 Sun: Marseille - France | Departure 18:00',
+          'Day 2 Mon: Barcelona - Spain | 09:00 - 18:00',
+          'Day 3 Tue: Cruising Day',
+          'Day 4 Wed: La Goulette / Gulf of Tunis - Tunisia | 08:00 - 19:30',
+          'Day 5 Thu: Palermo, Sicily - Italy | 08:00 - 16:30',
+          'Day 6 Fri: Civitavecchia, Rome - Italy | 08:30 - 19:00',
+          'Day 7 Sat: Savona - Italy | Arrival 08:30'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Costa Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Costa Smeralda | Cruise line: Costa Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'costa-toscana-genoa-western-med-2026',
+    cruiseLine: 'costa',
+    departureHub: 'genoa',
+    cardTitle: 'Costa Toscana - Western Mediterranean',
+    cardSubtitle: '8 days from/to Genoa',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/costa-fascinosa/costa-toscana.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/costa-fascinosa/costa-toscana.webp'
+    ],
+    region: 'Europe',
+    title: 'Western Mediterranean 8 days from/to Genoa',
+    highlightText: 'On board of Costa Toscana',
+    introPrimary:
+      'Explore the Western Mediterranean on an 8-day round trip from Genoa aboard Costa Toscana. Visit Marseille, Barcelona, Cagliari (Sardinia), Naples, and Civitavecchia (Rome) with full-board comfort and Costa Cruises hospitality.',
+    introSecondary:
+      'This 7-night cruise combines French, Spanish and Italian ports with sea days, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Western Mediterranean',
+        days: [
+          'Day 1 Fri: Genoa - Italy | Departure 18:00',
+          'Day 2 Sat: Marseille - France | 09:00 - 18:00',
+          'Day 3 Sun: Barcelona - Spain | 08:30 - 18:00',
+          'Day 4 Mon: Cruising Day',
+          'Day 5 Tue: Cagliari, Sardinia - Italy | 07:00 - 16:00',
+          'Day 6 Wed: Naples - Italy | 09:00 - 19:00',
+          'Day 7 Thu: Civitavecchia, Rome - Italy | 08:30 - 19:00',
+          'Day 8 Fri: Genoa - Italy | Arrival 08:30'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Costa Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Costa Toscana | Cruise line: Costa Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'celestyal-journey-piraeus-eastern-med-2026',
+    cruiseLine: 'celestyal',
+    departureHub: 'piraeus',
+    cardTitle: 'Celestyal Journey - Eastern Mediterranean',
+    cardSubtitle: '8 days from/to Piraeus, Athens',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/celestyal-cruises/celestyal-journey-cruise.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/celestyal-cruises/celestyal-journey-cruise.webp'
+    ],
+    region: 'Europe',
+    title: 'Eastern Mediterranean 8 days from/to Piraeus, Athens',
+    highlightText: 'On board of Celestyal Journey',
+    introPrimary:
+      'Discover the Eastern Mediterranean on an 8-day round trip from Piraeus (Athens) aboard Celestyal Journey. Visit Kusadasi (Ephesus), Rhodes, Agios Nikolaos (Crete), Santorini, Mykonos, and Milos with full-board comfort and Celestyal Cruises hospitality.',
+    introSecondary:
+      'This 7-night cruise combines Greek islands and the Turkish coast with overnight in Mykonos, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Eastern Mediterranean',
+        days: [
+          'Day 1 Sat: Piraeus, Athens - Greece | Departure 17:00',
+          'Day 2 Sun: Kusadasi, Ephesos - Turkey | 08:00 - 18:00',
+          'Day 3 Mon: Rhodes - Greece | 08:00 - 18:00',
+          'Day 4 Tue: Agios Nikolaos, Crete - Greece | 08:00 - 20:00',
+          'Day 5 Wed: Santorini - Greece | 08:00 - 22:00',
+          'Day 6 Thu: Mykonos - Greece | 08:00 (overnight)',
+          'Day 7 Fri: Mykonos - Greece | until 02:00, then Milos - Greece | 08:00 - 18:00',
+          'Day 8 Sat: Piraeus, Athens - Greece | Arrival 08:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Celestyal Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Celestyal Journey | Cruise line: Celestyal Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'celestyal-journey-kusadasi-eastern-med-2026',
+    cruiseLine: 'celestyal',
+    departureHub: 'kusadasi',
+    cardTitle: 'Celestyal Journey - Eastern Mediterranean',
+    cardSubtitle: '8 days from/to Kusadasi',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/celestyal-cruises/celestyal-cruises-cover-2.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/celestyal-cruises/celestyal-cruises-cover-2.webp'
+    ],
+    region: 'Europe',
+    title: 'Eastern Mediterranean 8 days from/to Kusadasi',
+    highlightText: 'On board of Celestyal Journey',
+    introPrimary:
+      'Discover the Eastern Mediterranean on an 8-day round trip from Kusadasi (Ephesus), Turkey, aboard Celestyal Journey. Visit Rhodes, Agios Nikolaos (Crete), Santorini, Mykonos, Milos, and Piraeus (Athens) with full-board comfort and Celestyal Cruises hospitality.',
+    introSecondary:
+      'This 7-night cruise combines Greek islands with a Turkish departure, overnight in Mykonos, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Eastern Mediterranean',
+        days: [
+          'Day 1 Sun: Kusadasi, Ephesos - Turkey | Departure 18:00',
+          'Day 2 Mon: Rhodes - Greece | 08:00 - 18:00',
+          'Day 3 Tue: Agios Nikolaos, Crete - Greece | 08:00 - 20:00',
+          'Day 4 Wed: Santorini - Greece | 08:00 - 22:00',
+          'Day 5 Thu: Mykonos - Greece | 08:00 (overnight)',
+          'Day 6 Fri: Mykonos - Greece | until 02:00, then Milos - Greece | 08:00 - 18:00',
+          'Day 7 Sat: Piraeus, Athens - Greece | 08:00 - 17:00',
+          'Day 8 Sun: Kusadasi, Ephesos - Turkey | Arrival 08:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Celestyal Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Celestyal Journey | Cruise line: Celestyal Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
+  },
+  {
+    id: 'celestyal-journey-agios-nikolaos-eastern-med-2026',
+    cruiseLine: 'celestyal',
+    departureHub: 'agios-nikolaos',
+    cardTitle: 'Celestyal Journey - Eastern Mediterranean',
+    cardSubtitle: '8 days from/to Agios Nikolaos, Crete',
+    season: 'April 2026 - December 2026',
+    nightsText: '7 Nights',
+    fromPrice: 0,
+    coverImage: '/images/cruises/celestyal-cruises/celestyal-cruisescover-3.webp',
+    coverPosition: 'center center',
+    gallery: [
+      '/images/cruises/celestyal-cruises/celestyal-cruisescover-3.webp'
+    ],
+    region: 'Europe',
+    title: 'Eastern Mediterranean 8 days from/to Agios Nikolaos',
+    highlightText: 'On board of Celestyal Journey',
+    introPrimary:
+      'Discover the Eastern Mediterranean on an 8-day round trip from Agios Nikolaos (Crete) aboard Celestyal Journey. Visit Santorini, Mykonos, Milos, Piraeus (Athens), Kusadasi (Ephesus), and Rhodes with full-board comfort and Celestyal Cruises hospitality.',
+    introSecondary:
+      'This 7-night cruise combines Greek islands and the Turkish coast with overnight in Mykonos, onboard entertainment, and use of onboard facilities.',
+    itineraries: [
+      {
+        name: 'Eastern Mediterranean',
+        days: [
+          'Day 1 Tue: Agios Nikolaos, Crete - Greece | Departure 20:00',
+          'Day 2 Wed: Santorini - Greece | 08:00 - 22:00',
+          'Day 3 Thu: Mykonos - Greece | 08:00 (overnight)',
+          'Day 4 Fri: Mykonos - Greece | until 02:00, then Milos - Greece | 08:00 - 18:00',
+          'Day 5 Sat: Piraeus, Athens - Greece | 08:00 - 17:00',
+          'Day 6 Sun: Kusadasi, Ephesos - Turkey | 08:00 - 18:00',
+          'Day 7 Mon: Rhodes - Greece | 08:00 - 18:00',
+          'Day 8 Tue: Agios Nikolaos, Crete - Greece | Arrival 08:00'
+        ],
+        availableDates: 'April 2026 - December 2026'
+      }
+    ],
+    note: 'Various departures from April to December 2026 | Operator: Celestyal Cruises.',
+    includedExcluded: [
+      'Included: Cruise in the cabin category booked',
+      'Included: Full board',
+      'Included: Entertainment program on board',
+      'Included: Use of onboard facilities (extra charges possible)',
+      'Included: Port charges and taxes',
+      'Included: Luggage transportation to/from cabin',
+      'Not included: Arrival and departure',
+      'Not included: Beverages, unless specified',
+      'Not included: Meals and drinks in specialty restaurants',
+      'Not included: Personal expenses aboard',
+      'Not included: Shore excursions',
+      'Not included: Medical service',
+      'Not included: Travel insurances',
+      'Not included: Recommended gratuities',
+      'Not included: Visa, if necessary (extra charges possible)'
+    ],
+    additionalInfo: [
+      'Ship: Celestyal Journey | Cruise line: Celestyal Cruises',
+      'Departures: April 2026 - December 2026',
+      'Pricing: On request'
+    ],
+    pricingAccommodation: [
+      'Inside cabin: On request',
+      'Outside cabin: On request',
+      'Balcony cabin: On request',
+      'Mini Suite: On request',
+      'Suite: On request',
+      'Price on request'
+    ]
   }
 ]
+
+const CRUISE_LINES = [
+  { id: 'msc', label: 'MSC Cruises', description: 'All MSC cruise packages in one place.', coverImage: '/images/cruises/cover-for-cruises/msc-cruises-cover.webp', coverPosition: 'center center', coverSize: 'contain' },
+  { id: 'royal-caribbean', label: 'Royal Caribbean', description: 'Royal Caribbean cruise packages from Barcelona and Civitavecchia.', coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'costa', label: 'Costa Cruises', description: 'Costa cruise packages from Piraeus.', coverImage: '/images/cruises/costa-fascinosa/costa-cruises-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'norwegian', label: 'Norwegian Cruise Line', description: 'Norwegian cruise packages from Civitavecchia.', coverImage: '/images/cruises/norwedjian-cruise/norwejian-cruise-line-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'marella', label: 'Marella Cruises', description: 'Marella cruise packages from Limassol.', coverImage: '/images/cruises/cover-for-cruises/marella-cruise-boat-cover.webp', coverPosition: 'center 42%', coverSize: 'cover' },
+  { id: 'fred-olsen', label: 'Fred Olsen Cruise Lines', description: 'Fred Olsen (Balmoral) cruise packages.', coverImage: '/images/cruises/cover-for-cruises/balmoral-cruise-cover.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'emerald', label: 'Emerald Cruises', description: 'Emerald Kaia cruise packages.', coverImage: '/images/cruises/Emerald-Kaia-cruise/emerald-cruises-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'celestyal', label: 'Celestyal Cruises', description: 'Celestyal Journey cruise packages from Piraeus, Athens.', coverImage: '/images/cruises/celestyal-cruises/celestyal-cruises-logo.webp', coverPosition: 'center center', coverSize: 'cover' }
+]
+
+function CruiseHubCruiseCard({ cruise, isActive, onToggle, onPreviewImage, getIncludedItems, getExcludedItems }) {
+  return (
+    <article className={`cruise-package-card ${isActive ? 'is-active' : ''}`}>
+      <div
+        className="cruise-package-card-image"
+        style={{
+          backgroundImage: `url("${cruise.coverImage}")`,
+          backgroundPosition: cruise.coverPosition || 'center center'
+        }}
+        onClick={onToggle}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle() } }}
+      />
+      <div className="cruise-package-card-content">
+        <h3>{cruise.cardTitle}</h3>
+        <p>{cruise.cardSubtitle}</p>
+        <div className="cruise-package-card-meta">
+          <span>{cruise.nightsText}</span>
+          <span>{cruise.season}</span>
+          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
+        </div>
+        <button type="button" className="cruise-package-card-btn" onClick={onToggle}>
+          {isActive ? 'Hide Cruise Details' : 'View Cruise Details'}
+        </button>
+      </div>
+      {isActive ? (
+        <div className="cruise-package-expanded">
+          <div className="cruise-featured-head">
+            <span className="cruise-featured-region">Region: {cruise.region}</span>
+            <h2>{cruise.title}</h2>
+            <p className="cruise-featured-subtitle">{cruise.season}</p>
+            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
+            <p className="cruise-featured-intro">{cruise.introPrimary}</p>
+            <p className="cruise-featured-intro">{cruise.introSecondary}</p>
+            <div className="cruise-featured-price">
+              <span>{cruise.nightsText} from</span>
+              <strong className={typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? '' : 'cruise-featured-price__value--on-request'}>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
+              <span>per person</span>
+            </div>
+          </div>
+          <div className="cruise-featured-gallery">
+            {cruise.gallery.map((image, index) => (
+              <button
+                type="button"
+                key={image}
+                className="cruise-gallery-image-btn"
+                onClick={() => onPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
+              >
+                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
+              </button>
+            ))}
+          </div>
+          <div className="cruise-itineraries-grid">
+            {cruise.itineraries.map((itinerary, itineraryIndex) => (
+              <article className="cruise-itinerary-card" key={itinerary.name}>
+                <div className="cruise-itinerary-header">
+                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
+                  <h3>{itinerary.name}</h3>
+                </div>
+                <ul>
+                  {itinerary.days.map((day) => (
+                    <li key={day}>{day}</li>
+                  ))}
+                </ul>
+                <div className="cruise-itinerary-dates">
+                  <strong>Available Dates</strong>
+                  <div className="cruise-itinerary-dates-list">
+                    {itinerary.availableDates.split(' / ').map((date) => (
+                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="cruise-featured-note">{cruise.note}</p>
+          <div className="cruise-details-grid">
+            <div className="cruise-details-card">
+              <h3>What&apos;s Included?</h3>
+              <ul>
+                {getIncludedItems(cruise).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            {getExcludedItems(cruise).length ? (
+              <div className="cruise-details-card">
+                <h3>What&apos;s Excluded?</h3>
+                <ul>
+                  {getExcludedItems(cruise).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+            <div className="cruise-details-card">
+              <h3>Additional Information</h3>
+              <ul>
+                {cruise.additionalInfo.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="cruise-details-card">
+              <h3>Pricing / Accommodation</h3>
+              <ul>
+                {cruise.pricingAccommodation.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </article>
+  )
+}
 
 function Cruises() {
   const [selectedPort, setSelectedPort] = useState('Any')
   const [selectedDuration, setSelectedDuration] = useState('Any')
-  const [isLimassolHubOpen, setIsLimassolHubOpen] = useState(false)
-  const [isPiraeusHubOpen, setIsPiraeusHubOpen] = useState(false)
-  const [isBarcelonaHubOpen, setIsBarcelonaHubOpen] = useState(false)
-  const [isCivitavecchiaHubOpen, setIsCivitavecchiaHubOpen] = useState(false)
-  const [isGenoaHubOpen, setIsGenoaHubOpen] = useState(false)
-  const [isMscCruisesHubOpen, setIsMscCruisesHubOpen] = useState(false)
+  const [openCruiseLineHubs, setOpenCruiseLineHubs] = useState(() =>
+    Object.fromEntries(CRUISE_LINES.map((l) => [l.id, false]))
+  )
   const [selectedCruiseId, setSelectedCruiseId] = useState(null)
   const [previewImage, setPreviewImage] = useState(null)
+  const [cruiseEnquiryForm, setCruiseEnquiryForm] = useState({
+    cruiseLine: '',
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+  const [cruiseEnquirySending, setCruiseEnquirySending] = useState(false)
+  const [cruiseEnquirySent, setCruiseEnquirySent] = useState(false)
+  const [cruiseEnquiryError, setCruiseEnquiryError] = useState('')
 
   useEffect(() => {
     if (!selectedCruiseId) return
@@ -1029,18 +2147,20 @@ function Cruises() {
   const filteredCruises = travelPackages.filter(
     (pkg) => pkg.category === 'Cruises' || pkg.category === 'cruises'
   )
-  const limassolCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'limassol')
-  const piraeusCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'piraeus')
-  const barcelonaCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'barcelona')
-  const civitavecchiaCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'civitavecchia')
-  const genoaCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'genoa')
-  const mscCruises = cruisePackagesData.filter((cruise) => cruise.departureHub === 'msc-cruises')
-  const limassolPrices = limassolCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
-  const piraeusPrices = piraeusCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
-  const barcelonaPrices = barcelonaCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
-  const civitavecchiaPrices = civitavecchiaCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
-  const genoaPrices = genoaCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
-  const mscCruisesPrices = mscCruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
+  const cruisesByLine = useMemo(() => {
+    const map = {}
+    CRUISE_LINES.forEach((line) => {
+      map[line.id] = cruisePackagesData.filter((c) => c.cruiseLine === line.id)
+    })
+    return map
+  }, [])
+  const toggleCruiseLineHub = (lineId) => {
+    setOpenCruiseLineHubs((prev) => {
+      const next = { ...prev, [lineId]: !prev[lineId] }
+      if (!next[lineId]) setSelectedCruiseId(null)
+      return next
+    })
+  }
 
   const previewModal = previewImage ? (
     <div
@@ -1064,16 +2184,6 @@ function Cruises() {
   ) : null
   const toggleCruiseDetails = (cruiseId) => {
     setSelectedCruiseId((prev) => (prev === cruiseId ? null : cruiseId))
-  }
-
-  const toggleLimassolHub = () => {
-    setIsLimassolHubOpen((prev) => {
-      const next = !prev
-      if (!next) {
-        setSelectedCruiseId(null)
-      }
-      return next
-    })
   }
 
   const getIncludedItems = (cruise) => {
@@ -1160,1023 +2270,52 @@ function Cruises() {
         </section>
 
         <section className="cruise-packages-overview">
-          <h2 className="section-title">Cruises by Departure Port</h2>
-          <article className={`cruise-hub-card ${isLimassolHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/marella-cruise/marella-1.webp")'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>Cruises from/to Limassol</h3>
-              <p>Browse all available Limassol departures and arrivals in one place.</p>
-              <div className="cruise-package-card-meta">
-                <span>{limassolCruises.length} Cruise Packages</span>
-                <strong>{limassolPrices.length ? `From EUR ${Math.min(...limassolPrices)}` : 'Price On Request'}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={toggleLimassolHub}>
-                {isLimassolHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isLimassolHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested">
-                {limassolCruises.map((cruise) => (
-                  <article
-                    key={cruise.id}
-                    className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                  >
-                    <div
-                      className="cruise-package-card-image"
-                      style={{
-                        backgroundImage: `url("${cruise.coverImage}")`,
-                        backgroundPosition: cruise.coverPosition || 'center center'
-                      }}
-                      onClick={() => toggleCruiseDetails(cruise.id)}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(event) => {
-                        if (event.key === 'Enter' || event.key === ' ') {
-                          event.preventDefault()
-                          toggleCruiseDetails(cruise.id)
-                        }
-                      }}
-                    />
-                    <div className="cruise-package-card-content">
-                      <h3>{cruise.cardTitle}</h3>
-                      <p>{cruise.cardSubtitle}</p>
-                      <div className="cruise-package-card-meta">
-                        <span>{cruise.nightsText}</span>
-                        <span>{cruise.season}</span>
-                        <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                      </div>
-                      <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                        {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                      </button>
-                    </div>
-
-                    {selectedCruiseId === cruise.id ? (
-                      <div className="cruise-package-expanded">
-                        <div className="cruise-featured-head">
-                          <span className="cruise-featured-region">Region: {cruise.region}</span>
-                          <h2>{cruise.title}</h2>
-                          <p className="cruise-featured-subtitle">{cruise.season}</p>
-                          <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                          <p className="cruise-featured-intro">
-                            {cruise.introPrimary}
-                          </p>
-                          <p className="cruise-featured-intro">
-                            {cruise.introSecondary}
-                          </p>
-                          <div className="cruise-featured-price">
-                            <span>{cruise.nightsText} from</span>
-                            <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                            <span>per person</span>
-                          </div>
-                        </div>
-
-                        <div className="cruise-featured-gallery">
-                          {cruise.gallery.map((image, index) => (
-                            <button
-                              type="button"
-                              key={image}
-                              className="cruise-gallery-image-btn"
-                              onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                            >
-                              <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                            </button>
-                          ))}
-                        </div>
-
-                        <div className="cruise-itineraries-grid">
-                          {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                            <article className="cruise-itinerary-card" key={itinerary.name}>
-                              <div className="cruise-itinerary-header">
-                                <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                <h3>{itinerary.name}</h3>
-                              </div>
-                              <ul>
-                                {itinerary.days.map((day) => (
-                                  <li key={day}>{day}</li>
-                                ))}
-                              </ul>
-                              <div className="cruise-itinerary-dates">
-                                <strong>Available Dates</strong>
-                                <div className="cruise-itinerary-dates-list">
-                                  {itinerary.availableDates.split(' / ').map((date) => (
-                                    <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                  ))}
-                                </div>
-                              </div>
-                            </article>
-                          ))}
-                        </div>
-
-                        <p className="cruise-featured-note">
-                          {cruise.note}
-                        </p>
-
-                        <div className="cruise-details-grid">
-                          <div className="cruise-details-card">
-                            <h3>What&apos;s Included?</h3>
-                            <ul>
-                              {getIncludedItems(cruise).map((item) => (
-                                <li key={item}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {getExcludedItems(cruise).length ? (
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Excluded?</h3>
-                              <ul>
-                                {getExcludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                          <div className="cruise-details-card">
-                            <h3>Additional Information</h3>
-                            <ul>
-                              {cruise.additionalInfo.map((item) => (
-                                <li key={item}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <div className="cruise-details-card">
-                            <h3>Pricing / Accommodation</h3>
-                            <ul>
-                              {cruise.pricingAccommodation.map((item) => (
-                                <li key={item}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                  </article>
-                ))}
-              </div>
-            ) : null}
-          </article>
-
-          <article className={`cruise-hub-card ${isPiraeusHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/cover-for-cruises/peiraus-port.webp")',
-                backgroundPosition: 'center 72%',
-                backgroundSize: '92% auto',
-                backgroundRepeat: 'no-repeat'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>Cruises from/to Piraeus</h3>
-              <p>New departures from Piraeus will be listed here.</p>
-              <div className="cruise-package-card-meta">
-                <span>{piraeusCruises.length} Cruise Packages</span>
-                <strong>{piraeusPrices.length ? `From EUR ${Math.min(...piraeusPrices)}` : (piraeusCruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={() => setIsPiraeusHubOpen((prev) => !prev)}>
-                {isPiraeusHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isPiraeusHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested">
-                {piraeusCruises.length === 0 ? (
-                  <div className="cruise-hub-empty">
-                    Piraeus cruise packages will be added here next.
+          <h2 className="section-title">Cruises by Cruise Line</h2>
+          {CRUISE_LINES.filter((line) => cruisesByLine[line.id]?.length > 0).map((line) => {
+            const cruises = cruisesByLine[line.id]
+            const prices = cruises.map((c) => c.fromPrice).filter((v) => typeof v === 'number' && v > 0)
+            const isOpen = openCruiseLineHubs[line.id]
+            return (
+              <article key={line.id} className={`cruise-hub-card ${isOpen ? 'is-open' : ''}`}>
+                <div
+                  className="cruise-hub-cover"
+                  style={{
+                    backgroundImage: `url("${line.coverImage}")`,
+                    backgroundPosition: line.coverPosition || 'center center',
+                    backgroundSize: line.coverSize || 'cover',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                <div className="cruise-hub-content">
+                  <h3>{line.label}</h3>
+                  <p>{line.description}</p>
+                  <div className="cruise-package-card-meta">
+                    <span>{cruises.length} Cruise Package{cruises.length !== 1 ? 's' : ''}</span>
+                    <strong>{prices.length ? `From EUR ${Math.min(...prices)}` : (cruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
                   </div>
-                ) : (
-                  piraeusCruises.map((cruise) => (
-                    <article
-                      key={cruise.id}
-                      className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                    >
-                      <div
-                        className="cruise-package-card-image"
-                        style={{
-                          backgroundImage: `url("${cruise.coverImage}")`,
-                          backgroundPosition: cruise.coverPosition || 'center center'
-                        }}
-                        onClick={() => toggleCruiseDetails(cruise.id)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault()
-                            toggleCruiseDetails(cruise.id)
-                          }
-                        }}
+                  <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseLineHub(line.id)}>
+                    {isOpen ? 'Hide Cruises' : 'View Cruises'}
+                  </button>
+                </div>
+                {isOpen ? (
+                  <div className="cruise-packages-grid cruise-packages-grid--nested">
+                    {cruises.map((cruise) => (
+                      <CruiseHubCruiseCard
+                        key={cruise.id}
+                        cruise={cruise}
+                        isActive={selectedCruiseId === cruise.id}
+                        onToggle={() => toggleCruiseDetails(cruise.id)}
+                        onPreviewImage={setPreviewImage}
+                        getIncludedItems={getIncludedItems}
+                        getExcludedItems={getExcludedItems}
                       />
-                      <div className="cruise-package-card-content">
-                        <h3>{cruise.cardTitle}</h3>
-                        <p>{cruise.cardSubtitle}</p>
-                        <div className="cruise-package-card-meta">
-                          <span>{cruise.nightsText}</span>
-                          <span>{cruise.season}</span>
-                          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                        </div>
-                        <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                          {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                        </button>
-                      </div>
-
-                      {selectedCruiseId === cruise.id ? (
-                        <div className="cruise-package-expanded">
-                          <div className="cruise-featured-head">
-                            <span className="cruise-featured-region">Region: {cruise.region}</span>
-                            <h2>{cruise.title}</h2>
-                            <p className="cruise-featured-subtitle">{cruise.season}</p>
-                            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introPrimary}
-                            </p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introSecondary}
-                            </p>
-                            <div className="cruise-featured-price">
-                              <span>{cruise.nightsText} from</span>
-                              <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                              <span>per person</span>
-                            </div>
-                          </div>
-
-                          <div className="cruise-featured-gallery">
-                            {cruise.gallery.map((image, index) => (
-                              <button
-                                type="button"
-                                key={image}
-                                className="cruise-gallery-image-btn"
-                                onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                              >
-                                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                              </button>
-                            ))}
-                          </div>
-
-                          <div className="cruise-itineraries-grid">
-                            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                              <article className="cruise-itinerary-card" key={itinerary.name}>
-                                <div className="cruise-itinerary-header">
-                                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                  <h3>{itinerary.name}</h3>
-                                </div>
-                                <ul>
-                                  {itinerary.days.map((day) => (
-                                    <li key={day}>{day}</li>
-                                  ))}
-                                </ul>
-                                <div className="cruise-itinerary-dates">
-                                  <strong>Available Dates</strong>
-                                  <div className="cruise-itinerary-dates-list">
-                                    {itinerary.availableDates.split(' / ').map((date) => (
-                                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-
-                          <p className="cruise-featured-note">
-                            {cruise.note}
-                          </p>
-
-                          <div className="cruise-details-grid">
-                          <div className="cruise-details-card">
-                            <h3>What&apos;s Included?</h3>
-                            <ul>
-                              {getIncludedItems(cruise).map((item) => (
-                                <li key={item}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {getExcludedItems(cruise).length ? (
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Excluded?</h3>
-                              <ul>
-                                {getExcludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : null}
-
-                            <div className="cruise-details-card">
-                              <h3>Additional Information</h3>
-                              <ul>
-                                {cruise.additionalInfo.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="cruise-details-card">
-                              <h3>Pricing / Accommodation</h3>
-                              <ul>
-                                {cruise.pricingAccommodation.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </article>
-                  ))
-                )}
-              </div>
-            ) : null}
-          </article>
-
-          <article className={`cruise-hub-card ${isBarcelonaHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/cover-for-cruises/cruise-cover-barcelona.webp")',
-                backgroundPosition: 'center 68%'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>Cruises from/to Barcelona</h3>
-              <p>New departures from Barcelona will be listed here.</p>
-              <div className="cruise-package-card-meta">
-                <span>{barcelonaCruises.length} Cruise Packages</span>
-                <strong>{barcelonaPrices.length ? `From EUR ${Math.min(...barcelonaPrices)}` : (barcelonaCruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={() => setIsBarcelonaHubOpen((prev) => !prev)}>
-                {isBarcelonaHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isBarcelonaHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested cruise-packages-grid--barcelona">
-                {barcelonaCruises.length === 0 ? (
-                  <div className="cruise-hub-empty">
-                    Barcelona cruise packages will be added here next.
+                    ))}
                   </div>
-                ) : (
-                  barcelonaCruises.map((cruise) => (
-                    <article
-                      key={cruise.id}
-                      className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                    >
-                      <div
-                        className="cruise-package-card-image"
-                        style={{
-                          backgroundImage: `url("${cruise.coverImage}")`,
-                          backgroundPosition: cruise.coverPosition || 'center center'
-                        }}
-                        onClick={() => toggleCruiseDetails(cruise.id)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault()
-                            toggleCruiseDetails(cruise.id)
-                          }
-                        }}
-                      />
-                      <div className="cruise-package-card-content">
-                        <h3>{cruise.cardTitle}</h3>
-                        <p>{cruise.cardSubtitle}</p>
-                        <div className="cruise-package-card-meta">
-                          <span>{cruise.nightsText}</span>
-                          <span>{cruise.season}</span>
-                          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                        </div>
-                        <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                          {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                        </button>
-                      </div>
+                ) : null}
+              </article>
+            )
+          })}
 
-                      {selectedCruiseId === cruise.id ? (
-                        <div className="cruise-package-expanded">
-                          <div className="cruise-featured-head">
-                            <span className="cruise-featured-region">Region: {cruise.region}</span>
-                            <h2>{cruise.title}</h2>
-                            <p className="cruise-featured-subtitle">{cruise.season}</p>
-                            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introPrimary}
-                            </p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introSecondary}
-                            </p>
-                            <div className="cruise-featured-price">
-                              <span>{cruise.nightsText} from</span>
-                              <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                              <span>per person</span>
-                            </div>
-                          </div>
-
-                          <div className="cruise-featured-gallery">
-                            {cruise.gallery.map((image, index) => (
-                              <button
-                                type="button"
-                                key={image}
-                                className="cruise-gallery-image-btn"
-                                onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                              >
-                                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                              </button>
-                            ))}
-                          </div>
-
-                          <div className="cruise-itineraries-grid">
-                            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                              <article className="cruise-itinerary-card" key={itinerary.name}>
-                                <div className="cruise-itinerary-header">
-                                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                  <h3>{itinerary.name}</h3>
-                                </div>
-                                <ul>
-                                  {itinerary.days.map((day) => (
-                                    <li key={day}>{day}</li>
-                                  ))}
-                                </ul>
-                                <div className="cruise-itinerary-dates">
-                                  <strong>Available Dates</strong>
-                                  <div className="cruise-itinerary-dates-list">
-                                    {itinerary.availableDates.split(' / ').map((date) => (
-                                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-
-                          <p className="cruise-featured-note">
-                            {cruise.note}
-                          </p>
-
-                          <div className="cruise-details-grid">
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Included?</h3>
-                              <ul>
-                                {getIncludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            {getExcludedItems(cruise).length ? (
-                              <div className="cruise-details-card">
-                                <h3>What&apos;s Excluded?</h3>
-                                <ul>
-                                  {getExcludedItems(cruise).map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : null}
-
-                            <div className="cruise-details-card">
-                              <h3>Additional Information</h3>
-                              <ul>
-                                {cruise.additionalInfo.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="cruise-details-card">
-                              <h3>Pricing / Accommodation</h3>
-                              <ul>
-                                {cruise.pricingAccommodation.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </article>
-                  ))
-                )}
-              </div>
-            ) : null}
-          </article>
-
-          <article className={`cruise-hub-card ${isCivitavecchiaHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/cover-for-cruises/rome-civita-port.webp")',
-                backgroundPosition: 'center 52%'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>Cruises from/to Civitavecchia</h3>
-              <p>New departures from Civitavecchia, Rome will be listed here.</p>
-              <div className="cruise-package-card-meta">
-                <span>{civitavecchiaCruises.length} Cruise Packages</span>
-                <strong>{civitavecchiaPrices.length ? `From EUR ${Math.min(...civitavecchiaPrices)}` : (civitavecchiaCruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={() => setIsCivitavecchiaHubOpen((prev) => !prev)}>
-                {isCivitavecchiaHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isCivitavecchiaHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested cruise-packages-grid--barcelona">
-                {civitavecchiaCruises.length === 0 ? (
-                  <div className="cruise-hub-empty">
-                    Civitavecchia cruise packages will be added here next.
-                  </div>
-                ) : (
-                  civitavecchiaCruises.map((cruise) => (
-                    <article
-                      key={cruise.id}
-                      className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                    >
-                      <div
-                        className="cruise-package-card-image"
-                        style={{
-                          backgroundImage: `url("${cruise.coverImage}")`,
-                          backgroundPosition: cruise.coverPosition || 'center center'
-                        }}
-                        onClick={() => toggleCruiseDetails(cruise.id)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault()
-                            toggleCruiseDetails(cruise.id)
-                          }
-                        }}
-                      />
-                      <div className="cruise-package-card-content">
-                        <h3>{cruise.cardTitle}</h3>
-                        <p>{cruise.cardSubtitle}</p>
-                        <div className="cruise-package-card-meta">
-                          <span>{cruise.nightsText}</span>
-                          <span>{cruise.season}</span>
-                          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                        </div>
-                        <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                          {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                        </button>
-                      </div>
-
-                      {selectedCruiseId === cruise.id ? (
-                        <div className="cruise-package-expanded">
-                          <div className="cruise-featured-head">
-                            <span className="cruise-featured-region">Region: {cruise.region}</span>
-                            <h2>{cruise.title}</h2>
-                            <p className="cruise-featured-subtitle">{cruise.season}</p>
-                            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introPrimary}
-                            </p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introSecondary}
-                            </p>
-                            <div className="cruise-featured-price">
-                              <span>{cruise.nightsText} from</span>
-                              <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                              <span>per person</span>
-                            </div>
-                          </div>
-
-                          <div className="cruise-featured-gallery">
-                            {cruise.gallery.map((image, index) => (
-                              <button
-                                type="button"
-                                key={image}
-                                className="cruise-gallery-image-btn"
-                                onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                              >
-                                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                              </button>
-                            ))}
-                          </div>
-
-                          <div className="cruise-itineraries-grid">
-                            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                              <article className="cruise-itinerary-card" key={itinerary.name}>
-                                <div className="cruise-itinerary-header">
-                                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                  <h3>{itinerary.name}</h3>
-                                </div>
-                                <ul>
-                                  {itinerary.days.map((day) => (
-                                    <li key={day}>{day}</li>
-                                  ))}
-                                </ul>
-                                <div className="cruise-itinerary-dates">
-                                  <strong>Available Dates</strong>
-                                  <div className="cruise-itinerary-dates-list">
-                                    {itinerary.availableDates.split(' / ').map((date) => (
-                                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-
-                          <p className="cruise-featured-note">
-                            {cruise.note}
-                          </p>
-
-                          <div className="cruise-details-grid">
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Included?</h3>
-                              <ul>
-                                {getIncludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            {getExcludedItems(cruise).length ? (
-                              <div className="cruise-details-card">
-                                <h3>What&apos;s Excluded?</h3>
-                                <ul>
-                                  {getExcludedItems(cruise).map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : null}
-
-                            <div className="cruise-details-card">
-                              <h3>Additional Information</h3>
-                              <ul>
-                                {cruise.additionalInfo.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="cruise-details-card">
-                              <h3>Pricing / Accommodation</h3>
-                              <ul>
-                                {cruise.pricingAccommodation.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </article>
-                  ))
-                )}
-              </div>
-            ) : null}
-          </article>
-
-          <article className={`cruise-hub-card ${isGenoaHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/cover-for-cruises/genoa-port-cruise.webp")',
-                backgroundPosition: 'center 46%'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>Cruises from/to Genoa</h3>
-              <p>New departures from Genoa will be listed here.</p>
-              <div className="cruise-package-card-meta">
-                <span>{genoaCruises.length} Cruise Packages</span>
-                <strong>{genoaPrices.length ? `From EUR ${Math.min(...genoaPrices)}` : (genoaCruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={() => setIsGenoaHubOpen((prev) => !prev)}>
-                {isGenoaHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isGenoaHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested cruise-packages-grid--barcelona">
-                {genoaCruises.length === 0 ? (
-                  <div className="cruise-hub-empty">
-                    Genoa cruise packages will be added here next.
-                  </div>
-                ) : (
-                  genoaCruises.map((cruise) => (
-                    <article
-                      key={cruise.id}
-                      className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                    >
-                      <div
-                        className="cruise-package-card-image"
-                        style={{
-                          backgroundImage: `url("${cruise.coverImage}")`,
-                          backgroundPosition: cruise.coverPosition || 'center center'
-                        }}
-                        onClick={() => toggleCruiseDetails(cruise.id)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault()
-                            toggleCruiseDetails(cruise.id)
-                          }
-                        }}
-                      />
-                      <div className="cruise-package-card-content">
-                        <h3>{cruise.cardTitle}</h3>
-                        <p>{cruise.cardSubtitle}</p>
-                        <div className="cruise-package-card-meta">
-                          <span>{cruise.nightsText}</span>
-                          <span>{cruise.season}</span>
-                          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                        </div>
-                        <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                          {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                        </button>
-                      </div>
-
-                      {selectedCruiseId === cruise.id ? (
-                        <div className="cruise-package-expanded">
-                          <div className="cruise-featured-head">
-                            <span className="cruise-featured-region">Region: {cruise.region}</span>
-                            <h2>{cruise.title}</h2>
-                            <p className="cruise-featured-subtitle">{cruise.season}</p>
-                            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introPrimary}
-                            </p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introSecondary}
-                            </p>
-                            <div className="cruise-featured-price">
-                              <span>{cruise.nightsText} from</span>
-                              <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                              <span>per person</span>
-                            </div>
-                          </div>
-
-                          <div className="cruise-featured-gallery">
-                            {cruise.gallery.map((image, index) => (
-                              <button
-                                type="button"
-                                key={image}
-                                className="cruise-gallery-image-btn"
-                                onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                              >
-                                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                              </button>
-                            ))}
-                          </div>
-
-                          <div className="cruise-itineraries-grid">
-                            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                              <article className="cruise-itinerary-card" key={itinerary.name}>
-                                <div className="cruise-itinerary-header">
-                                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                  <h3>{itinerary.name}</h3>
-                                </div>
-                                <ul>
-                                  {itinerary.days.map((day) => (
-                                    <li key={day}>{day}</li>
-                                  ))}
-                                </ul>
-                                <div className="cruise-itinerary-dates">
-                                  <strong>Available Dates</strong>
-                                  <div className="cruise-itinerary-dates-list">
-                                    {itinerary.availableDates.split(' / ').map((date) => (
-                                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-
-                          <p className="cruise-featured-note">
-                            {cruise.note}
-                          </p>
-
-                          <div className="cruise-details-grid">
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Included?</h3>
-                              <ul>
-                                {getIncludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            {getExcludedItems(cruise).length ? (
-                              <div className="cruise-details-card">
-                                <h3>What&apos;s Excluded?</h3>
-                                <ul>
-                                  {getExcludedItems(cruise).map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : null}
-
-                            <div className="cruise-details-card">
-                              <h3>Additional Information</h3>
-                              <ul>
-                                {cruise.additionalInfo.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="cruise-details-card">
-                              <h3>Pricing / Accommodation</h3>
-                              <ul>
-                                {cruise.pricingAccommodation.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </article>
-                  ))
-                )}
-              </div>
-            ) : null}
-          </article>
-
-          <article className={`cruise-hub-card ${isMscCruisesHubOpen ? 'is-open' : ''}`}>
-            <div
-              className="cruise-hub-cover"
-              style={{
-                backgroundImage: 'url("/images/cruises/cover-for-cruises/msc-cruises-cover.webp")',
-                backgroundPosition: 'center center',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat'
-              }}
-            />
-            <div className="cruise-hub-content">
-              <h3>MSC Cruises</h3>
-              <p>MSC cruise packages will be listed here.</p>
-              <div className="cruise-package-card-meta">
-                <span>{mscCruises.length} Cruise Packages</span>
-                <strong>{mscCruisesPrices.length ? `From EUR ${Math.min(...mscCruisesPrices)}` : (mscCruises.length ? 'Price On Request' : 'Coming Soon')}</strong>
-              </div>
-              <button type="button" className="cruise-package-card-btn" onClick={() => setIsMscCruisesHubOpen((prev) => !prev)}>
-                {isMscCruisesHubOpen ? 'Hide Cruises' : 'View Cruises'}
-              </button>
-            </div>
-
-            {isMscCruisesHubOpen ? (
-              <div className="cruise-packages-grid cruise-packages-grid--nested cruise-packages-grid--barcelona">
-                {mscCruises.length === 0 ? (
-                  <div className="cruise-hub-empty">
-                    MSC cruise packages will be added here next.
-                  </div>
-                ) : (
-                  mscCruises.map((cruise) => (
-                    <article
-                      key={cruise.id}
-                      className={`cruise-package-card ${selectedCruiseId === cruise.id ? 'is-active' : ''}`}
-                    >
-                      <div
-                        className="cruise-package-card-image"
-                        style={{
-                          backgroundImage: `url("${cruise.coverImage}")`,
-                          backgroundPosition: cruise.coverPosition || 'center center'
-                        }}
-                        onClick={() => toggleCruiseDetails(cruise.id)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ' ') {
-                            event.preventDefault()
-                            toggleCruiseDetails(cruise.id)
-                          }
-                        }}
-                      />
-                      <div className="cruise-package-card-content">
-                        <h3>{cruise.cardTitle}</h3>
-                        <p>{cruise.cardSubtitle}</p>
-                        <div className="cruise-package-card-meta">
-                          <span>{cruise.nightsText}</span>
-                          <span>{cruise.season}</span>
-                          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-                        </div>
-                        <button type="button" className="cruise-package-card-btn" onClick={() => toggleCruiseDetails(cruise.id)}>
-                          {selectedCruiseId === cruise.id ? 'Hide Cruise Details' : 'View Cruise Details'}
-                        </button>
-                      </div>
-
-                      {selectedCruiseId === cruise.id ? (
-                        <div className="cruise-package-expanded">
-                          <div className="cruise-featured-head">
-                            <span className="cruise-featured-region">Region: {cruise.region}</span>
-                            <h2>{cruise.title}</h2>
-                            <p className="cruise-featured-subtitle">{cruise.season}</p>
-                            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introPrimary}
-                            </p>
-                            <p className="cruise-featured-intro">
-                              {cruise.introSecondary}
-                            </p>
-                            <div className="cruise-featured-price">
-                              <span>{cruise.nightsText} from</span>
-                              <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-                              <span>per person</span>
-                            </div>
-                          </div>
-
-                          <div className="cruise-featured-gallery">
-                            {cruise.gallery.map((image, index) => (
-                              <button
-                                type="button"
-                                key={image}
-                                className="cruise-gallery-image-btn"
-                                onClick={() => setPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-                              >
-                                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-                              </button>
-                            ))}
-                          </div>
-
-                          <div className="cruise-itineraries-grid">
-                            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-                              <article className="cruise-itinerary-card" key={itinerary.name}>
-                                <div className="cruise-itinerary-header">
-                                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                                  <h3>{itinerary.name}</h3>
-                                </div>
-                                <ul>
-                                  {itinerary.days.map((day) => (
-                                    <li key={day}>{day}</li>
-                                  ))}
-                                </ul>
-                                <div className="cruise-itinerary-dates">
-                                  <strong>Available Dates</strong>
-                                  <div className="cruise-itinerary-dates-list">
-                                    {itinerary.availableDates.split(' / ').map((date) => (
-                                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                                    ))}
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-
-                          <p className="cruise-featured-note">
-                            {cruise.note}
-                          </p>
-
-                          <div className="cruise-details-grid">
-                            <div className="cruise-details-card">
-                              <h3>What&apos;s Included?</h3>
-                              <ul>
-                                {getIncludedItems(cruise).map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            {getExcludedItems(cruise).length ? (
-                              <div className="cruise-details-card">
-                                <h3>What&apos;s Excluded?</h3>
-                                <ul>
-                                  {getExcludedItems(cruise).map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : null}
-
-                            <div className="cruise-details-card">
-                              <h3>Additional Information</h3>
-                              <ul>
-                                {cruise.additionalInfo.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-
-                            <div className="cruise-details-card">
-                              <h3>Pricing / Accommodation</h3>
-                              <ul>
-                                {cruise.pricingAccommodation.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ) : null}
-                    </article>
-                  ))
-                )}
-              </div>
-            ) : null}
-          </article>
         </section>
 
         {previewModal ? createPortal(previewModal, document.body) : null}
@@ -2278,6 +2417,131 @@ function Cruises() {
               <p>Experience the beauty of Scandinavian fjords and Baltic capitals</p>
             </div>
           </div>
+        </section>
+
+        {/* Cruise Enquiry Form */}
+        <section className="cruise-enquiry-section">
+          <h2 className="section-title">Cruise Enquiry</h2>
+          <p className="cruise-enquiry-intro">Tell us which cruise line you&apos;re interested in and we&apos;ll get back to you with availability and the best prices.</p>
+          {cruiseEnquirySent ? (
+            <div className="cruise-enquiry-success">
+              <p>Thank you. We&apos;ve received your cruise enquiry and will contact you shortly.</p>
+            </div>
+          ) : (
+            <form
+              className="cruise-enquiry-form"
+              onSubmit={async (e) => {
+                e.preventDefault()
+                setCruiseEnquiryError('')
+                setCruiseEnquirySending(true)
+                const cruiseLineLabel = CRUISE_LINES.find((l) => l.id === cruiseEnquiryForm.cruiseLine)?.label ?? (cruiseEnquiryForm.cruiseLine || 'Not specified')
+                const messageLines = [
+                  `Cruise line: ${cruiseLineLabel}`,
+                  cruiseEnquiryForm.message ? `\nMessage:\n${cruiseEnquiryForm.message}` : ''
+                ].filter(Boolean).join('')
+                const result = await sendContactForm({
+                  title: 'Cruise Enquiry',
+                  name: cruiseEnquiryForm.name || 'Not provided',
+                  email: cruiseEnquiryForm.email || '',
+                  phone: cruiseEnquiryForm.phone || '',
+                  package: cruiseLineLabel,
+                  message: messageLines || 'No additional message.'
+                })
+                setCruiseEnquirySending(false)
+                if (result.ok) {
+                  setCruiseEnquirySent(true)
+                  setCruiseEnquiryForm({ cruiseLine: '', name: '', email: '', phone: '', message: '' })
+                } else {
+                  setCruiseEnquiryError(result.error || 'Something went wrong. Please try again.')
+                }
+              }}
+            >
+              <div className="cruise-enquiry-fields">
+                <div className="filter-group cruise-enquiry-field">
+                  <label htmlFor="cruise-enquiry-line">
+                    <span className="filter-icon">🚢</span>
+                    Cruise line
+                  </label>
+                  <select
+                    id="cruise-enquiry-line"
+                    value={cruiseEnquiryForm.cruiseLine}
+                    onChange={(e) => setCruiseEnquiryForm((prev) => ({ ...prev, cruiseLine: e.target.value }))}
+                    className="filter-select"
+                    required
+                  >
+                    <option value="">Select a cruise line</option>
+                    {CRUISE_LINES.filter((line) => cruisesByLine[line.id]?.length > 0).map((line) => (
+                      <option key={line.id} value={line.id}>
+                        {line.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="filter-group cruise-enquiry-field">
+                  <label htmlFor="cruise-enquiry-name">Name</label>
+                  <input
+                    id="cruise-enquiry-name"
+                    type="text"
+                    name="name"
+                    value={cruiseEnquiryForm.name}
+                    onChange={(e) => setCruiseEnquiryForm((prev) => ({ ...prev, name: e.target.value }))}
+                    className="filter-select cruise-enquiry-input"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div className="filter-group cruise-enquiry-field">
+                  <label htmlFor="cruise-enquiry-email">Email</label>
+                  <input
+                    id="cruise-enquiry-email"
+                    type="email"
+                    name="email"
+                    value={cruiseEnquiryForm.email}
+                    onChange={(e) => setCruiseEnquiryForm((prev) => ({ ...prev, email: e.target.value }))}
+                    className="filter-select cruise-enquiry-input"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div className="filter-group cruise-enquiry-field">
+                  <label htmlFor="cruise-enquiry-phone">Phone (optional)</label>
+                  <input
+                    id="cruise-enquiry-phone"
+                    type="tel"
+                    name="phone"
+                    value={cruiseEnquiryForm.phone}
+                    onChange={(e) => setCruiseEnquiryForm((prev) => ({ ...prev, phone: e.target.value }))}
+                    className="filter-select cruise-enquiry-input"
+                    placeholder="+357 ..."
+                  />
+                </div>
+              </div>
+              <div className="filter-group cruise-enquiry-field cruise-enquiry-message-wrap">
+                <label htmlFor="cruise-enquiry-message">Message (optional)</label>
+                <textarea
+                  id="cruise-enquiry-message"
+                  name="message"
+                  value={cruiseEnquiryForm.message}
+                  onChange={(e) => setCruiseEnquiryForm((prev) => ({ ...prev, message: e.target.value }))}
+                  className="filter-select cruise-enquiry-textarea"
+                  placeholder="e.g. preferred dates, number of guests, cabin preference..."
+                  rows={4}
+                />
+              </div>
+              {cruiseEnquiryError ? (
+                <p className="cruise-enquiry-error" role="alert">
+                  {cruiseEnquiryError}
+                </p>
+              ) : null}
+              <button
+                type="submit"
+                className="cruise-package-card-btn cruise-enquiry-submit"
+                disabled={cruiseEnquirySending}
+              >
+                {cruiseEnquirySending ? 'Sending...' : 'Send Cruise Enquiry'}
+              </button>
+            </form>
+          )}
         </section>
       </div>
       </RevealOnScroll>

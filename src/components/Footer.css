@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
   color: #ffffff;
   padding: 6rem 0 0;
-  margin-top: 4rem;
+  margin-top: 0;
   border-top: 3px solid rgba(196, 18, 48, 0.3);
   position: relative;
   z-index: 1;
@@ -577,7 +577,7 @@
 @media (max-width: 968px) {
   .footer {
     padding: 5rem 0 0;
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
   .footer-container {
@@ -594,7 +594,7 @@
 @media (max-width: 768px) {
   .footer {
     padding: 4rem 0 0;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   .footer-container {
@@ -642,7 +642,7 @@
 @media (max-width: 480px) {
   .footer {
     padding: 3rem 0 0;
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
 
   .footer-container {
