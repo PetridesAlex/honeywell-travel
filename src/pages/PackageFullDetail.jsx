@@ -214,11 +214,23 @@ function PackageFullDetail() {
           }} 
         />
         <div className="package-full-hero-content">
-          <h1>{translatedTitle}</h1>
+          <h1>
+            {translatedTitle}
+            {pkg.supplier ? (
+              <span className="hero-supplier-badge">
+                {pkg.supplier}
+              </span>
+            ) : null}
+          </h1>
           <div className="hero-meta">
             <span className={`hero-package-type ${(pkg.packageType || 'individual').toLowerCase()}`}>
               {(pkg.packageType || 'individual').toLowerCase() === 'group' ? 'Group' : 'Individual'}
             </span>
+            {pkg.supplier ? (
+              <span className="hero-meta-supplier">
+                {pkg.supplier}
+              </span>
+            ) : null}
             <span>⏱️ {pkg.duration}</span>
             <span>From €{getCheapestPrice(pkg).toLocaleString()}</span>
           </div>
@@ -612,7 +624,7 @@ function PackageFullDetail() {
                   </div>
                 ) : details.program ? (
                   <div className="program-content">
-                    {details.program.introduction && (() => {
+                    {details.program.introduction && pkg.id !== 100 && (() => {
                       const introText = details.program.introduction
                       // Split by double newlines to create paragraphs
                       const paragraphs = introText.split(/\n\n+/).filter(p => p.trim())

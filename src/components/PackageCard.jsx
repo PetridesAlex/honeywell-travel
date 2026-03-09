@@ -58,6 +58,11 @@ function PackageCard({ package: pkg }) {
       <div className="package-content">
         <div className="package-header-row">
           <div className="package-badge">{pkg.destination}</div>
+          {pkg.supplier === 'LGT' ? (
+            <span className="package-supplier-badge" aria-label="Supplier LGT">
+              LGT
+            </span>
+          ) : null}
           {canToggleLanguage ? (
             <button
               type="button"

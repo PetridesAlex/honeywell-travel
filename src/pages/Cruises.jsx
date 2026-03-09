@@ -1965,7 +1965,7 @@ const CRUISE_LINES = [
   { id: 'msc', label: 'MSC Cruises', description: 'All MSC cruise packages in one place.', coverImage: '/images/cruises/cover-for-cruises/msc-cruises-cover.webp', coverPosition: 'center center', coverSize: 'contain' },
   { id: 'royal-caribbean', label: 'Royal Caribbean', description: 'Royal Caribbean cruise packages from Barcelona and Civitavecchia.', coverImage: '/images/cruises/royal-carribean-cruise-rhamsody/royal-carribean-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
   { id: 'costa', label: 'Costa Cruises', description: 'Costa cruise packages from Piraeus.', coverImage: '/images/cruises/costa-fascinosa/costa-cruises-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
-  { id: 'norwegian', label: 'Norwegian Cruise Line', description: 'Norwegian cruise packages from Civitavecchia.', coverImage: '/images/cruises/norwedjian-cruise/norwejian-cruise-line-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
+  { id: 'norwegian', label: 'Norwegian Cruise Line', description: 'Norwegian cruise packages from Civitavecchia.', coverImage: '/images/cruises/cover-for-cruises/norwegian-cruise-line-cover.webp', coverPosition: 'center 55%', coverSize: 'cover' },
   { id: 'marella', label: 'Marella Cruises', description: 'Marella cruise packages from Limassol.', coverImage: '/images/cruises/cover-for-cruises/marella-cruise-boat-cover.webp', coverPosition: 'center 42%', coverSize: 'cover' },
   { id: 'fred-olsen', label: 'Fred Olsen Cruise Lines', description: 'Fred Olsen (Balmoral) cruise packages.', coverImage: '/images/cruises/cover-for-cruises/balmoral-cruise-cover.webp', coverPosition: 'center center', coverSize: 'cover' },
   { id: 'emerald', label: 'Emerald Cruises', description: 'Emerald Kaia cruise packages.', coverImage: '/images/cruises/Emerald-Kaia-cruise/emerald-cruises-logo.webp', coverPosition: 'center center', coverSize: 'cover' },
@@ -2214,7 +2214,25 @@ function Cruises() {
         <div className="cruises-hero-overlay"></div>
         <div className="cruises-hero-content">
           <h1>Discover the World by Sea</h1>
-          <p>Set sail on an unforgettable journey across the world's most beautiful waters</p>
+          <p>Set sail on an unforgettable journey across the world&apos;s most beautiful waters.</p>
+          <button
+            type="button"
+            className="cruises-hero-cta"
+            onClick={() => {
+              const container = document.querySelector('.cruises-container')
+              if (container) {
+                const headerEl = document.querySelector('.header')
+                const headerOffset = headerEl?.offsetHeight || 0
+                const rect = container.getBoundingClientRect()
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0
+                const targetTop = rect.top + scrollTop - headerOffset - 16
+                window.scrollTo({ top: targetTop, behavior: 'smooth' })
+              }
+            }}
+          >
+            <span className="cruises-hero-cta-icon" aria-hidden>↓</span>
+            Explore Cruise Packages
+          </button>
         </div>
         <div className="cruises-hero-waves">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
