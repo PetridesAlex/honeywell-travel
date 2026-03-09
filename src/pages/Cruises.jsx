@@ -2231,7 +2231,6 @@ function Cruises() {
               }
             }}
           >
-            <span className="cruises-hero-cta-icon" aria-hidden>↓</span>
             Explore Cruise Packages
           </button>
                             </div>

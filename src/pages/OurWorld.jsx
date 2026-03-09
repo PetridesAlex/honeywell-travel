@@ -167,32 +167,15 @@ function OurWorld() {
             <div className="award-card">
               <div className="award-icon">🏅</div>
               <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2025</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">🌟</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2024</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">🎖️</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2022</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">⭐</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2021</span>
-            </div>
-            <div className="award-card">
-              <div className="award-icon">🏆</div>
-              <h3>Best Travel Management</h3>
-              <p>Recognized for excellence in travel management services</p>
-              <span className="award-year">2020</span>
+              <div className="award-times">5× Award Winner</div>
+              <p>Recognised for excellence in travel management services and customer experience.</p>
+              <p className="award-years-inline">
+                {['2025', '2024', '2022', '2021', '2020'].map((year) => (
+                  <span key={year} className="award-year-pill">
+                    {year}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
         </div>
@@ -245,34 +228,11 @@ function OurWorld() {
         </div>
       </section>
 
-      {/* Travel Blog Section */}
-      <section className="section-blog">
-        <div className="container">
-          <h2 className="section-heading">Travel Blog</h2>
-          <p className="section-subtitle">Stories, tips, and inspiration from around the world</p>
-          <div className="blog-grid">
-            {blogPosts.map((post) => (
-              <article key={post.id} className="blog-card">
-                <div className="blog-image">
-                  <div className="blog-image-placeholder">Image</div>
-                </div>
-                <div className="blog-content">
-                  <span className="blog-date">{post.date}</span>
-                  <h3 className="blog-title">{post.title}</h3>
-                  <p className="blog-excerpt">Blog post excerpt will go here...</p>
-                  <a href="#" className="blog-read-more">Read More →</a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* We Love Traveling Section - Image Slider */}
       <section className="section-gallery-traveling">
         <div className="container">
           <h2 className="section-heading">We Love Traveling</h2>
-          <p className="section-subtitle">Capturing moments from our journeys around the globe</p>
+          <p className="section-subtitle">A glimpse of the destinations and experiences we design for our travellers</p>
           <div className="travel-slider">
             <div className="slider-container">
               <div 

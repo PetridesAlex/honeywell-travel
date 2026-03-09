@@ -14,12 +14,12 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #0a1929 0%, #1a3a5a 50%, #0a1929 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   overflow: hidden;
   color: white;
-  padding: 4rem 1.5rem 3rem;
+  padding: 5.5rem 1.5rem 3rem;
 }
 
 .cruises-hero-overlay {
@@ -102,11 +102,15 @@
   box-shadow:
     0 10px 26px rgba(15, 23, 42, 0.8),
     0 0 0 1px rgba(148, 163, 184, 0.6);
-  transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.25s ease,
+    filter 0.2s ease,
+    letter-spacing 0.22s ease;
 }
 
 .cruises-hero-cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   filter: brightness(1.05);
   box-shadow:
     0 16px 40px rgba(15, 23, 42, 0.85),
@@ -118,10 +122,6 @@
   box-shadow:
     0 0 0 3px rgba(191, 219, 254, 0.9),
     0 16px 40px rgba(15, 23, 42, 0.85);
-}
-
-.cruises-hero-cta-icon {
-  font-size: 1rem;
 }
 
 .cruises-hero-waves {

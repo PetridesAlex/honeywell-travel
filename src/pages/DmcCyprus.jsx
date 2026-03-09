@@ -11,7 +11,7 @@ const SERVICES = [
   {
     title: 'Hotel Contracting & Accommodation',
     icon: '🏨',
-    items: ['3* – 5* Hotels', 'Luxury Resorts', 'Boutique Hotels', 'Long Stay Programs', 'Group Allocations']
+    items: ['3* – 5* Hotels', 'Luxury Resorts', 'Boutique Hotels', 'Group Allocations']
   },
   {
     title: 'Airport Transfers & Transportation',
@@ -21,7 +21,7 @@ const SERVICES = [
   {
     title: 'Flight Arrangements',
     icon: '✈️',
-    items: ['Group Flight Bookings', 'Scheduled & Charter Flights', 'Airline Negotiations', 'Corporate Travel Management']
+    items: ['Group Flight Bookings', 'Scheduled & Charter Flights', 'Corporate Travel Management']
   },
   {
     title: 'Excursions & Tours',
@@ -31,12 +31,12 @@ const SERVICES = [
   {
     title: 'MICE & Corporate Events',
     icon: '🎯',
-    items: ['Conference Organization', 'Gala Dinners', 'Team Building Activities', 'Product Launch Events', 'Incentive Travel Programs']
+    items: ['Team Building Activities', 'Incentive Travel Programs']
   },
   {
     title: 'Educational & Sports Groups',
     icon: '🎓',
-    items: ['School Programs', 'University Trips', 'Sports Camps', 'Tournament Logistics', 'Academic Collaborations']
+    items: ['School Programs', 'University Trips', 'Academic Collaborations']
   },
   {
     title: 'Luxury Travel & VIP Handling',
@@ -75,6 +75,7 @@ function DmcCyprus() {
   })
   const [sending, setSending] = useState(false)
   const [status, setStatus] = useState(null)
+  const [openServiceIndex, setOpenServiceIndex] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -136,7 +137,7 @@ function DmcCyprus() {
         <div className="dmc-hero-bg" style={{ backgroundImage: 'url(/images/dmc-cyprus/cyprus-cover-dmc.webp)' }} />
         <div className="dmc-hero-overlay" />
         <div className="dmc-hero-content">
-          <h1 className="dmc-hero-title">DMC CYPRUS</h1>
+          <h1 className="dmc-hero-title">Destination Management Cyprus</h1>
           <p className="dmc-hero-tagline">Your Trusted Destination Management Partner in Cyprus</p>
           <p className="dmc-hero-subtitle">Professional ground handling services across Limassol, Nicosia, Larnaca & Paphos.</p>
           <div className="dmc-hero-buttons">
@@ -170,15 +171,24 @@ function DmcCyprus() {
           <div className="dmc-services-grid">
             {SERVICES.map((service, i) => (
               <RevealOnScroll key={service.title} direction="up" delay={i * 50}>
-                <div className="dmc-service-card">
+                <button
+                  type="button"
+                  className={`dmc-service-card ${openServiceIndex === i ? 'is-open' : ''}`}
+                  onClick={() =>
+                    setOpenServiceIndex(prev => (prev === i ? null : i))
+                  }
+                  aria-expanded={openServiceIndex === i}
+                >
                   <div className="dmc-service-icon">{service.icon}</div>
                   <h3 className="dmc-service-title">{service.title}</h3>
-                  <ul className="dmc-service-list">
-                    {service.items.map(item => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                  {openServiceIndex === i && (
+                    <ul className="dmc-service-list">
+                      {service.items.map(item => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </button>
               </RevealOnScroll>
             ))}
           </div>
