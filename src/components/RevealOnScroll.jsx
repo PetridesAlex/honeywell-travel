@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import './RevealOnScroll.css'
 
-function RevealOnScroll({ children, className = '', delay = 0, direction = 'up' }) {
+function RevealOnScroll({ children, className = '', delay = 0, direction = 'up', immediate = false }) {
   const ref = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(immediate)
 
   useEffect(() => {
+    if (immediate) return
+
     const el = ref.current
     if (!el) return
 
@@ -23,7 +25,7 @@ function RevealOnScroll({ children, className = '', delay = 0, direction = 'up' 
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [immediate])
 
   return (
     <div

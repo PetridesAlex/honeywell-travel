@@ -1975,119 +1975,119 @@ const CRUISE_LINES = [
 function CruiseHubCruiseCard({ cruise, isActive, onToggle, onPreviewImage, getIncludedItems, getExcludedItems }) {
   return (
     <article className={`cruise-package-card ${isActive ? 'is-active' : ''}`}>
-      <div
-        className="cruise-package-card-image"
-        style={{
-          backgroundImage: `url("${cruise.coverImage}")`,
-          backgroundPosition: cruise.coverPosition || 'center center'
-        }}
+                    <div
+                      className="cruise-package-card-image"
+                      style={{
+                        backgroundImage: `url("${cruise.coverImage}")`,
+                        backgroundPosition: cruise.coverPosition || 'center center'
+                      }}
         onClick={onToggle}
-        role="button"
-        tabIndex={0}
+                      role="button"
+                      tabIndex={0}
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle() } }}
-      />
-      <div className="cruise-package-card-content">
-        <h3>{cruise.cardTitle}</h3>
-        <p>{cruise.cardSubtitle}</p>
-        <div className="cruise-package-card-meta">
-          <span>{cruise.nightsText}</span>
-          <span>{cruise.season}</span>
-          <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
-        </div>
+                    />
+                    <div className="cruise-package-card-content">
+                      <h3>{cruise.cardTitle}</h3>
+                      <p>{cruise.cardSubtitle}</p>
+                      <div className="cruise-package-card-meta">
+                        <span>{cruise.nightsText}</span>
+                        <span>{cruise.season}</span>
+                        <strong>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `From EUR ${cruise.fromPrice}` : 'Price On Request'}</strong>
+                      </div>
         <button type="button" className="cruise-package-card-btn" onClick={onToggle}>
           {isActive ? 'Hide Cruise Details' : 'View Cruise Details'}
-        </button>
-      </div>
+                      </button>
+                    </div>
       {isActive ? (
-        <div className="cruise-package-expanded">
-          <div className="cruise-featured-head">
-            <span className="cruise-featured-region">Region: {cruise.region}</span>
-            <h2>{cruise.title}</h2>
-            <p className="cruise-featured-subtitle">{cruise.season}</p>
-            <p className="cruise-featured-highlight">{cruise.highlightText}</p>
+                      <div className="cruise-package-expanded">
+                        <div className="cruise-featured-head">
+                          <span className="cruise-featured-region">Region: {cruise.region}</span>
+                          <h2>{cruise.title}</h2>
+                          <p className="cruise-featured-subtitle">{cruise.season}</p>
+                          <p className="cruise-featured-highlight">{cruise.highlightText}</p>
             <p className="cruise-featured-intro">{cruise.introPrimary}</p>
             <p className="cruise-featured-intro">{cruise.introSecondary}</p>
-            <div className="cruise-featured-price">
-              <span>{cruise.nightsText} from</span>
+                          <div className="cruise-featured-price">
+                            <span>{cruise.nightsText} from</span>
               <strong className={typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? '' : 'cruise-featured-price__value--on-request'}>{typeof cruise.fromPrice === 'number' && cruise.fromPrice > 0 ? `EUR ${cruise.fromPrice}` : 'On Request'}</strong>
-              <span>per person</span>
-            </div>
-          </div>
-          <div className="cruise-featured-gallery">
-            {cruise.gallery.map((image, index) => (
-              <button
-                type="button"
-                key={image}
-                className="cruise-gallery-image-btn"
+                            <span>per person</span>
+                          </div>
+                        </div>
+                        <div className="cruise-featured-gallery">
+                          {cruise.gallery.map((image, index) => (
+                            <button
+                              type="button"
+                              key={image}
+                              className="cruise-gallery-image-btn"
                 onClick={() => onPreviewImage({ src: image, alt: `${cruise.cardTitle} image ${index + 1}` })}
-              >
-                <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
-              </button>
-            ))}
-          </div>
-          <div className="cruise-itineraries-grid">
-            {cruise.itineraries.map((itinerary, itineraryIndex) => (
-              <article className="cruise-itinerary-card" key={itinerary.name}>
-                <div className="cruise-itinerary-header">
-                  <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
-                  <h3>{itinerary.name}</h3>
-                </div>
-                <ul>
-                  {itinerary.days.map((day) => (
-                    <li key={day}>{day}</li>
-                  ))}
-                </ul>
-                <div className="cruise-itinerary-dates">
-                  <strong>Available Dates</strong>
-                  <div className="cruise-itinerary-dates-list">
-                    {itinerary.availableDates.split(' / ').map((date) => (
-                      <span key={date} className="cruise-itinerary-date-chip">{date}</span>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                            >
+                              <img src={image} alt={`${cruise.cardTitle} image ${index + 1}`} loading="eager" decoding="async" />
+                            </button>
+                          ))}
+                        </div>
+                        <div className="cruise-itineraries-grid">
+                          {cruise.itineraries.map((itinerary, itineraryIndex) => (
+                            <article className="cruise-itinerary-card" key={itinerary.name}>
+                              <div className="cruise-itinerary-header">
+                                <span className="cruise-itinerary-badge">Itinerary {itineraryIndex + 1}</span>
+                                <h3>{itinerary.name}</h3>
+                              </div>
+                              <ul>
+                                {itinerary.days.map((day) => (
+                                  <li key={day}>{day}</li>
+                                ))}
+                              </ul>
+                              <div className="cruise-itinerary-dates">
+                                <strong>Available Dates</strong>
+                                <div className="cruise-itinerary-dates-list">
+                                  {itinerary.availableDates.split(' / ').map((date) => (
+                                    <span key={date} className="cruise-itinerary-date-chip">{date}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            </article>
+                          ))}
+                        </div>
           <p className="cruise-featured-note">{cruise.note}</p>
-          <div className="cruise-details-grid">
-            <div className="cruise-details-card">
-              <h3>What&apos;s Included?</h3>
-              <ul>
-                {getIncludedItems(cruise).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            {getExcludedItems(cruise).length ? (
-              <div className="cruise-details-card">
-                <h3>What&apos;s Excluded?</h3>
-                <ul>
-                  {getExcludedItems(cruise).map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-            <div className="cruise-details-card">
-              <h3>Additional Information</h3>
-              <ul>
-                {cruise.additionalInfo.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="cruise-details-card">
-              <h3>Pricing / Accommodation</h3>
-              <ul>
-                {cruise.pricingAccommodation.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      ) : null}
-    </article>
+                        <div className="cruise-details-grid">
+                          <div className="cruise-details-card">
+                            <h3>What&apos;s Included?</h3>
+                            <ul>
+                              {getIncludedItems(cruise).map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          {getExcludedItems(cruise).length ? (
+                            <div className="cruise-details-card">
+                              <h3>What&apos;s Excluded?</h3>
+                              <ul>
+                                {getExcludedItems(cruise).map((item) => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : null}
+                          <div className="cruise-details-card">
+                            <h3>Additional Information</h3>
+                            <ul>
+                              {cruise.additionalInfo.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="cruise-details-card">
+                            <h3>Pricing / Accommodation</h3>
+                            <ul>
+                              {cruise.pricingAccommodation.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
+                  </article>
   )
 }
 
@@ -2170,17 +2170,17 @@ function Cruises() {
       onClick={() => setPreviewImage(null)}
     >
       <div className="cruise-image-preview-modal" onClick={(event) => event.stopPropagation()}>
-        <button
-          type="button"
+                              <button
+                                type="button"
           className="cruise-image-preview-close"
           aria-label="Close image preview"
           onClick={() => setPreviewImage(null)}
         >
           ×
-        </button>
+                              </button>
         <img src={previewImage.src} alt={previewImage.alt} loading="eager" decoding="sync" />
-      </div>
-    </div>
+                          </div>
+                                </div>
   ) : null
   const toggleCruiseDetails = (cruiseId) => {
     setSelectedCruiseId((prev) => (prev === cruiseId ? null : cruiseId))
@@ -2225,23 +2225,24 @@ function Cruises() {
                 const headerOffset = headerEl?.offsetHeight || 0
                 const rect = container.getBoundingClientRect()
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0
-                const targetTop = rect.top + scrollTop - headerOffset - 16
-                window.scrollTo({ top: targetTop, behavior: 'smooth' })
+                // Jump directly so sections are visible immediately, accounting for sticky header
+                const targetTop = rect.top + scrollTop - headerOffset - 8
+                window.scrollTo({ top: targetTop, behavior: 'auto' })
               }
             }}
           >
             <span className="cruises-hero-cta-icon" aria-hidden>↓</span>
             Explore Cruise Packages
           </button>
-        </div>
+                            </div>
         <div className="cruises-hero-waves">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/>
           </svg>
-        </div>
-      </div>
+                            </div>
+                            </div>
 
-      <RevealOnScroll direction="up">
+      <RevealOnScroll direction="up" immediate>
       <div className="cruises-container">
         {/* Filters Section */}
         <section className="cruises-filters-section">
@@ -2368,37 +2369,37 @@ function Cruises() {
         {/* Cruise Packages Grid */}
         <section className="cruises-results">
           {filteredCruises.length > 0 ? (
-            <div className="results-header">
-              <h2 className="results-title">
-                {filteredCruises.length} {filteredCruises.length === 1 ? 'Cruise' : 'Cruises'} Available
-              </h2>
-              {(selectedPort !== 'Any' || selectedDuration !== 'Any') && (
-                <div className="active-filters">
-                  {selectedPort !== 'Any' && (
-                    <span className="active-filter-tag">
-                      {departurePorts.find(p => p.value === selectedPort)?.label}
-                      <button 
-                        onClick={() => setSelectedPort('Any')}
-                        className="remove-filter"
-                      >
-                        ×
-                      </button>
-                    </span>
-                  )}
-                  {selectedDuration !== 'Any' && (
-                    <span className="active-filter-tag">
-                      {durations.find(d => d.value === selectedDuration)?.label}
-                      <button 
-                        onClick={() => setSelectedDuration('Any')}
-                        className="remove-filter"
-                      >
-                        ×
-                      </button>
-                    </span>
-                  )}
-                </div>
-              )}
-            </div>
+          <div className="results-header">
+            <h2 className="results-title">
+              {filteredCruises.length} {filteredCruises.length === 1 ? 'Cruise' : 'Cruises'} Available
+            </h2>
+            {(selectedPort !== 'Any' || selectedDuration !== 'Any') && (
+              <div className="active-filters">
+                {selectedPort !== 'Any' && (
+                  <span className="active-filter-tag">
+                    {departurePorts.find(p => p.value === selectedPort)?.label}
+                    <button 
+                      onClick={() => setSelectedPort('Any')}
+                      className="remove-filter"
+                    >
+                      ×
+                    </button>
+                  </span>
+                )}
+                {selectedDuration !== 'Any' && (
+                  <span className="active-filter-tag">
+                    {durations.find(d => d.value === selectedDuration)?.label}
+                    <button 
+                      onClick={() => setSelectedDuration('Any')}
+                      className="remove-filter"
+                    >
+                      ×
+                    </button>
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
           ) : null}
 
           {filteredCruises.length > 0 ? (

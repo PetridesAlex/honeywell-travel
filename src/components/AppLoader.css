@@ -17,18 +17,22 @@
 .app-loader__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 120% at 20% 15%, #1e293b 0%, #0b1220 52%, #05070f 100%);
+  /* Deep oceanic gradient with subtle light from above */
+  background:
+    radial-gradient(160% 140% at 10% 0%, rgba(56, 189, 248, 0.18) 0%, transparent 55%),
+    radial-gradient(130% 120% at 90% 20%, rgba(14, 165, 233, 0.2) 0%, transparent 60%),
+    linear-gradient(180deg, #020617 0%, #020617 20%, #0b1726 48%, #020617 100%);
 }
 
 .app-loader__aurora {
   position: absolute;
   inset: -25%;
   background:
-    radial-gradient(40% 30% at 22% 32%, rgba(56, 189, 248, 0.2), transparent 70%),
-    radial-gradient(35% 28% at 72% 28%, rgba(227, 30, 36, 0.22), transparent 70%),
-    radial-gradient(42% 36% at 50% 76%, rgba(168, 85, 247, 0.18), transparent 70%);
+    radial-gradient(40% 30% at 18% 30%, rgba(59, 130, 246, 0.26), transparent 72%),
+    radial-gradient(40% 30% at 78% 22%, rgba(14, 165, 233, 0.22), transparent 72%),
+    radial-gradient(46% 40% at 50% 82%, rgba(45, 212, 191, 0.24), transparent 74%);
   filter: blur(22px);
-  animation: app-loader-aurora 7s ease-in-out infinite alternate;
+  animation: app-loader-aurora 9s ease-in-out infinite alternate;
 }
 
 .app-loader__grain {
@@ -41,8 +45,9 @@
 }
 
 @keyframes app-loader-aurora {
-  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
-  to { transform: translate3d(1.5%, 1%, 0) scale(1.06); }
+  from { transform: translate3d(-2%, -1.5%, 0) scale(1); }
+  50% { transform: translate3d(1%, 1%, 0) scale(1.04); }
+  to { transform: translate3d(2%, -1%, 0) scale(1.02); }
 }
 
 /* Curtains */
@@ -79,6 +84,8 @@
   width: 260px;
   height: 260px;
   pointer-events: none;
+  /* New orbital sweep animation around the logo */
+  animation: app-loader-orbit-sweep 5.5s linear infinite;
 }
 
 .app-loader__orbit {
@@ -95,20 +102,33 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
-  margin-left: -5px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: -6px;
   border-radius: 50%;
-  background: #67e8f9;
-  box-shadow: 0 0 14px rgba(103, 232, 249, 0.7);
+  background: radial-gradient(circle at 30% 30%, #f9fafb 0%, #67e8f9 45%, #0369a1 100%);
+  box-shadow:
+    0 0 10px rgba(103, 232, 249, 0.9),
+    0 0 24px rgba(37, 99, 235, 0.7);
   transform-origin: 0 0;
-  animation: app-loader-orbit-dot 2.2s linear infinite;
+  animation: app-loader-orbit-dot-pulse 1.8s ease-in-out infinite;
 }
 
-@keyframes app-loader-orbit-dot {
-  from { transform: rotate(0deg) translateX(120px); }
-  to { transform: rotate(360deg) translateX(120px); }
+@keyframes app-loader-orbit-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes app-loader-orbit-dot-pulse {
+  0%, 100% {
+    transform: translateX(118px) scale(0.94);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(118px) scale(1.05);
+    opacity: 1;
+  }
 }
 
 .app-loader__logo-container {
@@ -122,6 +142,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Subtle pulse to draw attention to the logo */
+  animation: app-loader-logo-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes app-loader-logo-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 16px rgba(15, 23, 42, 0.7));
+  }
+  50% {
+    transform: scale(1.035);
+    filter: drop-shadow(0 0 26px rgba(59, 130, 246, 0.7));
+  }
 }
 
 .app-loader__progress-ring {
@@ -254,9 +287,23 @@
   height: 100%;
   width: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, #06b6d4 0%, #e31e24 100%);
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.7) 25%, rgba(15, 23, 42, 0.45) 50%, rgba(15, 23, 42, 0.7) 75%, rgba(15, 23, 42, 0.45) 100%),
+    linear-gradient(90deg, #06b6d4 0%, #e31e24 100%);
+  background-size: 80px 100%, 100% 100%;
+  background-position: 0 0, 0 0;
   box-shadow: 0 0 18px rgba(227, 30, 36, 0.45);
   transition: width 0.1s linear;
+  animation: app-loader-progress-wave 1.2s linear infinite;
+}
+
+@keyframes app-loader-progress-wave {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 80px 0, 0 0;
+  }
 }
 
 .app-loader__text {
@@ -270,12 +317,26 @@
 
 .app-loader__text-inner {
   display: inline-block;
-  animation: app-loader-shimmer 2s ease-in-out infinite;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.6), #e5e7eb, rgba(148, 163, 184, 0.6));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: app-loader-text-sheen 2.4s ease-in-out infinite;
 }
 
-@keyframes app-loader-shimmer {
-  0%, 100% { opacity: 0.72; }
-  50% { opacity: 1; }
+@keyframes app-loader-text-sheen {
+  0% {
+    opacity: 0.7;
+    transform: translateX(-4px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateX(4px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

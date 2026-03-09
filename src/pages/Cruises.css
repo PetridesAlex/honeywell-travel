@@ -1,12 +1,17 @@
 .cruises-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a1929 0%, #1a3a5a 50%, #0a1929 100%);
+  background:
+    linear-gradient(135deg, rgba(10, 25, 41, 0.96) 0%, rgba(26, 58, 90, 0.9) 50%, rgba(10, 25, 41, 0.98) 100%),
+    url("/images/cruises/cover-for-cruises/cruises-hero.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 /* Hero Section */
 .cruises-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #0a1929 0%, #1a3a5a 50%, #0a1929 100%);
   display: flex;
   align-items: center;

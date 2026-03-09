@@ -109,37 +109,40 @@ function Header() {
           />
         </Link>
 
-        <Link 
-          to="/build-your-trip" 
-          className="header-build-trip"
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-          }}
-        >
-          <span className="header-build-trip-text">Build Your Trip</span>
-          <span className="header-build-trip-icon">→</span>
-        </Link>
+        <div className="header-cta-group">
+          <Link 
+            to="/build-your-trip" 
+            className="header-build-trip"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+            }}
+          >
+            <span className="header-build-trip-text">Build Your Trip</span>
+            <span className="header-build-trip-icon">→</span>
+          </Link>
 
-        <Link
-          to="/flight-tickets/"
-          className="header-flight-tickets"
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-          }}
-        >
-          <span className="header-flight-tickets-icon" aria-hidden>✈</span>
-          <span className="header-flight-tickets-text">Flight Tickets</span>
-        </Link>
-        <Link
-          to="/cruises/"
-          className="header-cruises-cta"
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-          }}
-        >
-          <span className="header-cruises-cta-icon" aria-hidden>🚢</span>
-          <span className="header-cruises-cta-text">Cruises</span>
-        </Link>
+          <Link
+            to="/flight-tickets/"
+            className="header-flight-tickets"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+            }}
+          >
+            <span className="header-flight-tickets-icon" aria-hidden>✈</span>
+            <span className="header-flight-tickets-text">Flight Tickets</span>
+          </Link>
+
+          <Link
+            to="/cruises/"
+            className="header-cruises-cta"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+            }}
+          >
+            <span className="header-cruises-cta-icon" aria-hidden>🚢</span>
+            <span className="header-cruises-cta-text">Cruises</span>
+          </Link>
+        </div>
         
         <nav className="nav">
           <Link to="/ourworld/" className="nav-link">Our World</Link>
@@ -214,24 +217,87 @@ function Header() {
             <span className="nav-link-corporate-badge" aria-hidden>B2B</span>
           </Link>
           <Link to="/dmc-cyprus" className="nav-link">{t('header.dmcServices')}</Link>
-          <a
-            href="https://summerautos.com/"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
+          
+          <div 
+            className="nav-dropdown"
+            onMouseEnter={() => handleDropdownEnter('services')}
+            onMouseLeave={handleDropdownLeave}
           >
-            {t('header.carHire')}
-          </a>
-          <Link to="/honeywell-travel-gallery/" className="nav-link">{t('header.gallery')}</Link>
-          <Link to="/our-blog/" className="nav-link">{t('header.blog')}</Link>
-          <a 
-            href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
-            className="nav-link" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            <span className="nav-link dropdown-trigger">
+              Services
+              <span className="dropdown-arrow">▼</span>
+            </span>
+            {activeDropdown === 'services' && (
+              <div className="dropdown-menu" onMouseEnter={() => handleDropdownEnter('services')} onMouseLeave={handleDropdownLeave}>
+                <div className="dropdown-arrow-top"></div>
+                <a
+                  href="https://summerautos.com/"
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="dropdown-item-icon">→</span>
+                  {t('header.carHire')}
+                </a>
+                <a 
+                  href="https://www.icontract.gr/whitelabelcy/el/index.aspx" 
+                  className="dropdown-item" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <span className="dropdown-item-icon">→</span>
+                  {t('header.insurance')}
+                </a>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="nav-dropdown nav-dropdown-right"
+            onMouseEnter={() => handleDropdownEnter('inspiration')}
+            onMouseLeave={handleDropdownLeave}
           >
-            {t('header.insurance')}
-          </a>
+            <span className="nav-link dropdown-trigger">
+              Inspiration
+              <span className="dropdown-arrow">▼</span>
+            </span>
+            {activeDropdown === 'inspiration' && (
+              <div
+                className="dropdown-menu"
+                onMouseEnter={() => handleDropdownEnter('inspiration')}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <div className="dropdown-arrow-top"></div>
+                <Link
+                  to="/honeywell-travel-gallery/"
+                  className="dropdown-item"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+                    if (document.documentElement) document.documentElement.scrollTop = 0
+                    if (document.body) document.body.scrollTop = 0
+                    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+                  }}
+                >
+                  <span className="dropdown-item-icon">→</span>
+                  {t('header.gallery')}
+                </Link>
+                <Link
+                  to="/our-blog/"
+                  className="dropdown-item"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+                    if (document.documentElement) document.documentElement.scrollTop = 0
+                    if (document.body) document.body.scrollTop = 0
+                    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0)
+                  }}
+                >
+                  <span className="dropdown-item-icon">→</span>
+                  {t('header.blog')}
+                </Link>
+              </div>
+            )}
+          </div>
+
           <Link to="/contact/" className="nav-link">{t('header.contact')}</Link>
         </nav>
 
