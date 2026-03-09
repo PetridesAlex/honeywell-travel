@@ -14499,7 +14499,7 @@ export const travelPackages = [
     longDescription: 'Μια ανοιξιάτικη αποδράση στην Κρήτη που σας οδηγεί στα πιο όμορφα σημεία του νησιού. Από τα Χανιά με το ενετικό λιμάνι και την Παλιά Πόλη, στο Ηράκλειο, την Ελούντα, τη Σπιναλόγκα, τον Άγιο Νικόλαο και τη Λίμνη Κουρνά. Ανακαλύψτε την ιστορία, τη φύση και την κρητική παράδοση σε ένα ταξίδι 5 ημερών.',
     image: '🇬🇷',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     details: {
       departureDate: '13/04',
       departureFrom: 'Larnaca',
@@ -18157,7 +18157,7 @@ export const travelPackages = [
     longDescription: 'Απόδραση στο Παρίσι, την «πόλη του φωτός», με πανοραμική ξενάγηση, κρουαζιέρα στον Σηκουάνα και ολοήμερη επίσκεψη στην Disneyland. Ιδανικό πασχαλινό πακέτο για οικογένειες και ζευγάρια που θέλουν να συνδυάσουν ρομαντική ατμόσφαιρα, αξιοθέατα και διασκέδαση στα πάρκα της Disney.',
     image: '🗼',
     featured: true,
-    packageType: 'individual',
+    packageType: 'group',
     supplier: 'LGT',
     details: {
       departureDate: '10/04',
