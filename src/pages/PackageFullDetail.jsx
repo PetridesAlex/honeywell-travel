@@ -411,155 +411,164 @@ function PackageFullDetail() {
                                 </div>
                               </div>
                               <div className="hotel-single-right">
-                                {uniqueHotelVariants.map((variant, variantIdx) => {
-                                  // Each variant has completely independent selection
-                                  const variantKey = `${hotelKey}-variant-${variantIdx}`
-                                  const variantSelectionData = hotelSelections[variantKey]
-                                  // Only use stored selection if it exists, otherwise no selection (for display)
-                                  const variantSelection = variantSelectionData || {
-                                    roomType: null, // null means no selection yet
-                                    adults: 2,
-                                    children: 0,
-                                    children2: 0
-                                  }
-                                  // For price calculation, default to 'double' if no selection
-                                  const selectionForPrice = variantSelectionData || {
-                                    roomType: 'double',
-                                    adults: 2,
-                                    children: 0,
-                                    children2: 0
-                                  }
-                                  const variantTotal = calculateRoomPrice(variant, selectionForPrice)
-                                  return (
-                                    <div key={variantIdx} className="hotel-variant-block">
-                                      <div className="hotel-variant-date-badge">
-                                        <span className="hotel-variant-date-label">{t('package.departureDate')}</span>
-                                        <span className="hotel-variant-date-value">{variant.departureDate}</span>
-                                      </div>
-                                      <div className="hotel-variant-body">
-                                        <div className="hotel-variant-head">
-                                          <span className="hotel-variant-room-type">{baseHotel.roomType || 'Standard Room'}</span>
-                                          <span className="hotel-variant-board">{baseHotel.boardBasis || 'Bed & Breakfast'}</span>
+                                {pkg.id === 201 && groupIndex > 0 ? (
+                                  // For the Scandinavia Mary Special trip, hide prices for the 2nd/3rd hotels
+                                  <div className="hotel-variant-block">
+                                    <p className="section-text hotel-included-note">
+                                      Included in the package price.
+                                    </p>
+                                  </div>
+                                ) : (
+                                  uniqueHotelVariants.map((variant, variantIdx) => {
+                                    // Each variant has completely independent selection
+                                    const variantKey = `${hotelKey}-variant-${variantIdx}`
+                                    const variantSelectionData = hotelSelections[variantKey]
+                                    // Only use stored selection if it exists, otherwise no selection (for display)
+                                    const variantSelection = variantSelectionData || {
+                                      roomType: null, // null means no selection yet
+                                      adults: 2,
+                                      children: 0,
+                                      children2: 0
+                                    }
+                                    // For price calculation, default to 'double' if no selection
+                                    const selectionForPrice = variantSelectionData || {
+                                      roomType: 'double',
+                                      adults: 2,
+                                      children: 0,
+                                      children2: 0
+                                    }
+                                    const variantTotal = calculateRoomPrice(variant, selectionForPrice)
+                                    return (
+                                      <div key={variantIdx} className="hotel-variant-block">
+                                        <div className="hotel-variant-date-badge">
+                                          <span className="hotel-variant-date-label">{t('package.departureDate')}</span>
+                                          <span className="hotel-variant-date-value">{variant.departureDate}</span>
                                         </div>
-                                        <div className="hotel-variant-summary">
-                                          <span className="hotel-variant-room-label">{t('package.room')} 1</span>
-                                          <span className="hotel-variant-total">
-                                            {selectionForPrice.adults} {selectionForPrice.adults !== 1 ? t('package.adults') : t('package.adult')}
-                                            {selectionForPrice.children > 0 && `, ${selectionForPrice.children} ${t('package.child1')}`}
-                                            {selectionForPrice.children2 > 0 && `, ${selectionForPrice.children2} ${t('package.child2')}`}: <strong>€{variantTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
-                                          </span>
-                                        </div>
-                                        <div className="hotel-variant-prices">
-                                          <div className="hotel-variant-price-grid">
-                                            <button
-                                              type="button"
-                                              className={`hotel-variant-price-cell ${variantSelection.roomType === 'double' ? 'selected' : ''}`}
-                                              onClick={() => {
-                                                if (variant.prices?.double != null) {
-                                                  // Update only this specific variant's selection
-                                                  const currentAdults = variantSelection.adults || 2
-                                                  const newAdults = currentAdults < 2 ? 2 : currentAdults
-                                                  setHotelSelections(prev => ({
-                                                    ...prev,
-                                                    [variantKey]: {
-                                                      roomType: 'double',
-                                                      adults: newAdults,
-                                                      children: variantSelection.children || 0,
-                                                      children2: variantSelection.children2 || 0
-                                                    }
-                                                  }))
-                                                }
-                                              }}
-                                              disabled={variant.prices?.double == null}
-                                              title="Click to select Double room (2 adults)"
-                                            >
-                                              <span className="hotel-variant-price-label">{t('package.double')}</span>
-                                              <span className="hotel-variant-price-value">{variant.prices?.double != null ? `€${variant.prices.double}` : '–'}</span>
-                                            </button>
-                                            <button
-                                              type="button"
-                                              className={`hotel-variant-price-cell ${variantSelection.roomType === 'single' ? 'selected' : ''}`}
-                                              onClick={() => {
-                                                if (variant.prices?.single != null) {
-                                                  // Update only this specific variant's selection
-                                                  setHotelSelections(prev => ({
-                                                    ...prev,
-                                                    [variantKey]: {
-                                                      roomType: 'single',
-                                                      adults: 1,
-                                                      children: variantSelection.children || 0,
-                                                      children2: variantSelection.children2 || 0
-                                                    }
-                                                  }))
-                                                }
-                                              }}
-                                              disabled={variant.prices?.single == null}
-                                              title="Click to select Single room (1 adult)"
-                                            >
-                                              <span className="hotel-variant-price-label">{t('package.single')}</span>
-                                              <span className="hotel-variant-price-value">{variant.prices?.single != null ? `€${variant.prices.single}` : '–'}</span>
-                                            </button>
-                                            {variant.prices?.triple != null && (
+                                        <div className="hotel-variant-body">
+                                          <div className="hotel-variant-head">
+                                            <span className="hotel-variant-room-type">{baseHotel.roomType || 'Standard Room'}</span>
+                                            <span className="hotel-variant-board">{baseHotel.boardBasis || 'Bed & Breakfast'}</span>
+                                          </div>
+                                          <div className="hotel-variant-summary">
+                                            <span className="hotel-variant-room-label">{t('package.room')} 1</span>
+                                            <span className="hotel-variant-total">
+                                              {selectionForPrice.adults} {selectionForPrice.adults !== 1 ? t('package.adults') : t('package.adult')}
+                                              {selectionForPrice.children > 0 && `, ${selectionForPrice.children} ${t('package.child1')}`}
+                                              {selectionForPrice.children2 > 0 && `, ${selectionForPrice.children2} ${t('package.child2')}`}: <strong>€{variantTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                                            </span>
+                                          </div>
+                                          <div className="hotel-variant-prices">
+                                            <div className="hotel-variant-price-grid">
                                               <button
                                                 type="button"
-                                                className={`hotel-variant-price-cell ${variantSelection.roomType === 'triple' ? 'selected' : ''}`}
+                                                className={`hotel-variant-price-cell ${variantSelection.roomType === 'double' ? 'selected' : ''}`}
                                                 onClick={() => {
-                                                  setHotelSelections(prev => ({
-                                                    ...prev,
-                                                    [variantKey]: {
-                                                      roomType: 'triple',
-                                                      adults: Math.max(variantSelection.adults || 2, 3),
-                                                      children: variantSelection.children || 0,
-                                                      children2: variantSelection.children2 || 0
-                                                    }
-                                                  }))
+                                                  if (variant.prices?.double != null) {
+                                                    // Update only this specific variant's selection
+                                                    const currentAdults = variantSelection.adults || 2
+                                                    const newAdults = currentAdults < 2 ? 2 : currentAdults
+                                                    setHotelSelections(prev => ({
+                                                      ...prev,
+                                                      [variantKey]: {
+                                                        roomType: 'double',
+                                                        adults: newAdults,
+                                                        children: variantSelection.children || 0,
+                                                        children2: variantSelection.children2 || 0
+                                                      }
+                                                    }))
+                                                  }
                                                 }}
-                                                title="Click to select Triple room (3 adults)"
+                                                disabled={variant.prices?.double == null}
+                                                title="Click to select Double room (2 adults)"
                                               >
-                                                <span className="hotel-variant-price-label">{t('package.triple')}</span>
-                                                <span className="hotel-variant-price-value">€{variant.prices.triple}</span>
+                                                <span className="hotel-variant-price-label">{t('package.double')}</span>
+                                                <span className="hotel-variant-price-value">{variant.prices?.double != null ? `€${variant.prices.double}` : '–'}</span>
                                               </button>
-                                            )}
-                                            {variant.prices?.child1 != null && (
-                                              <div className="hotel-variant-price-cell">
-                                                <span className="hotel-variant-price-label">{t('package.child1')}</span>
-                                                <span className="hotel-variant-price-value">€{variant.prices.child1}</span>
-                                              </div>
-                                            )}
-                                            {variant.prices?.child2 != null && (
-                                              <div className="hotel-variant-price-cell">
-                                                <span className="hotel-variant-price-label">{t('package.child2')}</span>
-                                                <span className="hotel-variant-price-value">€{variant.prices.child2}</span>
-                                              </div>
-                                            )}
+                                              <button
+                                                type="button"
+                                                className={`hotel-variant-price-cell ${variantSelection.roomType === 'single' ? 'selected' : ''}`}
+                                                onClick={() => {
+                                                  if (variant.prices?.single != null) {
+                                                    // Update only this specific variant's selection
+                                                    setHotelSelections(prev => ({
+                                                      ...prev,
+                                                      [variantKey]: {
+                                                        roomType: 'single',
+                                                        adults: 1,
+                                                        children: variantSelection.children || 0,
+                                                        children2: variantSelection.children2 || 0
+                                                      }
+                                                    }))
+                                                  }
+                                                }}
+                                                disabled={variant.prices?.single == null}
+                                                title="Click to select Single room (1 adult)"
+                                              >
+                                                <span className="hotel-variant-price-label">{t('package.single')}</span>
+                                                <span className="hotel-variant-price-value">{variant.prices?.single != null ? `€${variant.prices.single}` : '–'}</span>
+                                              </button>
+                                              {variant.prices?.triple != null && (
+                                                <button
+                                                  type="button"
+                                                  className={`hotel-variant-price-cell ${variantSelection.roomType === 'triple' ? 'selected' : ''}`}
+                                                  onClick={() => {
+                                                    setHotelSelections(prev => ({
+                                                      ...prev,
+                                                      [variantKey]: {
+                                                        roomType: 'triple',
+                                                        adults: Math.max(variantSelection.adults || 2, 3),
+                                                        children: variantSelection.children || 0,
+                                                        children2: variantSelection.children2 || 0
+                                                      }
+                                                    }))
+                                                  }}
+                                                  title="Click to select Triple room (3 adults)"
+                                                >
+                                                  <span className="hotel-variant-price-label">{t('package.triple')}</span>
+                                                  <span className="hotel-variant-price-value">€{variant.prices.triple}</span>
+                                                </button>
+                                              )}
+                                              {variant.prices?.child1 != null && (
+                                                <div className="hotel-variant-price-cell">
+                                                  <span className="hotel-variant-price-label">{t('package.child1')}</span>
+                                                  <span className="hotel-variant-price-value">€{variant.prices.child1}</span>
+                                                </div>
+                                              )}
+                                              {variant.prices?.child2 != null && (
+                                                <div className="hotel-variant-price-cell">
+                                                  <span className="hotel-variant-price-label">{t('package.child2')}</span>
+                                                  <span className="hotel-variant-price-value">€{variant.prices.child2}</span>
+                                                </div>
+                                              )}
+                                            </div>
                                           </div>
                                         </div>
+                                        <button
+                                          type="button"
+                                          className="hotel-variant-continue"
+                                          onClick={() => {
+                                            updateHotelSelection(hotelKey, 'selectedDateIndex', variantIdx)
+                                            setReserveFormData({
+                                              name: '', email: '', phone: '',
+                                              hotelKey, hotelName: baseHotel.name || baseHotel.location,
+                                              departureDate: variant.departureDate,
+                                              roomType: selectionForPrice.roomType,
+                                              adults: selectionForPrice.adults,
+                                              children: selectionForPrice.children,
+                                              children2: selectionForPrice.children2,
+                                              totalPrice: variantTotal,
+                                              selectedHotel: variant
+                                            })
+                                            setReserveToast(null)
+                                            setShowReserveModal(true)
+                                          }}
+                                        >
+                                          {t('common.reserve')}
+                                        </button>
                                       </div>
-                                      <button
-                                        type="button"
-                                        className="hotel-variant-continue"
-                                        onClick={() => {
-                                          updateHotelSelection(hotelKey, 'selectedDateIndex', variantIdx)
-                                          setReserveFormData({
-                                            name: '', email: '', phone: '',
-                                            hotelKey, hotelName: baseHotel.name || baseHotel.location,
-                                            departureDate: variant.departureDate,
-                                            roomType: selectionForPrice.roomType,
-                                            adults: selectionForPrice.adults,
-                                            children: selectionForPrice.children,
-                                            children2: selectionForPrice.children2,
-                                            totalPrice: variantTotal,
-                                            selectedHotel: variant
-                                          })
-                                          setReserveToast(null)
-                                          setShowReserveModal(true)
-                                        }}
-                                      >
-                                        {t('common.reserve')}
-                                      </button>
-                                    </div>
-                                  )
-                                })}
+                                    )
+                                  })
+                                )}
                               </div>
                             </div>
                           )

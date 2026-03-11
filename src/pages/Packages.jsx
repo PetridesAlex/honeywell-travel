@@ -20,7 +20,7 @@ const slugToCategory = (slug) => {
     'cruises': 'Cruises',
     'city-breaks': 'City Breaks',
     'exotic-packages': 'Exotic Packages',
-    'mary-specials-trips': 'Mary Specials Trips',
+    'mary-specials-trips': 'Mary Special Trips',
     'build-your-trip': 'Build Your Trip',
     'green-monday': 'Green Monday',
     'group-travel': 'Group Travel',

@@ -278,6 +278,19 @@
   color: #4b5563;
 }
 
+.hotel-included-note {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 40%, #eff6ff 100%);
+  border: 1px solid #bfdbfe;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
 .section-text.muted {
   color: #9ca3af;
   font-style: italic;
