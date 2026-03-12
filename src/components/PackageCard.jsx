@@ -58,9 +58,9 @@ function PackageCard({ package: pkg }) {
       <div className="package-content">
         <div className="package-header-row">
           <div className="package-badge">{pkg.destination}</div>
-          {pkg.supplier === 'LGT' ? (
-            <span className="package-supplier-badge" aria-label="Supplier LGT">
-              LGT
+          {pkg.supplier ? (
+            <span className="package-supplier-badge" aria-label={`Supplier ${pkg.supplier}`}>
+              {pkg.supplier}
             </span>
           ) : null}
           {canToggleLanguage ? (
@@ -79,7 +79,7 @@ function PackageCard({ package: pkg }) {
             </button>
           ) : null}
         </div>
-        <h3 className={`package-title${[20, 21, 24].includes(pkg.id) ? ' package-title-green' : ''}`}>{displayTitle}</h3>
+        <h3 className="package-title">{displayTitle}</h3>
         <p className="package-description">{pkg.description}</p>
         <div className="package-details">
           <span className="package-duration">{pkg.duration}</span>

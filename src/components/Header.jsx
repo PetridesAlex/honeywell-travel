@@ -21,20 +21,18 @@ function Header() {
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null)
 
   const holidayTypes = [
-    'Destinations',
+    'Easter Packages',
     'Summer Packages',
     'Summer Packages to Greece',
     'Autumn Packages',
     'Winter Packages',
     'Christmas Packages',
-    'Easter Packages',
     'Green Monday Packages',
     'Cruises',
     'City Breaks',
     'Exotic Packages',
     'Music & Sports',
     'Mary Specials Trips'
-    
   ]
 
   const honeymoonTypes = [
