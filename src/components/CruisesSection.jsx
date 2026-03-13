@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './CruisesSection.css'
 
 function CruisesSection() {
@@ -58,7 +58,7 @@ function CruisesSection() {
     }
 
     try {
-      await sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
+      await sendEmail(EMAIL_TEMPLATES.HOTEL, templateParams)
       setSent(true)
     } catch (err) {
       console.error('Hotel quote email failed:', err)

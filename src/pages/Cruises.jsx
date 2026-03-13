@@ -4,7 +4,7 @@ import { travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
 import RevealOnScroll from '../components/RevealOnScroll'
 import SEO from '../components/SEO'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './Cruises.css'
 
 const cruisePackagesData = [
@@ -2475,7 +2475,7 @@ function Cruises() {
                 }
 
                 try {
-                  await sendEmail(import.meta.env.VITE_TEMPLATE_CRUISE, templateParams)
+                  await sendEmail(EMAIL_TEMPLATES.CRUISE, templateParams)
                   setCruiseEnquirySent(true)
                   setCruiseEnquiryForm({ cruiseLine: '', name: '', email: '', phone: '', message: '' })
                 } catch (err) {

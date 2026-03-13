@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './DmcCyprus.css'
 
 const BRAND_RED = '#c41230'
@@ -110,7 +110,7 @@ function DmcCyprus() {
     }
 
     try {
-      await sendEmail(import.meta.env.VITE_TEMPLATE_DMC, templateParams)
+      await sendEmail(EMAIL_TEMPLATES.DMC, templateParams)
       setStatus({ type: 'success', text: 'Request sent successfully. Our DMC team will be in touch.' })
       setFormData({
         companyName: '',

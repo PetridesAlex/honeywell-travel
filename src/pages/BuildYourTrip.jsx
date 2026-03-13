@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SEO from '../components/SEO'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './BuildYourTrip.css'
 
 function BuildYourTrip() {
@@ -64,7 +64,7 @@ function BuildYourTrip() {
     }
 
     try {
-      await sendEmail(import.meta.env.VITE_TEMPLATE_CONTACT, templateParams)
+      await sendEmail(EMAIL_TEMPLATES.CONTACT, templateParams)
       setStatus({ type: 'success', message: 'Request sent successfully. We’ll get back to you soon.' })
       setForm({
         destination: '',

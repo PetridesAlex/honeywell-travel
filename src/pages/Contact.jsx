@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './Contact.css'
 
 function Contact() {
@@ -37,7 +37,7 @@ function Contact() {
     }
 
     try {
-      await sendEmail(import.meta.env.VITE_TEMPLATE_CONTACT, templateParams)
+      await sendEmail(EMAIL_TEMPLATES.CONTACT, templateParams)
       setStatus({ type: 'success', message: 'Request sent successfully ✅' })
       setFormData({ name: '', email: '', phone: '', message: '' })
     } catch (err) {

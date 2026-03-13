@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getPackageById, travelPackages } from '../data/packages'
 import { getTranslatedPackageTitle } from '../utils/packageTranslations'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import SEO from '../components/SEO'
 import './PackageFullDetail.css'
 
@@ -1367,7 +1367,7 @@ This reservation request was submitted through the Honeywell Travel website.
                       }
 
                       try {
-                        await sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
+                        await sendEmail(EMAIL_TEMPLATES.PACKAGE, templateParams)
                         setReserveToast({ type: 'success', message: 'Request sent successfully ✅' })
                         setShowReserveModal(false)
                         setReserveFormData({

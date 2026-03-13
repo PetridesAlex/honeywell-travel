@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getOffersByDestination } from '../data/flightTickets'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import './FlightTickets.css'
 
 function FlightTicketsDestination() {
@@ -93,7 +93,7 @@ function FlightTicketsDestination() {
       group_size: ''
     }
 
-    sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
+    sendEmail(EMAIL_TEMPLATES.OTHER, templateParams)
       .then(() => {
         closeBookingForm()
         window.alert('Ευχαριστούμε! Το αίτημα κράτησης στάλθηκε με επιτυχία και θα επικοινωνήσουμε μαζί σας.')

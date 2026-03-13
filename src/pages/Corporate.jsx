@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendEmail } from '../lib/emailService'
+import { EMAIL_TEMPLATES, sendEmail } from '../lib/emailService'
 import SEO from '../components/SEO'
 import './Corporate.css'
 
@@ -40,7 +40,7 @@ function Corporate() {
     }
 
     try {
-      await sendEmail(import.meta.env.VITE_TEMPLATE_CORPORATE, templateParams)
+      await sendEmail(EMAIL_TEMPLATES.CORPORATE, templateParams)
       setSubmitStatus('success')
       setFormData({ name: '', companyName: '', email: '', contactNumber: '', message: '' })
       setTimeout(() => {
