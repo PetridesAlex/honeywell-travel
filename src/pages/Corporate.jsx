@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import SEO from '../components/SEO'
 import './Corporate.css'
 
@@ -28,26 +28,27 @@ function Corporate() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    try {
-      const result = await sendContactForm({
-        title: 'Corporate Travel Quote Request',
-        name: formData.name,
-        email: formData.email,
-        phone: formData.contactNumber,
-        message: `Name: ${formData.name}\nCompany: ${formData.companyName}\nEmail: ${formData.email}\nContact: ${formData.contactNumber}\n\nMessage:\n${formData.message}`
-      })
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.contactNumber,
+      message: `Name: ${formData.name}\nCompany: ${formData.companyName}\nEmail: ${formData.email}\nContact: ${formData.contactNumber}\n\nMessage:\n${formData.message}`,
+      company: formData.companyName,
+      country: '',
+      travel_dates: '',
+      group_size: ''
+    }
 
-      if (result.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', companyName: '', email: '', contactNumber: '', message: '' })
-        setTimeout(() => {
-          setShowQuoteModal(false)
-          setSubmitStatus(null)
-        }, 2000)
-      } else {
-        setSubmitStatus('error')
-      }
-    } catch {
+    try {
+      await sendEmail(import.meta.env.VITE_TEMPLATE_CORPORATE, templateParams)
+      setSubmitStatus('success')
+      setFormData({ name: '', companyName: '', email: '', contactNumber: '', message: '' })
+      setTimeout(() => {
+        setShowQuoteModal(false)
+        setSubmitStatus(null)
+      }, 2000)
+    } catch (err) {
+      console.error('Corporate quote email failed:', err)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './CruisesSection.css'
 
 function CruisesSection() {
@@ -46,18 +46,25 @@ function CruisesSection() {
       `Check-out: ${form.checkOut || '—'}`
     ].join('\n')
 
-    const result = await sendContactForm({
-      title: 'Hotel Quote Request',
+    const templateParams = {
       name: form.name || 'Not provided',
       email: form.email || '',
-      message
-    })
+      phone: '',
+      message,
+      company: '',
+      country: '',
+      travel_dates: '',
+      group_size: ''
+    }
 
-    setSending(false)
-    if (result.ok) {
+    try {
+      await sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
       setSent(true)
-    } else {
-      setError(result.error || 'Something went wrong. Please try again.')
+    } catch (err) {
+      console.error('Hotel quote email failed:', err)
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSending(false)
     }
   }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getOffersByDestination } from '../data/flightTickets'
-import { sendActionRequest } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './FlightTickets.css'
 
 function FlightTicketsDestination() {
@@ -68,41 +68,43 @@ function FlightTicketsDestination() {
     }
 
     setIsSubmitting(true)
-    sendActionRequest({
-      title: 'Flight Ticket Booking Request',
-      packageName: `${offer.title} (${offer.destination})`,
-      message: [
-        `Booking request for flight ticket.`,
-        `Destination: ${offer.destination}`,
-        `Offer: ${offer.title}`,
-        `Airline: ${offer.airline}`,
-        `Departure: ${departure.departureDate} | ${offer.departureFlight.route} | ${offer.departureFlight.time}`,
-        `Return: ${departure.returnDate} | ${offer.returnFlight.route} | ${offer.returnFlight.time}`,
-        `Price: EUR ${departure.price}`,
-        `Availability: ${departure.availability || 'Μόνο 6 καθίσματα!'}`,
-        `Email: ${emailValue}`,
-        `Contact Number: ${bookingForm.contactNumber.trim()}`
-      ].join('\n'),
-      formData: {
-        name: fullName,
-        phone: bookingForm.contactNumber.trim(),
-        email: emailValue,
-        dates: `${departure.departureDate} - ${departure.returnDate}`,
-        people: 'N/A'
-      }
-    }).then((result) => {
-      if (!result?.ok) {
-        setFormError('Η αποστολή απέτυχε. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας στο +357 25828848.')
-        return
-      }
 
-      closeBookingForm()
-      window.alert('Ευχαριστούμε! Το αίτημα κράτησης στάλθηκε με επιτυχία και θα επικοινωνήσουμε μαζί σας.')
-    }).catch(() => {
-      setFormError('Η αποστολή απέτυχε. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας στο +357 25828848.')
-    }).finally(() => {
-      setIsSubmitting(false)
-    })
+    const message = [
+      `Booking request for flight ticket.`,
+      `Destination: ${offer.destination}`,
+      `Offer: ${offer.title}`,
+      `Airline: ${offer.airline}`,
+      `Departure: ${departure.departureDate} | ${offer.departureFlight.route} | ${offer.departureFlight.time}`,
+      `Return: ${departure.returnDate} | ${offer.returnFlight.route} | ${offer.returnFlight.time}`,
+      `Price: EUR ${departure.price}`,
+      `Availability: ${departure.availability || 'Μόνο 6 καθίσματα!'}`,
+      `Email: ${emailValue}`,
+      `Contact Number: ${bookingForm.contactNumber.trim()}`
+    ].join('\n')
+
+    const templateParams = {
+      name: fullName,
+      email: emailValue,
+      phone: bookingForm.contactNumber.trim(),
+      message,
+      company: '',
+      country: '',
+      travel_dates: `${departure.departureDate} - ${departure.returnDate}`,
+      group_size: ''
+    }
+
+    sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
+      .then(() => {
+        closeBookingForm()
+        window.alert('Ευχαριστούμε! Το αίτημα κράτησης στάλθηκε με επιτυχία και θα επικοινωνήσουμε μαζί σας.')
+      })
+      .catch((err) => {
+        console.error('Flight ticket booking email failed:', err)
+        setFormError('Η αποστολή απέτυχε. Παρακαλώ δοκιμάστε ξανά ή καλέστε μας στο +357 25828848.')
+      })
+      .finally(() => {
+        setIsSubmitting(false)
+      })
   }
 
   return (

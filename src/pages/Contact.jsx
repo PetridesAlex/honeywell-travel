@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './Contact.css'
 
 function Contact() {
@@ -24,26 +24,30 @@ function Contact() {
     e.preventDefault()
     setSending(true)
     setStatus(null)
-    const payload = {
-      title: 'New Website Inquiry',
+
+    const templateParams = {
       name: formData.name,
       email: formData.email,
       phone: formData.phone || '',
-      dates: '',
-      people: '',
-      package: 'General Inquiry',
-      message: formData.message
+      message: formData.message,
+      company: '',
+      country: '',
+      travel_dates: '',
+      group_size: ''
     }
-    const result = await sendContactForm(payload)
-    setSending(false)
-    if (result.ok) {
+
+    try {
+      await sendEmail(import.meta.env.VITE_TEMPLATE_CONTACT, templateParams)
       setStatus({ type: 'success', message: 'Request sent successfully ✅' })
       setFormData({ name: '', email: '', phone: '', message: '' })
-    } else {
+    } catch (err) {
+      console.error('Contact form email failed:', err)
       setStatus({
         type: 'error',
-        message: result.error ? `Failed to send: ${result.error}` : 'Failed to send. Please try again.'
+        message: 'Failed to send. Please try again.'
       })
+    } finally {
+      setSending(false)
     }
   }
 

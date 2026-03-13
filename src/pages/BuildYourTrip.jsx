@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SEO from '../components/SEO'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './BuildYourTrip.css'
 
 function BuildYourTrip() {
@@ -49,18 +49,22 @@ function BuildYourTrip() {
     e.preventDefault()
     setSending(true)
     setStatus(null)
-    const result = await sendContactForm({
-      title: 'Build Your Trip Request',
+
+    const travelDates = [form.dateFrom, form.dateTo].filter(Boolean).join(' – ') || '—'
+
+    const templateParams = {
       name: form.name || 'Not provided',
       email: form.email || '',
       phone: form.phone || '',
-      dates: [form.dateFrom, form.dateTo].filter(Boolean).join(' – ') || '—',
-      people: form.travelers || '—',
-      package: form.destination || 'Custom trip',
-      message: buildMessage()
-    })
-    setSending(false)
-    if (result.ok) {
+      message: buildMessage(),
+      company: '',
+      country: '',
+      travel_dates: travelDates,
+      group_size: form.travelers || '—'
+    }
+
+    try {
+      await sendEmail(import.meta.env.VITE_TEMPLATE_CONTACT, templateParams)
       setStatus({ type: 'success', message: 'Request sent successfully. We’ll get back to you soon.' })
       setForm({
         destination: '',
@@ -76,8 +80,11 @@ function BuildYourTrip() {
         phone: '',
         message: ''
       })
-    } else {
-      setStatus({ type: 'error', message: result.error || 'Failed to send. Please try again.' })
+    } catch (err) {
+      console.error('Build Your Trip email failed:', err)
+      setStatus({ type: 'error', message: 'Failed to send. Please try again.' })
+    } finally {
+      setSending(false)
     }
   }
 

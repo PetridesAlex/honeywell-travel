@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import RevealOnScroll from '../components/RevealOnScroll'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './DmcCyprus.css'
 
 const BRAND_RED = '#c41230'
@@ -98,22 +98,36 @@ function DmcCyprus() {
       '',
       formData.message
     ].join('\n')
+    const templateParams = {
+      name: formData.contactPerson,
+      email: formData.email,
+      phone: '',
+      message,
+      company: formData.companyName,
+      country: formData.country,
+      travel_dates: formData.travelDates,
+      group_size: formData.groupSize
+    }
+
     try {
-      const result = await sendContactForm({
-        title: 'DMC Cyprus – Partnership Request',
-        name: formData.contactPerson,
-        email: formData.email,
-        phone: '',
-        message
+      await sendEmail(import.meta.env.VITE_TEMPLATE_DMC, templateParams)
+      setStatus({ type: 'success', text: 'Request sent successfully. Our DMC team will be in touch.' })
+      setFormData({
+        companyName: '',
+        contactPerson: '',
+        email: '',
+        country: '',
+        businessType: 'Agency',
+        groupSize: '',
+        travelDates: '',
+        message: ''
       })
-      if (result.ok) {
-        setStatus({ type: 'success', text: 'Request sent successfully. Our DMC team will be in touch.' })
-        setFormData({ companyName: '', contactPerson: '', email: '', country: '', businessType: 'Agency', groupSize: '', travelDates: '', message: '' })
-      } else {
-        setStatus({ type: 'error', text: result.error || 'Failed to send. Please try again or email limassol@honeywelltravel.com.cy' })
-      }
-    } catch {
-      setStatus({ type: 'error', text: 'Failed to send. Please email limassol@honeywelltravel.com.cy' })
+    } catch (err) {
+      console.error('DMC request email failed:', err)
+      setStatus({
+        type: 'error',
+        text: 'Failed to send. Please try again or email limassol@honeywelltravel.com.cy'
+      })
     } finally {
       setSending(false)
     }

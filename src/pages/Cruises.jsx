@@ -4,7 +4,7 @@ import { travelPackages } from '../data/packages'
 import PackageCard from '../components/PackageCard'
 import RevealOnScroll from '../components/RevealOnScroll'
 import SEO from '../components/SEO'
-import { sendContactForm } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import './Cruises.css'
 
 const cruisePackagesData = [
@@ -2452,25 +2452,37 @@ function Cruises() {
                 e.preventDefault()
                 setCruiseEnquiryError('')
                 setCruiseEnquirySending(true)
-                const cruiseLineLabel = CRUISE_LINES.find((l) => l.id === cruiseEnquiryForm.cruiseLine)?.label ?? (cruiseEnquiryForm.cruiseLine || 'Not specified')
+                const cruiseLineLabel =
+                  CRUISE_LINES.find((l) => l.id === cruiseEnquiryForm.cruiseLine)?.label ??
+                  (cruiseEnquiryForm.cruiseLine || 'Not specified')
                 const messageLines = [
                   `Cruise line: ${cruiseLineLabel}`,
                   cruiseEnquiryForm.message ? `\nMessage:\n${cruiseEnquiryForm.message}` : ''
-                ].filter(Boolean).join('')
-                const result = await sendContactForm({
-                  title: 'Cruise Enquiry',
+                ]
+                  .filter(Boolean)
+                  .join('')
+
+                const templateParams = {
                   name: cruiseEnquiryForm.name || 'Not provided',
                   email: cruiseEnquiryForm.email || '',
                   phone: cruiseEnquiryForm.phone || '',
-                  package: cruiseLineLabel,
-                  message: messageLines || 'No additional message.'
-                })
-                setCruiseEnquirySending(false)
-                if (result.ok) {
+                  message: messageLines || 'No additional message.',
+                  company: '',
+                  country: '',
+                  travel_dates: '',
+                  group_size: '',
+                  cruise_line: cruiseLineLabel
+                }
+
+                try {
+                  await sendEmail(import.meta.env.VITE_TEMPLATE_CRUISE, templateParams)
                   setCruiseEnquirySent(true)
                   setCruiseEnquiryForm({ cruiseLine: '', name: '', email: '', phone: '', message: '' })
-                } else {
-                  setCruiseEnquiryError(result.error || 'Something went wrong. Please try again.')
+                } catch (err) {
+                  console.error('Cruise enquiry email failed:', err)
+                  setCruiseEnquiryError('Something went wrong. Please try again.')
+                } finally {
+                  setCruiseEnquirySending(false)
                 }
               }}
             >

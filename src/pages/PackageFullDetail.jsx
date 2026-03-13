@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getPackageById, travelPackages } from '../data/packages'
 import { getTranslatedPackageTitle } from '../utils/packageTranslations'
-import { sendActionRequest } from '../utils/emailjsClient'
+import { sendEmail } from '../lib/emailService'
 import SEO from '../components/SEO'
 import './PackageFullDetail.css'
 
@@ -1355,30 +1355,43 @@ Phone: ${reserveFormData.phone}
 This reservation request was submitted through the Honeywell Travel website.
                       `.trim()
 
-                      const result = await sendActionRequest({
-                        title: 'Reservation Request',
-                        packageName: pkg.title,
+                      const templateParams = {
+                        name: reserveFormData.name || '',
+                        email: reserveFormData.email,
+                        phone: reserveFormData.phone,
                         message: emailBody,
-                        formData: {
-                          name: reserveFormData.name || '',
-                          email: reserveFormData.email,
-                          phone: reserveFormData.phone,
-                          dates: reserveFormData.departureDate || '',
-                          people: peopleStr,
-                          package: pkg.title,
-                          message: emailBody
-                        }
-                      })
-                      setReserveSending(false)
-                      if (result.ok) {
+                        company: '',
+                        country: '',
+                        travel_dates: reserveFormData.departureDate || '',
+                        group_size: peopleStr
+                      }
+
+                      try {
+                        await sendEmail(import.meta.env.VITE_TEMPLATE_OTHER, templateParams)
                         setReserveToast({ type: 'success', message: 'Request sent successfully ✅' })
                         setShowReserveModal(false)
-                        setReserveFormData({ name: '', email: '', phone: '', hotelKey: null, hotelName: '', departureDate: '', roomType: '', adults: 1, children: 0, children2: 0, totalPrice: 0, selectedHotel: null })
-                      } else {
+                        setReserveFormData({
+                          name: '',
+                          email: '',
+                          phone: '',
+                          hotelKey: null,
+                          hotelName: '',
+                          departureDate: '',
+                          roomType: '',
+                          adults: 1,
+                          children: 0,
+                          children2: 0,
+                          totalPrice: 0,
+                          selectedHotel: null
+                        })
+                      } catch (err) {
+                        console.error('Reservation request email failed:', err)
                         setReserveToast({
                           type: 'error',
-                          message: result.error ? `Failed to send: ${result.error}` : 'Failed to send. Please try again.'
+                          message: 'Failed to send. Please try again.'
                         })
+                      } finally {
+                        setReserveSending(false)
                       }
                     }}
                   >
